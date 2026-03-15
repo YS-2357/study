@@ -12,8 +12,9 @@ The goal is not to memorize every protocol detail at once. The goal is to unders
 
 1. Read [01. OSI 7 Layers](01_osi_7_layers.md) once from top to bottom
 2. Read [02. Header and Payload](02_header_and_payload.md) after the first pass if encapsulation feels unclear
-3. Read `01_osi_7_layers.md` again and focus only on Layer 7, 4, and 3 first
-4. Come back to Layers 6, 5, 2, and 1 after the big picture is clear
+3. Read [03. Why Googling Feels Fast](03_why_googling_feels_fast.md) if you want a practical example of all layers working together
+4. Read `01_osi_7_layers.md` again and focus only on Layer 7, 4, and 3 first
+5. Come back to Layers 6, 5, 2, and 1 after the big picture is clear
 
 ## Why OSI Matters
 
