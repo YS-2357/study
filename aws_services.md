@@ -14,7 +14,6 @@
 15. AWS Data Pipeline
 16. Amazon Kinesis
 17. Amazon SageMaker
-18. PoP
 19. Amazon RDS
 20. Amazon Aurora 
 21. Amazon DynamoDB

@@ -1,0 +1,171 @@
+# AWS WAF (Web Application Firewall) - AWS Console Guide
+
+## Official Documentation
+- [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+- [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
+
+## What It Is
+AWS WAF (Web Application Firewall) is a Layer 7 (Application layer) firewall that filters HTTP/HTTPS requests based on rules you define.
+
+While Shield stops DDoS volume floods, WAF inspects the **content** of each request and decides: allow, block, or count.
+
+**What WAF protects against:**
+- SQL injection (malicious database queries in URLs/forms)
+- XSS (Cross-Site Scripting — injecting scripts into web pages)
+- Bad bots and scrapers
+- Requests from specific countries/IPs
+- Rate limiting (e.g., block IP after 1,000 requests in 5 minutes)
+
+### Shield vs WAF vs Security Group
+
+| | Security Group | WAF | Shield |
+|---|---|---|---|
+| Layer | Layer 3/4 (IP + port) | Layer 7 (HTTP content) | Layer 3/4/7 (volume) |
+| What it checks | Source IP, port, protocol | HTTP headers, URLs, body, cookies | Traffic volume patterns |
+| Purpose | Network access control | Application attack filtering | DDoS protection |
+| Protects | EC2, RDS, etc. | CloudFront, ALB, API Gateway | All AWS resources |
+| Example | "Allow port 443 from 10.0.0.0/16" | "Block requests with SQL in URL" | "Absorb 1M fake requests/sec" |
+
+### WAF Works With
+- **Amazon CloudFront** (CDN)
+- **Application Load Balancer (ALB)**
+- **Amazon API Gateway**
+- **AWS AppSync**
+- **Amazon Cognito user pools**
+- **AWS App Runner**
+- **AWS Verified Access**
+
+## Console Access
+- Search "WAF" in AWS Console
+- Breadcrumb: WAF & Shield > Protection packs (web ACLs) > Create protection pack (web ACL)
+- Note: WAF and Shield share the same console
+
+---
+
+## Create Protection Pack (Web ACL) - Console Flow
+
+![Create Protection Pack - App Info](../images/aws_console/waf1.png)
+
+### Tell us about your app
+- Sharing app category and focus helps AWS recommend the best security protection
+
+**App category** — Select one or more app categories (dropdown)
+
+**App focus (3 options):**
+- **Both API and web** (default) — Website/mobile app + programmatic access
+- **API** — Primarily programmatic access
+- **Web** — Primarily website or mobile app interface
+
+![Create Protection Pack - Resources and Protections](../images/aws_console/waf2.png)
+
+### Select resources to protect (expandable)
+- Choose which AWS resources this Web ACL protects
+- Must complete "Tell us about your app" first
+
+### Choose initial protections (expandable)
+- AWS WAF offers various protection packages of WAF rules
+- Rule configurations based on security best practices
+- Can choose individual rules instead of packages
+- Must complete "Tell us about your app" and "Select resources to protect" first
+
+### Name and describe (expandable)
+- Name and description for your Web ACL
+- Must complete previous sections first
+
+### Customize protection pack (web ACL) - optional (expandable)
+- Advanced customization options
+
+**Action buttons:** Cancel / **Create protection pack (web ACL)**
+
+---
+
+## Key Concepts
+
+### Web ACL (Web Access Control List)
+- The main WAF resource — a set of rules that inspect and filter web requests
+- You attach a Web ACL to your CloudFront, ALB, or API Gateway
+- Each request is evaluated against the rules in order
+- **Default action** — What to do if no rule matches (Allow or Block)
+
+### Rules and Rule Groups
+**Rule types:**
+- **AWS Managed Rules** — Pre-built by AWS, updated automatically
+  - e.g., AWSManagedRulesCommonRuleSet (SQL injection, XSS, bad inputs)
+  - e.g., AWSManagedRulesKnownBadInputsRuleSet
+  - e.g., AWSManagedRulesBotControlRuleSet
+- **Custom Rules** — You write your own
+  - e.g., Block requests from specific countries
+  - e.g., Rate limit: block IP after 2,000 requests in 5 minutes
+- **Marketplace Rules** — Third-party rule sets (additional cost)
+
+### Rule Actions
+- **Allow** — Let the request through
+- **Block** — Reject the request (returns 403 Forbidden)
+- **Count** — Let it through but count it (for testing rules before enforcing)
+- **CAPTCHA** — Challenge the requester to prove they're human
+
+### WCU (Web ACL Capacity Units)
+- Each rule costs a certain number of WCUs
+- Web ACL has a limit of 5,000 WCUs
+- More complex rules = more WCUs
+- Managed rule groups show their WCU cost
+
+### How WAF Evaluates Requests
+```
+Request arrives → Web ACL rules evaluated in priority order
+  → Rule 1: Match? → Action (Allow/Block/Count)
+  → Rule 2: Match? → Action
+  → Rule 3: Match? → Action
+  → No match → Default action (Allow or Block)
+```
+
+### Common MSP Setup
+```
+Internet → CloudFront → WAF (Web ACL) → ALB → EC2
+                         ↑
+                    Rules:
+                    1. AWS Managed Rules (SQL injection, XSS)
+                    2. Rate limiting (block after 2,000 req/5min)
+                    3. Geo blocking (block specific countries)
+                    4. Default: Allow
+```
+
+---
+
+## Precautions
+
+### ⚠️ MAIN PRECAUTION: Start with Count Mode, Not Block
+- New rules might accidentally block legitimate traffic
+- Use **Count** action first to see what would be blocked
+- Review the logs, then switch to **Block** once you're confident
+- This prevents breaking your app with overly aggressive rules
+
+### 1. WAF Costs Per Rule and Per Request
+- You pay per Web ACL, per rule, and per million requests inspected
+- More rules = higher cost
+- **MSP tip:** Start with AWS Managed Rules (good coverage, reasonable cost), add custom rules as needed
+
+### 2. Use AWS Managed Rules First
+- AWS maintains and updates them automatically
+- Covers most common attacks (SQL injection, XSS, bad bots)
+- Don't reinvent the wheel — start here, customize later
+
+### 3. WAF Only Works with Specific Services
+- CloudFront, ALB, API Gateway, AppSync, Cognito, App Runner, Verified Access
+- Does NOT work with NLB (Network Load Balancer) or EC2 directly
+- If you need WAF, put an ALB or CloudFront in front
+
+### 4. Shield + WAF Together for Full Protection
+- Shield handles volume attacks (DDoS)
+- WAF handles content attacks (SQL injection, XSS, bots)
+- Use both for production web applications
+- See [25_aws_shield.md](./25_aws_shield.md) for Shield details
+
+### 5. Log Everything
+- Enable WAF logging to S3, CloudWatch Logs, or Kinesis Data Firehose
+- Essential for troubleshooting blocked requests
+- Review logs regularly to tune rules
+
+### 6. Always Use Tags
+- Tag Web ACLs with environment, project, team, client
+- Essential for MSP cost tracking across multiple clients
