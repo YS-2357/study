@@ -340,6 +340,54 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 
 ---
 
+## Pricing
+
+**Source:** [AWS ELB Pricing](https://aws.amazon.com/elasticloadbalancing/pricing/)
+
+### Free vs Paid
+
+| | Free? | Details |
+|---|---|---|
+| **Shield Standard** | ✅ Free | DDoS protection included automatically (not ELB-specific, but protects ELB) |
+| **ELB itself** | ❌ Paid | All types (ALB, NLB, GWLB) cost money |
+| **AWS Free Tier** | 🟡 Limited | New accounts: 750 hours/month shared between CLB and ALB + 15 LCUs for ALB + 15 GB data for CLB (12 months) |
+
+### Per-Type Pricing (US East - N. Virginia)
+
+| | Hourly Rate | Capacity Unit Cost | Unit Name | ~Monthly Minimum |
+|---|---|---|---|---|
+| **ALB** | $0.0225/hr | $0.008 per LCU-hour | LCU (Load Balancer Capacity Unit) | ~$16.20 |
+| **NLB** | $0.0225/hr | $0.006 per NLCU-hour | NLCU (Network LCU) | ~$16.20 |
+| **GWLB** | $0.0125/hr | $0.004 per GLCU-hour | GLCU (Gateway LCU) | ~$9.00 |
+
+> Prices vary by Region. The minimum is just the hourly rate with zero traffic — actual cost depends on capacity unit usage.
+
+### What Counts as a Capacity Unit
+
+**ALB (LCU)** — highest of these 4 dimensions:
+- New connections per second (25/LCU)
+- Active connections per minute (3,000/LCU)
+- Processed bytes per hour (1 GB/LCU for EC2/IP, 0.4 GB/LCU for Lambda)
+- Rule evaluations per second (1,000/LCU, first 10 rules free)
+
+**NLB (NLCU)** — highest of these 3 dimensions:
+- New connections/flows per second
+- Active connections/flows per minute
+- Processed bytes per hour
+
+**GWLB (GLCU)** — highest of these 3 dimensions:
+- New flows per second
+- Active flows per minute
+- Processed bytes per hour
+
+### Additional Costs
+- **Data transfer** — Standard AWS data transfer charges apply on top of ELB charges
+- **Public IPv4 address** — Standard public IPv4 address charges apply
+- **GWLB Endpoint (GWLBE)** — Priced separately via AWS PrivateLink
+- **Service integrations** — CloudFront, WAF, Global Accelerator each have their own charges
+
+---
+
 ## Precautions
 
 ### ⚠️ MAIN PRECAUTION: Name and Scheme Can't Be Changed After Creation
