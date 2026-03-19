@@ -1,0 +1,10 @@
+# computing_kiro
+Computing notes written in the Kiro format.
+
+- `README.md`: Overview of the `computing_kiro/` folder and its direct contents.
+- `00_overview.md`: Overview of the computing notes.
+- `01_architecture.md`: Notes about computer architecture.
+- `02_virtualization.md`: Notes about virtualization.
+- `03_storage.md`: Notes about storage systems.
+- `04_gpu.md`: Notes about GPUs.
+- `05_workload_types.md`: Notes about workload types.
