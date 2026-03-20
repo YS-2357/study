@@ -9,6 +9,16 @@ Amazon Aurora is AWS's cloud-native relational database engine, compatible with 
 
 Aurora is NOT standard MySQL/PostgreSQL — it's AWS's re-engineered version. Same SQL compatibility, different engine underneath.
 
+**"Fully managed" — what AWS means:**
+- AWS official docs call Aurora "a fully managed relational database engine" ([source](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html))
+- Standard RDS is called just "managed" — not "fully managed" ([source](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html))
+- Aurora is more managed than standard RDS because storage is fully abstracted (auto-grows, auto-replicates 6 copies across 3 AZs)
+- But you still choose instance classes and engine versions — so it's not as hands-off as DynamoDB (where you don't think about instances at all)
+- In practice, Aurora sits between standard RDS and DynamoDB on the management spectrum:
+  - **Standard RDS** — managed (you pick instance, storage type, storage size)
+  - **Aurora** — fully managed per AWS docs (storage abstracted, but you still pick compute)
+  - **DynamoDB** — fully managed, serverless-first (no instance or storage decisions at all)
+
 ## Aurora vs Standard RDS — Pros and Cons
 
 ### Pros of Aurora (over standard RDS)

@@ -2,6 +2,10 @@
 Study materials organized by subject and topic.
 
 - `README.md`: Overview of the `study/` folder and its direct contents.
-- `aws101/`: AWS study notes, screenshots, and presentation drafts.
+- `aws101/`: AWS study notes, screenshots, and local presentation materials.
 - `computing/`: General computing study notes.
 - `networking/`: Networking study notes.
+
+## Notes
+
+- `aws101/ppt/` contains local presentation practice materials and is excluded from Git.

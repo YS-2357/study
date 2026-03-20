@@ -43,15 +43,19 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
 - **Network:**
   - **VPC** — Select VPC
   - **Availability Zones and subnets** — Select 1 or more subnets (use multiple AZs for HA)
+  - **Availability Zone distribution** — Select a distribution strategy for how instances are spread across AZs
 
 ### Step 3: Configure advanced options
 - **Load balancing:**
   - No load balancer
   - Attach to an existing load balancer
   - Attach to a new load balancer
+- **VPC Lattice integration** — Optional service-to-service networking
+- **Amazon Application Recovery Controller (ARC) zonal shift** — Shift traffic away from an impaired AZ
 - **Health checks:**
   - EC2 (default)
   - ELB (recommended when using load balancer)
+  - EBS health checks — Monitors and replaces instances with impaired EBS volumes
   - Health check grace period (default 300 seconds)
 
 ### Step 4: Configure group size and scaling
@@ -61,9 +65,12 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
   - Maximum capacity
 - **Scaling policies:**
   - None
-  - Target tracking scaling policy
-  - Step scaling policy
+  - Target tracking scaling policy (other types created after ASG creation)
+- **Instance maintenance policy** — Controls how instances are replaced during updates
+- **Capacity Reservation preference** — Whether to use reserved capacity
 - **Instance scale-in protection** — Prevent specific instances from being terminated
+- **CloudWatch group metrics collection** — Toggle ASG-level CloudWatch metrics
+- **Default instance warmup** — Time before a new instance's metrics count toward scaling decisions
 
 ### Step 5: Add notifications (optional)
 - SNS (Simple Notification Service) topic for scaling events

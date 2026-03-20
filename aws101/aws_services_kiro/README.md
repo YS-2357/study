@@ -21,3 +21,6 @@ AWS service notes written in the Kiro format.
 - `16_elastic_load_balancing.md`: Notes about Elastic Load Balancing.
 - `17_aws_shield.md`: Notes about AWS Shield.
 - `18_aws_waf.md`: Notes about AWS WAF.
+- `19_amazon_s3.md`: Notes about Amazon S3.
+- `20_amazon_ebs.md`: Notes about Amazon EBS.
+- `21_amazon_cloudfront.md`: Notes about Amazon CloudFront.

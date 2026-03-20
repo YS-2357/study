@@ -190,6 +190,34 @@ AWS service for automated IP address allocation.
 - Required for many AWS services
 - Easier to remember names than IPs
 
+### VPC Peering and Transit Gateway
+
+#### VPC Peering
+- VPCs are isolated by default — no traffic flows between them
+- VPC Peering creates a direct one-to-one connection between two VPCs
+- Peered VPCs cannot have overlapping CIDRs
+- Traffic stays on AWS private network (does not go over the internet)
+- Works across accounts and Regions
+- **Not transitive** — if VPC A peers with B, and B peers with C, A cannot reach C through B
+
+#### Transit Gateway
+- A central hub that connects multiple VPCs, VPN connections, and on-premises networks
+- **Solves the scaling problem** — without it, connecting N VPCs requires N×(N-1)/2 peering connections
+- **Supports transitive routing** — VPC A → Transit Gateway → VPC B, unlike peering
+- Works across accounts and Regions (inter-Region peering supported)
+
+**When to use which:**
+
+| | VPC Peering | Transit Gateway |
+|---|---|---|
+| **Best for** | 2-3 VPCs | Many VPCs or hybrid networks |
+| **Transitive routing** | No | Yes |
+| **Cost** | Data transfer only | Hourly + data transfer |
+| **Complexity** | Simple | More setup, but scales better |
+| **On-premises** | No | Yes (VPN/Direct Connect) |
+
+**Example:** An MSP managing 10 client VPCs that share a central services VPC (logging, monitoring) — Transit Gateway is the right choice. For two VPCs that need to talk, peering is simpler and cheaper.
+
 ## Precautions
 
 ### ⚠️ MAIN PRECAUTION: Plan CIDR Carefully - Cannot Change Primary CIDR
@@ -223,6 +251,8 @@ AWS service for automated IP address allocation.
 - VPCs are isolated by default
 - Use VPC Peering or Transit Gateway to connect VPCs
 - Peered VPCs cannot have overlapping CIDRs
+- Transit Gateway is preferred when connecting more than 2-3 VPCs
+- Transit Gateway supports transitive routing; peering does not
 
 ### 6. Secondary CIDR Blocks
 - Can add secondary CIDRs after creation
