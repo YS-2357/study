@@ -2,29 +2,29 @@
 AWS service notes written in the Codex format.
 
 - `README.md`: Overview of the `aws_services_codex/` folder and its direct contents.
-- `VALIDATION_AGAINST_OFFICIAL_AWS_DOCS.md`: Validation notes against official AWS documentation.
-- `amazon-aurora.md`: Notes about Amazon Aurora.
-- `amazon-cloudfront.md`: Notes about Amazon CloudFront.
-- `amazon-dynamodb.md`: Notes about Amazon DynamoDB.
-- `amazon-ebs.md`: Notes about Amazon EBS.
-- `amazon-ec2.md`: Notes about Amazon EC2.
-- `amazon-elasticcache.md`: Notes about Amazon ElastiCache.
-- `amazon-emr.md`: Notes about Amazon EMR.
-- `amazon-iam.md`: Notes about Amazon IAM.
-- `amazon-kinesis.md`: Notes about Amazon Kinesis.
-- `amazon-rds.md`: Notes about Amazon RDS.
-- `amazon-redshift.md`: Notes about Amazon Redshift.
-- `amazon-s3.md`: Notes about Amazon S3.
-- `amazon-sagemaker.md`: Notes about Amazon SageMaker.
-- `amazon-vpc.md`: Notes about Amazon VPC.
-- `auto-scaling.md`: Notes about Auto Scaling.
-- `availability-zone.md`: Notes about AWS Availability Zones.
-- `aws-data-pipeline.md`: Notes about AWS Data Pipeline.
-- `aws-fargate.md`: Notes about AWS Fargate.
-- `aws-lambda.md`: Notes about AWS Lambda.
-- `aws-shield.md`: Notes about AWS Shield.
-- `aws-waf.md`: Notes about AWS WAF.
-- `pop.md`: Notes about AWS points of presence.
-- `region.md`: Notes about AWS Regions.
-- `security-group.md`: Notes about Security Groups.
-- `subnet.md`: Notes about subnets.
+- `00-overview.md`: Validation notes against official AWS documentation.
+- `01-amazon-aurora.md`: Notes about Amazon Aurora.
+- `02-amazon-cloudfront.md`: Notes about Amazon CloudFront.
+- `03-amazon-dynamodb.md`: Notes about Amazon DynamoDB.
+- `04-amazon-ebs.md`: Notes about Amazon EBS.
+- `05-amazon-ec2.md`: Notes about Amazon EC2.
+- `06-amazon-elasticcache.md`: Notes about Amazon ElastiCache.
+- `07-amazon-emr.md`: Notes about Amazon EMR.
+- `08-amazon-iam.md`: Notes about Amazon IAM.
+- `09-amazon-kinesis.md`: Notes about Amazon Kinesis.
+- `10-amazon-rds.md`: Notes about Amazon RDS.
+- `11-amazon-redshift.md`: Notes about Amazon Redshift.
+- `12-amazon-s3.md`: Notes about Amazon S3.
+- `13-amazon-sagemaker.md`: Notes about Amazon SageMaker.
+- `14-amazon-vpc.md`: Notes about Amazon VPC.
+- `15-auto-scaling.md`: Notes about Auto Scaling.
+- `16-availability-zone.md`: Notes about AWS Availability Zones.
+- `17-aws-data-pipeline.md`: Notes about AWS Data Pipeline.
+- `18-aws-fargate.md`: Notes about AWS Fargate.
+- `19-aws-lambda.md`: Notes about AWS Lambda.
+- `20-aws-shield.md`: Notes about AWS Shield.
+- `21-aws-waf.md`: Notes about AWS WAF.
+- `22-pop.md`: Notes about AWS points of presence.
+- `23-region.md`: Notes about AWS Regions.
+- `24-security-group.md`: Notes about Security Groups.
+- `25-subnet.md`: Notes about subnets.
