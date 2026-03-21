@@ -188,6 +188,8 @@ ec2의 옵션을 변경은 서비스를 중단하고 가능하다.
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
+- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/ec2_1.png, ec2_2.png, ec2_3.png, ec2_4.png 기준으로 이해하면 된다.`
+
 ##### Key pair
 
 - `EC2 key pair는 인스턴스 접속 시 사용하는 public/private key 쌍이다. Linux는 SSH 접속, Windows는 관리자 비밀번호 복호화에 사용된다.`
@@ -203,6 +205,19 @@ ec2의 옵션을 변경은 서비스를 중단하고 가능하다.
 ##### Storage
 
 - `Storage는 기본적으로 EBS volume을 설정하는 영역이며, volume size, type, IOPS, encryption, delete on termination 여부 등을 선택할 수 있다.`
+
+#### Terminology
+
+- `Console screenshots` = `study/aws101/images/aws_console/ec2_1.png`, `study/aws101/images/aws_console/ec2_2.png`, `study/aws101/images/aws_console/ec2_3.png`, `study/aws101/images/aws_console/ec2_4.png`
+- `EC2` = `Elastic Compute Cloud`
+- `AMI` = `Amazon Machine Image`
+- `SSH` = `Secure Shell`
+- `RDP` = `Remote Desktop Protocol`
+- `EBS` = `Elastic Block Store`
+- `IAM` = `Identity and Access Management`
+- `VPC` = `Virtual Private Cloud`
+- `CPU` = `Central Processing Unit`
+- `IOPS` = `Input/Output Operations Per Second`
 
 #### AWS 101 수준에서 추가로 자주 나오는 질문
 
