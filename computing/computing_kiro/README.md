@@ -8,3 +8,4 @@ Computing notes written in the Kiro format.
 - `03_storage.md`: Notes about storage systems.
 - `04_gpu.md`: Notes about GPUs.
 - `05_workload_types.md`: Notes about workload types.
+- `06_caching.md`: Notes about caching concepts and patterns.
