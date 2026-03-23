@@ -114,6 +114,39 @@
 
 ---
 
+## Function Detail Page (After Creation)
+
+![Lambda Function Detail Page](../images/aws_console/lambda-function.png)
+
+After creating a function, you see the function detail page. This is where you manage triggers, destinations, code, and configuration.
+
+### Function overview (top section)
+- **Diagram / Template** toggle — visual diagram of the function's event flow
+- **Function name** — "Mytest" in this example
+- **Layers (0)** — shared libraries attached to this function (none here)
+- **+ Add trigger** — connect an event source that invokes this function (S3 upload, API Gateway, DynamoDB stream, CloudWatch Events, SQS, etc.)
+- **+ Add destination** — where to send the result after execution (SQS, SNS, Lambda, EventBridge). Separate destinations for success and failure.
+- **Description** — optional text describing the function
+- **Function ARN** — unique identifier for this function (used in IAM policies, other services)
+- **Function URL** — HTTPS endpoint for direct HTTP invocation (not configured here)
+
+### Action buttons (top right)
+- **Throttle** — set reserved concurrency to 0, effectively disabling the function
+- **Copy ARN** — copy the function ARN to clipboard
+- **Actions** — dropdown with: export, delete, publish version, create alias, etc.
+
+### Tabs (bottom section)
+- **Code** — inline code editor (Python, Node.js, Ruby) or upload zip/container. Includes "Open in Visual Studio Code" and "Upload from" options.
+- **Test** — create and run test events to invoke the function manually
+- **Monitor** — CloudWatch metrics (invocations, duration, errors, throttles) and logs
+- **Configuration** — Memory, Timeout, Environment variables, VPC, Concurrency, Permissions, and other runtime settings
+- **Aliases** — named pointers to specific function versions (e.g. "prod" → version 5)
+- **Versions** — immutable snapshots of function code + configuration
+
+**Note:** Triggers, Destinations, Memory, Timeout, Environment variables, and Concurrency are all configured here — NOT in the creation form.
+
+---
+
 ## Key Concepts
 
 ### Serverless Computing
