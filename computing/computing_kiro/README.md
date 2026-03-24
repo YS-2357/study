@@ -9,3 +9,4 @@ Computing notes written in the Kiro format.
 - `04_gpu.md`: Notes about GPUs.
 - `05_workload_types.md`: Notes about workload types.
 - `06_caching.md`: Notes about caching concepts and patterns.
+- `07_interfaces_and_endpoints.md`: Interfaces (API, CLI, GUI, ENI) and endpoints (API, AWS service, database, VPC).

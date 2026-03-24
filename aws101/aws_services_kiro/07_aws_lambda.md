@@ -95,6 +95,35 @@
 
 **MSP tip:** Start with default role, add permissions later as needed (least privilege principle)
 
+#### Execution Role이란?
+
+Lambda 함수가 다른 AWS 서비스에 접근할 때 사용하는 **IAM Role**이다.
+
+사람이 AWS 콘솔에 로그인할 때 IAM User로 권한을 받는 것처럼, Lambda 함수도 실행될 때 "나는 누구인가?"에 해당하는 신분이 필요하다. 그게 Execution Role이다.
+
+```
+Lambda 함수 실행
+  → "나는 이 Role이다" (Execution Role)
+  → 이 Role에 붙어있는 Policy가 허용하는 것만 할 수 있음
+```
+
+**기본 Role (Create default role):**
+- CloudWatch Logs에 로그 쓰기 권한만 있음
+- 함수가 실행되면 로그가 CloudWatch에 기록됨 → 이 권한이 없으면 로그도 못 남김
+
+**추가 권한이 필요한 경우:**
+| Lambda가 하려는 일 | Execution Role에 추가할 Policy |
+|-------------------|-------------------------------|
+| S3에서 파일 읽기 | `AmazonS3ReadOnlyAccess` |
+| DynamoDB에 데이터 쓰기 | `AmazonDynamoDBFullAccess` |
+| SQS 메시지 읽기 | `AWSLambdaSQSQueueExecutionRole` |
+| VPC 내부 리소스 접근 | `AWSLambdaVPCAccessExecutionRole` |
+
+**핵심 정리:**
+- Execution Role = Lambda 함수의 신분증 + 권한 목록
+- Role이 없으면 Lambda는 아무것도 못 함 (다른 서비스 호출 불가, 로그도 못 남김)
+- 최소 권한 원칙: 필요한 권한만 추가 (처음부터 FullAccess 주지 말 것)
+
 ### Additional Configurations
 
 **Additional configurations** (expandable section):

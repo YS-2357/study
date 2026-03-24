@@ -7,3 +7,4 @@ Networking notes written in the Kiro format.
 - `02_addressing.md`: Notes about addressing concepts.
 - `03_osi_model.md`: Notes about the OSI model.
 - `04_dns.md`: Notes about DNS.
+- `05_http.md`: HTTP status codes, methods, and REST API.

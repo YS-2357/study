@@ -119,7 +119,82 @@ Most common pattern:
 - Security-sensitive data that shouldn't be stored in additional locations
 
 ## AWS Services Related to Caching
-- **ElastiCache** — Managed Redis/Memcached (see [ElastiCache](../../aws101/aws_services_kiro/13_amazon_elasticache.md))
+- **ElastiCache** — Managed Redis/Memcached/Valkey (see [ElastiCache](../../aws101/aws_services_kiro/13_amazon_elasticache.md))
 - **CloudFront** — CDN caching at edge locations
 - **DAX** — DynamoDB Accelerator, in-memory cache specifically for DynamoDB
 - **API Gateway** — Can cache API responses
+
+---
+
+## Valkey vs Redis vs Memcached
+
+These are all in-memory data stores used for caching. They run in RAM, so they're extremely fast (sub-millisecond).
+
+### What Each One Is
+
+**Memcached** (2003~)
+- The original in-memory caching system
+- Pure key-value store — you store a string key and a string/binary value, that's it
+- Multi-threaded — can use multiple CPU cores natively
+- No persistence — if it restarts, all data is gone
+- No replication — single node only (you can shard across multiple nodes, but each node is independent)
+- Simplest to understand and operate
+
+**Redis** (2009~)
+- Started as "Memcached but with more features"
+- Supports rich data structures: strings, lists, sets, sorted sets, hashes, streams, bitmaps
+- Persistence — can save data to disk (RDB snapshots, AOF log)
+- Replication — primary/replica for high availability
+- Pub/Sub — can act as a message broker
+- Lua scripting, transactions, TTL per key
+- Single-threaded for commands (uses one CPU core for processing, I/O threads added in v6)
+- Was open source (BSD license) until 2024
+
+**Valkey** (2024~)
+- A fork of Redis, created when Redis changed its license from open source (BSD) to a more restrictive dual license (RSALv2 + SSPLv1) in March 2024
+- Linux Foundation project — backed by AWS, Google, Oracle, Ericsson, Snap
+- Functionally identical to Redis 7.2 at fork time — same commands, same data structures, same protocol
+- Goal: remain truly open source (BSD license) and community-driven
+- AWS ElastiCache now offers Valkey as an engine option alongside Redis and Memcached
+
+### Why Valkey Exists (the License Drama)
+
+```
+2009-2024: Redis = open source (BSD license), anyone can use/modify/sell
+March 2024: Redis Labs changes license to RSALv2 + SSPLv1
+             → Cloud providers (AWS, GCP, etc.) can no longer offer Redis as a managed service freely
+             → Community forks Redis 7.2.4 → creates "Valkey" under Linux Foundation
+             → Valkey stays BSD licensed (truly open source)
+```
+
+AWS switched ElastiCache's default from "Redis" to "Valkey" because of this.
+
+### Comparison Table
+
+| Feature | Memcached | Redis | Valkey |
+|---------|-----------|-------|--------|
+| **Type** | Key-value only | Key-value + data structures | Key-value + data structures |
+| **Data structures** | Strings only | Strings, Lists, Sets, Sorted Sets, Hashes, Streams, etc. | Same as Redis |
+| **Persistence** | ✗ (memory only) | ✔ (RDB, AOF) | ✔ (RDB, AOF) |
+| **Replication** | ✗ | ✔ (primary-replica) | ✔ (primary-replica) |
+| **Clustering** | Client-side sharding | Redis Cluster (server-side) | Same as Redis |
+| **Threading** | Multi-threaded | Mostly single-threaded | Multi-threaded I/O (improving) |
+| **Pub/Sub** | ✗ | ✔ | ✔ |
+| **Lua scripting** | ✗ | ✔ | ✔ |
+| **License** | BSD | RSALv2 + SSPLv1 (2024~) | BSD (open source) |
+| **AWS 서비스** | ElastiCache | ElastiCache | ElastiCache |
+
+### When to Use What
+
+- **Memcached** — 단순 캐싱만 필요할 때. 세션 스토어, HTML fragment 캐싱 등. 데이터 구조 불필요, 멀티스레드 성능이 중요할 때.
+- **Redis/Valkey** — 데이터 구조가 필요할 때 (sorted set으로 리더보드, list로 큐, pub/sub으로 실시간 알림 등). 영속성이나 복제가 필요할 때.
+- **Valkey vs Redis** — 기능적으로 거의 동일. AWS에서는 Valkey가 기본 권장. 라이선스 차이가 핵심 (Valkey = open source, Redis = 제한적 라이선스).
+
+### AWS ElastiCache Engine 선택
+
+ElastiCache 생성 시 엔진을 선택:
+- **Valkey** — AWS 기본 권장 (2024~), Redis 호환, 오픈소스
+- **Redis** — 기존 Redis 워크로드 호환
+- **Memcached** — 단순 캐싱, 멀티스레드
+
+> 대부분의 신규 프로젝트에서는 Valkey를 선택하면 된다. Redis에서 Valkey로의 마이그레이션은 프로토콜이 동일하므로 거의 무중단으로 가능.

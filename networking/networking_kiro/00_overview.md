@@ -5,12 +5,13 @@ Foundation networking concepts needed to understand AWS services.
 
 ## Contents
 
+### Core Concepts
 ### [01. Protocols](01_protocols.md)
 Core network protocols and how they work:
 - **TCP** - Reliable, connection-oriented (web, SSH, databases)
 - **UDP** - Fast, connectionless (streaming, gaming, DNS)
 - **ICMP** - Network diagnostics (ping, traceroute)
-- **HTTP/HTTPS** - Web protocols
+- **HTTP/HTTPS** - Web protocols (see [05. HTTP](05_http.md) for deep dive)
 - **SSH** - Secure remote access
 - **TLS/SSL** - Encryption layer
 - **FTP/SMTP** - File transfer and email
@@ -32,6 +33,7 @@ IP addressing, ports, and ranges:
 - Layer 2: Data Link (Ethernet, MAC)
 - Layer 1: Physical (cables, signals)
 
+### Application Layer
 ### [04. DNS](04_dns.md)
 Domain Name System deep dive:
 - How DNS works (hierarchy, resolution)
@@ -39,21 +41,32 @@ Domain Name System deep dive:
 - DNS records and zones
 - Route 53 integration
 
+### [05. HTTP](05_http.md)
+HTTP in depth — beyond the basics in [01. Protocols](01_protocols.md):
+- **HTTP Methods** - GET, POST, PUT, PATCH, DELETE (safe vs unsafe, idempotency)
+- **Status Codes** - 1xx–5xx (what each means, when you see them)
+- **REST API** - Principles, examples, REST vs GraphQL vs gRPC
+- **AWS 5xx scenarios** - Common ALB, API Gateway, CloudFront errors
+
 ## How to Use
 
 **For AWS beginners:**
 - Start with [Protocols](01_protocols.md) - understand TCP/UDP/HTTP
 - Then [Addressing](02_addressing.md) - learn CIDR and ports
+- Then [HTTP](05_http.md) - status codes, REST APIs
 - Skip OSI Model initially (come back later)
 
 **For troubleshooting:**
 - [OSI Model](03_osi_model.md) - systematic debugging approach
 - [DNS](04_dns.md) - name resolution issues
+- [HTTP](05_http.md) - 4xx/5xx error diagnosis
 
-**Referenced by AWS services:**
-- [Subnet](../aws_services_kiro/03_subnet.md) - CIDR, IPv4/IPv6
-- [VPC](../aws_services_kiro/04_amazon_vpc.md) - DNS, CIDR, IPv6
-- [Security Group](../aws_services_kiro/23_security_group.md) - Protocols, ports, traffic
+**Cross-references:**
+- HTTP → [Interfaces & Endpoints](../../computing/computing_kiro/07_interfaces_and_endpoints.md) (API, ENI, VPC endpoints)
+- HTTP → [ELB](../../aws101/aws_services_kiro/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
+- DNS → [VPC](../../aws101/aws_services_kiro/04_amazon_vpc.md) (VPC DNS settings)
+- Protocols → [Security Group](../../aws101/aws_services_kiro/14_security_group.md) (protocol + port rules)
+- Addressing → [Subnet](../../aws101/aws_services_kiro/03_subnet.md) (CIDR, IPv4/IPv6)
 
 ## Quick Reference
 
@@ -76,3 +89,11 @@ Domain Name System deep dive:
 | TCP | Yes | Slower | Web, SSH, databases |
 | UDP | No | Faster | Streaming, gaming |
 | ICMP | N/A | Fast | Diagnostics |
+
+### HTTP Status Code Cheat Sheet
+| Range | Meaning | Key Codes |
+|-------|---------|-----------|
+| 2xx | Success | 200 OK, 201 Created, 204 No Content |
+| 3xx | Redirect | 301 Permanent, 302 Temporary, 304 Not Modified |
+| 4xx | Client error | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found |
+| 5xx | Server error | 500 Internal, 502 Bad Gateway, 503 Unavailable, 504 Timeout |
