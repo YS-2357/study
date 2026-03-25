@@ -319,6 +319,43 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 
 ## ALB vs NLB vs GWLB Comparison
 
+### How Layer Affects What ELB Can Do
+
+The layer determines what part of the traffic the load balancer can see and act on.
+
+**ALB = Layer 7 (Application)**
+- Sees HTTP/HTTPS details: host, path, headers, method, query string
+- Can do smart routing:
+  - `/api/*` → API servers, `/images/*` → image servers
+  - `app.example.com` → app servers, `admin.example.com` → admin servers
+- TLS termination with ACM certificate
+- Best when: traffic is web requests and you want content-based routing
+
+**NLB = Layer 4 (Transport)**
+- Sees TCP/UDP connection info: IP + port
+- Fast pass-through, static IP support
+- Cannot inspect HTTP path/header — just forwards based on port
+- Best when: performance-sensitive, needs static IP, non-HTTP protocols
+
+**GWLB = Layer 3 (Network)**
+- Steers all IP packets to security appliances via GENEVE encapsulation
+- Not about routing logic — about inserting firewalls/IDS/IPS into the traffic path
+- Best when: client requires third-party security appliances
+
+**Example — user sends `https://shop.example.com/api/orders`:**
+- ALB sees: host=`shop.example.com`, path=`/api/orders` → routes based on that
+- NLB sees: destination IP, port 443, TCP connection → forwards to target group
+- The layer defines how smart the load balancer can be about the request
+
+**One-liner summary:**
+- ALB = "understands the web request"
+- NLB = "understands the network connection"
+- GWLB = "understands security appliance flow"
+
+### Feature Comparison
+
+### Feature Comparison
+
 | Feature | ALB | NLB | GWLB |
 |---------|-----|-----|------|
 | Layer | 7 (Application) | 4 (Transport) | 3 (Network) |

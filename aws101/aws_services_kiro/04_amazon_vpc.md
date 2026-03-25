@@ -286,6 +286,109 @@ AWS service for automated IP address allocation.
 - Costs per hour + data transfer charges
 
 ### 12. Security Groups and NACLs
-- Default security group denies all inbound
-- Default NACL allows all traffic
-- Configure both for defense in depth
+
+#### How They Apply — ENI vs Subnet
+
+```
+VPC (building)
+├── Subnet A (floor 1)          ← NACL guards this entire floor
+│   ├── EC2 instance 1 [ENI]   ← SG guards this specific door
+│   ├── EC2 instance 2 [ENI]   ← SG guards this specific door
+│   └── RDS instance [ENI]     ← SG guards this specific door
+├── Subnet B (floor 2)          ← different NACL guards this floor
+│   └── EC2 instance 3 [ENI]   ← SG guards this specific door
+```
+
+- **ENI (Elastic Network Interface)** = virtual network card attached to each instance (EC2, RDS, Lambda-in-VPC, etc.). It holds the IP address.
+- **Security Group** attaches to each ENI individually — instances on the same subnet can have different SG rules
+- **NACL** attaches to the subnet — all instances in that subnet share the same NACL, no exceptions
+
+Traffic must pass **both** checks: NACL first (subnet boundary), then SG (instance boundary).
+
+#### Comparison
+
+| | Security Group (SG) | Network ACL (NACL) |
+|---|---|---|
+| **Applies to** | ENI (instance level) | Subnet (all instances in it) |
+| **State** | Stateful (response traffic auto-allowed) | Stateless (must explicitly allow inbound AND outbound) |
+| **Rules** | Allow only | Allow + Deny |
+| **Evaluation** | All rules evaluated together | Rules evaluated in number order (first match wins) |
+| **Default** | Deny all inbound, allow all outbound | Allow all traffic (default NACL) |
+
+#### Example: Web Server + DB on Same Subnet
+
+```
+Subnet A (NACL: allow 443 inbound from internet)
+├── Web server  (SG: allow 443 from 0.0.0.0/0)     ✅ web traffic reaches it
+├── DB server   (SG: allow 3306 from web-server-SG)  ✅ only web server can talk to DB
+```
+
+- NACL lets port 443 into the subnet (floor-level)
+- DB's SG blocks 443 — only allows 3306 from web server's SG (door-level)
+- SG is the primary tool (per-instance granularity), NACL is the secondary defense layer (subnet-wide blanket rule)
+
+#### Same-Subnet Traffic: NACL Doesn't Apply
+
+NACL only cares about traffic **crossing the subnet boundary**. Traffic between instances inside the same subnet is not filtered by NACL.
+
+```
+Subnet A (NACL: allow 443 inbound)
+├── Web server (SG: allow 443)  ──3306──►  DB server (SG: allow 3306 from Web SG)
+                                           ✅ Works — SG allows it, NACL is irrelevant
+```
+
+- Internet → Web on 443: NACL checks (crossing boundary) + SG checks
+- Web → DB on 3306 (same subnet): only SG checks — NACL doesn't filter inside-to-inside
+
+This is why putting web and DB in the **same subnet is bad design** — NACL can't help protect the DB. Better:
+- Web in public subnet (NACL + SG)
+- DB in private subnet (separate NACL + SG = two layers of defense)
+
+Rule of thumb:
+- Same subnet inside-to-inside → think SG only
+- Crossing subnet boundary → think NACL + SG
+
+#### Why SG Is Used More Than NACL
+
+| Reason | SG | NACL |
+|--------|-----|------|
+| **Granularity** | Per instance/ENI | Per subnet (all instances affected) |
+| **Stateful** | ✅ Return traffic automatic | ❌ Must allow both directions manually |
+| **SG-to-SG reference** | ✅ `allow 3306 from web-SG` | ❌ Must use IP ranges |
+| **Intent** | Expresses app-role relationships | Thinks in subnet/IP boundaries |
+
+Example: "Only web server can reach DB on 3306"
+- SG: `allow 3306 from web-SG` — done
+- NACL: need inbound rule for 3306 from web subnet IP range + outbound rule for ephemeral ports back — awkward
+
+Practical rule: SG as main access control, NACL as extra subnet-level guardrail.
+
+#### NACL Stateless — What It Means in Practice
+
+Stateless = NACL does not remember that a connection was already allowed. You must allow both directions explicitly, including **ephemeral ports** for responses.
+
+Example: Internet user accesses web server on 443:
+```
+Inbound to subnet:   source=client IP, dest port=443        → need inbound allow 443
+Response out:         source port=443, dest port=1024-65535  → need outbound allow ephemeral ports
+```
+
+With SG (stateful): allow inbound 443 → return traffic is automatic.
+With NACL (stateless): must explicitly allow both inbound 443 AND outbound ephemeral ports.
+
+#### Which AWS Services Use ENI (and Therefore SG)?
+
+**Has ENI → SG applies:**
+- EC2, RDS, Aurora, Neptune
+- Lambda (when VPC-attached)
+- ECS tasks (awsvpc mode), EKS worker nodes/pods
+- NAT Gateway, Load Balancers, VPC Endpoints
+
+**No ENI → SG does not apply (uses IAM/resource policies instead):**
+- S3, DynamoDB, SQS, SNS
+- IAM, Route 53, CloudFront, WAF, Shield
+- AWS Organizations
+
+Rule: if a service gets network connectivity inside your VPC via ENI, SG applies. If it's a regional/global managed endpoint service, access is controlled by IAM/resource policies instead.
+
+> Note: VPC Endpoints create ENIs, so the endpoint ENI can have an SG — but that's the endpoint's SG, not the service itself.
