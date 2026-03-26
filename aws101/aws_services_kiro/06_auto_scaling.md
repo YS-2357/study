@@ -439,10 +439,33 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 - **Launch Configuration** (legacy) — Older, no versioning, AWS recommends migrating to templates
 - Both define: AMI, instance type, key pair, security group, user data
 
-### Scaling In vs Scaling Out
-- **Scale out** = add instances (traffic increasing)
-- **Scale in** = remove instances (traffic decreasing)
+### Scaling In vs Scaling Out vs Scaling Up
+- **Scale out** (horizontal) = add more instances (traffic increasing). ASG does this automatically. No downtime.
+- **Scale in** (horizontal) = remove instances (traffic decreasing). ASG does this automatically.
+- **Scale up** (vertical) = make instance bigger (e.g., t3.micro → t3.large). ASG does NOT do this. Requires instance stop → change type → start = downtime.
 - ASG decides which instance to terminate when scaling in (default: oldest launch config, then closest to billing hour)
+
+### Applying Launch Template Changes to Existing Instances
+
+Updating the Launch Template only affects **new** instances. Existing running instances keep their old config. To apply changes (e.g., new instance type, new AMI):
+
+**Option 1: Instance Refresh (recommended)**
+- ASG built-in feature that automatically replaces existing instances with new ones using the updated Launch Template
+- Set "minimum healthy percentage" (e.g., 90%) — ASG terminates old instances in batches and launches new ones
+- Rolling update, no full downtime
+```
+Before: 4x t3.micro (old template)
+During: 3x t3.micro + 1x t3.large (rolling)
+After:  4x t3.large (new template)
+```
+
+**Option 2: Terminate and let ASG replace**
+- Update Launch Template version, then terminate instances one by one
+- ASG automatically launches replacements using the new template
+
+**Option 3: Blue/Green**
+- Create a new ASG with the new Launch Template
+- Shift traffic via ELB target group, then delete old ASG
 
 ### Multi-AZ for High Availability
 - Spread ASG across multiple AZs (Availability Zones)
