@@ -44,38 +44,62 @@ While Shield stops DDoS volume floods, WAF inspects the **content** of each requ
 
 ## Create Protection Pack (Web ACL) - Console Flow
 
-![Create Protection Pack - App Info](../images/aws_console/waf1.png)
+> Note: AWS recently redesigned the WAF console. It now uses a "protection pack" wizard that guides you through app profiling → resource selection → rule configuration.
 
-### Tell us about your app
-- Sharing app category and focus helps AWS recommend the best security protection
+### Step 1: Tell us about your app
 
-**App category** — Select one or more app categories (dropdown)
+![WAF - Tell us about your app, App focus](../images/aws_console/waf1.png)
 
-**App focus (3 options):**
-- **Both API and web** (default) — Website/mobile app + programmatic access
-- **API** — Primarily programmatic access
-- **Web** — Primarily website or mobile app interface
+**App category** (required, multi-select dropdown):
 
-![Create Protection Pack - Resources and Protections](../images/aws_console/waf2.png)
+![WAF - App category dropdown options](../images/aws_console/waf2.png)
 
-### Select resources to protect (expandable)
-- Choose which AWS resources this Web ACL protects
+- Content & publishing systems
+- E-commerce & transaction platforms
+- Enterprise & business applications
+- API & integration services
+- Media & file processing
+- Other
+
+AWS uses your selection to recommend the best protection rules. Select all that apply.
+
+**App focus** (3 options):
+- **Both API and web** — website/mobile app + programmatic access
+- **API** (selected in screenshot) — primarily programmatic access
+- **Web** — primarily website or mobile app interface
+
+**Select resources to protect** (expandable):
 - Must complete "Tell us about your app" first
+- Choose which AWS resources this Web ACL protects (CloudFront, ALB, API Gateway, etc.)
 
-### Choose initial protections (expandable)
-- AWS WAF offers various protection packages of WAF rules
-- Rule configurations based on security best practices
+### Step 2: Select resources to protect
+
+![WAF - Select resources to protect](../images/aws_console/waf3.png)
+
+- Search by resource name or type
+- "Add resources" button to browse regional or global resources
+- Can add regional resources (ALB, API Gateway) or global resources (CloudFront)
+- "Skip for now" — can attach resources later
+- "No resources to display" if none added yet
+
+### Step 3: Choose protections, Name, Customize
+
+![WAF - Choose protections, Name, Customize](../images/aws_console/waf4.png)
+
+**Choose initial protections** (expandable):
+- AWS WAF offers protection packages (bundles of WAF rules) based on security best practices
 - Can choose individual rules instead of packages
-- Must complete "Tell us about your app" and "Select resources to protect" first
+- Must complete previous sections first
 
-### Name and describe (expandable)
+**Name and describe** (expandable):
 - Name and description for your Web ACL
 - Must complete previous sections first
 
-### Customize protection pack (web ACL) - optional (expandable)
-- Advanced customization options
+**Customize protection pack (web ACL)** (optional, expandable):
+- Configure rules and define how requests will be logged
+- Advanced customization — add custom rules, change rule order, set default action
 
-**Action buttons:** Cancel / **Create protection pack (web ACL)**
+**Cancel / Create protection pack (web ACL)** buttons
 
 ---
 

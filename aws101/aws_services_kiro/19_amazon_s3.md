@@ -165,6 +165,46 @@ Encryption type:
 - 법원 공문서, 장기 보관 → **Glacier Deep Archive**
 - Don't know access pattern → **Intelligent-Tiering**
 
+### Intelligent-Tiering — How It Works
+
+Intelligent-Tiering is one storage class with multiple tiers inside. AWS automatically moves objects between tiers based on access patterns — you don't manage it.
+
+```
+S3 Intelligent-Tiering (one storage class, multiple tiers inside)
+├── Frequent Access tier        ← objects start here
+├── Infrequent Access tier      ← auto-moved after 30 days no access
+├── Archive Instant Access tier ← auto-moved after 90 days no access
+├── Archive Access tier         ← optional, you enable, after 90+ days
+└── Deep Archive Access tier    ← optional, you enable, after 180+ days
+```
+
+- Object accessed again → automatically moves back to Frequent Access (no retrieval fee)
+- Monitoring fee: $0.0025 per 1,000 objects/month
+- Best for: larger objects with unpredictable access patterns
+- Not ideal for: lots of tiny files (monitoring fee adds up)
+
+| | Manual (Standard/IA/Glacier) | Intelligent-Tiering |
+|---|---|---|
+| **Who decides** | You, via lifecycle rules | AWS, automatically |
+| **Retrieval fee** | IA/Glacier charge per-access | No retrieval fee when moving back |
+| **Monitoring fee** | None | $0.0025/1K objects/month |
+
+### Storage Class Is Per Object, Not Per Bucket
+
+Within the same bucket, different objects can have different storage classes:
+
+```
+Bucket A
+├── photo.jpg    → Standard
+├── report.pdf   → Intelligent-Tiering
+└── archive.zip  → Glacier Deep Archive
+```
+
+You set storage class:
+- At upload time (per object)
+- Via **lifecycle rules** on the bucket (e.g., "move all objects to IA after 30 days")
+- Or use Intelligent-Tiering and let AWS handle it automatically
+
 ---
 
 ## Key Concepts

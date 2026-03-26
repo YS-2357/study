@@ -250,6 +250,23 @@ AWS Graviton2/Graviton3 (ARM) vs x86:
 
 ## Summary for AWS
 
+### Architecture + OS Combinations
+
+Architecture (CPU) and OS are two separate choices. Not all combinations exist on AWS:
+
+| Architecture | Linux | Windows | macOS |
+|---|---|---|---|
+| **x86_64 (Intel/AMD)** | ✅ Most common | ✅ .NET, AD, SQL Server | ✅ mac1.metal |
+| **arm64 (Graviton)** | ✅ Best price/performance | ❌ Not available | — |
+| **arm64 (Apple M1/M2)** | — | — | ✅ mac2.metal |
+
+OS cost on EC2:
+- **Linux** — free (no OS license cost)
+- **Windows** — extra cost (license included in hourly price)
+- **macOS** — extra cost (dedicated Mac hardware, 24h minimum)
+
+Think of it as: architecture = engine type (diesel vs electric), OS = car body (sedan vs truck). You need both.
+
 **When choosing AMI, look for:**
 - ✅ **64-bit** (not 32-bit)
 - ✅ **ARM (Graviton)** for cost savings (if compatible)
