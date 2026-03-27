@@ -124,6 +124,22 @@
 - Can create volumes from snapshots in any AZ within the Region
 - Can copy snapshots across Regions
 
+#### Snapshots Across AWS Services
+
+"Snapshot" is used across many services — same concept (capture state at a point in time), different names:
+
+| Service | Snapshot name | What it captures | Where stored |
+|---------|--------------|-----------------|-------------|
+| **EBS** | EBS Snapshot | Block-level disk data | S3 (AWS-managed, invisible) |
+| **EC2 (AMI)** | AMI | OS + apps + config (= EBS snapshots + metadata) | S3 (AWS-managed) |
+| **RDS** | DB Snapshot | Entire database (data + config) | S3 (AWS-managed) |
+| **Aurora** | DB Cluster Snapshot | Entire cluster (all DBs) | S3 (AWS-managed) |
+| **ElastiCache (Redis)** | Backup/Snapshot | In-memory cache data | S3 (AWS-managed) |
+| **DynamoDB** | On-demand Backup | Table data | DynamoDB-managed |
+| **EFS** | AWS Backup | File system data | AWS Backup vault |
+
+Not snapshot-able: S3 (use versioning/replication), Lambda (code versions are the "snapshot").
+
 ### gp3 vs gp2
 - **gp3**: IOPS and throughput are independently configurable, baseline 3,000 IOPS + 125 MiB/s included
 - **gp2**: IOPS tied to volume size (3 IOPS/GiB), burst up to 3,000 for small volumes

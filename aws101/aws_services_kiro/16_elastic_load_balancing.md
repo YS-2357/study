@@ -342,6 +342,20 @@ The layer determines what part of the traffic the load balancer can see and act 
 - Not about routing logic — about inserting firewalls/IDS/IPS into the traffic path
 - Best when: client requires third-party security appliances
 
+#### How GWLB Handles Public Traffic
+
+GWLB is always **internal** (no internet-facing option), but it still handles public inbound traffic — indirectly via routing:
+
+```
+Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Appliance → back → your ALB/EC2
+                                (PrivateLink)           (firewall, IDS/IPS)
+```
+
+- GWLB itself has no public IP — traffic reaches it through route table entries pointing to a GWLB Endpoint
+- That traffic can be public inbound (from internet) or private (VPC-to-VPC)
+- "Internal" means how GWLB is deployed, not what traffic it inspects
+- It's a transparent bump-in-the-wire for security inspection, regardless of traffic origin
+
 **Example — user sends `https://shop.example.com/api/orders`:**
 - ALB sees: host=`shop.example.com`, path=`/api/orders` → routes based on that
 - NLB sees: destination IP, port 443, TCP connection → forwards to target group
