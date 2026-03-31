@@ -10,6 +10,13 @@ AWS learning materials, reference notes, screenshots, and local presentation mat
 - `images/`: Image assets used by the AWS notes.
 - `ppt/`: Local-only presentation practice notes, script drafts, and Q&A files.
 
+## Local organizing rules
+
+- `aws_services_codex/` and `aws_services_kiro/` are tracked reference notes.
+- `console_workthrough/` is for operational, console-oriented explanation that supports the tracked notes.
+- `images/` should contain only screenshots and assets that are worth preserving as part of the study material.
+- `ppt/` is for rehearsal, delivery prep, and audience-specific notes, so it stays local-only.
+
 ## Notes
 
 - `ppt/` is intentionally excluded from Git via `.gitignore`.
