@@ -30,7 +30,7 @@ Your App → API call → Service (internal logic hidden)
          ← Response ←
 ```
 
-**API styles** (see [HTTP](../../networking/05_http.md) for REST details):
+**API styles** (see [HTTP](../networking/05_http.md) for REST details):
 
 | Style | Protocol | Format | Use Case |
 |-------|----------|--------|----------|
@@ -151,7 +151,7 @@ Why use VPC Endpoints:
 - Cost — no NAT Gateway data processing charges
 - Compliance — some workloads require no internet exposure
 
-For full VPC Endpoint details, see [Amazon VPC](../../aws/101/aws_services/04_amazon_vpc.md).
+For full VPC Endpoint details, see [Amazon VPC](../aws/101/aws_services/04_amazon_vpc.md).
 
 ---
 
