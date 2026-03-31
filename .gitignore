@@ -1,3 +1,9 @@
+# Local environment configuration
 .env
+
+# Local-only presentation practice materials
 aws/101/ppt/
+aws/201/ppt/
+
+# Private certification study materials
 aws/certificate/
