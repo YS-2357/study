@@ -10,6 +10,7 @@ Client ← HTTP Response ← Server
 ```
 
 For protocol basics, see the HTTP/HTTPS section in [Protocols](01_protocols.md).
+For the higher-level idea of an API as an interface, see [Interfaces](../computing/07_interfaces.md). This note is where the HTTP and REST API details live.
 
 ---
 
@@ -117,6 +118,12 @@ Server's fault — not the client's problem.
 ### What It Is
 REST (Representational State Transfer) is an architectural style for designing APIs on top of HTTP. It's not a protocol or standard — it's a set of design conventions.
 
+A useful metaphor:
+- **HTTP is the language and grammar**
+- **REST is the writing style**
+
+That means `GET`, `POST`, status codes, and headers come from HTTP itself. REST is the design approach that says how to use those HTTP pieces in a consistent, resource-oriented way.
+
 ### Core Principles
 1. **Resource-oriented** — URLs represent resources (nouns): `/users`, `/orders/123`
 2. **HTTP methods as actions** — GET (read), POST (create), PUT (update), DELETE (remove)
@@ -145,6 +152,37 @@ DELETE /users/1        → Delete user 1           → 204 No Content
 | **Strengths** | Simple, standard, easy caching | Request only what you need | High performance, type-safe |
 | **Weaknesses** | Over/under-fetching | Complex queries, hard to cache | Hard to call from browsers |
 | **Use case** | Most web APIs | Frontend flexibility | Microservice-to-microservice |
+
+### Same Goal, Different Style
+
+Suppose the client wants to get user `1`.
+
+**REST**
+```text
+GET /users/1
+```
+- The URL represents the resource
+- The HTTP method tells the server what action the client wants
+
+**GraphQL**
+```graphql
+query {
+  user(id: 1) {
+    id
+    name
+    email
+  }
+}
+```
+- The client asks for exactly the fields it wants
+- This is usually sent to a single endpoint such as `/graphql`
+
+**gRPC**
+```text
+UserService.GetUser(id=1)
+```
+- The client calls a remote method on a service
+- This feels more like calling a function than accessing a URL resource
 
 ### AWS Services Related to REST APIs
 - **API Gateway** — Create, manage, and deploy REST APIs (commonly paired with Lambda)

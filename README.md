@@ -38,6 +38,31 @@ Study materials organized by subject and topic.
 - Keep one reusable concept per file when possible.
 - Put new material in the most specific existing subtree that already fits instead of creating parallel ad hoc folders.
 
+### Note writing standard
+
+- Foundational notes should optimize for clarity before completeness.
+- Foundational concept notes should include a precise `Definition` and at least one concrete `Example`.
+- Add an `Analogy` when it improves intuition, but do not force one into every note.
+- Add `Why it matters` when the concept has practical AWS, debugging, or operational relevance.
+- Do not let the analogy replace the exact definition.
+- Prefer small, realistic examples over abstract placeholders.
+
+Use the template below as a default starting point for foundational notes. The exact headings may vary, but `Definition` plus `Example` should be present at minimum.
+
+```md
+## What It Is
+One-sentence definition.
+
+## Analogy
+Short intuition bridge, if useful.
+
+## Example
+One small concrete example.
+
+## Why It Matters
+Why this matters in practice or in AWS.
+```
+
 ### Working flow
 
 - Create new material in the intended subtree first.

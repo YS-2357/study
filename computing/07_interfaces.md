@@ -5,6 +5,13 @@ An interface is how you interact with a system.
 
 The key idea is that an interface defines the method of access without requiring you to know the internal implementation.
 
+A good analogy is a remote control:
+- you can use the TV through the buttons on the remote
+- you do not need to understand the internal circuitry of the TV
+- you still need to know what each button does
+
+That is how interfaces work in computing. They hide the internals, but they still expose a defined way to operate the system.
+
 ---
 
 ## Types of Interfaces
@@ -35,6 +42,8 @@ Your App -> API call -> Service (internal logic hidden)
 | **GraphQL** | HTTP | JSON | Frontend flexibility |
 | **gRPC** | HTTP/2 | Protocol Buffers | Microservice-to-microservice |
 | **SOAP** | HTTP/SMTP | XML | Legacy enterprise systems |
+
+The interface idea belongs here in `computing/`, but detailed REST API behavior belongs in [HTTP](../networking/05_http.md) because REST is built on top of HTTP.
 
 ---
 
