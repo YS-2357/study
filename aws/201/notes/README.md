@@ -1,2 +1,2 @@
 # notes
-Working notes for AWS 201 topics.
+Working notes and topic breakdowns for the AWS 201 track.

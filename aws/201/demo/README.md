@@ -1,2 +1,2 @@
 # demo
-Demo scripts, flows, and supporting artifacts for AWS 201.
+Demo scripts, walkthrough flows, and supporting artifacts for the AWS 201 track.

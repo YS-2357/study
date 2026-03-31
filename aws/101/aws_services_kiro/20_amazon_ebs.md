@@ -7,7 +7,7 @@
 ## What It Is
 **EBS (Elastic Block Store)** is block-level storage that you attach to EC2 instances. Think of it as a virtual hard drive — it persists independently from the instance, so data survives instance stop/start. Each EBS volume exists in a single Availability Zone.
 
-**See [Computing Basics - Storage](../../computing/computing_kiro/03_storage.md) for block vs file vs object storage fundamentals.**
+**See [Computing Basics - Storage](../../../computing/computing_kiro/03_storage.md) for block vs file vs object storage fundamentals.**
 
 ## Console Access
 - AWS Console → EC2 → Left sidebar → Elastic Block Store → Volumes

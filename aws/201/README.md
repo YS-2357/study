@@ -6,6 +6,7 @@ AWS 201 workspace for deeper architecture, implementation, and presentation work
 - `architecture/`: Architecture drafts, diagrams, and scenarios.
 - `implementation/`: Build notes, code references, and implementation plans.
 - `demo/`: Demo scripts, walkthroughs, and supporting assets.
+- `ppt/`: Local-only presentation workspace.
 
 ## Notes
 

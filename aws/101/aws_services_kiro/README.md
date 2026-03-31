@@ -1,5 +1,5 @@
 # aws_services_kiro
-AWS service notes written in the Kiro format.
+AWS service notes written in the Kiro format for the AWS 101 track.
 
 ## Index
 
@@ -43,5 +43,5 @@ AWS service notes written in the Kiro format.
 - `18_aws_waf.md`: AWS WAF.
 
 ## Cross-references
-- General computing concepts → `../../computing/computing_kiro/`
-- General networking concepts → `../../networking/networking_kiro/`
+- General computing concepts → `../../../computing/computing_kiro/`
+- General networking concepts → `../../../networking/networking_kiro/`

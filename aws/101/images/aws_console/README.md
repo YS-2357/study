@@ -1,5 +1,5 @@
 # aws_console
-AWS Console screenshots used in the AWS Markdown notes.
+AWS Console screenshots used by the AWS 101 Markdown notes and console walkthroughs.
 
 - `README.md`: Overview of the `aws_console/` folder and its direct files.
 - `alb1.png`: Screenshot of ALB basic configuration.

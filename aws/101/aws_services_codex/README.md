@@ -1,5 +1,5 @@
 # aws_services_codex
-AWS service notes written in the Codex format.
+AWS service notes written in the Codex format for the AWS 101 track.
 
 - [README.md](README.md): Overview of the `aws_services_codex/` folder and its direct contents.
 - [00-overview.md](00-overview.md): Validation notes against official AWS documentation.

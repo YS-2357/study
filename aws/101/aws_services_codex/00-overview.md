@@ -253,7 +253,7 @@ This helps with questions like:
 ## Related Folder
 
 If you want deeper networking intuition behind VPC, subnets, load balancers, ports, and routing, also read:
-- [`../../networking/networking_codex/00_overview.md`](../../networking/networking_codex/00_overview.md)
+- [`../../../networking/networking_codex/00_overview.md`](../../../networking/networking_codex/00_overview.md)
 
 That folder is especially useful before or alongside:
 - [`14-amazon-vpc.md`](14-amazon-vpc.md)

@@ -65,7 +65,7 @@
 - Radio buttons: arm64 or x86_64 (selected)
 - Choose the instruction set architecture you want for your function code
 
-**See [Computing Basics - Architecture](../../computing_kiro/01_architecture.md) for x86 vs ARM explanation.**
+**See [Computing Basics - Architecture](../../../computing/computing_kiro/01_architecture.md) for x86 vs ARM explanation.**
 
 **Architecture choice:**
 - **x86_64** - Standard, widest compatibility

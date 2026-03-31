@@ -1,2 +1,2 @@
 # architecture
-Architecture scenarios, diagrams, and design notes for AWS 201.
+Architecture scenarios, diagrams, and design notes for the AWS 201 track.
