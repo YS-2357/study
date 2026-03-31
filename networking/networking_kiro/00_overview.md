@@ -63,10 +63,10 @@ HTTP in depth — beyond the basics in [01. Protocols](01_protocols.md):
 
 **Cross-references:**
 - HTTP → [Interfaces & Endpoints](../../computing/computing_kiro/07_interfaces_and_endpoints.md) (API, ENI, VPC endpoints)
-- HTTP → [ELB](../../aws101/aws_services_kiro/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
-- DNS → [VPC](../../aws101/aws_services_kiro/04_amazon_vpc.md) (VPC DNS settings)
-- Protocols → [Security Group](../../aws101/aws_services_kiro/14_security_group.md) (protocol + port rules)
-- Addressing → [Subnet](../../aws101/aws_services_kiro/03_subnet.md) (CIDR, IPv4/IPv6)
+- HTTP → [ELB](../../aws/101/aws_services_kiro/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
+- DNS → [VPC](../../aws/101/aws_services_kiro/04_amazon_vpc.md) (VPC DNS settings)
+- Protocols → [Security Group](../../aws/101/aws_services_kiro/14_security_group.md) (protocol + port rules)
+- Addressing → [Subnet](../../aws/101/aws_services_kiro/03_subnet.md) (CIDR, IPv4/IPv6)
 
 ## Quick Reference
 

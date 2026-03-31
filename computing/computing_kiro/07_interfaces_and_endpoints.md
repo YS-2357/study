@@ -151,7 +151,7 @@ Why use VPC Endpoints:
 - Cost — no NAT Gateway data processing charges
 - Compliance — some workloads require no internet exposure
 
-For full VPC Endpoint details, see [Amazon VPC](../../aws101/aws_services_kiro/04_amazon_vpc.md).
+For full VPC Endpoint details, see [Amazon VPC](../../aws/101/aws_services_kiro/04_amazon_vpc.md).
 
 ---
 

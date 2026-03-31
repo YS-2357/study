@@ -31,10 +31,10 @@ This folder contains fundamental computing concepts that are essential for under
 - [Interfaces & Endpoints](07_interfaces_and_endpoints.md) — understand APIs, VPC endpoints, ENIs
 
 **Cross-references:**
-- Caching → [ElastiCache](../../aws101/aws_services_kiro/13_amazon_elasticache.md), [CloudFront](../../aws101/aws_services_kiro/21_amazon_cloudfront.md)
-- Interfaces & Endpoints → [VPC](../../aws101/aws_services_kiro/04_amazon_vpc.md), [HTTP](../../networking/networking_kiro/05_http.md)
-- Virtualization → [EC2](../../aws101/aws_services_kiro/05_amazon_ec2.md), [Lambda](../../aws101/aws_services_kiro/07_aws_lambda.md)
-- Storage → [EBS](../../aws101/aws_services_kiro/20_amazon_ebs.md), [S3](../../aws101/aws_services_kiro/19_amazon_s3.md)
+- Caching → [ElastiCache](../../aws/101/aws_services_kiro/13_amazon_elasticache.md), [CloudFront](../../aws/101/aws_services_kiro/21_amazon_cloudfront.md)
+- Interfaces & Endpoints → [VPC](../../aws/101/aws_services_kiro/04_amazon_vpc.md), [HTTP](../../networking/networking_kiro/05_http.md)
+- Virtualization → [EC2](../../aws/101/aws_services_kiro/05_amazon_ec2.md), [Lambda](../../aws/101/aws_services_kiro/07_aws_lambda.md)
+- Storage → [EBS](../../aws/101/aws_services_kiro/20_amazon_ebs.md), [S3](../../aws/101/aws_services_kiro/19_amazon_s3.md)
 
 ---
 

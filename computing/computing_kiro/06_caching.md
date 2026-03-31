@@ -119,7 +119,7 @@ Most common pattern:
 - Security-sensitive data that shouldn't be stored in additional locations
 
 ## AWS Services Related to Caching
-- **ElastiCache** — Managed Redis/Memcached/Valkey (see [ElastiCache](../../aws101/aws_services_kiro/13_amazon_elasticache.md))
+- **ElastiCache** — Managed Redis/Memcached/Valkey (see [ElastiCache](../../aws/101/aws_services_kiro/13_amazon_elasticache.md))
 - **CloudFront** — CDN caching at edge locations
 - **DAX** — DynamoDB Accelerator, in-memory cache specifically for DynamoDB
 - **API Gateway** — Can cache API responses
