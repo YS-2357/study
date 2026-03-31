@@ -9,7 +9,8 @@ General computing study notes organized by topic.
 - `04_gpu.md`: Notes about GPUs.
 - `05_workload_types.md`: Notes about workload types.
 - `06_caching.md`: Notes about caching concepts and patterns.
-- `07_interfaces_and_endpoints.md`: Interfaces (API, CLI, GUI, ENI) and endpoints (API, AWS service, database, VPC).
+- `07_interfaces.md`: Interfaces such as API, CLI, GUI, ENI, and programming contracts.
+- `08_endpoints.md`: API, AWS service, database, and VPC endpoints.
 
 ## Local organizing rules
 

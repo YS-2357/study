@@ -15,7 +15,7 @@ This folder contains fundamental computing concepts that are essential for under
 6. **[Caching](06_caching.md)** - Cache concepts (hit/miss, TTL, eviction), layers (CPU → CDN), patterns (cache-aside, write-through), Valkey vs Redis vs Memcached
 
 ### Communication & Abstraction
-7. **[Interfaces & Endpoints](07_interfaces_and_endpoints.md)** - Interfaces (API, CLI, GUI, ENI), endpoints (API, AWS service, database, VPC), how systems connect
+7. **[Interfaces](07_interfaces.md)** and **[Endpoints](08_endpoints.md)** - Interfaces (API, CLI, GUI, ENI) and endpoints (API, AWS service, database, VPC), and how systems connect
 
 ---
 
@@ -28,7 +28,7 @@ This folder contains fundamental computing concepts that are essential for under
 
 **For deeper understanding:**
 - [Caching](06_caching.md) — understand ElastiCache, CloudFront, DAX
-- [Interfaces & Endpoints](07_interfaces_and_endpoints.md) — understand APIs, VPC endpoints, ENIs
+- [Interfaces](07_interfaces.md) and [Endpoints](08_endpoints.md) — understand APIs, VPC endpoints, and ENIs
 
 **Cross-references:**
 - Caching → [ElastiCache](../aws/101/aws_services/13_amazon_elasticache.md), [CloudFront](../aws/101/aws_services/21_amazon_cloudfront.md)

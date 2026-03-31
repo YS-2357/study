@@ -67,7 +67,7 @@ HTTP in depth — beyond the basics in [01. Protocols](01_protocols.md):
 - [HTTP](05_http.md) - 4xx/5xx error diagnosis
 
 **Cross-references:**
-- HTTP → [Interfaces & Endpoints](../computing/07_interfaces_and_endpoints.md) (API, ENI, VPC endpoints)
+- HTTP → [Interfaces](../computing/07_interfaces.md) and [Endpoints](../computing/08_endpoints.md) (API, ENI, VPC endpoints)
 - HTTP → [ELB](../aws/101/aws_services/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
 - DNS → [VPC](../aws/101/aws_services/04_amazon_vpc.md) (VPC DNS settings)
 - Protocols → [Security Group](../aws/101/aws_services/14_security_group.md) (protocol + port rules)
