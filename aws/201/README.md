@@ -5,5 +5,8 @@ AWS 201 workspace for deeper architecture, implementation, and presentation work
 - `notes/`: Study notes and topic breakdowns.
 - `architecture/`: Architecture drafts, diagrams, and scenarios.
 - `implementation/`: Build notes, code references, and implementation plans.
-- `ppt/`: Presentation drafts and rehearsal materials.
 - `demo/`: Demo scripts, walkthroughs, and supporting assets.
+
+## Notes
+
+- `ppt/` is kept as a local-only workspace and is intentionally ignored by Git.
