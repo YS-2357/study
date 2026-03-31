@@ -1,8 +1,7 @@
 # AWS 101 Glossary
 
 This glossary organizes terms found across:
-- `aws/101/aws_services_codex/`
-- `C:\Users\USER\내 드라이브\Onboarding\AWS 101\101_Template.pptx`
+- `aws/101/aws_services/`
 
 Each entry includes:
 - English term

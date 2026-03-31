@@ -1,5 +1,5 @@
 # networking_kiro
-Networking notes written in the Kiro format.
+Networking notes.
 
 - `README.md`: Overview of the `networking_kiro/` folder and its direct contents.
 - `00_overview.md`: Overview of the networking notes.
