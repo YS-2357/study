@@ -173,6 +173,30 @@ Layer 1: Electrical signals on cable
 
 ---
 
+## Header and Payload
+
+When data moves down the stack, each lower layer wraps the upper layer's data with its own metadata.
+
+- **Header** - control information a layer adds so it can do its job
+- **Payload** - the data that layer is carrying
+
+Example:
+
+```text
+Layer 4 = [TCP header][HTTP data]
+Layer 3 = [IP header][TCP header][HTTP data]
+Layer 2 = [Frame header][IP header][TCP header][HTTP data]
+```
+
+This is why encapsulation matters:
+- Layer 4 adds ports and transport control
+- Layer 3 adds source and destination IP addresses
+- Layer 2 adds local link information such as MAC-based frame delivery
+
+The same bytes can be a payload at one layer and then become part of the payload for the next lower layer.
+
+---
+
 ## OSI vs TCP/IP Model
 
 **OSI (7 layers)** - Theoretical model for education
@@ -291,3 +315,16 @@ Layer 1: Electrical signals on cable
 
 **"Need to memorize all layers for AWS"**
 - ✗ False - Focus on Layers 3, 4, and 7 for most AWS work
+
+---
+
+## OSI Is Not Seven Slow Checkpoints
+
+OSI is a responsibility model, not a claim that communication becomes slow because it passes seven steps.
+
+Modern systems feel fast because:
+- each layer does a focused job
+- the work at each layer is heavily optimized
+- connections, routing, and caches reduce repeated work
+
+When a web search feels instant, that does not mean the layers disappeared. It means the browser, operating system, network, and remote infrastructure handled each layer efficiently.

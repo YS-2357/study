@@ -56,17 +56,22 @@ HTTP in depth — beyond the basics in [01. Protocols](01_protocols.md):
 - Then [HTTP](05_http.md) - status codes, REST APIs
 - Skip OSI Model initially (come back later)
 
+**If OSI feels abstract:**
+- Read [OSI Model](03_osi_model.md) once for the big picture
+- Re-read Layer 7, 4, and 3 first because they explain most AWS networking behavior
+- Use the header/payload section in [OSI Model](03_osi_model.md) when encapsulation feels vague
+
 **For troubleshooting:**
 - [OSI Model](03_osi_model.md) - systematic debugging approach
 - [DNS](04_dns.md) - name resolution issues
 - [HTTP](05_http.md) - 4xx/5xx error diagnosis
 
 **Cross-references:**
-- HTTP → [Interfaces & Endpoints](../../computing/07_interfaces_and_endpoints.md) (API, ENI, VPC endpoints)
-- HTTP → [ELB](../../aws/101/aws_services/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
-- DNS → [VPC](../../aws/101/aws_services/04_amazon_vpc.md) (VPC DNS settings)
-- Protocols → [Security Group](../../aws/101/aws_services/14_security_group.md) (protocol + port rules)
-- Addressing → [Subnet](../../aws/101/aws_services/03_subnet.md) (CIDR, IPv4/IPv6)
+- HTTP → [Interfaces & Endpoints](../computing/07_interfaces_and_endpoints.md) (API, ENI, VPC endpoints)
+- HTTP → [ELB](../aws/101/aws_services/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
+- DNS → [VPC](../aws/101/aws_services/04_amazon_vpc.md) (VPC DNS settings)
+- Protocols → [Security Group](../aws/101/aws_services/14_security_group.md) (protocol + port rules)
+- Addressing → [Subnet](../aws/101/aws_services/03_subnet.md) (CIDR, IPv4/IPv6)
 
 ## Quick Reference
 
