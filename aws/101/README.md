@@ -1,7 +1,7 @@
-# aws101
+# aws/101
 AWS learning materials, reference notes, screenshots, and local presentation materials.
 
-- `README.md`: Overview of the `aws101/` folder and its direct contents.
+- `README.md`: Overview of the `aws/101/` folder and its direct contents.
 - `aws_glossary.md`: Glossary of AWS terms and concepts.
 - `aws_services.md`: General AWS services summary notes.
 - `aws_services_codex/`: Codex-written AWS service notes.

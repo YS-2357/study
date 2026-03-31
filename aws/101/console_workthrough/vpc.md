@@ -101,7 +101,7 @@ Resource Groups & Tag Editor에서 관리가 가능한 옵션
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/vpc1.png 와 vpc2.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/vpc1.png 와 vpc2.png 기준으로 이해하면 된다.`
 
 ##### Resources to create
 
@@ -125,7 +125,7 @@ Resource Groups & Tag Editor에서 관리가 가능한 옵션
 
 #### Terminology
 
-- `Console screenshots` = `study/aws101/images/aws_console/vpc1.png`, `study/aws101/images/aws_console/vpc2.png`
+- `Console screenshots` = `study/aws/101/images/aws_console/vpc1.png`, `study/aws/101/images/aws_console/vpc2.png`
 - `VPC` = `Virtual Private Cloud`
 - `CIDR` = `Classless Inter-Domain Routing`
 - `IPAM` = `Amazon VPC IP Address Manager`

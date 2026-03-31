@@ -357,7 +357,7 @@ alb는 웹 서비스 중심의 트래픽 분산, nlb는 더 빠른 네트워크 
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/elb1.png, elb2.png, alb1.png~alb7.png, nlb1.png~nlb6.png, gwlb1.png~gwlb4.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/elb1.png, elb2.png, alb1.png~alb7.png, nlb1.png~nlb6.png, gwlb1.png~gwlb4.png 기준으로 이해하면 된다.`
 
 ##### Listener
 

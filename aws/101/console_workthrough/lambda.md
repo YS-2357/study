@@ -291,7 +291,7 @@ vpc와 연결하면 cold start가 길어질 수 있다.
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/lambda1.png, lambda2.png, lambda-function.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/lambda1.png, lambda2.png, lambda-function.png 기준으로 이해하면 된다.`
 
 ##### Permissions
 

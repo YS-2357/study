@@ -188,7 +188,7 @@ ec2의 옵션을 변경은 서비스를 중단하고 가능하다.
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/ec2_1.png, ec2_2.png, ec2_3.png, ec2_4.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/ec2_1.png, ec2_2.png, ec2_3.png, ec2_4.png 기준으로 이해하면 된다.`
 
 ##### Key pair
 
@@ -208,7 +208,7 @@ ec2의 옵션을 변경은 서비스를 중단하고 가능하다.
 
 #### Terminology
 
-- `Console screenshots` = `study/aws101/images/aws_console/ec2_1.png`, `study/aws101/images/aws_console/ec2_2.png`, `study/aws101/images/aws_console/ec2_3.png`, `study/aws101/images/aws_console/ec2_4.png`
+- `Console screenshots` = `study/aws/101/images/aws_console/ec2_1.png`, `study/aws/101/images/aws_console/ec2_2.png`, `study/aws/101/images/aws_console/ec2_3.png`, `study/aws/101/images/aws_console/ec2_4.png`
 - `EC2` = `Elastic Compute Cloud`
 - `AMI` = `Amazon Machine Image`
 - `SSH` = `Secure Shell`

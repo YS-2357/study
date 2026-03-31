@@ -300,7 +300,7 @@ db의 경우 요금이 많이 나오므로 주의해야할 필요성이 있다.
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/rds01.png 부터 rds12.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/rds01.png 부터 rds12.png 기준으로 이해하면 된다.`
 
 ##### DB instance class
 

@@ -286,7 +286,7 @@ SAML의 회사 차원 단계의 인증인지, OpenID Connect의 다른 서비스
 
 #### 발표용으로 바로 쓸 수 있게 고치면 좋은 표현
 
-- `아래 콘솔 옵션 정리는 study/aws101/images/aws_console/iam_user1.png, iam_user2.png, iam_user3.png, iam_user_group1.png, iam_user_group2.png, iam_role1.png, iam_role2.png, iam_role4.png, iam_policy1.png 기준으로 이해하면 된다.`
+- `아래 콘솔 옵션 정리는 study/aws/101/images/aws_console/iam_user1.png, iam_user2.png, iam_user3.png, iam_user_group1.png, iam_user_group2.png, iam_role1.png, iam_role2.png, iam_role4.png, iam_policy1.png 기준으로 이해하면 된다.`
 
 ##### User details
 
