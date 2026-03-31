@@ -3,6 +3,7 @@ Study materials organized by subject and topic.
 
 - `README.md`: Overview of the `study/` folder and its direct contents.
 - `aws/`: AWS study materials grouped by level and purpose.
+- `git/`: Git study notes.
 - `computing/`: General computing study notes.
 - `networking/`: Networking study notes.
 
