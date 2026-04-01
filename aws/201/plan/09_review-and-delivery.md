@@ -1,4 +1,4 @@
-# Review and Delivery
+# Review And Delivery
 
 <!-- planner:flow:start -->
 ## Flow Role
@@ -6,7 +6,7 @@
 - Order: `09`
 - Depends on: [08_safety-and-security.md](./08_safety-and-security.md)
 - Enables / Affects: [10_observability-and-rollout.md](./10_observability-and-rollout.md)
-- Purpose Fit: Ensures the service remains a human-reviewed drafting assistant rather than an autonomous responder.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective

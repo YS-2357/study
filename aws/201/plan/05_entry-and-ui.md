@@ -1,4 +1,4 @@
-# Entry and UI
+# Entry And Ui
 
 <!-- planner:flow:start -->
 ## Flow Role
@@ -6,7 +6,7 @@
 - Order: `05`
 - Depends on: [04_questions.md](./04_questions.md)
 - Enables / Affects: [06_data-and-retrieval.md](./06_data-and-retrieval.md)
-- Purpose Fit: Fixes the product boundary and reviewer workflow before the retrieval and agent internals are defined.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective

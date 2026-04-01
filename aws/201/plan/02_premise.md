@@ -6,7 +6,7 @@
 - Order: `02`
 - Depends on: [01_request.md](./01_request.md)
 - Enables / Affects: [03_tools.md](./03_tools.md)
-- Purpose Fit: Captures the assumptions and constraints that the tool and architecture choices must respect.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Assumptions
@@ -18,13 +18,13 @@
 
 ## Known Context
 
-- Premise source: [premise/260401.md](./premise/260401.md)
+- Premise source: [premise/260401.md](../premise/260401.md)
 - Service notes available:
-  - [Strands Agents SDK](./aws_services/01_strands_agents_sdk.md)
-  - [Bedrock AgentCore](./aws_services/02_amazon_bedrock_agentcore.md)
-  - [Bedrock Guardrails](./aws_services/03_amazon_bedrock_guardrails.md)
+  - [Strands Agents SDK](../aws_services/01_strands_agents_sdk.md)
+  - [Bedrock AgentCore](../aws_services/02_amazon_bedrock_agentcore.md)
+  - [Bedrock Guardrails](../aws_services/03_amazon_bedrock_guardrails.md)
 - Data currently visible in the repo:
-  - [zendesk_articles.csv](./data/zendesk_articles.csv)
+  - [zendesk_articles.csv](../data/zendesk_articles.csv)
   - Columns include `title`, `html_url`, `updated_at`, and `body`.
   - Article bodies are HTML, so preprocessing and chunking are required before retrieval.
 

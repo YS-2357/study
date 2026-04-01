@@ -6,7 +6,7 @@
 - Order: `07`
 - Depends on: [06_data-and-retrieval.md](./06_data-and-retrieval.md)
 - Enables / Affects: [08_safety-and-security.md](./08_safety-and-security.md)
-- Purpose Fit: Defines the agent behavior only after the entry and retrieval boundaries are fixed.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective

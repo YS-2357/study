@@ -6,7 +6,7 @@
 - Order: `04`
 - Depends on: [03_tools.md](./03_tools.md)
 - Enables / Affects: [05_entry-and-ui.md](./05_entry-and-ui.md)
-- Purpose Fit: Records what is already decided for the POC cut and what remains open without blocking the first architecture.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Open Questions
@@ -23,6 +23,7 @@
 - Guardrails are necessary but not sufficient; application-level sanitization and validation stay in scope.
 - Durable memory is deferred from the first architecture cut.
 - Cognito is noted as a later identity option rather than a core dependency of the initial flow.
+- No in-scope planner-stopping error is active in this workspace; the remaining unknowns below are implementation decisions inside the approved scope.
 
 ## Items That Change the Plan Flow
 

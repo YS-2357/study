@@ -1,4 +1,4 @@
-# Data and Retrieval
+# Data And Retrieval
 
 <!-- planner:flow:start -->
 ## Flow Role
@@ -6,7 +6,7 @@
 - Order: `06`
 - Depends on: [05_entry-and-ui.md](./05_entry-and-ui.md)
 - Enables / Affects: [07_agent-runtime.md](./07_agent-runtime.md)
-- Purpose Fit: Defines what knowledge the agent can use and how evidence gets attached to drafts.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective
@@ -15,7 +15,7 @@
 
 ## Decisions
 
-- The initial knowledge source is [zendesk_articles.csv](./data/zendesk_articles.csv).
+- The initial knowledge source is [zendesk_articles.csv](../data/zendesk_articles.csv).
 - Article HTML must be cleaned into normalized text before chunking and indexing.
 - Retrieval results should carry article title, URL, update time, and source snippet into the agent/reviewer flow.
 - Inquiry text and retrieved knowledge should stay request-scoped; no long-lived memory store is needed in this first cut.

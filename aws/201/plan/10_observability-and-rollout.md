@@ -1,4 +1,4 @@
-# Observability and Rollout
+# Observability And Rollout
 
 <!-- planner:flow:start -->
 ## Flow Role
@@ -6,7 +6,7 @@
 - Order: `10`
 - Depends on: [09_review-and-delivery.md](./09_review-and-delivery.md)
 - Enables / Affects: None
-- Purpose Fit: Defines how the POC is validated, monitored, and expanded without overloading the first implementation.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective

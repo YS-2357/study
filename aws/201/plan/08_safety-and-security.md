@@ -1,4 +1,4 @@
-# Safety and Security
+# Safety And Security
 
 <!-- planner:flow:start -->
 ## Flow Role
@@ -6,7 +6,7 @@
 - Order: `08`
 - Depends on: [07_agent-runtime.md](./07_agent-runtime.md)
 - Enables / Affects: [09_review-and-delivery.md](./09_review-and-delivery.md)
-- Purpose Fit: Adds the safety controls that make the draft flow acceptable for customer-support use.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Objective

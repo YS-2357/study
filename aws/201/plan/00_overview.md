@@ -25,16 +25,19 @@ Design an internal CS AI Assistant POC that generates grounded reply drafts with
 - [`02_premise.md`](./02_premise.md): Premise
 - [`03_tools.md`](./03_tools.md): Tools
 - [`04_questions.md`](./04_questions.md): Questions
-- [`05_entry-and-ui.md`](./05_entry-and-ui.md): Entry and UI
-- [`06_data-and-retrieval.md`](./06_data-and-retrieval.md): Data and Retrieval
+- [`05_entry-and-ui.md`](./05_entry-and-ui.md): Entry And Ui
+- [`06_data-and-retrieval.md`](./06_data-and-retrieval.md): Data And Retrieval
 - [`07_agent-runtime.md`](./07_agent-runtime.md): Agent Runtime
-- [`08_safety-and-security.md`](./08_safety-and-security.md): Safety and Security
-- [`09_review-and-delivery.md`](./09_review-and-delivery.md): Review and Delivery
-- [`10_observability-and-rollout.md`](./10_observability-and-rollout.md): Observability and Rollout
+- [`08_safety-and-security.md`](./08_safety-and-security.md): Safety And Security
+- [`09_review-and-delivery.md`](./09_review-and-delivery.md): Review And Delivery
+- [`10_observability-and-rollout.md`](./10_observability-and-rollout.md): Observability And Rollout
 <!-- planner:file-map:end -->
 
 ## Flow Checks
 
+- Every file after `00` stays within the internal CS drafting-assistant scope defined above.
+- `03_tools.md` names the concrete commands, MCP/connectors, CLI tools, and external systems needed to execute this POC plan.
+- No in-scope planner-stopping error is active right now; if one appears, stop the flow and create `05_error-report.md` instead of extending later numbered files.
 - `05_entry-and-ui.md` locks the core product boundary: CS staff are the direct users of the POC.
 - `06_data-and-retrieval.md` shapes what context the agent can see and cite, based on the Zendesk export.
 - `07_agent-runtime.md` only drafts responses; it never bypasses human review.
@@ -63,4 +66,5 @@ Design an internal CS AI Assistant POC that generates grounded reply drafts with
 <!-- planner:recent-memory:start -->
 - Initial AWS 201 architecture workspace created from premise 260401.
 - Retrieval source confirmed as Zendesk article CSV with HTML bodies.
+- Workspace reconciled to the updated planner rules: explicit scope, separate stop-on-error handling, and concrete tool inventory.
 <!-- planner:recent-memory:end -->

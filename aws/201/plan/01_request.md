@@ -6,7 +6,7 @@
 - Order: `01`
 - Depends on: [00_overview.md](./00_overview.md)
 - Enables / Affects: [02_premise.md](./02_premise.md)
-- Purpose Fit: Restates the assignment and fixes the success criteria that all later files must satisfy.
+- Purpose Fit: Explain how this file advances the user goal without drifting outside scope.
 <!-- planner:flow:end -->
 
 ## Goal
