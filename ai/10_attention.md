@@ -3,6 +3,24 @@
 ## What It Is
 Attention is the core mechanism in transformer-based LLMs that lets each token figure out which other tokens are relevant to it. It uses three vectors per token: Query, Key, and Value.
 
+## Why They Are Named Query, Key, Value
+
+The names come from database/information retrieval, not from the math.
+
+In a key-value store (like a dictionary):
+- A **key** → **value** pair is stored (e.g., `"name" → "Alice"`)
+- A **query** is sent to look up a matching key
+- When the query matches a key, the value is returned
+
+Attention is a "soft" version of this:
+
+| Database lookup | Attention |
+|---|---|
+| Query matches one key exactly | Query matches all keys partially (similarity scores) |
+| Returns one value | Returns a weighted blend of all values |
+
+The names describe their roles, not the math. The original 2017 "Attention Is All You Need" paper used these names from this analogy.
+
 ## Where Q, K, V Come From
 
 Every token starts as an embedding vector. That embedding is multiplied by three separate learned weight matrices to produce Q, K, and V:
