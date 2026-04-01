@@ -2,8 +2,11 @@
 .env
 
 # Local-only presentation practice materials
-aws/101/ppt/
-aws/201/ppt/
+**/ppt/
 
 # Private certification study materials
-aws/certificate/
+**/certificate/
+
+# Local-only practice data
+**/data/
+**/premise/

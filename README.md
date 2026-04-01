@@ -2,6 +2,7 @@
 Study materials organized by subject and topic.
 
 - `README.md`: Overview of the `study/` folder and its direct contents.
+- `ai/`: AI agent, Codex, and tool ecosystem study notes.
 - `aws/`: AWS study materials grouped by level and purpose.
 - `git/`: Git study notes.
 - `computing/`: General computing study notes.

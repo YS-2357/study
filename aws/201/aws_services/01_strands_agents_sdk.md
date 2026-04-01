@@ -2,12 +2,13 @@
 
 ## Official Documentation
 - [Strands Agents Official Site](https://strandsagents.com/)
-- [GitHub Repository](https://github.com/strands-agents/sdk-python)
+- [GitHub Repository (Python)](https://github.com/strands-agents/sdk-python)
+- [GitHub Repository (TypeScript)](https://github.com/strands-agents/sdk-typescript)
 - [AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/strands-agents.html)
 - [Technical Deep Dive (AWS Blog)](https://aws.amazon.com/blogs/machine-learning/strands-agents-sdk-a-technical-deep-dive-into-agent-architectures-and-observability/)
 
 ## What It Is
-Strands Agents is an open-source Python SDK from AWS for building AI agents with minimal code. It takes a model-driven approach — you give the agent a model, a prompt, and tools, then the LLM decides how to use them.
+Strands Agents is an open-source SDK from AWS for building AI agents with minimal code. Available for both Python and TypeScript. It takes a model-driven approach — you give the agent a model, a prompt, and tools, then the LLM decides how to use them.
 
 **The core idea:**
 - Instead of writing complex orchestration logic ("first do this, then do that"), you define *what* the agent can do
@@ -41,36 +42,43 @@ User request → Model reasons → Tool call needed? → Execute tool → Feed r
 | **Managed agents** | Bedrock Agents | No-code/low-code agent builder in AWS console |
 | **Infrastructure** | Bedrock AgentCore | Deploy, scale, secure, observe agents in production |
 
-**Key distinction:** Strands is the *framework* you write code with. AgentCore is the *infrastructure* you deploy to. They work together but are independent — you can use Strands without AgentCore (deploy anywhere Python runs) or use AgentCore with other frameworks (LangGraph, CrewAI, etc.).
+**Key distinction:** Strands is the *framework* you write code with. AgentCore is the *infrastructure* you deploy to. They work together but are independent — you can use Strands without AgentCore (deploy anywhere Python/Node.js runs) or use AgentCore with other frameworks (LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, etc.).
 
 ---
 
 ## Key Concepts
 
 ### Model Providers
-Strands is model-agnostic. Supported providers:
+Strands is model-agnostic. Supported providers (official):
 
-| Provider | Class | Notes |
-|---|---|---|
-| **Amazon Bedrock** | `BedrockModel` | Default, recommended for AWS |
-| **Anthropic (direct)** | `AnthropicModel` | Direct API, not through Bedrock |
-| **OpenAI** | `OpenAIModel` | GPT models |
-| **LiteLLM** | `LiteLLMModel` | Proxy to 100+ providers |
-| **Ollama** | `OllamaModel` | Local models |
-| **Custom** | `SAGEModel` / custom | Any model with tool-use support |
+| Provider | Python | TypeScript | Notes |
+|---|---|---|---|
+| **Amazon Bedrock** | ✅ | ✅ | Default, recommended for AWS |
+| **Amazon Nova** | ✅ | ❌ | Nova-specific optimizations |
+| **Anthropic (direct)** | ✅ | ❌ | Direct API, not through Bedrock |
+| **Google** | ✅ | ✅ | Gemini models |
+| **OpenAI** | ✅ | ✅ | GPT models |
+| **OpenAI Responses API** | ✅ | ❌ | Responses API variant |
+| **LiteLLM** | ✅ | ❌ | Proxy to 100+ providers |
+| **llama.cpp** | ✅ | ❌ | Local models via llama.cpp |
+| **LlamaAPI** | ✅ | ❌ | LlamaAPI service |
+| **MistralAI** | ✅ | ❌ | Mistral models |
+| **Ollama** | ✅ | ❌ | Local models |
+| **SageMaker** | ✅ | ❌ | SageMaker endpoints |
+| **Vercel** | ❌ | ✅ | TypeScript only |
+| **Writer** | ✅ | ❌ | Writer models |
+| **Custom** | ✅ | ✅ | Any model with tool-use support |
+
+Community providers also available: CLOVA Studio, Cohere, Fireworks AI, MLX, NVIDIA NIM, vLLM, xAI, and more.
 
 ### Tools
-Tools are Python functions the agent can call. Strands provides built-in tools and supports custom ones.
+Tools are Python/TypeScript functions the agent can call. Strands provides built-in tools and supports custom ones.
 
-**Built-in tools** (via `strands-agents-tools` package):
-- `calculator` — math operations
-- `web_search` — internet search
-- `file_read` / `file_write` — file operations
-- `shell` — execute shell commands
-- `python_repl` — run Python code
-- `retrieve` — RAG retrieval from knowledge bases
-- `code_interpreter` — sandboxed code execution (via AgentCore)
-- `browser` — web browsing (via AgentCore)
+**Tool categories:**
+- **Community Tools Package** (`strands-agents-tools`) — community-maintained tools like `http_request`, `shell`, `python_repl`, etc.
+- **Vended Tools** — officially maintained tools
+- **MCP Tools** — connect to any MCP server for thousands of community tools
+- **Custom tools** — your own functions
 
 **Custom tools** — decorate any Python function:
 ```python
@@ -92,35 +100,54 @@ The `@tool` decorator automatically generates the tool schema from the function 
 agent = Agent(model=model, tools=[tool_a, tool_b])
 ```
 
-**Multi-agent (Swarm)** — multiple specialized agents coordinated by a manager:
+**Agents as Tools** — nest agents inside other agents:
 ```python
-from strands.multiagent import SwarmOrchestrator
+@tool
+def research(query: str) -> str:
+    """Research a topic thoroughly."""
+    agent = Agent(tools=[search_web])
+    return str(agent(query))
 
-orchestrator = SwarmOrchestrator(
-    agents={"researcher": researcher_agent, "writer": writer_agent},
-    manager=manager_agent
-)
+writer = Agent(tools=[research])
+writer("Write a post about AI agents")
 ```
 
-**Workflow (Graph)** — structured DAG of tasks with dependencies:
-```python
-from strands.multiagent import GraphOrchestrator
+**Graph** — structured flowchart where an agent decides which path to take at each node. Developer defines nodes (agents) and edges (transitions). Supports conditional logic, branching, and cycles.
 
-graph = GraphOrchestrator()
-graph.add_node("research", researcher_agent)
-graph.add_node("write", writer_agent)
-graph.add_edge("research", "write")  # write depends on research
-```
+**Swarm** — dynamic collaborative team. Developer provides a pool of specialized agents. Agents autonomously hand off tasks to the most suitable peer. Supports cycles.
+
+**Workflow** — pre-defined task DAG executed as a single tool. Developer defines tasks and dependencies. Independent tasks run in parallel. No cycles (strict DAG).
+
+**Agent2Agent (A2A)** — protocol support for distributed multi-agent systems.
+
+### Plugins
+- **Skills** — load modular instructions on demand. Skills activate when needed instead of bloating the system prompt.
+- **Steering** — middleware for the agent loop. Intercept before/after tool calls to validate, guide, or block actions. Like HTTP middleware but for agent decisions.
+
+### Hooks
+Event-based system for intercepting agent behavior:
+- `BeforeToolCallEvent` — inspect/modify tool calls before execution
+- `AfterToolCallEvent` — inspect results after execution
+- Enables human-in-the-loop approval flows (agent pauses, waits for approval, then continues)
 
 ### Memory and State
-- **Conversation history** — automatically maintained within a session
+- **Conversation management** — built-in `SlidingWindowConversationManager` for context window control
 - **Session memory** — persist across sessions using AgentCore Memory or custom storage
+- **Shared state** — `invocation_state` for passing context across multi-agent patterns without exposing it to the LLM
 - Agents are stateless by default — add memory explicitly when needed
 
 ### Observability
-- Built-in OpenTelemetry tracing
+- Built-in OpenTelemetry tracing, metrics, and logs
 - Integrates with AgentCore Observability and CloudWatch
 - Trace every model call, tool invocation, and decision
+- Zero-config: just set `trace_attributes` on the agent
+
+### Strands Evals SDK
+Separate evaluation framework (`strands-evals`) for testing agents:
+- Define test cases, pick evaluators, run experiments
+- Built-in evaluators: Output, Trajectory, Helpfulness, Faithfulness, Goal Success Rate, Tool Selection Accuracy, Tool Parameter Accuracy
+- Custom evaluators supported
+- User simulation for automated testing
 
 ---
 
@@ -131,6 +158,7 @@ graph.add_edge("research", "write")  # write depends on research
 - A vague system prompt + powerful tools = unpredictable behavior
 - Write specific, bounded system prompts
 - Only give the agent tools it actually needs
+- Use Steering plugins for deterministic guardrails on tool calls
 
 ### 1. Tool Safety
 - Tools like `shell` and `python_repl` can execute arbitrary code
@@ -149,8 +177,8 @@ graph.add_edge("research", "write")  # write depends on research
 - Test edge cases where tools return errors
 
 ### 4. Local vs Production
-- Strands runs locally for development (just Python)
-- For production: deploy to AgentCore Runtime for scaling, security, and observability
+- Strands runs locally for development (just Python/Node.js)
+- For production: deploy to AgentCore Runtime, Lambda, Fargate, EKS, App Runner, Docker, Kubernetes, or Terraform
 - Don't run production agents on a notebook or local machine
 
 ### 5. Model Selection
