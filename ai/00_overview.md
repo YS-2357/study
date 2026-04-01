@@ -73,15 +73,21 @@ Named runtime modes:
 - More permissive experimental modes
 
 ### LLM Optimization
-### [10. KV Cache](10_kv_cache.md)
+### [10. Attention (Q, K, V)](10_attention.md)
+How each token decides which other tokens matter:
+- Query, Key, Value vectors
+- Dot-product similarity and softmax weights
+- Why only K and V are cached
+
+### [11. KV Cache](11_kv_cache.md)
 How transformers avoid redundant computation during generation:
 - Key and Value vectors cached per token
 - Prefill vs decode phases
 - Memory vs compute trade-off
 
-### [11. Prompt Caching](11_prompt_caching.md)
+### [12. Prompt Caching](12_prompt_caching.md)
 How providers reuse computation for repeated prefixes:
-- KV cache for token prefixes
+- KV cache reused across API calls
 - Prefix matching vs exact matching
 - Cost and latency savings
 
