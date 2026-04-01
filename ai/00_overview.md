@@ -72,6 +72,19 @@ Named runtime modes:
 - Normal working mode
 - More permissive experimental modes
 
+### LLM Optimization
+### [10. KV Cache](10_kv_cache.md)
+How transformers avoid redundant computation during generation:
+- Key and Value vectors cached per token
+- Prefill vs decode phases
+- Memory vs compute trade-off
+
+### [11. Prompt Caching](11_prompt_caching.md)
+How providers reuse computation for repeated prefixes:
+- KV cache for token prefixes
+- Prefix matching vs exact matching
+- Cost and latency savings
+
 ## How to Use
 
 **If you are new to agents:**

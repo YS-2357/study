@@ -12,6 +12,8 @@ AI agent and Codex study notes organized by topic.
 - `07_mcp.md`: MCP as the protocol layer behind many tools and plugins.
 - `08_hooks.md`: Hooks, local automation, and why most beginners can ignore them at first.
 - `09_profiles.md`: Profiles such as safe and balanced, and how they change runtime behavior.
+- `10_kv_cache.md`: What KV cache is and why it matters for LLM inference.
+- `11_prompt_caching.md`: How LLM prompt caching works and how it differs from traditional caching.
 
 ## Local organizing rules
 
@@ -32,3 +34,5 @@ AI agent and Codex study notes organized by topic.
 8. `07_mcp.md`
 9. `09_profiles.md`
 10. `08_hooks.md`
+11. `10_kv_cache.md`
+12. `11_prompt_caching.md`
