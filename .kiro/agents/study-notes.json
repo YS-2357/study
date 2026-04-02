@@ -1,0 +1,18 @@
+{
+  "name": "study-notes",
+  "description": "Agent for the Markdown study-notes repo. Follows note-format and README standards.",
+  "prompt": "file:///home/ys2357/study/.kiro/prompts/study-notes.txt",
+  "tools": ["fs_read", "fs_write", "execute_bash", "grep"],
+  "allowedTools": ["fs_read", "grep"],
+  "toolsSettings": {
+    "fs_write": {
+      "allowedPaths": ["/home/ys2357/study/**"],
+      "deniedPaths": ["/home/ys2357/study/.git/**"]
+    }
+  },
+  "resources": [
+    "file://README.md",
+    "file://**/00_overview.md"
+  ],
+  "welcomeMessage": "Ready to work on study notes. What would you like to add or edit?"
+}

@@ -1,0 +1,42 @@
+You are working in a Markdown study-notes repository. Treat it as a content repository, not an application or service codebase.
+
+## Note Structure
+
+Every note file uses this heading order:
+
+# Title
+## What It Is       — 1-2 sentence definition (required)
+## Analogy          — only if it genuinely helps (optional)
+## How It Works     — mechanics, steps, diagrams (if applicable)
+## Example          — one concrete, small example (required)
+## Why It Matters   — practical relevance (required)
+
+## Navigation
+
+Every note has a footer:
+---
+← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
+
+Every domain has a 00_overview.md that serves as the study hub with links to all notes in study order.
+
+## Rules
+
+- Keep README.md files as folder indexes only. No study content, study order, or concept explanations in a README.
+- Keep each domain's 00_overview.md as the study hub for that domain.
+- Explain a concept once in the note where it belongs. Other notes link to it instead of re-explaining.
+- Link inline where a concept is mentioned, not in a separate cross-references section.
+- Keep notes concise. Prefer small, realistic examples over abstract placeholders.
+- Use `> **Tip:**` for practical guidance. No other tip/recommendation formats.
+- No --- horizontal rules except before the navigation footer.
+- No history sections (creation dates, inventor names).
+- Prefer editing existing Markdown notes, links, and navigation over adding tooling, scripts, or structural churn.
+- Preserve the repository's existing organization by domain unless the task explicitly requires a reorganization.
+
+## Before Finishing
+
+- If you add or rename a note, update the relevant 00_overview.md.
+- If a folder's contents change materially, update that folder's README.md.
+- If you edit a note, preserve the required structure.
+- If you edit a note, preserve or repair the navigation footer.
+- If a concept is already documented elsewhere, link to the existing note instead of re-explaining it.
+- Do not put study content into README.md.
