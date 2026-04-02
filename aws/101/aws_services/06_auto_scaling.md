@@ -1,8 +1,4 @@
-# Auto Scaling - AWS Console Guide
-
-## Official Documentation
-- [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
-- [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)
+# Auto Scaling
 
 ## What It Is
 Auto Scaling automatically adjusts the number of resources based on demand. When traffic increases, it adds resources. When traffic decreases, it removes them.
@@ -25,7 +21,6 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
 - Search "EC2" > Auto Scaling Groups (left sidebar)
 - Or search "Auto Scaling" directly
 
----
 
 ## Create Auto Scaling Group - Console Flow (7 Steps)
 
@@ -84,7 +79,6 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
 - Review all settings
 - **Create Auto Scaling group**
 
----
 
 ## EC2 Auto Scaling Group (ASG) — Core Concept
 
@@ -141,7 +135,6 @@ Users → ELB (distributes traffic) → EC2 instances (managed by ASG)
 - Rolling update — replaces instances gradually (e.g., 20% at a time)
 - No downtime if configured properly
 
----
 
 ## Load Balancer Types (used with ASG)
 
@@ -156,7 +149,6 @@ ASG is commonly paired with a load balancer to distribute traffic across instanc
 
 > For full console flow, screenshots, pricing, and detailed comparison, see [Elastic Load Balancing](16_elastic_load_balancing.md).
 
----
 
 ## Key Concepts
 
@@ -206,7 +198,7 @@ After:  4x t3.large (new template)
 - Spread ASG across multiple AZs (Availability Zones)
 - If one AZ goes down, instances in other AZs keep running
 - ASG automatically rebalances across AZs
-- **MSP tip:** Always use at least 2 AZs for production
+- **Tip:** Always use at least 2 AZs for production
 
 ### Warm Pool (optional)
 - Pre-initialized instances kept in a "stopped" state
@@ -214,7 +206,6 @@ After:  4x t3.large (new template)
 - Faster scaling (skip boot time)
 - You pay for stopped instances (EBS storage only, no compute)
 
----
 
 ## Precautions
 
@@ -222,7 +213,7 @@ After:  4x t3.large (new template)
 - Maximum = the most instances ASG will ever launch
 - If set too high, a traffic spike (or attack) could launch many expensive instances
 - Always calculate: max instances × instance cost = worst-case monthly bill
-- **MSP tip:** Always discuss max instance count and cost ceiling with the client
+- **Tip:** Always discuss max instance count and cost ceiling with the client
 
 ### 1. Use Multiple AZs
 - Single AZ = single point of failure
@@ -254,3 +245,21 @@ After:  4x t3.large (new template)
 - Tags on ASG propagate to launched instances
 - Tag with environment, project, team, client, cost center
 - Essential for MSP cost tracking — know which ASG belongs to which client
+
+## Example
+
+An e-commerce site sets up an ASG with min=2, desired=2, max=8 across two AZs.
+A target tracking policy keeps average CPU at 50%. During a flash sale, traffic spikes and the ASG scales to 6 instances.
+After the sale, it gradually scales back to 2.
+
+## Why It Matters
+
+Auto Scaling matches capacity to demand automatically, preventing both over-provisioning (wasted cost)
+and under-provisioning (poor performance or outages during traffic spikes).
+
+## Official Documentation
+- [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
+- [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)
+
+---
+← Previous: [Amazon EC2](05_amazon_ec2.md) | [Overview](00_overview.md) | Next: [AWS Lambda](07_aws_lambda.md) →

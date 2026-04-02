@@ -1,7 +1,4 @@
-# AWS Lambda - AWS Console Guide
-
-## Official Documentation
-- [What is AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+# AWS Lambda
 
 ## What It Is
 **AWS Lambda** is a serverless compute service that runs your code in response to events without provisioning or managing servers. You pay only for the compute time you consume.
@@ -71,7 +68,7 @@
 - **x86_64** - Standard, widest compatibility
 - **arm64** - AWS Graviton2, 20% better price/performance, 19% lower cost
 
-**MSP recommendation:** Use arm64 (Graviton2) for cost savings unless specific x86 dependencies
+**Tip:** Use arm64 (Graviton2) for cost savings unless specific x86 dependencies
 
 ### Permissions
 
@@ -93,7 +90,7 @@
    - Choose existing IAM role
    - For functions needing specific permissions (S3, DynamoDB, etc.)
 
-**MSP tip:** Start with default role, add permissions later as needed (least privilege principle)
+**Tip:** Start with default role, add permissions later as needed (least privilege principle)
 
 #### Execution Role이란?
 
@@ -141,7 +138,6 @@ Lambda 함수 실행
 - **Cancel** - Discard
 - **Create function** - Create the Lambda function
 
----
 
 ## Function Detail Page (After Creation)
 
@@ -174,7 +170,6 @@ After creating a function, you see the function detail page. This is where you m
 
 **Note:** Triggers, Destinations, Memory, Timeout, Environment variables, and Concurrency are all configured here — NOT in the creation form.
 
----
 
 ## Key Concepts
 
@@ -256,7 +251,7 @@ exports.handler = async (event) => {
 - SES (send emails)
 - SNS (send notifications)
 
-**MSP tip:** Follow least privilege - only grant permissions function actually needs
+**Tip:** Follow least privilege - only grant permissions function actually needs
 
 ### Triggers (Event Sources)
 
@@ -292,7 +287,7 @@ exports.handler = async (event) => {
 - 512 MB, 1 second execution = 0.5 GB-seconds
 - 1024 MB, 0.5 second execution = 0.5 GB-seconds (same cost)
 
-**MSP tip:** Start with 512 MB, monitor performance, adjust as needed
+**Tip:** Start with 512 MB, monitor performance, adjust as needed
 
 ### Timeout
 
@@ -304,7 +299,7 @@ exports.handler = async (event) => {
 - Error returned
 - You're charged for full timeout duration
 
-**MSP tip:** Set timeout slightly higher than expected execution time, but not too high (avoid paying for hung functions)
+**Tip:** Set timeout slightly higher than expected execution time, but not too high (avoid paying for hung functions)
 
 ### Cold Start vs Warm Start
 
@@ -376,9 +371,8 @@ API_KEY=encrypted_key_here
 ENVIRONMENT=production
 ```
 
-**MSP tip:** Use AWS Secrets Manager for sensitive data, not environment variables
+**Tip:** Use AWS Secrets Manager for sensitive data, not environment variables
 
----
 
 ## Pricing
 
@@ -408,9 +402,8 @@ ENVIRONMENT=production
 - <30% utilization: Lambda cheaper
 - >30% utilization: EC2 cheaper
 
-**MSP recommendation:** Use Lambda for event-driven, sporadic workloads; EC2 for sustained workloads
+**Tip:** Use Lambda for event-driven, sporadic workloads; EC2 for sustained workloads
 
----
 
 ## Common Use Cases
 
@@ -456,7 +449,6 @@ ENVIRONMENT=production
 
 **Example:** Auto-stop idle EC2 instances, security compliance checks
 
----
 
 ## Precautions
 
@@ -482,7 +474,7 @@ ENVIRONMENT=production
 - First invocation slow (100ms - 1000ms+)
 - Affects user-facing applications
 - **Solutions:** Provisioned Concurrency (extra cost), keep functions warm with scheduled pings
-- **MSP tip:** Acceptable for background jobs, problematic for APIs
+- **Tip:** Acceptable for background jobs, problematic for APIs
 
 ### 4. Execution Time Limit
 - Maximum 15 minutes
@@ -537,7 +529,6 @@ ENVIRONMENT=production
 - **Integration tests:** Test with actual AWS services (dev environment)
 - **Load testing:** Verify concurrency and performance
 
----
 
 ## Lambda vs EC2 vs Fargate
 
@@ -552,12 +543,11 @@ ENVIRONMENT=production
 | **Cost (low usage)** | Cheapest | Most expensive | Middle |
 | **Cost (high usage)** | Most expensive | Cheapest | Middle |
 
-**MSP recommendation:**
+**Tip:**
 - **Lambda:** Event-driven, sporadic, <15 min tasks
 - **EC2:** Sustained workloads, >30% utilization, custom requirements
 - **Fargate:** Containerized apps, don't want to manage servers
 
----
 
 ## Summary
 
@@ -573,3 +563,20 @@ ENVIRONMENT=production
 - See [IAM Roles](24_amazon_iam.md) for execution role configuration
 - See [API Gateway](../aws_services/) for building APIs with Lambda (when created)
 - See [EventBridge](../aws_services/) for scheduled Lambda functions (when created)
+
+## Example
+
+An image-processing pipeline triggers a Lambda function whenever a photo is uploaded to an S3 bucket.
+The function generates a thumbnail, writes it to a different S3 prefix, and records metadata in DynamoDB.
+The entire flow runs without any servers to manage and costs fractions of a cent per invocation.
+
+## Why It Matters
+
+Lambda eliminates server management for event-driven workloads.
+It scales from zero to thousands of concurrent executions automatically, making it ideal for unpredictable or bursty traffic.
+
+## Official Documentation
+- [What is AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+
+---
+← Previous: [Auto Scaling](06_auto_scaling.md) | [Overview](00_overview.md) | Next: [AWS Fargate](26_aws_fargate.md) →

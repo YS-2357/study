@@ -1,8 +1,4 @@
-# Points of Presence (PoP) - AWS Console Guide
-
-## Official Documentation
-- [CloudFront Infrastructure](https://aws.amazon.com/cloudfront/features/#Amazon_CloudFront_Infrastructure)
-- [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+# Points of Presence (PoP)
 
 ## What It Is
 A Point of Presence (PoP) is an edge location where AWS caches content and terminates connections closer to end users. PoPs are the physical infrastructure behind services like CloudFront, Route 53, and Global Accelerator.
@@ -35,7 +31,6 @@ User in Tokyo → Nearest PoP (Tokyo edge) → Cache hit? → Serve immediately 
   - **Route 53** (DNS resolution)
   - **Global Accelerator** (network acceleration)
 
----
 
 ## Key Concepts
 
@@ -64,7 +59,6 @@ User → Edge Location (PoP) → Regional Edge Cache → Origin (S3/EC2/etc.)
 | **AWS WAF** | Runs at CloudFront edge locations to filter requests before they reach origin |
 | **AWS Shield** | DDoS protection at the edge |
 
----
 
 ## Precautions
 
@@ -91,3 +85,21 @@ User → Edge Location (PoP) → Regional Edge Cache → Origin (S3/EC2/etc.)
 ### 4. Geographic Coverage
 - Not all edge locations are equal — major cities have more capacity
 - Check the [CloudFront edge location list](https://aws.amazon.com/cloudfront/features/#Amazon_CloudFront_Infrastructure) for coverage in your target markets
+
+## Example
+
+A user in São Paulo requests an image from a CloudFront distribution. The request hits the nearest PoP in São Paulo.
+On a cache hit, the image is served in under 10 ms. On a cache miss, the PoP fetches it from the origin in `us-east-1`,
+caches it locally, and serves future requests from São Paulo without crossing the ocean.
+
+## Why It Matters
+
+PoPs are the physical infrastructure that makes CloudFront, Route 53, and Global Accelerator fast.
+Understanding PoPs explains why edge services reduce latency — content is served from locations physically close to users.
+
+## Official Documentation
+- [CloudFront Infrastructure](https://aws.amazon.com/cloudfront/features/#Amazon_CloudFront_Infrastructure)
+- [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+
+---
+← Previous: [Subnet](03_subnet.md) | [Overview](00_overview.md) | Next: [Amazon VPC](04_amazon_vpc.md) →

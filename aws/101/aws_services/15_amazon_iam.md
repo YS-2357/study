@@ -1,7 +1,4 @@
-# Amazon IAM - AWS Console Guide
-
-## Official Documentation
-- [What is IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+# Amazon IAM
 
 ## What It Is
 **IAM (Identity and Access Management)** controls WHO can do WHAT on AWS resources. It manages users, groups, roles, and permissions.
@@ -23,7 +20,6 @@
 
 **Recommended learning order:** User groups → Users → Roles → Policies
 
----
 
 ## Create User Group - Console Flow
 
@@ -43,7 +39,7 @@
     - `Admins` - All administrators
     - `ReadOnly` - Read-only access users
     - `Prod-Developers` - Production environment developers
-    - `ClientA-Admins` - Client A administrators (MSP)
+    - `ClientA-Admins` - Client A administrators
   - **Best practice:** Name by job function, not by person
   - **Avoid:** Names like "Group1", "MyGroup", "JohnTeam"
 
@@ -69,7 +65,6 @@
 - **Cancel** - Discard
 - **Create user group** - Create the group
 
----
 
 ## Create IAM Role - Console Flow (3 Steps)
 
@@ -108,7 +103,7 @@
    - **Use case:** Advanced scenarios, custom trust relationships
    - **Who:** Defined by your custom JSON policy
 
-**Most common for MSP:** AWS service (for EC2, Lambda, etc.)
+**Most common:** AWS service (for EC2, Lambda, etc.)
 
 ![Create IAM Role - Step 2](../images/aws_console/iam_role2.png)
 
@@ -140,7 +135,7 @@
 4. **Power user (common for developers):**
    - `PowerUserAccess` - Can do most things except IAM management
 
-**MSP real-world usage:**
+**Real-world usage:**
 - **Developers:** PowerUserAccess or specific service access (S3FullAccess + EC2FullAccess)
 - **Admins:** AdministratorAccess (carefully!)
 - **Monitoring/auditing:** ReadOnlyAccess
@@ -169,7 +164,7 @@
     - `Staging-ECS-ECRPull-Role` - Staging ECS tasks pulling container images
   - **Include:** Environment (Prod/Dev/Staging), Service using the role, What it accesses
   - **Avoid:** Generic names like "MyRole", "TestRole", "Role1"
-  - **MSP tip:** Add client name prefix for multi-client environments: `ClientA-Prod-EC2-S3Access-Role`
+  - **Tip:** Add client name prefix for multi-client environments: `ClientA-Prod-EC2-S3Access-Role`
 
 - **Description** - Text area
   - Add a short explanation for this role
@@ -196,7 +191,6 @@
 - **Previous** - Go back
 - **Create role** - Create the IAM role
 
----
 
 ## Create IAM User - Console Flow (3 Steps)
 
@@ -212,14 +206,14 @@
   **Naming tips:**
   - **Pattern:** `firstname.lastname` (e.g., `john.doe`, `jane.smith`)
   - **For service accounts:** `svc-[purpose]` (e.g., `svc-backup`, `svc-monitoring`)
-  - **MSP tip:** Add client prefix: `clienta-john.doe`, `svc-clienta-backup`
+  - **Tip:** Add client prefix: `clienta-john.doe`, `svc-clienta-backup`
   - **Avoid:** Generic names like "admin", "user1", "test"
 
 **Provide user access to the AWS Management Console (optional checkbox):**
 - **Checked:** User gets password and can log into AWS Console (web interface)
 - **Unchecked:** User has NO console access, programmatic access only (API/CLI/SDK)
 
-**When to check (MSP common use):**
+**When to check (common use):**
 - ✓ Human users (developers, admins) who need to see/click in console
 - ✗ Applications, scripts, automation (they use access keys or roles)
 
@@ -264,14 +258,13 @@
 - **Tags (optional):** Key-value pairs, up to 50 tags
   - **Tagging tip:** Use consistent tags across all IAM resources
   - **Common tags:** `Environment:Prod`, `Team:Engineering`, `CostCenter:IT`, `Owner:john.doe`
-  - **MSP tip:** Always tag with `Client:ClientA` for billing and access control
+  - **Tip:** Always tag with `Client:ClientA` for billing and access control
 
 **Action buttons:**
 - **Cancel** - Discard
 - **Previous** - Go back
 - **Create user** - Create the IAM user
 
----
 
 ## Create IAM Policy - Console Flow (2 Steps)
 
@@ -335,7 +328,6 @@
 - **Previous** - Go back
 - **Create policy** - Create the custom policy
 
----
 
 ## Key Concepts
 
@@ -343,7 +335,7 @@
 - Collection of users with shared permissions
 - Attach policies to group → all users in group get those permissions
 - **Best practice:** Always use groups, not direct user policies
-- **MSP use:** Create groups per role (Developers, Admins, ReadOnly), add users to appropriate group
+- **Tip:** Create groups per role (Developers, Admins, ReadOnly), add users to appropriate group
 - Example groups: Developers, Admins, ReadOnly, Billing
 
 **Why groups first:**
@@ -521,3 +513,20 @@ Example policy (allow reading S3):
 - **Access keys:** For CLI/API/SDK programmatic access
 - User can have both, one, or neither
 - Generate access keys after user creation
+
+## Example
+
+A company creates an IAM role `AppServerRole` with a policy granting `s3:GetObject` on a specific bucket.
+EC2 instances assume this role instead of storing access keys.
+A separate `ReadOnlyAudit` role lets the security team view resources across all services without modification permissions.
+
+## Why It Matters
+
+IAM is the gatekeeper for every AWS API call. Misconfigured permissions are one of the most common causes of security breaches.
+Understanding roles, policies, and least-privilege access is foundational to working with AWS.
+
+## Official Documentation
+- [What is IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+
+---
+← Previous: [AWS Data Pipeline](25_aws_data_pipeline.md) | [Overview](00_overview.md) | Next: [AWS Shield](17_aws_shield.md) →

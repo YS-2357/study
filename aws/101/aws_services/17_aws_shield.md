@@ -1,8 +1,4 @@
-# AWS Shield - AWS Console Guide
-
-## Official Documentation
-- [AWS Shield Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html)
-- [AWS Shield FAQs](https://aws.amazon.com/shield/faqs/)
+# AWS Shield
 
 ## What It Is
 AWS Shield is a DDoS (Distributed Denial of Service) protection service.
@@ -16,7 +12,6 @@ Shield has two tiers: Standard (free, automatic) and Advanced (paid, opt-in).
 - AWS Shield > Getting started
 - No "create" page — Shield Standard is automatic, Shield Advanced is a subscription
 
----
 
 ## How Shield Prevents DDoS
 
@@ -59,7 +54,6 @@ DDoS attack (with Shield):
 | Application edge | **WAF** | Malicious requests (SQL injection, bad bots) |
 | Resource level | **Security Group** | Unauthorized connections (wrong IP/port) |
 
----
 
 ## Two Tiers
 
@@ -90,7 +84,6 @@ DDoS attack (with Shield):
   - **Advanced metrics** — Real-time attack visibility, detailed diagnostics
   - **Health-based detection** — Uses Route 53 health checks for faster, more accurate detection
 
----
 
 ## Key Concepts
 
@@ -148,7 +141,6 @@ You choose which resources to protect:
 - Amazon EC2 instances (Elastic IP)
 - AWS Global Accelerator
 
----
 
 ## Precautions
 
@@ -181,3 +173,21 @@ You choose which resources to protect:
 ### 5. Always Use Tags
 - Tag protected resources with environment, project, team, client
 - Essential for MSP cost tracking, especially with Shield Advanced's $3,000/month
+
+## Example
+
+A media company enables Shield Advanced on their CloudFront distribution and ALB.
+During a volumetric DDoS attack, Shield detects the anomaly and mitigates it at the edge.
+The Shield Response Team (SRT) assists with fine-tuning, and cost protection credits any scaling charges caused by the attack.
+
+## Why It Matters
+
+DDoS attacks can take down any internet-facing application. Shield Standard provides baseline protection for free,
+while Shield Advanced adds real-time visibility, SRT support, and cost protection for business-critical workloads.
+
+## Official Documentation
+- [AWS Shield Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html)
+- [AWS Shield FAQs](https://aws.amazon.com/shield/faqs/)
+
+---
+← Previous: [Amazon IAM](15_amazon_iam.md) | [Overview](00_overview.md) | Next: [AWS WAF](18_aws_waf.md) →

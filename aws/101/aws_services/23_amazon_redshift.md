@@ -1,8 +1,4 @@
-# Amazon Redshift - AWS Console Guide
-
-## Official Documentation
-- [Amazon Redshift Getting Started](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)
-- [Amazon Redshift FAQs](https://aws.amazon.com/redshift/faqs/)
+# Amazon Redshift
 
 ## What It Is
 Amazon Redshift is a fully managed data warehouse service for large-scale analytics using SQL.
@@ -33,7 +29,6 @@ OLAP (Redshift):   "What were total sales by region for the last 3 years?" — f
 - Search "Redshift" in AWS Console
 - Amazon Redshift > Clusters (Provisioned) or Serverless
 
----
 
 ## Key Concepts
 
@@ -56,7 +51,6 @@ OLAP (Redshift):   "What were total sales by region for the last 3 years?" — f
 - Extends your warehouse to your data lake
 - Useful for infrequently accessed data you don't want to store in Redshift
 
----
 
 ## Precautions
 
@@ -90,3 +84,21 @@ OLAP (Redshift):   "What were total sales by region for the last 3 years?" — f
 ### 5. Always Use Tags
 - Tag clusters with environment, project, team, cost center
 - Essential for MSP cost tracking — Redshift clusters can be expensive
+
+## Example
+
+A retail company loads daily sales data from S3 into a Redshift cluster using the `COPY` command.
+Analysts run SQL queries joining billions of transaction rows with product and customer dimension tables.
+Queries that would take minutes on RDS complete in seconds thanks to columnar storage and parallel execution.
+
+## Why It Matters
+
+Redshift is purpose-built for analytical queries over large datasets.
+It fills the gap between transactional databases (RDS/Aurora) and raw data lakes (S3 + Athena) for structured, high-performance analytics.
+
+## Official Documentation
+- [Amazon Redshift Getting Started](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)
+- [Amazon Redshift FAQs](https://aws.amazon.com/redshift/faqs/)
+
+---
+← Previous: [Amazon Kinesis](09_amazon_kinesis.md) | [Overview](00_overview.md) | Next: [Amazon SageMaker](24_amazon_sagemaker.md) →

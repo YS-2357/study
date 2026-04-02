@@ -1,8 +1,4 @@
-# Amazon Kinesis - AWS Console Guide
-
-## Official Documentation
-- [Amazon Kinesis Data Streams](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
-- [Amazon Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
+# Amazon Kinesis
 
 ## What It Is
 Amazon Kinesis is a platform for real-time streaming data. It collects, processes, and delivers data continuously — think of it as a conveyor belt for data.
@@ -20,7 +16,6 @@ Two main sub-services covered here:
 - **Data Streams:** Amazon Kinesis > Data streams
 - **Data Firehose:** Amazon Data Firehose > Firehose streams (separate console page)
 
----
 
 ## Create Data Stream - Console Flow
 
@@ -73,7 +68,6 @@ All settings are editable after creation ✅
 
 **Action buttons:** Cancel / **Create data stream**
 
----
 
 ## Create Firehose Stream - Console Flow
 
@@ -86,7 +80,6 @@ All settings are editable after creation ✅
 
 **Action buttons:** Cancel / **Create Firehose stream**
 
----
 
 ## Key Concepts
 
@@ -121,7 +114,6 @@ All settings are editable after creation ✅
 - **Firehose:** Ship logs to S3 for archival, send to OpenSearch for dashboards
 - **Data Streams:** Real-time processing where you need sub-second latency, custom fan-out to multiple consumers
 
----
 
 ## Precautions
 
@@ -157,3 +149,21 @@ All settings are editable after creation ✅
 - Tag streams with environment, project, team, cost center
 - Up to 50 tags per stream
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+A gaming company uses Kinesis Data Streams to ingest player-action events in real time.
+A Lambda consumer processes the stream to detect cheating patterns within seconds.
+Separately, a Firehose delivery stream sends the same events to S3 for long-term analytics.
+
+## Why It Matters
+
+Kinesis enables real-time data processing at scale — critical for use cases like live dashboards,
+fraud detection, and IoT telemetry where waiting for batch processing is too slow.
+
+## Official Documentation
+- [Amazon Kinesis Data Streams](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
+- [Amazon Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
+
+---
+← Previous: [Amazon EMR](08_amazon_emr.md) | [Overview](00_overview.md) | Next: [Amazon Redshift](23_amazon_redshift.md) →

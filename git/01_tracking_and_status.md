@@ -1,137 +1,55 @@
 # Tracking and Status
 
 ## What It Is
-Git tracks file state by comparing three things:
-- the last committed snapshot
-- the staging area (index)
-- your working tree
 
-That is why the same file can look different depending on whether it is untracked, modified, staged, or already committed.
+Git tracks file state by comparing three things: the last committed snapshot, the staging area (index), and your working tree.
 
 ## Analogy
-Think of Git like packing luggage for a trip:
-- **working tree** = everything lying around in your room
-- **staging area** = the items you already put into the suitcase
-- **commit** = the suitcase after you zip it and label it as one finished snapshot
 
-A file can exist in your room without being in the suitcase yet. That is what untracked usually means.
+Think of Git like packing luggage: the working tree is everything lying around in your room, the staging area is items you put into the suitcase, and a commit is the suitcase after you zip and label it.
+
+## How It Works
+
+### Core States
+
+| State | Meaning |
+|-------|---------|
+| **Untracked** | File exists on disk but Git is not tracking it (`??` in short status, `U` in editors) |
+| **Tracked** | Git knows about the file — it was added before and is part of history |
+| **Staged** | File's current version is in the index, ready for the next commit |
+| **Committed** | The staged snapshot has been saved into Git history |
+
+### Status Letters
+
+| Letter | Meaning |
+|--------|---------|
+| `U` | Untracked (editor UI) — file exists but Git hasn't started tracking it |
+| `M` | Modified — tracked file's contents changed |
+| `A` | Added — file is staged as a new tracked file |
+| `D` | Deleted — tracked file was removed |
+| `R` | Renamed — Git detected a tracked file became another path |
+
+### Splits and Renames
+
+When you split or rename files, editor badges can briefly look confusing: old file shows `D`, new file shows `U`. After `git add -A`, Git may understand the relationship as a delete + add or a rename, depending on similarity.
 
 ## Example
-You create `notes.md` and have not run `git add notes.md` yet.
 
-Git sees:
-- the file exists in your working tree
-- but it is not in the index
+You create `notes.md` and have not run `git add` yet. Git sees the file in your working tree but not in the index, so it shows as untracked.
 
-So Git shows it as untracked.
-
----
-
-## Core States
-
-### Untracked
-A file exists on disk, but Git is not tracking it yet.
-
-Common sign:
-- `U` in some editors
-- `??` in `git status --short`
-
-Meaning:
-- Git sees the file
-- Git has not added it to the index
-- it is not part of history yet
-
-### Tracked
-Git already knows about the file.
-
-That means the file was added before and is now part of the repo history or staging workflow.
-
-Tracked files can still be:
-- modified
-- staged
-- deleted
-- renamed
-
-### Staged
-The file’s current version has been added to the index and is ready to become part of the next commit.
-
-### Committed
-The staged snapshot has been saved into Git history.
-
----
-
-## Common Status Letters
-
-### `U`
-Usually means **Untracked** in an editor UI.
-
-It does **not** mean updated. It means:
-- the file exists
-- Git has not started tracking it yet
-
-### `M`
-Modified.
-
-Git already tracks the file, and its working-tree contents changed.
-
-### `A`
-Added.
-
-The file is staged as a new tracked file.
-
-### `D`
-Deleted.
-
-Git thinks the tracked file was removed.
-
-### `R`
-Renamed.
-
-Git detected that one tracked file became another tracked path.
-
----
-
-## Why Splits and Renames Sometimes Look Weird
-
-When you split or rename files, editor badges can briefly look confusing.
-
-Example:
-- old file shows `D`
-- new file shows `U`
-
-This usually means:
-- Git still sees the old tracked file as deleted
-- Git sees the new file as not yet added
-
-After `git add -A`, Git may understand the relationship as:
-- delete + add
-- or a rename, depending on similarity
-
-So a temporary `U` after a split is normal.
+```bash
+git status          # see full state
+git status --short  # compact view
+git add <file>      # stage a file
+git add -A          # stage everything
+git commit -m "msg" # commit staged changes
+```
 
 ## Why It Matters
 
-This matters because many Git mistakes come from misunderstanding the difference between:
-- file exists
-- file is tracked
-- file is staged
-- file is committed
+Many Git mistakes come from misunderstanding the difference between "file exists," "file is tracked," "file is staged," and "file is committed." If you know those four states clearly, `git status` becomes easy to read.
 
-If you know those four ideas clearly, `git status` becomes much easier to read.
+> **Tip:** Git is the version control system. GitHub is a hosting platform built around Git. Tracked, untracked, staged, and committed are Git concepts, not GitHub concepts.
 
-## Quick Commands
-
-```bash
-git status
-git status --short
-git add <file>
-git add -A
-git commit -m "message"
-```
-
-## Git vs GitHub
-
-- **Git** = the version control system
-- **GitHub** = a hosting/collaboration platform built around Git
-
-Tracked, untracked, staged, and committed are Git concepts, not GitHub concepts.
+---
+[Overview](00_overview.md)

@@ -1,8 +1,4 @@
-# AWS WAF (Web Application Firewall) - AWS Console Guide
-
-## Official Documentation
-- [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
-- [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
+# AWS WAF (Web Application Firewall)
 
 ## What It Is
 AWS WAF (Web Application Firewall) is a Layer 7 (Application layer) firewall that filters HTTP/HTTPS requests based on rules you define.
@@ -40,7 +36,6 @@ While Shield stops DDoS volume floods, WAF inspects the **content** of each requ
 - Breadcrumb: WAF & Shield > Protection packs (web ACLs) > Create protection pack (web ACL)
 - Note: WAF and Shield share the same console
 
----
 
 ## Create Protection Pack (Web ACL) - Console Flow
 
@@ -101,7 +96,6 @@ AWS uses your selection to recommend the best protection rules. Select all that 
 
 **Cancel / Create protection pack (web ACL)** buttons
 
----
 
 ## Key Concepts
 
@@ -154,7 +148,6 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
                     4. Default: Allow
 ```
 
----
 
 ## Precautions
 
@@ -167,7 +160,7 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
 ### 1. WAF Costs Per Rule and Per Request
 - You pay per Web ACL, per rule, and per million requests inspected
 - More rules = higher cost
-- **MSP tip:** Start with AWS Managed Rules (good coverage, reasonable cost), add custom rules as needed
+- **Tip:** Start with AWS Managed Rules (good coverage, reasonable cost), add custom rules as needed
 
 ### 2. Use AWS Managed Rules First
 - AWS maintains and updates them automatically
@@ -193,3 +186,21 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
 ### 6. Always Use Tags
 - Tag Web ACLs with environment, project, team, client
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+A web application attaches a WAF Web ACL to its ALB with three rule groups:
+the AWS Managed Core Rule Set (blocks common exploits), a SQL injection rule,
+and a rate-based rule limiting each IP to 2,000 requests per 5 minutes. Blocked requests return a 403.
+
+## Why It Matters
+
+WAF protects web applications from common exploits like SQL injection and XSS at the application layer.
+Combined with Shield for volumetric protection, WAF provides defense-in-depth for internet-facing workloads.
+
+## Official Documentation
+- [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+- [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
+
+---
+← Previous: [AWS Shield](17_aws_shield.md) | [Overview](00_overview.md)

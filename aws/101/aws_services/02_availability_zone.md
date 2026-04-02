@@ -1,7 +1,4 @@
-# Availability Zone - AWS Console Guide
-
-## Official Documentation
-- [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+# Availability Zone
 
 ## What It Is
 An **Availability Zone (AZ)** is one or more physical data centers within a Region. Each AZ has its own power, cooling, and networking, physically separated from other AZs.
@@ -82,3 +79,20 @@ An **Availability Zone (AZ)** is one or more physical data centers within a Regi
 - **Tag all resources** with at least a Name tag
 - Without tags, hard to identify which AZ resources are in
 - Common tags: Name, Environment, Project, Owner
+
+## Example
+
+A web application runs two EC2 instances: one in `ap-northeast-2a` and one in `ap-northeast-2c`.
+An ALB distributes traffic across both. If `2a` loses power, the instance in `2c` keeps serving requests
+while Auto Scaling replaces the failed one.
+
+## Why It Matters
+
+Single-AZ deployments are a single point of failure.
+Spreading resources across at least two AZs is the foundation of high availability on AWS.
+
+## Official Documentation
+- [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+
+---
+← Previous: [Region](01_region.md) | [Overview](00_overview.md) | Next: [Subnet](03_subnet.md) →

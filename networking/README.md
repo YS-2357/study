@@ -1,25 +1,11 @@
 # networking
-Networking study notes organized by topic.
 
-- `README.md`: Overview of the `networking/` folder and its direct contents.
-- `00_overview.md`: Overview, study order, and cross-references into AWS and computing.
-- `01_protocols.md`: Core network protocols such as TCP, UDP, ICMP, HTTP, HTTPS, TLS, and SSH.
-- `02_addressing.md`: Ports, IPv4, IPv6, CIDR, MAC addresses, and traffic direction.
-- `03_osi_model.md`: OSI model, encapsulation, header/payload, and AWS layer mapping.
-- `04_dns.md`: DNS resolution flow, record types, caching, and Route 53/VPC DNS behavior.
-- `05_http.md`: HTTP methods, status codes, REST API patterns, and common AWS 5xx scenarios.
+Networking fundamentals. See [00_overview.md](00_overview.md) for study order.
 
-## Organizing rules
-
-- This subtree is canonicalized in the Kiro style: broad, practical, and AWS-connected.
-- Source-based parallel folders are not kept here. Reusable Codex content has been merged into the canonical topic notes where it improved clarity.
-- Add new notes only when they represent a durable topic that does not fit one of the existing files.
-
-## Recommended study order
-
-1. `00_overview.md`
-2. `01_protocols.md`
-3. `02_addressing.md`
-4. `05_http.md`
-5. `04_dns.md`
-6. `03_osi_model.md`
+- `README.md`: This file.
+- `00_overview.md`: Study hub and navigation.
+- `01_protocols.md`: Core network protocols (TCP, UDP, ICMP, HTTP, HTTPS, TLS, SSH, RDP).
+- `02_addressing.md`: Ports, IP addresses, CIDR, MAC addresses, traffic direction.
+- `03_osi_model.md`: OSI 7-layer model and AWS layer mapping.
+- `04_dns.md`: DNS resolution, record types, Route 53 behavior.
+- `05_http.md`: HTTP methods, status codes, REST API patterns.

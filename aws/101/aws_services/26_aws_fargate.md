@@ -1,9 +1,4 @@
-# AWS Fargate - AWS Console Guide
-
-## Official Documentation
-- [AWS Fargate on ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html)
-- [AWS Fargate on EKS](https://docs.aws.amazon.com/eks/latest/userguide/fargate.html)
-- [AWS Fargate FAQs](https://aws.amazon.com/fargate/faqs/)
+# AWS Fargate
 
 ## What It Is
 AWS Fargate is a serverless compute engine for containers. You define your container and resource requirements — Fargate handles the underlying servers.
@@ -45,7 +40,6 @@ Fargate is a **launch type**, not a standalone service. It works with:
 - Amazon ECS > Clusters > Create cluster (select Fargate)
 - Or: Task Definitions > Create (select Fargate launch type)
 
----
 
 ## Key Concepts
 
@@ -80,7 +74,6 @@ Fargate has fixed valid combinations:
 - Use security groups to control traffic per task
 - **Best practice:** Run in private subnets, use ALB/NLB for ingress
 
----
 
 ## Precautions
 
@@ -113,3 +106,22 @@ Fargate has fixed valid combinations:
 ### 5. Always Use Tags
 - Tag task definitions, services, and clusters with environment, project, team, cost center
 - Essential for MSP cost tracking — container costs spread across many small tasks can be hard to attribute
+
+## Example
+
+A microservice runs as an ECS task on Fargate with 0.5 vCPU and 1 GB memory.
+The task definition pulls a Docker image from ECR. An ALB routes `/api/orders` to the Fargate service,
+which auto-scales based on request count per target.
+
+## Why It Matters
+
+Fargate removes the need to manage EC2 instances for container workloads.
+You define CPU, memory, and your container image — Fargate handles provisioning, patching, and scaling the underlying compute.
+
+## Official Documentation
+- [AWS Fargate on ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html)
+- [AWS Fargate on EKS](https://docs.aws.amazon.com/eks/latest/userguide/fargate.html)
+- [AWS Fargate FAQs](https://aws.amazon.com/fargate/faqs/)
+
+---
+← Previous: [AWS Lambda](07_aws_lambda.md) | [Overview](00_overview.md) | Next: [Amazon S3](19_amazon_s3.md) →

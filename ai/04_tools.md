@@ -1,40 +1,18 @@
 # Tools
 
 ## What It Is
-Tools are concrete capabilities the agent can call while working.
 
-A tool is not a concept note or an instruction file. It is an executable capability.
-
-Examples:
-- shell command execution
-- web search
-- browser automation
-- GitHub queries
-- Google Drive document access
+Tools are concrete capabilities the [agent](01_agent.md) can call while working. A tool is an executable capability — not a concept note or instruction file.
 
 ## Analogy
-If the agent is the worker, tools are the actual instruments on the workbench.
 
-A smart worker with no tools is limited. A smart worker with the right tools can inspect, change, verify, and report.
+If the agent is the worker, tools are the instruments on the workbench. A smart worker with no tools is limited. A smart worker with the right tools can inspect, change, verify, and report.
 
 ## Example
-If you ask:
 
-```text
-Find every place this API key is referenced.
-```
+If you ask "Find every place this API key is referenced," the agent uses a search tool like `rg`. If you ask "Check whether the UI is broken," the agent uses a browser automation tool.
 
-The agent may use a search tool such as `rg` or an internal file-search tool.
-
-If you ask:
-
-```text
-Check whether the UI is broken in the browser.
-```
-
-The agent may use a browser automation tool.
-
-## Common Tool Categories
+## How It Works
 
 | Category | Example use |
 |----------|-------------|
@@ -42,19 +20,13 @@ The agent may use a browser automation tool.
 | Web | Check latest docs or current information |
 | Browser | Verify pages, click flows, inspect UI |
 | Repo/SCM | PRs, issues, CI status |
-| Docs/Data | Read or edit documents, spreadsheets, slides |
+| Docs/Data | Read or edit documents, spreadsheets |
 
-## What People Mostly Use
-
-Most day-to-day agent work relies on:
-- shell tools
-- file search
-- Git-aware commands
-- web lookup when freshness matters
-- browser tools for UI work
-
-These are used more often than custom hooks or custom plugin development.
+Most day-to-day work relies on shell tools, file search, Git-aware commands, and web lookup. Tools are made available through the [harness](02_harness.md) and often connected via [MCP](07_mcp.md).
 
 ## Why It Matters
 
-The agent’s quality is not only about reasoning. It is also about what tools are available and how well it uses them.
+The agent's quality depends not only on reasoning but also on what tools are available and how well it uses them.
+
+---
+← Previous: [AGENTS.md](03_agents_md.md) | [Overview](00_overview.md) | Next: [Skills](05_skills.md) →

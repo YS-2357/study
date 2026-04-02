@@ -1,83 +1,39 @@
 # aws_console
+
 AWS Console screenshots used by the AWS 101 Markdown notes and console walkthroughs.
 
-- `README.md`: Overview of the `aws_console/` folder and its direct files.
-- `alb1.png`: Screenshot of ALB basic configuration.
-- `alb2.png`: Screenshot of ALB network mapping, security groups, and listeners.
-- `alb3.png`: Screenshot of ALB listeners and routing.
-- `alb4.png`: Screenshot of ALB target group stickiness, listener tags, and add-listener options.
-- `alb5.png`: Screenshot of ALB service integrations.
-- `alb6.png`: Screenshot of ALB Global Accelerator integration.
-- `alb7.png`: Screenshot of ALB review and create flow.
-- `ami_catalog.png`: Screenshot of the AMI catalog.
-- `dynamodb1.png`: Screenshot of DynamoDB table details.
-- `dynamodb2.png`: Screenshot of DynamoDB table settings.
-- `dynamodb3.png`: Screenshot of DynamoDB tags.
-- `ec2_1.png`: Screenshot of EC2 launch step 1.
-- `ec2_2.png`: Screenshot of EC2 launch step 2.
-- `ec2_3.png`: Screenshot of EC2 launch step 3.
-- `ec2_4.png`: Screenshot of EC2 launch step 4.
-- `ec2_instance_type.png`: Screenshot of EC2 instance types.
-- `ec2_reserved_instances.png`: Screenshot of EC2 Reserved Instances.
-- `ec2_saving_plans.png`: Screenshot of EC2 Savings Plans.
-- `ec2_spot_instance.png`: Screenshot of EC2 Spot Instances.
-- `elasticache1.png`: Screenshot of ElastiCache configuration.
-- `elasticache2.png`: Screenshot of ElastiCache settings.
-- `elb1.png`: Screenshot comparing load balancer types.
-- `elb2.png`: Screenshot of ELB type selection.
-- `elb3.png`: Screenshot of Classic Load Balancer in the console.
-- `gwlb1.png`: Screenshot of GWLB basic configuration.
-- `gwlb2.png`: Screenshot of GWLB network mapping and IP listener routing.
-- `gwlb3.png`: Screenshot of GWLB tags, review, and summary.
-- `gwlb4.png`: Screenshot of GWLB creation workflow.
-- `iam_policy1.png`: Screenshot of IAM policy creation.
-- `iam_role1.png`: Screenshot of IAM role creation step 1.
-- `iam_role2.png`: Screenshot of IAM role creation step 2.
-- `iam_role3.png`: Screenshot of an IAM role console view.
-- `iam_role4.png`: Screenshot of IAM role creation step 3.
-- `iam_role5.png`: Screenshot of an IAM role console detail view.
-- `iam_user1.png`: Screenshot of IAM user creation step 1.
-- `iam_user2.png`: Screenshot of IAM user creation step 2.
-- `iam_user3.png`: Screenshot of IAM user creation step 3.
-- `iam_user_group1.png`: Screenshot of IAM user group creation step 1.
-- `iam_user_group2.png`: Screenshot of IAM user group policy attachment.
-- `internet_gateway.png`: Screenshot of the Internet Gateway console.
-- `kinesis_data_firehose.png`: Screenshot of Kinesis Data Firehose creation.
-- `kinesis_data_streams1.png`: Screenshot of Kinesis Data Streams configuration and capacity.
-- `kinesis_data_streams2.png`: Screenshot of Kinesis Data Streams record size and settings.
-- `kinesis_data_streams3.png`: Screenshot of Kinesis Data Streams tags.
-- `lambda1.png`: Screenshot of Lambda function creation step 1.
-- `lambda2.png`: Screenshot of Lambda execution role setup.
-- `nacl.png`: Screenshot of a network ACL console page.
-- `nat_gateway1.png`: Screenshot of NAT Gateway creation step 1.
-- `nat_gateway2.png`: Screenshot of NAT Gateway creation step 2.
-- `nlb1.png`: Screenshot of NLB basic configuration.
-- `nlb2.png`: Screenshot of NLB network mapping.
-- `nlb3.png`: Screenshot of NLB security groups, listeners, and routing.
-- `nlb4.png`: Screenshot of NLB target group stickiness, listener tags, and add-listener options.
-- `nlb5.png`: Screenshot of NLB tags, service integrations, and review.
-- `nlb6.png`: Screenshot of NLB creation workflow.
-- `rds01.png`: Screenshot of RDS engine options.
-- `rds02.png`: Screenshot of RDS engine version and templates.
-- `rds03.png`: Screenshot of RDS settings and credentials.
-- `rds04.png`: Screenshot of RDS encryption and storage configuration.
-- `rds05.png`: Screenshot of RDS instance configuration and availability.
-- `rds06.png`: Screenshot of RDS connectivity settings.
-- `rds07.png`: Screenshot of RDS public access, security groups, and proxy settings.
-- `rds08.png`: Screenshot of RDS certificate authority and related options.
-- `rds09.png`: Screenshot of RDS tags, Babelfish, and monitoring settings.
-- `rds10.png`: Screenshot of RDS performance insights and enhanced monitoring.
-- `rds11.png`: Screenshot of RDS log exports and DevOps Guru settings.
-- `rds12.png`: Screenshot of RDS estimated costs and create flow.
-- `route_table.png`: Screenshot of a route table console page.
-- `sg1.png`: Screenshot of Security Group creation.
-- `sg2.png`: Screenshot of the Security Group creation form.
-- `subnet1.png`: Screenshot of subnet creation step 1.
-- `subnet2.png`: Screenshot of subnet settings.
-- `vpc1.png`: Screenshot of VPC creation step 1.
-- `vpc2.png`: Screenshot of VPC tenancy and tags.
-- `vpc_endpoint1.png`: Screenshot of VPC endpoint creation step 1.
-- `vpc_endpoint2.png`: Screenshot of VPC endpoint creation step 2.
-- `vpc_endpoint3.png`: Screenshot of VPC endpoint creation step 3.
-- `waf1.png`: Screenshot of WAF app information setup.
-- `waf2.png`: Screenshot of WAF resources and protections setup.
+- `README.md`: This file.
+- `alb1.png` – `alb7.png`: ALB creation flow.
+- `ami_catalog.png`: AMI catalog.
+- `dynamodb1.png` – `dynamodb3.png`: DynamoDB table creation.
+- `ebs1.png` – `ebs2.png`: EBS volume details.
+- `ec2_1.png` – `ec2_4.png`: EC2 launch flow.
+- `ec2_instance_type.png`: EC2 instance types.
+- `ec2_reserved_instances.png`: EC2 Reserved Instances.
+- `ec2_saving_plans.png`: EC2 Savings Plans.
+- `ec2_spot_instance.png`: EC2 Spot Instances.
+- `efs.png`: EFS file system.
+- `elasticache1.png` – `elasticache2.png`: ElastiCache configuration.
+- `elb1.png` – `elb3.png`: ELB type comparison and selection.
+- `gwlb1.png` – `gwlb4.png`: GWLB creation flow.
+- `iam_policy1.png`: IAM policy creation.
+- `iam_role1.png` – `iam_role5.png`: IAM role creation flow.
+- `iam_user1.png` – `iam_user3.png`: IAM user creation flow.
+- `iam_user_group1.png` – `iam_user_group2.png`: IAM user group creation.
+- `idp.png`: Identity provider.
+- `internet_gateway.png`: Internet Gateway console.
+- `kinesis_data_firehose.png`: Kinesis Data Firehose creation.
+- `kinesis_data_streams1.png` – `kinesis_data_streams3.png`: Kinesis Data Streams configuration.
+- `lambda-function.png`: Lambda function view.
+- `lambda1.png` – `lambda2.png`: Lambda function creation.
+- `nacl.png`: Network ACL console.
+- `nat_gateway1.png` – `nat_gateway2.png`: NAT Gateway creation.
+- `nlb1.png` – `nlb6.png`: NLB creation flow.
+- `rds01.png` – `rds12.png`: RDS creation flow.
+- `route_table.png`: Route table console.
+- `s3-1.png` – `s3-5.png`: S3 bucket configuration.
+- `sg1.png` – `sg2.png`: Security Group creation.
+- `subnet1.png` – `subnet2.png`: Subnet creation.
+- `vpc1.png` – `vpc2.png`: VPC creation.
+- `vpc_endpoint1.png` – `vpc_endpoint3.png`: VPC endpoint creation.
+- `waf1.png` – `waf4.png`: WAF configuration.

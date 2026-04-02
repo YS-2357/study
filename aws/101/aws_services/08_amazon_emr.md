@@ -1,8 +1,4 @@
-# Amazon EMR (Elastic MapReduce) - AWS Console Guide
-
-## Official Documentation
-- [Amazon EMR Documentation](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html)
-- [Amazon EMR FAQs](https://aws.amazon.com/emr/faqs/)
+# Amazon EMR (Elastic MapReduce)
 
 ## What It Is
 Amazon EMR (Elastic MapReduce) is a managed service for running big data frameworks like Hadoop, Spark, Hive, and Presto.
@@ -38,7 +34,6 @@ EMR is primarily a **batch processing** service.
 - Search "EMR" in AWS Console
 - Amazon EMR > Clusters > Create cluster
 
----
 
 ## Key Concepts
 
@@ -97,7 +92,6 @@ These are completely different services — similar abbreviations, nothing in co
 - Clickstream analysis
 - Genomics data processing
 
----
 
 ## Precautions
 
@@ -105,7 +99,7 @@ These are completely different services — similar abbreviations, nothing in co
 - EMR clusters run on EC2 instances — you pay while they're up
 - Terminate clusters when processing is done
 - Use EMR Serverless or auto-termination to avoid forgotten running clusters
-- **MSP tip:** Set up billing alerts for EMR — a forgotten cluster can be very expensive
+- **Tip:** Set up billing alerts for EMR — a forgotten cluster can be very expensive
 
 ### 1. Choose the Right Deployment Option
 - **EMR Serverless** — Simplest, no cluster management, good for most jobs
@@ -131,3 +125,21 @@ These are completely different services — similar abbreviations, nothing in co
 ### 5. Always Use Tags
 - Tag clusters with environment, project, team, client, cost center
 - Essential for MSP cost tracking — EMR costs can add up fast
+
+## Example
+
+A data team spins up a 10-node EMR cluster with Spark to process 5 TB of raw clickstream logs stored in S3.
+The Spark job aggregates page views by user and writes the results to a Parquet dataset in S3.
+The cluster shuts down after the job completes, so they only pay for the processing time.
+
+## Why It Matters
+
+EMR lets you run big data frameworks at scale without managing Hadoop or Spark clusters yourself.
+Spinning clusters up on demand and shutting them down after keeps costs proportional to actual processing needs.
+
+## Official Documentation
+- [Amazon EMR Documentation](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html)
+- [Amazon EMR FAQs](https://aws.amazon.com/emr/faqs/)
+
+---
+← Previous: [Amazon ElastiCache](13_amazon_elasticache.md) | [Overview](00_overview.md) | Next: [Amazon Kinesis](09_amazon_kinesis.md) →

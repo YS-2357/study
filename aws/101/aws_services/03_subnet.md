@@ -1,7 +1,4 @@
-# Subnet - AWS Console Guide
-
-## Official Documentation
-- [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
+# Subnet
 
 ## What It Is
 A **Subnet** is a range of IP addresses within a VPC. Each subnet exists in exactly one Availability Zone.
@@ -146,3 +143,20 @@ Both are firewalls but work differently:
 - Without tags, hard to identify resources later
 - Common tags: Name, Environment (prod/dev), Project, Owner
 - Tags help with cost tracking and automation
+
+## Example
+
+A VPC (`10.0.0.0/16`) has four subnets: two public (`10.0.1.0/24`, `10.0.2.0/24`) in different AZs for web servers behind an ALB,
+and two private (`10.0.3.0/24`, `10.0.4.0/24`) for RDS Multi-AZ.
+The public subnets route `0.0.0.0/0` to an IGW; the private subnets route it to a NAT Gateway.
+
+## Why It Matters
+
+Subnets are the building blocks of network segmentation in a VPC.
+Proper public/private separation keeps databases and internal services off the internet while letting web servers accept traffic.
+
+## Official Documentation
+- [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
+
+---
+← Previous: [Availability Zone](02_availability_zone.md) | [Overview](00_overview.md) | Next: [Points of Presence](27_pop.md) →

@@ -1,7 +1,4 @@
-# Security Group - AWS Console Guide
-
-## Official Documentation
-- [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
+# Security Group
 
 ## What It Is
 **Security Group (SG)** is a virtual firewall that controls inbound and outbound traffic at the instance/ENI (Elastic Network Interface) level.
@@ -281,3 +278,20 @@ Can reference other security groups in rules:
 - Only allow necessary ports and sources
 - Use specific CIDR blocks or security group references
 - Avoid "allow all" unless absolutely necessary
+
+## Example
+
+A web server's security group allows inbound HTTP/HTTPS from `0.0.0.0/0` and SSH from the office IP only.
+A database security group allows inbound MySQL (3306) only from the web server's security group.
+This SG-to-SG reference automatically adapts when web server instances are added or removed.
+
+## Why It Matters
+
+Security groups are the primary network access control for every resource with an ENI.
+Properly configured SG rules enforce least-privilege access and are easier to manage than IP-based firewall rules.
+
+## Official Documentation
+- [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
+
+---
+← Previous: [Amazon VPC](04_amazon_vpc.md) | [Overview](00_overview.md) | Next: [Elastic Load Balancing](16_elastic_load_balancing.md) →

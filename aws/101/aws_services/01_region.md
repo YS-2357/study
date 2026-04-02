@@ -1,7 +1,4 @@
-# Region - AWS Console Guide
-
-## Official Documentation
-- [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+# Region
 
 ## Console Access
 **Location:** Top-right corner of AWS Console (Region selector dropdown)
@@ -86,3 +83,20 @@
 - Different Regions have different numbers of AZs
 - Affects high availability architecture options
 - Check AZ count before designing multi-AZ deployments
+
+## Example
+
+A company based in Tokyo deploys its production app in `ap-northeast-1` for low latency to Japanese users.
+Their disaster recovery environment runs in `ap-southeast-1` (Singapore).
+Dev/test workloads use `us-east-1` because it has the lowest prices and earliest access to new services.
+
+## Why It Matters
+
+Choosing the right Region affects latency, cost, and compliance.
+A wrong Region choice is hard to undo — most resources cannot be moved after creation.
+
+## Official Documentation
+- [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+
+---
+[Overview](00_overview.md) | Next: [Availability Zone](02_availability_zone.md) →

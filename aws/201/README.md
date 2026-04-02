@@ -1,7 +1,7 @@
 # aws/201
-AWS 201 workspace for deeper architecture, implementation, and presentation work.
 
-- `aws_services/`: Service deep-dive notes (Strands Agents, Bedrock AgentCore, etc.).
-- `00_overview.md` to `10_observability-and-rollout.md`: Architecture workspace for the CS AI Assistant POC.
+AWS 201 workspace for deeper architecture, implementation, and service deep-dives.
 
-Content will be added as the 201 track progresses.
+- `README.md`: This file.
+- `aws_services/`: Service deep-dive notes. [Start studying →](aws_services/00_overview.md)
+- `plan/`: Architecture workspace for the CS AI Assistant POC (files `00_overview.md` through `10_observability-and-rollout.md`).

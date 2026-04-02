@@ -1,7 +1,4 @@
-# Amazon EC2 - AWS Console Guide
-
-## Official Documentation
-- [What is Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+# Amazon EC2
 
 ## What It Is
 **EC2 (Elastic Compute Cloud)** is a web service that provides resizable compute capacity (virtual servers) in the cloud. You can launch instances with various operating systems, configure networking, storage, and security.
@@ -23,7 +20,7 @@
 
 **Add additional tags:**
 - Click to add more tags (up to 50)
-- **MSP tip:** Always tag with `Environment`, `Client`, `CostCenter` for billing and management
+- **Tip:** Always tag with `Environment`, `Client`, `CostCenter` for billing and management
 
 ### Step 2: Application and OS Images (AMI)
 
@@ -51,7 +48,7 @@
 - **Username:** Default SSH username (e.g., ec2-user)
 - **Verified provider:** AWS-verified AMI
 
-**MSP tip:** Use Amazon Linux 2023 for most workloads (5 years support, optimized for AWS, free)
+**Tip:** Use Amazon Linux 2023 for most workloads (5 years support, optimized for AWS, free)
 
 ![EC2 Launch - Step 2: Instance Type](../images/aws_console/ec2_2.png)
 
@@ -86,7 +83,7 @@
 **Compare instance types link:**
 - Compare specs side-by-side
 
-**MSP tip:** Start with t3.micro (free tier) or t3.small for testing, scale up based on actual usage
+**Tip:** Start with t3.micro (free tier) or t3.small for testing, scale up based on actual usage
 
 ![EC2 Launch - Step 3: Key Pair and Network](../images/aws_console/ec2_3.png)
 
@@ -98,7 +95,7 @@
 
 **Important:** You MUST have the private key file (.pem or .ppk) to connect to the instance. If you lose it, you cannot recover it.
 
-**MSP tip:** 
+**Tip:** 
 - Create key pairs per client/environment: `ClientA-Prod`, `ClientA-Dev`
 - Store private keys securely (password manager, encrypted storage)
 - Never commit keys to git repositories
@@ -141,7 +138,7 @@ Two options:
 - ☐ **Allow HTTP traffic from the internet**
   - "To set up an endpoint, for example when creating a web server"
 
-**MSP precaution:** NEVER use 0.0.0.0/0 for SSH in production. Use specific office IP or VPN IP only.
+**Tip:** NEVER use 0.0.0.0/0 for SSH in production. Use specific office IP or VPN IP only.
 
 ![EC2 Launch - Step 4: Storage](../images/aws_console/ec2_4.png)
 
@@ -177,7 +174,7 @@ Two options:
 - **Detailed monitoring** - CloudWatch metrics every 1 minute (extra cost)
 - **Tenancy** - Shared (default) or Dedicated hardware
 
-**MSP tip:** Always attach IAM role instead of storing access keys on instance
+**Tip:** Always attach IAM role instead of storing access keys on instance
 
 ### Summary Panel (Right side)
 
@@ -193,7 +190,6 @@ Shows configuration summary:
 - **Launch instance** - Create the EC2 instance
 - **Preview code** - See CloudFormation/CLI equivalent
 
----
 
 ## EC2 Pricing Models
 
@@ -253,7 +249,7 @@ Shows configuration summary:
 - Critical production workloads
 - Long-running processes that can't be interrupted
 
-**MSP tip:** Use Spot for dev/test environments, batch jobs, auto-scaling groups with mixed instances
+**Tip:** Use Spot for dev/test environments, batch jobs, auto-scaling groups with mixed instances
 
 ### Savings Plans
 
@@ -283,7 +279,7 @@ Shows configuration summary:
 
 **Get Started** section - Access recommendations and customize plan type, payment option, and term
 
-**MSP recommendation:** Use Compute Savings Plans for flexibility across services, EC2 Instance Savings Plans for predictable workloads
+**Tip:** Use Compute Savings Plans for flexibility across services, EC2 Instance Savings Plans for predictable workloads
 
 ### Reserved Instances
 
@@ -313,9 +309,8 @@ Shows configuration summary:
 - Legacy option, AWS recommends Savings Plans instead
 - Only if you need zonal capacity reservation
 
-**MSP recommendation:** Use Savings Plans instead - more flexible, easier to manage, same or better discounts
+**Tip:** Use Savings Plans instead - more flexible, easier to manage, same or better discounts
 
----
 
 ## Pricing Model Comparison
 
@@ -326,13 +321,12 @@ Shows configuration summary:
 | **Savings Plans** | Up to 72% | 1-3 years ($/hour) | High (any instance/region) | Steady workloads, multiple services |
 | **Reserved Instances** | Up to 72% | 1-3 years (specific instance) | Low (locked to instance type) | Legacy, specific capacity needs |
 
-**MSP recommendation order:**
+**Tip:**
 1. **Savings Plans** - Best for most production workloads (flexible, easy)
 2. **Spot** - Dev/test, batch processing, auto-scaling
 3. **On-Demand** - Variable workloads, short-term needs
 4. **Reserved Instances** - Only if Savings Plans don't fit (rare)
 
----
 
 ## Key Concepts
 
@@ -352,7 +346,7 @@ Shows configuration summary:
 - **Stopped:** Charged for storage only (EBS volumes)
 - **Terminated:** No charges (unless EBS volumes set to persist)
 
-**MSP tip:** Stop instances during non-business hours to save costs (dev/test environments)
+**Tip:** Stop instances during non-business hours to save costs (dev/test environments)
 
 ### Public vs Private IP
 - **Public IP:** Changes when instance stops/starts (unless using Elastic IP)
@@ -374,7 +368,7 @@ Shows configuration summary:
 - Update DNS dynamically when public IP changes
 - Use IPv6 (free, no address exhaustion)
 
-**MSP recommendation:** Only use EIP when absolutely necessary due to ongoing costs. Release unused EIPs immediately.
+**Tip:** Only use EIP when absolutely necessary due to ongoing costs. Release unused EIPs immediately.
 
 ### Instance Metadata
 - Special URL accessible from instance: http://169.254.169.254/latest/meta-data/
@@ -430,7 +424,7 @@ Shows configuration summary:
 - **Launch Instance with AMI** - Launch instance directly
 - **Select** - Select this AMI for launch
 
-**MSP tips:**
+**Tip:**
 - **Use Quick Start AMIs** - Verified, maintained by AWS
 - **Avoid Community AMIs** - Unless from trusted source
 - **Create custom AMIs** - After configuring instances for clients
@@ -441,7 +435,7 @@ Shows configuration summary:
 - **AWS Marketplace AMIs:** Commercial software (extra charges)
 - **Custom AMIs:** You create from your instances (snapshot of configured instance)
 
-**MSP use:** Create custom AMI after configuring instance, use for launching identical instances
+**Tip:** Create custom AMI after configuring instance, use for launching identical instances
 
 ### Instance Types - Naming Convention
 
@@ -530,7 +524,7 @@ Shows configuration summary:
 - **RDP** - Port 3389, requires key pair to decrypt password
 - **Session Manager** - AWS Systems Manager
 
-**MSP recommendation:** Use Session Manager (no open SSH/RDP ports, audit trail, no key management)
+**Tip:** Use Session Manager (no open SSH/RDP ports, audit trail, no key management)
 
 ### User Data Script
 - Script that runs on first launch only
@@ -550,9 +544,8 @@ systemctl enable httpd
 echo "Hello World" > /var/www/html/index.html
 ```
 
-**MSP tip:** Keep user data scripts in version control, test thoroughly
+**Tip:** Keep user data scripts in version control, test thoroughly
 
----
 
 ## Precautions
 
@@ -583,7 +576,7 @@ echo "Hello World" > /var/www/html/index.html
 - Enable for production instances
 - Prevents accidental deletion
 - Must disable before terminating
-- **MSP tip:** Enable for all client production instances
+- **Tip:** Enable for all client production instances
 
 ### 5. EBS Volume Deletion
 - **Default:** Root volume deleted when instance terminates
@@ -628,12 +621,11 @@ echo "Hello World" > /var/www/html/index.html
 - **Disable if not needed** - Reduce attack surface
 
 ### 12. Tagging Strategy
-- **Mandatory tags:** Environment, Owner, CostCenter, Client (MSP)
+- **Mandatory tags:** Environment, Owner, CostCenter, Client
 - **Enforce with policies** - Prevent untagged resources
 - **Use for automation** - Start/stop based on tags
 - **Cost allocation** - Track spending by tag
 
----
 
 ## Common Patterns
 
@@ -662,3 +654,20 @@ echo "Hello World" > /var/www/html/index.html
 - **Auto-assign public IP:** Enabled
 - **Purpose:** SSH into private instances
 - **Better alternative:** Use Session Manager instead
+
+## Example
+
+A startup launches a `t3.small` instance running Ubuntu with Nginx in a public subnet.
+They attach an IAM role for S3 read access, configure a security group allowing HTTP/HTTPS from anywhere
+and SSH from the office IP only, and use a user data script to install and start Nginx on first boot.
+
+## Why It Matters
+
+EC2 is the most fundamental compute service on AWS — understanding instance types, pricing models,
+and security configuration is essential for nearly every AWS workload.
+
+## Official Documentation
+- [What is Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+
+---
+← Previous: [Amazon CloudFront](21_amazon_cloudfront.md) | [Overview](00_overview.md) | Next: [Auto Scaling](06_auto_scaling.md) →

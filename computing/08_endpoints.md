@@ -1,109 +1,63 @@
 # Endpoints
 
 ## What It Is
-An endpoint is where a service can be reached.
 
-If an interface defines the method of access, an endpoint defines the actual address or target used for that access.
+An endpoint is where a service can be reached. If an [interface](07_interfaces.md) defines the method of access, an endpoint defines the actual address.
 
----
+## How It Works
 
-## What Endpoints Look Like
-
-Endpoints do not always look like `*.com`. They can be any addressable format:
+### Endpoint Formats
 
 | Type | Format | Example |
 |------|--------|---------|
-| **URL (domain)** | `*.com`, `*.amazonaws.com` | `https://api.example.com/users` |
-| **IP address** | `x.x.x.x:port` | `192.168.1.10:3306` |
-| **IP + path** | `http://x.x.x.x/path` | `http://10.0.1.5:8080/health` |
-| **Unix socket** | file path | `/var/run/docker.sock` |
-| **localhost** | `localhost:port` | `localhost:3000` |
+| URL | `*.amazonaws.com` | `https://s3.us-east-1.amazonaws.com` |
+| IP:port | `x.x.x.x:port` | `192.168.1.10:3306` |
+| localhost | `localhost:port` | `localhost:3000` |
 
-Most AWS endpoints end in `.amazonaws.com`, but that is AWS naming convention, not a general rule.
+### AWS Service Endpoints
 
----
-
-## API Endpoints
-
-Each URL in an API is an endpoint:
-
-```text
-GET  https://api.example.com/users       <- endpoint 1
-POST https://api.example.com/users       <- endpoint 2 (same URL, different method)
-GET  https://api.example.com/orders/123  <- endpoint 3
+Every AWS service has a regional endpoint:
 ```
-
-An API usually contains multiple endpoints that together form one interface.
-
----
-
-## AWS Service Endpoints
-
-Every AWS service has a regional endpoint that the SDK or CLI calls:
-
-```text
-EC2:        ec2.us-east-1.amazonaws.com
-S3:         s3.us-east-1.amazonaws.com
-DynamoDB:   dynamodb.us-east-1.amazonaws.com
-Lambda:     lambda.us-east-1.amazonaws.com
+EC2:      ec2.us-east-1.amazonaws.com
+S3:       s3.us-east-1.amazonaws.com
+DynamoDB: dynamodb.us-east-1.amazonaws.com
 ```
 
 When you run `aws s3 ls`, the CLI calls the S3 endpoint behind the scenes.
 
----
+### Database Endpoints
 
-## Database Endpoints
-
-A database endpoint is the DNS address used by clients to connect:
-
-```text
+```
 RDS:    mydb.abc123.us-east-1.rds.amazonaws.com:3306
-Aurora: mydb.cluster-abc123.us-east-1.rds.amazonaws.com:3306
-        mydb.cluster-ro-abc123.us-east-1.rds.amazonaws.com:3306
+Aurora: mydb.cluster-abc123.us-east-1.rds.amazonaws.com:3306      (writer)
+        mydb.cluster-ro-abc123.us-east-1.rds.amazonaws.com:3306   (reader)
 ```
 
-Aurora separates writer and reader endpoints, and the reader endpoint load-balances across replicas.
+[Aurora](../aws/101/aws_services/11_amazon_aurora.md) separates writer and reader endpoints. The reader endpoint load-balances across replicas.
+
+### VPC Endpoints
+
+A VPC endpoint gives your [VPC](../aws/101/aws_services/04_amazon_vpc.md) a private path to an AWS service — traffic stays within the AWS network.
+
+| Type | How it works | Services |
+|------|-------------|----------|
+| **Gateway** | Route table entry | S3, DynamoDB only |
+| **Interface** | ENI + PrivateLink | Most other services |
+
+```
+Without:  EC2 (private) → NAT Gateway → Internet → S3
+With:     EC2 (private) → VPC Endpoint → S3 (no internet)
+```
+
+Benefits: security (no internet exposure), cost (no NAT data charges), compliance.
+
+## Example
+
+An API has multiple endpoints: `GET /users` (list), `POST /users` (create), `GET /users/1` (read). Each URL is an endpoint. Together they form the API [interface](07_interfaces.md).
+
+## Why It Matters
+
+Understanding endpoints clarifies how AWS services connect: the CLI and SDK call service endpoints, databases expose connection endpoints, and VPC endpoints keep traffic private. Misconfigured endpoints cause connectivity failures.
 
 ---
-
-## VPC Endpoints
-
-A VPC endpoint gives your VPC a private path to an AWS service so traffic stays within the AWS network.
-
-| Type | How It Works | Supported Services |
-|------|-------------|-------------------|
-| **Gateway Endpoint** | Route table entry, no ENI | S3, DynamoDB only |
-| **Interface Endpoint** | ENI + AWS PrivateLink | Most other AWS services |
-
-```text
-Without VPC Endpoint:
-  EC2 (private subnet) -> NAT Gateway -> Internet Gateway -> S3 (public)
-
-With VPC Gateway Endpoint:
-  EC2 (private subnet) -> VPC Endpoint -> S3 (private, no internet)
-```
-
-Why use VPC endpoints:
-- Security - traffic does not leave the AWS network
-- Cost - no NAT Gateway data processing charges
-- Compliance - some workloads require no internet exposure
-
-For full VPC endpoint details, see [Amazon VPC](../aws/101/aws_services/04_amazon_vpc.md).
-
----
-
-## How They Connect
-
-```text
-Interface (how)          Endpoint (where)
------------------        -----------------
-API (REST/GraphQL)  ->   API Endpoint (URL)
-CLI (aws cli)       ->   AWS Service Endpoint (regional URL)
-GUI (Console)       ->   AWS Console URL
-ENI (network card)  ->   IP address
-VPC Endpoint        ->   Private path to AWS service
-```
-
-An API is a collection of endpoints that form an interface. The interface defines what you can do, and the endpoint defines where to do it.
-
-See [Interfaces](07_interfaces.md) for the access-method side of the same concept.
+← Previous: [Interfaces](07_interfaces.md) | [Overview](00_overview.md)

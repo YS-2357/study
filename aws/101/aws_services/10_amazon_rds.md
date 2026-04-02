@@ -1,8 +1,4 @@
-# Amazon RDS (Relational Database Service) - AWS Console Guide
-
-## Official Documentation
-- [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
-- [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
+# Amazon RDS (Relational Database Service)
 
 ## What It Is
 Amazon RDS (Relational Database Service) is a **managed service platform for relational databases**. It is not a database engine itself — it runs database engines (MySQL, PostgreSQL, Oracle, etc.) for you and handles the infrastructure.
@@ -67,7 +63,6 @@ For most MSP clients, RDS is the right choice — they want the database to just
 - Breadcrumb: Aurora and RDS > Databases > Create database
 - RDS and Aurora share the same console — engine selection determines which you get
 
----
 
 ## Create Database - Console Flow
 
@@ -258,7 +253,6 @@ For most MSP clients, RDS is the right choice — they want the database to just
 
 **Action buttons:** Cancel / **Create database**
 
----
 
 ## Key Concepts
 
@@ -277,7 +271,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 - Synchronous replication — data is written to both at the same time
 - Automatic failover if primary fails (~60-120 seconds)
 - Standby is NOT readable — it's only for failover
-- **MSP tip:** Always enable for production, skip for dev/test to save cost
+- **Tip:** Always enable for production, skip for dev/test to save cost
 
 ### Multi-AZ vs Read Replica
 
@@ -328,7 +322,6 @@ For most MSP clients, RDS is the right choice — they want the database to just
 - Useful when you can't upgrade immediately
 - ⚠️ Additional charges apply — plan upgrades to avoid this cost
 
----
 
 ## Precautions
 
@@ -345,7 +338,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 ### 2. Check Instance Size Before Creating
 - Production template defaults to large instances (e.g., db.r6g.2xlarge = ~$2,378/month)
 - For dev/test, use burstable classes (t classes) — much cheaper
-- **MSP tip:** Always verify instance size with the client before provisioning
+- **Tip:** Always verify instance size with the client before provisioning
 
 ### 3. Enable Multi-AZ for Production
 - Single AZ = single point of failure
@@ -376,3 +369,21 @@ For most MSP clients, RDS is the right choice — they want the database to just
 - Tag with environment, project, team, client, cost center
 - Up to 50 tags per database
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+A SaaS application uses an RDS PostgreSQL `db.r6g.large` instance with Multi-AZ enabled.
+Automated backups run daily with a 7-day retention window.
+A read replica in the same Region offloads reporting queries from the primary instance.
+
+## Why It Matters
+
+RDS removes the undifferentiated heavy lifting of database administration — patching, backups, failover —
+so teams can focus on schema design and query optimization instead of infrastructure.
+
+## Official Documentation
+- [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+- [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
+
+---
+← Previous: [Amazon EFS](22_amazon_efs.md) | [Overview](00_overview.md) | Next: [Amazon Aurora](11_amazon_aurora.md) →

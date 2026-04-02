@@ -1,10 +1,4 @@
-# Elastic Load Balancing (ELB) - AWS Console Guide
-
-## Official Documentation
-- [Elastic Load Balancing Documentation](https://docs.aws.amazon.com/elasticloadbalancing/)
-- [ALB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/)
-- [NLB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/)
-- [GWLB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/)
+# Elastic Load Balancing (ELB)
 
 ## What It Is
 Elastic Load Balancing (ELB) automatically distributes incoming traffic across multiple targets (EC2 instances, containers, IP addresses, Lambda functions). It ensures high availability by spreading load and detecting unhealthy targets.
@@ -15,7 +9,6 @@ Elastic Load Balancing (ELB) automatically distributes incoming traffic across m
 - AWS Console → EC2 → Left sidebar → Load Balancers
 - Breadcrumb: EC2 > Load balancers
 
----
 
 ## Compare and Select Load Balancer Type
 
@@ -38,7 +31,6 @@ When you click "Create load balancer", you see a comparison page with all types 
 
 **Classic Load Balancer** is collapsed at the bottom as "previous generation". AWS recommends migrating to ALB or NLB.
 
----
 
 ## Create Application Load Balancer (ALB) - Console Flow
 
@@ -141,7 +133,6 @@ A listener checks for connection requests using the port and protocol you config
 - **Server-side tasks and status** - After submitting, all tasks and statuses become available for monitoring
 - **Cancel** / **Create load balancer**
 
----
 
 ## Create Network Load Balancer (NLB) - Console Flow
 
@@ -221,7 +212,6 @@ A listener checks for connection requests using the port and protocol you config
 - Review configurations, make changes if needed
 - **Cancel** / **Create load balancer**
 
----
 
 ## Create Gateway Load Balancer (GWLB) - Console Flow
 
@@ -279,7 +269,6 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 
 - **Cancel** / **Create load balancer**
 
----
 
 ## Key Concepts
 
@@ -315,7 +304,6 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 - Useful for stateful applications
 - Not recommended for stateless architectures
 
----
 
 ## ALB vs NLB vs GWLB Comparison
 
@@ -384,12 +372,11 @@ Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Applian
 | Subnets after creation | Can modify | Can modify | **Can't remove** |
 | Use case | Web apps, APIs, microservices | High performance, gaming, IoT | Security appliances (firewalls, IDS/IPS) |
 
-**MSP common use:**
+**Common use:**
 - **ALB** - Most client web applications (80%+ of cases)
 - **NLB** - When client needs static IPs, extreme performance, or non-HTTP protocols
 - **GWLB** - When client requires third-party security appliances (Palo Alto, Fortinet, etc.)
 
----
 
 ## Pricing
 
@@ -437,7 +424,6 @@ Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Applian
 - **GWLB Endpoint (GWLBE)** — Priced separately via AWS PrivateLink
 - **Service integrations** — CloudFront, WAF, Global Accelerator each have their own charges
 
----
 
 ## Precautions
 
@@ -481,3 +467,23 @@ Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Applian
 - MSP essential: Client, Environment, Project, CostCenter
 - Up to 50 tags per resource
 - Key is required, Value is optional
+
+## Example
+
+An ALB listens on HTTPS (443) with an ACM certificate and routes `/api/*` requests to an API target group
+and all other paths to a frontend target group. Health checks on `/health` remove unhealthy instances automatically.
+The ALB spans two AZs for high availability.
+
+## Why It Matters
+
+Load balancers distribute traffic, absorb failures, and enable zero-downtime deployments.
+Pairing an ALB with Auto Scaling is the standard pattern for resilient, scalable web applications on AWS.
+
+## Official Documentation
+- [Elastic Load Balancing Documentation](https://docs.aws.amazon.com/elasticloadbalancing/)
+- [ALB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/)
+- [NLB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/)
+- [GWLB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/)
+
+---
+← Previous: [Security Group](14_security_group.md) | [Overview](00_overview.md) | Next: [Amazon CloudFront](21_amazon_cloudfront.md) →

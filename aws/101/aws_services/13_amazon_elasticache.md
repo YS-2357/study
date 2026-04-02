@@ -1,8 +1,4 @@
-# Amazon ElastiCache - AWS Console Guide
-
-## Official Documentation
-- [Amazon ElastiCache User Guide](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/WhatIs.html)
-- [Amazon ElastiCache FAQs](https://aws.amazon.com/elasticache/faqs/)
+# Amazon ElastiCache
 
 ## What It Is
 Amazon ElastiCache is a managed in-memory cache service. It stores frequently accessed data in memory (RAM) so your application can read it in microseconds instead of querying a database every time.
@@ -57,7 +53,6 @@ First request = cache miss (goes to DB). After that, same data served from memor
 - Search "ElastiCache" in AWS Console
 - ElastiCache > Caches > Create cache
 
----
 
 ## Create Cache - Console Flow
 
@@ -99,7 +94,6 @@ First request = cache miss (goes to DB). After that, same data served from memor
 
 **Action buttons:** Cancel / **Create**
 
----
 
 ## Key Concepts
 
@@ -151,7 +145,6 @@ User → App (EC2/Lambda) → ElastiCache (Valkey/Redis)
 - Next request = cache miss → fresh data from DB
 - Balance: too short = too many DB hits, too long = stale data
 
----
 
 ## Precautions
 
@@ -167,7 +160,7 @@ User → App (EC2/Lambda) → ElastiCache (Valkey/Redis)
 ### 2. Serverless vs Node-based — Cost Implications
 - Serverless is easier but can be more expensive at steady high traffic
 - Node-based is cheaper for predictable workloads but requires capacity planning
-- **MSP tip:** Start with Serverless, switch to node-based once traffic patterns are clear
+- **Tip:** Start with Serverless, switch to node-based once traffic patterns are clear
 
 ### 3. Security — VPC and Access Control
 - ElastiCache runs inside your VPC (not publicly accessible)
@@ -189,3 +182,21 @@ User → App (EC2/Lambda) → ElastiCache (Valkey/Redis)
 ### 6. Always Use Tags
 - Tag with environment, project, team, client, cost center
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+An API caches database query results in an ElastiCache Redis cluster with a 5-minute TTL.
+The first request hits RDS and stores the result in Redis; subsequent identical requests return in under a millisecond.
+This reduces RDS read load by over 80%.
+
+## Why It Matters
+
+In-memory caching dramatically reduces database load and response times.
+ElastiCache handles the operational burden of running Redis or Memcached — replication, patching, failover — so you just use the cache.
+
+## Official Documentation
+- [Amazon ElastiCache User Guide](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/WhatIs.html)
+- [Amazon ElastiCache FAQs](https://aws.amazon.com/elasticache/faqs/)
+
+---
+← Previous: [Amazon DynamoDB](12_amazon_dynamodb.md) | [Overview](00_overview.md) | Next: [Amazon EMR](08_amazon_emr.md) →

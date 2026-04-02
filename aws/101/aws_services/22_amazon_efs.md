@@ -1,8 +1,4 @@
-# Amazon EFS - AWS Console Guide
-
-## Official Documentation
-- [Amazon EFS Documentation](https://docs.aws.amazon.com/efs/)
-- [EFS Performance](https://docs.aws.amazon.com/efs/latest/ug/performance.html)
+# Amazon EFS
 
 ## What It Is
 **EFS (Elastic File System)** is a fully managed, serverless NFS file system that multiple EC2 instances can mount simultaneously. Unlike EBS (one volume = one instance), EFS is shared storage — multiple instances across multiple AZs can read/write the same files at the same time. It grows and shrinks automatically.
@@ -15,7 +11,6 @@
 - AWS Console → EFS → File systems → Create file system
 - Breadcrumb: EFS > File systems
 
----
 
 ## Create File System - Console Flow
 
@@ -53,7 +48,6 @@ Key observations:
 
 **Cancel / Customize / Create file system** buttons
 
----
 
 ## EFS vs EBS vs S3
 
@@ -67,7 +61,6 @@ Key observations:
 | **Performance** | Good for shared workloads | Best for single-instance IOPS | Best for large objects |
 | **Use case** | Shared config, CMS, home dirs | Boot volumes, databases | Static assets, backups, data lake |
 
----
 
 ## Key Concepts
 
@@ -93,7 +86,6 @@ EFS can be mounted from on-premises via:
 - **AWS VPN** — encrypted tunnel over internet, simpler setup
 - **AWS Transit Gateway** — hub for connecting multiple VPCs + on-premises
 
----
 
 ## Pricing
 
@@ -109,7 +101,6 @@ Throughput costs (Elastic mode): $0.04/GB transferred for reads, $0.06/GB for wr
 
 Example: 100 GB all in Standard = $30/month. With lifecycle (50% in IA) = ~$16/month.
 
----
 
 ## Precautions
 
@@ -133,3 +124,21 @@ Example: 100 GB all in Standard = $30/month. With lifecycle (50% in IA) = ~$16/m
 ### 4. Security Groups on Mount Targets
 - Each mount target has a security group
 - Must allow NFS (port 2049) inbound from your EC2 instances' security group
+
+## Example
+
+A fleet of EC2 instances behind an ASG mounts the same EFS file system at `/mnt/shared`.
+Application code deployed to EFS is instantly available to every instance — no need to sync files across servers.
+EFS automatically grows as files are added and shrinks when they are deleted.
+
+## Why It Matters
+
+EFS provides shared file storage that multiple instances can access simultaneously, which EBS cannot do.
+It is the go-to solution for shared content, CMS uploads, and any workload where multiple servers need the same filesystem.
+
+## Official Documentation
+- [Amazon EFS Documentation](https://docs.aws.amazon.com/efs/)
+- [EFS Performance](https://docs.aws.amazon.com/efs/latest/ug/performance.html)
+
+---
+← Previous: [Amazon EBS](20_amazon_ebs.md) | [Overview](00_overview.md) | Next: [Amazon RDS](10_amazon_rds.md) →

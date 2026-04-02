@@ -1,8 +1,4 @@
-# Amazon SageMaker AI - AWS Console Guide
-
-## Official Documentation
-- [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
-- [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
+# Amazon SageMaker AI
 
 ## What It Is
 Amazon SageMaker AI is a fully managed platform for building, training, and deploying machine learning models.
@@ -32,7 +28,6 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 - Search "SageMaker" in AWS Console
 - Amazon SageMaker > Studio, Notebooks, Training jobs, or Endpoints
 
----
 
 ## Key Concepts
 
@@ -56,7 +51,6 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 - You can also bring your own training code in a Docker container
 - Supports popular frameworks: PyTorch, TensorFlow, Hugging Face, MXNet
 
----
 
 ## Precautions
 
@@ -89,3 +83,21 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 ### 5. Always Use Tags
 - Tag notebooks, training jobs, endpoints with environment, project, team, cost center
 - Essential for MSP cost tracking — ML workloads can be very expensive
+
+## Example
+
+A data scientist uses a SageMaker notebook to explore training data stored in S3.
+They launch a managed training job on `ml.m5.xlarge` instances using the built-in XGBoost algorithm.
+After training, they deploy the model to a real-time endpoint and test predictions via the endpoint URL.
+
+## Why It Matters
+
+SageMaker removes the infrastructure complexity from machine learning — managed notebooks, training jobs, and endpoints
+let teams focus on model quality instead of cluster management.
+
+## Official Documentation
+- [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
+- [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
+
+---
+← Previous: [Amazon Redshift](23_amazon_redshift.md) | [Overview](00_overview.md) | Next: [AWS Data Pipeline](25_aws_data_pipeline.md) →

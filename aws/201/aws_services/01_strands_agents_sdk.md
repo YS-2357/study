@@ -185,3 +185,6 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Not all models handle tool-use equally well
 - Claude Sonnet/Opus and GPT-4 class models work best for complex multi-tool agents
 - Smaller models may struggle with multi-step reasoning
+
+---
+[Overview](00_overview.md) | Next: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) →

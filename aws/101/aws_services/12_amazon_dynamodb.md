@@ -1,8 +1,4 @@
-# Amazon DynamoDB - AWS Console Guide
-
-## Official Documentation
-- [Amazon DynamoDB Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
-- [Amazon DynamoDB FAQs](https://aws.amazon.com/dynamodb/faqs/)
+# Amazon DynamoDB
 
 ## What It Is
 Amazon DynamoDB is a **fully managed** NoSQL (key-value and document) database service. Single-digit millisecond latency at any scale, with near-unlimited scalability.
@@ -44,7 +40,6 @@ Amazon DynamoDB is a **fully managed** NoSQL (key-value and document) database s
 - Search "DynamoDB" in AWS Console
 - DynamoDB > Tables > Create table
 
----
 
 ## Create Table - Console Flow
 
@@ -126,7 +121,6 @@ Query: "all orders for A001 between January and February" → works!
 
 **Action buttons:** Cancel / **Create table**
 
----
 
 ## Key Concepts
 
@@ -180,7 +174,6 @@ Query: "all orders for A001 between January and February" → works!
 - Good for: global applications, disaster recovery
 - ⚠️ Additional cost for cross-region replication
 
----
 
 ## Precautions
 
@@ -192,7 +185,7 @@ Query: "all orders for A001 between January and February" → works!
 ### 1. On-demand vs Provisioned — Cost Can Surprise You
 - On-demand is easy but more expensive per request
 - Provisioned without auto-scaling can cause throttling
-- **MSP tip:** Start with on-demand for new tables, switch to provisioned once traffic patterns are clear
+- **Tip:** Start with on-demand for new tables, switch to provisioned once traffic patterns are clear
 
 ### 2. LSI Must Be Created at Table Creation
 - Local Secondary Indexes cannot be added after the table exists
@@ -222,3 +215,21 @@ Query: "all orders for A001 between January and February" → works!
 - Tag with environment, project, team, client, cost center
 - Up to 50 tags per table
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+A mobile app stores user session data in a DynamoDB table with `userId` as the partition key.
+On-demand capacity mode handles unpredictable traffic without any provisioning.
+TTL (Time to Live) automatically deletes sessions older than 24 hours.
+
+## Why It Matters
+
+DynamoDB provides single-digit millisecond reads and writes at any scale with zero server management.
+It is the default choice for key-value workloads that need consistent low latency.
+
+## Official Documentation
+- [Amazon DynamoDB Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+- [Amazon DynamoDB FAQs](https://aws.amazon.com/dynamodb/faqs/)
+
+---
+← Previous: [Amazon Aurora](11_amazon_aurora.md) | [Overview](00_overview.md) | Next: [Amazon ElastiCache](13_amazon_elasticache.md) →

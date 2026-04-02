@@ -1,97 +1,55 @@
 # Interfaces
 
 ## What It Is
-An interface is how you interact with a system.
 
-The key idea is that an interface defines the method of access without requiring you to know the internal implementation.
+An interface is how you interact with a system. It defines the method of access without requiring you to know the internal implementation.
 
-A good analogy is a remote control:
-- you can use the TV through the buttons on the remote
-- you do not need to understand the internal circuitry of the TV
-- you still need to know what each button does
+## Analogy
 
-That is how interfaces work in computing. They hide the internals, but they still expose a defined way to operate the system.
+A remote control: you use the TV through buttons without understanding the internal circuitry. You still need to know what each button does — that's the interface.
 
----
+## How It Works
 
-## Types of Interfaces
+### Types of Interfaces
 
-| Type | What It Is | Example |
+| Type | What it is | Example |
 |------|-----------|---------|
-| **API** (Application Programming Interface) | A set of rules for programs to talk to each other | REST API, AWS SDK |
-| **CLI** (Command Line Interface) | Text-based interaction | `aws s3 ls`, `kubectl get pods` |
-| **GUI** (Graphical User Interface) | Visual interaction | AWS Console, web browsers |
-| **Network Interface** | A connection point for network communication | ENI (Elastic Network Interface) |
+| **API** | Rules for programs to talk to each other | REST API, AWS SDK |
+| **CLI** | Text-based interaction | `aws s3 ls`, `kubectl get pods` |
+| **GUI** | Visual interaction | AWS Console, web browsers |
+| **Network Interface** | Connection point for network communication | ENI (Elastic Network Interface) |
+
+### API
+
+An API defines what operations are available and how to call them. You don't see the internal code — you call the API and handle the response.
+
+API styles (see [HTTP](../networking/05_http.md) for REST details):
+
+| Style | Format | Use case |
+|-------|--------|----------|
+| REST | JSON over HTTP | Most web APIs |
+| GraphQL | JSON over HTTP | Frontend flexibility |
+| gRPC | Protocol Buffers over HTTP/2 | Microservice-to-microservice |
+
+### ENI (Elastic Network Interface)
+
+A virtual network card in AWS. Each [EC2](../aws/101/aws_services/05_amazon_ec2.md) instance has at least one ENI.
+
+An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/101/aws_services/14_security_group.md), and source/destination check flag.
+
+An instance can have multiple ENIs for separating management and data traffic or multi-homed setups across subnets.
+
+### Programming Interface
+
+In software, an interface is a contract: if you implement the interface, you must provide the required methods. The caller doesn't care which implementation is used.
+
+## Example
+
+You run `aws s3 ls` in the terminal. The CLI (interface) translates your command into an API call to the S3 [endpoint](08_endpoints.md) (`s3.us-east-1.amazonaws.com`). The same operation through the GUI: open the AWS Console and click through the S3 bucket list.
+
+## Why It Matters
+
+Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the system. Understanding this distinction clarifies AWS documentation — every service has multiple interfaces (Console, CLI, SDK) that all hit the same API endpoints.
 
 ---
-
-## API - The Most Important Interface
-
-An API defines what operations are available and how to call them. You do not see the internal code. You just call the API and handle the response.
-
-```text
-Your App -> API call -> Service (internal logic hidden)
-         <- Response <-
-```
-
-**API styles** (see [HTTP](../networking/05_http.md) for REST details):
-
-| Style | Protocol | Format | Use Case |
-|-------|----------|--------|----------|
-| **REST** | HTTP | JSON | Most web APIs |
-| **GraphQL** | HTTP | JSON | Frontend flexibility |
-| **gRPC** | HTTP/2 | Protocol Buffers | Microservice-to-microservice |
-| **SOAP** | HTTP/SMTP | XML | Legacy enterprise systems |
-
-The interface idea belongs here in `computing/`, but detailed REST API behavior belongs in [HTTP](../networking/05_http.md) because REST is built on top of HTTP.
-
----
-
-## Network Interface (ENI)
-
-An Elastic Network Interface is a virtual network card in AWS.
-
-What an ENI has:
-- Private IP address (required)
-- Public IP address (optional)
-- MAC address
-- One or more security groups
-- Source/destination check flag
-
-What uses ENIs:
-- EC2 instances (at least one ENI each)
-- Lambda functions (when connected to a VPC)
-- NAT Gateway
-- ELB (load balancer nodes)
-- VPC Interface Endpoints
-
-An EC2 instance can have multiple ENIs. Common reasons:
-- Separate management and data traffic
-- Multi-homed instances in multiple subnets
-- Network appliances such as firewalls
-
----
-
-## Programming Interface
-
-In software, an interface is a contract: if you implement the interface, you must provide the required methods.
-
-```text
-Interface: Storable
-  - save(data)
-  - load(id)
-
-Class: S3Storage implements Storable    -> must have save() and load()
-Class: DiskStorage implements Storable  -> must have save() and load()
-```
-
-The caller does not care which implementation is used. It just calls the interface.
-
----
-
-## Interface vs Endpoint
-
-- **Interface** = how you interact with a system
-- **Endpoint** = where you reach that system
-
-See [Endpoints](08_endpoints.md) for the address side of the same relationship.
+← Previous: [Caching](06_caching.md) | [Overview](00_overview.md) | Next: [Endpoints](08_endpoints.md) →

@@ -1,52 +1,33 @@
 # aws_services
-AWS service notes for the AWS 101 track.
 
-## Index
+AWS 101 service notes. See [00_overview.md](00_overview.md) for study order.
 
-### Overview
-- `00_overview.md`: Networking basics used by the AWS notes (protocols, ports, CIDR, OSI model, DNS).
-
-### Global Infrastructure
+- `README.md`: This file.
+- `00_overview.md`: Study hub and navigation.
 - `01_region.md`: AWS Regions.
-- `02_availability_zone.md`: AWS Availability Zones.
+- `02_availability_zone.md`: Availability Zones.
 - `03_subnet.md`: VPC subnets.
-- `27_pop.md`: Points of Presence (edge locations).
-
-### Networking & Security
-- `04_amazon_vpc.md`: Amazon VPC (includes SG vs NACL deep dive).
-- `14_security_group.md`: Security Groups.
-- `16_elastic_load_balancing.md`: Elastic Load Balancing (ALB, NLB, GWLB with layer explanation).
-- `21_amazon_cloudfront.md`: Amazon CloudFront.
-
-### Compute
+- `04_amazon_vpc.md`: Amazon VPC.
 - `05_amazon_ec2.md`: Amazon EC2.
-- `06_auto_scaling.md`: Auto Scaling (includes ELB types with console screenshots).
-- `07_aws_lambda.md`: AWS Lambda (includes execution role explanation).
-- `26_aws_fargate.md`: AWS Fargate (serverless containers).
-
-### Storage
-- `19_amazon_s3.md`: Amazon S3.
-- `20_amazon_ebs.md`: Amazon EBS (console guide with volume types).
-- `22_amazon_efs.md`: Amazon EFS (console guide with lifecycle/throughput).
-
-### Database & Caching
+- `06_auto_scaling.md`: Auto Scaling.
+- `07_aws_lambda.md`: AWS Lambda.
+- `08_amazon_emr.md`: Amazon EMR.
+- `09_amazon_kinesis.md`: Amazon Kinesis.
 - `10_amazon_rds.md`: Amazon RDS.
 - `11_amazon_aurora.md`: Amazon Aurora.
 - `12_amazon_dynamodb.md`: Amazon DynamoDB.
 - `13_amazon_elasticache.md`: Amazon ElastiCache.
-
-### Analytics
-- `08_amazon_emr.md`: Amazon EMR.
-- `09_amazon_kinesis.md`: Amazon Kinesis.
-- `23_amazon_redshift.md`: Amazon Redshift (data warehouse).
-- `24_amazon_sagemaker.md`: Amazon SageMaker AI (ML platform).
-- `25_aws_data_pipeline.md`: AWS Data Pipeline (legacy ETL orchestration).
-
-### Security & Compliance
+- `14_security_group.md`: Security Groups.
 - `15_amazon_iam.md`: Amazon IAM.
+- `16_elastic_load_balancing.md`: Elastic Load Balancing.
 - `17_aws_shield.md`: AWS Shield.
 - `18_aws_waf.md`: AWS WAF.
-
-## Cross-references
-- General computing concepts → `../../../computing/`
-- General networking concepts → `../../../networking/`
+- `19_amazon_s3.md`: Amazon S3.
+- `20_amazon_ebs.md`: Amazon EBS.
+- `21_amazon_cloudfront.md`: Amazon CloudFront.
+- `22_amazon_efs.md`: Amazon EFS.
+- `23_amazon_redshift.md`: Amazon Redshift.
+- `24_amazon_sagemaker.md`: Amazon SageMaker.
+- `25_aws_data_pipeline.md`: AWS Data Pipeline.
+- `26_aws_fargate.md`: AWS Fargate.
+- `27_pop.md`: Points of Presence.

@@ -1,8 +1,4 @@
-# Amazon EBS - AWS Console Guide
-
-## Official Documentation
-- [Amazon EBS Documentation](https://docs.aws.amazon.com/ebs/)
-- [EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
+# Amazon EBS
 
 ## What It Is
 **EBS (Elastic Block Store)** is block-level storage that you attach to EC2 instances. Think of it as a virtual hard drive — it persists independently from the instance, so data survives instance stop/start. Each EBS volume exists in a single Availability Zone.
@@ -13,7 +9,6 @@
 - AWS Console → EC2 → Left sidebar → Elastic Block Store → Volumes
 - Breadcrumb: EC2 > Volumes
 
----
 
 ## Create Volume - Console Flow
 
@@ -81,7 +76,6 @@
 
 **Cancel / Create volume** buttons
 
----
 
 ## Volume Types Comparison
 
@@ -100,7 +94,6 @@
 - Sequential reads, big data → **st1**
 - Rarely accessed, cheapest → **sc1**
 
----
 
 ## Key Concepts
 
@@ -156,7 +149,6 @@ Not snapshot-able: S3 (use versioning/replication), Lambda (code versions are th
 | **ECS (Fargate)** | ❌ | Fargate tasks cannot mount EBS |
 | **Lambda** | ❌ | No persistent block storage |
 
----
 
 ## Pricing
 
@@ -179,7 +171,6 @@ Additional costs:
 - Snapshot copy across Regions (data transfer)
 - Public IPv4 if applicable to attached instance
 
----
 
 ## Precautions
 
@@ -209,3 +200,21 @@ Additional costs:
 ### 5. Monitor IOPS/Throughput
 - CloudWatch metrics: VolumeReadOps, VolumeWriteOps, VolumeThroughputPercentage
 - If consistently hitting limits → resize or upgrade volume type
+
+## Example
+
+A production EC2 instance uses a 100 GiB `gp3` root volume and a separate 500 GiB `gp3` data volume for the database.
+The data volume has "Delete on Termination" set to No and daily snapshots via AWS Backup.
+If the instance is terminated, the data volume and its snapshots survive.
+
+## Why It Matters
+
+EBS provides persistent block storage for EC2 — it is the virtual hard drive behind every instance.
+Choosing the right volume type and configuring snapshots correctly protects data and controls costs.
+
+## Official Documentation
+- [Amazon EBS Documentation](https://docs.aws.amazon.com/ebs/)
+- [EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
+
+---
+← Previous: [Amazon S3](19_amazon_s3.md) | [Overview](00_overview.md) | Next: [Amazon EFS](22_amazon_efs.md) →

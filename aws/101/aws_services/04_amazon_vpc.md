@@ -1,7 +1,4 @@
-# Amazon VPC - AWS Console Guide
-
-## Official Documentation
-- [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
+# Amazon VPC
 
 ## What It Is
 **VPC (Virtual Private Cloud)** is a logically isolated virtual network where you launch AWS resources with complete control over IP addressing, subnets, routing, and security.
@@ -392,3 +389,20 @@ With NACL (stateless): must explicitly allow both inbound 443 AND outbound ephem
 Rule: if a service gets network connectivity inside your VPC via ENI, SG applies. If it's a regional/global managed endpoint service, access is controlled by IAM/resource policies instead.
 
 > Note: VPC Endpoints create ENIs, so the endpoint ENI can have an SG — but that's the endpoint's SG, not the service itself.
+
+## Example
+
+An MSP creates a VPC (`10.10.0.0/16`) for a client's production environment with public subnets for ALBs,
+private subnets for application servers, and isolated subnets for RDS.
+A separate VPC (`10.20.0.0/16`) hosts shared logging and monitoring services, connected via VPC Peering.
+
+## Why It Matters
+
+VPC is the network foundation for almost every AWS resource.
+A well-planned VPC with proper CIDR allocation, subnet layout, and routing prevents costly redesigns later.
+
+## Official Documentation
+- [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
+
+---
+← Previous: [Points of Presence](27_pop.md) | [Overview](00_overview.md) | Next: [Security Group](14_security_group.md) →

@@ -1,18 +1,14 @@
 # computing
-General computing study notes organized by topic.
 
-- `README.md`: Overview of the `computing/` folder and its direct contents.
-- `00_overview.md`: Overview of the computing notes.
-- `01_architecture.md`: Notes about computer architecture.
-- `02_virtualization.md`: Notes about virtualization.
-- `03_storage.md`: Notes about storage systems.
-- `04_gpu.md`: Notes about GPUs.
-- `05_workload_types.md`: Notes about workload types.
-- `06_caching.md`: Notes about caching concepts and patterns.
-- `07_interfaces.md`: Interfaces such as API, CLI, GUI, ENI, and programming contracts.
-- `08_endpoints.md`: API, AWS service, database, and VPC endpoints.
+General computing concepts. See [00_overview.md](00_overview.md) for study order.
 
-## Local organizing rules
-
-- This subtree is organized directly by topic.
-- Add new computing notes at the root of `computing/` unless a future substructure is intentionally introduced.
+- `README.md`: This file.
+- `00_overview.md`: Study hub and navigation.
+- `01_architecture.md`: CPU architectures (x86, ARM, 32-bit vs 64-bit).
+- `02_virtualization.md`: Hypervisors, VMs, containers.
+- `03_storage.md`: Block, file, object storage and performance metrics.
+- `04_gpu.md`: GPU computing, CUDA, AWS accelerated instances.
+- `05_workload_types.md`: General purpose, compute, memory, storage, accelerated workloads.
+- `06_caching.md`: Cache concepts, layers, patterns.
+- `07_interfaces.md`: API, CLI, GUI, ENI, programming interfaces.
+- `08_endpoints.md`: API, AWS service, database, VPC endpoints.

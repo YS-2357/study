@@ -1,79 +1,54 @@
 # study
-Study materials organized by subject and topic.
 
-- `README.md`: Overview of the `study/` folder and its direct contents.
-- `ai/`: AI agent, Codex, and tool ecosystem study notes.
-- `aws/`: AWS study materials grouped by level and purpose.
-- `git/`: Git study notes.
-- `computing/`: General computing study notes.
-- `networking/`: Networking study notes.
+Study materials organized by domain.
 
-## Operating Rules
+- [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
+- [aws/](aws/README.md) — AWS study materials grouped by level.
+  - [aws/101/aws_services/](aws/101/aws_services/README.md) — AWS service notes. [Start studying →](aws/101/aws_services/00_overview.md)
+  - [aws/201/aws_services/](aws/201/aws_services/README.md) — AWS 201 deep-dives. [Start studying →](aws/201/aws_services/00_overview.md)
+- [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_overview.md)
+- [git/](git/README.md) — Git concepts. [Start studying →](git/00_overview.md)
+- [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_overview.md)
 
-### Purpose
+## Standards
 
-- `study/` is the reusable knowledge workspace for notes, walkthroughs, reference material, and structured study artifacts.
-- Do not use `study/` as a general scratch area for temporary files with no long-term value.
+Every note in this repo follows these rules.
 
-### Top-level structure
+### Structure
 
-- Top-level directories are organized by domain.
-- New top-level folders should represent stable domains, not short-lived tasks, dates, or one-off experiments.
-- Subtrees may choose their own local organizing model if the subtree README explains it clearly.
+Every note file uses this heading order:
 
-### Source of truth
-
-- This root `README.md` is the canonical rule document for the `study/` repo.
-- Child `README.md` files may add tighter local rules for their subtree, but they should not weaken the root policy.
-- `.gitignore` is the enforcement layer for anything designated local-only.
-
-### Artifact classification
-
-- Always track reusable notes, glossaries, walkthroughs, diagrams, indexes, and documentation that should remain part of the study corpus.
-- Never track private material, rehearsal content, credentials, local exports, recordings, or audience-specific presentation prep.
-- Review before tracking screenshots, generated assets, large binaries, and third-party material with unclear reuse value.
-
-### Naming and placement
-
-- Use stable, semantic folder names.
-- Use date-based filenames only when the document is intentionally time-specific, such as rehearsal logs or session notes.
-- Keep one reusable concept per file when possible.
-- Put new material in the most specific existing subtree that already fits instead of creating parallel ad hoc folders.
-
-### Note writing standard
-
-- Foundational notes should optimize for clarity before completeness.
-- Foundational concept notes should include a precise `Definition` and at least one concrete `Example`.
-- Add an `Analogy` when it improves intuition, but do not force one into every note.
-- Add `Why it matters` when the concept has practical AWS, debugging, or operational relevance.
-- Do not let the analogy replace the exact definition.
-- Prefer small, realistic examples over abstract placeholders.
-
-Use the template below as a default starting point for foundational notes. The exact headings may vary, but `Definition` plus `Example` should be present at minimum.
-
-```md
-## What It Is
-One-sentence definition.
-
-## Analogy
-Short intuition bridge, if useful.
-
-## Example
-One small concrete example.
-
-## Why It Matters
-Why this matters in practice or in AWS.
+```
+# Title
+## What It Is       ← 1-2 sentence definition (required)
+## Analogy          ← only if it genuinely helps (optional)
+## How It Works     ← mechanics, steps, diagrams (if applicable)
+## Example          ← one concrete, small example (required)
+## Why It Matters   ← practical relevance (required)
 ```
 
-### Working flow
+### Navigation
 
-- Create new material in the intended subtree first.
-- Decide whether it is tracked or local-only before adding it to Git.
-- If a new tracked subtree is introduced, add or update its `README.md` immediately.
-- Before commit, confirm that file names, placement, and Git status match these rules.
+Every note has a footer:
 
-## Local-only areas
+```
+---
+← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
+```
 
-- `aws/101/ppt/` contains local presentation practice materials and is excluded from Git.
-- `aws/201/ppt/` is also kept as a local-only presentation workspace.
-- `aws/certificate/` contains private certification materials and is excluded from Git.
+Every domain has a `00_overview.md` that serves as the study hub with links to all notes in study order.
+
+### Content rules
+
+- Explain a concept once, in the note where it belongs. Other notes link to it instead of re-explaining.
+- Link inline where a concept is mentioned, not in a separate cross-references section.
+- Keep notes concise. Prefer small, realistic examples over abstract placeholders.
+- Use `> **Tip:**` for practical guidance. No other tip/recommendation formats.
+- No `---` horizontal rules except before the navigation footer.
+- No history sections (creation dates, inventor names).
+
+### README rules
+
+- READMEs list files and directories in the folder. One-line description per entry.
+- READMEs link to the domain's `00_overview.md` for study content.
+- READMEs do not contain study content, study order, or cross-references.

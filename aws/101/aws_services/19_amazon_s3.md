@@ -1,8 +1,4 @@
-# Amazon S3 - AWS Console Guide
-
-## Official Documentation
-- [Amazon S3 Documentation](https://docs.aws.amazon.com/s3/)
-- [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
+# Amazon S3
 
 ## What It Is
 **S3 (Simple Storage Service)** is fully managed object storage with 99.999999999% (11 nines) durability. Objects (files) are stored in buckets. Unlike EBS (block) or EFS (file), S3 is accessed via HTTP API — not mounted as a filesystem.
@@ -16,7 +12,6 @@
 - AWS Console → Amazon S3 → Buckets → Create bucket
 - Breadcrumb: Amazon S3 > Buckets > Create bucket
 
----
 
 ## Create Bucket - Console Flow
 
@@ -140,7 +135,6 @@ Encryption type:
 - ⚠️ Only works with versioned buckets — enabling Object Lock automatically enables Versioning
 - Use case: regulatory compliance, legal hold (법원 공문서 보관 등)
 
----
 
 ## Storage Classes
 
@@ -205,7 +199,6 @@ You set storage class:
 - Via **lifecycle rules** on the bucket (e.g., "move all objects to IA after 30 days")
 - Or use Intelligent-Tiering and let AWS handle it automatically
 
----
 
 ## Key Concepts
 
@@ -231,7 +224,6 @@ You set storage class:
 4. **ACLs** — legacy, keep disabled
 5. **VPC Endpoint Policy** — for private access from VPC
 
----
 
 ## S3 vs EBS vs EFS
 
@@ -244,7 +236,6 @@ You set storage class:
 | **Use case** | Static files, backups, data lake | Boot volumes, databases | Shared files, CMS |
 | **Cost (Standard)** | $0.023/GB | $0.08/GB (gp3) | $0.30/GB |
 
----
 
 ## Pricing
 
@@ -263,7 +254,6 @@ Additional costs:
 - Lifecycle transitions: per-request charge
 - Retrieval fees for IA/Glacier classes
 
----
 
 ## Precautions
 
@@ -291,3 +281,21 @@ Additional costs:
 ### 5. No Performance Difference Between Buckets
 - Performance is per-prefix, not per-bucket
 - Spread objects across prefixes for high throughput workloads
+
+## Example
+
+A company stores user uploads in S3 Standard with versioning enabled.
+A lifecycle rule transitions objects to Standard-IA after 30 days and to Glacier Deep Archive after 180 days.
+Block Public Access is on; an IAM role grants the application `s3:PutObject` and `s3:GetObject` on the specific bucket prefix only.
+
+## Why It Matters
+
+S3 is the default storage layer for almost every AWS architecture — backups, static assets, data lakes, and application data.
+Understanding storage classes, lifecycle policies, and access controls is essential for cost management and security.
+
+## Official Documentation
+- [Amazon S3 Documentation](https://docs.aws.amazon.com/s3/)
+- [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
+
+---
+← Previous: [AWS Fargate](26_aws_fargate.md) | [Overview](00_overview.md) | Next: [Amazon EBS](20_amazon_ebs.md) →

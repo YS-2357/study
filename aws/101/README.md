@@ -1,21 +1,17 @@
 # aws/101
-AWS learning materials, reference notes, screenshots, and local presentation materials.
 
-- `README.md`: Overview of the `aws/101/` folder and its direct contents.
-- `aws_glossary.md`: Glossary of AWS terms and concepts.
-- `aws_services/`: AWS service notes.
-- `console_workthrough/`: Console-based walkthrough notes for selected AWS services.
-- `example.md`: Example Markdown file for this section.
-- `images/`: Image assets used by the AWS notes.
-- `ppt/`: Local-only presentation practice notes, script drafts, and Q&A files.
+AWS 101 learning materials and reference notes.
 
-## Local organizing rules
-
-- `aws_services/` is tracked reference notes.
-- `console_workthrough/` is for operational, console-oriented explanation that supports the tracked notes.
-- `images/` should contain only screenshots and assets that are worth preserving as part of the study material.
-- `ppt/` is for rehearsal, delivery prep, and audience-specific notes, so it stays local-only.
-
-## Notes
-
-- `ppt/` is intentionally excluded from Git via `.gitignore`.
+- `README.md`: This file.
+- `aws_glossary.md`: Glossary of AWS terms (English/Korean).
+- `aws_services/`: AWS service notes. [Start studying →](aws_services/00_overview.md)
+- `console_workthrough/`: Console-based walkthrough notes.
+  - `ec2.md`: EC2 console walkthrough.
+  - `elb.md`: ELB console walkthrough.
+  - `iam.md`: IAM console walkthrough.
+  - `lambda.md`: Lambda console walkthrough.
+  - `rds.md`: RDS console walkthrough.
+  - `s3.md`: S3 console walkthrough.
+  - `vpc.md`: VPC console walkthrough.
+- `example.md`: Note template for this section.
+- `images/`: Image assets used by the notes.

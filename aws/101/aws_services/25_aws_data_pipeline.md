@@ -1,7 +1,4 @@
-# AWS Data Pipeline - AWS Console Guide
-
-## Official Documentation
-- [AWS Data Pipeline Developer Guide](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)
+# AWS Data Pipeline
 
 ## What It Is
 AWS Data Pipeline is a web service for scheduling and orchestrating data movement and transformation between AWS services and on-premises sources.
@@ -31,7 +28,6 @@ AWS Data Pipeline is a web service for scheduling and orchestrating data movemen
 - Search "Data Pipeline" in AWS Console
 - AWS Data Pipeline > Pipelines
 
----
 
 ## Key Concepts
 
@@ -50,7 +46,6 @@ Schedule triggers → Preconditions checked → Activity runs on EC2 → Data mo
                                               Retry logic kicks in
 ```
 
----
 
 ## Precautions
 
@@ -76,3 +71,20 @@ Schedule triggers → Preconditions checked → Activity runs on EC2 → Data mo
 ### 4. Always Use Tags
 - Tag pipelines with environment, project, team, cost center
 - Helps track costs from the EC2 instances Data Pipeline creates
+
+## Example
+
+A nightly Data Pipeline job copies new records from an RDS MySQL table to S3 in CSV format.
+A precondition checks that the RDS instance is available before starting.
+If the copy fails, the pipeline retries three times and sends an SNS alert on final failure.
+
+## Why It Matters
+
+Data Pipeline automates recurring data movement between AWS services with built-in retry and scheduling.
+While newer services like Glue and Step Functions are preferred for new projects, existing Data Pipeline jobs are still common in production.
+
+## Official Documentation
+- [AWS Data Pipeline Developer Guide](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)
+
+---
+← Previous: [Amazon SageMaker](24_amazon_sagemaker.md) | [Overview](00_overview.md) | Next: [Amazon IAM](15_amazon_iam.md) →

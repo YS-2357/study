@@ -1,8 +1,4 @@
-# Amazon CloudFront - AWS Console Guide
-
-## Official Documentation
-- [Amazon CloudFront Documentation](https://docs.aws.amazon.com/cloudfront/)
-- [CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/)
+# Amazon CloudFront
 
 ## What It Is
 **CloudFront** is AWS's CDN (Content Delivery Network). It caches your content at 600+ edge locations worldwide so users get responses from the nearest location instead of your origin server far away.
@@ -13,7 +9,6 @@ CloudFront is a **global** service (not regional).
 - AWS Console → CloudFront → Distributions
 - Breadcrumb: CloudFront > Distributions
 
----
 
 ## How CloudFront Works
 
@@ -29,7 +24,6 @@ User in Seoul → CloudFront Edge (Seoul) → Origin (S3, ALB, EC2, etc.)
 4. **Cache miss**: edge fetches from origin → caches it → returns to user
 5. Next request from same region → served from cache
 
----
 
 ## Common Pattern: S3 Static Website + CloudFront
 
@@ -61,7 +55,6 @@ With OAC:     S3 bucket stays private      ← good
 
 OAC is the recommended way to connect CloudFront to S3. It replaces the older OAI (Origin Access Identity).
 
----
 
 ## Origin Types
 
@@ -76,7 +69,6 @@ CloudFront can serve content from multiple origin types:
 | **MediaStore / MediaPackage** | Video streaming |
 | **Custom origin (any HTTP server)** | On-premises server, external URL |
 
----
 
 ## Key Concepts
 
@@ -100,7 +92,6 @@ CloudFront can serve content from multiple origin types:
 - **Edge locations** (600+) — closest to users, first cache layer
 - **Regional edge caches** (13) — between edge and origin, second cache layer for less popular content
 
----
 
 ## CloudFront vs ElastiCache
 
@@ -111,7 +102,6 @@ CloudFront can serve content from multiple origin types:
 | **Caches** | Static files, API responses, web pages | DB query results, sessions, computed data |
 | **For** | End users (reduce latency) | Application (reduce DB load) |
 
----
 
 ## Pricing
 
@@ -127,7 +117,6 @@ Additional costs:
 - Real-time logs: per log line
 - CloudFront Functions / Lambda@Edge: per request + compute
 
----
 
 ## Precautions
 
@@ -152,3 +141,21 @@ Additional costs:
 ### 4. CloudFront is Global, WAF Scope Matters
 - To attach WAF to CloudFront, the Web ACL must be created in **us-east-1** (Global scope)
 - Regional Web ACLs (for ALB) won't work with CloudFront
+
+## Example
+
+A static website hosted in an S3 bucket uses a CloudFront distribution with an OAC so the bucket stays private.
+Users worldwide hit the nearest edge location; cached content is served in single-digit milliseconds.
+An ACM certificate on the distribution enables HTTPS with a custom domain.
+
+## Why It Matters
+
+CloudFront reduces latency for global users by caching content at 600+ edge locations.
+It also offloads traffic from your origin, lowers data transfer costs, and adds a layer of DDoS protection via Shield Standard.
+
+## Official Documentation
+- [Amazon CloudFront Documentation](https://docs.aws.amazon.com/cloudfront/)
+- [CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/)
+
+---
+← Previous: [Elastic Load Balancing](16_elastic_load_balancing.md) | [Overview](00_overview.md) | Next: [Amazon EC2](05_amazon_ec2.md) →

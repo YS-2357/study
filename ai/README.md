@@ -1,40 +1,18 @@
 # ai
-AI agent and Codex study notes organized by topic.
 
-- `README.md`: Overview of the `ai/` folder and its direct contents.
-- `00_overview.md`: Study order, concept map, and how the pieces fit together.
-- `01_agent.md`: What an agent is and when to use it.
-- `02_harness.md`: What the harness is and what it controls.
-- `03_agents_md.md`: What `AGENTS.md` is for and how it affects behavior.
-- `04_tools.md`: Tools the agent can call, such as shell, web, browser, and external services.
-- `05_skills.md`: Reusable skill bundles and when they help.
-- `06_plugins.md`: Plugin bundles such as GitHub, Google Drive, Gmail, and Vercel.
-- `07_mcp.md`: MCP as the protocol layer behind many tools and plugins.
-- `08_hooks.md`: Hooks, local automation, and why most beginners can ignore them at first.
-- `09_profiles.md`: Profiles such as safe and balanced, and how they change runtime behavior.
-- `10_attention.md`: How the attention mechanism works — Query, Key, Value explained.
-- `11_kv_cache.md`: What KV cache is and why it matters for LLM inference.
-- `12_prompt_caching.md`: How LLM prompt caching works and how it differs from traditional caching.
+AI agent and LLM concepts. See [00_overview.md](00_overview.md) for study order.
 
-## Local organizing rules
-
-- This subtree is for practical AI-agent concepts first, with Codex as the main example.
-- Prefer one durable concept per file instead of mixing setup steps, opinions, and unrelated tools into one note.
-- Put ecosystem-specific notes here only when they clarify how agents work in practice.
-- Keep notes focused on operating models, not vendor hype.
-
-## Recommended study order
-
-1. `00_overview.md`
-2. `01_agent.md`
-3. `02_harness.md`
-4. `03_agents_md.md`
-5. `04_tools.md`
-6. `05_skills.md`
-7. `06_plugins.md`
-8. `07_mcp.md`
-9. `09_profiles.md`
-10. `08_hooks.md`
-11. `10_attention.md`
-12. `11_kv_cache.md`
-13. `12_prompt_caching.md`
+- `README.md`: This file.
+- `00_overview.md`: Study hub and navigation.
+- `01_agent.md`: What an agent is.
+- `02_harness.md`: The runtime environment around the agent.
+- `03_agents_md.md`: Repo-level instruction files.
+- `04_tools.md`: Capabilities the agent can call.
+- `05_skills.md`: Reusable instruction bundles.
+- `06_plugins.md`: Platform capability packs.
+- `07_mcp.md`: Model Context Protocol.
+- `08_hooks.md`: Event-triggered automation.
+- `09_profiles.md`: Named runtime configurations.
+- `10_attention.md`: Attention mechanism (Q, K, V).
+- `11_kv_cache.md`: KV cache optimization.
+- `12_prompt_caching.md`: Prompt caching across API calls.

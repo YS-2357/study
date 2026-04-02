@@ -1,8 +1,4 @@
-# Amazon Aurora - AWS Console Guide
-
-## Official Documentation
-- [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
-- [Amazon Aurora FAQs](https://aws.amazon.com/rds/aurora/faqs/)
+# Amazon Aurora
 
 ## What It Is
 Amazon Aurora is AWS's cloud-native relational database engine, compatible with MySQL and PostgreSQL. It runs on the same RDS platform but uses a completely different storage architecture — shared cluster storage that auto-replicates across 3 AZs (Availability Zones).
@@ -92,7 +88,6 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 - Breadcrumb: Aurora and RDS > Databases > Create database
 - Same console as RDS — selecting Aurora (MySQL Compatible) or Aurora (PostgreSQL Compatible) as engine creates an Aurora cluster
 
----
 
 ## Create Database - Console Flow (Aurora-specific options)
 
@@ -139,7 +134,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
    - Good when I/O costs <25% of total database costs
    - Cheaper baseline, but I/O costs can add up
 
-> **MSP tip:** If unsure, start with Aurora Standard and monitor I/O costs. Switch to I/O-Optimized if I/O exceeds 25% of your bill.
+> **Tip:** If unsure, start with Aurora Standard and monitor I/O costs. Switch to I/O-Optimized if I/O exceeds 25% of your bill.
 
 ### Additional credentials settings
 - **IAM database authentication** — Authenticate using IAM instead of password
@@ -210,7 +205,6 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 - Shows on-demand pricing estimate
 - Does NOT include reserved instance benefits, storage IOs, or data transfer
 
----
 
 ## Key Concepts
 
@@ -293,7 +287,6 @@ This is also why Aurora is AWS-only — this storage system is proprietary AWS i
 | Best when | I/O >25% of total cost | I/O <25% of total cost |
 | Switchable? | Yes, after creation | Yes, after creation |
 
----
 
 ## Precautions
 
@@ -335,3 +328,21 @@ This is also why Aurora is AWS-only — this storage system is proprietary AWS i
 - Tag with environment, project, team, client, cost center
 - Up to 50 tags per cluster
 - Essential for MSP cost tracking across multiple clients
+
+## Example
+
+A high-traffic API migrates from RDS MySQL to Aurora MySQL-compatible.
+The shared cluster storage replicates data six ways across three AZs automatically.
+Two Aurora Replicas handle read traffic, and Aurora Auto Scaling adds a third replica during peak hours.
+
+## Why It Matters
+
+Aurora delivers up to 5× MySQL and 3× PostgreSQL throughput on the same hardware, with storage that auto-grows and self-heals.
+It is the go-to choice when standard RDS performance or storage management becomes a bottleneck.
+
+## Official Documentation
+- [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
+- [Amazon Aurora FAQs](https://aws.amazon.com/rds/aurora/faqs/)
+
+---
+← Previous: [Amazon RDS](10_amazon_rds.md) | [Overview](00_overview.md) | Next: [Amazon DynamoDB](12_amazon_dynamodb.md) →
