@@ -43,13 +43,38 @@ An instance can have multiple ENIs for separating management and data traffic or
 
 In software, an interface is a contract: if you implement the interface, you must provide the required methods. The caller doesn't care which implementation is used.
 
+### Vim And Neovim
+
+`vim` and `nvim` are terminal-based text editors. They are not shells and they are not operating systems. They are programs you launch inside a terminal when you want to edit text efficiently from the keyboard.
+
+Vim is the long-standing editor descended from `vi`. Neovim is a modern fork of Vim that keeps the same core editing model while improving extensibility, plugin support, and integration with external tools.
+
+Both editors use modal editing:
+
+- **Normal mode**: move around, copy, delete, paste, search, and run editor commands
+- **Insert mode**: type text normally
+- **Command mode**: save, quit, configure, and run editor actions such as `:w` or `:q`
+
+This is why Vim feels unusual at first: pressing keys often triggers commands instead of inserting letters. The idea is to reduce hand movement so editing stays fast once you learn the key patterns.
+
+#### Vim vs. Neovim
+
+| Tool | What it is | Typical reason to use it |
+|------|------------|--------------------------|
+| **Vim** | Classic modal text editor available on many Unix and Linux systems | Stable, widely installed, works almost everywhere |
+| **Neovim** | Modern Vim-compatible fork | Better plugin ecosystem, cleaner architecture, stronger integration with LSPs and developer tooling |
+
+If someone says "open this in Vim," they usually mean "edit this file in a modal terminal editor." If they say "I use Neovim," they usually mean the same editing style, but with a newer implementation and often more customization.
+
 ## Example
 
 You run `aws s3 ls` in the terminal. The CLI (interface) translates your command into an API call to the S3 [endpoint](08_endpoints.md) (`s3.us-east-1.amazonaws.com`). The same operation through the GUI: open the AWS Console and click through the S3 bucket list.
 
+Another example: you SSH into a Linux server and run `vim config.yaml` or `nvim config.yaml`. The terminal is still the interface to the machine, but Vim or Neovim becomes the interface you use to edit the file inside that terminal session.
+
 ## Why It Matters
 
-Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the system. Understanding this distinction clarifies AWS documentation — every service has multiple interfaces (Console, CLI, SDK) that all hit the same API endpoints.
+Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the system. Understanding this distinction clarifies AWS documentation and terminal workflows: the terminal can host multiple interfaces at once, such as a shell for running commands and Vim or Neovim for editing files.
 
 ---
 ← Previous: [Caching](06_caching.md) | [Overview](00_overview.md) | Next: [Endpoints](08_endpoints.md) →
