@@ -28,6 +28,9 @@ In that example, `ls` is the command and `git` is the argument. Because the curr
 | `cd <folder>` | Moves into a folder | When you want to open a subdirectory |
 | `cd ..` | Moves up one folder | When you want to go back to the parent directory |
 | `code .` | Opens the current folder in VS Code | When you want to inspect or edit files in the VS Code UI |
+| `cat <file>` | Prints the whole file | When the file is short and you want to read all of it |
+| `head -n 5 <file>` | Prints the first 5 lines of a file | When you only want the top of a file |
+| `tail -n 5 <file>` | Prints the last 5 lines of a file | When you only want the bottom of a file |
 | `sed -n '1,120p' <file>` | Prints the first 120 lines of a text file | When you want to read a Markdown note safely in terminal |
 | `rg "text" .` | Searches for text under the current folder | When you want to find where a concept or command is documented |
 | `rg --files` | Lists files quickly | When you want a fast file inventory |
@@ -42,7 +45,7 @@ In that example, `ls` is the command and `git` is the argument. Because the curr
 2. Run `ls` or `ls -la` to inspect the current folder.
 3. Use `cd computing`, `cd git`, or `cd ..` to move around the repo.
 4. Run `code .` from the folder you want to inspect in VS Code.
-5. Use `sed -n '1,120p' README.md` to read a note in terminal, or `rg "command" .` to search across notes.
+5. Use `cat README.md` for a short file, `head -n 5 README.md` for the first lines, `tail -n 5 README.md` for the last lines, `sed -n '1,120p' README.md` for a line range, or `rg "command" .` to search across notes.
 
 ### WSL and Windows Path Tip
 
@@ -91,6 +94,17 @@ Examples:
 
 Unicode is the character set that includes English, Korean, and many other scripts. UTF-8 is one encoding format for storing Unicode text as bytes, so UTF-8 text can store Korean correctly.
 
+### `cat` vs `head` vs `tail` vs `sed`
+
+| Command | Meaning |
+|---------|---------|
+| `cat git/README.md` | Print the whole file |
+| `head -n 5 git/README.md` | Print the first 5 lines |
+| `tail -n 5 git/README.md` | Print the last 5 lines |
+| `sed -n '1,40p' git/README.md` | Print lines 1 through 40 only |
+
+Use `cat` for short files. Use `head`, `tail`, or `sed -n` when the file may be long or you only need part of it.
+
 ### Why Errors Happen
 
 | Error example | What caused it | Fix |
@@ -112,6 +126,9 @@ ls
 code .
 cd git
 ls
+cat README.md
+head -n 5 README.md
+tail -n 5 README.md
 sed -n '1,120p' 01_tracking_and_status.md
 ls -l README.md
 file README.md
