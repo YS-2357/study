@@ -4,6 +4,10 @@
 
 Amazon Bedrock Knowledge Bases is a managed RAG (Retrieval-Augmented Generation) service that connects foundation models to your data sources so responses are grounded in your actual content instead of relying solely on the model's training data.
 
+## Analogy
+
+A librarian. The LLM is smart but only knows what it learned in school (training data). Knowledge Bases is the librarian that goes to the shelves (your documents), finds the relevant pages, and hands them to the LLM before it answers. Without the librarian, the LLM guesses. With the librarian, it cites your actual content.
+
 ## How It Works
 
 ### The RAG Pipeline

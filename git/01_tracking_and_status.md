@@ -52,4 +52,4 @@ Many Git mistakes come from misunderstanding the difference between "file exists
 > **Tip:** Git is the version control system. GitHub is a hosting platform built around Git. Tracked, untracked, staged, and committed are Git concepts, not GitHub concepts.
 
 ---
-[Overview](00_overview.md)
+← [Overview](00_overview.md) | Next: [Daily Git Workflow](02_daily_git_workflow.md) →

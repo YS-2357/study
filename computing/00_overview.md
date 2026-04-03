@@ -17,6 +17,7 @@ Fundamental computing concepts for understanding cloud services.
 ### Communication & Abstraction
 7. [Interfaces](07_interfaces.md) — API, CLI, GUI, ENI, programming interfaces.
 8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints.
+9. [WSL Terminal and VS Code Workflow](09_wsl_terminal_and_vscode.md) — Navigate folders, inspect files, and open the repo in VS Code from WSL.
 
 ## Cross-references
 

@@ -2,9 +2,33 @@
 
 ## What It Is
 
-Amazon Bedrock is a fully managed service that provides API access to foundation models (FMs) from multiple providers — no infrastructure to manage, no model weights to host.
+Amazon Bedrock is a fully managed service that provides API access to foundation models (FMs) from multiple providers — no infrastructure to manage, no model weights to host. You send a prompt via API, get a response, pay per token.
+
+## Analogy
+
+A food court with multiple restaurant stalls. Anthropic, Meta, Amazon, Mistral each have a stall. You walk up to whichever one you want, order (API call), pay per dish (per token), and leave. You never enter the kitchen.
 
 ## How It Works
+
+### Two Clients
+
+Bedrock has two separate boto3 clients — like how RDS has a management client to *create* databases and a database driver to *query* them.
+
+| Client | What it does | When you use it |
+|---|---|---|
+| `bedrock` | Management — list models, manage guardrails, check access | Setup, admin |
+| `bedrock-runtime` | Inference — send prompts, get responses | Your app code (99% of the time) |
+
+AWS splits them for least privilege: your app can *call* models without permission to *delete guardrails* or *change model access*.
+
+### Two API Styles
+
+On the runtime side, there are two ways to call a model:
+
+| API | What it does | Use |
+|---|---|---|
+| `InvokeModel` | Raw call — format JSON differently per provider (Claude ≠ Nova) | Legacy, provider-specific features |
+| `Converse` | Unified format — same code for any model, just swap `modelId` | Almost always use this |
 
 ### Model Access
 
@@ -86,6 +110,20 @@ response = client.converse(
 ## Why It Matters
 
 Bedrock is the foundation layer for all AWS generative AI services. Every other Bedrock service — [Knowledge Bases](05_amazon_bedrock_knowledge_bases.md), [Agents](06_amazon_bedrock_agents.md), [AgentCore](02_amazon_bedrock_agentcore.md), [Guardrails](03_amazon_bedrock_guardrails.md) — depends on Bedrock for model access. Understanding Bedrock's model landscape and inference modes is prerequisite to using any of them effectively.
+
+## Pricing
+
+Tokens ≈ billing units. ~1 token ≈ 0.75 English words, ~1 token ≈ 0.5 Korean characters.
+
+| Model | Input (per 1M tokens) | Output (per 1M tokens) | Good for |
+|---|---|---|---|
+| Nova Micro | $0.035 | $0.14 | Simple routing, classification |
+| Nova Lite | $0.06 | $0.24 | Multimodal, budget tasks |
+| Claude Haiku 3.5 | $0.80 | $4.00 | Fast, best quality/cost ratio |
+| Nova Pro | $0.80 | $3.20 | Balanced, multimodal |
+| Claude Sonnet 4 | $3.00 | $15.00 | Complex reasoning, best quality |
+
+> **Tip:** For cost-sensitive projects needing good Korean output, Claude Haiku 3.5 or Nova Pro hits the sweet spot. Sonnet is overkill unless you need top-tier reasoning.
 
 ## Precautions
 

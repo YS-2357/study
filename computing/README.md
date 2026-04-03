@@ -12,3 +12,4 @@ General computing concepts. See [00_overview.md](00_overview.md) for study order
 - `06_caching.md`: Cache concepts, layers, patterns.
 - `07_interfaces.md`: API, CLI, GUI, ENI, programming interfaces.
 - `08_endpoints.md`: API, AWS service, database, VPC endpoints.
+- `09_wsl_terminal_and_vscode.md`: WSL folder navigation, file inspection, and opening the repo in VS Code.
