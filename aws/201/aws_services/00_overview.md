@@ -14,6 +14,10 @@ Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and prod
 5. [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) — Managed RAG over your data.
 6. [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) — Managed low-code agent builder.
 
+### Tooling
+7. [AWS CDK](07_aws_cdk.md) — Infrastructure as code for deploying AWS resources.
+8. [Amazon CloudWatch](08_amazon_cloudwatch.md) — Monitoring, logs, and alarms.
+
 ## Cross-references
 
 - Agent concepts → [AI](../../../ai/00_overview.md)
