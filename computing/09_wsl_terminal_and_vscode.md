@@ -142,4 +142,4 @@ If you can reliably answer "where am I?", "what files are here?", and "how do I 
 > **Tip:** Start every terminal session with `cd /home/ys2357/study && pwd` before running Git commands.
 
 ---
-← Previous: [Endpoints](08_endpoints.md) | [Overview](00_overview.md)
+← Previous: [Endpoints](08_endpoints.md) | [Overview](00_overview.md) | Next: [Vim and Neovim](10_vim_and_neovim.md) →
