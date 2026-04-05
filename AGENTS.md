@@ -13,11 +13,14 @@ These instructions apply to the entire `study/` repository unless a deeper `AGEN
 
 ## Core Rules
 
+- Add a source for factual claims, operational guidance, pricing, limits, version behavior, and service-specific details when editing or creating study content.
 - `README.md` files must stay folder indexes only. Do not add study content, study order, or concept explanations to a README.
 - The nearest relevant `00_overview.md` is the study hub for its subtree. Update that overview when notes in that subtree are added, removed, renamed, or reordered.
 - Explain a concept once in the note where it belongs. In other notes, link to the existing explanation instead of duplicating it.
 - Prefer editing existing Markdown notes, links, and navigation over adding tooling, scripts, or structural churn.
 - Preserve the repository's existing organization unless the task explicitly requires a reorganization.
+- Agent responses to the user must be in English unless the user explicitly asks for another language.
+- File content may use either English or Korean when appropriate for the study material.
 
 Example: add concept explanations to a note, not to `README.md`.
 Example: if you add `aws/101/aws_services/` content, update `aws/101/aws_services/00_overview.md`.

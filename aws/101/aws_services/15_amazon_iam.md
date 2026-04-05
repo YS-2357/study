@@ -525,6 +525,36 @@ A separate `ReadOnlyAudit` role lets the security team view resources across all
 IAM is the gatekeeper for every AWS API call. Misconfigured permissions are one of the most common causes of security breaches.
 Understanding roles, policies, and least-privilege access is foundational to working with AWS.
 
+## Q&A
+
+### Q: Who is responsible for Amazon Linux 2023 security on EC2?
+
+Under the AWS Shared Responsibility Model, **both sides share responsibility**.
+
+**AWS is responsible for:**
+- Physical infrastructure (data centers, servers, network)
+- Hypervisor-level security
+- Initial AMI image security (packages included in the published AMI)
+
+**Customer is responsible for:**
+- OS updates and security patches (including Amazon Linux 2023)
+- Application software installation and management
+- Security Group configuration
+- OS-level firewall and user account management
+
+Even though Amazon Linux 2023 is an AWS-provided AMI, once deployed on EC2, OS patching and security configuration are the **customer's responsibility**. AWS only covers the initial AMI state and publishing new AMI versions.
+
+### Q: What happens when an AssumeRole session expires?
+
+Temporary credentials from AssumeRole are automatically invalidated when the session expires.
+
+- **Default session**: 1 hour (3,600 seconds)
+- **Configurable range**: 15 minutes (900 sec) to 12 hours (43,200 sec)
+- **MaxSessionDuration**: Set on the IAM Role (1–12 hours). Then specify `DurationSeconds` in the AssumeRole call.
+- **After expiry**: Credentials become invalid. A new AssumeRole call is required.
+
+Longer sessions reduce re-authentication frequency but increase security risk if credentials are compromised.
+
 ## Official Documentation
 - [What is IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 

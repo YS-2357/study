@@ -212,6 +212,46 @@ If the instance is terminated, the data volume and its snapshots survive.
 EBS provides persistent block storage for EC2 — it is the virtual hard drive behind every instance.
 Choosing the right volume type and configuring snapshots correctly protects data and controls costs.
 
+## Q&A
+
+### Q: Can one EBS volume attach to multiple EC2 instances?
+
+By default, one EBS volume attaches to one EC2 instance. However, **Multi-Attach** allows simultaneous attachment to multiple instances.
+
+- **Default**: 1 EBS → 1 EC2. One EC2 can have multiple EBS volumes.
+- **Multi-Attach**: io1/io2 volumes only. Up to **16 Nitro-based EC2 instances** in the same AZ.
+- **Limitation**: gp2/gp3/st1/sc1 do not support Multi-Attach. A cluster-aware filesystem (e.g., GFS2) is recommended.
+
+### Q: Should you keep using gp2 as the default EBS volume?
+
+No — use gp3. The current AWS console default for new EC2 instances is **gp3**. It is 20% cheaper with higher baseline performance.
+
+| Attribute | gp2 | gp3 |
+|-----------|-----|-----|
+| Price | $0.10/GB/month | $0.08/GB/month (20% cheaper) |
+| Baseline IOPS | 3 IOPS/GB (min 100) | **3,000 IOPS** (regardless of size) |
+| Max IOPS | 16,000 | 16,000 |
+| Max throughput | 250 MB/s | 1,000 MB/s |
+| IOPS/throughput tuning | Tied to volume size | **Independently adjustable** |
+
+Example: 100 GB volume → gp2: $10/month, 300 IOPS vs gp3: $8/month, 3,000 IOPS.
+
+Switching from gp2 to gp3 is **non-disruptive** (EBS Elastic Volumes).
+
+### Q: What storage is best for frequent modifications on ~4 TB of data?
+
+For frequent read/write/delete operations, **block storage (EBS)** is the best fit. [S3](19_amazon_s3.md) requires overwriting entire objects, making it unsuitable for frequent modifications.
+
+| Criteria | S3 | EBS | [EFS](22_amazon_efs.md) |
+|----------|-----|-----|-----|
+| Frequent modification | ❌ (full overwrite) | ✅ (block-level edits) | ⭕ (file-level edits) |
+| 4 TB capacity | ✅ Unlimited | ✅ Max 64 TB | ✅ Auto-scales |
+| Single instance | — | ✅ Optimal | Possible but overkill |
+| Multi-instance sharing | ✅ | ⚠️ Multi-Attach (io only) | ✅ Optimal |
+| Cost (~4 TB) | ~$92/month | ~$320/month (gp3) | ~$1,200/month |
+
+**Recommendation**: Single EC2 with frequent modifications → **EBS gp3**. Multiple EC2s needing shared access → **EFS**.
+
 ## Official Documentation
 - [Amazon EBS Documentation](https://docs.aws.amazon.com/ebs/)
 - [EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)

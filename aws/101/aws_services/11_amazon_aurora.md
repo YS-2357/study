@@ -340,6 +340,17 @@ Two Aurora Replicas handle read traffic, and Aurora Auto Scaling adds a third re
 Aurora delivers up to 5× MySQL and 3× PostgreSQL throughput on the same hardware, with storage that auto-grows and self-heals.
 It is the go-to choice when standard RDS performance or storage management becomes a bottleneck.
 
+## Q&A
+
+### Q: Can Aurora run multiple primary (writer) instances simultaneously?
+
+No. Aurora uses a **single Primary (Writer) + up to 15 Aurora Replicas (read-only)** architecture. Six copies of data are distributed across 3 AZs.
+
+- **Multi-Master** (Aurora MySQL only) previously allowed multiple writers, but it is now **deprecated** and cannot be newly created.
+- **Aurora Global Database** supports **Write Forwarding** from secondary-region clusters, but actual writes are processed in the primary region.
+
+For simultaneous multi-writer needs, Aurora is not currently an option.
+
 ## Official Documentation
 - [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
 - [Amazon Aurora FAQs](https://aws.amazon.com/rds/aurora/faqs/)

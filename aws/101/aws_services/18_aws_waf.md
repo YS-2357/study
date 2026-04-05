@@ -198,9 +198,30 @@ and a rate-based rule limiting each IP to 2,000 requests per 5 minutes. Blocked 
 WAF protects web applications from common exploits like SQL injection and XSS at the application layer.
 Combined with Shield for volumetric protection, WAF provides defense-in-depth for internet-facing workloads.
 
+## Q&A
+
+### Q: Why is Route 53 shown alongside WAF in architecture diagrams?
+
+WAF and Route 53 together form a DDoS defense architecture:
+
+- **[AWS Shield](17_aws_shield.md) Standard**: Automatically applied to [CloudFront](21_amazon_cloudfront.md) and Route 53. Mitigates L3/L4 DDoS attacks in real time.
+- **WAF**: Attached to CloudFront, ALB, or API Gateway for L7 (application layer) attack defense.
+- **Route 53**: Receives Shield Standard protection at the DNS level, mitigating DNS query flood attacks.
+
+**Architecture flow**: User → **Route 53 (DNS, Shield protection)** → **CloudFront (WAF + Shield)** → ALB → EC2
+
+### Q: Does Route 53 itself perform defense?
+
+Route 53 does not defend on its own — **AWS Shield Standard protects Route 53**.
+
+- When using CloudFront and Route 53, all packets pass through a fully inline DDoS mitigation system with no observable latency.
+- **Shield Advanced** (additional $3,000/month) adds more sophisticated protection and 24/7 Shield Response Team (SRT) support.
+
+See also: [AWS Shield](17_aws_shield.md) for more on DDoS protection tiers.
+
 ## Official Documentation
 - [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
 - [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
 
 ---
-← Previous: [AWS Shield](17_aws_shield.md) | [Overview](00_overview.md)
+← Previous: [AWS Shield](17_aws_shield.md) | [Overview](00_overview.md) | Next: [Cloud Computing Billing](28_cloud_computing_billing.md) →

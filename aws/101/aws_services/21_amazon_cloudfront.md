@@ -153,6 +153,33 @@ An ACM certificate on the distribution enables HTTPS with a custom domain.
 CloudFront reduces latency for global users by caching content at 600+ edge locations.
 It also offloads traffic from your origin, lowers data transfer costs, and adds a layer of DDoS protection via Shield Standard.
 
+## Q&A
+
+### Q: Can CloudFront cache dynamic content?
+
+Yes. CloudFront handles both static and dynamic content.
+
+- **Cacheable dynamic content**: Configure cache keys using query strings, cookies, and headers to cache dynamic responses
+- **Non-cacheable dynamic content (API responses, etc.)**: Even without caching, CloudFront provides **network acceleration** through the AWS backbone network, reducing latency to the origin
+- **TTL 0**: No caching, but connection optimization and security benefits ([Shield](17_aws_shield.md)/[WAF](18_aws_waf.md)) are retained
+
+### Q: How does CloudFront reflect origin content changes?
+
+By default, CloudFront fetches fresh content from the origin when the TTL expires.
+
+**Methods to force refresh before TTL expiry:**
+
+1. **Invalidation**: Force-delete cache for specific paths or wildcards (`/*`). First 1,000/month free, then $0.005 each. Propagation across edge locations takes several minutes — it is **not instant**.
+2. **Versioning**: Include version in filename (e.g., `style.v2.css`). New URL = immediate effect. No invalidation cost.
+3. **Cache-Control headers**: Control TTL from the origin using `max-age`, `s-maxage`.
+
+CLI example for invalidation:
+```
+aws cloudfront create-invalidation --distribution-id EDFDVBD6EXAMPLE --paths "/*"
+```
+
+> **Tip:** Versioning is preferred for predictable deployments. Use invalidation for emergency content updates.
+
 ## Official Documentation
 - [Amazon CloudFront Documentation](https://docs.aws.amazon.com/cloudfront/)
 - [CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/)

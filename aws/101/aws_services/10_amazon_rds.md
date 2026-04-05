@@ -381,6 +381,19 @@ A read replica in the same Region offloads reporting queries from the primary in
 RDS removes the undifferentiated heavy lifting of database administration — patching, backups, failover —
 so teams can focus on schema design and query optimization instead of infrastructure.
 
+## Q&A
+
+### Q: Does Multi-AZ support more than one standby instance?
+
+Yes. RDS offers two Multi-AZ deployment options:
+
+| Deployment | Standbys | Readable | Failover Time | Supported Engines |
+|------------|----------|----------|---------------|-------------------|
+| **Multi-AZ Instance** (classic) | 1 | ❌ Not readable | 60–120 sec | All RDS engines |
+| **Multi-AZ Cluster** (newer) | **2 (readable)** | ✅ Readable | ~35 sec | MySQL 8.0.28+, PostgreSQL 13.8+ |
+
+Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits include read capacity, faster failover (~35 sec), and lower write latency. Failover is DNS-based — the endpoint automatically points to the new primary.
+
 ## Official Documentation
 - [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
 - [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)

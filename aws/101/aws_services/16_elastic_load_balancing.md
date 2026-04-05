@@ -479,6 +479,37 @@ The ALB spans two AZs for high availability.
 Load balancers distribute traffic, absorb failures, and enable zero-downtime deployments.
 Pairing an ALB with Auto Scaling is the standard pattern for resilient, scalable web applications on AWS.
 
+## Q&A
+
+### Q: Can NLB use TLS certificates?
+
+Yes. NLB supports TLS termination through **TLS listeners**, using certificates from ACM or IAM.
+
+| Attribute | ALB | NLB |
+|-----------|-----|-----|
+| Certificate support | ✅ HTTPS listener | ✅ TLS listener |
+| mTLS | ✅ Supported | ❌ Not supported |
+| TLS renegotiation | ✅ Supported | ❌ Not supported |
+| Layer | L7 (HTTP/HTTPS) | L4 (TCP/UDP/TLS) |
+
+NLB + TLS provides high-performance encryption. ALB offers richer TLS features including mTLS and path-based routing.
+
+### Q: How do you implement global load balancing?
+
+ALB and NLB are regional services, so they cannot handle global traffic distribution alone. Combine these services:
+
+| Service | Layer | Purpose | Key Feature |
+|---------|-------|---------|-------------|
+| **Route 53** | DNS (L7) | Geographic/latency-based routing | DNS-based, subject to TTL propagation delay |
+| **[CloudFront](21_amazon_cloudfront.md)** | CDN (L7) | Static/dynamic content acceleration | Edge caching, origin protection |
+| **Global Accelerator** | L3/L4 | TCP/UDP global acceleration | 2 fixed Anycast IPs, instant failover (no DNS propagation) |
+
+**Recommended architectures:**
+- Web services: **Route 53 → CloudFront → ALB (per region)**
+- Non-HTTP protocols: **Global Accelerator → NLB (per region)**
+
+ALB itself does not provide country-optimized routing. Use Route 53 geolocation or latency-based routing combined with CloudFront for per-country optimization.
+
 ## Official Documentation
 - [Elastic Load Balancing Documentation](https://docs.aws.amazon.com/elasticloadbalancing/)
 - [ALB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/)

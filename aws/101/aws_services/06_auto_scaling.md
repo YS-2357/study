@@ -257,6 +257,29 @@ After the sale, it gradually scales back to 2.
 Auto Scaling matches capacity to demand automatically, preventing both over-provisioning (wasted cost)
 and under-provisioning (poor performance or outages during traffic spikes).
 
+## Q&A
+
+### Q: Can Auto Scaling alone prevent all outages?
+
+No. Auto Scaling alone is insufficient. It should be combined with:
+
+- **CloudWatch**: Metric monitoring and scaling trigger conditions
+- **ELB**: Traffic distribution + health checks to remove unhealthy instances
+- **Multi-AZ deployment**: Survive single-AZ failures
+- **Predictive Scaling**: ML-based traffic pattern prediction for proactive scaling
+
+Limitations of Auto Scaling:
+- Instance launch takes several minutes — sudden traffic spikes may cause lag
+- Application-level failures (DB bottlenecks, code bugs) are not addressed
+- Poorly configured scaling policies can cause over- or under-scaling
+
+### Q: Can Launch Templates configure public IP assignment?
+
+Yes. In the Launch Template's network interface settings, use the `AssociatePublicIpAddress` option.
+
+- **Options**: Enable / Disable / Follow subnet setting
+- **Security best practice**: Disable public IPs for Auto Scaling instances. Use private subnets with NAT Gateway or access through an ELB instead.
+
 ## Official Documentation
 - [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
 - [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)

@@ -31,3 +31,6 @@ AWS 101 service notes. See [00_overview.md](00_overview.md) for study order.
 - `25_aws_data_pipeline.md`: AWS Data Pipeline.
 - `26_aws_fargate.md`: AWS Fargate.
 - `27_pop.md`: Points of Presence.
+- `28_cloud_computing_billing.md`: Cloud Computing Billing.
+- `29_aws_marketplace.md`: AWS Marketplace.
+- `30_aws_support_plans.md`: AWS Support Plans.

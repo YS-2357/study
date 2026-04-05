@@ -666,6 +666,90 @@ and SSH from the office IP only, and use a user data script to install and start
 EC2 is the most fundamental compute service on AWS — understanding instance types, pricing models,
 and security configuration is essential for nearly every AWS workload.
 
+## Q&A
+
+### Q: Which instance types are best for AI inference and training?
+
+AWS offers dedicated EC2 instance families for AI/ML workloads:
+
+| Family | Chip | Use Case |
+|--------|------|----------|
+| P series (P4d, P5) | NVIDIA A100/H100 GPU | Large-scale deep learning training |
+| Inf series (Inf2) | AWS Inferentia2 | Inference — best cost-performance ratio |
+| DL series (DL1, DL2q) | Gaudi/Qualcomm | Deep learning training |
+| G series (G5, G6) | NVIDIA GPU | Graphics rendering + ML inference |
+| Trn series (Trn1) | AWS Trainium | Training — cost savings vs P series |
+
+AWS custom chips (Inferentia, Trainium) reduce cost but require framework compatibility checks. NVIDIA GPUs offer broader compatibility.
+
+### Q: Do burstable instances charge extra when credits run out?
+
+T3, T3a, and T4g instances default to **Unlimited mode** (T2 defaults to Standard).
+
+- **Standard mode**: CPU is capped at baseline when credits are exhausted. No extra charge.
+- **Unlimited mode (T3/T3a/T4g default)**: Bursting continues after credits run out, and **surplus credits are charged per vCPU-hour**.
+
+To avoid surprise charges on T3/T3a/T4g, explicitly switch to Standard mode. T2 defaults to Standard, so no extra charge occurs without configuration.
+
+> **Tip:** Check your instance's credit mode in the EC2 console under Credit Specification.
+
+### Q: When should you use M-series (e.g., M5) instances?
+
+M-series (M5, M6i, M7i) are general-purpose instances with balanced vCPU and memory.
+
+- **Best for**: Web/app servers, small-to-mid databases, dev/test environments, enterprise applications
+- **Dev environment recommendation**:
+
+| Scenario | Recommended | Reason |
+|----------|-------------|--------|
+| Intermittent use (dev/test) | T3, T3a | Burstable, cost-effective when CPU usage is low |
+| Sustained CPU use | M6i, M7i | Stable performance, balanced vCPU/memory |
+| Cost-first | T3a (AMD) | ~10% cheaper than T3 |
+
+Changing instance type requires stopping the instance (downtime occurs). Live resizing is not supported.
+
+### Q: Can you use previous-generation instance types?
+
+Yes. Previous-generation instances remain available as long as the region supports them.
+
+- Latest generations offer up to 40% better price-performance and enhanced security features (Nitro System)
+- Some older instances lack EBS optimization or Nitro support
+- Switching generations requires an instance stop (downtime)
+
+### Q: How much notice do you get before a Spot instance is interrupted?
+
+AWS provides a **2-minute interruption notice** before reclaiming a Spot instance.
+
+- **Delivery**: EC2 instance metadata + Amazon EventBridge event
+- **Recommended polling**: Every 5 seconds on the metadata endpoint
+- **Hibernation**: The 2-minute notice is sent for all interruption behaviors including hibernation. Hibernation transitions to a sleep state instead of termination.
+- **Rebalance Recommendation**: An earlier warning signal that arrives before the interruption notice, giving more preparation time
+
+The 2-minute window is fixed and cannot be extended. Mitigation strategies:
+1. Auto Scaling with mixed instance policies (auto-replace with On-Demand)
+2. EventBridge + Lambda for automated job save/migration
+3. Periodic checkpointing to external storage
+4. Spot Fleet across multiple instance types/AZs
+
+**Data preservation on Spot termination:**
+- Instance store data is lost
+- EBS: Set `DeleteOnTermination=false` to keep volumes
+- EFS: Shared file storage persists across instance replacements
+- S3: Use for checkpoint data
+
+### Q: What is the difference between Reserved Instances and Savings Plans?
+
+Both offer 1-year or 3-year commitments with up to 72% discount, but differ in **flexibility**.
+
+| Attribute | Standard RI | Convertible RI | EC2 Instance SP | Compute SP |
+|-----------|-------------|----------------|-----------------|------------|
+| Max discount | 72% | 66% | 72% | 66% |
+| Instance change | No | Exchange for equal or greater value | Free within family | Fully flexible |
+| Region change | No | Yes | No | Yes |
+| Services covered | EC2 only | EC2 only | EC2 only | EC2 + Lambda + Fargate |
+
+AWS recommends Savings Plans for new commitments, though RI has not been officially deprecated.
+
 ## Official Documentation
 - [What is Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 

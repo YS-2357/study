@@ -575,6 +575,60 @@ The entire flow runs without any servers to manage and costs fractions of a cent
 Lambda eliminates server management for event-driven workloads.
 It scales from zero to thousands of concurrent executions automatically, making it ideal for unpredictable or bursty traffic.
 
+## Q&A
+
+### Q: Can Lambda run languages not natively supported?
+
+Yes. Lambda supports **Custom Runtimes** beyond its native languages (Python, Node.js, Java, C#, Go, Ruby, PowerShell).
+
+- **Custom Runtime**: Implement the Lambda Runtime API with a `bootstrap` executable. Any language works (Rust, C++, PHP, COBOL, etc.)
+- **Container Image**: Package any runtime as a container image and deploy to Lambda
+- **Lambda Layers**: Bundle runtime binaries as a Layer for reuse across functions
+
+Custom runtimes offer language freedom but require you to maintain the runtime yourself, and cold starts may increase.
+
+### Q: How is CPU allocated in Lambda?
+
+Lambda does not allow direct CPU configuration. **CPU is allocated proportionally to memory**.
+
+- **Memory range**: 128 MB to 10,240 MB (1 MB increments)
+- **CPU proportional allocation**:
+  - 1,769 MB → 1 vCPU equivalent
+  - 10,240 MB → ~6 vCPUs
+
+You cannot increase CPU without also increasing memory, which may raise costs.
+
+### Q: Is the 1,000 concurrent execution limit per account or per function?
+
+Per **account, per region**. All Lambda functions in the account share this pool.
+
+- **Default limit**: 1,000 concurrent executions per account per region
+- **New accounts**: May have a lower initial limit
+- **Increase**: Request via AWS Service Quotas (no additional cost)
+- **Reserved Concurrency**: Guarantee a portion of the pool for a specific function (free)
+- **Provisioned Concurrency**: Pre-warm execution environments to eliminate cold starts (additional cost)
+
+### Q: Can you migrate EC2 workloads to Lambda?
+
+Yes, but Lambda has constraints to check first:
+
+- **Max execution time**: 900 seconds (15 minutes)
+- **Max memory**: 10,240 MB (~10 GB)
+- **Package size**: 250 MB uncompressed
+- **Temp storage**: Up to 10 GB
+
+**Good candidates**: API backends, event processing, batch jobs under 15 min, scheduled tasks
+**Poor candidates**: Long-running processes, stateful apps, high-performance computing
+
+Alternative serverless options for heavier workloads:
+
+| Service | Characteristics | Best For |
+|---------|----------------|----------|
+| Lambda | Event-driven, max 15 min | APIs, event processing, lightweight batch |
+| [Fargate](26_aws_fargate.md) (ECS/EKS) | Container-based serverless | Long-running, microservices, complex apps |
+| App Runner | Auto-deploy from container/source | Web apps, API services |
+| Step Functions | Workflow orchestration | Complex business logic, long workflows |
+
 ## Official Documentation
 - [What is AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 

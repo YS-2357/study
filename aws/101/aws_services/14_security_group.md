@@ -290,6 +290,24 @@ This SG-to-SG reference automatically adapts when web server instances are added
 Security groups are the primary network access control for every resource with an ENI.
 Properly configured SG rules enforce least-privilege access and are easier to manage than IP-based firewall rules.
 
+## Q&A
+
+### Q: Which is evaluated first — Security Groups or NACLs?
+
+For inbound traffic, **NACL is evaluated first, then Security Group**.
+
+**Traffic flow order:**
+1. Inbound: Internet → VPC → **NACL (subnet level)** → **SG (instance level)** → EC2
+2. Outbound: EC2 → **SG** → **NACL** → Internet
+
+| Attribute | Security Group (SG) | Network ACL (NACL) |
+|-----------|---------------------|---------------------|
+| Level | Instance (ENI) | Subnet |
+| State | **Stateful** (return traffic auto-allowed) | **Stateless** (separate inbound/outbound rules needed) |
+| Rule type | Allow only | Allow + **Deny** |
+| Evaluation | All rules evaluated, then allow/deny decided | **Evaluated in order by rule number**, first match applies |
+| Default | All outbound allowed, inbound denied | All traffic allowed |
+
 ## Official Documentation
 - [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
 

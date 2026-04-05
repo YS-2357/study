@@ -45,6 +45,11 @@ AWS service notes organized by category. Each note covers what the service is, h
 26. [AWS Shield](17_aws_shield.md) — DDoS protection.
 27. [AWS WAF](18_aws_waf.md) — Web application firewall.
 
+### General
+28. [Cloud Computing Billing](28_cloud_computing_billing.md) — Billing behavior when services are off.
+29. [AWS Marketplace](29_aws_marketplace.md) — Buying and selling software on AWS.
+30. [AWS Support Plans](30_aws_support_plans.md) — Support tiers and response times.
+
 ## Cross-references
 
 - Networking concepts → [Networking](../../../networking/00_overview.md)

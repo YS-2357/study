@@ -293,6 +293,60 @@ Block Public Access is on; an IAM role grants the application `s3:PutObject` and
 S3 is the default storage layer for almost every AWS architecture — backups, static assets, data lakes, and application data.
 Understanding storage classes, lifecycle policies, and access controls is essential for cost management and security.
 
+## Q&A
+
+### Q: What is the difference between object, block, and file storage?
+
+| Attribute | Object (S3) | Block ([EBS](20_amazon_ebs.md)) | File ([EFS](22_amazon_efs.md)) |
+|-----------|-------------|-------------|------------|
+| Structure | Flat, key-value with metadata | Fixed-size blocks, requires filesystem format | Hierarchical directory/file (NFS) |
+| Access | HTTP/HTTPS API (REST) | Mounted to EC2 (device level) | Mounted by multiple EC2s (NFS v4) |
+| Modification | Overwrite entire object | Partial block-level edits | File-level edits |
+| Best for | Static files, backups, logs, media | Databases, OS boot volumes, transactions | Shared filesystems, CMS, home dirs |
+| Durability | 99.999999999% (11 9s) | 99.8–99.9% (AZ replication) | 99.999999999% (Multi-AZ) |
+
+### Q: What are S3 durability and availability?
+
+- **Durability**: Probability of not losing data. S3 Standard is 99.999999999% (11 9s) — storing 10 million objects means losing 1 object every 10,000 years
+- **Availability**: Probability of accessing data. S3 Standard is 99.99% (~52 minutes downtime/year)
+
+| Storage Class | Durability | Availability | AZs |
+|---------------|------------|--------------|-----|
+| Standard | 11 9s | 99.99% | ≥3 |
+| Standard-IA | 11 9s | 99.9% | ≥3 |
+| One Zone-IA | 11 9s | 99.5% | 1 |
+| Glacier Instant | 11 9s | 99.9% | ≥3 |
+| Glacier Deep Archive | 11 9s | 99.99% | ≥3 |
+
+Durability is identical across all classes (11 9s). Availability varies by class.
+
+### Q: Does One Zone-IA require placing other infrastructure in the same AZ?
+
+No. S3 is a regional service, so One Zone-IA is accessible from any AZ.
+
+- If ultra-low latency is the goal, **S3 Express One Zone** is more appropriate — it provides single-digit millisecond latency within a single AZ. Place compute resources in the same AZ for optimal performance.
+- One Zone-IA is for reproducible or non-critical data where availability is less important. It costs ~20% less than Standard-IA.
+
+### Q: Can you move objects from Deep Archive back to Standard?
+
+Yes, but it requires a two-step process (not a direct class change):
+
+1. **Restore**: Create a temporary copy from Deep Archive (Standard restore: ≤12 hours, Bulk: ≤48 hours)
+2. **Copy**: Copy the restored object to Standard class using S3 Copy (same key overwrite). CLI/SDK required — console does not support copying restored objects.
+
+Deep Archive costs $0.00099/GB/month but restoration takes hours and incurs restore fees.
+
+### Q: Does using lifecycle policies cost money?
+
+The policy itself is free, but **transition requests incur per-request charges**.
+
+- **Transition cost**: e.g., $0.05 per 1,000 requests when transitioning to Glacier
+- **Minimum storage duration**: Standard-IA 30 days, Glacier 90 days, Deep Archive 180 days. Deleting/transitioning earlier still charges for the full minimum period.
+- **Minimum object size**: Objects under 128 KB are billed as 128 KB when transitioned to IA/Glacier
+- **Expiration (deletion)**: Free
+
+> **Tip:** For large numbers of small objects, transition request costs may exceed storage savings.
+
 ## Official Documentation
 - [Amazon S3 Documentation](https://docs.aws.amazon.com/s3/)
 - [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
