@@ -51,11 +51,20 @@ Each domain has a `00_overview.md` as the study hub with navigation links.
 ## Content Rules
 
 - Explain a concept once, in the note where it belongs — other notes link to it instead of re-explaining.
+- On first use in a note, write the full name before the abbreviation in parentheses, then use the short form afterward. Example: `Cloud Development Kit (CDK)`.
 - Link inline where a concept is mentioned, not in a separate cross-references section.
 - Use `> **Tip:**` for practical guidance. No other callout formats.
 - No `---` horizontal rules except before the navigation footer.
 - No history sections (inventor names, creation dates).
 - Keep examples small and concrete, not abstract placeholders.
+
+## Git Push
+
+Token is in `.env` as `GITHUB_TOKEN`. Use this command to push:
+
+```bash
+set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" push origin main
+```
 
 ## README Rules
 

@@ -24,6 +24,10 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 11. [KV Cache](11_kv_cache.md) — Avoiding redundant computation during generation.
 12. [Prompt Caching](12_prompt_caching.md) — Reusing computation across API calls.
 
+### Multi-Agent Systems
+13. [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
+
+
 ## Quick Mental Model
 
 | Term | Meaning |
