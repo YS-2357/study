@@ -40,6 +40,7 @@ These instructions apply to the entire `study/` repository unless a deeper `AGEN
 - Keep examples small and concrete, not abstract placeholders.
 - Prefer editing existing Markdown notes, links, and navigation over adding tooling, scripts, or structural churn.
 - Preserve the repository's existing organization unless the task explicitly requires a reorganization.
+- Mandatory workflow before doing substantive work: read all relevant `README.md` files first, then read the meaningful files in scope, and do not create new files unless the user explicitly asks for them.
 
 ## Note Structure
 
