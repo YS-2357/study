@@ -28,6 +28,7 @@ Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and prod
 15. [Amazon S3 — Static Frontend Hosting](15_amazon_s3.md) — S3 as a private static host behind CloudFront.
 16. [Amazon CloudFront](16_amazon_cloudfront.md) — CDN in front of S3; OAC, SPA fallback, HTTPS redirect.
 17. [Amazon ECR](17_amazon_ecr.md) — Container registry for Lambda images; CDK manages it automatically.
+18. [DynamoDB Workflow Status Tracking](18_amazon_dynamodb_workflow_status_tracking.md) — Why teams store `pending` / `processing` / `done` state in DynamoDB.
 
 ## Cross-references
 

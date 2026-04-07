@@ -1,21 +1,21 @@
 # AWS Study Subtree Guide
 
-These instructions apply to the entire `aws/` subtree unless a deeper `AGENTS.md` overrides them.
+This file provides shared guidance for all notes under `aws/`.
 
 ## Scope
 
-- Use the root [AGENTS.md](../AGENTS.md) and [README.md](../README.md) as the base rules.
+- Use the root [AGENTS.md](../AGENTS.md), [CLAUDE.md](../CLAUDE.md), and [README.md](../README.md) as the base rules.
 - This file adds AWS-specific note expectations only.
 
 ## AWS Service Note Rule
 
-- For all AWS notes anywhere under `aws/`, explain the service from these four viewpoints whenever relevant:
-- 가능여부: whether a design, operation, or requirement is possible with the service
+- For AWS notes anywhere under `aws/`, explain the service or feature from these four viewpoints whenever relevant:
+- 가능여부: whether a design, operation, or requirement is possible with the service, including important limits and quotas
 - 중단/무중단: whether setup, migration, scaling, or change work causes interruption or can be done with little or no downtime
-- 장단점: the main advantages and disadvantages
+- 장단점: the main trade-offs such as cost, performance, and operational burden
 - 차이점: how it differs from nearby or commonly confused AWS services
 - For AWS Q&A-style notes, include only the viewpoints that are actually relevant. Do not force all four into every answer.
-- When a compact summary helps, format the applicable viewpoints as a table near the end of the answer.
+- When a compact summary helps, format the applicable viewpoints as a table near the end of the note or section.
 
 | Perspective | Detail |
 |-------------|--------|

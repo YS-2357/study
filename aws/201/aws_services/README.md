@@ -12,3 +12,13 @@ AWS 201 service deep-dives. See [00_overview.md](00_overview.md) for study order
 - `06_amazon_bedrock_agents.md`: Amazon Bedrock Agents.
 - `07_aws_cdk.md`: AWS CDK.
 - `08_amazon_cloudwatch.md`: Amazon CloudWatch.
+- `09_amazon_api_gateway.md`: Amazon API Gateway.
+- `10_lambda_container_images.md`: Lambda container images.
+- `11_mangum.md`: Mangum.
+- `12_amazon_opensearch.md`: Amazon OpenSearch.
+- `13_aws_ssm_parameter_store.md`: AWS SSM Parameter Store.
+- `14_amazon_dynamodb_ttl.md`: DynamoDB TTL and session store.
+- `15_amazon_s3.md`: Amazon S3 static frontend hosting.
+- `16_amazon_cloudfront.md`: Amazon CloudFront.
+- `17_amazon_ecr.md`: Amazon ECR.
+- `18_amazon_dynamodb_workflow_status_tracking.md`: DynamoDB workflow status tracking.
