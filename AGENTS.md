@@ -29,7 +29,6 @@ These instructions apply to the entire `study/` repository unless a deeper `AGEN
 
 ## Core Rules
 
-- Mandatory workflow before doing substantive work: read all relevant `README.md` files first, then read the meaningful files in scope, and do not create new files unless the user explicitly asks for them.
 - `README.md` files must stay folder indexes only. Do not add study content, study order, or concept explanations to a README.
 - The nearest relevant `00_overview.md` is the study hub for its subtree. Update that overview when notes in that subtree are added, removed, renamed, or reordered.
 - Explain a concept once in the note where it belongs. In other notes, link to the existing explanation instead of duplicating it.
