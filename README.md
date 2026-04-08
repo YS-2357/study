@@ -2,6 +2,7 @@
 
 Study materials organized by domain.
 
+- [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
 - [aws/](aws/README.md) — AWS study materials grouped by level.
   - [aws/101/aws_services/](aws/101/aws_services/README.md) — AWS service notes. [Start studying →](aws/101/aws_services/00_overview.md)

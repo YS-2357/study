@@ -1,0 +1,188 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+zero_sha="0000000000000000000000000000000000000000"
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+declare -A changed_paths=()
+declare -A changed_statuses=()
+declare -A renamed_from=()
+declare -a errors=()
+
+record_change() {
+  local status="$1"
+  local path="$2"
+  changed_paths["$path"]=1
+  changed_statuses["$path"]="$status"
+}
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [[ -z "${local_sha:-}" ]] && continue
+
+  if [[ "$local_sha" == "$zero_sha" ]]; then
+    continue
+  fi
+
+  if [[ "$remote_sha" == "$zero_sha" ]]; then
+    diff_output="$(git diff-tree --no-commit-id --name-status -r "$local_sha")"
+  else
+    diff_output="$(git diff --name-status "$remote_sha" "$local_sha")"
+  fi
+
+  while IFS=$'\t' read -r status first_path second_path; do
+    [[ -z "${status:-}" ]] && continue
+
+    case "$status" in
+      R*|C*)
+        record_change "$status" "$second_path"
+        renamed_from["$second_path"]="$first_path"
+        changed_paths["$first_path"]=1
+        ;;
+      *)
+        record_change "$status" "$first_path"
+        ;;
+    esac
+  done <<< "$diff_output"
+done
+
+is_special_markdown() {
+  local path="$1"
+  local name
+  name="$(basename "$path")"
+  [[ "$name" == "README.md" || "$name" == "00_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
+}
+
+check_note_structure() {
+  local file="$1"
+  local what analogy how example why footer_rule nav_rule
+
+  what="$(grep -n '^## What It Is$' "$file" | cut -d: -f1 | head -n1 || true)"
+  analogy="$(grep -n '^## Analogy$' "$file" | cut -d: -f1 | head -n1 || true)"
+  how="$(grep -n '^## How It Works$' "$file" | cut -d: -f1 | head -n1 || true)"
+  example="$(grep -n '^## Example$' "$file" | cut -d: -f1 | head -n1 || true)"
+  why="$(grep -n '^## Why It Matters$' "$file" | cut -d: -f1 | head -n1 || true)"
+
+  if [[ -z "$what" || -z "$how" || -z "$example" || -z "$why" ]]; then
+    errors+=("$file: missing one or more required note sections (`What It Is`, `How It Works`, `Example`, `Why It Matters`).")
+    return
+  fi
+
+  if [[ -n "$analogy" ]]; then
+    if ! (( what < analogy && analogy < how && how < example && example < why )); then
+      errors+=("$file: note headings are out of order.")
+    fi
+  else
+    if ! (( what < how && how < example && example < why )); then
+      errors+=("$file: note headings are out of order.")
+    fi
+  fi
+
+  footer_rule="$(grep -n '^---$' "$file" | tail -n1 | cut -d: -f1 || true)"
+  nav_rule="$(tail -n1 "$file")"
+  if [[ -z "$footer_rule" || "$nav_rule" != *"| [Overview](00_overview.md) |"* ]]; then
+    errors+=("$file: note footer is missing or malformed.")
+  fi
+}
+
+check_readme_rules() {
+  local file="$1"
+
+  if grep -Eq '^## (What It Is|Analogy|How It Works|Example|Why It Matters)$' "$file"; then
+    errors+=("$file: README must stay an index, not a study note.")
+  fi
+
+  if grep -qx -- '---' "$file"; then
+    errors+=("$file: README must not contain a navigation footer separator.")
+  fi
+}
+
+check_security() {
+  local file="$1"
+
+  [[ -f "$file" ]] || return 0
+
+  if grep -Eq '-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----' "$file"; then
+    errors+=("$file: contains a private key block.")
+  fi
+
+  if grep -Eq '\b(ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{20,}\b' "$file"; then
+    errors+=("$file: contains a GitHub token-like value.")
+  fi
+
+  if grep -Eq '\bsk-[A-Za-z0-9]{20,}\b' "$file"; then
+    errors+=("$file: contains an OpenAI key-like value.")
+  fi
+
+  if grep -Eq '\bAKIA[0-9A-Z]{16}\b' "$file"; then
+    errors+=("$file: contains an AWS access key-like value.")
+  fi
+
+  if grep -Eq '\bxox[baprs]-[A-Za-z0-9-]{10,}\b' "$file"; then
+    errors+=("$file: contains a Slack token-like value.")
+  fi
+}
+
+require_related_docs() {
+  local dir="$1"
+  local trigger="$2"
+  local readme overview
+
+  [[ "$dir" == "." ]] && return 0
+
+  readme="$dir/README.md"
+  overview="$dir/00_overview.md"
+
+  if [[ -f "$readme" || -n "${changed_paths[$readme]:-}" ]]; then
+    if [[ -z "${changed_paths[$readme]:-}" ]]; then
+      errors+=("$trigger: changed note inventory requires updating $readme.")
+    fi
+  fi
+
+  if [[ -f "$overview" || -n "${changed_paths[$overview]:-}" ]]; then
+    if [[ -z "${changed_paths[$overview]:-}" ]]; then
+      errors+=("$trigger: changed note inventory requires updating $overview.")
+    fi
+  fi
+}
+
+for path in "${!changed_paths[@]}"; do
+  if [[ "$path" == ".env" ]]; then
+    errors+=(".env must never be tracked or pushed.")
+  fi
+
+  if [[ "$path" == *.md && -f "$path" ]]; then
+    if is_special_markdown "$path"; then
+      if [[ "$(basename "$path")" == "README.md" ]]; then
+        check_readme_rules "$path"
+      fi
+    else
+      check_note_structure "$path"
+    fi
+  fi
+
+  check_security "$path"
+done
+
+for path in "${!changed_statuses[@]}"; do
+  status="${changed_statuses[$path]}"
+
+  if [[ "$path" == *.md ]] && ! is_special_markdown "$path"; then
+    case "$status" in
+      A*|D*|R*)
+        require_related_docs "$(dirname "$path")" "$path"
+        if [[ -n "${renamed_from[$path]:-}" ]]; then
+          require_related_docs "$(dirname "${renamed_from[$path]}")" "$path"
+        fi
+        ;;
+    esac
+  fi
+done
+
+if (( ${#errors[@]} > 0 )); then
+  printf 'pre-push failed:\n' >&2
+  for error in "${errors[@]}"; do
+    printf ' - %s\n' "$error" >&2
+  done
+  exit 1
+fi
