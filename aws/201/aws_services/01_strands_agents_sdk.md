@@ -178,7 +178,7 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 
 ### 4. Local vs Production
 - Strands runs locally for development (just Python/Node.js)
-- For production: deploy to AgentCore Runtime, Lambda, Fargate, EKS, App Runner, Docker, Kubernetes, or Terraform
+- For production: deploy to AgentCore Runtime, Lambda, Fargate, EKS, App Runner, Docker, Kubernetes, or Terraform. These are deployment options, not equivalent architecture choices. If you need managed agent infrastructure rather than generic compute, prefer [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md).
 - Don't run production agents on a notebook or local machine
 
 ### 5. Model Selection
