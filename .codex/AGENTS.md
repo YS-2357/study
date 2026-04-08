@@ -1,0 +1,7 @@
+# Codex Scope
+
+These instructions apply to the `.codex/` subtree.
+
+- Codex owns `.codex/` and shared Git hook entrypoints under `.githooks/`.
+- `.claude/` is out of scope for Codex. Do not inspect, edit, move, organize, or validate Claude-owned files from Codex-managed workflows.
+- If a Codex-managed push includes `.claude/` changes, fail loudly and stop the push.
