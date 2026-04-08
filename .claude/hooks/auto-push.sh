@@ -16,7 +16,7 @@ fi
 
 git commit -m "auto: sync file changes" -q 2>/dev/null
 
-PUSH_OUTPUT=$(git \
+PUSH_OUTPUT=$(CLAUDE_AUTO_PUSH=1 git \
     -c credential.helper= \
     -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" \
     push origin main 2>&1)
