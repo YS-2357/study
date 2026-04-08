@@ -4,7 +4,7 @@ Study materials organized by domain.
 
 Agent-specific automation and skills are separated on purpose: keep Codex-owned files under `.codex/`, Claude-owned files under `.claude/`, and shared Git entrypoints under `.githooks/`.
 
-- [.claude/](.claude/README.md) — Claude-specific repo automation and helper files.
+- [.claude/](.claude/README.md) — Claude Code hooks: auto-push after every write/edit, session-end push, hook scripts.
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
