@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+zero_sha="0000000000000000000000000000000000000000"
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+refs_input="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
+declare -A study_paths=()
+
+is_study_content() {
+  local path="$1"
+
+  case "$path" in
+    .claude/*|.codex/*|.githooks/*|.kiro/*|.git/*)
+      return 1
+      ;;
+    .env|.env.*)
+      return 1
+      ;;
+    AGENTS.md|CLAUDE.md)
+      return 1
+      ;;
+    *)
+      ;;
+  esac
+
+  [[ "$path" == *.md ]]
+}
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [[ -z "${local_sha:-}" ]] && continue
+
+  if [[ "$local_sha" == "$zero_sha" ]]; then
+    continue
+  fi
+
+  if [[ "$remote_sha" == "$zero_sha" ]]; then
+    diff_output="$(git diff-tree --no-commit-id --name-status -r "$local_sha")"
+  else
+    diff_output="$(git diff --name-status "$remote_sha" "$local_sha")"
+  fi
+
+  while IFS=$'\t' read -r status first_path second_path; do
+    [[ -z "${status:-}" ]] && continue
+
+    case "$status" in
+      R*|C*)
+        if is_study_content "$first_path"; then
+          study_paths["$first_path"]=1
+        fi
+        if is_study_content "$second_path"; then
+          study_paths["$second_path"]=1
+        fi
+        ;;
+      *)
+        if is_study_content "$first_path"; then
+          study_paths["$first_path"]=1
+        fi
+        ;;
+    esac
+  done <<< "$diff_output"
+done < "$refs_input"
+
+if (( ${#study_paths[@]} == 0 )); then
+  exit 0
+fi
+
+if [[ "${STUDY_PUSH_CONTENT_ACK:-}" == "1" ]]; then
+  exit 0
+fi
+
+if [[ ! -t 1 || ! -r /dev/tty ]]; then
+  printf 'pre-push failed:\n' >&2
+  printf ' - study content changed, but this push is non-interactive.\n' >&2
+  printf ' - review the changed study files, then rerun with STUDY_PUSH_CONTENT_ACK=1.\n' >&2
+  while IFS= read -r path; do
+    printf ' - %s\n' "$path" >&2
+  done < <(printf '%s\n' "${!study_paths[@]}" | sort)
+  exit 1
+fi
+
+printf 'Study content changed in this push:\n' > /dev/tty
+while IFS= read -r path; do
+  printf ' - %s\n' "$path" > /dev/tty
+done < <(printf '%s\n' "${!study_paths[@]}" | sort)
+printf "Type 'yes' if you reviewed these files and know their contents: " > /dev/tty
+read -r response < /dev/tty
+
+if [[ "$response" != "yes" ]]; then
+  printf 'pre-push failed:\n' >&2
+  printf ' - study content acknowledgment was not confirmed.\n' >&2
+  exit 1
+fi

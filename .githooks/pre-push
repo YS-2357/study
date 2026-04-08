@@ -4,6 +4,15 @@ set -euo pipefail
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
+refs_file="$(mktemp)"
+trap 'rm -f "$refs_file"' EXIT
+cat > "$refs_file"
+export STUDY_GIT_PUSH_REFS_FILE="$refs_file"
+
+if [[ -f ".githooks/pre-push-study-content" ]]; then
+  bash ./.githooks/pre-push-study-content "$@"
+fi
+
 if [[ -f ".codex/hooks/pre-push" ]]; then
   bash ./.codex/hooks/pre-push "$@"
 fi

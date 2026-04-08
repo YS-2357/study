@@ -57,3 +57,9 @@ Every domain has a `00_overview.md` that serves as the study hub with links to a
 - READMEs list files and directories in the folder. One-line description per entry.
 - READMEs link to the domain's `00_overview.md` for study content.
 - READMEs do not contain study content, study order, or cross-references.
+
+## Push Checks
+
+- `git push` requires acknowledgment when study-content Markdown files changed.
+- The acknowledgment check ignores `.claude/`, `.codex/`, `.githooks/`, `.kiro/`, `.env`, `AGENTS.md`, and `CLAUDE.md`.
+- For non-interactive pushes, first review the changed study files and then set `STUDY_PUSH_CONTENT_ACK=1` for that push.

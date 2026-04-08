@@ -4,6 +4,7 @@ set -euo pipefail
 zero_sha="0000000000000000000000000000000000000000"
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
+refs_input="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
 
 declare -A changed_paths=()
 declare -A changed_statuses=()
@@ -44,7 +45,7 @@ while read -r local_ref local_sha remote_ref remote_sha; do
         ;;
     esac
   done <<< "$diff_output"
-done
+done < "$refs_input"
 
 is_special_markdown() {
   local path="$1"
