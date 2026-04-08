@@ -16,7 +16,3 @@ fi
 if [[ -f ".codex/hooks/pre-push" ]]; then
   bash ./.codex/hooks/pre-push "$@"
 fi
-
-if [[ -f ".claude/hooks/pre-push" ]]; then
-  bash ./.claude/hooks/pre-push "$@"
-fi

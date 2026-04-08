@@ -118,8 +118,8 @@ Each domain has a `00_overview.md` as the study hub with navigation links.
 - Before pushing, the agent must confirm that changed files follow this repo's Markdown structure, README rules, and navigation rules.
 - Before pushing study-content Markdown, the agent must review the changed study files and explicitly acknowledge that it knows their contents. Repo plumbing such as `.claude/`, `.codex/`, `.githooks/`, `.kiro/`, `.env`, `AGENTS.md`, and `CLAUDE.md` is excluded from this acknowledgment check.
 - Before pushing, the agent must check for security problems such as secrets, tokens, credentials, private keys, or unsafe command snippets that accidentally embed real sensitive values. If a security issue is found, stop and fix it before pushing.
-- Git hook entrypoints live in `.githooks/`, while agent-specific hook logic lives in `.codex/hooks/` and `.claude/hooks/`. Keep automation separated this way so Codex and Claude can evolve independently.
-- Keep agent-specific skills, helper files, and automation separated too: Codex-owned assets belong under `.codex/`, and Claude-owned assets belong under `.claude/`.
+- Codex only manages shared Git hook entrypoints in `.githooks/` and Codex-owned logic in `.codex/`.
+- `.claude/` is out of scope for Codex. Do not inspect, edit, organize, or rely on Claude-owned hooks, skills, or helper files unless the user explicitly asks for Claude-specific work.
 - The hook enforces the mechanical checks, but the agent is still responsible for deciding which related docs need updates.
 
 ## Git Push
