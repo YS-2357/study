@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ys2357/study/.claude/hooks/auto-push.sh",
+            "timeout": 45,
+            "statusMessage": "Pushing to GitHub..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ys2357/study/.claude/hooks/auto-push.sh",
+            "timeout": 45,
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
