@@ -1,57 +1,7 @@
 #!/usr/bin/env bash
-# Claude-owned pre-push: interactive study content review for manual user pushes.
-# Skipped automatically when CLAUDE_AUTO_PUSH=1 (Claude Code auto-push).
-
-# Skip for AI auto-pushes
-[[ "${CLAUDE_AUTO_PUSH:-}" == "1" ]] && exit 0
-
-zero_sha="0000000000000000000000000000000000000000"
-repo_root="$(git rev-parse --show-toplevel)"
-cd "$repo_root"
-
-study_files=()
-
-while read -r local_ref local_sha remote_ref remote_sha; do
-    [[ -z "${local_sha:-}" ]] && continue
-    [[ "$local_sha" == "$zero_sha" ]] && continue
-
-    if [[ "$remote_sha" == "$zero_sha" ]]; then
-        diff_files="$(git diff-tree --no-commit-id --name-only -r "$local_sha" 2>/dev/null || true)"
-    else
-        diff_files="$(git diff --name-only "$remote_sha" "$local_sha" 2>/dev/null || true)"
-    fi
-
-    while IFS= read -r f; do
-        [[ -z "$f" ]] && continue
-        # Exclude .claude, .codex, .kiro, .env, .githooks, and all hidden paths
-        [[ "$f" =~ ^\. ]] && continue
-        study_files+=("$f")
-    done <<< "$diff_files"
-done
-
-# Nothing study-related is changing — let it through silently
-if [[ ${#study_files[@]} -eq 0 ]]; then
-    exit 0
-fi
-
-# Show what study content is being pushed
-echo ""
-echo "┌──────────────────────────────────────────────────────┐"
-echo "│  Study files in this push:                           │"
-echo "└──────────────────────────────────────────────────────┘"
-for f in "${study_files[@]}"; do
-    printf "  ✎  %s\n" "$f"
-done
-echo ""
-
-# Prompt on the real terminal (works even when git pipes stdin)
-if [[ -e /dev/tty ]]; then
-    exec 3</dev/tty
-    read -rp "Push these? [Y/n] " answer <&3
-    exec 3>&-
-    case "${answer:-Y}" in
-        [Nn]*) echo "Push cancelled."; exit 1 ;;
-    esac
-fi
+# Claude-owned pre-push hook.
+# Shared study-content acknowledgment now lives in .githooks/pre-push-study-content.
+# Claude keeps this file so Claude-specific checks can be added later without
+# duplicating the shared confirmation flow.
 
 exit 0
