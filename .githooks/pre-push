@@ -92,8 +92,8 @@ check_readme_rules() {
     errors+=("$file: README must stay an index, not a study note.")
   fi
 
-  if grep -qx -- '---' "$file"; then
-    errors+=("$file: README must not contain a navigation footer separator.")
+  if tail -n1 "$file" | grep -Fq '| [Overview](00_overview.md) |'; then
+    errors+=("$file: README must not contain a navigation footer.")
   fi
 }
 
@@ -102,7 +102,7 @@ check_security() {
 
   [[ -f "$file" ]] || return 0
 
-  if grep -Eq '-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----' "$file"; then
+  if grep -Eq -- '-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----' "$file"; then
     errors+=("$file: contains a private key block.")
   fi
 
