@@ -1,6 +1,7 @@
 # .claude
 
-Claude-specific repo automation and local helper files.
+Claude Code automation for this repository.
 
-- `README.md`: This file.
-- `hooks/`: Claude-owned hook implementations invoked by Git hook entrypoints.
+- `settings.json` — hook configuration: PostToolUse auto-push on Write/Edit, Stop session-end push.
+- `settings.local.json` — personal permission overrides (gitignored).
+- `hooks/` — Claude-owned hook scripts invoked by `settings.json`.
