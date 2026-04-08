@@ -1,6 +1,5 @@
 # .claude/hooks
 
-Claude-specific hook implementations for this repository.
+Claude Code hook scripts for this repository.
 
-- `README.md`: This file.
-- Add Claude-only hook scripts here when you want Git hook dispatch to run them.
+- `auto-push.sh` — stages all changes, commits, and pushes to origin/main. Runs after every Write/Edit and at session end. Silent on success; surfaces a system message on failure.
