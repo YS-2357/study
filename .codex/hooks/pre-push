@@ -148,7 +148,7 @@ require_related_docs() {
 }
 
 for path in "${!changed_paths[@]}"; do
-  if [[ "$path" == .claude/* || "$path" == "CLAUDE.md" ]]; then
+  if [[ "${CLAUDE_AUTO_PUSH:-}" != "1" && ( "$path" == .claude/* || "$path" == "CLAUDE.md" ) ]]; then
     errors+=("$path: Claude-owned files are out of scope for Codex-managed pushes.")
     continue
   fi
