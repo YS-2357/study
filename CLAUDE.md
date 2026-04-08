@@ -120,6 +120,21 @@ Each domain has a `00_overview.md` as the study hub with navigation links.
 - Git hook entrypoints live in `.githooks/`, while agent-specific hook logic lives in `.codex/hooks/` and `.claude/hooks/`. Keep automation separated this way so Codex and Claude can evolve independently.
 - The hook enforces the mechanical checks, but the agent is still responsible for deciding which related docs need updates.
 
+## Claude Code Automation
+
+Claude Code enforces the delivery loop automatically via hooks in `.claude/settings.json`.
+
+| Hook | Trigger | Action |
+|------|---------|--------|
+| `PostToolUse` on `Write\|Edit` | Every file write or edit | Stage all, commit, and push |
+| `Stop` | Session end | Final push of any remaining changes (async) |
+
+- **Success:** silent.
+- **Failure:** a system message surfaces the push error in the UI.
+- The `.githooks/pre-push` validation runs as part of every push and blocks if checks fail.
+
+Hook scripts live in `.claude/hooks/`. Do not put Codex logic here; Codex uses `.codex/hooks/`.
+
 ## Git Push
 
 Token is in `.env` as `GITHUB_TOKEN`. Use this command to push:
