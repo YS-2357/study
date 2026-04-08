@@ -2,6 +2,8 @@
 
 Study materials organized by domain.
 
+Agent-specific automation and skills are separated on purpose: keep Codex-owned files under `.codex/`, Claude-owned files under `.claude/`, and shared Git entrypoints under `.githooks/`.
+
 - [.claude/](.claude/README.md) — Claude-specific repo automation and helper files.
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
