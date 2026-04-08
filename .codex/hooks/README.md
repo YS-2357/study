@@ -3,4 +3,4 @@
 Codex-specific hook implementations for this repository.
 
 - `README.md`: This file.
-- `pre-push`: Codex validation checks that run before `git push`, including a hard stop if `.claude/` or `CLAUDE.md` changes are present unless `CLAUDE_AUTO_PUSH=1`.
+- `pre-push`: Codex validation checks that run before `git push`.

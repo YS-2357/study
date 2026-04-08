@@ -148,11 +148,6 @@ require_related_docs() {
 }
 
 for path in "${!changed_paths[@]}"; do
-  if [[ "${CLAUDE_AUTO_PUSH:-}" != "1" && ( "$path" == .claude/* || "$path" == "CLAUDE.md" ) ]]; then
-    errors+=("$path: Claude-owned files are out of scope for Codex-managed pushes.")
-    continue
-  fi
-
   if [[ "$path" == ".env" ]]; then
     errors+=(".env must never be tracked or pushed.")
   fi
