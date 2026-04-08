@@ -148,8 +148,8 @@ require_related_docs() {
 }
 
 for path in "${!changed_paths[@]}"; do
-  if [[ "$path" == .claude/* ]]; then
-    errors+=("$path: .claude/ is Claude-owned and out of scope for Codex-managed pushes.")
+  if [[ "$path" == .claude/* || "$path" == "CLAUDE.md" ]]; then
+    errors+=("$path: Claude-owned files are out of scope for Codex-managed pushes.")
     continue
   fi
 
