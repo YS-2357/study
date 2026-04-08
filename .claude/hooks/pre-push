@@ -1,7 +1,120 @@
 #!/usr/bin/env bash
-# Claude-owned pre-push hook.
-# Shared study-content acknowledgment now lives in .githooks/pre-push-study-content.
-# Claude keeps this file so Claude-specific checks can be added later without
-# duplicating the shared confirmation flow.
+# Claude-owned pre-push: multiple-choice content quiz for manual user pushes.
+# One attempt only — wrong answer cancels the push immediately, no retries.
+# Skipped automatically when CLAUDE_AUTO_PUSH=1 (Claude Code auto-push).
 
+[[ "${CLAUDE_AUTO_PUSH:-}" == "1" ]] && exit 0
+
+zero_sha="0000000000000000000000000000000000000000"
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+# ── Collect changed study files ───────────────────────────────────────────────
+study_files=()
+refs_src="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+    [[ -z "${local_sha:-}" || "$local_sha" == "$zero_sha" ]] && continue
+
+    if [[ "$remote_sha" == "$zero_sha" ]]; then
+        diff="$(git diff-tree --no-commit-id --name-only -r "$local_sha" 2>/dev/null || true)"
+    else
+        diff="$(git diff --name-only "$remote_sha" "$local_sha" 2>/dev/null || true)"
+    fi
+
+    while IFS= read -r f; do
+        [[ -z "$f" || ! -f "$f" ]] && continue
+        [[ "$f" =~ ^\. ]] && continue                          # skip .claude .codex .env etc.
+        [[ "$f" == "CLAUDE.md" || "$f" == "AGENTS.md" ]] && continue
+        [[ "$f" == *.md ]] || continue
+        study_files+=("$f")
+    done <<< "$diff"
+done < "$refs_src"
+
+[[ ${#study_files[@]} -eq 0 ]] && exit 0
+
+# ── List what's being pushed ──────────────────────────────────────────────────
+printf '\nStudy files in this push:\n' > /dev/tty
+for f in "${study_files[@]}"; do
+    printf '  ✎  %s\n' "$f" > /dev/tty
+done
+printf '\n' > /dev/tty
+
+# ── Pick one file at random to quiz about ────────────────────────────────────
+quiz_file="${study_files[$((RANDOM % ${#study_files[@]}))]}"
+
+get_definition() {
+    awk '/^## What It Is/{f=1;next} f&&/^##/{exit} f&&NF{print;exit}' "$1" 2>/dev/null \
+        | sed 's/^[[:space:]]*//' | cut -c1-90
+}
+
+correct="$(get_definition "$quiz_file")"
+
+# Fallback to the note title if no "What It Is" section found
+if [[ -z "$correct" ]]; then
+    correct="$(grep '^# ' "$quiz_file" | head -1 | sed 's/^# //' | cut -c1-90)"
+fi
+
+# If still empty, fall back to plain yes/no
+if [[ -z "$correct" ]]; then
+    read -rp "Push these? [Y/n] " ans < /dev/tty
+    case "${ans:-Y}" in [Nn]*) printf 'Push cancelled.\n' > /dev/tty; exit 1;; esac
+    exit 0
+fi
+
+# ── Build wrong answers from other study notes ────────────────────────────────
+wrong_pool=()
+while IFS= read -r note; do
+    [[ "$note" == "./$quiz_file" || "$note" == "$quiz_file" ]] && continue
+    def="$(get_definition "$note")"
+    [[ -n "$def" && "$def" != "$correct" ]] && wrong_pool+=("$def")
+done < <(find . -name "*.md" \
+    ! -path "./.git/*" ! -path "./.claude/*" ! -path "./.codex/*" \
+    ! -name "README.md" ! -name "00_overview.md" \
+    ! -name "CLAUDE.md" ! -name "AGENTS.md" 2>/dev/null)
+
+# Not enough notes for a proper quiz — fall back to yes/no
+if [[ ${#wrong_pool[@]} -lt 3 ]]; then
+    read -rp "Push these? [Y/n] " ans < /dev/tty
+    case "${ans:-Y}" in [Nn]*) printf 'Push cancelled.\n' > /dev/tty; exit 1;; esac
+    exit 0
+fi
+
+# ── Shuffle: 1 correct + 3 random wrong answers ───────────────────────────────
+# Shuffle wrong_pool (Fisher-Yates), pick first 3
+for ((i = ${#wrong_pool[@]} - 1; i > 0; i--)); do
+    j=$((RANDOM % (i + 1)))
+    tmp="${wrong_pool[$i]}"; wrong_pool[$i]="${wrong_pool[$j]}"; wrong_pool[$j]="$tmp"
+done
+
+options=("$correct" "${wrong_pool[@]:0:3}")
+
+# Shuffle options
+for ((i = ${#options[@]} - 1; i > 0; i--)); do
+    j=$((RANDOM % (i + 1)))
+    tmp="${options[$i]}"; options[$i]="${options[$j]}"; options[$j]="$tmp"
+done
+
+# Locate the correct answer's number
+correct_num=0
+for i in "${!options[@]}"; do
+    [[ "${options[$i]}" == "$correct" ]] && { correct_num=$((i + 1)); break; }
+done
+
+# ── Show quiz ─────────────────────────────────────────────────────────────────
+quiz_name="$(basename "$quiz_file" .md)"
+printf 'What does "%s" say in its "What It Is" section?\n\n' "$quiz_name" > /dev/tty
+for i in "${!options[@]}"; do
+    printf '  %d. %s\n' $((i + 1)) "${options[$i]}" > /dev/tty
+done
+printf '\n' > /dev/tty
+
+read -rp "Answer (1-${#options[@]}): " answer < /dev/tty
+
+if [[ "$answer" != "$correct_num" ]]; then
+    printf '\nWrong. Push cancelled — read "%s" before pushing.\n' "$quiz_name" > /dev/tty
+    exit 1
+fi
+
+printf '\nCorrect.\n' > /dev/tty
 exit 0
