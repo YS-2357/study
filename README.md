@@ -2,6 +2,8 @@
 
 Study materials organized by domain.
 
+- [.claude/](.claude/README.md) — Claude-specific repo automation and helper files.
+- [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
 - [aws/](aws/README.md) — AWS study materials grouped by level.

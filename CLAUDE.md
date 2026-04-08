@@ -117,7 +117,8 @@ Each domain has a `00_overview.md` as the study hub with navigation links.
 - Relevant docs usually include the nearest `00_overview.md`, the folder `README.md`, navigation footers, and any note links affected by the change.
 - Before pushing, the agent must confirm that changed files follow this repo's Markdown structure, README rules, and navigation rules.
 - Before pushing, the agent must check for security problems such as secrets, tokens, credentials, private keys, or unsafe command snippets that accidentally embed real sensitive values. If a security issue is found, stop and fix it before pushing.
-- The repo's `.githooks/pre-push` hook enforces the mechanical checks, but the agent is still responsible for deciding which related docs need updates.
+- Git hook entrypoints live in `.githooks/`, while agent-specific hook logic lives in `.codex/hooks/` and `.claude/hooks/`. Keep automation separated this way so Codex and Claude can evolve independently.
+- The hook enforces the mechanical checks, but the agent is still responsible for deciding which related docs need updates.
 
 ## Git Push
 
