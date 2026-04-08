@@ -9,10 +9,22 @@ trap 'rm -f "$refs_file"' EXIT
 cat > "$refs_file"
 export STUDY_GIT_PUSH_REFS_FILE="$refs_file"
 
+# Claude Code auto-push: no interactive review needed
+if [[ "${CLAUDE_AUTO_PUSH:-}" == "1" ]]; then
+    export STUDY_PUSH_CONTENT_ACK=1
+# Interactive human push with Claude hook present: quiz handles the review
+elif [[ -f ".claude/hooks/pre-push" && -t 1 ]]; then
+    export STUDY_PUSH_CONTENT_ACK=1
+fi
+
 if [[ -f ".githooks/pre-push-study-content" ]]; then
   bash ./.githooks/pre-push-study-content "$@"
 fi
 
 if [[ -f ".codex/hooks/pre-push" ]]; then
   bash ./.codex/hooks/pre-push "$@"
+fi
+
+if [[ -f ".claude/hooks/pre-push" ]]; then
+  bash ./.claude/hooks/pre-push "$@"
 fi
