@@ -34,6 +34,27 @@ response = agent("What is the population of Tokyo divided by the area in km²?")
 User request → Model reasons → Tool call needed? → Execute tool → Feed result back → Repeat until done → Final response
 ```
 
+## How It Works
+You define the agent's model, prompt, and tools in code. At runtime, the model decides whether to answer directly or call a tool, then continues iterating until it has enough information to produce a final response.
+
+## Example
+```python
+from strands import Agent
+from strands.models.bedrock import BedrockModel
+from strands_tools import calculator
+
+agent = Agent(
+    model=BedrockModel(model_id="anthropic.claude-sonnet-4-20250514-v1:0"),
+    system_prompt="You are a careful math tutor.",
+    tools=[calculator]
+)
+
+agent("What is 144 divided by 12?")
+```
+
+## Why It Matters
+Strands gives you full code-level control over agent behavior without forcing you into a console-first builder. That makes it the right layer for custom orchestration, while deployment choices such as [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) or Lambda remain separate infrastructure decisions.
+
 ## Where It Fits in the AWS Agent Stack
 
 | Layer | Service | What it does |
@@ -187,4 +208,4 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Smaller models may struggle with multi-step reasoning
 
 ---
-[Overview](00_overview.md) | Next: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) →
+← Previous: [Overview](00_overview.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) →

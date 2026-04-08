@@ -65,7 +65,7 @@ check_note_structure() {
   why="$(grep -n '^## Why It Matters$' "$file" | cut -d: -f1 | head -n1 || true)"
 
   if [[ -z "$what" || -z "$how" || -z "$example" || -z "$why" ]]; then
-    errors+=("$file: missing one or more required note sections (`What It Is`, `How It Works`, `Example`, `Why It Matters`).")
+    errors+=("$file: missing one or more required note sections (What It Is, How It Works, Example, Why It Matters).")
     return
   fi
 

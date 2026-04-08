@@ -5,6 +5,9 @@
 
 [[ "${CLAUDE_AUTO_PUSH:-}" == "1" ]] && exit 0
 
+# Skip if no interactive terminal — non-interactive callers (Codex dry-run, CI, pipes) pass through
+{ true < /dev/tty; } 2>/dev/null || exit 0
+
 zero_sha="0000000000000000000000000000000000000000"
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"

@@ -27,6 +27,24 @@ Production-ready agent at scale
 
 **Framework-agnostic:** AgentCore doesn't care what framework you used to build the agent. It works with any open-source framework including CrewAI, LangGraph, LlamaIndex, Google ADK, OpenAI Agents SDK, and Strands Agents, and with any foundation model.
 
+## How It Works
+You build the agent logic in your framework of choice, then deploy that code into AgentCore Runtime. AgentCore adds the managed runtime and optional services around it, such as Memory, Gateway, Policy, Identity, Observability, and Evaluations.
+
+## Example
+```bash
+# Local development
+agentcore dev
+
+# Deploy the agent runtime
+agentcore deploy
+
+# Invoke the deployed agent
+agentcore invoke --runtime MyAgent "Summarize today's incidents"
+```
+
+## Why It Matters
+AgentCore is the layer that turns custom agent code into production infrastructure. That is why replacing it with Lambda changes the architecture: Lambda is generic compute, while AgentCore is managed agent operations with agent-native services around the runtime.
+
 ### Where AgentCore Fits
 
 | Layer | What | Example |
