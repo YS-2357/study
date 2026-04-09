@@ -82,4 +82,4 @@ Without Mangum, you would rewrite your entire FastAPI app as raw Lambda handlers
 > **Tip:** The `handler` name in `main.py` must match the CMD in the Dockerfile exactly. `CMD ["main.handler"]` means: file `main.py`, object `handler`.
 
 ---
-← Previous: [Lambda Container Images](10_lambda_container_images.md) | [Overview](00_overview.md) | Next: [Amazon OpenSearch](12_amazon_opensearch.md) →
+← Previous: [Lambda Container Images](11_lambda_container_images.md) | [Overview](00_overview.md) | Next: [Amazon OpenSearch](13_amazon_opensearch.md) →

@@ -10,18 +10,18 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 3. [AGENTS.md](03_agents_md.md) — Repo-level instructions for the agent.
 
 ### Working Components
-4. [Tools](04_tools.md) — Capabilities the agent can call.
+4. [Tools](04_tools.md) — Capabilities the agent can call; see [Interfaces](../computing/07_interfaces.md) for API and protocol context.
 5. [Skills](05_skills.md) — Reusable instruction bundles for specialized tasks.
 6. [Plugins](06_plugins.md) — Platform capability packs (GitHub, Gmail, etc.).
 
 ### Protocol and Automation
-7. [MCP](07_mcp.md) — The protocol layer behind external tool integrations.
+7. [MCP](07_mcp.md) — The protocol layer behind external tool integrations; see [Interfaces](../computing/07_interfaces.md).
 8. [Profiles](09_profiles.md) — Named runtime modes (safe, balanced, permissive).
 9. [Hooks](08_hooks.md) — Event-triggered automation.
 
 ### LLM Internals
-10. [Attention (Q, K, V)](10_attention.md) — How tokens decide which other tokens matter.
-11. [KV Cache](11_kv_cache.md) — Avoiding redundant computation during generation.
+10. [Attention (Q, K, V)](10_attention.md) — How tokens decide which other tokens matter; see [Caching](../computing/06_caching.md) for the general caching concept.
+11. [KV Cache](11_kv_cache.md) — Avoiding redundant computation during generation; see [Caching](../computing/06_caching.md).
 12. [Prompt Caching](12_prompt_caching.md) — Reusing computation across API calls.
 
 ### Multi-Agent Systems
@@ -42,7 +42,3 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 | Hooks | Automatic side effects |
 | Profiles | Named runtime modes |
 
-## Cross-references
-
-- Attention, KV Cache → [Caching](../computing/06_caching.md) for general caching concepts
-- Tools, MCP → [Interfaces](../computing/07_interfaces.md) for API and protocol concepts

@@ -113,4 +113,4 @@ TTL is how session stores stay clean without a cleanup job. But TTL values defin
 > **Tip:** TTL must be a Unix timestamp in **seconds**. A common mistake is writing milliseconds (`time.time() * 1000`) — DynamoDB won't recognize it as expired for decades.
 
 ---
-← Previous: [AWS SSM Parameter Store](13_aws_ssm_parameter_store.md) | [Overview](00_overview.md) | Next: [Amazon S3](15_amazon_s3.md) →
+← Previous: [AWS SSM Parameter Store](14_aws_ssm_parameter_store.md) | [Overview](00_overview.md) | Next: [Amazon S3](16_amazon_s3.md) →

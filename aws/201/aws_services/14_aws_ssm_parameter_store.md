@@ -89,4 +89,4 @@ Config that changes per environment (KB IDs, table names, API endpoints) must no
 > **Tip:** If a resource is not in the CDK stack, `cdk destroy` doesn't know it exists. IaC boundary = destroy boundary. No exceptions.
 
 ---
-← Previous: [Amazon OpenSearch](12_amazon_opensearch.md) | [Overview](00_overview.md) | Next: [DynamoDB TTL and Session Store](14_amazon_dynamodb_ttl.md) →
+← Previous: [Amazon OpenSearch](13_amazon_opensearch.md) | [Overview](00_overview.md) | Next: [DynamoDB TTL and Session Store](15_amazon_dynamodb_ttl.md) →

@@ -57,7 +57,7 @@ If this function later grows large ML dependencies, the code can stay conceptual
 
 ## Why It Matters
 
-AWS Lambda is the compute layer that makes the rest of this subtree fit together. [Amazon API Gateway](09_amazon_api_gateway.md) gives Lambda a public HTTP entry point, [Amazon CloudWatch](08_amazon_cloudwatch.md) captures its logs and metrics, and [Lambda Container Images](10_lambda_container_images.md) handle larger dependency sets. If you understand Lambda first, the surrounding AWS 201 notes read as supporting infrastructure around one event-driven execution model.
+AWS Lambda is the compute layer that makes the rest of this subtree fit together. [Amazon API Gateway](10_amazon_api_gateway.md) gives Lambda a public HTTP entry point, [Amazon CloudWatch](08_amazon_cloudwatch.md) captures its logs and metrics, and [Lambda Container Images](11_lambda_container_images.md) handle larger dependency sets. If you understand Lambda first, the surrounding AWS 201 notes read as supporting infrastructure around one event-driven execution model.
 
 ---
-← Previous: [Amazon CloudWatch](08_amazon_cloudwatch.md) | [Overview](00_overview.md) | Next: [Amazon API Gateway](09_amazon_api_gateway.md) →
+← Previous: [Amazon CloudWatch](08_amazon_cloudwatch.md) | [Overview](00_overview.md) | Next: [Amazon API Gateway](10_amazon_api_gateway.md) →

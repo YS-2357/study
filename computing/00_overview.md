@@ -5,24 +5,17 @@ Fundamental computing concepts for understanding cloud services.
 ## Study Order
 
 ### Hardware & Infrastructure
-1. [Architecture](01_architecture.md) — CPU architectures (x86, ARM, 32-bit vs 64-bit).
-2. [Virtualization](02_virtualization.md) — Hypervisors, VMs, containers.
-3. [Storage](03_storage.md) — Block, file, object storage and performance metrics.
+1. [Architecture](01_architecture.md) — CPU architectures (x86, ARM, 32-bit vs 64-bit); applied in [EC2](../aws/101/aws_services/05_amazon_ec2.md).
+2. [Virtualization](02_virtualization.md) — Hypervisors, VMs, containers; applied in [EC2](../aws/101/aws_services/05_amazon_ec2.md).
+3. [Storage](03_storage.md) — Block, file, object storage and performance metrics; applied in [EBS](../aws/101/aws_services/20_amazon_ebs.md), [S3](../aws/101/aws_services/19_amazon_s3.md), and [EFS](../aws/101/aws_services/22_amazon_efs.md).
 4. [GPU](04_gpu.md) — GPU computing, CUDA, AWS accelerated instances.
 
 ### Workloads & Performance
-5. [Workload Types](05_workload_types.md) — General purpose, compute, memory, storage, accelerated.
-6. [Caching](06_caching.md) — Cache concepts, layers, patterns.
+5. [Workload Types](05_workload_types.md) — General purpose, compute, memory, storage, accelerated; see [EC2 instance types](../aws/101/aws_services/05_amazon_ec2.md).
+6. [Caching](06_caching.md) — Cache concepts, layers, patterns; applied in [ElastiCache](../aws/101/aws_services/13_amazon_elasticache.md) and [CloudFront](../aws/101/aws_services/21_amazon_cloudfront.md).
 
 ### Communication & Abstraction
-7. [Interfaces](07_interfaces.md) — API, CLI, GUI, ENI, programming interfaces.
-8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints.
+7. [Interfaces](07_interfaces.md) — API, CLI, GUI, ENI, programming interfaces; related to [VPC](../aws/101/aws_services/04_amazon_vpc.md) and [HTTP](../networking/05_http.md).
+8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints; related to [VPC](../aws/101/aws_services/04_amazon_vpc.md) and [HTTP](../networking/05_http.md).
 
-## Cross-references
-
-- Architecture, Virtualization → [EC2](../aws/101/aws_services/05_amazon_ec2.md)
-- Storage → [EBS](../aws/101/aws_services/20_amazon_ebs.md), [S3](../aws/101/aws_services/19_amazon_s3.md), [EFS](../aws/101/aws_services/22_amazon_efs.md)
-- Caching → [ElastiCache](../aws/101/aws_services/13_amazon_elasticache.md), [CloudFront](../aws/101/aws_services/21_amazon_cloudfront.md)
-- Interfaces, Endpoints → [VPC](../aws/101/aws_services/04_amazon_vpc.md), [HTTP](../networking/05_http.md)
-- Workload Types → [EC2 Instance Types](../aws/101/aws_services/05_amazon_ec2.md)
-- Developer workflow and note tools → [Tooling](../tooling/00_overview.md)
+See also [Tooling](../tooling/00_overview.md) for developer workflow and editor notes.

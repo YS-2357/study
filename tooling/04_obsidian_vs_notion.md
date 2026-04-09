@@ -62,4 +62,4 @@ For a "Cucumber philosophy" workflow where you write behavior notes for humans a
 > **Tip:** If you work mostly alone, start with Obsidian plus Git. If later you need shared status tracking and comments, add Notion for team workflow rather than forcing it to be your file store.
 
 ---
-← Previous: [Cucumber](03_cucumber.md) | [Overview](00_overview.md) | Next: [Tooling — Overview](00_overview.md) →
+← Previous: [Cucumber](03_cucumber.md) | [Overview](00_overview.md) | Next: [WSL Terminal and VS Code](01_wsl_terminal_and_vscode.md) →

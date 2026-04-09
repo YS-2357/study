@@ -130,4 +130,4 @@ RAG quality is determined at two points: ingestion (what goes in) and retrieval 
 > **Tip:** Index quality = answer quality. If RAG answers are wrong or vague, check `ingest.py` before debugging the model call.
 
 ---
-← Previous: [Mangum](11_mangum.md) | [Overview](00_overview.md) | Next: [AWS SSM Parameter Store](13_aws_ssm_parameter_store.md) →
+← Previous: [Mangum](12_mangum.md) | [Overview](00_overview.md) | Next: [AWS SSM Parameter Store](14_aws_ssm_parameter_store.md) →
