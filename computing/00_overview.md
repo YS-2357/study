@@ -19,6 +19,7 @@ Fundamental computing concepts for understanding cloud services.
 8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints.
 9. [WSL Terminal and VS Code Workflow](09_wsl_terminal_and_vscode.md) — Navigate folders, inspect files, and open the repo in VS Code from WSL.
 10. [Vim and Neovim](10_vim_and_neovim.md) — Terminal editors, WSL feasibility, pros/cons, and differences from VS Code and nano.
+11. [Cucumber](11_cucumber.md) — Plain-language acceptance tests and why Behavior-Driven Development can clarify ideas even in solo projects.
 
 ## Cross-references
 

@@ -14,3 +14,4 @@ General computing concepts. See [00_overview.md](00_overview.md) for study order
 - `08_endpoints.md`: API, AWS service, database, VPC endpoints.
 - `09_wsl_terminal_and_vscode.md`: WSL folder navigation, file inspection, and opening the repo in VS Code.
 - `10_vim_and_neovim.md`: Vim/Neovim concepts, WSL feasibility, tradeoffs, and comparison with other editors.
+- `11_cucumber.md`: Cucumber, Behavior-Driven Development, and plain-language acceptance tests.
