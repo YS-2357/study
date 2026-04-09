@@ -17,10 +17,6 @@ Fundamental computing concepts for understanding cloud services.
 ### Communication & Abstraction
 7. [Interfaces](07_interfaces.md) — API, CLI, GUI, ENI, programming interfaces.
 8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints.
-9. [WSL Terminal and VS Code Workflow](09_wsl_terminal_and_vscode.md) — Navigate folders, inspect files, and open the repo in VS Code from WSL.
-10. [Vim and Neovim](10_vim_and_neovim.md) — Terminal editors, WSL feasibility, pros/cons, and differences from VS Code and nano.
-11. [Cucumber](11_cucumber.md) — Plain-language acceptance tests and why Behavior-Driven Development can clarify ideas even in solo projects.
-12. [Obsidian vs Notion](12_obsidian_vs_notion.md) — File-first notes versus workspace-first collaboration for Git and AI-assisted workflows.
 
 ## Cross-references
 
@@ -29,3 +25,4 @@ Fundamental computing concepts for understanding cloud services.
 - Caching → [ElastiCache](../aws/101/aws_services/13_amazon_elasticache.md), [CloudFront](../aws/101/aws_services/21_amazon_cloudfront.md)
 - Interfaces, Endpoints → [VPC](../aws/101/aws_services/04_amazon_vpc.md), [HTTP](../networking/05_http.md)
 - Workload Types → [EC2 Instance Types](../aws/101/aws_services/05_amazon_ec2.md)
+- Developer workflow and note tools → [Tooling](../tooling/00_overview.md)

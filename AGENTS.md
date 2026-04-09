@@ -78,6 +78,7 @@ Every note ends with a navigation footer preceded by `---`:
 | `computing/` | CPU, virtualization, storage, GPU, caching, interfaces, endpoints |
 | `git/` | Git tracking, staging, daily workflow |
 | `networking/` | Protocols, addressing, OSI, DNS, HTTP |
+| `tooling/` | Developer tools, editors, note apps, and workflow methods |
 
 Each domain has a `00_overview.md` as the study hub with navigation links.
 

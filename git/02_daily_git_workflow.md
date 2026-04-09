@@ -33,7 +33,7 @@ A daily Git workflow is the repeatable command sequence you use to check what ch
 
 ### How This Connects to VS Code
 
-Use [WSL Terminal and VS Code Workflow](../computing/09_wsl_terminal_and_vscode.md) to open the repo with `code .`, edit files in VS Code, then return to WSL and run the Git commands above. The terminal commands and the VS Code file tree are acting on the same repo folder.
+Use [WSL Terminal and VS Code Workflow](../tooling/01_wsl_terminal_and_vscode.md) to open the repo with `code .`, edit files in VS Code, then return to WSL and run the Git commands above. The terminal commands and the VS Code file tree are acting on the same repo folder.
 
 ### Push with `GITHUB_TOKEN` from `.env`
 

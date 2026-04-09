@@ -67,7 +67,7 @@ Open a study note in Neovim from WSL, make one edit, and save:
 
 ```bash
 cd /home/ys2357/study
-nvim computing/10_vim_and_neovim.md
+nvim tooling/02_vim_and_neovim.md
 ```
 
 Inside Neovim:
@@ -80,7 +80,7 @@ Esc          # return to Normal mode
 :wq          # save and quit
 ```
 
-If Neovim is not installed, `vim computing/10_vim_and_neovim.md` is the same basic workflow with classic Vim.
+If Neovim is not installed, `vim tooling/02_vim_and_neovim.md` is the same basic workflow with classic Vim.
 
 ## Why It Matters
 
@@ -89,4 +89,4 @@ If you move your workflow into WSL, Vim or Neovim can become your in-terminal ed
 > **Tip:** Do not begin by building a large Neovim configuration. First confirm that basic modal editing actually improves your WSL workflow for this repo.
 
 ---
-← Previous: [WSL Terminal and VS Code Workflow](09_wsl_terminal_and_vscode.md) | [Overview](00_overview.md)
+← Previous: [WSL Terminal and VS Code Workflow](01_wsl_terminal_and_vscode.md) | [Overview](00_overview.md) | Next: [Cucumber](03_cucumber.md) →

@@ -15,6 +15,7 @@ When Codex works in this repo, `.claude/` is out of scope unless the user explic
 - [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_overview.md)
 - [git/](git/README.md) — Git concepts. [Start studying →](git/00_overview.md)
 - [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_overview.md)
+- [tooling/](tooling/README.md) — Developer tools and workflow notes. [Start studying →](tooling/00_overview.md)
 
 ## Standards
 

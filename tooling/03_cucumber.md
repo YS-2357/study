@@ -29,7 +29,7 @@ You can apply the same idea outside automated testing by writing task or feature
 
 That is also useful for [large language model (LLM)](../ai/01_agent.md)-assisted work. An LLM benefits from the same clarity humans do: explicit behavior, constraints, and edge cases give it a more precise target than a vague prompt. In practice, a Cucumber-style note can work as a structured prompt, an acceptance checklist, and a review artifact at the same time.
 
-For note-taking tools, a file-first app is usually a better fit than a workspace-first app when you want behavior notes to live in Git and be easy for AI tools to read. See [Obsidian vs Notion](12_obsidian_vs_notion.md) for the detailed comparison.
+For note-taking tools, a file-first app is usually a better fit than a workspace-first app when you want behavior notes to live in Git and be easy for AI tools to read. See [Obsidian vs Notion](04_obsidian_vs_notion.md) for the detailed comparison.
 
 ## Example
 
@@ -45,7 +45,7 @@ Feature: Password reset
 
 Writing the scenario first can reveal open questions before code is written: what happens for an unknown email, how long the token should stay valid, and whether reset requests need rate limiting. That is the practical BDD effect: the test description helps clarify the feature idea, not just verify the implementation later.
 
-The same pattern works for personal notes in [Obsidian](12_obsidian_vs_notion.md). A note such as `password-reset.md` can contain the scenarios, be linked to related implementation notes, and be versioned in Git. An LLM can then use that note as a concrete input: implement the feature, generate tests from the scenarios, or point out missing edge cases.
+The same pattern works for personal notes in [Obsidian](04_obsidian_vs_notion.md). A note such as `password-reset.md` can contain the scenarios, be linked to related implementation notes, and be versioned in Git. An LLM can then use that note as a concrete input: implement the feature, generate tests from the scenarios, or point out missing edge cases.
 
 ## Why It Matters
 
@@ -58,4 +58,4 @@ That same structure can improve AI-assisted development. If the note says exactl
 > **Tip:** Use Cucumber when the hardest part is agreeing on behavior. If the behavior is already obvious and you only need a fast technical check, a code-first test framework is usually simpler.
 
 ---
-← Previous: [Vim and Neovim](10_vim_and_neovim.md) | [Overview](00_overview.md) | Next: [Obsidian vs Notion](12_obsidian_vs_notion.md) →
+← Previous: [Vim and Neovim](02_vim_and_neovim.md) | [Overview](00_overview.md) | Next: [Obsidian vs Notion](04_obsidian_vs_notion.md) →
