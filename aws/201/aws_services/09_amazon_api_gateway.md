@@ -95,4 +95,4 @@ Lambda has no public URL by default. API Gateway gives it one. It also decouples
 > **Tip:** The API Gateway URL is the only thing the frontend needs to know. All routing, auth, and throttling stays in the gateway layer, not in Lambda code.
 
 ---
-← Previous: [Amazon CloudWatch](08_amazon_cloudwatch.md) | [Overview](00_overview.md) | Next: [Lambda Container Images](10_lambda_container_images.md) →
+← Previous: [AWS Lambda](08a_aws_lambda.md) | [Overview](00_overview.md) | Next: [Lambda Container Images](10_lambda_container_images.md) →

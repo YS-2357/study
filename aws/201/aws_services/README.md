@@ -12,6 +12,7 @@ AWS 201 service deep-dives. See [00_overview.md](00_overview.md) for study order
 - `06_amazon_bedrock_agents.md`: Amazon Bedrock Agents.
 - `07_aws_cdk.md`: AWS CDK.
 - `08_amazon_cloudwatch.md`: Amazon CloudWatch.
+- `08a_aws_lambda.md`: AWS Lambda.
 - `09_amazon_api_gateway.md`: Amazon API Gateway.
 - `10_lambda_container_images.md`: Lambda container images.
 - `11_mangum.md`: Mangum.
