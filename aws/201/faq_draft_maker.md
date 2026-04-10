@@ -2,173 +2,172 @@
 
 ## What It Is
 
-A FAQ draft maker takes a user's topic or question, retrieves relevant source documents, and generates a structured FAQ draft using a language model. The core pattern is [RAG (Retrieval-Augmented Generation)](aws_services/05_amazon_bedrock_knowledge_bases.md): retrieve first, then generate.
+A FAQ draft maker takes a user's topic or question, retrieves relevant source documents, and generates a structured FAQ draft using a language model. The AI draft is not published directly — it goes through CS (Customer Service) staff approval before it becomes live content.
+
+The core pattern is [RAG (Retrieval-Augmented Generation)](aws_services/05_amazon_bedrock_knowledge_bases.md): preprocess raw data → ingest into Knowledge Bases → retrieve on query → generate draft → human review.
 
 Prerequisites fixed: [AWS CDK](aws_services/07_aws_cdk.md), [Amazon Bedrock AgentCore](aws_services/02_amazon_bedrock_agentcore.md), [Strands SDK](aws_services/01_strands_agents_sdk.md).
 
 ## How It Works
 
-### Two pipelines — never conflate them
+### Three pipelines — never conflate them
 
 ```
-Ingestion (runs once or on schedule)
-  S3 (source docs) → Knowledge Bases (chunk → embed → index)
+1. Preprocessing (raw data → clean data)
+   Raw source (DB, CRM, files) → Lambda/Glue → cleaned docs → S3
 
-Query (runs per user request)
-  user input → Strands agent → KB retrieve → Bedrock generate → FAQ draft
+2. Ingestion (S3 → searchable index)
+   S3 (clean docs) → Knowledge Bases (chunk → embed → index)
+
+3. Query + approval (per user request)
+   user input → Strands agent → KB retrieve → Bedrock generate
+     → draft saved to RDS (status: pending)
+     → CS staff reviews → approves or rejects
+     → RDS updated (status: approved / rejected)
 ```
 
-These have different triggers, different compute, and different failure modes. Mixing them into one Lambda is the most common design mistake.
+Each pipeline has a different trigger, owner, and failure mode. Mixing any two is the most common design mistake.
+
+### Why RDS — not DynamoDB
+
+RDS is the right choice here, not DynamoDB. The reason is the approval workflow:
+
+| Requirement | DynamoDB | RDS |
+|-------------|----------|-----|
+| Store draft content and status | Yes | Yes |
+| Query all pending drafts for a CS team | Poor — no joins | Yes |
+| Audit trail: who approved what, when | Possible but awkward | Natural |
+| Relational constraints (draft → staff → action) | No | Yes |
+| Data must persist indefinitely (no TTL) | Requires extra config | Default |
+| Reporting: approval rate, avg review time | Very hard | Standard SQL |
+
+DynamoDB TTL is appropriate when data is isolated, short-lived, and looked up by a single key. This workflow is none of those things.
 
 ### Service choices and rationale
 
 | Layer | Service | Why |
 |-------|---------|-----|
-| Infrastructure as code | [CDK](aws_services/07_aws_cdk.md) | Fixed prerequisite. All resources below are CDK-managed. |
+| Infrastructure as code | [CDK](aws_services/07_aws_cdk.md) | Fixed prerequisite. All resources are CDK-managed. |
 | Agent runtime | [Bedrock AgentCore](aws_services/02_amazon_bedrock_agentcore.md) | Fixed prerequisite. Handles sessions, memory, tool execution. |
 | Agent orchestration | [Strands SDK](aws_services/01_strands_agents_sdk.md) | Fixed prerequisite. Replaces custom agent loop code. |
-| RAG retrieval | [Bedrock Knowledge Bases](aws_services/05_amazon_bedrock_knowledge_bases.md) | Managed chunking, embedding, and vector index. Eliminates custom ingestion pipeline. |
-| LLM generation | [Amazon Bedrock](aws_services/04_amazon_bedrock.md) | Native to AgentCore. Model choice depends on quality vs cost requirement. |
-| Compute | [AWS Lambda](aws_services/09_aws_lambda.md) | Stateless per request. No containers needed at this scale. |
-| API entry point | [Amazon API Gateway](aws_services/10_amazon_api_gateway.md) | One route. CDK L2 construct. |
-| Document storage | [Amazon S3](../../aws/101/aws_services/19_amazon_s3.md) | Knowledge Bases requires S3 as its data source. |
-| Monitoring | [Amazon CloudWatch](aws_services/08_amazon_cloudwatch.md) | Lambda logs, KB retrieval latency, LLM call duration. |
+| RAG retrieval | [Bedrock Knowledge Bases](aws_services/05_amazon_bedrock_knowledge_bases.md) | Managed chunking, embedding, and vector index. |
+| LLM generation | [Amazon Bedrock](aws_services/04_amazon_bedrock.md) | Native to AgentCore. Model choice depends on quality vs cost. |
+| Preprocessing compute | [AWS Lambda](aws_services/09_aws_lambda.md) or AWS Glue | Lambda for lightweight transforms. Glue for large-scale ETL. |
+| Query compute | [AWS Lambda](aws_services/09_aws_lambda.md) | Stateless per request. |
+| API entry point | [Amazon API Gateway](aws_services/10_amazon_api_gateway.md) | One route per operation. CDK L2 construct. |
+| Document storage | [Amazon S3](../../aws/101/aws_services/19_amazon_s3.md) | Raw docs and clean docs in separate prefixes. Knowledge Bases reads clean docs. |
+| Draft and approval store | [Amazon RDS](../../aws/101/aws_services/10_amazon_rds.md) | Relational workflow state, audit trail, cross-draft queries. |
+| Monitoring | [Amazon CloudWatch](aws_services/08_amazon_cloudwatch.md) | Lambda logs, KB retrieval latency, RDS query time, approval SLA alarms. |
+
+### RDS schema — what to store
+
+```
+drafts
+  draft_id        PK
+  question        text
+  draft_content   text
+  status          enum(pending, approved, rejected)
+  created_at      timestamp
+  updated_at      timestamp
+
+approvals
+  approval_id     PK
+  draft_id        FK → drafts
+  staff_id        FK → staff
+  action          enum(approved, rejected)
+  comment         text
+  acted_at        timestamp
+
+staff
+  staff_id        PK
+  name
+  email
+  role
+```
+
+This supports: "show all pending drafts", "who approved draft X", "how long did approval take", "rejection rate by staff member".
 
 ### Decisions left open — context-dependent
 
 | Decision | Options | When to choose which |
 |----------|---------|----------------------|
-| Auth | IAM vs [Cognito](../../aws/101/aws_services/15_amazon_iam.md) | Internal tool → IAM. Customer-facing → Cognito. |
-| Draft history | None vs [DynamoDB TTL](aws_services/15_amazon_dynamodb_ttl.md) | Stateless is simpler. Add DynamoDB only if users need to revisit past drafts. |
+| Auth | IAM vs [Cognito](../../aws/101/aws_services/15_amazon_iam.md) | Internal CS tool → IAM. External users → Cognito. |
+| Preprocessing compute | Lambda vs Glue | Small files and simple transforms → Lambda. Large volume or complex ETL → Glue. |
 | Bedrock model | Claude Haiku / Sonnet / Opus | Haiku for speed and cost. Sonnet or Opus if draft quality is the priority. |
-| Ingestion trigger | Manual upload vs [S3 event → EventBridge](../../aws/101/aws_services/19_amazon_s3.md) | Manual is simpler to start. Add event-driven trigger when the doc set updates frequently. |
-| Frontend | None vs [S3 + CloudFront](aws_services/16_amazon_s3.md) | API-only if the caller is another service. Add S3 + CloudFront only for a browser UI. |
+| Ingestion trigger | Manual vs S3 event → EventBridge | Manual to start. Event-driven when the doc set updates frequently. |
+| CS UI | [S3 + CloudFront](aws_services/16_amazon_s3.md) vs [EC2](../../aws/101/aws_services/05_amazon_ec2.md) | Static review UI → S3 + CloudFront. Real-time collaboration or WebSocket → EC2. |
+| RDS engine | PostgreSQL vs MySQL | PostgreSQL for richer JSON support and audit extensions. MySQL if existing team tooling requires it. |
+
+### VPC — required in production
+
+All private resources move inside a [VPC](../../aws/101/aws_services/04_amazon_vpc.md).
+
+| Resource | Subnet | Reason |
+|----------|--------|--------|
+| Lambda (preprocessing, query) | Private | No direct internet exposure |
+| RDS | Private | Never public-facing |
+| NAT Gateway | Public | Lets private Lambda reach Bedrock, SSM, Knowledge Bases |
+| API Gateway | Public | Entry point stays internet-accessible |
 
 ### Security — one concern per boundary
 
 | Boundary | What to enforce |
 |----------|----------------|
-| User → API Gateway | Auth (IAM or Cognito), rate limiting |
+| User → API Gateway | Auth (IAM or Cognito), rate limiting, [WAF](../../aws/101/aws_services/18_aws_waf.md) |
 | Lambda → Bedrock | IAM role, least privilege — no hardcoded API keys |
 | Lambda → Knowledge Bases | IAM role scoped to one KB resource |
-| Lambda → S3 | Query Lambda: read-only. Ingestion Lambda: write. Separate roles. |
-| LLM input | Validate and sanitize user query — guard against prompt injection |
-| Secrets | Store model config and KB IDs in [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md), not in env vars |
+| Lambda → S3 | Preprocessing Lambda: write to clean prefix. Query Lambda: read-only. Separate roles. |
+| Lambda → RDS | IAM authentication. Credentials in [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md). |
+| LLM input | Sanitize user query — guard against prompt injection |
+| Draft output | CS staff is the approval gate — AI output never goes live without human review |
 
 ### What the prerequisites eliminate
 
 | Custom work you do NOT need to build | Eliminated by |
 |--------------------------------------|--------------|
 | Embedding service | Knowledge Bases |
-| Vector DB management and ops | Knowledge Bases |
+| Vector DB management | Knowledge Bases |
 | Chunking logic | Knowledge Bases |
 | Agent loop and tool orchestration | Strands SDK |
 | Session and memory management | Bedrock AgentCore |
 | Manual infra provisioning | CDK |
 
-### Production-level additions
-
-The simple baseline works for an MVP or internal tool. A production deployment adds three layers: network isolation, a proper UI host, and a relational session store.
-
-#### VPC — network isolation
-
-All private resources (Lambda, RDS) move inside a [VPC](../../aws/101/aws_services/04_amazon_vpc.md). API Gateway and CloudFront remain public-facing.
-
-```
-Public subnet:   NAT Gateway (Lambda needs this to reach Bedrock)
-Private subnet:  Lambda, RDS
-```
-
-Lambda in a VPC cannot reach the internet directly — NAT Gateway is required for Bedrock API calls. This adds cost and cold-start latency. Only add VPC when compliance or network policy requires it.
-
-| Resource | Subnet | Reason |
-|----------|--------|--------|
-| Lambda | Private | No direct internet exposure |
-| RDS | Private | Never public-facing |
-| NAT Gateway | Public | Lets private Lambda reach Bedrock and SSM |
-| API Gateway | VPC Link or public | Entry point stays internet-accessible |
-
-#### UI — S3 + CloudFront vs EC2
-
-| Option | When to use |
-|--------|------------|
-| [S3 + CloudFront](aws_services/17_amazon_cloudfront.md) | Static frontend (React, plain HTML). Serverless, cheap, CDN-cached. |
-| [EC2](../../aws/101/aws_services/05_amazon_ec2.md) | Server-rendered UI, WebSocket, or persistent connection needs. More ops burden. |
-
-S3 + CloudFront is the default. Use EC2 only when the UI requires server-side rendering or persistent connections that a static host cannot support.
-
-#### Session state — DynamoDB TTL vs RDS
-
-| Option | When to use |
-|--------|------------|
-| [DynamoDB TTL](aws_services/15_amazon_dynamodb_ttl.md) | Short-lived session data. Simple key lookup. High write throughput. |
-| [Amazon RDS](../../aws/101/aws_services/10_amazon_rds.md) | Session data that needs relational queries, audit trails, or reporting across sessions. |
-
-DynamoDB TTL is sufficient when sessions are isolated and expire. RDS is warranted when you need to query across users (e.g., "show all drafts from last week"), enforce relational constraints, or integrate with an existing database.
-
-RDS in production: place in private subnet, use [IAM authentication](../../aws/101/aws_services/15_amazon_iam.md) instead of a hardcoded password, store credentials in [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md).
-
-#### Production security additions
-
-| Addition | Why |
-|----------|-----|
-| [Security Groups](../../aws/101/aws_services/14_security_group.md) on Lambda and RDS | Restrict which resources can talk to which |
-| [AWS WAF](../../aws/101/aws_services/18_aws_waf.md) on API Gateway or CloudFront | Block malformed requests, rate-limit abusers |
-| [AWS Shield](../../aws/101/aws_services/17_aws_shield.md) | DDoS protection on CloudFront (Standard is free) |
-| VPC Flow Logs → CloudWatch | Audit network traffic in the private subnet |
-
 ## Example
 
-Minimal architecture for a customer-facing FAQ draft maker:
+Production architecture:
 
 ```
-Browser
-  → CloudFront → S3 (static frontend)
-  → API Gateway → Lambda (Strands agent entry point)
-      → Bedrock AgentCore (session, memory)
-          → Knowledge Bases (retrieve top-k chunks from indexed docs)
-          → Bedrock Claude Sonnet (generate FAQ draft)
-  → Cognito (auth)
+Internet
+  → WAF → CloudFront → S3 (CS staff review UI)
+  → WAF → API Gateway → Lambda (Strands agent)
+                           → Bedrock AgentCore (session, memory)
+                               → Knowledge Bases (retrieve chunks)
+                               → Bedrock Claude Sonnet (generate draft)
+                           → RDS (save draft, status: pending)
+  → Cognito (CS staff auth)
 
-S3 (source docs)
-  → Knowledge Bases ingestion (triggered on upload)
+CS staff
+  → review UI → API Gateway → Lambda (approval handler)
+                                → RDS (update status: approved / rejected)
 
-SSM Parameter Store
-  → KB ID, model ID (read by Lambda at cold start)
+Raw data source (CRM, DB, files)
+  → Preprocessing Lambda → S3 (clean docs, separate prefix)
+  → Knowledge Bases ingestion (triggered on S3 upload)
 
-CloudWatch
-  → Lambda logs, latency alarms
+NAT Gateway → Lambda reaches Bedrock, SSM, Knowledge Bases
+SSM Parameter Store → KB ID, model ID, RDS connection string
+CloudWatch → logs, approval SLA alarms, RDS slow query alerts
 ```
 
 CDK provisions everything. No manual console changes.
 
-Production variant adds VPC, WAF, RDS, and moves Lambda into a private subnet:
-
-```
-Internet
-  → WAF → CloudFront → S3 (static UI)
-  → WAF → API Gateway → VPC Link → Lambda (private subnet)
-                                     → Bedrock AgentCore
-                                         → Knowledge Bases
-                                         → Bedrock Claude Sonnet
-                                     → RDS (private subnet, session state)
-  → Cognito (auth)
-
-NAT Gateway (public subnet)
-  → Lambda reaches Bedrock, SSM, Knowledge Bases
-
-S3 (source docs) → Knowledge Bases ingestion
-SSM Parameter Store → KB ID, model ID, RDS connection string
-CloudWatch → logs, alarms, VPC Flow Logs
-```
-
 ## Why It Matters
 
-The prerequisite stack (CDK + AgentCore + Strands + Knowledge Bases) is designed to eliminate the hard parts of RAG. The right question is not "how do I build a RAG pipeline" but "what decisions does Knowledge Bases not make for me" — and the answer is: auth, history persistence, model selection, and ingestion trigger timing.
+The missing context in the initial design was the approval workflow. Without it, DynamoDB TTL seems reasonable — sessions expire, data is isolated. With it, RDS becomes mandatory: the workflow is relational, the audit trail must persist, and CS staff need cross-draft queries.
 
-Everything else is configuration, not architecture. Start with the minimal set, measure, then add only what a real usage pattern demands.
+The preprocessing pipeline is the other addition that changes the shape: raw data from a CRM or internal DB is never clean enough to feed directly into Knowledge Bases. A preprocessing step normalizes, deduplicates, and filters before ingestion.
 
-> **Tip:** Do not add DynamoDB, EventBridge, or a frontend until you have confirmed the use case requires them. Each addition is one more IAM policy, one more failure domain, and one more thing to monitor.
+> **Tip:** When an AI system produces output that humans must approve before it takes effect, design the approval state as a first-class entity in a relational store — not a flag on a session record. The audit trail and cross-record queries will be needed.
 
 ---
 ← [AWS 201](00_overview.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
