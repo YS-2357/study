@@ -62,6 +62,7 @@ Every domain has a `00_overview.md` that serves as the study hub with links to a
 
 ## Push Checks
 
+- Working rule for agents: one file change, one git push. Any file write should be followed by the full delivery loop in the same turn when feasible.
 - `git push` requires acknowledgment when study-content Markdown files changed.
 - The acknowledgment check ignores `.claude/`, `.codex/`, `.githooks/`, `.kiro/`, `.env`, `AGENTS.md`, and `CLAUDE.md`.
 - For non-interactive pushes, first review the changed study files and then set `STUDY_PUSH_CONTENT_ACK=1` for that push.

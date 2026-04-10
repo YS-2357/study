@@ -6,6 +6,12 @@ Decomposition is the practice of dividing a system into the smallest units where
 
 ## How It Works
 
+The working rule is: **one unit = one reason to change**.
+
+In practice, that means a unit should do one coherent job, accept a clear input, produce a clear output, and change for one kind of reason only. If a unit contains presentation, validation, persistence, and permission logic together, it is carrying multiple change reasons and should be split.
+
+The philosophy behind this is to separate policy from mechanism and decisions from side effects. Business rules, UI rendering, database access, and infrastructure concerns may participate in the same feature, but they should not live in the same unit just because they are part of the same request flow.
+
 Every layer of a web application has its own natural unit boundary.
 
 ### Frontend
@@ -48,6 +54,24 @@ Every layer of a web application has its own natural unit boundary.
 | Transaction | Groups operations that must succeed or fail together |
 | Schema / Namespace | Owns one domain boundary |
 
+### Realizing It In Code
+
+To implement decomposition in code, define units around what changes together rather than around what seems related in one feature.
+
+| Code unit | One reason to change |
+|-----------|----------------------|
+| UI component | Presentation or interaction changes |
+| Validator | Input rules change |
+| Auth / permission check | Access policy changes |
+| Service / use-case function | Business decision changes |
+| Repository / query function | Storage or query behavior changes |
+| API client / gateway | External integration changes |
+| Infrastructure resource | Platform or deployment behavior changes |
+
+When writing code, a useful test is whether the unit can be described in one sentence without using "and". If the description becomes "validates input and saves data" or "renders results and checks permissions", the unit is still too large.
+
+> **Tip:** Keep orchestration thin. A handler or controller may coordinate several units, but it should not absorb their responsibilities.
+
 ## Example
 
 A user submits a text query. The request travels through one unit per concern:
@@ -68,7 +92,9 @@ Each step has one job. Changing the search logic touches only the service functi
 
 ## Why It Matters
 
-The split signal is: **one unit = one reason to change**. If fixing a search bug requires editing the same file as auth logic, the unit is too large. Decomposed units let teams change, test, and deploy each piece independently, which reduces the blast radius of any single change.
+The split signal is: **one unit = one reason to change**. If fixing a search bug requires editing the same file as auth logic, the unit is too large. If a database tuning change forces edits to business rules, the boundary is weak. If a UI redesign changes persistence code, the decomposition is poor.
+
+Well-decomposed units are easier to test, replace, and reason about because each one owns a narrow responsibility. This reduces the blast radius of change and makes the system easier to evolve without accidental coupling.
 
 ---
 ← Previous: [Endpoints](08_endpoints.md) | [Overview](00_overview.md) | Next: [Computing Basics — Overview](00_overview.md) →

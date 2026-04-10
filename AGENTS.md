@@ -114,6 +114,7 @@ Each domain has a `00_overview.md` as the study hub with navigation links.
 ## Agent Delivery Hooks
 
 - Working rule: `"실패는 요란하게, 성공은 조용하게"` ("fail loudly, succeed quietly").
+- Push rule: one file change, one git push. After any file create, edit, rename, move, or delete, the agent should treat that write as requiring its own full delivery loop in the same turn when feasible: update related docs, verify rules, commit, and push.
 - When an agent creates, fixes, renames, moves, or deletes a file, it must finish the delivery loop in the same turn when feasible: update the relevant docs, verify repo and folder rules, check security, commit, and push.
 - Relevant docs usually include the nearest `00_overview.md`, the folder `README.md`, navigation footers, and any note links affected by the change.
 - Before pushing, the agent must confirm that changed files follow this repo's Markdown structure, README rules, and navigation rules.
