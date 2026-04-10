@@ -17,5 +17,6 @@ Fundamental computing concepts for understanding cloud services.
 ### Communication & Abstraction
 7. [Interfaces](07_interfaces.md) — API, CLI, GUI, ENI, programming interfaces; related to [VPC](../aws/101/aws_services/04_amazon_vpc.md) and [HTTP](../networking/05_http.md).
 8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints; related to [VPC](../aws/101/aws_services/04_amazon_vpc.md) and [HTTP](../networking/05_http.md).
+9. [Decomposition](09_decomposition.md) — Dividing a system into smallest units across frontend, backend, infra, and database layers.
 
 See also [Tooling](../tooling/00_overview.md) for developer workflow and editor notes.
