@@ -26,6 +26,7 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 
 ### Multi-Agent Systems
 13. [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
+14. [Subagent Design](14_subagent_design.md) — When to spawn, when to divide, and how to match harness permissions to role.
 
 
 ## Quick Mental Model

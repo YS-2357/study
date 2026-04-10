@@ -17,3 +17,4 @@ AI agent and LLM concepts. See [00_overview.md](00_overview.md) for study order.
 - `11_kv_cache.md`: KV cache optimization.
 - `12_prompt_caching.md`: Prompt caching across API calls.
 - `13_multi_agent_orchestration.md`: Multi-agent orchestration and review loops.
+- `14_subagent_design.md`: When to spawn, when to divide, and harness-per-role design.
