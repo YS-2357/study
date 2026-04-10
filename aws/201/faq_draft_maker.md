@@ -215,6 +215,23 @@ The architecture is justified by three concrete requirements:
 
 > **Tip:** Store prompt instructions in SSM Parameter Store, not in code or environment variables. CS managers may need to tune tone or constraints without a code deploy. SSM makes that a configuration change, not a release.
 
+## Decomposition
+
+**One unit = one reason to change.** Applied to this system:
+
+| Unit | One reason to change |
+|------|----------------------|
+| Preprocessing pipeline | Source data format or cleaning rules change |
+| Ingestion pipeline | Embedding model or index schema changes |
+| Draft generation pipeline | Retrieval strategy or LLM prompt changes |
+| OpenSearch index | Q&A retrieval quality changes |
+| Knowledge Bases | Product info structure or chunking changes |
+| DynamoDB session | Inquiry lifecycle status rules change |
+| SSM prompt instructions | Tone, format, or answer constraints change |
+| EventBridge daily sync | Reinforcement schedule or batch logic changes |
+
+Each pipeline, store, and config unit has one job. If a change in the LLM prompt requires touching the ingestion pipeline, the boundary is wrong.
+
 ## Design Decisions
 
 A log of decisions made, why, and what was rejected.
