@@ -2,9 +2,9 @@
 
 ## What It Is
 
-Subagent design is the set of rules that govern when to spawn a separate [agent](01_agent.md), when to handle work inline, and how to divide agent responsibilities so each agent has one reason to exist.
+Subagent design is the set of rules that govern when to spawn a separate [agent](01_agent.md), when to handle work inline, which [harness](02_harness.md) component to reach for, and how to divide agent responsibilities so each agent has one reason to exist.
 
-The core philosophy mirrors [decomposition](../computing/09_decomposition.md): **one agent = one coherent job**. When an agent's scope grows to cover two unrelated concerns, it becomes a candidate to split — for the same reason a function that does two things should be divided.
+The core philosophy mirrors [decomposition](../computing/09_decomposition.md): **one unit = one reason to change** — applied to agents, it becomes **one agent = one role, one context, one failure domain**. The same rule applies to harness components: each component type has one job, and picking the wrong one creates accidental coupling.
 
 ## How It Works
 
@@ -68,6 +68,101 @@ The [harness](02_harness.md) defines what an agent can touch. When dividing agen
 
 Giving a narrow harness to each role is the enforcement mechanism for role separation. Without it, a reviewer could accidentally mutate what it is reviewing.
 
+### Harness components: when to use what
+
+Every capability available to an agent comes from one of these component types. Choosing the right one is the same decomposition question applied to the harness: **each component has one job**.
+
+#### Tool
+
+A [tool](04_tools.md) is a direct, executable capability — file read, shell command, web search, browser action.
+
+**Slogan:** use the sharpest tool for the job.
+
+| Use a tool when | Avoid when |
+|-----------------|-----------|
+| The target is known (path, symbol, URL) | The same multi-step workflow recurs — use a skill instead |
+| A single operation answers the question | You need cross-system integration — use a plugin |
+| Speed matters and context is already present | The task has no direct built-in tool — compose via MCP |
+
+Built-in tools (`Read`, `Grep`, `Glob`, `Bash`) cover most repo work. Reach for them before spawning anything.
+
+#### Skill
+
+A [skill](05_skills.md) is a reusable instruction bundle — a named playbook for a recurring workflow.
+
+**Slogan:** repeatable work gets a playbook.
+
+| Use a skill when | Avoid when |
+|-----------------|-----------|
+| The same task type recurs and benefits from fixed steps | It's a one-time task — just prompt directly |
+| Generic prompting produces noisy or inconsistent results | A tool can answer it in one call |
+| You want structured steps enforced across sessions | The workflow is simple enough to remember |
+
+#### Plugin
+
+A [plugin](06_plugins.md) is a capability bundle for an external platform — GitHub, Gmail, Google Drive, Vercel.
+
+**Slogan:** platform work = plugin.
+
+| Use a plugin when | Avoid when |
+|-----------------|-----------|
+| The agent needs to act on an outside system (PRs, issues, email) | The work stays entirely inside the local repo |
+| Multiple tools and skills for the same platform are needed | Only one tool from that platform is needed — wire it directly |
+
+#### MCP
+
+[MCP](07_mcp.md) is the protocol that wraps a non-native capability into a standard shape the harness can consume.
+
+**Slogan:** any shape, one adapter.
+
+| Use MCP when | Avoid when |
+|-------------|-----------|
+| A third-party service has an MCP server available | A built-in tool already covers the need |
+| You need to add a new external tool without writing custom integration code | The tool is internal and can be exposed as a simple shell command instead |
+| Multiple agents or harnesses need the same external capability | It's a one-off lookup — a direct API call or `curl` is simpler |
+
+MCP is infrastructure for tools, not a tool itself. Think of it as the adapter standard — you configure it once so that tools and resources from external servers become discoverable by the harness.
+
+#### Hook
+
+A [hook](08_hooks.md) is a script that runs automatically on a harness event — before push, after write, at session end.
+
+**Slogan:** fail loudly, succeed quietly.
+
+| Use a hook when | Avoid when |
+|----------------|-----------|
+| A check must run consistently without relying on agent memory | The check is one-time or specific to a single session |
+| Failure must be visible and block progress | The action is informational only — a log or notification |
+| The same enforcement applies across every agent using this repo | The logic changes frequently — keep it in a skill instead |
+
+Hooks enforce the mechanical layer. They are not a substitute for agent judgment — they catch what the agent should not need to remember.
+
+#### Permission / Profile
+
+A [profile](09_profiles.md) is a named runtime mode. Permissions are its building blocks: which paths are writable, which commands are allowed, whether network access is on.
+
+**Slogan:** least privilege per role.
+
+| Use narrow permissions when | Use broader permissions when |
+|-----------------------------|------------------------------|
+| Agent is a reviewer — read-only is enough | Agent is an implementer that must write and deploy |
+| Agent is an advisor — no commit rights needed | Agent is an orchestrator that must coordinate across systems |
+| Blast radius must be minimized before work starts | The agent's full scope is trusted and well-understood |
+
+Set permissions before the agent starts, not reactively. A harness that is too permissive from the start cannot be narrowed mid-task without losing work.
+
+#### Decision summary
+
+| I need to… | Reach for |
+|------------|-----------|
+| Read a file, search code, run a command | **Tool** (direct) |
+| Run a recurring multi-step workflow | **Skill** |
+| Act on GitHub, Gmail, or another platform | **Plugin** |
+| Add an external service the harness doesn't support natively | **MCP** |
+| Enforce a check automatically on every push or write | **Hook** |
+| Limit what an agent can touch | **Permission / Profile** |
+| Separate roles or parallelize independent work | **Subagent** |
+
 ## Example
 
 A search feature is being built and reviewed.
@@ -91,8 +186,6 @@ Orchestrator assigns TASK-001
 The reviewer's clean context is the point. It has no stake in the work passing.
 
 ## Why It Matters
-
-The slogan for agent design is the same as for code decomposition: **one unit = one reason to change** — but applied to agents, it becomes **one agent = one role, one context, one failure domain**.
 
 When agents share too much scope:
 - Context contamination makes self-review unreliable.
