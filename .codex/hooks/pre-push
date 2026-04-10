@@ -9,6 +9,7 @@ refs_input="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
 declare -A changed_paths=()
 declare -A changed_statuses=()
 declare -A renamed_from=()
+declare -a outgoing_commit_counts=()
 declare -a errors=()
 
 record_change() {
@@ -23,6 +24,16 @@ while read -r local_ref local_sha remote_ref remote_sha; do
 
   if [[ "$local_sha" == "$zero_sha" ]]; then
     continue
+  fi
+
+  if [[ "${STUDY_ALLOW_MULTI_COMMIT_PUSH:-}" != "1" ]]; then
+    if [[ "$remote_sha" == "$zero_sha" ]]; then
+      commit_count="$(git rev-list --count "$local_sha")"
+    else
+      commit_count="$(git rev-list --count "${remote_sha}..${local_sha}")"
+    fi
+
+    outgoing_commit_counts+=("${local_ref}:${commit_count}")
   fi
 
   if [[ "$remote_sha" == "$zero_sha" ]]; then
@@ -46,6 +57,17 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     esac
   done <<< "$diff_output"
 done < "$refs_input"
+
+if [[ "${STUDY_ALLOW_MULTI_COMMIT_PUSH:-}" != "1" ]]; then
+  for commit_info in "${outgoing_commit_counts[@]}"; do
+    local_ref="${commit_info%%:*}"
+    commit_count="${commit_info##*:}"
+
+    if (( commit_count > 1 )); then
+      errors+=("${local_ref}: push contains ${commit_count} outgoing commits. Repo rule is one file change, one git push, so pushes must normally contain a single new commit. Squash or push earlier. Set STUDY_ALLOW_MULTI_COMMIT_PUSH=1 only when you intentionally need an exception.")
+    fi
+  done
+fi
 
 is_special_markdown() {
   local path="$1"
