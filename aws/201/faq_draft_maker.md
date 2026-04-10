@@ -215,5 +215,102 @@ The architecture is justified by three concrete requirements:
 
 > **Tip:** Store prompt instructions in SSM Parameter Store, not in code or environment variables. CS managers may need to tune tone or constraints without a code deploy. SSM makes that a configuration change, not a release.
 
+## Design Decisions
+
+A log of decisions made, why, and what was rejected.
+
+---
+
+### D1 — Use case framing
+
+**Started as:** FAQ draft maker — generating static FAQ content.
+
+**Revised to:** CS inquiry draft assistant — generating draft answers for real incoming customer inquiries.
+
+**Why:** The customer's pain is answering hundreds of similar inquiries per day, not authoring FAQ articles. The AI drafts a response to each incoming inquiry. CS staff revise and send. Approved answers accumulate and reinforce the knowledge base daily.
+
+---
+
+### D2 — Two retrieval stores, not one
+
+**Started with:** Knowledge Bases for all RAG.
+
+**Revised to:** KB for product info, OpenSearch for Q&A pairs.
+
+**Why KB for product info:** Product documents are long. KB handles chunking and embedding automatically. Semantic retrieval is sufficient.
+
+**Why OpenSearch for Q&A pairs:** Q&A pairs are atomic — no chunking needed. Hybrid search (BM25 + kNN) catches both exact keyword matches ("return policy") and semantic matches ("how do I send something back"). KB does not support hybrid search. OpenSearch also supports daily reinforcement — new finalized answers are indexed each day.
+
+**Rejected:** Single KB for everything. Forcing Q&A pairs through KB's chunking layer breaks the unit boundary and loses hybrid search capability.
+
+---
+
+### D3 — No chunking for Q&A pairs
+
+**Decision:** Each Q&A pair is one OpenSearch document. No chunking.
+
+**Why:** A question and its answer are one retrieval unit. Chunking would split them or pad them. The retrieval quality degrades when a retrieved chunk contains half an answer.
+
+---
+
+### D4 — S3 is mandatory only for KB
+
+**Started with:** S3 for all data.
+
+**Revised to:** S3 only where required.
+
+| Data | S3 mandatory? | Why |
+|------|--------------|-----|
+| Product info | Yes | KB requires S3 as its data source |
+| Historical Q&A | No | Can come from existing DB or file export |
+| Daily reinforcement source | No | Query session store directly — no S3 middleman needed |
+
+**Rule:** store data where it is most naturally queried, not where convention points.
+
+---
+
+### D5 — Session store: DynamoDB vs RDS (open)
+
+**The question:** where to store inquiry lifecycle state (pending → in_review → done)?
+
+**DynamoDB:**
+- Pros: serverless, no ops, fast key lookup by inquiry_id, GSI for status filter, TTL for auto-cleanup, cheaper
+- Cons: no joins, hard to report across sessions (staff performance, avg handle time)
+- Right when: access pattern is "get inquiry by ID" and "list pending inquiries"
+
+**RDS:**
+- Pros: joins across inquiry → staff → revision, SQL reporting, audit trail, strong consistency
+- Cons: always-on cost, needs VPC + connection pooling for Lambda, more ops
+- Right when: customer needs reporting across sessions
+
+**Deciding question:** does the customer need cross-session reporting?
+- No → DynamoDB
+- Yes → RDS
+
+**Current lean:** DynamoDB — the session is flat (one item per inquiry, status as a field), and reporting requirements have not been confirmed.
+
+---
+
+### D6 — Prompt instructions in SSM, not in code
+
+**Decision:** store prompt instructions in [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md).
+
+**Why:** CS managers need to tune tone, format, or constraints without a code deploy. SSM makes it a configuration change, not a release. It is also versioned and auditable.
+
+**Rejected:** hardcoded in Lambda env vars or in the codebase. Either forces a deploy for every prompt tweak.
+
+---
+
+### D7 — Preprocessing compute: Lambda vs Glue
+
+**Decision:** depends on data volume and complexity.
+
+| Condition | Choice |
+|-----------|--------|
+| Small volume, simple text normalization | Lambda |
+| Large CRM export, complex transforms, schema discovery needed | Glue |
+
+**Why not Glue always:** Glue has startup overhead and higher cost for small jobs. Lambda is simpler when the data fits.
+
 ---
 ← [AWS 201](00_overview.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
