@@ -66,6 +66,57 @@ These have different triggers, different compute, and different failure modes. M
 | Session and memory management | Bedrock AgentCore |
 | Manual infra provisioning | CDK |
 
+### Production-level additions
+
+The simple baseline works for an MVP or internal tool. A production deployment adds three layers: network isolation, a proper UI host, and a relational session store.
+
+#### VPC — network isolation
+
+All private resources (Lambda, RDS) move inside a [VPC](../../aws/101/aws_services/04_amazon_vpc.md). API Gateway and CloudFront remain public-facing.
+
+```
+Public subnet:   NAT Gateway (Lambda needs this to reach Bedrock)
+Private subnet:  Lambda, RDS
+```
+
+Lambda in a VPC cannot reach the internet directly — NAT Gateway is required for Bedrock API calls. This adds cost and cold-start latency. Only add VPC when compliance or network policy requires it.
+
+| Resource | Subnet | Reason |
+|----------|--------|--------|
+| Lambda | Private | No direct internet exposure |
+| RDS | Private | Never public-facing |
+| NAT Gateway | Public | Lets private Lambda reach Bedrock and SSM |
+| API Gateway | VPC Link or public | Entry point stays internet-accessible |
+
+#### UI — S3 + CloudFront vs EC2
+
+| Option | When to use |
+|--------|------------|
+| [S3 + CloudFront](aws_services/17_amazon_cloudfront.md) | Static frontend (React, plain HTML). Serverless, cheap, CDN-cached. |
+| [EC2](../../aws/101/aws_services/05_amazon_ec2.md) | Server-rendered UI, WebSocket, or persistent connection needs. More ops burden. |
+
+S3 + CloudFront is the default. Use EC2 only when the UI requires server-side rendering or persistent connections that a static host cannot support.
+
+#### Session state — DynamoDB TTL vs RDS
+
+| Option | When to use |
+|--------|------------|
+| [DynamoDB TTL](aws_services/15_amazon_dynamodb_ttl.md) | Short-lived session data. Simple key lookup. High write throughput. |
+| [Amazon RDS](../../aws/101/aws_services/10_amazon_rds.md) | Session data that needs relational queries, audit trails, or reporting across sessions. |
+
+DynamoDB TTL is sufficient when sessions are isolated and expire. RDS is warranted when you need to query across users (e.g., "show all drafts from last week"), enforce relational constraints, or integrate with an existing database.
+
+RDS in production: place in private subnet, use [IAM authentication](../../aws/101/aws_services/15_amazon_iam.md) instead of a hardcoded password, store credentials in [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md).
+
+#### Production security additions
+
+| Addition | Why |
+|----------|-----|
+| [Security Groups](../../aws/101/aws_services/14_security_group.md) on Lambda and RDS | Restrict which resources can talk to which |
+| [AWS WAF](../../aws/101/aws_services/18_aws_waf.md) on API Gateway or CloudFront | Block malformed requests, rate-limit abusers |
+| [AWS Shield](../../aws/101/aws_services/17_aws_shield.md) | DDoS protection on CloudFront (Standard is free) |
+| VPC Flow Logs → CloudWatch | Audit network traffic in the private subnet |
+
 ## Example
 
 Minimal architecture for a customer-facing FAQ draft maker:
@@ -90,6 +141,26 @@ CloudWatch
 ```
 
 CDK provisions everything. No manual console changes.
+
+Production variant adds VPC, WAF, RDS, and moves Lambda into a private subnet:
+
+```
+Internet
+  → WAF → CloudFront → S3 (static UI)
+  → WAF → API Gateway → VPC Link → Lambda (private subnet)
+                                     → Bedrock AgentCore
+                                         → Knowledge Bases
+                                         → Bedrock Claude Sonnet
+                                     → RDS (private subnet, session state)
+  → Cognito (auth)
+
+NAT Gateway (public subnet)
+  → Lambda reaches Bedrock, SSM, Knowledge Bases
+
+S3 (source docs) → Knowledge Bases ingestion
+SSM Parameter Store → KB ID, model ID, RDS connection string
+CloudWatch → logs, alarms, VPC Flow Logs
+```
 
 ## Why It Matters
 
