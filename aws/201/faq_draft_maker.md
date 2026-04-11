@@ -64,7 +64,7 @@ Security groups:
 | Function | Trigger | What it does |
 |----------|---------|--------------|
 | `submit_inquiry` | API Gateway (POST /inquiry) | Save inquiry to RDS (status: pending), async invoke `generate_draft` |
-| `generate_draft` | Async invoke from `submit_inquiry` | Regex PII masking → KB retrieval → Bedrock draft (with Guardrails) → save draft to RDS |
+| `generate_draft` | Async invoke from `submit_inquiry` | Regex PII masking → KB retrieval → Bedrock draft (cached system prompt + Guardrails) → save draft to RDS |
 | `list_pending` | API Gateway (GET /inquiries) | Query RDS WHERE status = pending, return inquiries + drafts to CS admin page |
 | `approve_inquiry` | API Gateway (POST /inquiries/{id}/approve) | Update draft content, set status pending → approved, invoke `sync_to_kb` |
 | `sync_to_kb` | Invoke from `approve_inquiry` | Write approved Q&A to S3 finalized/, call Knowledge Bases StartIngestionJob |
@@ -97,7 +97,8 @@ Security groups:
          → Knowledge Bases retrieval via bedrock-agent-runtime endpoint
            (masked inquiry as query, category filter + similarity)
          → Bedrock Claude Sonnet via bedrock-runtime endpoint
-           (system prompt: S3 prompts/current.txt via PROMPT_BUCKET + PROMPT_KEY env vars)
+           system: S3 prompts/current.txt [cache_control: ephemeral] — cached across calls
+           user:   retrieved context + masked inquiry — not cached, changes per request
            + Guardrails: PII filter as safety net for missed patterns
          → RDS: save draft (PII-free)
 
@@ -180,7 +181,8 @@ generate_draft Lambda (background)
       category: delivery filter + similarity, query: masked inquiry
       → relevant Q&A, product info, FAQ objects
   → Bedrock Claude Sonnet (bedrock-runtime endpoint)
-      system prompt: S3 prompts/current.txt (PROMPT_BUCKET + PROMPT_KEY)
+      system: S3 prompts/current.txt [cache_control: ephemeral] — cached
+      user:   retrieved Q&A objects + masked inquiry — not cached
       + Guardrails: PII safety net
   → draft: "Thank you for reaching out. There is currently a logistics delay..."
   → RDS: save draft (PII-free)
@@ -326,6 +328,22 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 | Guardrail version | `GUARDRAIL_VERSION` |
 | RDS endpoint | `DB_HOST` |
 | RDS credentials | `DB_SECRET_ARN` (Secrets Manager) |
+
+---
+
+### D11 — Prompt caching on the system prompt
+
+**Why:** `generate_draft` runs for every inquiry. The system prompt (loaded from S3 `prompts/current.txt`) is identical across all calls. Without caching, Bedrock reprocesses the full prompt tokens on every invocation. With `cache_control: ephemeral` on the system message, the prompt is cached after the first call — subsequent calls are ~90% cheaper on prompt tokens and have lower latency.
+
+**What is cached vs not:**
+
+| Part | Cached | Reason |
+|------|--------|--------|
+| System prompt (S3 `current.txt`) | Yes | Same every call |
+| Retrieved Q&A context | No | Changes per inquiry |
+| Masked customer inquiry | No | Changes per inquiry |
+
+**Cache invalidation:** The cache flushes automatically when `current.txt` is updated. A prompt change should flush the cache — no extra logic needed.
 
 ---
 ← [AWS 201](00_overview.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
