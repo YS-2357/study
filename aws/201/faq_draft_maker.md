@@ -30,15 +30,15 @@ Selection rule:
   - Result: 1,000 balanced, high-quality Q&A records
 ```
 
-This runs as a one-time Lambda job. The selected 1,000 are exported to S3 and ingested into Knowledge Bases.
+This runs as a one-time Lambda job. The selected 1,000 are written to S3 as individual objects (one Q&A pair per file, no chunking) and ingested into Knowledge Bases. RDS stores only metadata (category, title, s3_key) for the selected records — not the content.
 
 ### Storage design
 
-**RDS MySQL (t3.micro)** — central data management layer for all data
+**RDS MySQL (t3.micro)** — metadata management layer; stores inquiry lifecycle and Q&A metadata (s3_key, category, title) — not Q&A content
 
-**S3** — Knowledge Bases ingestion source only
+**S3** — actual Q&A content (one object per Q&A pair, no chunking) + Knowledge Bases ingestion source
 
-**Knowledge Bases** — retrieval layer (reads from S3)
+**Knowledge Bases** — retrieval layer (reads from S3; no chunking — each Q&A object is one retrieval unit)
 
 **SSM Parameter Store** — prompt guide (editable without code deploy)
 
@@ -65,7 +65,7 @@ Security groups:
 | Function | Trigger | What it does |
 |----------|---------|--------------|
 | `submit_inquiry` | API Gateway (POST /inquiry) | Save inquiry to RDS (status: pending), async invoke `generate_draft` |
-| `generate_draft` | Async invoke from `submit_inquiry` | KB retrieval → Bedrock draft → save draft to RDS |
+| `generate_draft` | Async invoke from `submit_inquiry` | Regex PII masking → KB retrieval → Bedrock draft (with Guardrails) → save draft to RDS |
 | `list_pending` | API Gateway (GET /inquiries) | Query RDS WHERE status = pending, return inquiries + drafts to CS admin page |
 | `approve_inquiry` | API Gateway (POST /inquiries/{id}/approve) | Update draft content, set status pending → approved, invoke `sync_to_kb` |
 | `sync_to_kb` | Invoke from `approve_inquiry` | Write approved Q&A to S3 finalized/, call Knowledge Bases StartIngestionJob |
@@ -75,9 +75,10 @@ Security groups:
 ```
 1. Initial ingestion (one-time or on data update)
 
-   RDS qa_records (10,000)
+   Client-provided Q&A file (10,000 records, external import)
      → Selection Lambda (weighted sampling + k-NN → 1,000 records)
-     → S3 (selected-qa/)
+     → S3 selected-qa/ (one object per Q&A pair, no chunking)
+       + RDS qa_records: metadata only (id, category, title, s3_key, created_at)
      → Knowledge Bases ingestion
 
    Product info, FAQ
@@ -92,11 +93,14 @@ Security groups:
          → async invoke generate_draft Lambda
 
    generate_draft Lambda (runs in background)
+         → regex PII masking (inquiry → masked inquiry)
+           [PHONE], [EMAIL], [ID_NUMBER], etc. — original stays in RDS
          → Knowledge Bases retrieval via bedrock-agent-runtime endpoint
-           (category filter + similarity)
+           (masked inquiry as query, category filter + similarity)
          → Bedrock Claude Sonnet via bedrock-runtime endpoint
            (system prompt: SSM prompt guide)
-         → RDS: save draft
+           + Guardrails: PII filter as safety net for missed patterns
+         → RDS: save draft (PII-free)
 
    CS staff opens admin page (EC2)
      → API Gateway → list_pending Lambda → query RDS → return inquiries + drafts
@@ -127,13 +131,15 @@ Security groups:
 | Network isolation | VPC (public + private subnets) | — | RDS in private subnet — no public endpoint |
 | Bedrock access | VPC Interface Endpoints (bedrock-runtime, bedrock-agent-runtime) | — | Lambda in private subnet reaches Bedrock without internet |
 | S3 access | VPC Gateway Endpoint | — | Free; Lambda reaches S3 without internet |
+| PII masking | Regex (in Lambda) | — | Masks phone, email, ID numbers before any Bedrock call |
+| PII safety net | [Bedrock Guardrails](aws_services/04_amazon_bedrock.md) | — | Catches context-based PII that regex misses; attached to InvokeModel |
 | Monitoring | [CloudWatch](aws_services/08_amazon_cloudwatch.md) | — | Lambda logs, draft latency, RDS query time |
 
 ### RDS schema
 
 ```sql
--- Client-provided Q&A data
-qa_records (id PK, category, title, content, answer, is_selected BOOL, created_at)
+-- Selected Q&A metadata (1,000 records; actual content lives in S3)
+qa_records (id PK, category, title, s3_key, created_at)
 
 -- Client-provided product data
 products (id PK, name, price, size, color, description, updated_at)
@@ -155,6 +161,8 @@ staff      (id PK, name, email)
 | Lambda → Bedrock / KB | Via VPC endpoints only — no internet path |
 | Lambda → RDS | Private subnet SG rule; credentials in SSM |
 | Customer input | Input validation — guard against prompt injection |
+| PII → LLM | Regex masks structural PII (phone, email, ID) in `generate_draft` before Retrieve and InvokeModel; original stored in RDS for CS staff only |
+| PII safety net | Bedrock Guardrails attached to InvokeModel — catches context-based PII that regex misses |
 | Prompt guide | Stored in SSM — not directly editable by end users |
 
 ## Example
@@ -167,13 +175,16 @@ Customer submits inquiry
       → async invoke generate_draft Lambda (returns immediately)
 
 generate_draft Lambda (background)
+  → regex PII masking
+      "ordered by Kim Minsu, 010-1234-5678" → "ordered by [NAME], [PHONE]"
   → Knowledge Bases retrieval (bedrock-agent-runtime endpoint)
-      category: delivery filter + similarity
-      → relevant Q&A, product info, FAQ chunks
+      category: delivery filter + similarity, query: masked inquiry
+      → relevant Q&A, product info, FAQ objects
   → Bedrock Claude Sonnet (bedrock-runtime endpoint)
       system prompt: SSM prompt guide
+      + Guardrails: PII safety net
   → draft: "Thank you for reaching out. There is currently a logistics delay..."
-  → RDS: save draft
+  → RDS: save draft (PII-free)
 
 CS staff opens admin page
   → API Gateway → list_pending Lambda
@@ -225,19 +236,21 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 ---
 
-### D2 — Q&A selection: 10,000 to 1,000
+### D2 — Q&A selection: 10,000 to 1,000, stored one-by-one in S3
 
 **Why:** Putting all 10,000 records into the knowledge base adds noise. Balanced, representative records produce better retrieval.
 
-**Strategy:** Underrepresented categories get higher weight. Within each category, k-NN removes near-duplicate records. Result: 1,000 high-quality records.
+**Strategy:** Client provides 10,000 records as an external file. Selection Lambda applies weighted sampling (underrepresented categories get higher weight) and k-NN to remove near-duplicates. Result: 1,000 high-quality records written to S3 as individual objects — one Q&A pair per file, no chunking.
+
+**No chunking:** Each Q&A pair is already the smallest meaningful unit. Chunking risks splitting the question from its answer, degrading retrieval quality. One object = one retrieval unit.
 
 ---
 
-### D3 — RDS as central data management layer
+### D3 — RDS as metadata layer, S3 as content layer
 
-**Why:** All client-provided data (Q&A records, product info) and the inquiry lifecycle (draft, revision, final answer) need to be managed in one place with relational structure.
+**Why:** RDS manages the inquiry lifecycle (draft, revision, final answer) and Q&A metadata (category, title, s3_key) with relational structure. It does not store Q&A content — that lives in S3.
 
-**S3 role:** Ingestion source for Knowledge Bases only. Selected data is exported from RDS to S3, then ingested into KB.
+**S3 role:** Stores the actual Q&A content (one object per pair, no chunking) and serves as the ingestion source for Knowledge Bases. Content is written directly to S3 by the Selection Lambda; RDS only holds the pointer (s3_key).
 
 **Advisor recommendation:** RDS MySQL t3.micro — for production operations experience.
 
@@ -278,6 +291,18 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 **Why:** `submit_inquiry` returns immediately after saving the inquiry. `generate_draft` runs in the background via async invoke. The customer does not need to see the draft — only CS staff does. Making the customer wait 3–5 seconds for Bedrock adds latency with no user benefit.
 
 **Trade-off:** CS staff may open the admin page before the draft is ready if they check immediately after submission. Acceptable at this scale.
+
+---
+
+### D9 — Two-layer PII protection: regex + Guardrails
+
+**Why:** CS staff need to see the original inquiry including PII (name, phone, address) to handle the case. The LLM must not. Two layers handle this at different cost points.
+
+**Regex (Lambda, before any Bedrock call):** Masks structural patterns (phone numbers, email addresses, Korean resident registration numbers) with placeholders (`[PHONE]`, `[EMAIL]`, `[ID_NUMBER]`). Fast, deterministic, near-zero cost. The masked text is what Retrieve and InvokeModel receive. The original stays in RDS.
+
+**Bedrock Guardrails (attached to InvokeModel):** Catches context-based PII that regex cannot structurally detect — names embedded in sentences, addresses in natural language. Managed service with audit trail.
+
+**`Retrieve` over `RetrieveAndGenerate`:** `RetrieveAndGenerate` combines retrieval and generation in one API call but restricts prompt control. A custom SSM prompt guide requires full control over the system prompt, which means keeping `Retrieve` and `InvokeModel` as separate calls.
 
 ---
 ← [AWS 201](00_overview.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
