@@ -10,4 +10,4 @@ See [aws_services/00_overview.md](aws_services/00_overview.md) for the full stud
 
 Scenario notes document real product designs — service choices, open decisions, and rationale. They are not AWS service references; they are design records.
 
-1. [FAQ Draft Maker](faq_draft_maker.md) — RAG-based FAQ generator using CDK, AgentCore, Strands, and Knowledge Bases.
+1. [CS Inquiry Draft Assistant](faq_draft_maker.md) — Real-time RAG draft generator for CS staff using Knowledge Bases, Strands, and Bedrock.
