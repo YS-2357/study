@@ -40,7 +40,7 @@ This runs as a one-time Lambda job. The selected 1,000 are written to S3 as indi
 
 **Knowledge Bases** — retrieval layer (reads from S3; no chunking — each Q&A object is one retrieval unit)
 
-**SSM Parameter Store** — prompt guide (editable without code deploy)
+**S3 `prompts/current.txt`** — active prompt guide (git repo holds versioned files; S3 holds only the active version Lambda reads)
 
 ### Network topology
 
@@ -49,10 +49,9 @@ Public subnet  → EC2 (receives inbound HTTP from users and CS staff)
 Private subnet → Lambda, RDS (no public access)
 
 VPC endpoints — Lambda reaches AWS services without internet:
-  S3 Gateway endpoint          (free)
+  S3 Gateway endpoint          (free — Q&A content, prompt guide, finalized answers)
   bedrock-runtime              (Bedrock model invocation)
   bedrock-agent-runtime        (Knowledge Bases retrieval)
-  ssm                          (prompt guide fetch)
 
 Security groups:
   EC2 SG    inbound 80/443 from 0.0.0.0/0
@@ -98,7 +97,7 @@ Security groups:
          → Knowledge Bases retrieval via bedrock-agent-runtime endpoint
            (masked inquiry as query, category filter + similarity)
          → Bedrock Claude Sonnet via bedrock-runtime endpoint
-           (system prompt: SSM prompt guide)
+           (system prompt: S3 prompts/current.txt via PROMPT_BUCKET + PROMPT_KEY env vars)
            + Guardrails: PII filter as safety net for missed patterns
          → RDS: save draft (PII-free)
 
@@ -127,7 +126,7 @@ Security groups:
 | Draft generation | [Bedrock](aws_services/04_amazon_bedrock.md) + [Strands](aws_services/01_strands_agents_sdk.md) | — | Fixed prerequisite |
 | Serverless compute | [Lambda](aws_services/09_aws_lambda.md) | — | 5 functions: submit_inquiry, generate_draft, list_pending, approve_inquiry, sync_to_kb |
 | API routing | [API Gateway](aws_services/10_amazon_api_gateway.md) | — | EC2 UI to Lambda |
-| Prompt guide | [SSM Parameter Store](aws_services/14_aws_ssm_parameter_store.md) | — | CS managers update without code deploy |
+| Prompt guide | [S3](../../aws/101/aws_services/19_amazon_s3.md) `prompts/current.txt` | — | Active prompt; git repo stores versioned files, S3 holds only current |
 | Network isolation | VPC (public + private subnets) | — | RDS in private subnet — no public endpoint |
 | Bedrock access | VPC Interface Endpoints (bedrock-runtime, bedrock-agent-runtime) | — | Lambda in private subnet reaches Bedrock without internet |
 | S3 access | VPC Gateway Endpoint | — | Free; Lambda reaches S3 without internet |
@@ -181,7 +180,7 @@ generate_draft Lambda (background)
       category: delivery filter + similarity, query: masked inquiry
       → relevant Q&A, product info, FAQ objects
   → Bedrock Claude Sonnet (bedrock-runtime endpoint)
-      system prompt: SSM prompt guide
+      system prompt: S3 prompts/current.txt (PROMPT_BUCKET + PROMPT_KEY)
       + Guardrails: PII safety net
   → draft: "Thank you for reaching out. There is currently a logistics delay..."
   → RDS: save draft (PII-free)
@@ -272,9 +271,11 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 ---
 
-### D6 — Prompt guide in SSM
+### D6 — Prompt guide as files: git for versions, S3 for active
 
-**Why:** CS managers need to tune answer tone and format without a code deploy. SSM makes it a configuration change, not a release. It is also versioned and auditable.
+**Why:** CS managers need to tune answer tone and format without a code deploy. Git tracks every version naturally — no extra tooling. S3 stores only `prompts/current.txt`, the file Lambda reads. Rollback = overwrite `current.txt` with an older local version. One small text file in S3: negligible cost.
+
+**Trade-off vs SSM:** SSM has a 100-version limit and a per-parameter cost. Git has no version limit and is already in use. S3 prompt reads go through the existing S3 Gateway endpoint — no additional VPC endpoint needed.
 
 ---
 
@@ -282,7 +283,7 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Why:** RDS holds customer inquiry data. Without a VPC, RDS is publicly accessible to anyone with the endpoint and credentials. VPC places RDS in a private subnet with no public route — only Lambda can reach it via security group rule. This is a data protection requirement, not an operational preference.
 
-**Trade-off:** Lambda in a private subnet loses internet access. VPC endpoints (bedrock-runtime, bedrock-agent-runtime, SSM, S3 gateway) restore connectivity to required AWS services without routing traffic over the internet.
+**Trade-off:** Lambda in a private subnet loses internet access. VPC endpoints (bedrock-runtime, bedrock-agent-runtime, S3 gateway) restore connectivity to required AWS services without routing traffic over the internet. Removing SSM in favor of S3 files eliminates the SSM interface endpoint and its hourly cost.
 
 ---
 
@@ -302,7 +303,25 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Bedrock Guardrails (attached to InvokeModel):** Catches context-based PII that regex cannot structurally detect — names embedded in sentences, addresses in natural language. Managed service with audit trail.
 
-**`Retrieve` over `RetrieveAndGenerate`:** `RetrieveAndGenerate` combines retrieval and generation in one API call but restricts prompt control. A custom SSM prompt guide requires full control over the system prompt, which means keeping `Retrieve` and `InvokeModel` as separate calls.
+**`Retrieve` over `RetrieveAndGenerate`:** `RetrieveAndGenerate` combines retrieval and generation in one API call but restricts prompt control. A custom S3 prompt guide requires full control over the system prompt, which means keeping `Retrieve` and `InvokeModel` as separate calls.
+
+---
+
+### D10 — No hardcoded values: all config via environment variables
+
+**Why:** Hardcoded bucket names, IDs, keys, and endpoints make the code environment-specific and fragile. Every value that could change per environment or deployment must be an environment variable.
+
+**Rule:** All Lambda functions read config from `os.environ`. Values are set in CDK/IaC — never in function code.
+
+| Value | Environment variable |
+|-------|---------------------|
+| S3 bucket (Q&A, prompt, finalized) | `QA_BUCKET`, `PROMPT_BUCKET`, `FINALIZED_BUCKET` |
+| Prompt S3 key | `PROMPT_KEY` |
+| Knowledge Base ID | `KNOWLEDGE_BASE_ID` |
+| Guardrail ID | `GUARDRAIL_ID` |
+| Guardrail version | `GUARDRAIL_VERSION` |
+| RDS endpoint | `DB_HOST` |
+| RDS credentials | `DB_SECRET_ARN` (Secrets Manager) |
 
 ---
 ← [AWS 201](00_overview.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
