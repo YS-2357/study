@@ -119,7 +119,7 @@ Security groups:
 
 | Component | Service | Spec | Why |
 |-----------|---------|------|-----|
-| UI (customer + CS admin) | [EC2](../../aws/101/aws_services/05_amazon_ec2.md) | t3.micro | Advisor recommendation — production experience |
+| UI (customer + CS admin) | [EC2](../../aws/101/aws_services/05_amazon_ec2.md) — FastAPI + React | t3.micro | FastAPI serves React build and proxies to API Gateway; async-native |
 | Central data store | [RDS MySQL](../../aws/101/aws_services/10_amazon_rds.md) | t3.micro | Advisor recommendation — relational schema needed |
 | KB ingestion source | [S3](../../aws/101/aws_services/19_amazon_s3.md) | — | Knowledge Bases requires S3 as data source |
 | RAG retrieval | [Knowledge Bases](aws_services/05_amazon_bedrock_knowledge_bases.md) | — | Managed chunking, embedding, and search |
@@ -255,9 +255,13 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 ---
 
-### D4 — EC2 t3.micro for UI
+### D4 — EC2 t3.micro for UI: FastAPI + React
 
-**Why:** Advisor recommendation for production experience. Running an actual server (vs. S3 static hosting or Lambda) builds operational skills: deploy, restart, monitor, debug on a real instance.
+**Why:** Advisor recommendation for production experience. Running an actual server builds operational skills: deploy, restart, monitor, debug on a real instance.
+
+**Stack:** FastAPI (Python, async-native) serves the React build as static files and proxies API calls from the browser to API Gateway → Lambda. FastAPI handles both the static file serving and backend routing in one process on t3.micro.
+
+**Rejected — Streamlit:** Streamlit does not support async. This system needs async-native behavior — React state updates while the draft generates in the background, and FastAPI handles concurrent requests without blocking. Streamlit's synchronous execution model cannot support this.
 
 **Trade-off:** Always-on cost. Acceptable at t3.micro pricing for this scale.
 
