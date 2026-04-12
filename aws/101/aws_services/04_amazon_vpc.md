@@ -350,8 +350,8 @@ Rule of thumb:
 | Reason | SG | NACL |
 |--------|-----|------|
 | **Granularity** | Per instance/ENI | Per subnet (all instances affected) |
-| **Stateful** | ✅ Return traffic automatic | ❌ Must allow both directions manually |
-| **SG-to-SG reference** | ✅ `allow 3306 from web-SG` | ❌ Must use IP ranges |
+| **Stateful** | yes — return traffic automatic | no — must allow both directions manually |
+| **SG-to-SG reference** | yes — `allow 3306 from web-SG` | no — must use IP ranges |
 | **Intent** | Expresses app-role relationships | Thinks in subnet/IP boundaries |
 
 Example: "Only web server can reach DB on 3306"
