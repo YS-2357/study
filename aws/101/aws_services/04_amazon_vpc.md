@@ -312,7 +312,7 @@ Traffic must pass **both** checks: NACL first (subnet boundary), then SG (instan
 | **Evaluation** | All rules evaluated together | Rules evaluated in number order (first match wins) |
 | **Default** | Deny all inbound, allow all outbound | Allow all traffic (default NACL) |
 
-#### Example: Web Server + DB on Same Subnet
+### Example: Web Server + DB on Same Subnet
 
 ```
 Subnet A (NACL: allow 443 inbound from internet)
