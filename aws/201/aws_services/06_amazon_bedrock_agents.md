@@ -113,7 +113,7 @@ Bedrock Agents is the fastest path to a working agent on AWS — no orchestratio
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Less Flexibility Than Code-Based Frameworks
+### MAIN PRECAUTION: Less Flexibility Than Code-Based Frameworks
 - Orchestration logic is managed by AWS — you can't customize the reasoning loop
 - If you need conditional branching, custom retry logic, or non-standard tool patterns, use [Strands](01_strands_agents_sdk.md) instead
 - Bedrock Agents is best for straightforward action + knowledge base patterns
