@@ -1,5 +1,13 @@
 # Region
 
+## What It Is
+
+An AWS Region is a distinct geographic area containing multiple [Availability Zones](02_availability_zone.md). All resources you create exist in a specific Region, and most services are Region-scoped.
+
+## How It Works
+
+When you use the AWS Console, a Region selector in the top-right corner determines which Region's resources are shown and where new resources are created. Global services such as IAM, CloudFront, and Route 53 display "Global" instead of a Region name.
+
 ## Console Access
 **Location:** Top-right corner of AWS Console (Region selector dropdown)
 
