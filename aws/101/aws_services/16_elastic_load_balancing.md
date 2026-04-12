@@ -5,6 +5,10 @@ Elastic Load Balancing (ELB) automatically distributes incoming traffic across m
 
 **See [Networking Basics - Protocols](../../../networking/01_protocols.md) for TCP/UDP/HTTP/HTTPS fundamentals.**
 
+## How It Works
+
+You create a load balancer and attach it to subnets in multiple AZs. Listeners define the port and protocol to accept traffic. Each listener has rules that route matching requests to target groups (collections of EC2 instances, IPs, or Lambda functions). Health checks run periodically; unhealthy targets are removed from rotation automatically. The load balancer distributes traffic across healthy targets using a round-robin or least-outstanding-requests algorithm.
+
 ## Console Access
 - AWS Console → EC2 → Left sidebar → Load Balancers
 - Breadcrumb: EC2 > Load balancers
