@@ -487,9 +487,9 @@ Yes. NLB supports TLS termination through **TLS listeners**, using certificates 
 
 | Attribute | ALB | NLB |
 |-----------|-----|-----|
-| Certificate support | yes HTTPS listener | yes TLS listener |
-| mTLS | yes Supported | no Not supported |
-| TLS renegotiation | yes Supported | no Not supported |
+| Certificate support | HTTPS listener | TLS listener |
+| mTLS | Supported | Not supported |
+| TLS renegotiation | Supported | Not supported |
 | Layer | L7 (HTTP/HTTPS) | L4 (TCP/UDP/TLS) |
 
 NLB + TLS provides high-performance encryption. ALB offers richer TLS features including mTLS and path-based routing.
