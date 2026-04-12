@@ -235,7 +235,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Why:** The customer's pain is writing hundreds of similar answers per day, not authoring FAQ articles. The right unit of work is one incoming inquiry, not one FAQ entry.
 
----
 
 ### D2 — Q&A selection: 10,000 to 1,000, stored one-by-one in S3
 
@@ -245,7 +244,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **No chunking:** Each Q&A pair is already the smallest meaningful unit. Chunking risks splitting the question from its answer, degrading retrieval quality. One object = one retrieval unit.
 
----
 
 ### D3 — RDS as metadata layer, S3 as content layer
 
@@ -255,7 +253,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Advisor recommendation:** RDS MySQL t3.micro — for production operations experience.
 
----
 
 ### D4 — EC2 t3.micro for UI: FastAPI + React
 
@@ -267,7 +264,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Trade-off:** Always-on cost. Acceptable at t3.micro pricing for this scale.
 
----
 
 ### D5 — Knowledge Bases for retrieval
 
@@ -275,7 +271,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Rejected:** OpenSearch — adds operational complexity. KB is sufficient given the retrieval requirements here.
 
----
 
 ### D6 — Prompt guide as files: git for versions, S3 for active
 
@@ -283,7 +278,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Trade-off vs SSM:** SSM has a 100-version limit and a per-parameter cost. Git has no version limit and is already in use. S3 prompt reads go through the existing S3 Gateway endpoint — no additional VPC endpoint needed.
 
----
 
 ### D7 — VPC for RDS isolation
 
@@ -291,7 +285,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Trade-off:** Lambda in a private subnet loses internet access. VPC endpoints (bedrock-runtime, bedrock-agent-runtime, S3 gateway) restore connectivity to required AWS services without routing traffic over the internet. Removing SSM in favor of S3 files eliminates the SSM interface endpoint and its hourly cost.
 
----
 
 ### D8 — Async draft generation
 
@@ -299,7 +292,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **Trade-off:** CS staff may open the admin page before the draft is ready if they check immediately after submission. Acceptable at this scale.
 
----
 
 ### D9 — Two-layer PII protection: regex + Guardrails
 
@@ -311,7 +303,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 
 **`Retrieve` over `RetrieveAndGenerate`:** `RetrieveAndGenerate` combines retrieval and generation in one API call but restricts prompt control. A custom S3 prompt guide requires full control over the system prompt, which means keeping `Retrieve` and `InvokeModel` as separate calls.
 
----
 
 ### D10 — No hardcoded values: all config via environment variables
 
@@ -329,7 +320,6 @@ The feedback loop compounds the value. Every finalized answer feeds back into Kn
 | RDS endpoint | `DB_HOST` |
 | RDS credentials | `DB_SECRET_ARN` (Secrets Manager) |
 
----
 
 ### D11 — Prompt caching on the system prompt
 
