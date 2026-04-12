@@ -227,7 +227,7 @@ A listener checks for connection requests using the port and protocol you config
 **Load balancer IP address type:**
 - **IPv4** (default)
 - **Dualstack**
-- ⚠️ No Scheme option (GWLB is always internal - no internet-facing option)
+- **Note:** No Scheme option (GWLB is always internal - no internet-facing option)
 
 ### Network mapping
 
