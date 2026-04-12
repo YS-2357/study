@@ -96,5 +96,13 @@ If PII must never leave your network → on-premises models, not cloud LLMs.
 - Test new versions before promoting to production
 - Keep a working version as fallback
 
+## Example
+
+A customer support chatbot attaches a guardrail with medium-strength content filters, a denied topic blocking competitor discussions, and PII anonymization for email and phone. When a user asks a question containing their phone number, the guardrail redacts it before the model sees it and returns the answer with `[PHONE]` in place of the actual number.
+
+## Why It Matters
+
+Guardrails let you enforce consistent safety and compliance rules across every Bedrock model without modifying your application code. A single guardrail version can be reused across models and updated centrally when policies change.
+
 ---
 ← Previous: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock](04_amazon_bedrock.md) →
