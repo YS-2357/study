@@ -11,6 +11,12 @@ Two main sub-services covered here:
 - Data Streams = **custom** (you build consumer logic, you manage shards)
 - Data Firehose = **serverless** (pick source → destination, AWS does the rest)
 
+## How It Works
+
+**Kinesis Data Streams:** Producers write records to a stream divided into shards. Each shard handles 1 MB/s input and 2 MB/s output. Consumers read records in order per shard. Records are retained for 1–365 days.
+
+**Data Firehose:** You pick a source (e.g., Direct PUT or a Kinesis Data Stream) and a destination (S3, Redshift, OpenSearch, etc.). Firehose buffers incoming records by size or time interval, optionally transforms them via Lambda, then delivers in batches automatically.
+
 ## Console Access
 - Search "Kinesis" in AWS Console
 - **Data Streams:** Amazon Kinesis > Data streams
