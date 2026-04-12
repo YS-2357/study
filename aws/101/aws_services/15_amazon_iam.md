@@ -5,6 +5,10 @@
 
 **IAM is a Global service** - Not Region-specific. Changes apply across all Regions.
 
+## How It Works
+
+Every AWS API call is authenticated (who are you?) and authorized (are you allowed?). IAM Users have permanent credentials (password, access keys). IAM Roles have no permanent credentials — they are assumed temporarily by AWS services, users, or federated identities via the STS AssumeRole API. Policies (JSON documents) attached to users, groups, or roles define which actions are allowed on which resources.
+
 ## Console Access
 **IAM Console → Users / Groups / Roles / Policies**
 - Direct link: https://console.aws.amazon.com/iam/
