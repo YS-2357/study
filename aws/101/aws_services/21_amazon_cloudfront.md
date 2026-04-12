@@ -5,6 +5,10 @@
 
 CloudFront is a **global** service (not regional).
 
+## How It Works
+
+You create a CloudFront distribution specifying an origin (S3, ALB, etc.) and cache behaviors. When a user makes a request, it is routed to the nearest edge location. If the edge has a cached copy that has not expired (within TTL), it is returned immediately. On a cache miss, the edge fetches the content from the origin, caches it, and returns it. Subsequent requests from the same region are served from cache without hitting the origin.
+
 ## Console Access
 - AWS Console → CloudFront → Distributions
 - Breadcrumb: CloudFront > Distributions
