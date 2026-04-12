@@ -7,6 +7,10 @@ AWS Shield is a DDoS (Distributed Denial of Service) protection service.
 
 Shield has two tiers: Standard (free, automatic) and Advanced (paid, opt-in).
 
+## How It Works
+
+Shield Standard is always active at the AWS network edge. It learns your normal traffic baseline and uses anomaly detection plus known attack signature matching to identify DDoS floods. When an attack is detected, Shield drops malicious packets before they reach your resources. Shield Advanced adds 24/7 support from the Shield Response Team (SRT) and detailed real-time metrics for protected resources such as CloudFront, Route 53, and ELB.
+
 ## Console Access
 - Search "Shield" in AWS Console
 - AWS Shield > Getting started
