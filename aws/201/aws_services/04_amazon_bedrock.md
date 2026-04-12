@@ -127,7 +127,7 @@ Tokens ≈ billing units. ~1 token ≈ 0.75 English words, ~1 token ≈ 0.5 Kore
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Model Access Is Per-Region and Per-Model
+### MAIN PRECAUTION: Model Access Is Per-Region and Per-Model
 - You must explicitly enable each model in each region via the console
 - Not all models are available in all regions
 - Start in `us-east-1` or `us-west-2` for broadest availability
