@@ -331,7 +331,7 @@ NACL only cares about traffic **crossing the subnet boundary**. Traffic between 
 ```
 Subnet A (NACL: allow 443 inbound)
 ├── Web server (SG: allow 443)  ──3306──►  DB server (SG: allow 3306 from Web SG)
-                                           ✅ Works — SG allows it, NACL is irrelevant
+                                           [OK] SG allows it, NACL is irrelevant
 ```
 
 - Internet → Web on 443: NACL checks (crossing boundary) + SG checks
