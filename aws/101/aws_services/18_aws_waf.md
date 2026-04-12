@@ -31,6 +31,10 @@ While Shield stops DDoS volume floods, WAF inspects the **content** of each requ
 - **AWS App Runner**
 - **AWS Verified Access**
 
+## How It Works
+
+You create a Web ACL containing ordered rules. Each incoming HTTP/HTTPS request is evaluated against the rules in priority order. When a rule matches, the defined action (Allow, Block, Count, or CAPTCHA) is applied and evaluation stops. If no rule matches, the Web ACL's default action applies. The Web ACL is attached to a CloudFront distribution, ALB, or API Gateway to intercept all requests before they reach your application.
+
 ## Console Access
 - Search "WAF" in AWS Console
 - Breadcrumb: WAF & Shield > Protection packs (web ACLs) > Create protection pack (web ACL)
