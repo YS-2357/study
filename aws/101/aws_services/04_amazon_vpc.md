@@ -345,7 +345,7 @@ Rule of thumb:
 - Same subnet inside-to-inside → think SG only
 - Crossing subnet boundary → think NACL + SG
 
-#### Why SG Is Used More Than NACL
+### Why SG Is Used More Than NACL
 
 | Reason | SG | NACL |
 |--------|-----|------|
