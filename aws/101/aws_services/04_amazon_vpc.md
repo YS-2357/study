@@ -360,7 +360,7 @@ Example: "Only web server can reach DB on 3306"
 
 Practical rule: SG as main access control, NACL as extra subnet-level guardrail.
 
-#### NACL Stateless — What It Means in Practice
+### NACL Stateless — What It Means in Practice
 
 Stateless = NACL does not remember that a connection was already allowed. You must allow both directions explicitly, including **ephemeral ports** for responses.
 
