@@ -324,7 +324,7 @@ Subnet A (NACL: allow 443 inbound from internet)
 - DB's SG blocks 443 — only allows 3306 from web server's SG (door-level)
 - SG is the primary tool (per-instance granularity), NACL is the secondary defense layer (subnet-wide blanket rule)
 
-#### Same-Subnet Traffic: NACL Doesn't Apply
+### Same-Subnet Traffic: NACL Doesn't Apply
 
 NACL only cares about traffic **crossing the subnet boundary**. Traffic between instances inside the same subnet is not filtered by NACL.
 
