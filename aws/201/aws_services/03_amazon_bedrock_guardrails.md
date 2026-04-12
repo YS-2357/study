@@ -16,6 +16,10 @@ User prompt → [Guardrail: check input] → Model → [Guardrail: check output]
 
 **Key point:** Guardrails are model-agnostic. You can apply the same guardrail to any Bedrock model, and even to models outside Bedrock via the ApplyGuardrail API.
 
+## How It Works
+
+Every request passes through the guardrail twice — once on the way in (input check) and once on the way out (output check). Each check evaluates the text against all configured filters in sequence: content filters by category and strength, denied topic classifiers, PII detectors, word blockers, and contextual grounding checks. If any filter triggers a block action, the request or response is replaced with a configured denial message. If the action is anonymize, detected PII is replaced with a placeholder before the content is passed along.
+
 ## Console Access
 - Amazon Bedrock > Guardrails > Create guardrail
 
