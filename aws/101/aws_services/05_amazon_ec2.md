@@ -3,6 +3,10 @@
 ## What It Is
 **EC2 (Elastic Compute Cloud)** is a web service that provides resizable compute capacity (virtual servers) in the cloud. You can launch instances with various operating systems, configure networking, storage, and security.
 
+## How It Works
+
+You launch an EC2 instance by selecting an AMI (operating system and software template), an instance type (CPU and memory), a VPC subnet, a security group, and a key pair for SSH access. The instance boots from an EBS root volume. You can attach additional EBS volumes, assign IAM roles, and run a user-data script on first boot to install software automatically.
+
 ## Console Access
 **EC2 Console → Instances**
 - Direct link: https://console.aws.amazon.com/ec2/home#Instances
