@@ -24,6 +24,10 @@ User in Tokyo → Nearest PoP (Tokyo edge) → Cache hit? → Serve immediately 
 | Count | 30+ regions | 3–6 per region (typically) | 600+ globally |
 | You manage | Choose which region to deploy in | Choose AZ placement for HA | Configured indirectly through CloudFront/Route 53 settings |
 
+## How It Works
+
+When a user makes a request, DNS resolution (via Route 53 or Anycast routing) directs the connection to the nearest PoP edge location. For CloudFront, the edge location checks its cache: a hit returns content immediately; a miss fetches from the origin, caches the response, then returns it. For Global Accelerator, the PoP receives TCP/UDP traffic and routes it over the AWS backbone network to the nearest healthy origin, bypassing the public internet for most of the journey.
+
 ## Console Access
 - You don't create or manage PoPs directly
 - They're used automatically when you configure:
