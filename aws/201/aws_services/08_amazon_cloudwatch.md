@@ -155,7 +155,7 @@ Without CloudWatch, you're blind. When the agent returns a bad draft or times ou
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Logs Cost Money and Never Auto-Delete
+### MAIN PRECAUTION: Logs Cost Money and Never Auto-Delete
 - CloudWatch Logs are retained forever by default
 - Set a retention period (e.g., 7 or 30 days) to avoid growing costs
 - In CDK: `log_group.retention = logs.RetentionDays.ONE_WEEK`
