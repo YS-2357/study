@@ -133,7 +133,7 @@ Without RAG, models can only use their training data — they hallucinate when a
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Retrieval Quality Depends on Chunking and Embedding Choices
+### MAIN PRECAUTION: Retrieval Quality Depends on Chunking and Embedding Choices
 - Bad chunking = irrelevant retrieval = bad answers, even with a great model
 - Test retrieval quality with the `Retrieve` API before building the full pipeline
 - Iterate on chunk size, overlap, and strategy
