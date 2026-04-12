@@ -15,6 +15,10 @@ Aurora is NOT standard MySQL/PostgreSQL — it's AWS's re-engineered version. Sa
   - **Aurora** — fully managed per AWS docs (storage abstracted, but you still pick compute)
   - **DynamoDB** — fully managed, serverless-first (no instance or storage decisions at all)
 
+## How It Works
+
+Aurora separates compute from storage. All instances (one writer + up to 15 readers) share a single distributed storage layer that automatically replicates data six ways across three AZs and grows up to 128 TiB without manual intervention. Writes go to the writer instance and are immediately visible to all reader instances through shared storage — eliminating replication lag. Failover promotes a reader to writer in about 30 seconds via a DNS endpoint swap.
+
 ## Aurora vs Standard RDS — Pros and Cons
 
 ### Pros of Aurora (over standard RDS)
