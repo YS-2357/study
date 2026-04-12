@@ -24,6 +24,10 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 | **EC2 + frameworks** | DIY ML on raw compute | Maximum control, existing pipelines, custom environments |
 | **Comprehend/Rekognition/etc.** | Pre-built AI services (no ML knowledge needed) | Specific tasks (NLP, image analysis) without building models |
 
+## How It Works
+
+You prepare training data in S3, then launch a managed training job specifying the algorithm, instance type, and S3 paths for input data and output artifacts. SageMaker provisions the instances, runs the training code, saves the model artifact to S3, and terminates the instances. You then create an endpoint from the trained model artifact; SageMaker deploys the model on managed instances that serve real-time predictions via an HTTPS API.
+
 ## Console Access
 - Search "SageMaker" in AWS Console
 - Amazon SageMaker > Studio, Notebooks, Training jobs, or Endpoints
