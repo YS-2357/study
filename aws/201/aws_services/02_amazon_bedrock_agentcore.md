@@ -53,8 +53,6 @@ AgentCore is the layer that turns custom agent code into production infrastructu
 | **Framework** | Agent logic | Strands, LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, custom |
 | **Infrastructure** | **AgentCore** | Runtime, Memory, Gateway, Policy, Identity, Observability, Evaluations, Code Interpreter, Browser |
 
----
-
 ## Key Concepts
 
 ### The 9 Services
