@@ -77,7 +77,7 @@ Fargate has fixed valid combinations:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Fargate Can Be More Expensive Than EC2 at Scale
+### MAIN PRECAUTION: Fargate Can Be More Expensive Than EC2 at Scale
 - Fargate per-vCPU pricing is higher than equivalent EC2 On-Demand
 - At steady high utilization, EC2 with Reserved Instances or Savings Plans is cheaper
 - Fargate wins on operational simplicity and variable workloads

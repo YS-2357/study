@@ -208,7 +208,7 @@ Can reference other security groups in rules:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Never Use 0.0.0.0/0 for SSH/RDP
+### MAIN PRECAUTION: Never Use 0.0.0.0/0 for SSH/RDP
 - **0.0.0.0/0 = entire internet can try to connect**
 - SSH (22) and RDP (3389) should only allow your IP
 - Use your office IP or VPN IP (e.g., 1.2.3.4/32)

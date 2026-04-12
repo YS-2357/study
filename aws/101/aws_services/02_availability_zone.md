@@ -43,7 +43,7 @@ An **Availability Zone (AZ)** is one or more physical data centers within a Regi
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Use Multiple AZs for Production
+### MAIN PRECAUTION: Use Multiple AZs for Production
 - **Single AZ = single point of failure**
 - Always deploy across at least 2 AZs for high availability
 - AZ failures are rare but do happen

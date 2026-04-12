@@ -101,7 +101,7 @@ Both are firewalls but work differently:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: AWS Reserves 5 IPs Per Subnet
+### MAIN PRECAUTION: AWS Reserves 5 IPs Per Subnet
 - First 4 IPs and last 1 IP are reserved by AWS
 - 10.0.1.0/24 = 256 IPs, but only **251 usable**
 - Don't make subnets too small

@@ -54,7 +54,7 @@ OLAP (Redshift):   "What were total sales by region for the last 3 years?" — f
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Redshift Is Not a Transactional Database
+### MAIN PRECAUTION: Redshift Is Not a Transactional Database
 - Do NOT use Redshift for your application's primary database
 - It's optimized for analytical reads, not high-frequency inserts/updates
 - Use RDS/Aurora for OLTP, Redshift for OLAP

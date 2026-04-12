@@ -62,7 +62,7 @@ User → Edge Location (PoP) → Regional Edge Cache → Origin (S3/EC2/etc.)
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: PoPs Are Not Regions
+### MAIN PRECAUTION: PoPs Are Not Regions
 - You cannot run EC2, RDS, Lambda, or other general compute at a PoP
 - PoPs only serve edge functions: caching, DNS, acceleration, security filtering
 - Your origin infrastructure still needs to be in a Region

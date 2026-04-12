@@ -44,8 +44,8 @@ For most MSP clients, RDS is the right choice — they want the database to just
 
 **5 decisions you must get right (hard/impossible to change later):**
 1. **Engine** — MySQL? PostgreSQL? Oracle? (can't change after creation)
-2. **VPC** — Which network? (⚠️ can't change after creation)
-3. **KMS key** — Which encryption key? (⚠️ can't change after creation)
+2. **VPC** — Which network? (can't change after creation)
+3. **KMS key** — Which encryption key? (can't change after creation)
 4. **Public access** — Yes/No? (changeable, but default No is almost always correct)
 5. **Multi-AZ** — Production or not? (changeable, but affects cost and availability from day one)
 
@@ -113,7 +113,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
   - 1–16 alphanumeric characters, must start with a letter
 - **Credentials management:**
   - **Managed in AWS Secrets Manager** (default, most secure) — RDS generates and rotates password automatically
-    - ⚠️ Additional charges apply for Secrets Manager
+    - Additional charges apply for Secrets Manager
   - **Self managed** — You create your own password or have RDS generate one
 
 ![Encryption Key, Authentication, Storage Configuration](../images/aws_console/rds04.png)
@@ -162,7 +162,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 
 - **Virtual Private Cloud (VPC):**
   - Choose existing VPC or create new
-  - ⚠️ **"After a database is created, you can't change its VPC"**
+  - **"After a database is created, you can't change its VPC"**
 
 - **DB subnet group** — Defines which subnets and IP ranges the DB cluster can use
 
@@ -181,7 +181,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 - **Create an RDS Proxy** checkbox — Fully managed database proxy
   - Improves scalability, resiliency, and security
   - Auto-creates IAM role and Secrets Manager secret
-  - ⚠️ Additional costs apply
+  - Additional costs apply
 
 ![Certificate Authority, Data API, Read Replica](../images/aws_console/rds08.png)
 
@@ -220,7 +220,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 
 ### Encryption
 - **AWS KMS key:** `(default) aws/rds` or customer managed key
-- ⚠️ **"You can't change the KMS key after you create your database"**
+- **"You can't change the KMS key after you create your database"**
 
 ### Enhanced Monitoring
 - **Enable Enhanced monitoring** checkbox — OS-level metrics (CPU, memory, processes)
@@ -278,7 +278,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 | | Multi-AZ (Standby) | Read Replica |
 |---|---|---|
 | Purpose | **Failover** (high availability) | **Read scaling** (offload reads) |
-| Readable? | ❌ No — just sits there waiting | ✅ Yes — serves read queries |
+| Readable? | no No — just sits there waiting | yes Yes — serves read queries |
 | Replication | Synchronous (zero lag) | Asynchronous (has lag) |
 | Failover | Automatic | Manual (you promote it) |
 | Region | Same region, different AZ | Same or different region |
@@ -320,12 +320,12 @@ For most MSP clients, RDS is the right choice — they want the database to just
 ### RDS Extended Support
 - Paid offering to keep running a DB engine version past its end-of-standard-support date
 - Useful when you can't upgrade immediately
-- ⚠️ Additional charges apply — plan upgrades to avoid this cost
+- Additional charges apply — plan upgrades to avoid this cost
 
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: VPC and KMS Key Cannot Be Changed After Creation
+### MAIN PRECAUTION: VPC and KMS Key Cannot Be Changed After Creation
 - Choose your VPC carefully — you cannot move the database to a different VPC later
 - Choose your KMS encryption key carefully — it's permanent
 - Plan your network architecture before creating the database
@@ -348,7 +348,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 ### 4. Use Secrets Manager for Credentials
 - Default option (most secure) — auto-generates and rotates passwords
 - Self-managed passwords risk being forgotten, shared, or hardcoded
-- ⚠️ Secrets Manager has additional charges
+- Secrets Manager has additional charges
 
 ### 5. Enable Encryption
 - Encryption at rest uses KMS keys
@@ -389,8 +389,8 @@ Yes. RDS offers two Multi-AZ deployment options:
 
 | Deployment | Standbys | Readable | Failover Time | Supported Engines |
 |------------|----------|----------|---------------|-------------------|
-| **Multi-AZ Instance** (classic) | 1 | ❌ Not readable | 60–120 sec | All RDS engines |
-| **Multi-AZ Cluster** (newer) | **2 (readable)** | ✅ Readable | ~35 sec | MySQL 8.0.28+, PostgreSQL 13.8+ |
+| **Multi-AZ Instance** (classic) | 1 | no Not readable | 60–120 sec | All RDS engines |
+| **Multi-AZ Cluster** (newer) | **2 (readable)** | yes Readable | ~35 sec | MySQL 8.0.28+, PostgreSQL 13.8+ |
 
 Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits include read capacity, faster failover (~35 sec), and lower write latency. Failover is DNS-based — the endpoint automatically points to the new primary.
 

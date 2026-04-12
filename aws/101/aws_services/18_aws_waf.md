@@ -151,7 +151,7 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Start with Count Mode, Not Block
+### MAIN PRECAUTION: Start with Count Mode, Not Block
 - New rules might accidentally block legitimate traffic
 - Use **Count** action first to see what would be blocked
 - Review the logs, then switch to **Block** once you're confident

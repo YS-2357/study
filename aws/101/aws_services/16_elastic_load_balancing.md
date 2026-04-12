@@ -386,9 +386,9 @@ Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Applian
 
 | | Free? | Details |
 |---|---|---|
-| **Shield Standard** | ✅ Free | DDoS protection included automatically (not ELB-specific, but protects ELB) |
-| **ELB itself** | ❌ Paid | All types (ALB, NLB, GWLB) cost money |
-| **AWS Free Tier** | 🟡 Limited | New accounts: 750 hours/month shared between CLB and ALB + 15 LCUs for ALB + 15 GB data for CLB (12 months) |
+| **Shield Standard** | Free | DDoS protection included automatically (not ELB-specific, but protects ELB) |
+| **ELB itself** | Paid | All types (ALB, NLB, GWLB) cost money |
+| **AWS Free Tier** | Limited | New accounts: 750 hours/month shared between CLB and ALB + 15 LCUs for ALB + 15 GB data for CLB (12 months) |
 
 ### Per-Type Pricing (US East - N. Virginia)
 
@@ -487,9 +487,9 @@ Yes. NLB supports TLS termination through **TLS listeners**, using certificates 
 
 | Attribute | ALB | NLB |
 |-----------|-----|-----|
-| Certificate support | ✅ HTTPS listener | ✅ TLS listener |
-| mTLS | ✅ Supported | ❌ Not supported |
-| TLS renegotiation | ✅ Supported | ❌ Not supported |
+| Certificate support | yes HTTPS listener | yes TLS listener |
+| mTLS | yes Supported | no Not supported |
+| TLS renegotiation | yes Supported | no Not supported |
 | Layer | L7 (HTTP/HTTPS) | L4 (TCP/UDP/TLS) |
 
 NLB + TLS provides high-performance encryption. ALB offers richer TLS features including mTLS and path-based routing.

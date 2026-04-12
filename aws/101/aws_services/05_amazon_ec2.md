@@ -549,7 +549,7 @@ echo "Hello World" > /var/www/html/index.html
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Never Use 0.0.0.0/0 for SSH/RDP in Production
+### MAIN PRECAUTION: Never Use 0.0.0.0/0 for SSH/RDP in Production
 - Allows anyone on internet to attempt connection
 - Common target for brute force attacks
 - Use specific IP addresses (office IP, VPN IP) only

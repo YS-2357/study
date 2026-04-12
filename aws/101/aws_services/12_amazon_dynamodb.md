@@ -101,17 +101,17 @@ Query: "all orders for A001 between January and February" → works!
 
 | Setting | Default Value | Editable after creation |
 |---|---|---|
-| Table class | DynamoDB Standard | ✅ Yes |
-| Capacity mode | On-demand | ✅ Yes |
-| Maximum read capacity units | - | ✅ Yes |
-| Maximum write capacity units | - | ✅ Yes |
-| Local secondary indexes | - | ❌ **No** |
-| Global secondary indexes | - | ✅ Yes |
-| Encryption key management | AWS owned key | ✅ Yes |
-| Deletion protection | Off | ✅ Yes |
-| Resource-based policy | Not active | ✅ Yes |
+| Table class | DynamoDB Standard | yes Yes |
+| Capacity mode | On-demand | yes Yes |
+| Maximum read capacity units | - | yes Yes |
+| Maximum write capacity units | - | yes Yes |
+| Local secondary indexes | - | no **No** |
+| Global secondary indexes | - | yes Yes |
+| Encryption key management | AWS owned key | yes Yes |
+| Deletion protection | Off | yes Yes |
+| Resource-based policy | Not active | yes Yes |
 
-> ⚠️ Notice: **Local secondary indexes** is the only setting that is NOT editable after creation.
+> Notice: **Local secondary indexes** is the only setting that is NOT editable after creation.
 
 ![Create Table - Tags](../images/aws_console/dynamodb3.png)
 
@@ -145,7 +145,7 @@ Query: "all orders for A001 between January and February" → works!
   - 1 WCU = 1 write/sec for items up to 1 KB
 - Auto-scaling adjusts capacity based on traffic
 - Cheaper per request if traffic is predictable
-- ⚠️ Throttling if you exceed provisioned capacity (without auto-scaling)
+- Throttling if you exceed provisioned capacity (without auto-scaling)
 
 ### Secondary Indexes
 - **GSI (Global Secondary Index)** — Query on any attribute, across all partitions
@@ -154,7 +154,7 @@ Query: "all orders for A001 between January and February" → works!
 - **LSI (Local Secondary Index)** — Query on sort key alternatives, same partition key
   - Shares table's provisioned capacity
   - Up to 5 per table
-  - ⚠️ Must be created at table creation time (can't add later)
+  - Must be created at table creation time (can't add later)
 
 ### DynamoDB Streams
 - Captures item-level changes (insert, update, delete) in order
@@ -172,12 +172,12 @@ Query: "all orders for A001 between January and February" → works!
 - Multi-region, multi-active replication
 - Write to any region, changes replicate to all other regions
 - Good for: global applications, disaster recovery
-- ⚠️ Additional cost for cross-region replication
+- Additional cost for cross-region replication
 
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Choose Your Primary Key Carefully
+### MAIN PRECAUTION: Choose Your Primary Key Carefully
 - Primary key cannot be changed after table creation
 - Bad partition key (e.g., a boolean, or a value with few variations) = hot partitions = throttling
 - Good partition key = high cardinality (many unique values, evenly distributed)

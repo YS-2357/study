@@ -45,10 +45,10 @@ Two main sub-services covered here:
 ### Maximum record size
 - Default: 1024 KiB (Kibibytes)
 - Range: 1024–10240 KiB
-- ⚠️ "Before increasing this limit, verify that all downstream applications can handle larger records"
+- "Before increasing this limit, verify that all downstream applications can handle larger records"
 
 ### Data stream settings summary
-All settings are editable after creation ✅
+All settings are editable after creation yes
 
 | Setting | Default Value |
 |---|---|
@@ -76,7 +76,7 @@ All settings are editable after creation ✅
 ### Choose source and destination
 - **Source** dropdown — choose a source (e.g., Direct PUT, Kinesis Data Stream)
 - **Destination** dropdown — choose a destination (e.g., Amazon S3, Amazon Redshift, Amazon OpenSearch, Splunk, HTTP endpoint)
-- ⚠️ **You cannot change the source and destination once the Firehose stream has been created**
+- **You cannot change the source and destination once the Firehose stream has been created**
 
 **Action buttons:** Cancel / **Create Firehose stream**
 
@@ -117,7 +117,7 @@ All settings are editable after creation ✅
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Firehose Source/Destination Cannot Be Changed After Creation
+### MAIN PRECAUTION: Firehose Source/Destination Cannot Be Changed After Creation
 - Choose carefully — you must delete and recreate the stream to change source or destination
 - Plan your data flow architecture before creating
 

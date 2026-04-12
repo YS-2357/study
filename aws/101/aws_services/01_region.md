@@ -20,7 +20,7 @@
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Always Check Which Region You're In
+### MAIN PRECAUTION: Always Check Which Region You're In
 - **Most common mistake** - Creating resources in the wrong Region
 - Check the Region selector (top-right) BEFORE creating anything
 - Easy to accidentally be in wrong Region and waste time/money

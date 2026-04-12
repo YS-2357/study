@@ -95,7 +95,7 @@ These are completely different services — similar abbreviations, nothing in co
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Clusters Cost Money While Running
+### MAIN PRECAUTION: Clusters Cost Money While Running
 - EMR clusters run on EC2 instances — you pay while they're up
 - Terminate clusters when processing is done
 - Use EMR Serverless or auto-termination to avoid forgotten running clusters

@@ -33,7 +33,7 @@
   - Suffix: `-331220046818-ap-northeast-2-an`
   - Full name: `amzn-s3-demo-bucket-331220046818-ap-northeast-2-an`
 - 3-63 characters, lowercase, numbers, hyphens
-- ⚠️ **Bucket name can't be changed after creation**
+- **Bucket name can't be changed after creation**
 
 ### Copy settings & Object Ownership
 
@@ -55,7 +55,7 @@ Best practice: keep ACLs disabled, use IAM/bucket policies for access control. A
 
 ![S3 - Block Public Access settings](../images/aws_console/s3-3.png)
 
-**Block all public access** — ✅ enabled by default (all 4 sub-settings checked):
+**Block all public access** — yes enabled by default (all 4 sub-settings checked):
 
 All 4 settings control whether **objects inside the bucket** can be publicly accessed from the internet — "can someone without any AWS credentials read my objects?" They don't affect private access (IAM users/roles), VPC endpoint access, or cross-account access via IAM roles.
 
@@ -73,10 +73,10 @@ Day 6: Try to add another public bucket policy        ← "new" policy attempt
 
 | Setting | Scope | Day 2 (old ACL) | Day 3 (old policy) | Day 5 (new ACL) | Day 6 (new policy) |
 |---------|-------|-----------------|-------------------|-----------------|-------------------|
-| 1. Block **new** ACLs | Future ACLs only | ❌ still public | — | ✅ blocked | — |
-| 2. Block **any** ACLs | All ACLs (past + future) | ✅ overridden | — | ✅ blocked | — |
-| 3. Block **new** policies | Future policies only | — | ❌ still public | — | ✅ blocked |
-| 4. Block **any** policies | All policies (past + future) | — | ✅ overridden | — | ✅ blocked |
+| 1. Block **new** ACLs | Future ACLs only | no still public | — | yes blocked | — |
+| 2. Block **any** ACLs | All ACLs (past + future) | yes overridden | — | yes blocked | — |
+| 3. Block **new** policies | Future policies only | — | no still public | — | yes blocked |
+| 4. Block **any** policies | All policies (past + future) | — | yes overridden | — | yes blocked |
 
 - **Settings 1 & 3** = "stop me from making new mistakes" — but old public access stays active
 - **Settings 2 & 4** = "fix everything — override old AND block new"
@@ -96,7 +96,7 @@ All (any)   → Setting 2              → Setting 4
 
 **The master checkbox "Block all public access"** turns on all 4 at once. For AWS 101: just keep this master checkbox on and don't touch individual settings.
 
-⚠️ **Leave this ON unless you specifically need public access** (e.g., static website hosting). S3 data breaches are almost always caused by disabling this. This is the #1 S3 security setting.
+**Leave this ON unless you specifically need public access** (e.g., static website hosting). S3 data breaches are almost always caused by disabling this. This is the #1 S3 security setting.
 
 ### Bucket Versioning & Tags
 
@@ -106,7 +106,7 @@ All (any)   → Setting 2              → Setting 4
 - **Disable** (default) — overwriting a file replaces it permanently
 - **Enable** — keeps every version of every object, can restore previous versions
 - Use case: protect against accidental deletes/overwrites
-- ⚠️ Once enabled, can only be suspended (not fully disabled). All versions continue to incur storage costs.
+- Once enabled, can only be suspended (not fully disabled). All versions continue to incur storage costs.
 
 **Tags** (optional):
 - Up to 50 tags per bucket
@@ -132,7 +132,7 @@ Encryption type:
 **Advanced settings — Object Lock:**
 - **Disable** (default) / Enable
 - WORM model (Write Once Read Many) — prevents objects from being deleted or overwritten
-- ⚠️ Only works with versioned buckets — enabling Object Lock automatically enables Versioning
+- Only works with versioned buckets — enabling Object Lock automatically enables Versioning
 - Use case: regulatory compliance, legal hold (법원 공문서 보관 등)
 
 
@@ -257,7 +257,7 @@ Additional costs:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Block Public Access — Don't Turn Off Unless You Mean It
+### MAIN PRECAUTION: Block Public Access — Don't Turn Off Unless You Mean It
 - S3 data breaches are almost always caused by disabling this setting
 - Leave it ON, use IAM/bucket policies + VPC endpoints for private access
 

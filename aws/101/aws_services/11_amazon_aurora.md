@@ -69,8 +69,8 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 
 **5 decisions you must get right (same as RDS — hard/impossible to change later):**
 1. **Engine** — Aurora MySQL or Aurora PostgreSQL? (can't change after creation)
-2. **VPC** — Which network? (⚠️ can't change after creation)
-3. **KMS key** — Which encryption key? (⚠️ can't change after creation)
+2. **VPC** — Which network? (can't change after creation)
+3. **KMS key** — Which encryption key? (can't change after creation)
 4. **Public access** — Yes/No? (default No is almost always correct)
 5. **Multi-AZ** — Create a replica or not? (Aurora replicas = read scaling + failover)
 
@@ -163,13 +163,13 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 
 ### Connectivity
 - Same as RDS: VPC, subnet group, public access, security group
-- ⚠️ **"After a database is created, you can't change its VPC"**
+- **"After a database is created, you can't change its VPC"**
 
 ![Public Access, Security Group, RDS Proxy](../images/aws_console/rds07.png)
 
 ### RDS Proxy
 - Works with Aurora — improves connection pooling for serverless or Lambda workloads
-- ⚠️ Additional costs
+- Additional costs
 
 ![Certificate Authority, Data API, Write Forwarding](../images/aws_console/rds08.png)
 
@@ -195,7 +195,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 ![Encryption and Enhanced Monitoring](../images/aws_console/rds10.png)
 
 ### Encryption
-- ⚠️ **"You can't change the KMS key after you create your database"**
+- **"You can't change the KMS key after you create your database"**
 
 ![Log Exports, DevOps Guru](../images/aws_console/rds11.png)
 
@@ -240,7 +240,7 @@ All instances point to the same storage. Writer writes once, readers see it imme
 | | EBS (standard RDS) | Aurora storage layer |
 |---|---|---|
 | What is it | Disk attached to one instance | Custom distributed storage by AWS |
-| Visible in console? | Yes (EC2 > EBS volumes) | ❌ No — invisible, internal infrastructure |
+| Visible in console? | Yes (EC2 > EBS volumes) | no No — invisible, internal infrastructure |
 | Size | You choose (100GB, 500GB, etc.) | Auto-grows (up to 128 TiB) |
 | Lives in | One AZ | Spread across 3 AZs |
 | Managed by | You configure, AWS maintains | AWS entirely |
@@ -290,7 +290,7 @@ This is also why Aurora is AWS-only — this storage system is proprietary AWS i
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: VPC and KMS Key Cannot Be Changed After Creation
+### MAIN PRECAUTION: VPC and KMS Key Cannot Be Changed After Creation
 - Same as RDS — choose carefully before creating
 - Plan your network and encryption strategy first
 

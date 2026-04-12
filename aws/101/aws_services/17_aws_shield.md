@@ -19,15 +19,15 @@ Shield sits at the **network entry point** of AWS — before traffic reaches you
 
 ```
 Normal traffic:
-Internet → AWS network edge → Your app ✅
+Internet → AWS network edge → Your app yes
 
 DDoS attack (without Shield):
-1 million fake requests → AWS network edge → Your app → overwhelmed → crashes ❌
+1 million fake requests → AWS network edge → Your app → overwhelmed → crashes no
 
 DDoS attack (with Shield):
 1 million fake requests → AWS network edge → Shield detects abnormal pattern
                                              → drops fake traffic
-                                             → only real traffic passes → Your app ✅
+                                             → only real traffic passes → Your app yes
 ```
 
 **How Shield detects DDoS:**
@@ -104,7 +104,7 @@ DDoS attack (with Shield):
   - Attack: Requests that look like real users but at massive scale
   - Example: **HTTP flood** (1 million GET requests/sec), **Slow POST** (open connections, send data very slowly to tie up resources)
   - Shield sees: HTTP headers, URLs, request patterns
-  - ⚠️ **Shield Advanced only** — Standard can't inspect HTTP content
+  - **Shield Advanced only** — Standard can't inspect HTTP content
 
 **Why Standard can't do Layer 7:**
 - Layer 7 requires understanding HTTP (headers, URLs, cookies) — expensive to inspect at scale
@@ -144,7 +144,7 @@ You choose which resources to protect:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Shield Standard Is Already On — Don't Pay for Advanced Unless Needed
+### MAIN PRECAUTION: Shield Standard Is Already On — Don't Pay for Advanced Unless Needed
 - Every AWS account already has Shield Standard for free
 - Shield Advanced costs $3,000/month with 1-year commitment
 - Most MSP clients do NOT need Advanced

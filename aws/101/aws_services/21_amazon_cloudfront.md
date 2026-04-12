@@ -39,7 +39,7 @@ Upload to S3 → CloudFront distribution → Users worldwide
 | | S3 alone | S3 + CloudFront |
 |---|---------|----------------|
 | **Speed** | Single region, far users = slow | 600+ edge locations = fast |
-| **HTTPS** | S3 website endpoint = HTTP only | ✅ Free HTTPS with ACM certificate |
+| **HTTPS** | S3 website endpoint = HTTP only | yes Free HTTPS with ACM certificate |
 | **Custom domain** | Complicated | Easy (Route 53 + ACM) |
 | **Caching** | None | Edge caching, reduces S3 requests + cost |
 | **Security** | Must make bucket public | OAC — bucket stays private, only CloudFront can access |
@@ -120,7 +120,7 @@ Additional costs:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Cache Invalidation Takes Time and Costs Money
+### MAIN PRECAUTION: Cache Invalidation Takes Time and Costs Money
 - If you update content at origin, CloudFront still serves old cached version until TTL expires
 - Manual invalidation: `/*` invalidates everything but costs per path
 - Better approach: use versioned file names (e.g., `app.v2.js`) so new URL = new cache

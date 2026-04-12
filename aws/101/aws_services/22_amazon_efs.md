@@ -44,7 +44,7 @@ Key observations:
 - **Throughput mode: Elastic** — automatically scales throughput with workload, pay per use. Alternative: Provisioned (fixed throughput, pay whether you use it or not)
 - **Lifecycle policies** — automatically move files to cheaper storage tiers based on access patterns (IA after 30 days, Archive after 90 days)
 - **Automatic backups: Enabled** — uses AWS Backup, unlike EBS which has no auto-backup by default
-- ⚠️ **Encryption cannot be changed after creation** — same as EBS
+- **Encryption cannot be changed after creation** — same as EBS
 
 **Cancel / Customize / Create file system** buttons
 
@@ -104,7 +104,7 @@ Example: 100 GB all in Standard = $30/month. With lifecycle (50% in IA) = ~$16/m
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Encryption Cannot Be Changed After Creation
+### MAIN PRECAUTION: Encryption Cannot Be Changed After Creation
 - Decide before creating — enable encryption (recommended, and it's the default)
 - Must delete and recreate to change encryption setting
 

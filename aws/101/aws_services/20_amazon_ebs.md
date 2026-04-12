@@ -44,7 +44,7 @@
 
 **Availability Zone:**
 - Selected: apne2-az1 (ap-northeast-2a)
-- ⚠️ **Volume must be in the same AZ as the EC2 instance you want to attach it to**
+- **Volume must be in the same AZ as the EC2 instance you want to attach it to**
 - Cannot attach across AZs — must snapshot and recreate in another AZ
 
 **Snapshot ID** (optional):
@@ -60,7 +60,7 @@
 - Checkbox: "Encrypt this volume" (unchecked by default)
 - Uses AWS KMS (Key Management Service) for encryption
 - Can use default AWS-managed key or custom CMK
-- ⚠️ Once created, you cannot change encryption status — must snapshot → copy with encryption → create new volume
+- Once created, you cannot change encryption status — must snapshot → copy with encryption → create new volume
 
 **Tags** (optional):
 - Up to 50 tags per volume
@@ -142,12 +142,12 @@ Not snapshot-able: S3 (use versioning/replication), Lambda (code versions are th
 
 | Service | EBS Support | Notes |
 |---------|------------|-------|
-| **EC2** | ✅ | Primary use case |
-| **EKS (EC2 nodes)** | ✅ | Via EBS CSI driver |
-| **EKS (Fargate)** | ❌ | Fargate pods cannot mount EBS |
-| **ECS (EC2 launch type)** | ✅ | Via Docker volume driver |
-| **ECS (Fargate)** | ❌ | Fargate tasks cannot mount EBS |
-| **Lambda** | ❌ | No persistent block storage |
+| **EC2** | yes | Primary use case |
+| **EKS (EC2 nodes)** | yes | Via EBS CSI driver |
+| **EKS (Fargate)** | no | Fargate pods cannot mount EBS |
+| **ECS (EC2 launch type)** | yes | Via Docker volume driver |
+| **ECS (Fargate)** | no | Fargate tasks cannot mount EBS |
+| **Lambda** | no | No persistent block storage |
 
 
 ## Pricing
@@ -174,7 +174,7 @@ Additional costs:
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Same AZ as EC2 Instance
+### MAIN PRECAUTION: Same AZ as EC2 Instance
 - Volume and instance must be in the same AZ
 - Plan your AZ before creating volumes
 - Cross-AZ requires snapshot → recreate workflow
@@ -244,10 +244,10 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 
 | Criteria | S3 | EBS | [EFS](22_amazon_efs.md) |
 |----------|-----|-----|-----|
-| Frequent modification | ❌ (full overwrite) | ✅ (block-level edits) | ⭕ (file-level edits) |
-| 4 TB capacity | ✅ Unlimited | ✅ Max 64 TB | ✅ Auto-scales |
-| Single instance | — | ✅ Optimal | Possible but overkill |
-| Multi-instance sharing | ✅ | ⚠️ Multi-Attach (io only) | ✅ Optimal |
+| Frequent modification | no (full overwrite) | yes (block-level edits) | ⭕ (file-level edits) |
+| 4 TB capacity | yes Unlimited | yes Max 64 TB | yes Auto-scales |
+| Single instance | — | yes Optimal | Possible but overkill |
+| Multi-instance sharing | yes | Multi-Attach (io only) | yes Optimal |
 | Cost (~4 TB) | ~$92/month | ~$320/month (gp3) | ~$1,200/month |
 
 **Recommendation**: Single EC2 with frequent modifications → **EBS gp3**. Multiple EC2s needing shared access → **EFS**.

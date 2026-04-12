@@ -441,7 +441,7 @@ Example policy (allow reading S3):
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Never Use Root Account for Daily Tasks
+### MAIN PRECAUTION: Never Use Root Account for Daily Tasks
 - Root account has unlimited access to everything
 - Create IAM users for daily work
 - Enable MFA (Multi-Factor Authentication) on root account

@@ -24,7 +24,7 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
 
 ## Create Auto Scaling Group - Console Flow (7 Steps)
 
-> ⚠️ No console screenshots available — based on known ASG console structure. May not match current console exactly.
+> No console screenshots available — based on known ASG console structure. May not match current console exactly.
 
 ### Step 1: Choose launch template
 - **Auto Scaling group name** — Name for the ASG
@@ -209,7 +209,7 @@ After:  4x t3.large (new template)
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Set Maximum Carefully — It's Your Cost Ceiling
+### MAIN PRECAUTION: Set Maximum Carefully — It's Your Cost Ceiling
 - Maximum = the most instances ASG will ever launch
 - If set too high, a traffic spike (or attack) could launch many expensive instances
 - Always calculate: max instances × instance cost = worst-case monthly bill

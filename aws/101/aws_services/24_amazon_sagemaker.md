@@ -54,7 +54,7 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Endpoints Cost Money While Running
+### MAIN PRECAUTION: Endpoints Cost Money While Running
 - Real-time endpoints run 24/7 on dedicated instances — you pay even with zero traffic
 - A forgotten `ml.p3.2xlarge` endpoint costs ~$900/month
 - Use Serverless Inference for dev/test or low-traffic workloads
