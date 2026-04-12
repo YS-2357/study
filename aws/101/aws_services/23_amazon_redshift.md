@@ -25,6 +25,10 @@ OLAP (Redshift):   "What were total sales by region for the last 3 years?" — f
 | **Glue** | Serverless ETL + data catalog | Data preparation, schema discovery |
 | **QuickSight** | BI visualization/dashboards | Charts and reports on top of Redshift/Athena/etc. |
 
+## How It Works
+
+Data is loaded into Redshift tables from S3 using the `COPY` command, which parallelizes the load across compute nodes. Redshift stores data in columnar format on disk and distributes rows across nodes according to a distribution key. When you run a SQL query, the leader node builds an execution plan and sends parallel query fragments to compute nodes. Each compute node processes its local data slice and returns results to the leader, which aggregates and returns the final result.
+
 ## Console Access
 - Search "Redshift" in AWS Console
 - Amazon Redshift > Clusters (Provisioned) or Serverless
