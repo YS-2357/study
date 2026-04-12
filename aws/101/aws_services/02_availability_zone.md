@@ -3,6 +3,10 @@
 ## What It Is
 An **Availability Zone (AZ)** is one or more physical data centers within a Region. Each AZ has its own power, cooling, and networking, physically separated from other AZs.
 
+## How It Works
+
+Each AZ is a physically separate data center with its own power, cooling, and networking. When you create resources like EC2 instances or subnets, you select an AZ. Deploying across multiple AZs means a failure in one AZ does not affect resources in another.
+
 ## Console Access
 **No dedicated console page** - AZs are shown within other service consoles.
 
