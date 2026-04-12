@@ -244,7 +244,7 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 
 | Criteria | S3 | EBS | [EFS](22_amazon_efs.md) |
 |----------|-----|-----|-----|
-| Frequent modification | no (full overwrite) | yes (block-level edits) | ⭕ (file-level edits) |
+| Frequent modification | no (full overwrite) | yes (block-level edits) | yes (file-level edits) |
 | 4 TB capacity | Unlimited | Max 64 TB | Auto-scales |
 | Single instance | — | Optimal | Possible but overkill |
 | Multi-instance sharing | yes | Multi-Attach (io only) | Optimal |
