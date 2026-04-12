@@ -49,6 +49,10 @@ First request = cache miss (goes to DB). After that, same data served from memor
 - **DAX** = fast but disposable (cache for DynamoDB only, drop-in)
 - **MemoryDB** = fast AND durable (can replace the DB itself)
 
+## How It Works
+
+Your application checks the cache before querying the database (cache-aside pattern). On a cache hit, data is returned from in-memory storage in microseconds. On a cache miss, the application fetches from the database, stores the result in the cache with a TTL, and returns it. ElastiCache manages node provisioning, replication, and failover. Serverless mode scales automatically; node-based mode gives you control over node type and cluster size.
+
 ## Console Access
 - Search "ElastiCache" in AWS Console
 - ElastiCache > Caches > Create cache
