@@ -14,7 +14,18 @@ if git diff --cached --quiet 2>/dev/null; then
     exit 0
 fi
 
-git commit -m "auto: sync file changes" -q 2>/dev/null
+# Build commit message from staged files
+CHANGED_FILES=$(git diff --cached --name-only 2>/dev/null)
+FILE_COUNT=$(echo "$CHANGED_FILES" | grep -c .)
+FIRST_FILE=$(echo "$CHANGED_FILES" | head -1)
+
+if [ "$FILE_COUNT" -eq 1 ]; then
+    COMMIT_MSG="auto: update $FIRST_FILE"
+else
+    COMMIT_MSG="auto: update $FIRST_FILE and $((FILE_COUNT - 1)) more"
+fi
+
+git commit -m "$COMMIT_MSG" -q 2>/dev/null
 
 PUSH_OUTPUT=$(CLAUDE_AUTO_PUSH=1 git \
     -c credential.helper= \
