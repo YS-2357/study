@@ -5,6 +5,10 @@
 
 **Serverless** = No servers to manage, AWS handles infrastructure, automatic scaling, high availability
 
+## How It Works
+
+An event (S3 upload, API Gateway request, EventBridge schedule, etc.) triggers the Lambda function. AWS provisions a secure execution environment, runs your handler function with the event payload, and returns the result. You pay only for the duration and memory consumed. Environments are reused for subsequent invocations (warm start) unless idle, which causes a cold start on the next invocation.
+
 ## Console Access
 **Lambda Console → Functions**
 - Direct link: https://console.aws.amazon.com/lambda/home#/functions
