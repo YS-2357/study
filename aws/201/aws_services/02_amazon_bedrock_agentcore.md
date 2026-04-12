@@ -189,8 +189,6 @@ Managed headless web browsing for agents.
 - Auto-scales from zero to hundreds of sessions
 - Compatible with Playwright and BrowserUse frameworks
 
----
-
 ## AgentCore + Strands: How They Work Together
 
 ```
