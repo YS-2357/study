@@ -237,7 +237,7 @@ A listener checks for connection requests using the port and protocol you config
 - Same as ALB/NLB
 
 **Availability Zones and subnets:**
-- ⚠️ **Subnets can't be removed after creation**
+- **Subnets can't be removed after creation**
 - At least one subnet must be specified
 - Routes traffic to targets in selected subnets
 
