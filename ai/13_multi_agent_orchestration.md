@@ -138,4 +138,4 @@ Review gates catch **structural bugs** — ownership violations, rule violations
 > **Tip:** If something works at runtime but violates a rule, only the review gate catches it. Design your review criteria around rules, not just behavior.
 
 ---
-← Previous: [Prompt Caching](12_prompt_caching.md) | [Overview](00_overview.md)
+← Previous: [Prompt Caching](12_prompt_caching.md) | [Overview](00_overview.md) | Next: [Subagent Design](14_subagent_design.md) →
