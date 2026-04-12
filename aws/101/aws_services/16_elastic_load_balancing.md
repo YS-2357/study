@@ -169,7 +169,7 @@ A listener checks for connection requests using the port and protocol you config
 ![NLB - Security groups, Listeners and routing](../images/aws_console/nlb3.png)
 
 **Security groups - *recommended*:**
-- ⚠️ Can only be enabled at creation by including at least one security group
+- **Note:** Can only be enabled at creation by including at least one security group
 - Can change security groups after creation
 - Must allow communication with registered targets on listener port AND health check port
 - For PrivateLink NLBs, SG rules are enforced on PrivateLink traffic (can turn off inbound rule evaluation after creation)
