@@ -217,7 +217,7 @@ AWS service for automated IP address allocation.
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Plan CIDR Carefully - Cannot Change Primary CIDR
+### MAIN PRECAUTION: Plan CIDR Carefully - Cannot Change Primary CIDR
 - Primary CIDR block is permanent after VPC creation
 - Must delete and recreate VPC to change primary CIDR
 - Plan for growth and avoid overlaps with on-premises networks
