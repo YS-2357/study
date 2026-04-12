@@ -35,6 +35,10 @@ Fargate is a **launch type**, not a standalone service. It works with:
 - Need server access, GPUs, or specific OS config → **EC2**
 - Short event-driven functions (<15 min) → **Lambda**
 
+## How It Works
+
+You define a Task Definition specifying the container image, CPU, memory, IAM roles, and networking mode. Fargate uses the `awsvpc` networking mode, giving each task its own ENI with a private IP. When ECS runs the task, Fargate provisions isolated compute capacity, pulls the image from ECR, starts the container, and monitors its health. You never see or manage the underlying EC2 instances. An ECS Service maintains a desired count of running tasks and integrates with a load balancer for traffic distribution.
+
 ## Console Access
 - Search "ECS" in AWS Console
 - Amazon ECS > Clusters > Create cluster (select Fargate)
