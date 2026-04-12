@@ -3,6 +3,10 @@
 ## What It Is
 **Security Group (SG)** is a virtual firewall that controls inbound and outbound traffic at the instance/ENI (Elastic Network Interface) level.
 
+## How It Works
+
+A security group is attached to an ENI (Elastic Network Interface) on each resource. Inbound rules list which source IPs or security groups are allowed to send traffic to specific ports and protocols. Security groups are stateful — if an inbound rule allows a request, the response is automatically allowed outbound. All traffic not explicitly allowed is denied. Multiple security groups can be attached to one resource; all rules are evaluated together.
+
 ## Console Access
 **VPC Console → Security Groups** or **EC2 Console → Security Groups**
 - Direct link: https://console.aws.amazon.com/vpc/home#SecurityGroups
