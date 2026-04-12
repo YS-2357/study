@@ -5,6 +5,10 @@
 
 **See [Computing Basics - Storage](../../../computing/03_storage.md) for block vs file vs object storage fundamentals.**
 
+## How It Works
+
+You create an EBS volume in a specific AZ and attach it to an EC2 instance in the same AZ. The volume appears as a block device that you format and mount like a physical disk. Data persists independently of the instance lifecycle — stopping or terminating the instance does not delete the volume unless "Delete on Termination" is enabled. Snapshots capture the volume state at a point in time and are stored in S3 (AWS-managed); new volumes can be created from snapshots in any AZ.
+
 ## Console Access
 - AWS Console → EC2 → Left sidebar → Elastic Block Store → Volumes
 - Breadcrumb: EC2 > Volumes
