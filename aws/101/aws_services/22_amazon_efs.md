@@ -7,6 +7,10 @@
 
 **See [Amazon EBS](./20_amazon_ebs.md) for block storage comparison.**
 
+## How It Works
+
+You create an EFS file system and EFS creates mount targets in each AZ you select. EC2 instances mount the file system using the NFS v4.1 protocol, connecting to the mount target in their AZ. All instances see the same file system and changes made by one instance are immediately visible to all others. The file system grows and shrinks automatically as files are added or deleted. Lifecycle policies move files between storage tiers (Standard, Infrequent Access, Archive) based on access patterns.
+
 ## Console Access
 - AWS Console → EFS → File systems → Create file system
 - Breadcrumb: EFS > File systems
