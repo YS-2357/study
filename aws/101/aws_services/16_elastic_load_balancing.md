@@ -330,7 +330,7 @@ The layer determines what part of the traffic the load balancer can see and act 
 - Not about routing logic — about inserting firewalls/IDS/IPS into the traffic path
 - Best when: client requires third-party security appliances
 
-#### How GWLB Handles Public Traffic
+### How GWLB Handles Public Traffic
 
 GWLB is always **internal** (no internet-facing option), but it still handles public inbound traffic — indirectly via routing:
 
