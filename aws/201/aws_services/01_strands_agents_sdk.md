@@ -72,21 +72,21 @@ Strands is model-agnostic. Supported providers (official):
 
 | Provider | Python | TypeScript | Notes |
 |---|---|---|---|
-| **Amazon Bedrock** | ✅ | ✅ | Default, recommended for AWS |
-| **Amazon Nova** | ✅ | ❌ | Nova-specific optimizations |
-| **Anthropic (direct)** | ✅ | ❌ | Direct API, not through Bedrock |
-| **Google** | ✅ | ✅ | Gemini models |
-| **OpenAI** | ✅ | ✅ | GPT models |
-| **OpenAI Responses API** | ✅ | ❌ | Responses API variant |
-| **LiteLLM** | ✅ | ❌ | Proxy to 100+ providers |
-| **llama.cpp** | ✅ | ❌ | Local models via llama.cpp |
-| **LlamaAPI** | ✅ | ❌ | LlamaAPI service |
-| **MistralAI** | ✅ | ❌ | Mistral models |
-| **Ollama** | ✅ | ❌ | Local models |
-| **SageMaker** | ✅ | ❌ | SageMaker endpoints |
-| **Vercel** | ❌ | ✅ | TypeScript only |
-| **Writer** | ✅ | ❌ | Writer models |
-| **Custom** | ✅ | ✅ | Any model with tool-use support |
+| **Amazon Bedrock** | yes | yes | Default, recommended for AWS |
+| **Amazon Nova** | yes | no | Nova-specific optimizations |
+| **Anthropic (direct)** | yes | no | Direct API, not through Bedrock |
+| **Google** | yes | yes | Gemini models |
+| **OpenAI** | yes | yes | GPT models |
+| **OpenAI Responses API** | yes | no | Responses API variant |
+| **LiteLLM** | yes | no | Proxy to 100+ providers |
+| **llama.cpp** | yes | no | Local models via llama.cpp |
+| **LlamaAPI** | yes | no | LlamaAPI service |
+| **MistralAI** | yes | no | Mistral models |
+| **Ollama** | yes | no | Local models |
+| **SageMaker** | yes | no | SageMaker endpoints |
+| **Vercel** | no | yes | TypeScript only |
+| **Writer** | yes | no | Writer models |
+| **Custom** | yes | yes | Any model with tool-use support |
 
 Community providers also available: CLOVA Studio, Cohere, Fireworks AI, MLX, NVIDIA NIM, vLLM, xAI, and more.
 
