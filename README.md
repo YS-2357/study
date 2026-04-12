@@ -45,6 +45,23 @@ Every note has a footer:
 
 Every domain has a `00_overview.md` that serves as the study hub with links to all notes in study order.
 
+### Markdown formatting
+
+| Element | Syntax | When to use |
+|---------|--------|-------------|
+| Note title | `#` | One per file — the file title only |
+| Major section | `##` | `What It Is`, `How It Works`, etc. |
+| Subsection | `###` | Breakdown within a section |
+| Deeper | `####`+ | Never — split the note instead |
+| Bullet list | `- item` | Unordered facts, properties, options |
+| Numbered list | `1. item` | Ordered steps, study order, priority |
+| Bold | `**text**` | Key terms, important warnings |
+| Italic | `*text*` | Light emphasis, titles of external works |
+| Inline code | `` `text` `` | Commands, filenames, env vars, values |
+| Table | `\| col \|` | Comparisons, option sets, structured data |
+| Callout | `> **Tip:**` | Practical guidance — the only callout format |
+| Divider | `---` | Before the navigation footer only |
+
 ### Content rules
 
 - Explain a concept once, in the note where it belongs. Other notes link to it instead of re-explaining.
