@@ -65,8 +65,6 @@ Strands gives you full code-level control over agent behavior without forcing yo
 
 **Key distinction:** Strands is the *framework* you write code with. AgentCore is the *infrastructure* you deploy to. They work together but are independent — you can use Strands without AgentCore (deploy anywhere Python/Node.js runs) or use AgentCore with other frameworks (LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, etc.).
 
----
-
 ## Key Concepts
 
 ### Model Providers
