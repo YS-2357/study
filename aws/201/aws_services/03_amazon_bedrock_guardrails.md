@@ -45,7 +45,7 @@ Two modes:
 
 Supported PII types: name, email, phone, SSN, credit card, address, age, driver's license, passport, IP address, and more.
 
-### ⚠️ PII Still Reaches AWS
+### PII Still Reaches AWS
 Guardrails process data *within* AWS. They protect the model from seeing PII, not AWS from receiving it.
 
 ```
