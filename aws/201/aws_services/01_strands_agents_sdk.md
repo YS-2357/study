@@ -168,11 +168,9 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Custom evaluators supported
 - User simulation for automated testing
 
----
-
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: The LLM Decides — You Must Constrain It
+### MAIN PRECAUTION: The LLM Decides — You Must Constrain It
 - Model-driven means the LLM chooses which tools to call and in what order
 - A vague system prompt + powerful tools = unpredictable behavior
 - Write specific, bounded system prompts
