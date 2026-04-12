@@ -3,6 +3,10 @@
 ## What It Is
 **VPC (Virtual Private Cloud)** is a logically isolated virtual network where you launch AWS resources with complete control over IP addressing, subnets, routing, and security.
 
+## How It Works
+
+You define a VPC with a CIDR block, then carve it into subnets across AZs. An Internet Gateway attached to the VPC enables internet access; route tables on each subnet determine where traffic flows. Private subnets use a NAT Gateway (in a public subnet) for outbound internet access without being directly reachable from the internet. Security Groups and NACLs control traffic at the instance and subnet level respectively.
+
 ## Typical VPC Setup Flow
 1. **Create VPC** - Define CIDR block (e.g., 10.0.0.0/16)
 2. **Create Subnets** - Public and private subnets in different AZs
