@@ -96,4 +96,4 @@ A web browser loading a page uses multiple protocols:
 Protocols determine which ports to open in [Security Groups](../aws/101/aws_services/14_security_group.md), which [load balancer](../aws/101/aws_services/16_elastic_load_balancing.md) type to use (NLB for TCP/UDP, ALB for HTTP), and how to troubleshoot connectivity issues.
 
 ---
-← [Overview](00_overview.md) | Next: [Addressing](02_addressing.md) →
+← [Overview](00_overview.md) | [Overview](00_overview.md) | Next: [Addressing](02_addressing.md) →
