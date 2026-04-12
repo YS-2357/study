@@ -305,7 +305,7 @@ What CDK creates for your project:
 | Resource | CDK construct level | Cost concern |
 |---|---|---|
 | S3 bucket | L2 | Negligible |
-| OpenSearch Serverless | L1 | ⚠️ Highest — destroy when not testing |
+| OpenSearch Serverless | L1 | Highest — destroy when not testing |
 | Knowledge Base | L1 | Per query |
 | Guardrails | L1 | Per assessment |
 | Fargate + ALB | L3 | Per hour while running |
