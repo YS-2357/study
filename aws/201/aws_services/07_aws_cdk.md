@@ -318,7 +318,7 @@ CDK makes infrastructure reproducible and deletable. For cost-sensitive projects
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: cdk destroy May Not Delete Everything
+### MAIN PRECAUTION: cdk destroy May Not Delete Everything
 - Some resources have deletion protection by default (S3 buckets with objects, RDS)
 - Set `removal_policy=RemovalPolicy.DESTROY` and `auto_delete_objects=True` for S3 buckets you want fully cleaned up
 - Always verify with `aws` CLI after destroy
