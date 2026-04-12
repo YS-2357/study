@@ -214,8 +214,8 @@
 - **Unchecked:** User has NO console access, programmatic access only (API/CLI/SDK)
 
 **When to check (common use):**
-- ✓ Human users (developers, admins) who need to see/click in console
-- ✗ Applications, scripts, automation (they use access keys or roles)
+- Yes: Human users (developers, admins) who need to see/click in console
+- No: Applications, scripts, automation (they use access keys or roles)
 
 **Example:**
 - Client's developer needs to check EC2 instances → Check it
