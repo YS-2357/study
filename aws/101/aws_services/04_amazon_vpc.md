@@ -284,7 +284,7 @@ AWS service for automated IP address allocation.
 
 ### 12. Security Groups and NACLs
 
-#### How They Apply — ENI vs Subnet
+### How They Apply — ENI vs Subnet
 
 ```
 VPC (building)
