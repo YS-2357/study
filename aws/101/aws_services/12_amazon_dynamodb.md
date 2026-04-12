@@ -101,15 +101,15 @@ Query: "all orders for A001 between January and February" → works!
 
 | Setting | Default Value | Editable after creation |
 |---|---|---|
-| Table class | DynamoDB Standard | yes Yes |
-| Capacity mode | On-demand | yes Yes |
-| Maximum read capacity units | - | yes Yes |
-| Maximum write capacity units | - | yes Yes |
-| Local secondary indexes | - | no **No** |
-| Global secondary indexes | - | yes Yes |
-| Encryption key management | AWS owned key | yes Yes |
-| Deletion protection | Off | yes Yes |
-| Resource-based policy | Not active | yes Yes |
+| Table class | DynamoDB Standard | Yes |
+| Capacity mode | On-demand | Yes |
+| Maximum read capacity units | - | Yes |
+| Maximum write capacity units | - | Yes |
+| Local secondary indexes | - | **No** |
+| Global secondary indexes | - | Yes |
+| Encryption key management | AWS owned key | Yes |
+| Deletion protection | Off | Yes |
+| Resource-based policy | Not active | Yes |
 
 > Notice: **Local secondary indexes** is the only setting that is NOT editable after creation.
 

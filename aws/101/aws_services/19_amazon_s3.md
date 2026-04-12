@@ -73,10 +73,10 @@ Day 6: Try to add another public bucket policy        ← "new" policy attempt
 
 | Setting | Scope | Day 2 (old ACL) | Day 3 (old policy) | Day 5 (new ACL) | Day 6 (new policy) |
 |---------|-------|-----------------|-------------------|-----------------|-------------------|
-| 1. Block **new** ACLs | Future ACLs only | no still public | — | yes blocked | — |
-| 2. Block **any** ACLs | All ACLs (past + future) | yes overridden | — | yes blocked | — |
-| 3. Block **new** policies | Future policies only | — | no still public | — | yes blocked |
-| 4. Block **any** policies | All policies (past + future) | — | yes overridden | — | yes blocked |
+| 1. Block **new** ACLs | Future ACLs only | still public | — | blocked | — |
+| 2. Block **any** ACLs | All ACLs (past + future) | overridden | — | blocked | — |
+| 3. Block **new** policies | Future policies only | — | still public | — | blocked |
+| 4. Block **any** policies | All policies (past + future) | — | overridden | — | blocked |
 
 - **Settings 1 & 3** = "stop me from making new mistakes" — but old public access stays active
 - **Settings 2 & 4** = "fix everything — override old AND block new"

@@ -240,7 +240,7 @@ All instances point to the same storage. Writer writes once, readers see it imme
 | | EBS (standard RDS) | Aurora storage layer |
 |---|---|---|
 | What is it | Disk attached to one instance | Custom distributed storage by AWS |
-| Visible in console? | Yes (EC2 > EBS volumes) | no No — invisible, internal infrastructure |
+| Visible in console? | Yes (EC2 > EBS volumes) | No — invisible, internal infrastructure |
 | Size | You choose (100GB, 500GB, etc.) | Auto-grows (up to 128 TiB) |
 | Lives in | One AZ | Spread across 3 AZs |
 | Managed by | You configure, AWS maintains | AWS entirely |

@@ -278,7 +278,7 @@ For most MSP clients, RDS is the right choice — they want the database to just
 | | Multi-AZ (Standby) | Read Replica |
 |---|---|---|
 | Purpose | **Failover** (high availability) | **Read scaling** (offload reads) |
-| Readable? | no No — just sits there waiting | yes Yes — serves read queries |
+| Readable? | No — just sits there waiting | Yes — serves read queries |
 | Replication | Synchronous (zero lag) | Asynchronous (has lag) |
 | Failover | Automatic | Manual (you promote it) |
 | Region | Same region, different AZ | Same or different region |
@@ -389,8 +389,8 @@ Yes. RDS offers two Multi-AZ deployment options:
 
 | Deployment | Standbys | Readable | Failover Time | Supported Engines |
 |------------|----------|----------|---------------|-------------------|
-| **Multi-AZ Instance** (classic) | 1 | no Not readable | 60–120 sec | All RDS engines |
-| **Multi-AZ Cluster** (newer) | **2 (readable)** | yes Readable | ~35 sec | MySQL 8.0.28+, PostgreSQL 13.8+ |
+| **Multi-AZ Instance** (classic) | 1 | Not readable | 60–120 sec | All RDS engines |
+| **Multi-AZ Cluster** (newer) | **2 (readable)** | Readable | ~35 sec | MySQL 8.0.28+, PostgreSQL 13.8+ |
 
 Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits include read capacity, faster failover (~35 sec), and lower write latency. Failover is DNS-based — the endpoint automatically points to the new primary.
 

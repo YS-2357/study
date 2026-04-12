@@ -34,7 +34,7 @@ First request = cache miss (goes to DB). After that, same data served from memor
 | Works with | Anything (RDS, Aurora, APIs, etc.) | DynamoDB only | Standalone (can be primary DB) |
 | Engine | Valkey, Redis OSS, Memcached | Custom (DynamoDB-aware) | Redis compatible |
 | Integration | You write cache logic | Drop-in (same DynamoDB API) | You write app logic |
-| Data durability | no Can lose data | no Can lose data | yes Durable (Multi-AZ transaction log) |
+| Data durability | Can lose data | Can lose data | Durable (Multi-AZ transaction log) |
 | Use as primary DB? | No | No | Yes |
 | Management | Managed (Serverless or node-based) | Fully managed | Managed |
 | Cost | Lower | Medium | Higher |

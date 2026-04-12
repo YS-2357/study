@@ -245,9 +245,9 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 | Criteria | S3 | EBS | [EFS](22_amazon_efs.md) |
 |----------|-----|-----|-----|
 | Frequent modification | no (full overwrite) | yes (block-level edits) | ⭕ (file-level edits) |
-| 4 TB capacity | yes Unlimited | yes Max 64 TB | yes Auto-scales |
-| Single instance | — | yes Optimal | Possible but overkill |
-| Multi-instance sharing | yes | Multi-Attach (io only) | yes Optimal |
+| 4 TB capacity | Unlimited | Max 64 TB | Auto-scales |
+| Single instance | — | Optimal | Possible but overkill |
+| Multi-instance sharing | yes | Multi-Attach (io only) | Optimal |
 | Cost (~4 TB) | ~$92/month | ~$320/month (gp3) | ~$1,200/month |
 
 **Recommendation**: Single EC2 with frequent modifications → **EBS gp3**. Multiple EC2s needing shared access → **EFS**.

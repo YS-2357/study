@@ -39,7 +39,7 @@ Upload to S3 → CloudFront distribution → Users worldwide
 | | S3 alone | S3 + CloudFront |
 |---|---------|----------------|
 | **Speed** | Single region, far users = slow | 600+ edge locations = fast |
-| **HTTPS** | S3 website endpoint = HTTP only | yes Free HTTPS with ACM certificate |
+| **HTTPS** | S3 website endpoint = HTTP only | Free HTTPS with ACM certificate |
 | **Custom domain** | Complicated | Easy (Route 53 + ACM) |
 | **Caching** | None | Edge caching, reduces S3 requests + cost |
 | **Security** | Must make bucket public | OAC — bucket stays private, only CloudFront can access |
