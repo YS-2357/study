@@ -92,7 +92,7 @@
 
 **Tip:** Start with default role, add permissions later as needed (least privilege principle)
 
-#### Execution Role이란?
+### Execution Role이란?
 
 Lambda 함수가 다른 AWS 서비스에 접근할 때 사용하는 **IAM Role**이다.
 
