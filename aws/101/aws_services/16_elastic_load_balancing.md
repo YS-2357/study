@@ -427,7 +427,7 @@ Internet → IGW → Route Table → GWLB Endpoint → GWLB → Security Applian
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Name and Scheme Can't Be Changed After Creation
+### MAIN PRECAUTION: Name and Scheme Can't Be Changed After Creation
 - Load balancer name is permanent
 - Scheme (Internet-facing vs Internal) is permanent
 - If you need to change either, you must delete and recreate the load balancer
