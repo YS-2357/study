@@ -316,8 +316,8 @@ Traffic must pass **both** checks: NACL first (subnet boundary), then SG (instan
 
 ```
 Subnet A (NACL: allow 443 inbound from internet)
-├── Web server  (SG: allow 443 from 0.0.0.0/0)     ✅ web traffic reaches it
-├── DB server   (SG: allow 3306 from web-server-SG)  ✅ only web server can talk to DB
+├── Web server  (SG: allow 443 from 0.0.0.0/0)     [OK] web traffic reaches it
+├── DB server   (SG: allow 3306 from web-server-SG)  [OK] only web server can talk to DB
 ```
 
 - NACL lets port 443 into the subnet (floor-level)
