@@ -452,7 +452,7 @@ ENVIRONMENT=production
 
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Monitor Costs with Runaway Functions
+### MAIN PRECAUTION: Monitor Costs with Runaway Functions
 - Infinite loops or recursive calls can generate millions of invocations
 - Set concurrency limits to prevent runaway costs
 - Use CloudWatch alarms for invocation count and cost
