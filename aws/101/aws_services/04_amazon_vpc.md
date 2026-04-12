@@ -302,7 +302,7 @@ VPC (building)
 
 Traffic must pass **both** checks: NACL first (subnet boundary), then SG (instance boundary).
 
-#### Comparison
+### Comparison
 
 | | Security Group (SG) | Network ACL (NACL) |
 |---|---|---|
