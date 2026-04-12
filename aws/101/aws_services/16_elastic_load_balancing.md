@@ -150,7 +150,7 @@ A listener checks for connection requests using the port and protocol you config
 **Load balancer IP address type:**
 - **IPv4** (default)
 - **Dualstack** - IPv4 and IPv6
-- ⚠️ No "Dualstack without public IPv4" option (ALB-only feature)
+- **Note:** No "Dualstack without public IPv4" option (ALB-only feature)
 
 ### Network mapping
 
