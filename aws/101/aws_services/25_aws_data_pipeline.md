@@ -3,7 +3,7 @@
 ## What It Is
 AWS Data Pipeline is a web service for scheduling and orchestrating data movement and transformation between AWS services and on-premises sources.
 
-> **Legacy service.** For new projects, AWS recommends using **AWS Glue**, **Step Functions**, or **EventBridge** instead. Data Pipeline is still supported but is not receiving major new features.
+**Legacy service.** For new projects, AWS recommends using **AWS Glue**, **Step Functions**, or **EventBridge** instead. Data Pipeline is still supported but is not receiving major new features.
 
 **The problem it solves:**
 - You need to move data between S3, RDS, DynamoDB, EMR, Redshift on a schedule
