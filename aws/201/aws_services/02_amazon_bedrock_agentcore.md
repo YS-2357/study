@@ -223,11 +223,9 @@ Managed headless web browsing for agents.
 7. Enable Observability and Evaluations for monitoring
 8. Invoke via API endpoint or `agentcore invoke`
 
----
-
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: AgentCore Is Infrastructure, Not a Framework
+### MAIN PRECAUTION: AgentCore Is Infrastructure, Not a Framework
 - AgentCore does NOT build your agent logic — that's Strands/LangGraph/your code
 - AgentCore runs, scales, and secures your agent
 - Don't confuse it with Bedrock Agents (the managed no-code agent builder)
