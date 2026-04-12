@@ -117,7 +117,7 @@
 - Can create volumes from snapshots in any AZ within the Region
 - Can copy snapshots across Regions
 
-#### Snapshots Across AWS Services
+### Snapshots Across AWS Services
 
 "Snapshot" is used across many services — same concept (capture state at a point in time), different names:
 
