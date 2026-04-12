@@ -40,6 +40,10 @@ For most MSP clients, RDS is the right choice — they want the database to just
 
 > For Aurora-specific features (shared cluster storage, Serverless v2, Babelfish), see [20_amazon_aurora.md](./20_amazon_aurora.md)
 
+## How It Works
+
+When you create an RDS database, AWS provisions an EC2 instance, attaches EBS storage, installs the chosen engine (MySQL, PostgreSQL, etc.), and configures automated backups. You interact with the database through a standard connection endpoint using the engine's native protocol. AWS handles OS patching, minor version upgrades, and daily snapshot backups within the retention window. Multi-AZ creates a synchronous standby in a different AZ for automatic failover.
+
 ## What to Remember (Console Create Summary)
 
 **5 decisions you must get right (hard/impossible to change later):**
