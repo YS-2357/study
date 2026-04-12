@@ -189,7 +189,7 @@ AWS service for automated IP address allocation.
 
 ### VPC Peering and Transit Gateway
 
-#### VPC Peering
+### VPC Peering
 - VPCs are isolated by default — no traffic flows between them
 - VPC Peering creates a direct one-to-one connection between two VPCs
 - Peered VPCs cannot have overlapping CIDRs
@@ -197,7 +197,7 @@ AWS service for automated IP address allocation.
 - Works across accounts and Regions
 - **Not transitive** — if VPC A peers with B, and B peers with C, A cannot reach C through B
 
-#### Transit Gateway
+### Transit Gateway
 - A central hub that connects multiple VPCs, VPN connections, and on-premises networks
 - **Solves the scaling problem** — without it, connecting N VPCs requires N×(N-1)/2 peering connections
 - **Supports transitive routing** — VPC A → Transit Gateway → VPC B, unlike peering
