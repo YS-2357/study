@@ -69,11 +69,9 @@ If PII must never leave your network → on-premises models, not cloud LLMs.
 - **Agents** — attach guardrail to a Bedrock Agent
 - **ApplyGuardrail API** — use guardrails standalone, even with non-Bedrock models
 
----
-
 ## Precautions
 
-### ⚠️ MAIN PRECAUTION: Guardrails Add Latency and Cost
+### MAIN PRECAUTION: Guardrails Add Latency and Cost
 - Every request is evaluated twice (input + output) = extra processing time
 - Charged per policy assessment (per 1,000 text units)
 - High-sensitivity filters may over-block legitimate content
