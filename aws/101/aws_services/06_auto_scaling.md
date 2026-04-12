@@ -17,6 +17,10 @@ Auto Scaling automatically adjusts the number of resources based on demand. When
 | **ElastiCache** | Number of nodes/shards | ElastiCache Auto Scaling |
 | **EMR** | Number of cluster nodes | Managed scaling |
 
+## How It Works
+
+You create an Auto Scaling Group (ASG) by specifying a Launch Template (what to launch), a VPC with subnets across multiple AZs, and minimum/desired/maximum instance counts. Scaling policies define when to add or remove instances based on CloudWatch metrics such as CPU utilization. When a health check fails, the ASG terminates the unhealthy instance and launches a replacement automatically.
+
 ## Console Access
 - Search "EC2" > Auto Scaling Groups (left sidebar)
 - Or search "Auto Scaling" directly
