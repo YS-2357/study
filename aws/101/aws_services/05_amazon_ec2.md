@@ -128,14 +128,14 @@ Two options:
    - Choose from existing security groups
 
 **Default rules when creating new:**
-- ☑ **Allow SSH traffic from** - Dropdown: "Anywhere" (0.0.0.0/0)
+- `[x]` **Allow SSH traffic from** - Dropdown: "Anywhere" (0.0.0.0/0)
   - "Helps you connect to your instance"
   - **Warning:** "Rules with source of 0.0.0.0/0 allow all IP addresses to access your instance. We recommend setting security group rules to allow access from known IP addresses only."
 
-- ☐ **Allow HTTPS traffic from the internet**
+- `[ ]` **Allow HTTPS traffic from the internet**
   - "To set up an endpoint, for example when creating a web server"
 
-- ☐ **Allow HTTP traffic from the internet**
+- `[ ]` **Allow HTTP traffic from the internet**
   - "To set up an endpoint, for example when creating a web server"
 
 **Tip:** NEVER use 0.0.0.0/0 for SSH in production. Use specific office IP or VPN IP only.
