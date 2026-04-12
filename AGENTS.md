@@ -41,6 +41,39 @@ These instructions apply to the entire `study/` repository unless a deeper `AGEN
 - Prefer editing existing Markdown notes, links, and navigation over adding tooling, scripts, or structural churn.
 - Preserve the repository's existing organization unless the task explicitly requires a reorganization.
 
+## Markdown Formatting
+
+### Headings
+
+- `#` — note title only. One per file.
+- `##` — major sections (`What It Is`, `How It Works`, etc.).
+- `###` — subsections within a section.
+- Never use `####` or deeper. If you need it, split the note.
+
+### Lists
+
+- Bullets (`-`) — unordered facts, properties, options.
+- Numbers (`1.`) — ordered steps, priority order, study order.
+- Indent nested items with 2 spaces.
+
+### Emphasis
+
+- `**bold**` — key terms, important warnings.
+- `*italic*` — light emphasis, titles of external works.
+- `` `inline code` `` — commands, filenames, env vars, values.
+
+### Tables
+
+- Use tables for comparisons, option sets, and structured data.
+- Every table needs a header row and a separator row.
+
+### What not to use
+
+- No `---` horizontal rules except immediately before the navigation footer.
+- No `> Note:`, `> Warning:`, or other callout formats — only `> **Tip:**`.
+- No raw HTML.
+- No emoji unless the user explicitly requests it.
+
 ## Note Structure
 
 Every note file must follow this heading order:
