@@ -72,7 +72,7 @@ Giving a narrow harness to each role is the enforcement mechanism for role separ
 
 Every capability available to an agent comes from one of these component types. Choosing the right one is the same decomposition question applied to the harness: **each component has one job**.
 
-#### Tool
+### Tool
 
 A [tool](04_tools.md) is a direct, executable capability — file read, shell command, web search, browser action.
 
@@ -86,7 +86,7 @@ A [tool](04_tools.md) is a direct, executable capability — file read, shell co
 
 Built-in tools (`Read`, `Grep`, `Glob`, `Bash`) cover most repo work. Reach for them before spawning anything.
 
-#### Skill
+### Skill
 
 A [skill](05_skills.md) is a reusable instruction bundle — a named playbook for a recurring workflow.
 
@@ -98,7 +98,7 @@ A [skill](05_skills.md) is a reusable instruction bundle — a named playbook fo
 | Generic prompting produces noisy or inconsistent results | A tool can answer it in one call |
 | You want structured steps enforced across sessions | The workflow is simple enough to remember |
 
-#### Plugin
+### Plugin
 
 A [plugin](06_plugins.md) is a capability bundle for an external platform — GitHub, Gmail, Google Drive, Vercel.
 
@@ -109,7 +109,7 @@ A [plugin](06_plugins.md) is a capability bundle for an external platform — Gi
 | The agent needs to act on an outside system (PRs, issues, email) | The work stays entirely inside the local repo |
 | Multiple tools and skills for the same platform are needed | Only one tool from that platform is needed — wire it directly |
 
-#### MCP
+### MCP
 
 [MCP](07_mcp.md) is the protocol that wraps a non-native capability into a standard shape the harness can consume.
 
@@ -123,7 +123,7 @@ A [plugin](06_plugins.md) is a capability bundle for an external platform — Gi
 
 MCP is infrastructure for tools, not a tool itself. Think of it as the adapter standard — you configure it once so that tools and resources from external servers become discoverable by the harness.
 
-#### Hook
+### Hook
 
 A [hook](08_hooks.md) is a script that runs automatically on a harness event — before push, after write, at session end.
 
@@ -137,7 +137,7 @@ A [hook](08_hooks.md) is a script that runs automatically on a harness event —
 
 Hooks enforce the mechanical layer. They are not a substitute for agent judgment — they catch what the agent should not need to remember.
 
-#### Permission / Profile
+### Permission / Profile
 
 A [profile](09_profiles.md) is a named runtime mode. Permissions are its building blocks: which paths are writable, which commands are allowed, whether network access is on.
 
@@ -151,7 +151,7 @@ A [profile](09_profiles.md) is a named runtime mode. Permissions are its buildin
 
 Set permissions before the agent starts, not reactively. A harness that is too permissive from the start cannot be narrowed mid-task without losing work.
 
-#### Decision summary
+### Decision summary
 
 | I need to… | Reach for |
 |------------|-----------|
