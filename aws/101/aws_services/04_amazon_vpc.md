@@ -373,7 +373,7 @@ Response out:         source port=443, dest port=1024-65535  → need outbound a
 With SG (stateful): allow inbound 443 → return traffic is automatic.
 With NACL (stateless): must explicitly allow both inbound 443 AND outbound ephemeral ports.
 
-#### Which AWS Services Use ENI (and Therefore SG)?
+### Which AWS Services Use ENI (and Therefore SG)?
 
 **Has ENI → SG applies:**
 - EC2, RDS, Aurora, Neptune
