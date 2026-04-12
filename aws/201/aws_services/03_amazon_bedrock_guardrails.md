@@ -19,8 +19,6 @@ User prompt → [Guardrail: check input] → Model → [Guardrail: check output]
 ## Console Access
 - Amazon Bedrock > Guardrails > Create guardrail
 
----
-
 ## Key Concepts
 
 ### Filter Types
