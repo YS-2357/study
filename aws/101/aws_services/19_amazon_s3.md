@@ -8,6 +8,10 @@
 
 **See [Amazon EBS](./20_amazon_ebs.md) and [Amazon EFS](./22_amazon_efs.md) for block/file storage comparison.**
 
+## How It Works
+
+You create a bucket in a specific Region and upload objects (files) to it using the AWS Console, CLI, or SDK via HTTPS. Each object is identified by a unique key (its full path within the bucket). S3 automatically replicates data across at least three AZs for 11-nines durability. Access is controlled by Block Public Access settings, bucket policies, and IAM policies. Lifecycle rules can automatically transition objects to cheaper storage classes or delete them after a set number of days.
+
 ## Console Access
 - AWS Console → Amazon S3 → Buckets → Create bucket
 - Breadcrumb: Amazon S3 > Buckets > Create bucket
