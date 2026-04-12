@@ -24,6 +24,10 @@ AWS Data Pipeline is a web service for scheduling and orchestrating data movemen
 | **EventBridge** | Event-driven scheduling and routing | Cron-based triggers, event-driven architectures |
 | **MWAA (Airflow)** | Managed Apache Airflow | Complex DAGs, teams already using Airflow |
 
+## How It Works
+
+You define a pipeline as a JSON document specifying data nodes (S3, RDS, DynamoDB, Redshift), activities (copy, EMR job, shell command), preconditions (checks before running), and a schedule. Data Pipeline provisions EC2 instances to execute activities, tracks dependencies, and retries on failure. On the defined schedule, the pipeline checks preconditions and runs activities in order, moving or transforming data between the configured sources and destinations.
+
 ## Console Access
 - Search "Data Pipeline" in AWS Console
 - AWS Data Pipeline > Pipelines
