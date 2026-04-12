@@ -36,6 +36,10 @@ Amazon DynamoDB is a **fully managed** NoSQL (key-value and document) database s
 | Connection | host:port + username/password | HTTPS API + IAM credentials |
 | Best for | Complex queries, relationships | High-speed reads/writes, simple lookups |
 
+## How It Works
+
+You create a table with a primary key (partition key, optionally with a sort key). DynamoDB hashes the partition key to determine which internal partition stores each item, distributing data automatically across storage nodes. Reads and writes go through the AWS SDK or CLI as HTTPS API calls — no database connection string. DynamoDB replicates data across three AZs automatically. You choose on-demand (pay per request) or provisioned (set RCU/WCU) capacity mode.
+
 ## Console Access
 - Search "DynamoDB" in AWS Console
 - DynamoDB > Tables > Create table
