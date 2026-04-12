@@ -3,6 +3,10 @@
 ## What It Is
 A **Subnet** is a range of IP addresses within a VPC. Each subnet exists in exactly one Availability Zone.
 
+## How It Works
+
+A subnet is defined by a CIDR block within its parent VPC and is locked to one AZ. Whether a subnet is public or private depends entirely on its route table: a route to an Internet Gateway makes it public; no such route makes it private. AWS reserves the first four IPs and the last IP in every subnet.
+
 ## Console Access
 **VPC Console → Subnets**
 - Direct link: https://console.aws.amazon.com/vpc/home#subnets
