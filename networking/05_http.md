@@ -78,3 +78,5 @@ HTTP is the foundation of [ALB](../aws/101/aws_services/16_elastic_load_balancin
 
 ---
 ← Previous: [Addressing](02_addressing.md) | [Overview](00_overview.md) | Next: [DNS](04_dns.md) →
+
+<!-- Note: Reverse Proxy builds on HTTP — see [Reverse Proxy](06_reverse_proxy.md) -->
