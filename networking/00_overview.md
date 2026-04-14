@@ -14,7 +14,7 @@ Foundation networking concepts needed to understand AWS services.
 5. [Reverse Proxy](06_reverse_proxy.md) — Load balancing, TLS termination, path routing, Nginx/ALB/CloudFront.
 
 ### Reference Model
-5. [OSI Model](03_osi_model.md) — 7-layer model, encapsulation, AWS layer mapping.
+6. [OSI Model](03_osi_model.md) — 7-layer model, encapsulation, AWS layer mapping.
 
 ## Quick Reference
 
