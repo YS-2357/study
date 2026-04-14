@@ -9,3 +9,4 @@ Networking fundamentals. See [00_overview.md](00_overview.md) for study order.
 - `03_osi_model.md`: OSI 7-layer model and AWS layer mapping.
 - `04_dns.md`: DNS resolution, record types, Route 53 behavior.
 - `05_http.md`: HTTP methods, status codes, REST API patterns.
+- `06_reverse_proxy.md`: Reverse proxy — load balancing, TLS termination, path routing, common tools.
