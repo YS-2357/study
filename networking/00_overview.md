@@ -11,6 +11,7 @@ Foundation networking concepts needed to understand AWS services.
 ### Application Layer
 3. [HTTP](05_http.md) — Methods, status codes, REST API patterns.
 4. [DNS](04_dns.md) — Resolution flow, record types, Route 53 behavior.
+5. [Reverse Proxy](06_reverse_proxy.md) — Load balancing, TLS termination, path routing, Nginx/ALB/CloudFront.
 
 ### Reference Model
 5. [OSI Model](03_osi_model.md) — 7-layer model, encapsulation, AWS layer mapping.
