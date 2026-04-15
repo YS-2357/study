@@ -13,6 +13,11 @@ Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and prod
 4. [Amazon Bedrock](04_amazon_bedrock.md) — Foundation model access and inference.
 5. [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) — Managed RAG over your data.
 6. [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) — Managed low-code agent builder.
+20. [Amazon Bedrock Flows](20_amazon_bedrock_flows.md) — Visual pipeline builder for deterministic multi-step prompt workflows.
+21. [Amazon Bedrock Prompt Management](21_amazon_bedrock_prompt_management.md) — Centralized versioned store for prompts, separate from code.
+22. [Amazon Bedrock Model Evaluation](22_amazon_bedrock_model_evaluation.md) — Benchmark and compare models on your own dataset before committing.
+23. [Amazon Bedrock Data Automation](23_amazon_bedrock_data_automation.md) — Extract structured fields from documents, images, video, and audio.
+24. [Amazon Bedrock Custom Models](24_amazon_bedrock_custom_models.md) — Fine-tune base models on your data; requires Provisioned Throughput to serve.
 
 ### Tooling
 7. [AWS CDK](07_aws_cdk.md) — Infrastructure as code for deploying AWS resources.

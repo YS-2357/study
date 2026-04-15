@@ -23,3 +23,8 @@ AWS 201 service deep-dives. See [00_overview.md](00_overview.md) for study order
 - `17_amazon_cloudfront.md`: Amazon CloudFront.
 - `18_amazon_ecr.md`: Amazon ECR.
 - `19_amazon_dynamodb_workflow_status_tracking.md`: DynamoDB workflow status tracking.
+- `20_amazon_bedrock_flows.md`: Amazon Bedrock Flows — visual deterministic pipeline builder.
+- `21_amazon_bedrock_prompt_management.md`: Amazon Bedrock Prompt Management — versioned prompt store.
+- `22_amazon_bedrock_model_evaluation.md`: Amazon Bedrock Model Evaluation — benchmark models on your dataset.
+- `23_amazon_bedrock_data_automation.md`: Amazon Bedrock Data Automation — structured extraction from documents, images, video, audio.
+- `24_amazon_bedrock_custom_models.md`: Amazon Bedrock Custom Models — fine-tuning and model import.
