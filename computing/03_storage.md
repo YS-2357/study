@@ -18,9 +18,9 @@ Storage in computing comes in three types: block (raw disk), file (shared networ
 
 | Type | What it is | Access | AWS Service |
 |------|-----------|--------|-------------|
-| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../aws/101/service/20_amazon_ebs.md) |
-| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../aws/101/service/22_amazon_efs.md) |
-| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../aws/101/service/19_amazon_s3.md) |
+| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../aws/20_amazon_ebs.md) |
+| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../aws/22_amazon_efs.md) |
+| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../aws/19_amazon_s3.md) |
 
 ### Performance Metrics
 

@@ -9,7 +9,7 @@ updated_at: 260417-141847
 
 ## What It Is
 
-Different workloads need different hardware ratios. AWS [EC2](../aws/101/service/05_amazon_ec2.md) instance families are designed around these workload categories.
+Different workloads need different hardware ratios. AWS [EC2](../aws/05_amazon_ec2.md) instance families are designed around these workload categories.
 
 ## How It Works
 

@@ -4,7 +4,6 @@ tags:
 created_at: 260417-141847
 updated_at: 260417-141847
 ---
-
 # study
 
 Study materials organized by domain. [Start here →](00_overview.md)
@@ -12,14 +11,15 @@ Study materials organized by domain. [Start here →](00_overview.md)
 Agent-specific automation and skills are separated on purpose: Codex-owned files belong under `.codex/`, Claude-owned files belong under `.claude/`, and shared Git entrypoints belong under `.githooks/`.
 When Codex works in this repo, `.claude/` is out of scope unless the user explicitly asks for Claude-specific changes.
 
-- [glossary/](glossary/README.md) — Abbreviations and domain terms used across this repo.
+- [docs/](docs/README.md) — Rules for agents and humans, glossary.
+- [raw/](raw/README.md) — Raw source materials (images, documents, drafts).
 - [.claude/](.claude/README.md) — Claude Code hooks: auto-push after every write/edit, session-end push, hook scripts.
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
 - [aws/](aws/README.md) — AWS study materials grouped by level.
-  - [aws/101/service/](aws/101/service/README.md) — AWS service notes. [Start studying →](aws/101/service/00_overview.md)
-  - [aws/201/service/](aws/201/service/README.md) — AWS 201 deep-dives. [Start studying →](aws/201/service/00_overview.md)
+  - [aws/](aws/README.md) — AWS service notes. [Start studying →](aws/00_overview.md)
+  - [aws/](aws/README.md) — AWS 201 deep-dives. [Start studying →](aws/00_overview.md)
 - [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_overview.md)
 - [git/](git/README.md) — Git concepts. [Start studying →](git/00_overview.md)
 - [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_overview.md)

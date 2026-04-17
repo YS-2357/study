@@ -2,7 +2,8 @@
 # Auto-push hook for study repo — runs after every Write/Edit
 # 실패는 요란하게, 성공은 조용하게
 
-REPO="/home/ys2357/study"
+# Use git root directory (works on Windows and Linux)
+REPO=$(git rev-parse --show-toplevel 2>/dev/null)
 cd "$REPO" || exit 0
 
 set -a && source .env 2>/dev/null && set +a
@@ -29,7 +30,7 @@ git commit -m "$COMMIT_MSG" -q 2>/dev/null
 
 PUSH_OUTPUT=$(CLAUDE_AUTO_PUSH=1 git \
     -c credential.helper= \
-    -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" \
+    -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf '%s:%s' "$GITHUB_USERNAME" "$GITHUB_TOKEN" | base64 -w0)" \
     push origin main 2>&1)
 EXIT_CODE=$?
 

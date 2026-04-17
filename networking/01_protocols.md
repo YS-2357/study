@@ -77,7 +77,7 @@ Protocol for secure remote access to computers (port 22). Replaced insecure Teln
 - File transfer (SCP, SFTP)
 - Key-based authentication (recommended) or password
 
-Used for Linux server administration. See [EC2](../aws/101/service/05_amazon_ec2.md) for AWS-specific SSH usage.
+Used for Linux server administration. See [EC2](../aws/05_amazon_ec2.md) for AWS-specific SSH usage.
 
 ### RDP (Remote Desktop Protocol)
 
@@ -86,7 +86,7 @@ Protocol for remote graphical access to Windows computers (port 3389).
 - Full graphical desktop transmitted
 - Clipboard sharing, file transfer, printer redirection
 
-Used for Windows server administration. See [EC2](../aws/101/service/05_amazon_ec2.md) for AWS-specific RDP usage.
+Used for Windows server administration. See [EC2](../aws/05_amazon_ec2.md) for AWS-specific RDP usage.
 
 > **Tip:** Never allow 0.0.0.0/0 on port 3389 — it's a common brute force target.
 
@@ -100,7 +100,7 @@ A web browser loading a page uses multiple protocols:
 
 ## Why It Matters
 
-Protocols determine which ports to open in [Security Groups](../aws/101/service/14_security_group.md), which [load balancer](../aws/101/service/16_elastic_load_balancing.md) type to use (NLB for TCP/UDP, ALB for HTTP), and how to troubleshoot connectivity issues.
+Protocols determine which ports to open in [Security Groups](../aws/14_security_group.md), which [load balancer](../aws/16_elastic_load_balancing.md) type to use (NLB for TCP/UDP, ALB for HTTP), and how to troubleshoot connectivity issues.
 
 ---
 ← [Overview](00_overview.md) | [Overview](00_overview.md) | Next: [Addressing](02_addressing.md) →

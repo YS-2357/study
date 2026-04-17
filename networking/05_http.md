@@ -81,7 +81,7 @@ A browser loading `https://example.com/users/1`:
 
 ## Why It Matters
 
-HTTP is the foundation of [ALB](../aws/101/service/16_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../aws/101/service/07_aws_lambda.md) design, and [CloudFront](../aws/101/service/21_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
+HTTP is the foundation of [ALB](../aws/16_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../aws/07_aws_lambda.md) design, and [CloudFront](../aws/21_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
 
 ---
 ← Previous: [Addressing](02_addressing.md) | [Overview](00_overview.md) | Next: [DNS](04_dns.md) →

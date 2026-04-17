@@ -83,4 +83,4 @@ If you organize the tradeoff clearly, you can decide whether VS Code over SSH is
 > **Tip:** If you use EC2 only as a remote dev box, put the instance in the closest practical region to you, stop it when idle, keep the security group tight, and treat latency as the first thing to optimize.
 
 ---
-← Previous: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) | [Overview](00_overview.md) | Next →
+← Previous: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) | [Overview](00_overview.md) | Next: [Obsidian Tags](07_obsidian_tags.md) →

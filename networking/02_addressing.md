@@ -61,7 +61,7 @@ Notation for specifying IP address ranges: `IP/prefix` where the prefix is how m
 
 **Key rule:** Smaller prefix = bigger range. `/16` is bigger than `/24`.
 
-AWS reserves 5 IPs per [subnet](../aws/101/service/03_subnet.md) (first 4 + last 1), so a /24 subnet has 251 usable IPs.
+AWS reserves 5 IPs per [subnet](../aws/03_subnet.md) (first 4 + last 1), so a /24 subnet has 251 usable IPs.
 
 ### MAC Address
 
@@ -72,11 +72,11 @@ AWS reserves 5 IPs per [subnet](../aws/101/service/03_subnet.md) (first 4 + last
 - **Inbound** — traffic coming into your resource (e.g., user accessing your web server)
 - **Outbound** — traffic going out from your resource (e.g., server downloading updates)
 
-Controlled by inbound/outbound rules in [Security Groups](../aws/101/service/14_security_group.md).
+Controlled by inbound/outbound rules in [Security Groups](../aws/14_security_group.md).
 
 ## Example
 
-A typical AWS [VPC](../aws/101/service/04_amazon_vpc.md) setup:
+A typical AWS [VPC](../aws/04_amazon_vpc.md) setup:
 - VPC CIDR: `10.0.0.0/16` (65,536 IPs)
 - Public subnet: `10.0.1.0/24` (251 usable IPs)
 - Private subnet: `10.0.2.0/24` (251 usable IPs)

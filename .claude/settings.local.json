@@ -5,7 +5,9 @@
       "Bash(git *)",
       "Bash(gh *)",
       "Bash(cd*)",
-      "Bash(STUDY_PUSH_CONTENT_ACK=1 git *)"
+      "Bash(STUDY_PUSH_CONTENT_ACK=1 git *)",
+      "Bash(grep:*)",
+      "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nMerge aws/101 and aws/201 into flat aws/ structure\n\n- Combine overlapping services \\(Lambda, S3, CloudFront, DynamoDB\\)\n  into single comprehensive notes with merged content\n- Renumber 201 files to 31-50 to avoid conflicts with 101 files 01-30\n- Move agentcore/ to aws/agentcore/\n- Update all cross-links across the repo\n- Add structural check rule to docs/AGENTS.md\n- Update docs/02_navigation.md with flat aws/ structure\n- Update aws/00_overview.md and aws/README.md\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }

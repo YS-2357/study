@@ -62,7 +62,7 @@ result = agent("Process customer inquiry #1234.")
 
 ### AWS integration
 
-Strands connects natively to [AWS Bedrock](../aws/101/service/) models (Claude, Llama, Titan) with no extra adapter code. It also supports [MCP](07_mcp.md) servers as tool sources.
+Strands connects natively to [AWS Bedrock](../aws/) models (Claude, Llama, Titan) with no extra adapter code. It also supports [MCP](07_mcp.md) servers as tool sources.
 
 ## Example
 
