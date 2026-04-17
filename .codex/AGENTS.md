@@ -10,15 +10,8 @@ These instructions apply to the `.codex/` subtree.
 Codex should ask for persistent approval only for recurring, bounded Git actions:
 
 - `git add <specific paths>`
-- `git status`
 - `git commit -m "<message>"`
-- `git push origin main`
-- `git pull --ff-only origin main`
 - `git restore <specific paths>`
-- `gh pr view <number-or-url>`
-- `gh pr list <filters>`
-- `gh issue view <number-or-url>`
-- `gh issue list <filters>`
 - the repository token-based `git push origin main` command from `.codex/README.md`
 
 Codex should not request broad persistent approval for destructive or overly general commands:
@@ -26,8 +19,7 @@ Codex should not request broad persistent approval for destructive or overly gen
 - `git reset --hard`
 - broad `git checkout -- .`
 - broad `git restore .`
-- broad `gh *`
 - `rm` or recursive delete commands
 - arbitrary `python`, `powershell`, or shell scripts unrelated to the task
 
-Non-mutating inspection such as `rg`, `Get-Content`, `git status`, `git diff`, `git log`, `gh auth status`, and read-only `gh pr` / `gh issue` commands normally does not need elevated permission.
+Non-mutating inspection such as `rg`, `Get-Content`, `git status`, `git diff`, and `git log` normally does not need elevated permission.
