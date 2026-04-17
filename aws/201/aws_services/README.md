@@ -28,3 +28,4 @@ AWS 201 service deep-dives. See [00_overview.md](00_overview.md) for study order
 - `22_amazon_bedrock_model_evaluation.md`: Amazon Bedrock Model Evaluation — benchmark models on your dataset.
 - `23_amazon_bedrock_data_automation.md`: Amazon Bedrock Data Automation — structured extraction from documents, images, video, audio.
 - `24_amazon_bedrock_custom_models.md`: Amazon Bedrock Custom Models — fine-tuning and model import.
+- `25_boto3.md`: boto3 — official AWS SDK for Python.

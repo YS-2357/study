@@ -23,6 +23,7 @@ Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and prod
 7. [AWS CDK](07_aws_cdk.md) — Infrastructure as code for deploying AWS resources.
 8. [Amazon CloudWatch](08_amazon_cloudwatch.md) — Monitoring, logs, and alarms.
 9. [AWS Lambda](09_aws_lambda.md) — Serverless compute that runs code in response to events.
+25. [boto3](25_boto3.md) — Official AWS SDK for Python; client and resource interfaces for every AWS service.
 
 ### Runtime Infrastructure
 10. [Amazon API Gateway](10_amazon_api_gateway.md) — HTTP routing layer between the internet and Lambda.
