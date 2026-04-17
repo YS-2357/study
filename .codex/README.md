@@ -34,3 +34,16 @@ Keep these gated and do not approve them broadly:
 - broad `git restore .`
 - `rm` or recursive delete commands
 - arbitrary `python`, `powershell`, or shell scripts unrelated to the task
+
+## Command Shape
+
+Saved approvals match best when Codex runs one direct command at a time:
+
+1. `git status --short`
+2. `git add <specific paths>`
+3. `git commit -m "<message>"`
+4. `git push origin main`
+5. `git pull --ff-only origin main`
+6. `gh auth status`, `gh pr view`, `gh pr list`, `gh issue view`, or `gh issue list`
+
+Avoid PowerShell wrapper scripts, chained commands, pipes, heredocs, command substitutions, and inline environment setup unless they are truly required. Those forms are treated as different command shapes and may bypass the saved prefix rules.
