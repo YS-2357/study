@@ -3,5 +3,6 @@
 AWS 201 workspace for deeper architecture, implementation, and service deep-dives.
 
 - `README.md`: This file.
-- `00_overview.md`: Study hub for 201 service notes.
+- `00_overview.md`: Study hub for 201 architecture and service notes.
+- `01_three_tier_architecture.md`: Three-tier AWS architecture pattern.
 - `aws_services/`: Service deep-dive notes. [Start studying](aws_services/00_overview.md)
