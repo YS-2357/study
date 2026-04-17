@@ -10,6 +10,10 @@ tags:
 
 boto3 is the official [AWS](../../101/aws_services/00_overview.md) SDK for Python. It lets Python code call any AWS service API — creating S3 buckets, reading DynamoDB items, invoking Bedrock models — without manually signing HTTP requests.
 
+## Name
+
+**boto** is the [Amazon river dolphin](https://en.wikipedia.org/wiki/Amazon_river_dolphin) (*Inia geoffrensis*), a pink freshwater dolphin native to the Amazon River — a nod to AWS's Amazon branding. The original Python SDK was named `boto`, followed by `boto2`, and then `boto3` as a complete rewrite released in 2015. The **3** means third generation, not Python 3.
+
 ## How It Works
 
 boto3 exposes two interfaces:
