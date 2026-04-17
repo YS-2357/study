@@ -43,4 +43,4 @@ Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and prod
 - AWS 101 foundations → [AWS 101 Services](../../101/aws_services/00_overview.md)
 
 ---
-↑ [AWS 201](../../00_overview.md)
+↑ [AWS 201](../00_overview.md)
