@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - ml
+  - storage
+---
+
 # Amazon Bedrock Data Automation
 
 ## What It Is
@@ -21,10 +28,10 @@ A smart document scanner that reads and understands, not just copies. You hand i
 
 ### Two modes
 
-| Mode | What it does |
-|---|---|
+| Mode                | What it does                                                                       |
+| ------------------- | ---------------------------------------------------------------------------------- |
 | **Standard output** | Predefined extractions: text, tables, key-value pairs, bounding boxes, transcripts |
-| **Custom output** | You define a JSON schema; BDA extracts exactly those fields using a blueprint |
+| **Custom output**   | You define a JSON schema; BDA extracts exactly those fields using a blueprint      |
 
 **Blueprint** — a reusable extraction template for a document type. You create one blueprint per form type (e.g., invoice, insurance claim, lab report) and apply it to all documents of that type.
 
@@ -40,16 +47,30 @@ Async processing job
 Structured JSON output in S3
 ```
 
-BDA processes asynchronously. You submit a job, poll for completion (or use EventBridge), and fetch results from S3.
+BDA processes asynchronously: `InvokeDataAutomationAsync` reads input from an Amazon Simple Storage Service ([Amazon S3](../../101/aws_services/19_amazon_s3.md)) URI and stores output in the S3 bucket or prefix that you specify in `outputConfiguration` ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_InvokeDataAutomationAsync.html)). You then call `GetDataAutomationStatus`; when the status is `Success`, the response points to the S3 location where the output can be retrieved ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_GetDataAutomationStatus.html)).
+
+### How S3 connects
+
+S3 is the handoff layer between your files and BDA:
+
+| S3 role | What goes there | Why it matters |
+|---|---|---|
+| **Input bucket or prefix** | Source PDFs, images, audio, or video | BDA does not need the file bytes embedded in the async request; the request points to `s3://bucket/prefix-or-object` |
+| **Output bucket or prefix** | JSON output, extracted fields, metadata, and modality-specific results | Downstream jobs can read the structured output from S3 without calling BDA again |
+| **IAM permissions** | Read access to input objects and write access to the output prefix | Amazon Bedrock S3 access commonly requires `s3:GetObject`, `s3:ListBucket`, and `s3:PutObject`, plus AWS KMS permissions if the bucket uses a KMS key ([AWS User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/s3-bucket-access.html)) |
+
+The common pattern is: upload raw files to an input prefix, invoke BDA with that input S3 URI and an output S3 URI, wait for the invocation to finish, then let [AWS Lambda](09_aws_lambda.md), Glue, Athena, or an application read the JSON results from S3.
 
 ## Example
 
 Extracting invoice fields from a batch of PDFs:
 
-1. Create a blueprint with the schema: `{ "vendor_name", "invoice_number", "total_amount", "due_date" }`
-2. Create a BDA project and attach the blueprint
-3. Submit an async job pointing at an S3 prefix of PDFs
-4. Fetch results — each PDF produces one JSON file with the extracted fields
+1. Upload PDFs to `s3://my-bucket/invoices/raw/`
+2. Create a blueprint with the schema: `{ "vendor_name", "invoice_number", "total_amount", "due_date" }`
+3. Create a BDA project and attach the blueprint
+4. Submit an async job with `inputConfiguration.s3Uri` set to the raw input prefix and `outputConfiguration.s3Uri` set to `s3://my-bucket/invoices/extracted/`
+5. Poll `GetDataAutomationStatus` with the returned invocation ARN
+6. Read the extracted JSON output from the S3 output prefix
 
 ```python
 import boto3
@@ -57,12 +78,14 @@ import boto3
 client = boto3.client("bedrock-data-automation-runtime", region_name="us-east-1")
 
 response = client.invoke_data_automation_async(
-    inputConfiguration={"s3Uri": "s3://my-bucket/invoices/"},
-    outputConfiguration={"s3Uri": "s3://my-bucket/output/"},
-    dataAutomationConfiguration={"dataAutomationProjectArn": "arn:aws:..."}
+    inputConfiguration={"s3Uri": "s3://my-bucket/invoices/raw/"},
+    outputConfiguration={"s3Uri": "s3://my-bucket/invoices/extracted/"},
+    dataAutomationConfiguration={"dataAutomationProjectArn": "arn:aws:..."},
+    dataAutomationProfileArn="arn:aws:..."
 )
 
 invocation_arn = response["invocationArn"]
+status = client.get_data_automation_status(invocationArn=invocation_arn)
 ```
 
 ## Why It Matters
