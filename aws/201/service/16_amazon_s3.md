@@ -103,4 +103,4 @@ S3 + CloudFront is the standard pattern for serving a static frontend at scale �
 > **Tip:** Always set `default_root_object="index.html"` on the CloudFront distribution. Without it, hitting the root URL returns an S3 access error, not your app.
 
 ---
-← Previous: [DynamoDB TTL and Session Store](15_amazon_dynamodb_ttl.md) | [Overview](00_overview.md) | Next: [Amazon CloudFront](17_amazon_cloudfront.md) →
+← Previous: [DynamoDB TTL and Session Store](15_amazon_dynamodb_ttl.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon CloudFront](17_amazon_cloudfront.md) →

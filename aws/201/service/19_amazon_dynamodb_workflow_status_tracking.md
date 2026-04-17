@@ -90,4 +90,4 @@ It is not used because status values are special. It is used because many workfl
 > **Tip:** If the workflow requires many joins, ad hoc reporting, or complex queries across many dimensions, DynamoDB may stop being a good fit. In that case, keep the hot workflow state in DynamoDB and move reporting or analytics elsewhere.
 
 ---
-← Previous: [Amazon ECR](18_amazon_ecr.md) | [Overview](00_overview.md) | Next: [Strands Agents SDK](01_strands_agents_sdk.md) →
+← Previous: [Amazon ECR](18_amazon_ecr.md) | [Overview](aws/201/service/00_overview.md) | Next: [Strands Agents SDK](01_strands_agents_sdk.md) →

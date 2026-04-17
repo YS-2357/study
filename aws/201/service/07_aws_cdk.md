@@ -353,4 +353,4 @@ Tags.of(self).add("Environment", "dev")
 - OpenSearch Serverless has a minimum cost even at 1 OCU — destroy when not in use
 
 ---
-← Previous: [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) | [Overview](00_overview.md) | Next: [Amazon CloudWatch](08_amazon_cloudwatch.md) →
+← Previous: [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon CloudWatch](08_amazon_cloudwatch.md) →

@@ -76,4 +76,4 @@ Picking the wrong model for a task wastes money (too expensive) or degrades qual
 | Differences | Differs from [Guardrails](03_amazon_bedrock_guardrails.md) contextual grounding check — that is runtime filtering; this is offline benchmarking |
 
 ---
-← Previous: [Bedrock Prompt Management](21_amazon_bedrock_prompt_management.md) | [Overview](00_overview.md) | Next: [Bedrock Data Automation](23_amazon_bedrock_data_automation.md) →
+← Previous: [Bedrock Prompt Management](21_amazon_bedrock_prompt_management.md) | [Overview](aws/201/service/00_overview.md) | Next: [Bedrock Data Automation](23_amazon_bedrock_data_automation.md) →

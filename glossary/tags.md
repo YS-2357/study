@@ -4,7 +4,6 @@ tags:
 created_at: 260417-141847
 updated_at: 260417-141847
 ---
-
 # Obsidian Tags
 
 ## What It Is

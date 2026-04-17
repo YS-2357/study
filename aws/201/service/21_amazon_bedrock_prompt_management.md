@@ -82,4 +82,4 @@ Prompt quality directly affects application behavior. Without versioning, a prom
 | Differences | Unlike a config file, prompts here are paired with model settings — the "what to say" and "how the model should respond" travel together |
 
 ---
-← Previous: [Bedrock Flows](20_amazon_bedrock_flows.md) | [Overview](00_overview.md) | Next: [Bedrock Model Evaluation](22_amazon_bedrock_model_evaluation.md) →
+← Previous: [Bedrock Flows](20_amazon_bedrock_flows.md) | [Overview](aws/201/service/00_overview.md) | Next: [Bedrock Model Evaluation](22_amazon_bedrock_model_evaluation.md) →

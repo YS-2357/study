@@ -178,4 +178,4 @@ They are evolutionary layers, not competitors:
 - [AWS Prescriptive Guidance: AgentCore](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/amazon-bedrock-agentcore.html)
 
 ---
-← Previous: [Strands Agents SDK](01_strands_agents_sdk.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock Guardrails](03_amazon_bedrock_guardrails.md) →
+← Previous: [Strands Agents SDK](01_strands_agents_sdk.md) | [Overview](aws/201/service/00_overview) | Next: [Amazon Bedrock Guardrails](03_amazon_bedrock_guardrails.md) →

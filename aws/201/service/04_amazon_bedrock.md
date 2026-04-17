@@ -158,4 +158,4 @@ Tokens ≈ billing units. ~1 token ≈ 0.75 English words, ~1 token ≈ 0.5 Kore
 - Cross-Region inference helps with throughput but adds complexity
 
 ---
-← Previous: [Amazon Bedrock Guardrails](03_amazon_bedrock_guardrails.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) →
+← Previous: [Amazon Bedrock Guardrails](03_amazon_bedrock_guardrails.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) →

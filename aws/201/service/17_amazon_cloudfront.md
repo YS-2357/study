@@ -96,4 +96,4 @@ CloudFront makes the frontend globally fast and keeps S3 private. Without it, yo
 > **Tip:** After `cdk deploy`, CloudFront changes take up to 5 minutes to propagate. If the old version still shows, wait — don't redeploy.
 
 ---
-← Previous: [Amazon S3](16_amazon_s3.md) | [Overview](00_overview.md) | Next: [Amazon ECR](18_amazon_ecr.md) →
+← Previous: [Amazon S3](16_amazon_s3.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon ECR](18_amazon_ecr.md) →

@@ -150,4 +150,4 @@ Bedrock Agents is the fastest path to a working agent on AWS — no orchestratio
 - Multi-step agents multiply all of these per reasoning step
 
 ---
-← Previous: [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) | [Overview](00_overview.md) | Next: [AWS CDK](07_aws_cdk.md) →
+← Previous: [Amazon Bedrock Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) | [Overview](aws/201/service/00_overview.md) | Next: [AWS CDK](07_aws_cdk.md) →

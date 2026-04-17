@@ -90,4 +90,4 @@ The packaging decision is a runtime constraint, not a preference. When your depe
 > **Tip:** Use `DockerImageFunction` in CDK from the start if your stack includes ML or agent frameworks. Switching from zip to container image mid-project means rewriting the Lambda construct.
 
 ---
-← Previous: [Amazon API Gateway](10_amazon_api_gateway.md) | [Overview](00_overview.md) | Next: [Mangum](12_mangum.md) →
+← Previous: [Amazon API Gateway](10_amazon_api_gateway.md) | [Overview](aws/201/service/00_overview.md) | Next: [Mangum](12_mangum.md) →

@@ -119,4 +119,4 @@ A customer support chatbot attaches a guardrail with medium-strength content fil
 Guardrails let you enforce consistent safety and compliance rules across every Bedrock model without modifying your application code. A single guardrail version can be reused across models and updated centrally when policies change.
 
 ---
-← Previous: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock](04_amazon_bedrock.md) →
+← Previous: [Amazon Bedrock AgentCore](02_amazon_bedrock_agentcore.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon Bedrock](04_amazon_bedrock.md) →

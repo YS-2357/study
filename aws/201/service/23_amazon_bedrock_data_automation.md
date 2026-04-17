@@ -102,4 +102,4 @@ Processing documents at scale with custom extraction code is fragile — every n
 | Differences | Unlike [Knowledge Bases](05_amazon_bedrock_knowledge_bases.md) which chunks and indexes for retrieval, BDA extracts specific structured fields from each document |
 
 ---
-← Previous: [Bedrock Model Evaluation](22_amazon_bedrock_model_evaluation.md) | [Overview](00_overview.md) | Next: [Bedrock Custom Models](24_amazon_bedrock_custom_models.md) →
+← Previous: [Bedrock Model Evaluation](22_amazon_bedrock_model_evaluation.md) | [Overview](aws/201/service/00_overview.md) | Next: [Bedrock Custom Models](24_amazon_bedrock_custom_models.md) →

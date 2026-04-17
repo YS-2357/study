@@ -169,4 +169,4 @@ Without RAG, models can only use their training data — they hallucinate when a
 - Default top-k is 5 — tune based on your document density and model context window
 
 ---
-← Previous: [Amazon Bedrock](04_amazon_bedrock.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) →
+← Previous: [Amazon Bedrock](04_amazon_bedrock.md) | [Overview](aws/201/service/00_overview.md) | Next: [Amazon Bedrock Agents](06_amazon_bedrock_agents.md) →
