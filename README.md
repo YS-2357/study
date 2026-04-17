@@ -50,6 +50,7 @@ Every domain has a `00_overview.md` that serves as the study hub with links to a
 | Element | Syntax | When to use |
 |---------|--------|-------------|
 | Note title | `#` | One per file — the file title only |
+| Extra section | `##` | Allowed between required sections when content genuinely warrants it |
 | Major section | `##` | `What It Is`, `How It Works`, etc. |
 | Subsection | `###` | Breakdown within a section |
 | Deeper | `####`+ | Never — split the note instead |
