@@ -37,7 +37,7 @@ Event happens
 
 ## Example
 
-A frontend sends `POST /chat` to [Amazon API Gateway](09_amazon_api_gateway.md), which invokes a Lambda function. The function reads the request body, calls [Amazon Bedrock](04_amazon_bedrock.md), and returns a JSON response.
+A frontend sends `POST /chat` to [Amazon API Gateway](10_amazon_api_gateway.md), which invokes a Lambda function. The function reads the request body, calls [Amazon Bedrock](04_amazon_bedrock.md), and returns a JSON response.
 
 ```python
 import json
@@ -53,7 +53,7 @@ def handler(event, context):
     }
 ```
 
-If this function later grows large ML dependencies, the code can stay conceptually the same while the packaging moves to [Lambda Container Images](10_lambda_container_images.md).
+If this function later grows large ML dependencies, the code can stay conceptually the same while the packaging moves to [Lambda Container Images](11_lambda_container_images.md).
 
 ## Why It Matters
 

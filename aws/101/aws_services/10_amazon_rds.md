@@ -38,7 +38,7 @@ Amazon RDS (Relational Database Service) is a **managed service platform for rel
 
 For most MSP clients, RDS is the right choice — they want the database to just work without a DBA managing infrastructure.
 
-> For Aurora-specific features (shared cluster storage, Serverless v2, Babelfish), see [20_amazon_aurora.md](./20_amazon_aurora.md)
+> For Aurora-specific features (shared cluster storage, Serverless v2, Babelfish), see [11_amazon_aurora.md](./11_amazon_aurora.md)
 
 ## How It Works
 
@@ -362,7 +362,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 ### 6. Plan Your Security Group Rules
 - RDS needs inbound rules for the database port (3306 for MySQL, 5432 for PostgreSQL, etc.)
 - Best practice: allow only from your application's security group, not from 0.0.0.0/0
-- See [23_security_group.md](./23_security_group.md) for SG details
+- See [14_security_group.md](./14_security_group.md) for SG details
 
 ### 7. Monitor Costs — RDS Can Get Expensive
 - Instance cost + storage + I/O + backups + data transfer

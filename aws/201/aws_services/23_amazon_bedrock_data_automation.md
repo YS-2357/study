@@ -53,11 +53,11 @@ BDA processes asynchronously: `InvokeDataAutomationAsync` reads input from an Am
 
 S3 is the handoff layer between your files and BDA:
 
-| S3 role | What goes there | Why it matters |
-|---|---|---|
-| **Input bucket or prefix** | Source PDFs, images, audio, or video | BDA does not need the file bytes embedded in the async request; the request points to `s3://bucket/prefix-or-object` |
-| **Output bucket or prefix** | JSON output, extracted fields, metadata, and modality-specific results | Downstream jobs can read the structured output from S3 without calling BDA again |
-| **IAM permissions** | Read access to input objects and write access to the output prefix | Amazon Bedrock S3 access commonly requires `s3:GetObject`, `s3:ListBucket`, and `s3:PutObject`, plus AWS KMS permissions if the bucket uses a KMS key ([AWS User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/s3-bucket-access.html)) |
+| S3 role                     | What goes there                                                        | Why it matters                                                                                                                                                                                                                                       |
+| --------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Input bucket or prefix**  | Source PDFs, images, audio, or video                                   | BDA does not need the file bytes embedded in the async request; the request points to `s3://bucket/prefix-or-object`                                                                                                                                 |
+| **Output bucket or prefix** | JSON output, extracted fields, metadata, and modality-specific results | Downstream jobs can read the structured output from S3 without calling BDA again                                                                                                                                                                     |
+| **IAM permissions**         | Read access to input objects and write access to the output prefix     | Amazon Bedrock S3 access commonly requires `s3:GetObject`, `s3:ListBucket`, and `s3:PutObject`, plus AWS KMS permissions if the bucket uses a KMS key ([AWS User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/s3-bucket-access.html)) |
 
 The common pattern is: upload raw files to an input prefix, invoke BDA with that input S3 URI and an output S3 URI, wait for the invocation to finish, then let [AWS Lambda](09_aws_lambda.md), Glue, Athena, or an application read the JSON results from S3.
 

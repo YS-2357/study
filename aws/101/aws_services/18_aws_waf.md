@@ -180,7 +180,7 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
 - Shield handles volume attacks (DDoS)
 - WAF handles content attacks (SQL injection, XSS, bots)
 - Use both for production web applications
-- See [25_aws_shield.md](./25_aws_shield.md) for Shield details
+- See [17_aws_shield.md](./17_aws_shield.md) for Shield details
 
 ### 5. Log Everything
 - Enable WAF logging to S3, CloudWatch Logs, or Kinesis Data Firehose

@@ -4,7 +4,7 @@
 
 Amazon DynamoDB is often used as a status store for work items such as jobs, orders, uploads, or agent runs because it gives key-value lookups with single-digit millisecond performance and scales without server management, as described in the [AWS DynamoDB developer guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html). In practice, teams store a work item ID as the key and keep fields like `status`, `updated_at`, `worker_id`, and `result`.
 
-See also: [Amazon DynamoDB (101)](../../101/aws_services/12_amazon_dynamodb.md) and [DynamoDB TTL and Session Store](14_amazon_dynamodb_ttl.md)
+See also: [Amazon DynamoDB (101)](../../101/aws_services/12_amazon_dynamodb.md) and [DynamoDB TTL and Session Store](15_amazon_dynamodb_ttl.md)
 
 ## Analogy
 

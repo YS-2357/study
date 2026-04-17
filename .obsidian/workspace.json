@@ -11,10 +11,14 @@
             "id": "a88e41454934b7ef",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "glossary/glossary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "glossary"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "glossary/glossary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "백링크"
+              "title": "glossary 의 백링크"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "glossary/glossary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "나가는 링크"
+              "title": "glossary 의 나가는 링크"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "glossary/glossary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "glossary 의 개요"
             }
           }
         ]
@@ -178,23 +185,41 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "AGENTS.md.tmp.9180.1776387664300",
-    "networking/00_overview.md",
+    "glossary/glossary.md.tmp.19052.1776393612474",
+    "00_overview.md",
+    "ai/00_overview.md",
+    "aws/201/aws_services/00_overview.md",
     "aws/201/00_overview.md",
+    "glossary/glossary.md",
+    "CLAUDE.md.tmp.10300.1776392455750",
+    "aws/201/aws_services/23_amazon_bedrock_data_automation.md",
+    "AGENTS.md.tmp.10300.1776391628913",
+    "CLAUDE.md.tmp.10300.1776391625433",
+    "glossary/CLAUDE.md",
+    "glossary/README.md",
+    "glossary",
+    "README.md.tmp.10300.1776390768293",
+    "AGENTS.md.tmp.10300.1776390763611",
+    "CLAUDE.md.tmp.10300.1776390758096",
+    "aws/201/aws_services/25_boto3.md",
+    "ai/09_profiles.md",
+    "aws/CLAUDE.md",
+    "aws/README.md",
+    "aws/AGENTS.md",
+    "ai/05_skills.md",
+    "ai/06_plugins.md",
+    "networking/01_protocols.md",
+    "networking/00_overview.md",
+    "ai/01_agent.md",
+    "ai/12_prompt_caching.md",
+    "aws/101/images/README.md",
+    "aws/101/README.md",
+    "AGENTS.md.tmp.9180.1776388412415",
+    "CLAUDE.md.tmp.9180.1776388409819",
+    "AGENTS.md.tmp.9180.1776387664300",
     "aws/201/faq_draft_maker.md",
     "aws/101/example.md",
     "aws/101/aws_glossary.md",
-    "aws/101/console_workthrough/vpc.md",
-    "aws/101/console_workthrough/elb.md",
-    "aws/101/console_workthrough/rds.md",
-    "README.md",
-    "aws/201/aws_services/01_strands_agents_sdk.md",
-    "aws/201/aws_services/00_overview.md",
-    "aws/201/aws_services/02_amazon_bedrock_agentcore.md",
-    "computing/03_storage.md",
-    "aws/101/aws_services/20_amazon_ebs.md",
-    "AGENTS.md",
-    "CLAUDE.md",
-    "ai/01_agent.md"
+    "aws/101/console_workthrough/vpc.md"
   ]
 }

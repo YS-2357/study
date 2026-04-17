@@ -564,7 +564,7 @@ ENVIRONMENT=production
 - **Cost-effective** - For sporadic workloads (<30% utilization)
 
 **Cross-reference:**
-- See [IAM Roles](24_amazon_iam.md) for execution role configuration
+- See [IAM Roles](15_amazon_iam.md) for execution role configuration
 - See [API Gateway](../aws_services/) for building APIs with Lambda (when created)
 - See [EventBridge](../aws_services/) for scheduled Lambda functions (when created)
 

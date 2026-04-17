@@ -65,7 +65,7 @@ Aurora separates compute from storage. All instances (one writer + up to 15 read
 | Cost | Lower baseline | ~20% more |
 | Portability | Standard engines, easy to migrate | AWS-only |
 
-> For standard RDS details, see [19_amazon_rds.md](./19_amazon_rds.md)
+> For standard RDS details, see [19_amazon_rds.md](./10_amazon_rds.md)
 
 ## What to Remember (Console Create Summary)
 
@@ -95,7 +95,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 
 ## Create Database - Console Flow (Aurora-specific options)
 
-> Aurora shares the same "Create database" console as RDS. Below covers only Aurora-specific options. For the full console flow, see [19_amazon_rds.md](./19_amazon_rds.md).
+> Aurora shares the same "Create database" console as RDS. Below covers only Aurora-specific options. For the full console flow, see [19_amazon_rds.md](./10_amazon_rds.md).
 
 ![Create Database - Engine Options](../images/aws_console/rds01.png)
 
