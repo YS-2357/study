@@ -5,7 +5,7 @@ tags:
   - ml
   - security
 created_at: 260417-141847
-updated_at: 260417-141847
+updated_at: 260417-144255
 ---
 
 # AgentCore Identity
@@ -30,4 +30,4 @@ An agent that reads customer records can use Identity-backed access instead of s
 Identity reduces secret sprawl. For production agents, credential handling is part of the architecture, not an implementation detail.
 
 ---
-← Previous: [AgentCore Gateway](03_gateway.md) | [Overview](00_overview.md) | Next: [AgentCore Code Interpreter](05_code_interpreter.md) →
+← Previous: [AgentCore Gateway](03_gateway.md) | [Overview](./00_overview.md) | Next: [AgentCore Code Interpreter](05_code_interpreter.md) →

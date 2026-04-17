@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 260417-141847
-updated_at: 260417-141847
+updated_at: 260417-144255
 ---
 
 # AgentCore Gateway
@@ -29,4 +29,4 @@ A team can expose an internal ticket API and a Lambda refund function through Ga
 Gateway makes tool access explicit and central. That is easier to govern than giving an agent direct access to every API client and credential inside the application code.
 
 ---
-← Previous: [AgentCore Memory](02_memory.md) | [Overview](00_overview.md) | Next: [AgentCore Identity](04_identity.md) →
+← Previous: [AgentCore Memory](02_memory.md) | [Overview](./00_overview.md) | Next: [AgentCore Identity](04_identity.md) →

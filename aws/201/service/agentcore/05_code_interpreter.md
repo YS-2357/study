@@ -5,7 +5,7 @@ tags:
   - ml
   - security
 created_at: 260417-141847
-updated_at: 260417-141847
+updated_at: 260417-144255
 ---
 
 # AgentCore Code Interpreter
@@ -30,4 +30,4 @@ An analytics agent can generate Python to calculate totals from a CSV file, run 
 Generated code is powerful but risky. Code Interpreter gives agents code execution without giving them direct execution access to the application host.
 
 ---
-← Previous: [AgentCore Identity](04_identity.md) | [Overview](00_overview.md) | Next: [AgentCore Browser](06_browser.md) →
+← Previous: [AgentCore Identity](04_identity.md) | [Overview](./00_overview.md) | Next: [AgentCore Browser](06_browser.md) →

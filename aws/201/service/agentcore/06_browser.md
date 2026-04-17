@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 260417-141847
-updated_at: 260417-141847
+updated_at: 260417-144255
 ---
 
 # AgentCore Browser
@@ -29,4 +29,4 @@ A research agent can open a vendor status page, inspect the current incident ban
 Many useful tasks still require web interfaces. Browser gives agents that reach without coupling production code to local browser processes.
 
 ---
-← Previous: [AgentCore Code Interpreter](05_code_interpreter.md) | [Overview](00_overview.md) | Next: [AgentCore Observability](07_observability.md) →
+← Previous: [AgentCore Code Interpreter](05_code_interpreter.md) | [Overview](./00_overview.md) | Next: [AgentCore Observability](07_observability.md) →
