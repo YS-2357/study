@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Profiles
 
 ## What It Is

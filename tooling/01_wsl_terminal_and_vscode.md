@@ -1,3 +1,8 @@
+---
+tags:
+  - tooling
+  - git
+---
 # WSL Terminal and VS Code Workflow
 
 ## What It Is

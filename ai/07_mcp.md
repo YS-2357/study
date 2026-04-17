@@ -1,3 +1,8 @@
+---
+tags:
+  - ai
+  - networking
+---
 # MCP
 
 ## What It Is

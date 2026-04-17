@@ -1,3 +1,7 @@
+---
+tags:
+  - networking
+---
 # HTTP — Methods, Status Codes & REST API
 
 ## What It Is

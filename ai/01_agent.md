@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Agent
 
 ## What It Is

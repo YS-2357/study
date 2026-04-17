@@ -1,3 +1,7 @@
+---
+tags:
+  - computing
+---
 # Decomposition
 
 ## What It Is

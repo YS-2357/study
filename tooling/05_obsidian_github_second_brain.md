@@ -1,3 +1,9 @@
+---
+tags:
+  - tooling
+  - git
+  - ai
+---
 # Obsidian + GitHub as a Second Brain
 
 ## What It Is

@@ -1,3 +1,7 @@
+---
+tags:
+  - tooling
+---
 # Vim and Neovim
 
 ## What It Is

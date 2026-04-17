@@ -1,3 +1,8 @@
+---
+tags:
+  - computing
+  - networking
+---
 # Endpoints
 
 ## What It Is

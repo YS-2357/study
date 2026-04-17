@@ -1,3 +1,7 @@
+---
+tags:
+  - computing
+---
 # CPU Architecture
 
 ## What It Is

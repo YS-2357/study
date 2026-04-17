@@ -1,3 +1,7 @@
+---
+tags:
+  - networking
+---
 # Networking Fundamentals — Overview
 
 Foundation networking concepts needed to understand AWS services.

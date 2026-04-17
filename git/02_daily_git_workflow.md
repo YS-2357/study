@@ -1,3 +1,7 @@
+---
+tags:
+  - git
+---
 # Daily Git Workflow
 
 ## What It Is

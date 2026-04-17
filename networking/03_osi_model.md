@@ -1,3 +1,7 @@
+---
+tags:
+  - networking
+---
 # OSI Model
 
 ## What It Is

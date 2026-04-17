@@ -1,3 +1,8 @@
+---
+tags:
+  - ai
+  - aws
+---
 # Strands Agents SDK
 
 ## What It Is

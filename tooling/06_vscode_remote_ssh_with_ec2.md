@@ -1,3 +1,9 @@
+---
+tags:
+  - tooling
+  - aws
+  - computing
+---
 # VS Code Remote SSH with EC2
 
 ## What It Is

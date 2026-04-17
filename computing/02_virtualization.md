@@ -1,3 +1,8 @@
+---
+tags:
+  - computing
+  - container
+---
 # Virtualization
 
 ## What It Is

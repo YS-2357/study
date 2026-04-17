@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Skills
 
 ## What It Is

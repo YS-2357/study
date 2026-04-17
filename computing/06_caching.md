@@ -1,3 +1,7 @@
+---
+tags:
+  - computing
+---
 # Caching
 
 ## What It Is

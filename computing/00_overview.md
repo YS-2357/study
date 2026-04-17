@@ -1,3 +1,7 @@
+---
+tags:
+  - computing
+---
 # Computing Basics — Overview
 
 Fundamental computing concepts for understanding cloud services.

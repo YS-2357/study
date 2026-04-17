@@ -1,3 +1,7 @@
+---
+tags:
+  - networking
+---
 # Addressing
 
 ## What It Is

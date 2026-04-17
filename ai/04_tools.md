@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Tools
 
 ## What It Is

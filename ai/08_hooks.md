@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Hooks
 
 ## What It Is

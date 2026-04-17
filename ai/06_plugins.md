@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Plugins
 
 ## What It Is

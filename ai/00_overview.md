@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # AI Agents — Overview
 
 Foundation concepts for understanding how coding agents (like Codex) work.

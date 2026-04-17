@@ -1,3 +1,8 @@
+---
+tags:
+  - computing
+  - storage
+---
 # Storage
 
 ## What It Is

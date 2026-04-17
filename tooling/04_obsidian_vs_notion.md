@@ -1,3 +1,7 @@
+---
+tags:
+  - tooling
+---
 # Obsidian vs Notion
 
 ## What It Is

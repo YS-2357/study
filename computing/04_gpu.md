@@ -1,3 +1,8 @@
+---
+tags:
+  - computing
+  - ml
+---
 # GPU
 
 ## What It Is

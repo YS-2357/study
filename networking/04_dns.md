@@ -1,3 +1,7 @@
+---
+tags:
+  - networking
+---
 # DNS (Domain Name System)
 
 ## What It Is

@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # Attention Mechanism (Q, K, V)
 
 ## What It Is

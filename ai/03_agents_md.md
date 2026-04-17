@@ -1,3 +1,7 @@
+---
+tags:
+  - ai
+---
 # AGENTS.md
 
 ## What It Is

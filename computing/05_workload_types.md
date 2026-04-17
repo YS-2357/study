@@ -1,3 +1,7 @@
+---
+tags:
+  - computing
+---
 # Workload Types
 
 ## What It Is
