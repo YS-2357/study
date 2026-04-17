@@ -62,9 +62,9 @@ retrieval.py
 | Operational burden | Higher — you own the pipeline | Lower — AWS manages it |
 | Use when | Custom pipeline, hybrid search, metadata filters | Standard RAG, minimal code, quick setup |
 
-### Applying to the CS Inquiry pipeline
+### Applying to a support-ticket RAG pipeline
 
-If the CS Inquiry Draft Assistant used OpenSearch directly instead of [Knowledge Bases](05_amazon_bedrock_knowledge_bases.md), the `generate_draft` Lambda would look like this:
+If a support-ticket draft assistant used OpenSearch directly instead of [Knowledge Bases](05_amazon_bedrock_knowledge_bases.md), the `generate_draft` Lambda would look like this:
 
 ```
 generate_draft Lambda
