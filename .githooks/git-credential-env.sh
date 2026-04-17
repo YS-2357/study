@@ -18,5 +18,10 @@ if [[ -z "${GITHUB_TOKEN:-}" ]]; then
   exit 1
 fi
 
-echo "username=YS-2357"
+if [[ -z "${GITHUB_USERNAME:-}" ]]; then
+  echo "error: GITHUB_USERNAME not set in $ENV_FILE" >&2
+  exit 1
+fi
+
+echo "username=$GITHUB_USERNAME"
 echo "password=$GITHUB_TOKEN"
