@@ -52,10 +52,6 @@ Use security groups to express tier-to-tier trust:
 | Backend security group | App port only from the ALB security group | Backend is not directly public |
 | Database security group | Database port only from the backend security group | Database accepts traffic only from the app tier |
 
-### Frontend Nuance
-
-`public frontend` does not always mean frontend servers sit in a public subnet. A static frontend can live in private Amazon Simple Storage Service ([Amazon S3](../101/aws_services/19_amazon_s3.md)) and be served through CloudFront using origin access control (OAC), which lets CloudFront send authenticated requests to an S3 origin ([Amazon CloudFront Developer Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)). In that version, CloudFront is the public presentation entry point, while the S3 bucket can stay private.
-
 ## Example
 
 A production web app can use this layout:
