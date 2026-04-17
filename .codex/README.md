@@ -15,12 +15,24 @@ Codex usually does not need elevated permission for non-mutating inspection:
 - `git status`
 - `git diff`
 - `git log`
+- `gh auth status`
+- `gh pr view`
+- `gh pr list`
+- `gh issue view`
+- `gh issue list`
 
 Safe recurring approvals for this repository:
 
 - `git add <specific paths>` - stages intended file changes and writes Git index metadata.
+- `git status` - checks repository state without changing files.
 - `git commit -m "<message>"` - creates the reviewed commit.
+- `git push origin main` - pushes the reviewed single commit to the repository.
+- `git pull --ff-only origin main` - updates the local branch only when Git can fast-forward without creating a merge commit.
 - `git restore <specific paths>` - cleans confirmed line-ending-only noise or restores specific files.
+- `gh pr view <number-or-url>` - reads pull request metadata without changing GitHub state.
+- `gh pr list <filters>` - lists pull requests for inspection.
+- `gh issue view <number-or-url>` - reads issue metadata without changing GitHub state.
+- `gh issue list <filters>` - lists issues for inspection.
 - Token-based push:
 
 ```bash

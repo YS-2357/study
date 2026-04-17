@@ -155,6 +155,7 @@ Tag taxonomy:
 | `git/` | Git tracking, staging, daily workflow |
 | `networking/` | Protocols, addressing, OSI, DNS, HTTP |
 | `tooling/` | Developer tools, editors, note apps, and workflow methods |
+| `glossary/` | Abbreviations and domain terms used across the repo |
 
 Each domain has a `00_overview.md` as the study hub with navigation links.
 

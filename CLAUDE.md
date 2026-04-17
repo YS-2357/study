@@ -154,6 +154,7 @@ Tag taxonomy:
 | `computing/` | CPU, virtualization, storage, GPU, caching, interfaces, endpoints |
 | `git/` | Git tracking, staging, daily workflow |
 | `networking/` | Protocols, addressing, OSI, DNS, HTTP |
+| `glossary/` | Abbreviations and domain terms used across the repo |
 
 Each domain has a `00_overview.md` as the study hub with navigation links.
 
