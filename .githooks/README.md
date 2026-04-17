@@ -1,3 +1,10 @@
+---
+tags:
+  -
+created_at: 260417-145128
+updated_at: 260417-145128
+---
+
 # .githooks
 
 Local Git hooks used by this repository.

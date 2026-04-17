@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "glossary/glossary.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "AGENTS"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "e4f21328eceae37b",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "glossary/glossary.md",
+                "file": "AGENTS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "glossary 의 백링크"
+              "title": "AGENTS 의 백링크"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "glossary/glossary.md",
+                "file": "AGENTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "glossary 의 나가는 링크"
+              "title": "AGENTS 의 나가는 링크"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "glossary/glossary.md",
+                "file": "AGENTS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "glossary 의 개요"
+              "title": "AGENTS 의 개요"
             }
           }
         ]
@@ -185,41 +185,34 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "glossary/glossary.md.tmp.19052.1776393612474",
     "00_overview.md",
-    "ai/00_overview.md",
-    "aws/201/aws_services/00_overview.md",
+    "aws/201/service/agentcore/02_memory.md",
+    "aws/201/service/agentcore/06_browser.md",
+    "aws/201/service/agentcore/00_overview.md",
+    "aws/201/service/agentcore/07_observability.md",
+    "aws/201/service/02_amazon_bedrock_agentcore.md",
+    "aws/201/service/agentcore/05_code_interpreter.md",
+    "aws/201/service/00_overview.md",
     "aws/201/00_overview.md",
-    "glossary/glossary.md",
-    "CLAUDE.md.tmp.10300.1776392455750",
-    "aws/201/aws_services/23_amazon_bedrock_data_automation.md",
-    "AGENTS.md.tmp.10300.1776391628913",
-    "CLAUDE.md.tmp.10300.1776391625433",
-    "glossary/CLAUDE.md",
-    "glossary/README.md",
-    "glossary",
-    "README.md.tmp.10300.1776390768293",
-    "AGENTS.md.tmp.10300.1776390763611",
-    "CLAUDE.md.tmp.10300.1776390758096",
-    "aws/201/aws_services/25_boto3.md",
-    "ai/09_profiles.md",
-    "aws/CLAUDE.md",
+    "aws/201/service/10_amazon_api_gateway.md",
+    "aws/201/service/08_amazon_cloudwatch.md",
+    "aws/201/service/04_amazon_bedrock.md",
+    "aws/201/service/agentcore/08_evaluations.md",
+    "aws/201/service/03_amazon_bedrock_guardrails.md",
+    "aws/201/service/agentcore/09_policy.md",
+    "aws/201/service/agentcore/README.md",
+    "aws/201/service/agentcore/04_identity.md",
+    "aws/201/service/01_strands_agents_sdk.md",
+    "aws/201/01_three_tier_architecture.md",
+    "git/00_overview.md",
+    "aws/201/service/agentcore/03_gateway.md",
+    "2026-04-17.md",
+    "aws/201/service/agentcore/01_runtime.md",
+    "aws/201/service/agentcore",
     "aws/README.md",
-    "aws/AGENTS.md",
-    "ai/05_skills.md",
-    "ai/06_plugins.md",
-    "networking/01_protocols.md",
-    "networking/00_overview.md",
-    "ai/01_agent.md",
-    "ai/12_prompt_caching.md",
-    "aws/101/images/README.md",
-    "aws/101/README.md",
-    "AGENTS.md.tmp.9180.1776388412415",
-    "CLAUDE.md.tmp.9180.1776388409819",
-    "AGENTS.md.tmp.9180.1776387664300",
-    "aws/201/faq_draft_maker.md",
-    "aws/101/example.md",
-    "aws/101/aws_glossary.md",
-    "aws/101/console_workthrough/vpc.md"
+    "aws/201/service",
+    "aws/101/service",
+    "무제 1.canvas",
+    "무제.canvas"
   ]
 }
