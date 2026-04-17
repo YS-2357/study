@@ -2,9 +2,12 @@
 tags:
   - aws
   - security
-created_at: 260320-000000
-updated_at: 260417-141847
+created_at: 2026-03-20T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # AWS Shield
 
@@ -202,4 +205,4 @@ while Shield Advanced adds real-time visibility, SRT support, and cost protectio
 - [AWS Shield FAQs](https://aws.amazon.com/shield/faqs/)
 
 ---
-← Previous: [Amazon IAM](15_amazon_iam.md) | [Overview](00_overview.md) | Next: [AWS WAF](18_aws_waf.md) →
+← Previous: [Amazon IAM](15_amazon_iam.md) | [Overview](./00_overview.md) | Next: [AWS WAF](18_aws_waf.md) →

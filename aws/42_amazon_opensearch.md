@@ -2,9 +2,12 @@
 tags:
   - aws
   - database
-created_at: 260417-141847
-updated_at: 260417-141847
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon OpenSearch
 
@@ -181,4 +184,4 @@ RAG quality is determined at two points: ingestion (what goes in) and retrieval 
 > **Tip:** Index quality = answer quality. If RAG answers are wrong or vague, check the ingest pipeline — chunking strategy and field mappings — before debugging the model call.
 
 ---
-← Previous: [Mangum](12_mangum.md) | [Overview](00_overview.md) | Next: [AWS SSM Parameter Store](43_aws_ssm_parameter_store.md) →
+← Previous: [Mangum](12_mangum.md) | [Overview](./00_overview.md) | Next: [AWS SSM Parameter Store](43_aws_ssm_parameter_store.md) →

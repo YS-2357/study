@@ -2,9 +2,12 @@
 tags:
   - aws
   - database
-created_at: 260316-000000
-updated_at: 260417-141847
+created_at: 2026-03-16T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon DynamoDB
 
@@ -324,4 +327,4 @@ If the item is no longer `pending`, the update fails instead of silently letting
 - [Amazon DynamoDB FAQs](https://aws.amazon.com/dynamodb/faqs/)
 
 ---
-← Previous: [Amazon Aurora](11_amazon_aurora.md) | [Overview](00_overview.md) | Next: [Amazon ElastiCache](13_amazon_elasticache.md) →
+← Previous: [Amazon Aurora](11_amazon_aurora.md) | [Overview](./00_overview.md) | Next: [Amazon ElastiCache](13_amazon_elasticache.md) →

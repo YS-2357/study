@@ -3,9 +3,12 @@ tags:
   - aws
   - computing
   - infrastructure
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon EC2
 
@@ -767,4 +770,4 @@ AWS recommends Savings Plans for new commitments, though RI has not been officia
 - [What is Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 
 ---
-← Previous: [Amazon CloudFront](21_amazon_cloudfront.md) | [Overview](00_overview.md) | Next: [Auto Scaling](06_auto_scaling.md) →
+← Previous: [Amazon CloudFront](21_amazon_cloudfront.md) | [Overview](./00_overview.md) | Next: [Auto Scaling](06_auto_scaling.md) →

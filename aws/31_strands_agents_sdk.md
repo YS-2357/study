@@ -3,9 +3,12 @@ tags:
   - ai
   - aws
   - ml
-created_at: 260417-141847
-updated_at: 260417-141847
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Strands Agents SDK
 
@@ -213,4 +216,4 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Smaller models may struggle with multi-step reasoning
 
 ---
-← Previous: [Overview](00_overview.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md) →
+← Previous: [Overview](./00_overview.md) | [Overview](./00_overview.md) | Next: [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md) →

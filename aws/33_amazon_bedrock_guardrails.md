@@ -4,9 +4,12 @@ tags:
   - aws
   - ml
   - security
-created_at: 260417-141847
-updated_at: 260417-141847
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon Bedrock Guardrails
 
@@ -119,4 +122,4 @@ A customer support chatbot attaches a guardrail with medium-strength content fil
 Guardrails let you enforce consistent safety and compliance rules across every Bedrock model without modifying your application code. A single guardrail version can be reused across models and updated centrally when policies change.
 
 ---
-← Previous: [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md) | [Overview](00_overview.md) | Next: [Amazon Bedrock](34_amazon_bedrock.md) →
+← Previous: [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md) | [Overview](./00_overview.md) | Next: [Amazon Bedrock](34_amazon_bedrock.md) →

@@ -2,9 +2,12 @@
 tags:
   - aws
   - storage
-created_at: 260326-000000
-updated_at: 260417-141847
+created_at: 2026-03-26T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon S3
 
@@ -410,4 +413,4 @@ distribution = cf.Distribution(self, "FrontendDist",
 - [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 
 ---
-← Previous: [AWS Fargate](26_aws_fargate.md) | [Overview](00_overview.md) | Next: [Amazon EBS](20_amazon_ebs.md) →
+← Previous: [AWS Fargate](26_aws_fargate.md) | [Overview](./00_overview.md) | Next: [Amazon EBS](20_amazon_ebs.md) →

@@ -1,9 +1,12 @@
 ---
 tags:
   - aws
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Cloud Computing Billing
 
@@ -48,4 +51,4 @@ It depends on the service type under the AWS Shared Responsibility Model:
 - **Unmanaged (EC2)**: Customer manages guest OS updates, security patches, and application software.
 
 ---
-← Previous: [AWS WAF](18_aws_waf.md) | [Overview](00_overview.md) | Next: [AWS Marketplace](29_aws_marketplace.md) →
+← Previous: [AWS WAF](18_aws_waf.md) | [Overview](./00_overview.md) | Next: [AWS Marketplace](29_aws_marketplace.md) →

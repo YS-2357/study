@@ -2,9 +2,12 @@
 tags:
   - aws
   - storage
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon EFS
 
@@ -153,4 +156,4 @@ It is the go-to solution for shared content, CMS uploads, and any workload where
 - [EFS Performance](https://docs.aws.amazon.com/efs/latest/ug/performance.html)
 
 ---
-← Previous: [Amazon EBS](20_amazon_ebs.md) | [Overview](00_overview.md) | Next: [Amazon RDS](10_amazon_rds.md) →
+← Previous: [Amazon EBS](20_amazon_ebs.md) | [Overview](./00_overview.md) | Next: [Amazon RDS](10_amazon_rds.md) →

@@ -3,9 +3,12 @@ tags:
   - aws
   - ml
   - computing
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon SageMaker AI
 
@@ -113,4 +116,4 @@ let teams focus on model quality instead of cluster management.
 - [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
 
 ---
-← Previous: [Amazon Redshift](23_amazon_redshift.md) | [Overview](00_overview.md) | Next: [AWS Data Pipeline](25_aws_data_pipeline.md) →
+← Previous: [Amazon Redshift](23_amazon_redshift.md) | [Overview](./00_overview.md) | Next: [AWS Data Pipeline](25_aws_data_pipeline.md) →

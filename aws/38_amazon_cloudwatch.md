@@ -2,9 +2,12 @@
 tags:
   - aws
   - monitoring
-created_at: 260417-141847
-updated_at: 260417-141847
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Amazon CloudWatch
 
@@ -181,4 +184,4 @@ Without CloudWatch, you're blind. When the agent returns a bad draft or times ou
 - It feeds into CloudWatch — they complement each other, not replace
 
 ---
-← Previous: [AWS CDK](37_aws_cdk.md) | [Overview](00_overview.md) | Next: [AWS Lambda](07_aws_lambda.md) →
+← Previous: [AWS CDK](37_aws_cdk.md) | [Overview](./00_overview.md) | Next: [AWS Lambda](07_aws_lambda.md) →
