@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-17T00:00:00
+updated_at: 2026-04-18T12:00:00
+recent_editor: CLAUDE
+---
+
 # Cross-Linking Rules
 
 Rules for linking between notes and to the glossary.
