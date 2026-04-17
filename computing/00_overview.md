@@ -20,3 +20,6 @@ Fundamental computing concepts for understanding cloud services.
 9. [Decomposition](09_decomposition.md) — Dividing a system into smallest units across frontend, backend, infra, and database layers.
 
 See also [Tooling](../tooling/00_overview.md) for developer workflow and editor notes.
+
+---
+↑ [Root](../00_overview.md)

@@ -10,3 +10,6 @@ Developer tools and workflow methods for working effectively in this repo and si
 4. [Obsidian vs Notion](04_obsidian_vs_notion.md) — File-first notes versus workspace-first collaboration for Git and AI-assisted workflows; see [AI](../ai/00_overview.md) for LLM-assisted workflow context.
 5. [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) — Using a Markdown vault synced to GitHub as persistent AI memory; PARA + Zettelkasten structure, Claude Code integration, and notable open-source implementations.
 6. [VS Code Remote SSH with EC2](06_vscode_remote_ssh_with_ec2.md) — The main overheads of using VS Code Remote - SSH against EC2: latency, compute/storage cost, and SSH/security operations.
+
+---
+↑ [Root](../00_overview.md)

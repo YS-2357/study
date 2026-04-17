@@ -101,12 +101,25 @@ Rules:
 - `Why It Matters` is required.
 - Additional `##` sections are allowed between required sections when the content genuinely warrants it (e.g. `## Name` for etymology, `## Prerequisites` for complex setup).
 
-Every note ends with a navigation footer preceded by `---`:
+Every file participates in a two-level navigation hierarchy.
+
+**Concept notes** end with:
 
 ```md
 ---
 ← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
 ```
+
+`[Overview]` is the up link to the domain hub.
+
+**Domain overviews (`00_overview.md`) and hub files** end with an up link to the nearest parent overview:
+
+```md
+---
+↑ [Parent Title](path/to/parent/00_overview.md)
+```
+
+The root `00_overview.md` is the top of the hierarchy and has no up link.
 
 ## Obsidian Frontmatter Tags
 

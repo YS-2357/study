@@ -48,3 +48,6 @@ Abbreviations and domain terms used across this repo, sorted alphabetically.
 | VPC | Virtual Private Cloud | An isolated virtual network within AWS where you control IP ranges, subnets, and routing. | [note](../aws/101/aws_services/05_amazon_vpc.md) |
 | WAF | Web Application Firewall | AWS layer 7 firewall that filters HTTP requests by IP, geo, rate, or custom rules. | [note](../aws/101/aws_services/30_aws_waf.md) |
 | WSL | Windows Subsystem for Linux | Windows feature that runs a Linux environment natively without a VM. | [note](../tooling/01_wsl_terminal_and_vscode.md) |
+
+---
+↑ [Root](../00_overview.md)

@@ -47,3 +47,6 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 | Profiles | Named runtime modes |
 | Strands | Framework where LLM picks tools autonomously |
 
+---
+↑ [Root](../00_overview.md)
+
