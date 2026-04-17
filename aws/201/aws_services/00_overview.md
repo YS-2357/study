@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+---
+
 # AWS 201 Services — Overview
 
 Deeper AWS service topics beyond 101 fundamentals, focused on AI agents and production infrastructure.

@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - serverless
+  - computing
+---
+
 # AWS Lambda
 
 ## What It Is

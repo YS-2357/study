@@ -1,3 +1,11 @@
+---
+tags:
+  - ai
+  - aws
+  - ml
+  - computing
+---
+
 # Amazon Bedrock Custom Models
 
 ## What It Is

@@ -1,3 +1,10 @@
+---
+tags:
+  - ai
+  - aws
+  - ml
+---
+
 # Strands Agents SDK
 
 ## Official Documentation

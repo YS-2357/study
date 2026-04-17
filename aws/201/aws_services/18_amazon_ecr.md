@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - container
+---
+
 # Amazon ECR (Elastic Container Registry)
 
 ## What It Is

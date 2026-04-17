@@ -1,3 +1,11 @@
+---
+tags:
+  - ai
+  - aws
+  - ml
+  - security
+---
+
 # Amazon Bedrock Guardrails
 
 ## Official Documentation

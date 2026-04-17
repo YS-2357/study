@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - database
+---
+
 # Amazon DynamoDB — Workflow Status Tracking
 
 ## What It Is

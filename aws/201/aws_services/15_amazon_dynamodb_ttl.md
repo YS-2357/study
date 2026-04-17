@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - database
+---
+
 # Amazon DynamoDB — TTL and Session Store
 
 ## What It Is

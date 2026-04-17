@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - container
+  - serverless
+---
+
 # Lambda Container Images
 
 ## What It Is

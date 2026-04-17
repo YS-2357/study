@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - database
+---
+
 # Amazon OpenSearch
 
 ## What It Is

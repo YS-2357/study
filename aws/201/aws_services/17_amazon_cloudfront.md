@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - networking
+---
+
 # Amazon CloudFront — CDN for Static Frontend
 
 ## What It Is

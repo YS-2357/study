@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - serverless
+  - networking
+---
+
 # Amazon API Gateway
 
 ## What It Is

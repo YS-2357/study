@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - infrastructure
+  - tooling
+---
+
 # AWS CDK (Cloud Development Kit)
 
 ## What It Is

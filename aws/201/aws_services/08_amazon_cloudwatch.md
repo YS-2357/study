@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - monitoring
+---
+
 # Amazon CloudWatch
 
 ## What It Is

@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - security
+---
+
 # AWS SSM Parameter Store
 
 ## What It Is

@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - serverless
+  - tooling
+---
+
 # Mangum
 
 ## What It Is

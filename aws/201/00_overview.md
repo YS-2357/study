@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+---
+
 # AWS 201 Overview
 
 Deeper AWS topics: architecture patterns and service deep-dives.

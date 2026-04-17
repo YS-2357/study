@@ -1,3 +1,10 @@
+---
+tags:
+  - ai
+  - aws
+  - ml
+---
+
 # Amazon Bedrock Model Evaluation
 
 ## What It Is

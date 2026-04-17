@@ -1,3 +1,11 @@
+---
+tags:
+  - ai
+  - aws
+  - ml
+  - storage
+---
+
 # Amazon Bedrock Knowledge Bases
 
 ## What It Is

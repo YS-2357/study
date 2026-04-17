@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - storage
+---
+
 # Amazon S3 — Static Frontend Hosting
 
 ## What It Is
