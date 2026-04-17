@@ -36,3 +36,5 @@ To make Codex auto-approval rules match reliably, run Git and GitHub CLI command
 6. Run read-only GitHub CLI checks such as `gh auth status`, `gh pr view`, `gh pr list`, `gh issue view`, or `gh issue list` as standalone commands.
 
 Do not wrap these commands in PowerShell scripts, environment-variable setup blocks, command chains, pipes, heredocs, or command substitutions unless the task specifically requires that shape. Complex wrappers are less likely to match saved approval prefixes and will usually prompt again.
+
+Run Git commands that write repository metadata with escalated permissions immediately instead of first trying them in the sandbox. This applies to `git add`, `git commit`, `git push`, `git pull`, and `git restore`; otherwise Windows may fail on `.git/index.lock` before Codex retries with approval. Use a broad bounded `prefix_rule` such as `["git", "commit", "-m"]`, not a full commit-message-specific prefix.
