@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(cd*)",
+      "Bash(STUDY_PUSH_CONTENT_ACK=1 git *)"
+    ]
+  }
+}

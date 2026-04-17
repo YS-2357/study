@@ -234,6 +234,22 @@ When a request is vague (for example, "clean up the networking notes"), convert 
 - `.claude/` is out of scope for Codex. Do not inspect, edit, organize, or rely on Claude-owned hooks, skills, or helper files unless the user explicitly asks for Claude-specific work.
 - The hook enforces the mechanical checks, but the agent is still responsible for deciding which related docs need updates.
 
+## Git Commands
+
+Always run git and gh as individual Bash calls using `git -C "path"` — never chain `cd && git` commands. Chained `cd &&` commands trigger a permission prompt even when `git *` is already allowed.
+
+```bash
+# Correct — separate calls, each matches Bash(git *)
+git -C "/path/to/repo" add file.md
+git -C "/path/to/repo" commit -m "message"
+STUDY_PUSH_CONTENT_ACK=1 git -C "/path/to/repo" push origin main
+
+# Wrong — triggers compound-command prompt
+cd "/path/to/repo" && git add file.md && git commit -m "message" && git push origin main
+```
+
+The same rule applies to `gh` commands: run each as a separate call.
+
 ## Git Push
 
 Credentials are handled automatically via `.githooks/git-credential-env.sh`, which reads `GITHUB_TOKEN` and `GITHUB_USERNAME` from `.env`. Plain push works:
