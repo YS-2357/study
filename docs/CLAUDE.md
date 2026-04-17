@@ -2,15 +2,19 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T12:00:00
+updated_at: 2026-04-17T00:00:00
 recent_editor: CLAUDE
 ---
 
 # Claude Code
 
-Claude Code automation for this repository. For all rules, see [AGENTS.md](AGENTS.md).
+I am **Claude Code**, Anthropic's CLI agent.
 
-## 1. Automation Hooks
+## 1. Rules
+
+All rules are in [AGENTS.md](AGENTS.md). This file contains only platform-specific notes.
+
+## 2. Automation Hooks
 
 | Hook | Trigger | Action |
 |------|---------|--------|
@@ -19,9 +23,9 @@ Claude Code automation for this repository. For all rules, see [AGENTS.md](AGENT
 
 Hook scripts in `.claude/hooks/`.
 
-## 2. Git Commands
+## 3. Git Commands
 
-Run git as individual calls with `-C`:
+Run git as individual calls:
 
 ```bash
 git -C "C:\Users\user\study" add file.md
@@ -31,6 +35,6 @@ git -C "C:\Users\user\study" push origin main
 
 Never chain `cd && git` commands.
 
-## 3. Subtree Overrides
+## 4. Subtree Overrides
 
-- `aws/CLAUDE.md` - AWS four-viewpoint framework
+- `aws/CLAUDE.md` - AWS-specific viewpoint framework
