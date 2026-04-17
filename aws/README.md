@@ -75,3 +75,4 @@ AWS service notes. See [00_overview.md](00_overview.md) for study order.
 ## Subdirectories
 
 - `agentcore/`: Deep-dive into Bedrock AgentCore components.
+- `images/`: AWS Console screenshots.

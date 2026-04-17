@@ -1,9 +1,12 @@
 ---
 tags:
   - computing
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Workload Types
 
@@ -52,4 +55,4 @@ A Redis cache holding 50 GB of data with low CPU usage: choose R family (memory 
 Choosing the wrong instance family wastes money or causes performance problems. A memory-heavy workload on a compute-optimized instance will run out of RAM. A CPU-heavy workload on a memory-optimized instance pays for unused RAM.
 
 ---
-← Previous: [GPU](04_gpu.md) | [Overview](00_overview.md) | Next: [Caching](06_caching.md) →
+← Previous: [GPU](04_gpu.md) | [Overview](./00_overview.md) | Next: [Caching](06_caching.md) →

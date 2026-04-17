@@ -2,9 +2,12 @@
 tags:
   - computing
   - container
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Virtualization
 
@@ -67,4 +70,4 @@ You launch an m6g.large [EC2](../aws/05_amazon_ec2.md) instance. AWS allocates a
 Understanding virtualization explains why EC2 instances have specific CPU/memory allocations, why instance store data is lost when you stop an instance (the VM is deallocated), and why Nitro-based instances perform better than older Xen-based ones.
 
 ---
-← Previous: [Architecture](01_architecture.md) | [Overview](00_overview.md) | Next: [Storage](03_storage.md) →
+← Previous: [Architecture](01_architecture.md) | [Overview](./00_overview.md) | Next: [Storage](03_storage.md) →

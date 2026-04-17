@@ -18,7 +18,7 @@ tags:
   - domain
 ---
 
-↑ [Overview](00_overview.md)
+↑ [Overview](./00_overview.md)
 
 # Title
 ```
@@ -27,7 +27,7 @@ tags:
 
 ```md
 ---
-← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
+← Previous: [Title](link) | [Overview](./00_overview.md) | Next: [Title](link) →
 ```
 
 ### 2.3. Footer Variations
@@ -35,13 +35,13 @@ tags:
 First note in sequence:
 ```md
 ---
-[Overview](00_overview.md) | Next: [Title](link) →
+[Overview](./00_overview.md) | Next: [Title](link) →
 ```
 
 Last note in sequence:
 ```md
 ---
-← Previous: [Title](link) | [Overview](00_overview.md)
+← Previous: [Title](link) | [Overview](./00_overview.md)
 ```
 
 ## 3. Overview Navigation

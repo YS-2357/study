@@ -1,9 +1,12 @@
 ---
 tags:
   - networking
-created_at: 260324-000000
-updated_at: 260417-141847
+created_at: 2026-03-24T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # HTTP — Methods, Status Codes & REST API
 
@@ -84,4 +87,4 @@ A browser loading `https://example.com/users/1`:
 HTTP is the foundation of [ALB](../aws/16_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../aws/07_aws_lambda.md) design, and [CloudFront](../aws/21_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
 
 ---
-← Previous: [Addressing](02_addressing.md) | [Overview](00_overview.md) | Next: [DNS](04_dns.md) →
+← Previous: [DNS](04_dns.md) | [Overview](./00_overview.md) | Next: [Reverse Proxy](06_reverse_proxy.md) →

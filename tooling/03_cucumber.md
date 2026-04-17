@@ -1,9 +1,12 @@
 ---
 tags:
   - tooling
-created_at: 260409-000000
-updated_at: 2026-04-17T22:26:00
+created_at: 2026-04-09T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Cucumber
 
@@ -65,4 +68,4 @@ That same structure can improve AI-assisted development. If the note says exactl
 > **Tip:** Use Cucumber when the hardest part is agreeing on behavior. If the behavior is already obvious and you only need a fast technical check, a code-first test framework is usually simpler.
 
 ---
-← Previous: [Vim and Neovim](02_vim_and_neovim.md) | [Overview](00_overview.md) | Next: [Obsidian vs Notion](04_obsidian_vs_notion.md) →
+← Previous: [Vim and Neovim](02_vim_and_neovim.md) | [Overview](./00_overview.md) | Next: [Obsidian vs Notion](04_obsidian_vs_notion.md) →

@@ -1,9 +1,12 @@
 ---
 tags:
   - networking
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Addressing
 
@@ -87,4 +90,4 @@ A typical AWS [VPC](../aws/04_amazon_vpc.md) setup:
 Every AWS networking decision involves addressing: choosing VPC and subnet CIDRs, opening ports in security groups, understanding public vs private IPs, and configuring inbound vs outbound rules.
 
 ---
-← Previous: [Protocols](01_protocols.md) | [Overview](00_overview.md) | Next: [HTTP](05_http.md) →
+← Previous: [Protocols](01_protocols.md) | [Overview](./00_overview.md) | Next: [OSI Model](03_osi_model.md) →

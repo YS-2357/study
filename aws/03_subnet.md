@@ -25,7 +25,7 @@ A subnet is defined by a CIDR block within its parent VPC and is locked to one A
 
 ## Console Options
 
-![Create Subnet - Step 1](../images/aws_console/subnet1.png)
+![Create Subnet - Step 1](./images/console/subnet1.png)
 
 ### Subnet List View
 - View all subnets in current Region
@@ -34,7 +34,7 @@ A subnet is defined by a CIDR block within its parent VPC and is locked to one A
 
 ### Create Subnet
 
-![Create Subnet - Subnet Settings](../images/aws_console/subnet2.png)
+![Create Subnet - Subnet Settings](./images/console/subnet2.png)
 
 1. **Select VPC** - Choose which VPC
 2. **Subnet name** - Give it a name

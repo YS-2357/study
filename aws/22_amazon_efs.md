@@ -29,7 +29,7 @@ You create an EFS file system and EFS creates mount targets in each AZ you selec
 
 ## Create File System - Console Flow
 
-![EFS - Create file system](../images/aws_console/efs.png)
+![EFS - Create file system](./images/console/efs.png)
 
 **Two creation paths:**
 - **Create file system** (orange button) — quick create with recommended defaults

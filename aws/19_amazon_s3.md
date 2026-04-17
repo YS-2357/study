@@ -32,7 +32,7 @@ You create a bucket in a specific Region and upload objects (files) to it using 
 
 ### General configuration
 
-![S3 - Create bucket: General configuration](../images/aws_console/s3-1.png)
+![S3 - Create bucket: General configuration](./images/console/s3-1.png)
 
 **AWS Region:**
 - Shown: Asia Pacific (Seoul) ap-northeast-2
@@ -52,7 +52,7 @@ You create a bucket in a specific Region and upload objects (files) to it using 
 
 ### Copy settings & Object Ownership
 
-![S3 - Create bucket: Object Ownership](../images/aws_console/s3-2.png)
+![S3 - Create bucket: Object Ownership](./images/console/s3-2.png)
 
 **Copy settings from existing bucket** (optional):
 - Clone settings from another bucket (format: `s3://bucket/prefix`)
@@ -68,7 +68,7 @@ Best practice: keep ACLs disabled, use IAM/bucket policies for access control. A
 
 ### Block Public Access
 
-![S3 - Block Public Access settings](../images/aws_console/s3-3.png)
+![S3 - Block Public Access settings](./images/console/s3-3.png)
 
 **Block all public access** — yes enabled by default (all 4 sub-settings checked):
 
@@ -115,7 +115,7 @@ All (any)   → Setting 2              → Setting 4
 
 ### Bucket Versioning & Tags
 
-![S3 - Bucket Versioning, Tags](../images/aws_console/s3-4.png)
+![S3 - Bucket Versioning, Tags](./images/console/s3-4.png)
 
 **Bucket Versioning:**
 - **Disable** (default) — overwriting a file replaces it permanently
@@ -130,7 +130,7 @@ All (any)   → Setting 2              → Setting 4
 
 ### Default Encryption & Advanced Settings
 
-![S3 - Default encryption, Object Lock](../images/aws_console/s3-5.png)
+![S3 - Default encryption, Object Lock](./images/console/s3-5.png)
 
 **Default encryption** (automatically applied to new objects):
 

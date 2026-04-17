@@ -2,9 +2,12 @@
 tags:
   - ai
   - computing
-created_at: 260401-000000
-updated_at: 260417-141847
+created_at: 2026-04-01T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # KV Cache
 
@@ -46,4 +49,4 @@ A model generating a 500-token response to a 1000-token prompt: during prefill, 
 KV cache trades memory for speed. For long contexts, the cache can become very large (each layer stores K and V for every token). This is why context window limits exist and why longer contexts are more expensive. [Prompt caching](12_prompt_caching.md) extends this idea across API calls — saving the KV cache from prefill so the next request with the same prefix can skip it.
 
 ---
-← Previous: [Attention](10_attention.md) | [Overview](00_overview.md) | Next: [Prompt Caching](12_prompt_caching.md) →
+← Previous: [Attention](10_attention.md) | [Overview](./00_overview.md) | Next: [Prompt Caching](12_prompt_caching.md) →

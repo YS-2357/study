@@ -1,9 +1,12 @@
 ---
 tags:
   - computing
-created_at: 260323-000000
-updated_at: 260417-141847
+created_at: 2026-03-23T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Caching
 
@@ -74,4 +77,4 @@ Caching appears at every level of AWS architecture: [CloudFront](../aws/21_amazo
 For LLM-specific caching, see [KV Cache](../ai/11_kv_cache.md) and [Prompt Caching](../ai/12_prompt_caching.md).
 
 ---
-← Previous: [Workload Types](05_workload_types.md) | [Overview](00_overview.md) | Next: [Interfaces](07_interfaces.md) →
+← Previous: [Workload Types](05_workload_types.md) | [Overview](./00_overview.md) | Next: [Interfaces](07_interfaces.md) →

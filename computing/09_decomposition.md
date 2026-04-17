@@ -1,9 +1,12 @@
 ---
 tags:
   - computing
-created_at: 260410-000000
-updated_at: 260417-141847
+created_at: 2026-04-10T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Decomposition
 
@@ -104,4 +107,4 @@ The split signal is: **one unit = one reason to change**. If fixing a search bug
 Well-decomposed units are easier to test, replace, and reason about because each one owns a narrow responsibility. This reduces the blast radius of change and makes the system easier to evolve without accidental coupling.
 
 ---
-← Previous: [Endpoints](08_endpoints.md) | [Overview](00_overview.md) | Next: [Computing Basics — Overview](00_overview.md) →
+← Previous: [Endpoints](08_endpoints.md) | [Overview](./00_overview.md)

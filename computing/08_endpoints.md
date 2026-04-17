@@ -2,9 +2,12 @@
 tags:
   - computing
   - networking
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Endpoints
 
@@ -68,4 +71,4 @@ An API has multiple endpoints: `GET /users` (list), `POST /users` (create), `GET
 Understanding endpoints clarifies how AWS services connect: the CLI and SDK call service endpoints, databases expose connection endpoints, and VPC endpoints keep traffic private. Misconfigured endpoints cause connectivity failures.
 
 ---
-← Previous: [Interfaces](07_interfaces.md) | [Overview](00_overview.md) | Next: [Computing Basics — Overview](00_overview.md) →
+← Previous: [Interfaces](07_interfaces.md) | [Overview](./00_overview.md) | Next: [Decomposition](09_decomposition.md) →

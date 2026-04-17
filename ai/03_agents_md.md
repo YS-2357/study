@@ -1,9 +1,12 @@
 ---
 tags:
   - ai
-created_at: 260401-000000
-updated_at: 260417-141847
+created_at: 2026-04-01T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # AGENTS.md
 
@@ -48,4 +51,4 @@ Without `AGENTS.md`, the agent must infer repo conventions every time. With it, 
 It also prevents a common mistake: trying to split agent identity inside one shared file. If multiple harnesses load the same `AGENTS.md`, they all see the same instructions. Real separation comes from separate load paths, not from "if you are agent A, do X" text inside a single shared memo.
 
 ---
-← Previous: [Harness](02_harness.md) | [Overview](00_overview.md) | Next: [Tools](04_tools.md) →
+← Previous: [Harness](02_harness.md) | [Overview](./00_overview.md) | Next: [Tools](04_tools.md) →

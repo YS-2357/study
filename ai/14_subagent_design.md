@@ -2,9 +2,12 @@
 tags:
   - ai
   - tooling
-created_at: 260410-000000
-updated_at: 260417-141847
+created_at: 2026-04-10T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Subagent Design
 
@@ -208,4 +211,4 @@ When agents are divided well:
 > **Tip:** If you can describe what an agent does without using "and", the scope is right. "Implements the backend" is one role. "Implements the backend and reviews it" is two — split them.
 
 ---
-← Previous: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) | [Overview](00_overview.md) | Next: [Overview](00_overview.md) →
+← Previous: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) | [Overview](./00_overview.md) | Next: [Strands Agents SDK](15_strands_agents_sdk.md) →

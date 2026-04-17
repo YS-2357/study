@@ -2,9 +2,12 @@
 tags:
   - ai
   - computing
-created_at: 260401-000000
-updated_at: 260417-141847
+created_at: 2026-04-01T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Prompt Caching
 
@@ -42,4 +45,4 @@ An agent with a 4000-token system prompt and 200-token tool definitions sends 50
 Most LLM API calls have a large, repeated portion (system prompt + tool definitions) and a small, changing portion (user message). Cached input tokens are significantly cheaper (often 90% discount). This matters when building agents with large system prompts or optimizing production costs.
 
 ---
-← Previous: [KV Cache](11_kv_cache.md) | [Overview](00_overview.md) | Next: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) →
+← Previous: [KV Cache](11_kv_cache.md) | [Overview](./00_overview.md) | Next: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) →

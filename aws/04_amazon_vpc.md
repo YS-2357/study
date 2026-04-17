@@ -38,7 +38,7 @@ You define a VPC with a CIDR block, then carve it into subnets across AZs. An In
 
 ## Console Options
 
-![Create VPC - Step 1](../images/aws_console/vpc1.png)
+![Create VPC - Step 1](./images/console/vpc1.png)
 
 ### VPC List View
 - View all VPCs in current Region
@@ -62,7 +62,7 @@ You define a VPC with a CIDR block, then carve it into subnets across AZs. An In
    - **IPv6 CIDR owned by me** - Bring your own IPv6 (BYOIP - rare, for organizations that own IPv6 addresses)
 4. **Tenancy** - Determines whether instances run on shared or dedicated hardware:
 
-![Create VPC - Tenancy and Tags](../images/aws_console/vpc2.png)
+![Create VPC - Tenancy and Tags](./images/console/vpc2.png)
 
    - **Default (Shared Tenancy)** - Instances run on shared physical servers with other AWS customers (much cheaper, most common)
    - **Dedicated (Dedicated Tenancy)** - Instances run on physical servers dedicated only to your account (significantly more expensive ~2x, for compliance/licensing)

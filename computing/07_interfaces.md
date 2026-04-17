@@ -2,9 +2,12 @@
 tags:
   - computing
   - networking
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Interfaces
 
@@ -62,4 +65,4 @@ Another example: you SSH into a Linux server and run `vim config.yaml`. The term
 Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the system. Understanding this distinction clarifies AWS documentation and terminal workflows: the terminal can host multiple interfaces at once, such as a shell for running commands and an editor for changing files.
 
 ---
-← Previous: [Caching](06_caching.md) | [Overview](00_overview.md) | Next: [Endpoints](08_endpoints.md) →
+← Previous: [Caching](06_caching.md) | [Overview](./00_overview.md) | Next: [Endpoints](08_endpoints.md) →

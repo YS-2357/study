@@ -25,7 +25,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 ## Console Options - Launch Instance Flow
 
-![EC2 Launch - Step 1: Name and AMI](../images/aws_console/ec2_1.png)
+![EC2 Launch - Step 1: Name and AMI](./images/console/ec2_1.png)
 
 ### Step 1: Name and tags
 
@@ -66,7 +66,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 **Tip:** Use Amazon Linux 2023 for most workloads (5 years support, optimized for AWS, free)
 
-![EC2 Launch - Step 2: Instance Type](../images/aws_console/ec2_2.png)
+![EC2 Launch - Step 2: Instance Type](./images/console/ec2_2.png)
 
 ### Step 3: Instance type
 
@@ -101,7 +101,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 **Tip:** Start with t3.micro (free tier) or t3.small for testing, scale up based on actual usage
 
-![EC2 Launch - Step 3: Key Pair and Network](../images/aws_console/ec2_3.png)
+![EC2 Launch - Step 3: Key Pair and Network](./images/console/ec2_3.png)
 
 ### Step 4: Key pair (login)
 
@@ -156,7 +156,7 @@ Two options:
 
 **Tip:** NEVER use 0.0.0.0/0 for SSH in production. Use specific office IP or VPN IP only.
 
-![EC2 Launch - Step 4: Storage](../images/aws_console/ec2_4.png)
+![EC2 Launch - Step 4: Storage](./images/console/ec2_4.png)
 
 ### Step 6: Configure storage
 
@@ -211,7 +211,7 @@ Shows configuration summary:
 
 ### Instance Types Overview
 
-![EC2 Instance Types](../images/aws_console/ec2_instance_type.png)
+![EC2 Instance Types](./images/console/ec2_instance_type.png)
 
 **EC2 Console → Instance Types** shows 100+ instance types with specifications:
 - **Instance type** - Name (e.g., r5dn.8xlarge, r6g.medium)
@@ -235,7 +235,7 @@ Shows configuration summary:
 
 ### Spot Instances
 
-![EC2 Spot Requests](../images/aws_console/ec2_spot_instance.png)
+![EC2 Spot Requests](./images/console/ec2_spot_instance.png)
 
 **EC2 Console → Spot Requests**
 
@@ -269,7 +269,7 @@ Shows configuration summary:
 
 ### Savings Plans
 
-![EC2 Savings Plans](../images/aws_console/ec2_saving_plans.png)
+![EC2 Savings Plans](./images/console/ec2_saving_plans.png)
 
 **EC2 Console → Savings Plans**
 
@@ -299,7 +299,7 @@ Shows configuration summary:
 
 ### Reserved Instances
 
-![EC2 Reserved Instances](../images/aws_console/ec2_reserved_instances.png)
+![EC2 Reserved Instances](./images/console/ec2_reserved_instances.png)
 
 **EC2 Console → Reserved Instances**
 
@@ -393,7 +393,7 @@ Shows configuration summary:
 
 ### AMI (Amazon Machine Image)
 
-![AMI Catalog](../images/aws_console/ami_catalog.png)
+![AMI Catalog](./images/console/ami_catalog.png)
 
 **EC2 Console → Images → AMI Catalog**
 

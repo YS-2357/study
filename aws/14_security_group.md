@@ -26,7 +26,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 
 ## Console Options
 
-![Security Group - Create](../images/aws_console/sg1.png)
+![Security Group - Create](./images/console/sg1.png)
 
 ### Security Group List View
 - View all security groups in current Region
@@ -35,7 +35,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 
 ### Create Security Group
 
-![Security Group - Create Form](../images/aws_console/sg2.png)
+![Security Group - Create Form](./images/console/sg2.png)
 
 **Basic details:**
 1. **Security group name**

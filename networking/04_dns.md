@@ -1,9 +1,12 @@
 ---
 tags:
   - networking
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # DNS (Domain Name System)
 
@@ -81,4 +84,4 @@ You type `example.com` in your browser. The browser doesn't know the IP, so it a
 DNS is the first step in every network connection. Misconfigured DNS (wrong records, missing hostnames, TTL too high) causes hard-to-debug connectivity issues. In AWS, enabling VPC DNS hostnames is required for many services to work, and Route 53 routing policies enable multi-region architectures.
 
 ---
-← Previous: [HTTP](05_http.md) | [Overview](00_overview.md) | Next: [OSI Model](03_osi_model.md) →
+← Previous: [OSI Model](03_osi_model.md) | [Overview](./00_overview.md) | Next: [HTTP](05_http.md) →

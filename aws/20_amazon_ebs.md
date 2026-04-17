@@ -30,7 +30,7 @@ You create an EBS volume in a specific AZ and attach it to an EC2 instance in th
 
 ### Volume settings
 
-![EBS - Create volume: Volume settings](../images/aws_console/ebs1.png)
+![EBS - Create volume: Volume settings](./images/console/ebs1.png)
 
 **Page header:** "Create an Amazon EBS volume to attach to any EC2 instance in the same Availability Zone."
 
@@ -70,7 +70,7 @@ You create an EBS volume in a specific AZ and attach it to an EC2 instance in th
 
 ### Encryption, Tags, Snapshot summary
 
-![EBS - Create volume: Encryption, Tags, Snapshot summary](../images/aws_console/ebs2.png)
+![EBS - Create volume: Encryption, Tags, Snapshot summary](./images/console/ebs2.png)
 
 **Encryption:**
 - Checkbox: "Encrypt this volume" (unchecked by default)

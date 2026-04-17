@@ -58,11 +58,11 @@ You create a Web ACL containing ordered rules. Each incoming HTTP/HTTPS request 
 
 ### Step 1: Tell us about your app
 
-![WAF - Tell us about your app, App focus](../images/aws_console/waf1.png)
+![WAF - Tell us about your app, App focus](./images/console/waf1.png)
 
 **App category** (required, multi-select dropdown):
 
-![WAF - App category dropdown options](../images/aws_console/waf2.png)
+![WAF - App category dropdown options](./images/console/waf2.png)
 
 - Content & publishing systems
 - E-commerce & transaction platforms
@@ -84,7 +84,7 @@ AWS uses your selection to recommend the best protection rules. Select all that 
 
 ### Step 2: Select resources to protect
 
-![WAF - Select resources to protect](../images/aws_console/waf3.png)
+![WAF - Select resources to protect](./images/console/waf3.png)
 
 - Search by resource name or type
 - "Add resources" button to browse regional or global resources
@@ -94,7 +94,7 @@ AWS uses your selection to recommend the best protection rules. Select all that 
 
 ### Step 3: Choose protections, Name, Customize
 
-![WAF - Choose protections, Name, Customize](../images/aws_console/waf4.png)
+![WAF - Choose protections, Name, Customize](./images/console/waf4.png)
 
 **Choose initial protections** (expandable):
 - AWS WAF offers protection packages (bundles of WAF rules) based on security best practices

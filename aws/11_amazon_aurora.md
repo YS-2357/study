@@ -108,13 +108,13 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 
 > Aurora shares the same "Create database" console as RDS. Below covers only Aurora-specific options. For the full console flow, see [19_amazon_rds.md](./10_amazon_rds.md).
 
-![Create Database - Engine Options](../images/aws_console/rds01.png)
+![Create Database - Engine Options](./images/console/rds01.png)
 
 ### Engine options
 - **Aurora (MySQL Compatible)** — Compatible with MySQL
 - **Aurora (PostgreSQL Compatible)** — Compatible with PostgreSQL
 
-![Engine Version and Templates](../images/aws_console/rds02.png)
+![Engine Version and Templates](./images/console/rds02.png)
 
 ### Engine version (Aurora-specific filters)
 - **Show only versions that support the Babelfish for PostgreSQL feature** — For SQL Server migration
@@ -125,7 +125,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 - **Production** — High availability defaults (Multi-AZ, larger instance)
 - **Dev/Test** — Development use, lower defaults
 
-![Settings and Credentials](../images/aws_console/rds03.png)
+![Settings and Credentials](./images/console/rds03.png)
 
 ### Settings
 - **DB cluster identifier** — Name for the Aurora cluster (not just one instance)
@@ -134,7 +134,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 ### Credentials
 - Same as RDS: Secrets Manager (default, recommended) or Self managed
 
-![Storage Configuration](../images/aws_console/rds04.png)
+![Storage Configuration](./images/console/rds04.png)
 
 ### Cluster storage configuration (Aurora-specific)
 **Configuration options (2 choices):**
@@ -155,7 +155,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 - **IAM database authentication** — Authenticate using IAM instead of password
 - **Kerberos authentication** — Authenticate through AWS Directory Service
 
-![Instance Configuration and Availability](../images/aws_console/rds05.png)
+![Instance Configuration and Availability](./images/console/rds05.png)
 
 ### Instance configuration (Aurora-specific)
 **DB instance class (4 categories):**
@@ -174,19 +174,19 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 
 > Unlike RDS Multi-AZ standby (which is NOT readable), Aurora replicas ARE readable and serve as failover targets.
 
-![Connectivity](../images/aws_console/rds06.png)
+![Connectivity](./images/console/rds06.png)
 
 ### Connectivity
 - Same as RDS: VPC, subnet group, public access, security group
 - **"After a database is created, you can't change its VPC"**
 
-![Public Access, Security Group, RDS Proxy](../images/aws_console/rds07.png)
+![Public Access, Security Group, RDS Proxy](./images/console/rds07.png)
 
 ### RDS Proxy
 - Works with Aurora — improves connection pooling for serverless or Lambda workloads
 - Additional costs
 
-![Certificate Authority, Data API, Write Forwarding](../images/aws_console/rds08.png)
+![Certificate Authority, Data API, Write Forwarding](./images/console/rds08.png)
 
 ### RDS Data API (Aurora-specific)
 - **Enable the RDS Data API** — Run SQL queries over HTTP (via CLI, AWS SDK, or RDS query editor)
@@ -197,7 +197,7 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 - **Turn on local write forwarding** — Reader instances can forward write operations to the writer
 - Simplifies application logic (read from any endpoint, writes get forwarded)
 
-![Tags, Babelfish, Monitoring](../images/aws_console/rds09.png)
+![Tags, Babelfish, Monitoring](./images/console/rds09.png)
 
 ### Babelfish settings (Aurora PostgreSQL only)
 - **Turn on Babelfish** — Enables Aurora PostgreSQL to understand T-SQL (SQL Server's language)
@@ -207,14 +207,14 @@ Same console as RDS, same core decisions apply. Plus Aurora-specific ones:
 ### Monitoring
 - Same as RDS: Database Insights Advanced (15 months) vs Standard (7 days)
 
-![Encryption and Enhanced Monitoring](../images/aws_console/rds10.png)
+![Encryption and Enhanced Monitoring](./images/console/rds10.png)
 
 ### Encryption
 - **"You can't change the KMS key after you create your database"**
 
-![Log Exports, DevOps Guru](../images/aws_console/rds11.png)
+![Log Exports, DevOps Guru](./images/console/rds11.png)
 
-![Estimated Costs and Create](../images/aws_console/rds12.png)
+![Estimated Costs and Create](./images/console/rds12.png)
 
 ### Estimated monthly costs
 - Shows on-demand pricing estimate

@@ -39,7 +39,7 @@ Lambda can be invoked in three ways:
 
 ## Console Options - Create Function
 
-![Lambda Create Function - Step 1](../images/aws_console/lambda1.png)
+![Lambda Create Function - Step 1](./images/console/lambda1.png)
 
 ### Creation Options
 
@@ -100,7 +100,7 @@ Lambda can be invoked in three ways:
 
 ### Permissions
 
-![Lambda Execution Role](../images/aws_console/lambda2.png)
+![Lambda Execution Role](./images/console/lambda2.png)
 
 **Execution role:**
 "By default, Lambda will create an execution role with permissions to upload logs to Amazon CloudWatch Logs. You can customize this default role later when adding triggers."
@@ -169,7 +169,7 @@ Lambda 함수 실행
 
 ## Function Detail Page (After Creation)
 
-![Lambda Function Detail Page](../images/aws_console/lambda-function.png)
+![Lambda Function Detail Page](./images/console/lambda-function.png)
 
 After creating a function, you see the function detail page. This is where you manage triggers, destinations, code, and configuration.
 

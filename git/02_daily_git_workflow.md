@@ -1,9 +1,12 @@
 ---
 tags:
   - git
-created_at: 260403-000000
-updated_at: 260417-141847
+created_at: 2026-04-03T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Daily Git Workflow
 
@@ -92,4 +95,4 @@ This routine prevents the two most common Git mistakes: committing files you did
 > **Tip:** Never commit the real `.env` file. Keep only `.env.example` in Git.
 
 ---
-← Previous: [Tracking and Status](01_tracking_and_status.md) | [Overview](00_overview.md) | Next: [Git — Overview](00_overview.md) →
+← Previous: [Tracking and Status](01_tracking_and_status.md) | [Overview](./00_overview.md)

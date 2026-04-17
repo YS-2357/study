@@ -2,9 +2,12 @@
 tags:
   - computing
   - ml
-created_at: 260313-000000
-updated_at: 260417-141847
+created_at: 2026-03-13T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # GPU
 
@@ -51,4 +54,4 @@ Training a neural network: each training step multiplies large matrices (weights
 GPU instance choice directly affects ML training time and cost. Understanding VRAM limits helps you pick the right instance — a model that doesn't fit in VRAM won't run. AWS custom chips (Inferentia, Trainium) offer significant savings for compatible workloads.
 
 ---
-← Previous: [Storage](03_storage.md) | [Overview](00_overview.md) | Next: [Workload Types](05_workload_types.md) →
+← Previous: [Storage](03_storage.md) | [Overview](./00_overview.md) | Next: [Workload Types](05_workload_types.md) →

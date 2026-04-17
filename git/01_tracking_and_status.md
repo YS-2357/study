@@ -1,9 +1,12 @@
 ---
 tags:
   - git
-created_at: 260331-000000
-updated_at: 260417-141847
+created_at: 2026-03-31T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Tracking and Status
 
@@ -59,4 +62,4 @@ Many Git mistakes come from misunderstanding the difference between "file exists
 > **Tip:** Git is the version control system. GitHub is a hosting platform built around Git. Tracked, untracked, staged, and committed are Git concepts, not GitHub concepts.
 
 ---
-← [Overview](00_overview.md) | Next: [Daily Git Workflow](02_daily_git_workflow.md) →
+[Overview](./00_overview.md) | Next: [Daily Git Workflow](02_daily_git_workflow.md) →

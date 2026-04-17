@@ -1,9 +1,12 @@
 ---
 tags:
   - networking
-created_at: 260414-000000
-updated_at: 260417-141847
+created_at: 2026-04-14T00:00:00
+updated_at: 2026-04-17T14:18:47
+recent_editor: CLAUDE
 ---
+
+↑ [Overview](./00_overview.md)
 
 # Reverse Proxy
 
@@ -94,4 +97,4 @@ The client calls `https://api.example.com/users/1`. Nginx terminates TLS, matche
 Almost every production web system uses a reverse proxy. On AWS, [ALB](../aws/16_elastic_load_balancing.md) is a managed reverse proxy for EC2 and containers; [CloudFront](../aws/21_amazon_cloudfront.md) is a reverse proxy at the CDN edge; [API Gateway](../aws/07_aws_lambda.md) is a reverse proxy for Lambda. Understanding what a reverse proxy does explains *why* these services exist and which one to pick.
 
 ---
-← Previous: [HTTP](05_http.md) | [Overview](00_overview.md) | Next: →
+← Previous: [HTTP](05_http.md) | [Overview](./00_overview.md)
