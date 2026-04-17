@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - infrastructure
+  - networking
+---
 # Subnet
 
 ## What It Is

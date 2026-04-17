@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - database
+---
 # Amazon Redshift
 
 ## What It Is

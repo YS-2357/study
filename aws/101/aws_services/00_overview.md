@@ -1,3 +1,7 @@
+---
+tags:
+  - aws
+---
 # AWS 101 Services Overview
 
 AWS service notes organized by category. Each note covers what the service is, how it works, and key console considerations.

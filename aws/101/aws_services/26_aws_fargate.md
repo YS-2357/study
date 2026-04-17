@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - container
+  - serverless
+---
 # AWS Fargate
 
 ## What It Is

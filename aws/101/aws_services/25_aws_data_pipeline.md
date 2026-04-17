@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - database
+---
 # AWS Data Pipeline
 
 ## What It Is

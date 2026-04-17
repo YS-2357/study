@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - computing
+  - infrastructure
+---
 # Amazon EC2
 
 ## What It Is

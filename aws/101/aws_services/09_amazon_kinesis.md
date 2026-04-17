@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - networking
+---
 # Amazon Kinesis
 
 ## What It Is

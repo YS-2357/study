@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - computing
+---
 # Amazon EMR (Elastic MapReduce)
 
 ## What It Is

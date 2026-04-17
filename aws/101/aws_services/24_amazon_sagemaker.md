@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - ml
+  - computing
+---
 # Amazon SageMaker AI
 
 ## What It Is

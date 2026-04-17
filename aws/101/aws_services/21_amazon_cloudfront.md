@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - networking
+---
 # Amazon CloudFront
 
 ## What It Is

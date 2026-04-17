@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - computing
+  - infrastructure
+---
 # Auto Scaling
 
 ## What It Is

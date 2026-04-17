@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - database
+---
 # Amazon Aurora
 
 ## What It Is

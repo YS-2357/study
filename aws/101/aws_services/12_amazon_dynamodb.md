@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - database
+---
 # Amazon DynamoDB
 
 ## What It Is

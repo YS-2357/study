@@ -1,3 +1,7 @@
+---
+tags:
+  - aws
+---
 # AWS Support Plans
 
 ## What It Is

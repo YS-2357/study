@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - storage
+  - computing
+---
 # Amazon EBS
 
 ## What It Is

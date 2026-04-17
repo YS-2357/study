@@ -1,3 +1,9 @@
+---
+tags:
+  - aws
+  - database
+  - computing
+---
 # Amazon ElastiCache
 
 ## What It Is

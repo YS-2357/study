@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - infrastructure
+  - networking
+  - security
+---
 # Amazon VPC
 
 ## What It Is

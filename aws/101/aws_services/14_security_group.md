@@ -1,3 +1,10 @@
+---
+tags:
+  - aws
+  - security
+  - networking
+  - infrastructure
+---
 # Security Group
 
 ## What It Is

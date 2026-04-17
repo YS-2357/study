@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - infrastructure
+---
 # Points of Presence (PoP)
 
 ## What It Is

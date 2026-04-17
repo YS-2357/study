@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - storage
+---
 # Amazon EFS
 
 ## What It Is

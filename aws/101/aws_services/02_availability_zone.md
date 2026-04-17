@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - infrastructure
+---
 # Availability Zone
 
 ## What It Is

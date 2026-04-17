@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - storage
+---
 # Amazon S3
 
 ## What It Is

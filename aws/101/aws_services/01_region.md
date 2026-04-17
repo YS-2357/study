@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - infrastructure
+---
 # Region
 
 ## What It Is

@@ -1,3 +1,8 @@
+---
+tags:
+  - aws
+  - security
+---
 # AWS WAF (Web Application Firewall)
 
 ## What It Is

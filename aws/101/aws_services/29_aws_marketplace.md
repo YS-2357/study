@@ -1,3 +1,7 @@
+---
+tags:
+  - aws
+---
 # AWS Marketplace
 
 ## What It Is
