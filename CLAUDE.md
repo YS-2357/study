@@ -41,6 +41,13 @@ These instructions apply to the entire `study/` repository unless a deeper `AGEN
 - Prefer editing existing Markdown notes, links, and navigation over adding tooling, scripts, or structural churn.
 - Preserve the repository's existing organization unless the task explicitly requires a reorganization.
 
+## Cross-Linking
+
+- When editing or reviewing a note, scan notes in the same domain and adjacent domains for concepts mentioned but not yet linked to their canonical note.
+- When creating a new note, search existing notes for unlinked mentions of that concept and add backward links.
+- On first mention of any concept that has a dedicated note elsewhere in the repo, add an inline Markdown link. Do not repeat the link on subsequent mentions in the same file.
+- Cross-domain links (e.g., an `ai/` note linking to a `networking/` concept) are encouraged when the connection genuinely helps the reader.
+
 ## Markdown Formatting
 
 ### Headings
@@ -99,6 +106,41 @@ Every note ends with a navigation footer preceded by `---`:
 ---
 ← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
 ```
+
+## Obsidian Frontmatter Tags
+
+- Every note file must begin with a YAML frontmatter block with a `tags` field, placed before the `# Title` heading.
+- Tags use lowercase, hyphen-separated words.
+- When creating or editing a note, assign all applicable tags from the taxonomy below. Add a new tag to the taxonomy only if no existing tag fits.
+
+Format:
+
+```yaml
+---
+tags:
+  - aws
+  - serverless
+---
+```
+
+Tag taxonomy:
+
+| Tag | Covers |
+|-----|--------|
+| `ai` | AI/ML, LLMs, agents, attention, KV cache |
+| `aws` | AWS services in general |
+| `networking` | Protocols, OSI, DNS, HTTP, proxies |
+| `computing` | CPU, GPU, virtualization, caching, storage |
+| `git` | Git workflow, staging, tracking |
+| `tooling` | Dev tools, editors, terminal setup |
+| `security` | IAM, Shield, WAF, auth, secrets |
+| `storage` | S3, EFS, EBS |
+| `database` | RDS, DynamoDB, Aurora, ElastiCache |
+| `serverless` | Lambda, Fargate, API Gateway |
+| `container` | ECR, Docker, Lambda container images |
+| `monitoring` | CloudWatch, observability |
+| `ml` | SageMaker, Bedrock, model training |
+| `infrastructure` | VPC, regions, AZs, subnets, CDK |
 
 ## Domain Layout
 
