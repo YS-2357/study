@@ -1,6 +1,8 @@
 ---
 tags:
   - aws
+created_at: 260417-141847
+updated_at: 260417-141847
 ---
 
 # AWS 201 Overview
@@ -13,7 +15,7 @@ Deeper AWS topics: architecture patterns and service deep-dives.
 
 ## Service Deep-Dives
 
-See [aws_services/00_overview.md](aws_services/00_overview.md) for the full study order.
+See [service/00_overview.md](service/00_overview.md) for the full study order.
 
 ---
 ↑ [Root](../../00_overview.md)

@@ -1,9 +1,10 @@
 ---
 tags:
   - ai
-created_at: 2026-04-01
-updated_at: 2026-04-17
+created_at: 260401-000000
+updated_at: 260417-141847
 ---
+
 # AI Agents — Overview
 
 Foundation concepts for understanding how coding agents (like Codex) work.

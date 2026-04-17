@@ -1,9 +1,10 @@
 ---
 tags:
   - networking
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # DNS (Domain Name System)
 
 ## What It Is

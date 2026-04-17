@@ -1,9 +1,10 @@
 ---
 tags:
   - ai
-created_at: 2026-04-06
-updated_at: 2026-04-17
+created_at: 260406-000000
+updated_at: 260417-141847
 ---
+
 # Multi-Agent Orchestration
 
 ## What It Is

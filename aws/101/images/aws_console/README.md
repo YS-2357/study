@@ -1,3 +1,10 @@
+---
+tags:
+  -
+created_at: 260417-141847
+updated_at: 260417-141847
+---
+
 # aws_console
 
 AWS Console screenshots used by the AWS 101 Markdown notes.

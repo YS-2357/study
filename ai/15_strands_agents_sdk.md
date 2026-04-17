@@ -2,9 +2,10 @@
 tags:
   - ai
   - aws
-created_at: 2026-04-15
-updated_at: 2026-04-17
+created_at: 260415-000000
+updated_at: 260417-141847
 ---
+
 # Strands Agents SDK
 
 ## What It Is
@@ -61,7 +62,7 @@ result = agent("Process customer inquiry #1234.")
 
 ### AWS integration
 
-Strands connects natively to [AWS Bedrock](../aws/101/aws_services/) models (Claude, Llama, Titan) with no extra adapter code. It also supports [MCP](07_mcp.md) servers as tool sources.
+Strands connects natively to [AWS Bedrock](../aws/101/service/) models (Claude, Llama, Titan) with no extra adapter code. It also supports [MCP](07_mcp.md) servers as tool sources.
 
 ## Example
 

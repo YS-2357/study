@@ -1,3 +1,10 @@
+---
+tags:
+  -
+created_at: 260417-141847
+updated_at: 260417-141847
+---
+
 # ai
 
 AI agent and LLM concepts. See [00_overview.md](00_overview.md) for study order.

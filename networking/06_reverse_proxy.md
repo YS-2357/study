@@ -1,9 +1,10 @@
 ---
 tags:
   - networking
-created_at: 2026-04-14
-updated_at: 2026-04-17
+created_at: 260414-000000
+updated_at: 260417-141847
 ---
+
 # Reverse Proxy
 
 ## What It Is
@@ -18,7 +19,7 @@ Client → Reverse Proxy → Backend Server A
 
 Contrast with a **forward proxy**: a forward proxy acts on behalf of the *client* (e.g., to anonymize or filter outbound traffic). A reverse proxy acts on behalf of the *server*.
 
-For HTTP fundamentals used by reverse proxies, see [HTTP](05_http.md). For load balancing as a specific reverse proxy use case, see [ELB](../aws/101/aws_services/16_elastic_load_balancing.md).
+For HTTP fundamentals used by reverse proxies, see [HTTP](05_http.md). For load balancing as a specific reverse proxy use case, see [ELB](../aws/101/service/16_elastic_load_balancing.md).
 
 ## Analogy
 
@@ -90,7 +91,7 @@ The client calls `https://api.example.com/users/1`. Nginx terminates TLS, matche
 
 ## Why It Matters
 
-Almost every production web system uses a reverse proxy. On AWS, [ALB](../aws/101/aws_services/16_elastic_load_balancing.md) is a managed reverse proxy for EC2 and containers; [CloudFront](../aws/101/aws_services/21_amazon_cloudfront.md) is a reverse proxy at the CDN edge; [API Gateway](../aws/101/aws_services/07_aws_lambda.md) is a reverse proxy for Lambda. Understanding what a reverse proxy does explains *why* these services exist and which one to pick.
+Almost every production web system uses a reverse proxy. On AWS, [ALB](../aws/101/service/16_elastic_load_balancing.md) is a managed reverse proxy for EC2 and containers; [CloudFront](../aws/101/service/21_amazon_cloudfront.md) is a reverse proxy at the CDN edge; [API Gateway](../aws/101/service/07_aws_lambda.md) is a reverse proxy for Lambda. Understanding what a reverse proxy does explains *why* these services exist and which one to pick.
 
 ---
 ← Previous: [HTTP](05_http.md) | [Overview](00_overview.md) | Next: →

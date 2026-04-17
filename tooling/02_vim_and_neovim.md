@@ -1,9 +1,10 @@
 ---
 tags:
   - tooling
-created_at: 2026-04-04
-updated_at: 2026-04-17
+created_at: 260404-000000
+updated_at: 260417-141847
 ---
+
 # Vim and Neovim
 
 ## What It Is

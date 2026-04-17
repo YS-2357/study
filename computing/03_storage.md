@@ -2,9 +2,10 @@
 tags:
   - computing
   - storage
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # Storage
 
 ## What It Is
@@ -17,9 +18,9 @@ Storage in computing comes in three types: block (raw disk), file (shared networ
 
 | Type | What it is | Access | AWS Service |
 |------|-----------|--------|-------------|
-| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../aws/101/aws_services/20_amazon_ebs.md) |
-| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../aws/101/aws_services/22_amazon_efs.md) |
-| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../aws/101/aws_services/19_amazon_s3.md) |
+| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../aws/101/service/20_amazon_ebs.md) |
+| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../aws/101/service/22_amazon_efs.md) |
+| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../aws/101/service/19_amazon_s3.md) |
 
 ### Performance Metrics
 

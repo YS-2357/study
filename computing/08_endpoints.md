@@ -2,9 +2,10 @@
 tags:
   - computing
   - networking
-created_at: 2026-03-31
-updated_at: 2026-04-17
+created_at: 260331-000000
+updated_at: 260417-141847
 ---
+
 # Endpoints
 
 ## What It Is
@@ -40,11 +41,11 @@ Aurora: mydb.cluster-abc123.us-east-1.rds.amazonaws.com:3306      (writer)
         mydb.cluster-ro-abc123.us-east-1.rds.amazonaws.com:3306   (reader)
 ```
 
-[Aurora](../aws/101/aws_services/11_amazon_aurora.md) separates writer and reader endpoints. The reader endpoint load-balances across replicas.
+[Aurora](../aws/101/service/11_amazon_aurora.md) separates writer and reader endpoints. The reader endpoint load-balances across replicas.
 
 ### VPC Endpoints
 
-A VPC endpoint gives your [VPC](../aws/101/aws_services/04_amazon_vpc.md) a private path to an AWS service — traffic stays within the AWS network.
+A VPC endpoint gives your [VPC](../aws/101/service/04_amazon_vpc.md) a private path to an AWS service — traffic stays within the AWS network.
 
 | Type | How it works | Services |
 |------|-------------|----------|

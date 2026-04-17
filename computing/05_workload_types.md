@@ -1,14 +1,15 @@
 ---
 tags:
   - computing
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # Workload Types
 
 ## What It Is
 
-Different workloads need different hardware ratios. AWS [EC2](../aws/101/aws_services/05_amazon_ec2.md) instance families are designed around these workload categories.
+Different workloads need different hardware ratios. AWS [EC2](../aws/101/service/05_amazon_ec2.md) instance families are designed around these workload categories.
 
 ## How It Works
 

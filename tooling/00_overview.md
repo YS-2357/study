@@ -1,9 +1,10 @@
 ---
 tags:
   - tooling
-created_at: 2026-04-09
-updated_at: 2026-04-17
+created_at: 260409-000000
+updated_at: 260417-141847
 ---
+
 # Tooling — Overview
 
 Developer tools and workflow methods for working effectively in this repo and similar projects.

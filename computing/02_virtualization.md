@@ -2,9 +2,10 @@
 tags:
   - computing
   - container
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # Virtualization
 
 ## What It Is
@@ -51,7 +52,7 @@ AWS uses Type 1: Nitro (modern, KVM-based) for instances with number ≥5 (m5, c
 **Use VMs** when you need different OSes, strong isolation, or legacy apps.
 **Use containers** when you need microservices, fast scaling, or consistent dev/prod environments.
 
-AWS services: [EC2](../aws/101/aws_services/05_amazon_ec2.md) (VMs), ECS/EKS (container orchestration), [Fargate](../aws/101/aws_services/26_aws_fargate.md) (serverless containers), [Lambda](../aws/101/aws_services/07_aws_lambda.md) (serverless functions).
+AWS services: [EC2](../aws/101/service/05_amazon_ec2.md) (VMs), ECS/EKS (container orchestration), [Fargate](../aws/101/service/26_aws_fargate.md) (serverless containers), [Lambda](../aws/101/service/07_aws_lambda.md) (serverless functions).
 
 ### AWS Nitro System
 
@@ -59,7 +60,7 @@ AWS's custom hypervisor + hardware. Offloads networking, storage, and security t
 
 ## Example
 
-You launch an m6g.large [EC2](../aws/101/aws_services/05_amazon_ec2.md) instance. AWS allocates a VM on a physical server running the Nitro hypervisor. Your VM gets dedicated CPU and memory (AWS does not overcommit). Networking and [EBS](../aws/101/aws_services/20_amazon_ebs.md) storage are handled by Nitro Cards, so your VM's CPU is fully available for your workload.
+You launch an m6g.large [EC2](../aws/101/service/05_amazon_ec2.md) instance. AWS allocates a VM on a physical server running the Nitro hypervisor. Your VM gets dedicated CPU and memory (AWS does not overcommit). Networking and [EBS](../aws/101/service/20_amazon_ebs.md) storage are handled by Nitro Cards, so your VM's CPU is fully available for your workload.
 
 ## Why It Matters
 

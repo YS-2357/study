@@ -1,9 +1,10 @@
 ---
 tags:
   - networking
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # Networking Fundamentals — Overview
 
 Foundation networking concepts needed to understand AWS services.
@@ -41,10 +42,10 @@ Foundation networking concepts needed to understand AWS services.
 
 ## Cross-references
 
-- Protocols, Addressing → [Security Group](../aws/101/aws_services/14_security_group.md) (protocol + port rules)
-- CIDR, Subnets → [Subnet](../aws/101/aws_services/03_subnet.md), [VPC](../aws/101/aws_services/04_amazon_vpc.md)
-- HTTP → [ELB](../aws/101/aws_services/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
-- DNS → [VPC](../aws/101/aws_services/04_amazon_vpc.md) (VPC DNS settings)
+- Protocols, Addressing → [Security Group](../aws/101/service/14_security_group.md) (protocol + port rules)
+- CIDR, Subnets → [Subnet](../aws/101/service/03_subnet.md), [VPC](../aws/101/service/04_amazon_vpc.md)
+- HTTP → [ELB](../aws/101/service/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
+- DNS → [VPC](../aws/101/service/04_amazon_vpc.md) (VPC DNS settings)
 - Interfaces, Endpoints → [Interfaces](../computing/07_interfaces.md), [Endpoints](../computing/08_endpoints.md)
 
 ---

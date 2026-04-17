@@ -2,9 +2,10 @@
 tags:
   - computing
   - networking
-created_at: 2026-03-31
-updated_at: 2026-04-17
+created_at: 260331-000000
+updated_at: 260417-141847
 ---
+
 # Interfaces
 
 ## What It Is
@@ -40,9 +41,9 @@ API styles (see [HTTP](../networking/05_http.md) for REST details):
 
 ### ENI (Elastic Network Interface)
 
-A virtual network card in AWS. Each [EC2](../aws/101/aws_services/05_amazon_ec2.md) instance has at least one ENI.
+A virtual network card in AWS. Each [EC2](../aws/101/service/05_amazon_ec2.md) instance has at least one ENI.
 
-An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/101/aws_services/14_security_group.md), and source/destination check flag.
+An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/101/service/14_security_group.md), and source/destination check flag.
 
 An instance can have multiple ENIs for separating management and data traffic or multi-homed setups across subnets.
 

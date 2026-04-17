@@ -3,9 +3,10 @@ tags:
   - tooling
   - aws
   - computing
-created_at: 2026-04-13
-updated_at: 2026-04-17
+created_at: 260413-000000
+updated_at: 260417-141847
 ---
+
 # VS Code Remote SSH with EC2
 
 ## What It Is

@@ -1,9 +1,10 @@
 ---
 tags:
   - git
-created_at: 2026-04-02
-updated_at: 2026-04-17
+created_at: 260402-000000
+updated_at: 260417-141847
 ---
+
 # Git — Overview
 
 Foundation Git concepts for version control.

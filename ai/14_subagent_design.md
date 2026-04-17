@@ -2,9 +2,10 @@
 tags:
   - ai
   - tooling
-created_at: 2026-04-10
-updated_at: 2026-04-17
+created_at: 260410-000000
+updated_at: 260417-141847
 ---
+
 # Subagent Design
 
 ## What It Is

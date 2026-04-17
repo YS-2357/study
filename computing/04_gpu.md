@@ -2,9 +2,10 @@
 tags:
   - computing
   - ml
-created_at: 2026-03-13
-updated_at: 2026-04-17
+created_at: 260313-000000
+updated_at: 260417-141847
 ---
+
 # GPU
 
 ## What It Is

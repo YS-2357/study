@@ -161,9 +161,9 @@ Tag taxonomy:
 | Path | Content |
 |------|---------|
 | `ai/` | AI agents, LLM concepts such as harness, tools, MCP, attention, and KV cache |
-| `aws/101/aws_services/` | AWS 101 service notes |
+| `aws/101/service/` | AWS 101 service notes |
 | `aws/101/console_workthrough/` | Console walkthrough notes per service |
-| `aws/201/aws_services/` | AWS 201 deep-dives |
+| `aws/201/service/` | AWS 201 deep-dives |
 | `computing/` | CPU, virtualization, storage, GPU, caching, interfaces, endpoints |
 | `git/` | Git tracking, staging, daily workflow |
 | `networking/` | Protocols, addressing, OSI, DNS, HTTP |

@@ -5,13 +5,15 @@ tags:
   - infrastructure
   - security
   - database
+created_at: 260417-141847
+updated_at: 260417-141847
 ---
 
 # Three-Tier Architecture
 
 ## What It Is
 
-A three-tier architecture separates a web application into a **presentation tier**, an **application tier**, and a **data tier**. In AWS, those tiers are usually separated with an Amazon Virtual Private Cloud ([Amazon VPC](../101/aws_services/04_amazon_vpc.md)), [subnets](../101/aws_services/03_subnet.md), route tables, load balancers, security groups, and private database networking, using the same public/private subnet model described in the [Amazon VPC documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html).
+A three-tier architecture separates a web application into a **presentation tier**, an **application tier**, and a **data tier**. In AWS, those tiers are usually separated with an Amazon Virtual Private Cloud ([Amazon VPC](../101/service/04_amazon_vpc.md)), [subnets](../101/service/03_subnet.md), route tables, load balancers, security groups, and private database networking, using the same public/private subnet model described in the [Amazon VPC documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html).
 
 ## Analogy
 
@@ -89,4 +91,4 @@ Three-tier architecture makes the blast radius smaller: public traffic reaches o
 | Differences | Unlike a single-server design, each tier has a separate network boundary and trust rule |
 
 ---
-← Previous: [AWS 201 Overview](00_overview.md) | [Overview](00_overview.md) | Next: [AWS Services Overview](aws_services/00_overview.md) →
+← Previous: [AWS 201 Overview](00_overview.md) | [Overview](00_overview.md) | Next: [AWS Services Overview](service/00_overview.md) →
