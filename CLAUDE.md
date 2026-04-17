@@ -170,8 +170,16 @@ Hook scripts live in `.claude/hooks/`. Do not put Codex logic here; Codex uses `
 
 ## Git Push
 
-Token is in `.env` as `GITHUB_TOKEN`. Use this command to push:
+Credentials are handled automatically via `.githooks/git-credential-env.sh`, which reads `GITHUB_TOKEN` and `GITHUB_USERNAME` from `.env`. Plain push works:
 
 ```bash
-set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" push origin main
+git push origin main
+```
+
+If git identity is missing, set it once from `.env`:
+
+```bash
+set -a && source .env && set +a
+git config --local user.name "$GIT_USER_NAME"
+git config --local user.email "$GIT_USER_EMAIL"
 ```
