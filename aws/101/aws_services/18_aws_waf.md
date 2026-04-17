@@ -2,6 +2,8 @@
 tags:
   - aws
   - security
+created_at: 2026-03-20
+updated_at: 2026-04-17
 ---
 # AWS WAF (Web Application Firewall)
 

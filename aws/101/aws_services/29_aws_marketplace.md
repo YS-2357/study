@@ -1,6 +1,8 @@
 ---
 tags:
   - aws
+created_at: 2026-03-31
+updated_at: 2026-04-17
 ---
 # AWS Marketplace
 

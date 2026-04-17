@@ -4,6 +4,8 @@ tags:
   - infrastructure
   - networking
   - security
+created_at: 2026-03-13
+updated_at: 2026-04-17
 ---
 # Amazon VPC
 

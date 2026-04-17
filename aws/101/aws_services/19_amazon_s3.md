@@ -2,6 +2,8 @@
 tags:
   - aws
   - storage
+created_at: 2026-03-26
+updated_at: 2026-04-17
 ---
 # Amazon S3
 

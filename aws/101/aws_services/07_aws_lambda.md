@@ -3,6 +3,8 @@ tags:
   - aws
   - serverless
   - computing
+created_at: 2026-03-13
+updated_at: 2026-04-17
 ---
 # AWS Lambda
 

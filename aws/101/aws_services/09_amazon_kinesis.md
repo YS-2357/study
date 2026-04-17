@@ -2,6 +2,8 @@
 tags:
   - aws
   - networking
+created_at: 2026-03-18
+updated_at: 2026-04-17
 ---
 # Amazon Kinesis
 
