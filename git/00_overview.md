@@ -1,6 +1,8 @@
 ---
 tags:
   - git
+created_at: 2026-04-02
+updated_at: 2026-04-17
 ---
 # Git — Overview
 

@@ -1,6 +1,8 @@
 ---
 tags:
   - networking
+created_at: 2026-03-24
+updated_at: 2026-04-17
 ---
 # HTTP — Methods, Status Codes & REST API
 

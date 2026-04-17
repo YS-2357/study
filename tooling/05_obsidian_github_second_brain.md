@@ -3,6 +3,8 @@ tags:
   - tooling
   - git
   - ai
+created_at: 2026-04-12
+updated_at: 2026-04-17
 ---
 # Obsidian + GitHub as a Second Brain
 

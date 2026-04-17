@@ -2,6 +2,8 @@
 tags:
   - tooling
   - git
+created_at: 2026-04-03
+updated_at: 2026-04-17
 ---
 # WSL Terminal and VS Code Workflow
 

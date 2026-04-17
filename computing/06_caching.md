@@ -1,6 +1,8 @@
 ---
 tags:
   - computing
+created_at: 2026-03-23
+updated_at: 2026-04-17
 ---
 # Caching
 
