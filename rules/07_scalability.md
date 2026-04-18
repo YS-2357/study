@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:45:44
-updated_at: 2026-04-18T12:45:44
-recent_editor: CLAUDE
+updated_at: 2026-04-18T21:03:49
+recent_editor: CODEX
 ---
 
 # Scalability Rules
@@ -43,13 +43,21 @@ A subdomain must contain ≥2 notes. If a single note doesn't fit any existing s
 
 Why: single-file subdomains have low information density (one overview for one note is noise) and high maintenance cost (every directory adds a README + overview to keep in sync).
 
-## 6. Relative Paths Only
+## 6. New Top-Level Domains
+
+Existing domains are not catch-alls. Choose domain placement by the concept's long-term family, not by the nearest current folder.
+
+A single note may start a new top-level domain when it represents a broad study area and you can name at least 3 plausible future sibling notes. If no future cluster is clear, place the material in `raw/` first instead of forcing it into an existing domain.
+
+This exception applies only to top-level domains. Subdomains still need multiple notes; don't create a single-file subdomain.
+
+## 7. Relative Paths Only
 
 Never use absolute paths in notes. All cross-references use relative paths so the tree can be moved without breaking. See [rules/03_cross_linking.md §3.1](03_cross_linking.md) for the depth table.
 
 Consequence: moving a whole subdomain under a new parent requires only fixing the links that leave the subtree — internal links survive unchanged.
 
-## 7. Sed-Friendly Renames
+## 8. Sed-Friendly Renames
 
 When renaming a file across the repo:
 
@@ -66,7 +74,7 @@ Two commands, any number of cross-references fixed. This works because:
 
 Preserve this property when adding features. If a new tool (e.g., a TOC generator) depends on a different link format, add it alongside — don't replace the relative-path convention.
 
-## 8. Automation Boundaries
+## 9. Automation Boundaries
 
 The repo's hooks enforce scalability-safe conventions:
 
@@ -78,7 +86,7 @@ The repo's hooks enforce scalability-safe conventions:
 
 Don't add rules hooks can't enforce. If a convention can't be machine-checked, it will drift. When introducing a new rule, either teach the hook to check it or accept it as guidance-only (marked as such in the rule file).
 
-## 9. Signals That It's Time To Reorganize
+## 10. Signals That It's Time To Reorganize
 
 Watch for these and reorganize when ≥2 apply:
 
