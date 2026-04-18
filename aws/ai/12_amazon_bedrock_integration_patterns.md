@@ -71,12 +71,12 @@ User ──► AgentCore Runtime (serverless execution)
             ├─► Strands agent
             │      ├─► Bedrock model call
             │      └─► Guardrails (attached to model call)
-            ├─► AgentCore [Memory](./agentcore/02_memory.md)     (cross-session context)
-            ├─► AgentCore [Gateway](./agentcore/03_gateway.md)    (APIs/Lambdas as tools)
-            └─► AgentCore [Observability](./agentcore/07_observability.md) (traces)
+            ├─► AgentCore Memory        (cross-session context)
+            ├─► AgentCore Gateway       (APIs/Lambdas as tools)
+            └─► AgentCore Observability (traces)
 ```
 
-The Strands agent is the *logic*; AgentCore is the *infrastructure*. Guardrails attach at the model call — Strands passes guardrail IDs into each Converse invocation, not at the runtime layer.
+The Strands agent is the *logic*; AgentCore is the *infrastructure*. Around the runtime sit [Memory](./agentcore/02_memory.md) for cross-session context, [Gateway](./agentcore/03_gateway.md) for tool access, and [Observability](./agentcore/07_observability.md) for traces. Guardrails attach at the model call — Strands passes guardrail IDs into each Converse invocation, not at the runtime layer.
 
 When to pick: custom reasoning loops, full code control, cross-session state, agents that outlive a single request.
 
