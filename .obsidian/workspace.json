@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git/00_overview.md",
+                "file": "00_overview.md",
                 "mode": "source",
                 "source": false
               },
@@ -185,6 +185,7 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "git/00_overview.md",
     "tmpclaude-6f4a-cwd",
     "tmpclaude-7d41-cwd",
     "tmpclaude-7cba-cwd",
@@ -195,7 +196,6 @@
     "tmpclaude-0a26-cwd",
     "tmpclaude-d0ca-cwd",
     "tmpclaude-f983-cwd",
-    "tmpclaude-d0d6-cwd",
     "00_overview.md",
     "aws/201/00_overview.md",
     "AGENTS.md",
