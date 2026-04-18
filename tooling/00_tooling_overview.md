@@ -21,4 +21,4 @@ Developer tools and workflow methods for working effectively in this repo and si
 7. [Obsidian Tags](07_obsidian_tags.md) — The tag taxonomy system used in this repo for Obsidian graph view and search.
 
 ---
-↑ [Root](../00_overview.md)
+↑ [Home](../home.md)
