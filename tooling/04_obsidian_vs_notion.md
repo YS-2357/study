@@ -6,7 +6,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_tooling_overview.md)
 
 # Obsidian vs Notion
 
@@ -72,4 +72,4 @@ For a "Cucumber philosophy" workflow where you write behavior notes for humans a
 > **Tip:** If you work mostly alone, start with Obsidian plus Git. If later you need shared status tracking and comments, add Notion for team workflow rather than forcing it to be your file store.
 
 ---
-← Previous: [Cucumber](03_cucumber.md) | [Overview](./00_overview.md) | Next: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) →
+← Previous: [Cucumber](03_cucumber.md) | [Overview](./00_tooling_overview.md) | Next: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) →
