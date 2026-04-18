@@ -25,6 +25,7 @@ Amazon Bedrock, the Strands Agents SDK, and related generative-AI services. Agen
 9. [Bedrock Custom Models](09_amazon_bedrock_custom_models.md) — Fine-tune foundation models.
 10. [Amazon Bedrock AgentCore](10_amazon_bedrock_agentcore.md) — Managed agent runtime (summary; see [agentcore/](agentcore/00_agentcore_overview.md) for deep-dive).
 11. [Strands Agents SDK](11_strands_agents_sdk.md) — Open-source framework for building agents that deploy to AWS (AgentCore, Lambda, or self-hosted).
+12. [Bedrock Integration Patterns](12_amazon_bedrock_integration_patterns.md) — How the Bedrock services compose end-to-end.
 
 ## Subtree
 
