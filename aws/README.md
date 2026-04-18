@@ -15,7 +15,6 @@ AWS service notes organized into subdomains. See [00_aws_overview.md](00_aws_ove
 - `README.md`: This file.
 - `AGENTS.md`: AWS subtree agent rules (four-viewpoint framework).
 - `00_aws_overview.md`: Study hub (links to subdomain overviews).
-- `31_strands_agents_sdk.md`: Strands Agents SDK — kept at top level because it spans AWS targets.
 
 ## Subdomains
 
