@@ -4,11 +4,11 @@ tags:
   - container
   - serverless
 created_at: 2026-04-05T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_compute_overview.md)
 
 # AWS Fargate
 
@@ -140,4 +140,4 @@ You define CPU, memory, and your container image — Fargate handles provisionin
 - [AWS Fargate FAQs](https://aws.amazon.com/fargate/faqs/)
 
 ---
-← Previous: [AWS Lambda](07_aws_lambda.md) | [Overview](./00_aws_overview.md) | Next: [Amazon S3](19_amazon_s3.md) →
+← Previous: [AWS Lambda](03_aws_lambda.md) | [Overview](./00_compute_overview.md) | Next: [Lambda Container Images](05_lambda_container_images.md) →

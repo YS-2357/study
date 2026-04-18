@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
@@ -25,4 +25,4 @@ Amazon Bedrock AgentCore provides a set of composable services for deploying, op
 9. [AgentCore Policy](09_policy.md) - Enforce deterministic controls over tool use.
 
 ---
-↑ [Amazon Bedrock AgentCore](../32_amazon_bedrock_agentcore.md)
+↑ [AWS AI](../00_ai_overview.md)

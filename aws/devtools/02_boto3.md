@@ -3,11 +3,11 @@ tags:
   - aws
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_devtools_overview.md)
 
 # boto3
 
@@ -81,4 +81,4 @@ Every Python-based service in this repo that touches AWS uses boto3 — Bedrock 
 | Differences | boto3 is Python-only; other languages use separate SDKs (`aws-sdk-js`, `aws-sdk-go`, etc.) — all wrap the same underlying REST APIs |
 
 ---
-← Previous: [AWS Lambda](09_aws_lambda.md) | [Overview](./00_aws_overview.md) | Next: [Amazon API Gateway](10_amazon_api_gateway.md) →
+← Previous: [AWS CDK (Cloud Development Kit)](./01_aws_cdk.md) | [Overview](./00_devtools_overview.md) | Next: [AWS Marketplace](./03_aws_marketplace.md) →

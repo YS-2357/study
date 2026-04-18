@@ -3,11 +3,11 @@ tags:
   - aws
   - container
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_storage_overview.md)
 
 # Amazon ECR (Elastic Container Registry)
 
@@ -113,4 +113,4 @@ ECR is why Lambda container images stay within your account and don't rely on ex
 > **Tip:** ECR images are pulled on Lambda cold start. Large images (1–2 GB) increase cold start time. Keep your Docker layers ordered from least-changed (base image, system deps) to most-changed (your code) to maximize layer caching.
 
 ---
-← Previous: [Amazon CloudFront](21_amazon_cloudfront.md) | [Overview](./00_aws_overview.md) | Next: [DynamoDB Workflow Status Tracking](12_amazon_dynamodb.md) →
+← Previous: [Amazon EFS](./03_amazon_efs.md) | [Overview](./00_storage_overview.md) | Next: [Amazon S3](./01_amazon_s3.md) →

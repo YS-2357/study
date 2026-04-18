@@ -3,11 +3,11 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # Amazon RDS (Relational Database Service)
 
@@ -414,4 +414,4 @@ Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits i
 - [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
 
 ---
-← Previous: [Amazon EFS](22_amazon_efs.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Aurora](11_amazon_aurora.md) →
+← Previous: [Amazon OpenSearch](./06_amazon_opensearch.md) | [Overview](./00_database_overview.md) | Next: [Amazon Aurora](./02_amazon_aurora.md) →

@@ -3,11 +3,11 @@ tags:
   - aws
   - security
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ops_overview.md)
 
 # AWS SSM Parameter Store
 
@@ -100,4 +100,4 @@ Config that changes per environment (KB IDs, table names, API endpoints) must no
 > **Tip:** If a resource is not in the CDK stack, `cdk destroy` doesn't know it exists. IaC boundary = destroy boundary. No exceptions.
 
 ---
-← Previous: [Amazon OpenSearch](42_amazon_opensearch.md) | [Overview](./00_aws_overview.md) | Next: [DynamoDB TTL and Session Store](12_amazon_dynamodb.md) →
+← Previous: [Amazon CloudWatch](01_amazon_cloudwatch.md) | [Overview](./00_ops_overview.md) | Next: [Cloud Computing Billing](03_cloud_computing_billing.md) →

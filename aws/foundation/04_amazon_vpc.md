@@ -5,11 +5,11 @@ tags:
   - networking
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_foundation_overview.md)
 
 # Amazon VPC
 
@@ -422,4 +422,4 @@ A well-planned VPC with proper CIDR allocation, subnet layout, and routing preve
 - [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 
 ---
-← Previous: [Points of Presence](27_pop.md) | [Overview](./00_aws_overview.md) | Next: [Security Group](14_security_group.md) →
+← Previous: [Points of Presence (PoP)](03_pop.md) | [Overview](./00_foundation_overview.md) | Next: [Subnet](05_subnet.md) →

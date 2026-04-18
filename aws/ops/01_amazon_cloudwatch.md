@@ -3,11 +3,11 @@ tags:
   - aws
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ops_overview.md)
 
 # Amazon CloudWatch
 
@@ -184,4 +184,4 @@ Without CloudWatch, you're blind. When the agent returns a bad draft or times ou
 - It feeds into CloudWatch — they complement each other, not replace
 
 ---
-← Previous: [AWS CDK](37_aws_cdk.md) | [Overview](./00_aws_overview.md) | Next: [AWS Lambda](07_aws_lambda.md) →
+[Overview](./00_ops_overview.md) | Next: [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md) →

@@ -3,11 +3,11 @@ tags:
   - aws
   - networking
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_networking_overview.md)
 
 # Amazon CloudFront
 
@@ -253,4 +253,4 @@ CfnOutput(self, "FrontendUrl",
 - [CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/)
 
 ---
-← Previous: [Elastic Load Balancing](16_elastic_load_balancing.md) | [Overview](./00_aws_overview.md) | Next: [Amazon EC2](05_amazon_ec2.md) →
+← Previous: [Elastic Load Balancing (ELB)](./01_elastic_load_balancing.md) | [Overview](./00_networking_overview.md) | Next: [Amazon API Gateway](./03_amazon_api_gateway.md) →

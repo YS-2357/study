@@ -4,11 +4,11 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Amazon Bedrock AgentCore
 
@@ -181,4 +181,4 @@ They are evolutionary layers, not competitors:
 - [AWS Prescriptive Guidance: AgentCore](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/amazon-bedrock-agentcore.html)
 
 ---
-← Previous: [Strands Agents SDK](31_strands_agents_sdk.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Bedrock Guardrails](33_amazon_bedrock_guardrails.md) →
+← Previous: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) | [Overview](./00_ai_overview.md) | Next: [Overview](./00_ai_overview.md) →

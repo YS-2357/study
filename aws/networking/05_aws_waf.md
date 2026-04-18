@@ -3,11 +3,11 @@ tags:
   - aws
   - security
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_networking_overview.md)
 
 # AWS WAF (Web Application Firewall)
 
@@ -239,4 +239,4 @@ See also: [AWS Shield](17_aws_shield.md) for more on DDoS protection tiers.
 - [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
 
 ---
-← Previous: [AWS Shield](17_aws_shield.md) | [Overview](./00_aws_overview.md) | Next: [Cloud Computing Billing](28_cloud_computing_billing.md) →
+← Previous: [AWS Shield](./04_aws_shield.md) | [Overview](./00_networking_overview.md) →

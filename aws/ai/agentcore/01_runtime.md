@@ -5,7 +5,7 @@ tags:
   - ml
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
@@ -27,7 +27,7 @@ You package the agent, deploy it to Runtime, and invoke it through the generated
 - Use [AgentCore Identity](04_identity.md), [AgentCore Gateway](03_gateway.md), and [AgentCore Policy](09_policy.md) when the runtime needs governed access to external systems.
 
 ## Example
-An agent built with [Strands Agents SDK](../01_strands_agents_sdk.md) can run locally during development, then be deployed to Runtime so application code calls a managed endpoint instead of a local process.
+An agent built with [Strands Agents SDK](../../31_strands_agents_sdk.md) can run locally during development, then be deployed to Runtime so application code calls a managed endpoint instead of a local process.
 
 ## Why It Matters
 Runtime is the compute anchor for AgentCore. Without it, Memory, Gateway, Identity, Observability, Evaluations, Code Interpreter, Browser, and Policy are supporting capabilities around agent execution rather than a complete production agent platform.

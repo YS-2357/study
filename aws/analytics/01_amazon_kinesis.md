@@ -3,11 +3,11 @@ tags:
   - aws
   - networking
 created_at: 2026-03-18T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_analytics_overview.md)
 
 # Amazon Kinesis
 
@@ -183,4 +183,4 @@ fraud detection, and IoT telemetry where waiting for batch processing is too slo
 - [Amazon Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
 
 ---
-← Previous: [Amazon EMR](08_amazon_emr.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Redshift](23_amazon_redshift.md) →
+[Overview](./00_analytics_overview.md) | Next: [Amazon EMR (Elastic MapReduce)](./02_amazon_emr.md) →

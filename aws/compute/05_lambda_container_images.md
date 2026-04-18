@@ -4,11 +4,11 @@ tags:
   - container
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_compute_overview.md)
 
 # Lambda Container Images
 
@@ -93,4 +93,4 @@ The packaging decision is a runtime constraint, not a preference. When your depe
 > **Tip:** Use `DockerImageFunction` in CDK from the start if your stack includes ML or agent frameworks. Switching from zip to container image mid-project means rewriting the Lambda construct.
 
 ---
-← Previous: [Amazon API Gateway](39_amazon_api_gateway.md) | [Overview](./00_aws_overview.md) | Next: [Mangum](41_mangum.md) →
+← Previous: [AWS Fargate](04_aws_fargate.md) | [Overview](./00_compute_overview.md) | Next: [Mangum](06_mangum.md) →

@@ -5,11 +5,11 @@ tags:
   - ml
   - computing
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Amazon Bedrock Custom Models
 
@@ -82,4 +82,4 @@ Base models are generalists. Fine-tuning makes them specialists: consistent outp
 | Differences | Fine-tuning changes model weights; [Prompt Management](46_amazon_bedrock_prompt_management.md) and few-shot prompting keep weights frozen — try prompting approaches before committing to fine-tuning |
 
 ---
-← Previous: [Bedrock Data Automation](48_amazon_bedrock_data_automation.md) | [Overview](./00_aws_overview.md) | Next: [Overview](./00_aws_overview.md) →
+← Previous: [Amazon Bedrock Data Automation](./08_amazon_bedrock_data_automation.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) →

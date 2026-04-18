@@ -3,11 +3,11 @@ tags:
   - aws
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_identity_overview.md)
 
 # Amazon IAM
 
@@ -574,4 +574,4 @@ Longer sessions reduce re-authentication frequency but increase security risk if
 - [What is IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
 ---
-← Previous: [AWS Data Pipeline](25_aws_data_pipeline.md) | [Overview](./00_aws_overview.md) | Next: [AWS Shield](17_aws_shield.md) →
+[Overview](./00_identity_overview.md) | Next: [Security Group](02_security_group.md) →

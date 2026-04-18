@@ -44,9 +44,9 @@ API styles (see [HTTP](../networking/05_http.md) for REST details):
 
 ### ENI (Elastic Network Interface)
 
-A virtual network card in AWS. Each [EC2](../aws/05_amazon_ec2.md) instance has at least one ENI.
+A virtual network card in AWS. Each [EC2](../aws/compute/01_amazon_ec2.md) instance has at least one ENI.
 
-An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/14_security_group.md), and source/destination check flag.
+An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/identity/02_security_group.md), and source/destination check flag.
 
 An instance can have multiple ENIs for separating management and data traffic or multi-homed setups across subnets.
 

@@ -60,11 +60,11 @@ TCP/IP is what's actually used in practice. OSI is the educational model for und
 
 ### AWS Layer Mapping
 
-**[Security Groups](../aws/14_security_group.md)** — Layer 3–4 only. Filter by IP addresses and TCP/UDP ports. Cannot filter by URL or HTTP headers.
+**[Security Groups](../aws/identity/02_security_group.md)** — Layer 3–4 only. Filter by IP addresses and TCP/UDP ports. Cannot filter by URL or HTTP headers.
 
 **Load Balancers:**
-- [NLB](../aws/16_elastic_load_balancing.md) — Layer 4. Routes by IP and port. Very fast. Can't see HTTP headers.
-- [ALB](../aws/16_elastic_load_balancing.md) — Layer 7. Routes by URL path, headers, host. Can terminate TLS.
+- [NLB](../aws/networking/01_elastic_load_balancing.md) — Layer 4. Routes by IP and port. Very fast. Can't see HTTP headers.
+- [ALB](../aws/networking/01_elastic_load_balancing.md) — Layer 7. Routes by URL path, headers, host. Can terminate TLS.
 
 ### Troubleshooting by Layer
 

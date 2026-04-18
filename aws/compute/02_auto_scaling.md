@@ -4,11 +4,11 @@ tags:
   - computing
   - infrastructure
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_compute_overview.md)
 
 # Auto Scaling
 
@@ -301,4 +301,4 @@ Yes. In the Launch Template's network interface settings, use the `AssociatePubl
 - [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-a-scaling-plan.html)
 
 ---
-← Previous: [Amazon EC2](05_amazon_ec2.md) | [Overview](./00_aws_overview.md) | Next: [AWS Lambda](07_aws_lambda.md) →
+← Previous: [Amazon EC2](01_amazon_ec2.md) | [Overview](./00_compute_overview.md) | Next: [AWS Lambda](03_aws_lambda.md) →

@@ -177,7 +177,7 @@ What a reader can do from any concept note:
 Canonical note explains once. Related notes link in.
 
 ```
-  ai/11_kv_cache.md                 aws/13_amazon_elasticache.md
+  ai/11_kv_cache.md                 aws/database/04_amazon_elasticache.md
   ┌──────────────────┐              ┌──────────────────┐
   │ KV Cache         │              │ ElastiCache      │
   │ (canonical note) │              │                  │

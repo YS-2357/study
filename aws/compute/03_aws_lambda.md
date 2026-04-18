@@ -4,11 +4,11 @@ tags:
   - serverless
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_compute_overview.md)
 
 # AWS Lambda
 
@@ -661,4 +661,4 @@ Alternative serverless options for heavier workloads:
 - [What is AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 
 ---
-← Previous: [Auto Scaling](06_auto_scaling.md) | [Overview](./00_aws_overview.md) | Next: [AWS Fargate](26_aws_fargate.md) →
+← Previous: [Auto Scaling](02_auto_scaling.md) | [Overview](./00_compute_overview.md) | Next: [AWS Fargate](04_aws_fargate.md) →

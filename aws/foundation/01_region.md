@@ -3,11 +3,11 @@ tags:
   - aws
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_foundation_overview.md)
 
 # Region
 
@@ -118,4 +118,4 @@ A wrong Region choice is hard to undo — most resources cannot be moved after c
 - [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
 ---
-← [Overview](./00_aws_overview.md) | [Overview](./00_aws_overview.md) | Next: [Availability Zone](02_availability_zone.md) →
+[Overview](./00_foundation_overview.md) | Next: [Availability Zone](02_availability_zone.md) →

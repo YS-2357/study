@@ -3,11 +3,11 @@ tags:
   - aws
   - database
 created_at: 2026-04-05T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_analytics_overview.md)
 
 # AWS Data Pipeline
 
@@ -102,4 +102,4 @@ While newer services like Glue and Step Functions are preferred for new projects
 - [AWS Data Pipeline Developer Guide](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)
 
 ---
-← Previous: [Amazon SageMaker](24_amazon_sagemaker.md) | [Overview](./00_aws_overview.md) | Next: [Amazon IAM](15_amazon_iam.md) →
+← Previous: [Amazon EMR (Elastic MapReduce)](./02_amazon_emr.md) | [Overview](./00_analytics_overview.md) | Next: [Amazon SageMaker AI](./04_amazon_sagemaker.md) →

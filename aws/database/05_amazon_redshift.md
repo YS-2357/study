@@ -3,11 +3,11 @@ tags:
   - aws
   - database
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # Amazon Redshift
 
@@ -116,4 +116,4 @@ It fills the gap between transactional databases (RDS/Aurora) and raw data lakes
 - [Amazon Redshift FAQs](https://aws.amazon.com/redshift/faqs/)
 
 ---
-← Previous: [Amazon Kinesis](09_amazon_kinesis.md) | [Overview](./00_aws_overview.md) | Next: [Amazon SageMaker](24_amazon_sagemaker.md) →
+← Previous: [Amazon ElastiCache](./04_amazon_elasticache.md) | [Overview](./00_database_overview.md) | Next: [Amazon OpenSearch](./06_amazon_opensearch.md) →

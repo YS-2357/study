@@ -5,11 +5,11 @@ tags:
   - ml
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Amazon Bedrock Prompt Management
 
@@ -85,4 +85,4 @@ Prompt quality directly affects application behavior. Without versioning, a prom
 | Differences | Unlike a config file, prompts here are paired with model settings — the "what to say" and "how the model should respond" travel together |
 
 ---
-← Previous: [Bedrock Flows](45_amazon_bedrock_flows.md) | [Overview](./00_aws_overview.md) | Next: [Bedrock Model Evaluation](47_amazon_bedrock_model_evaluation.md) →
+← Previous: [Amazon Bedrock Flows](./05_amazon_bedrock_flows.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md) →

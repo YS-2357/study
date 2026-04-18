@@ -4,11 +4,11 @@ tags:
   - infrastructure
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_devtools_overview.md)
 
 # AWS CDK (Cloud Development Kit)
 
@@ -356,4 +356,4 @@ Tags.of(self).add("Environment", "dev")
 - OpenSearch Serverless has a minimum cost even at 1 OCU — destroy when not in use
 
 ---
-← Previous: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) | [Overview](./00_aws_overview.md) | Next: [Amazon CloudWatch](38_amazon_cloudwatch.md) →
+[Overview](./00_devtools_overview.md) | Next: [boto3](./02_boto3.md) →

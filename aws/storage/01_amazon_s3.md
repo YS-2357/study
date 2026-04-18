@@ -3,11 +3,11 @@ tags:
   - aws
   - storage
 created_at: 2026-03-26T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_storage_overview.md)
 
 # Amazon S3
 
@@ -413,4 +413,4 @@ distribution = cf.Distribution(self, "FrontendDist",
 - [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 
 ---
-← Previous: [AWS Fargate](26_aws_fargate.md) | [Overview](./00_aws_overview.md) | Next: [Amazon EBS](20_amazon_ebs.md) →
+← Previous: [Amazon ECR (Elastic Container Registry)](./04_amazon_ecr.md) | [Overview](./00_storage_overview.md) | Next: [Amazon EBS](./02_amazon_ebs.md) →

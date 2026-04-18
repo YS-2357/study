@@ -43,10 +43,10 @@ Foundation networking concepts needed to understand AWS services.
 
 ## Cross-references
 
-- Protocols, Addressing → [Security Group](../aws/14_security_group.md) (protocol + port rules)
-- CIDR, Subnets → [Subnet](../aws/03_subnet.md), [VPC](../aws/04_amazon_vpc.md)
-- HTTP → [ELB](../aws/16_elastic_load_balancing.md) (ALB routes HTTP traffic)
-- DNS → [VPC](../aws/04_amazon_vpc.md) (VPC DNS settings)
+- Protocols, Addressing → [Security Group](../aws/identity/02_security_group.md) (protocol + port rules)
+- CIDR, Subnets → [Subnet](../aws/foundation/05_subnet.md), [VPC](../aws/foundation/04_amazon_vpc.md)
+- HTTP → [ELB](../aws/networking/01_elastic_load_balancing.md) (ALB routes HTTP traffic)
+- DNS → [VPC](../aws/foundation/04_amazon_vpc.md) (VPC DNS settings)
 - Interfaces, Endpoints → [Interfaces](../computing/07_interfaces.md), [Endpoints](../computing/08_endpoints.md)
 
 ---

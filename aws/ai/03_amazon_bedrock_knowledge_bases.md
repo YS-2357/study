@@ -5,11 +5,11 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Amazon Bedrock Knowledge Bases
 
@@ -172,4 +172,4 @@ Without RAG, models can only use their training data — they hallucinate when a
 - Default top-k is 5 — tune based on your document density and model context window
 
 ---
-← Previous: [Amazon Bedrock](34_amazon_bedrock.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) →
+← Previous: [Amazon Bedrock Guardrails](./02_amazon_bedrock_guardrails.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md) →

@@ -4,11 +4,11 @@ tags:
   - infrastructure
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-18T12:30:09
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_aws_overview.md)
+↑ [Overview](./00_foundation_overview.md)
 
 # Subnet
 
@@ -175,4 +175,4 @@ Proper public/private separation keeps databases and internal services off the i
 - [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
 
 ---
-← Previous: [Availability Zone](02_availability_zone.md) | [Overview](./00_aws_overview.md) | Next: [Points of Presence](27_pop.md) →
+← Previous: [Amazon VPC](04_amazon_vpc.md) | [Overview](./00_foundation_overview.md)
