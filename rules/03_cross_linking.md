@@ -40,7 +40,7 @@ Links between domains are encouraged when they help the reader:
 |------|----|---------|
 | `ai/` | `computing/` | Agent note linking to API interface |
 | `computing/` | `aws/` | Cache note linking to ElastiCache |
-| `aws/101/` | `aws/201/` | Basic note linking to deep-dive |
+| `aws/` | `aws/agentcore/` | Bedrock note linking to AgentCore subtree |
 
 ## 4. Glossary Links
 
