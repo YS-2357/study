@@ -112,22 +112,22 @@ Response: "I've created support ticket #T-789 for your delayed order #12345.
 
 ## Why It Matters
 
-Bedrock Agents is the fastest path to a working agent on AWS — no orchestration code, no infrastructure management. For teams that need custom orchestration logic or framework flexibility, [Strands Agents SDK](31_strands_agents_sdk.md) with [AgentCore](32_amazon_bedrock_agentcore.md) is the alternative. Understanding where each option fits prevents over-engineering simple use cases or under-engineering complex ones.
+Bedrock Agents is the fastest path to a working agent on AWS — no orchestration code, no infrastructure management. For teams that need custom orchestration logic or framework flexibility, [Strands Agents SDK](./11_strands_agents_sdk.md) with [AgentCore](./10_amazon_bedrock_agentcore.md) is the alternative. Understanding where each option fits prevents over-engineering simple use cases or under-engineering complex ones.
 
 ### When to Use What
 
 | Need | Use |
 |---|---|
 | Quick agent, minimal code, console-driven | **Bedrock Agents** |
-| Custom orchestration, full code control, any model | **[Strands Agents SDK](31_strands_agents_sdk.md)** |
-| Production deployment at scale for any framework | **[AgentCore](32_amazon_bedrock_agentcore.md)** |
+| Custom orchestration, full code control, any model | **[Strands Agents SDK](./11_strands_agents_sdk.md)** |
+| Production deployment at scale for any framework | **[AgentCore](./10_amazon_bedrock_agentcore.md)** |
 | All three together | Strands for code → AgentCore for infra (Bedrock Agents is separate) |
 
 ## Precautions
 
 ### MAIN PRECAUTION: Less Flexibility Than Code-Based Frameworks
 - Orchestration logic is managed by AWS — you can't customize the reasoning loop
-- If you need conditional branching, custom retry logic, or non-standard tool patterns, use [Strands](31_strands_agents_sdk.md) instead
+- If you need conditional branching, custom retry logic, or non-standard tool patterns, use [Strands](./11_strands_agents_sdk.md) instead
 - Bedrock Agents is best for straightforward action + knowledge base patterns
 
 ### 1. Action Group Design
@@ -143,7 +143,7 @@ Bedrock Agents is the fastest path to a working agent on AWS — no orchestratio
 ### 3. Session Management
 - Sessions expire after a configurable idle timeout (default 30 minutes)
 - Session state is not persisted across sessions by default
-- For cross-session memory, integrate with [AgentCore Memory](32_amazon_bedrock_agentcore.md) or your own storage
+- For cross-session memory, integrate with [AgentCore Memory](./10_amazon_bedrock_agentcore.md) or your own storage
 
 ### 4. Cost Layers
 - Model inference tokens (per the [Bedrock](34_amazon_bedrock.md) model you choose)
