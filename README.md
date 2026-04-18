@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:05:28
-recent_editor: CODEX
+updated_at: 2026-04-18T12:13:28
+recent_editor: CLAUDE
 ---
 
 # study
