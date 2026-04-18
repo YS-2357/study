@@ -73,7 +73,7 @@ is_special_markdown() {
   local path="$1"
   local name
   name="$(basename "$path")"
-  [[ "$name" == "README.md" || "$name" == "00_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
+  [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
 }
 
 check_note_structure() {
