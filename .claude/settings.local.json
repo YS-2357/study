@@ -17,7 +17,11 @@
       "Bash(awk '{print $NF}')",
       "Read(//tmp/**)",
       "Bash(bash /tmp/check_links.sh)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(find C:\\\\Users\\\\user\\\\study *)",
+      "Bash(find \"C:\\\\Users\\\\user\\\\study\" -name \"*.md\" -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" ! -path \"*/.codex/*\" ! -path \"*/.obsidian/*\" ! -path \"*/node_modules/*\" -exec grep -H \"00_overview\\\\.md\" {} \\\\;)",
+      "Bash(find \"C:\\\\Users\\\\user\\\\study\" -name \"*.md\" -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" ! -path \"*/.codex/*\" ! -path \"*/.obsidian/*\" ! -path \"*/node_modules/*\" -exec grep -l \"00_overview\\\\.md\" {} \\\\;)",
+      "Bash(xargs -0 grep \"00_overview\\\\.md\")"
     ]
   }
 }
