@@ -17,6 +17,6 @@ All study domains in this repo. Each domain has a `00_overview.md` as its study 
   - [AWS 201](aws/201/00_overview.md) — Advanced AWS: Bedrock, CDK, production infrastructure
 - [Computing](computing/00_overview.md) — CPU, GPU, virtualization, storage, caching, interfaces
 - [Git](git/00_overview.md) — Git workflow, tracking, staging
-- [Glossary](docs/glossary.md) — Abbreviations and domain terms used across the repo
+- [Glossary](glossary.md) — Abbreviations and domain terms used across the repo
 - [Networking](networking/00_overview.md) — Protocols, OSI, DNS, HTTP, reverse proxy
 - [Tooling](tooling/00_overview.md) — Dev tools, editors, terminal, note apps

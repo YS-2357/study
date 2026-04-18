@@ -103,7 +103,7 @@ Files without numbers:
 | `git/` | Git workflow |
 | `networking/` | Protocols, OSI, DNS |
 | `tooling/` | Dev tools, editors |
-| `docs/` | Agent and human rules |
+| `rules/` | Agent and human rules |
 | `raw/` | Raw source materials |
 
 ## 7. When To Update Navigation

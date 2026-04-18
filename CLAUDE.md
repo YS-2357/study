@@ -1,20 +1,20 @@
 # Study Repository
 
-See [docs/AGENTS.md](docs/AGENTS.md) for agent instructions.
+See [rules/AGENTS.md](rules/AGENTS.md) for agent instructions.
 
 ## Quick Reference
 
 | Document | Content |
 |----------|---------|
-| [docs/AGENTS.md](docs/AGENTS.md) | Agent index and permissions |
-| [docs/CLAUDE.md](docs/CLAUDE.md) | Claude Code rules |
-| [docs/CODEX.md](docs/CODEX.md) | Codex rules |
-| [docs/KIRO.md](docs/KIRO.md) | Kiro rules |
-| [docs/01_note_structure.md](docs/01_note_structure.md) | Note format |
-| [docs/02_navigation.md](docs/02_navigation.md) | Navigation rules |
-| [docs/03_cross_linking.md](docs/03_cross_linking.md) | Cross-linking |
-| [docs/04_security.md](docs/04_security.md) | Security hooks |
-| [docs/glossary.md](docs/glossary.md) | Abbreviations |
+| [rules/AGENTS.md](rules/AGENTS.md) | Agent index and permissions |
+| [rules/CLAUDE.md](rules/CLAUDE.md) | Claude Code rules |
+| [rules/CODEX.md](rules/CODEX.md) | Codex rules |
+| [rules/KIRO.md](rules/KIRO.md) | Kiro rules |
+| [rules/01_note_structure.md](rules/01_note_structure.md) | Note format |
+| [rules/02_navigation.md](rules/02_navigation.md) | Navigation rules |
+| [rules/03_cross_linking.md](rules/03_cross_linking.md) | Cross-linking |
+| [rules/04_security.md](rules/04_security.md) | Security hooks |
+| [rules/glossary.md](rules/glossary.md) | Abbreviations |
 
 ## Subtree Overrides
 

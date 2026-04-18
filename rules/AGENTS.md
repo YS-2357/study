@@ -101,13 +101,13 @@ Whenever files are added, moved, renamed, or deleted:
 
 - Update `00_overview.md` in the affected domain
 - Update `README.md` in the affected folder
-- Update `docs/02_navigation.md` if domain structure changes
+- Update `rules/02_navigation.md` if domain structure changes
 - Update navigation footers in affected notes
 
 Structural documents that must reflect current file structure:
 - `00_overview.md` - Study hub for each domain
 - `README.md` - Folder index for each directory
-- `docs/02_navigation.md` - Domain layout table
+- `rules/02_navigation.md` - Domain layout table
 
 ## 9. Conflict Resolution
 
@@ -141,4 +141,4 @@ recent_editor: CLAUDE
 | [03_cross_linking.md](03_cross_linking.md) | Cross-linking and terminology |
 | [04_security.md](04_security.md) | Security hooks and delivery |
 | [05_git_guide.md](05_git_guide.md) | Git workflow and push commands |
-| [glossary.md](glossary.md) | Abbreviations and terms |
+| [glossary.md](../glossary.md) | Abbreviations and terms |

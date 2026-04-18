@@ -53,7 +53,7 @@ Link to glossary entries for:
 ### 4.2. How To Link
 
 ```md
-The [VPC](docs/glossary.md) contains multiple subnets.
+The [VPC](../glossary.md) contains multiple subnets.
 ```
 
 Or link to the full note if one exists:

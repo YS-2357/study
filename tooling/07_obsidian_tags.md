@@ -55,7 +55,7 @@ A note tagged `ai` and `aws` appears in both tag clusters in the graph view, sho
 
 Tags are the primary way to navigate across domains in Obsidian. They enable discovery of related notes across different study domains.
 
-> **Tip:** When creating a new note, assign all applicable tags from the taxonomy above. Add a new tag to the taxonomy only if no existing tag fits — then update [docs/01_note_structure.md](../docs/01_note_structure.md).
+> **Tip:** When creating a new note, assign all applicable tags from the taxonomy above. Add a new tag to the taxonomy only if no existing tag fits — then update [rules/01_note_structure.md](../rules/01_note_structure.md).
 
 ---
 ← Previous: [VS Code Remote SSH](06_vscode_remote_ssh_with_ec2.md) | [Overview](./00_overview.md)
