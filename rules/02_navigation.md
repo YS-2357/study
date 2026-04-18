@@ -131,7 +131,9 @@ Files without numbers:
 | `ai/` | AI agents, LLM concepts |
 | `aws/` | AWS services, grouped into subdomains by category |
 | `aws/{subdomain}/` | Category subdomain (e.g., `compute/`, `storage/`, `ai/`, `agentcore/`) |
+| `azure/` | Microsoft Azure services. Subdomains grow organically — create one only when the first note in it is written |
 | `computing/` | CPU, GPU, virtualization |
+| `gcp/` | Google Cloud services. Subdomains grow organically — create one only when the first note in it is written |
 | `git/` | Git workflow |
 | `networking/` | Protocols, OSI, DNS |
 | `tooling/` | Dev tools, editors |
