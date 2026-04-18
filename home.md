@@ -14,7 +14,9 @@ All study domains in this repo. Each domain has its own `00_{domain}_overview.md
 
 - [AI](ai/00_ai_overview.md) — AI agents, LLMs, MCP, attention, KV cache
 - [AWS](aws/00_aws_overview.md) — AWS services (EC2, S3, VPC, IAM, RDS, Lambda, Bedrock, etc.)
+- [Azure](azure/00_azure_overview.md) — Microsoft Azure services
 - [Computing](computing/00_computing_overview.md) — CPU, GPU, virtualization, storage, caching, interfaces
+- [GCP](gcp/00_gcp_overview.md) — Google Cloud services
 - [Git](git/00_git_overview.md) — Git workflow, tracking, staging
 - [Glossary](glossary.md) — Abbreviations and domain terms used across the repo
 - [Networking](networking/00_networking_overview.md) — Protocols, OSI, DNS, HTTP, reverse proxy
