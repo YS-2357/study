@@ -75,9 +75,11 @@ recent_editor: CLAUDE
 | Field | Format | Rule |
 |-------|--------|------|
 | `tags` | lowercase, hyphen-separated | Required, min 1 tag |
-| `created_at` | `YYYY-MM-DDTHH:MM:SS` | Set once on creation |
-| `updated_at` | `YYYY-MM-DDTHH:MM:SS` | AI must update on every edit |
+| `created_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | Set once on creation. Not auto-corrected |
+| `updated_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | AI must update on every edit. Auto-corrected by PostToolUse hook |
 | `recent_editor` | `CLAUDE`, `CODEX`, `KIRO`, `HUMAN` | AI must set on every edit |
+
+**KST enforcement:** All timestamps use Korean time (UTC+9). Get the current stamp with plain `date +"%Y-%m-%dT%H:%M:%S"` — **do not** use `TZ=Asia/Seoul date`, which silently returns UTC on Git Bash for Windows. The `updated_at` field is auto-corrected after every Write/Edit by `.claude/hooks/normalize-timestamp.sh`, so minor drift from real time is fixed automatically; `created_at` is not corrected and must be set correctly at creation time.
 
 ### 3.2. Tags
 
