@@ -1,16 +1,17 @@
 ---
 tags:
-  -
-created_at: 260417-141847
-updated_at: 260417-141847
+  - tooling
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
 
 # tooling
 
-Developer tools and workflow notes. See [00_overview.md](00_overview.md) for study order.
+Developer tools and workflow notes. See [00_tooling_overview.md](00_tooling_overview.md) for study order.
 
 - `README.md`: This file.
-- `00_overview.md`: Study hub and navigation.
+- `00_tooling_overview.md`: Study hub and navigation.
 - `01_wsl_terminal_and_vscode.md`: WSL folder navigation, file inspection, and opening the repo in VS Code.
 - `02_vim_and_neovim.md`: Vim/Neovim concepts, WSL feasibility, tradeoffs, and comparison with other editors.
 - `03_cucumber.md`: Cucumber, Behavior-Driven Development, and plain-language acceptance tests.
