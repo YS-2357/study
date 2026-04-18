@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T12:00:00
+updated_at: 2026-04-18T13:00:00
 recent_editor: CLAUDE
 ---
 
@@ -26,7 +26,7 @@ tags:
   - domain
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_{domain}_overview.md)
 
 # Title
 ```
@@ -35,7 +35,7 @@ tags:
 
 ```md
 ---
-← Previous: [Title](link) | [Overview](./00_overview.md) | Next: [Title](link) →
+← Previous: [Title](link) | [Overview](./00_{domain}_overview.md) | Next: [Title](link) →
 ```
 
 ### 2.3. Footer Variations
@@ -43,34 +43,36 @@ tags:
 First note in sequence:
 ```md
 ---
-[Overview](./00_overview.md) | Next: [Title](link) →
+[Overview](./00_{domain}_overview.md) | Next: [Title](link) →
 ```
 
 Last note in sequence:
 ```md
 ---
-← Previous: [Title](link) | [Overview](./00_overview.md)
+← Previous: [Title](link) | [Overview](./00_{domain}_overview.md)
 ```
 
 ## 3. Overview Navigation
 
-### 3.1. Domain Overview (00_overview.md)
+### 3.1. Domain Overview
+
+Each domain has its own uniquely-named overview file: `00_{domain}_overview.md` (e.g., `ai/00_ai_overview.md`, `aws/00_aws_overview.md`).
 
 Footer links up to parent overview:
 
 ```md
 ---
-↑ [Parent Title](path/to/parent/00_overview.md)
+↑ [Parent Title](../home.md)
 ```
 
 ### 3.2. Root Overview
 
-The root `00_overview.md` is the top of the hierarchy and has no parent link.
+The root overview is named `home.md` (top of the hierarchy, no parent link).
 
 ### 3.3. Nested Domain Example
 
 ```
-aws/agentcore/00_overview.md
+aws/agentcore/00_agentcore_overview.md
 ↑ [Amazon Bedrock AgentCore](../32_amazon_bedrock_agentcore.md)
 ```
 
@@ -82,7 +84,8 @@ READMEs do not have navigation footers. They are folder indexes only.
 
 | File | Purpose |
 |------|---------|
-| `00_overview.md` | Study hub for domain |
+| `home.md` (root only) | Top-level study hub |
+| `00_{domain}_overview.md` | Study hub for a domain |
 | `01_filename.md` | First concept note |
 | `02_filename.md` | Second concept note |
 | ... | Continue in study order |
@@ -91,6 +94,7 @@ Files without numbers:
 - `README.md` - Folder index
 - `AGENTS.md` - Agent rules
 - `CLAUDE.md` - Claude-specific rules
+- `glossary.md` - Root-level glossary
 
 ## 6. Domain Layout
 
