@@ -55,4 +55,4 @@ A Redis cache holding 50 GB of data with low CPU usage: choose R family (memory 
 Choosing the wrong instance family wastes money or causes performance problems. A memory-heavy workload on a compute-optimized instance will run out of RAM. A CPU-heavy workload on a memory-optimized instance pays for unused RAM.
 
 ---
-← Previous: [GPU](04_gpu.md) | [Overview](./00_overview.md) | Next: [Caching](06_caching.md) →
+← Previous: [GPU](04_gpu.md) | [Overview](./00_computing_overview.md) | Next: [Caching](06_caching.md) →
