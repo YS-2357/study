@@ -73,7 +73,7 @@ while IFS= read -r note; do
     [[ -n "$def" && "$def" != "$correct" ]] && wrong_pool+=("$def")
 done < <(find . -name "*.md" \
     ! -path "./.git/*" ! -path "./.claude/*" ! -path "./.codex/*" \
-    ! -name "README.md" ! -name "00_overview.md" \
+    ! -name "README.md" ! -name "home.md" ! -name "*_overview.md" \
     ! -name "CLAUDE.md" ! -name "AGENTS.md" 2>/dev/null)
 
 # Not enough notes for a proper quiz — fall back to yes/no
