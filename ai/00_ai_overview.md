@@ -1,8 +1,9 @@
 ---
 tags:
   - ai
-created_at: 260401-000000
-updated_at: 260417-141847
+created_at: 2026-04-01T00:00:00
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
 
 # AI Agents — Overview

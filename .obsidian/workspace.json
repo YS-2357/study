@@ -11,10 +11,14 @@
             "id": "a88e41454934b7ef",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "README"
             }
           }
         ]
@@ -181,14 +185,15 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "00_overview.md",
     "home.md",
+    "README.md",
+    "aws/00_aws_overview.md",
+    "00_overview.md",
     "tooling/00_tooling_overview.md",
     "networking/00_networking_overview.md",
     "git/00_git_overview.md",
     "computing/00_computing_overview.md",
     "aws/agentcore/00_agentcore_overview.md",
-    "aws/00_aws_overview.md",
     "ai/00_ai_overview.md",
     "git/00_overview.md",
     "tmpclaude-6f4a-cwd",
@@ -216,7 +221,6 @@
     "rules/02_navigation.md",
     "rules/05_git_guide.md",
     "rules/AGENTS.md",
-    "rules/04_security.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
