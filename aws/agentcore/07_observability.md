@@ -33,4 +33,4 @@ When a multi-step agent returns a wrong answer, Observability can help inspect w
 Agent failures are often workflow failures, not just code exceptions. Observability gives teams the evidence needed to improve prompts, tools, policies, and runtime behavior.
 
 ---
-← Previous: [AgentCore Browser](06_browser.md) | [Overview](./00_overview.md) | Next: [AgentCore Evaluations](08_evaluations.md) →
+← Previous: [AgentCore Browser](06_browser.md) | [Overview](./00_agentcore_overview.md) | Next: [AgentCore Evaluations](08_evaluations.md) →
