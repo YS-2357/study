@@ -99,7 +99,7 @@ No copy-paste, no re-explaining context. The vault is the memory.
 
 LLM context windows reset. Cloud-based AI memory is vendor-locked. A Git-backed Markdown vault is permanent, portable, and readable by any tool — today and in ten years. The notes compound: the more you write, the better grounded your AI answers become.
 
-> **Tip:** Start with `CLAUDE.md` in the vault root and one `00_overview.md` per domain. Let structure grow from the notes, not the other way around.
+> **Tip:** Start with `CLAUDE.md` in the vault root and one overview file per domain (e.g., `00_{domain}_overview.md`). Let structure grow from the notes, not the other way around.
 
 ---
 ← Previous: [Obsidian vs Notion](04_obsidian_vs_notion.md) | [Overview](./00_tooling_overview.md) | Next: [VS Code Remote SSH with EC2](06_vscode_remote_ssh_with_ec2.md) →
