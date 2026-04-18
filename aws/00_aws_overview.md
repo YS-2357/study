@@ -25,10 +25,6 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 | [Operations](ops/00_ops_overview.md)                  | CloudWatch, SSM, Billing, Support                        |
 | [Developer Tools](devtools/00_devtools_overview.md)   | CDK, boto3, Marketplace                                  |
 
-## Top-Level Notes
-
-- [Strands Agents SDK](31_strands_agents_sdk.md) — Multi-framework agent SDK; kept at top level because it's not strictly an AWS service (it's an open-source framework that deploys to AWS).
-
 ## Cross-references
 
 - Networking fundamentals — [Networking](../networking/00_networking_overview.md)
