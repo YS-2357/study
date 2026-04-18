@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rules/05_git_guide.md",
+                "file": "rules/KIRO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_git_guide"
+              "title": "KIRO"
             }
           }
         ]
@@ -185,6 +185,12 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "rules/CODEX.md",
+    "rules/CLAUDE.md",
+    "rules/KIRO.md",
+    "rules/01_note_structure.md",
+    "rules/AGENTS.md",
+    "rules/05_git_guide.md",
     "raw/processed/README.md",
     "raw/processed",
     "aws/41_mangum.md",
@@ -215,12 +221,6 @@
     "computing/00_computing_overview.md",
     "aws/agentcore/00_agentcore_overview.md",
     "ai/00_ai_overview.md",
-    "git/00_overview.md",
-    "aws/201/00_overview.md",
-    "AGENTS.md",
-    "CLAUDE.md",
-    "rules/glossary.md",
-    "tooling/00_overview.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
