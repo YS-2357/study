@@ -16,3 +16,4 @@ Rules for AI agents working in this repository.
 | `04_security.md` | Security rules |
 | `05_git_guide.md` | Git workflow |
 | `06_content_diagrams.md` | ASCII diagrams of repo architecture, hierarchy, flows |
+| `07_scalability.md` | How the repo scales: split thresholds, sed-friendly renames, subdomain rules |
