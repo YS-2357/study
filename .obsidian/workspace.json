@@ -14,13 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "glossary.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": false
+                "file": "computing/01_architecture.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "01_architecture"
             },
             "group": "34687243372a2d3b"
           }
@@ -37,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "glossary.md",
+                "file": "computing/01_architecture.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -65,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "glossary 그래프"
+              "title": "01_architecture 그래프"
             },
             "group": "34687243372a2d3b"
           }
@@ -212,12 +211,23 @@
               "icon": "lucide-list",
               "title": "01_three_tier_architecture 의 개요"
             }
+          },
+          {
+            "id": "f00eb501da1ad5a2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -228,47 +238,48 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "computing/00_computing_overview.md",
+    "home.md",
+    "ai/00_ai_overview.md",
+    "ai/12_prompt_caching.md",
+    "ai/11_kv_cache.md",
+    "ai/09_profiles.md",
+    "computing/04_gpu.md",
+    "computing/02_virtualization.md",
+    "computing/06_caching.md",
+    "computing/05_workload_types.md",
+    "computing/09_decomposition.md",
+    "computing/08_endpoints.md",
+    "computing/03_storage.md",
+    "computing/01_architecture.md",
+    "computing/07_interfaces.md",
+    "무제.base",
+    "무제 3.base",
+    "무제 2.base",
+    "무제 1.base",
+    "glossary.md",
     "aws/ai/12_amazon_bedrock_integration_patterns.md.ts-tmp",
     "aws/ai/12_amazon_bedrock_integration_patterns.md",
-    "home.md",
-    "glossary.md",
     "CLAUDE.md",
     "AGENTS.md",
     "aws/ai/01_amazon_bedrock.md",
     "aws/ai/00_ai_overview.md",
     "aws/00_aws_overview.md",
-    "ai/00_ai_overview.md",
     "aws/ai/11_strands_agents_sdk.md",
     "aws/devtools/00_devtools_overview.md",
     "aws/devtools/02_boto3.md",
     "aws/database/00_database_overview.md",
-    "aws/database/01_amazon_rds.md",
-    "aws/database/02_amazon_aurora.md",
-    "aws/database/03_amazon_dynamodb.md",
-    "aws/database/04_amazon_elasticache.md",
-    "aws/ai/10_amazon_bedrock_agentcore.md",
-    "ai/15_strands_agents_sdk.md",
-    "ai/04_tools.md",
     "aws/ai/sede6C7LQ",
     "aws/ai/agentcore/sedbNkKaz",
-    "aws/identity/00_identity_overview.md",
-    "rules/07_scalability.md",
-    "aws/foundation/00_foundation_overview.md",
-    "aws/31_strands_agents_sdk.md",
-    "aws/33_amazon_bedrock_guardrails.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",
-    "aws/ai",
-    "aws/analytics",
-    "aws/identity",
-    "aws/networking",
-    "aws/database",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
