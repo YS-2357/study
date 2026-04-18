@@ -65,7 +65,7 @@ agent("What is 144 divided by 12?")
 ```
 
 ## Why It Matters
-Strands gives you full code-level control over agent behavior without forcing you into a console-first builder. That makes it the right layer for custom orchestration, while deployment choices such as [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md) or Lambda remain separate infrastructure decisions.
+Strands gives you full code-level control over agent behavior without forcing you into a console-first builder. That makes it the right layer for custom orchestration, while deployment choices such as [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) or Lambda remain separate infrastructure decisions.
 
 ## Where It Fits in the AWS Agent Stack
 
@@ -207,7 +207,7 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 
 ### 4. Local vs Production
 - Strands runs locally for development (just Python/Node.js)
-- For production: deploy to AgentCore Runtime, Lambda, Fargate, EKS, App Runner, Docker, Kubernetes, or Terraform. These are deployment options, not equivalent architecture choices. If you need managed agent infrastructure rather than generic compute, prefer [Amazon Bedrock AgentCore](32_amazon_bedrock_agentcore.md).
+- For production: deploy to AgentCore Runtime, Lambda, Fargate, EKS, App Runner, Docker, Kubernetes, or Terraform. These are deployment options, not equivalent architecture choices. If you need managed agent infrastructure rather than generic compute, prefer [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md).
 - Don't run production agents on a notebook or local machine
 
 ### 5. Model Selection
