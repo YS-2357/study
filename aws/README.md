@@ -1,20 +1,21 @@
 ---
 tags:
   - aws
-created_at: 260417-141847
-updated_at: 260417-141847
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
 
 # AWS
 
-AWS service notes. See [00_overview.md](00_overview.md) for study order.
+AWS service notes. See [00_aws_overview.md](00_aws_overview.md) for study order.
 
 ## Files
 
 - `README.md`: This file.
 - `AGENTS.md`: AWS subtree agent rules.
 - `CLAUDE.md`: AWS subtree Claude rules.
-- `00_overview.md`: Study hub and navigation.
+- `00_aws_overview.md`: Study hub and navigation.
 
 ### Foundational (01-30)
 
