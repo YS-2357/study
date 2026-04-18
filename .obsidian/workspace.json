@@ -11,14 +11,10 @@
             "id": "a88e41454934b7ef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_overview.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "00_overview"
+              "title": "새 탭"
             }
           }
         ]
@@ -185,6 +181,15 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "00_overview.md",
+    "home.md",
+    "tooling/00_tooling_overview.md",
+    "networking/00_networking_overview.md",
+    "git/00_git_overview.md",
+    "computing/00_computing_overview.md",
+    "aws/agentcore/00_agentcore_overview.md",
+    "aws/00_aws_overview.md",
+    "ai/00_ai_overview.md",
     "git/00_overview.md",
     "tmpclaude-6f4a-cwd",
     "tmpclaude-7d41-cwd",
@@ -196,7 +201,6 @@
     "tmpclaude-0a26-cwd",
     "tmpclaude-d0ca-cwd",
     "tmpclaude-f983-cwd",
-    "00_overview.md",
     "aws/201/00_overview.md",
     "AGENTS.md",
     "CLAUDE.md",
@@ -213,14 +217,6 @@
     "rules/05_git_guide.md",
     "rules/AGENTS.md",
     "rules/04_security.md",
-    "rules/01_note_structure.md",
-    "docs/01_note_structure.md",
-    "docs/AGENTS.md",
-    "docs/03_cross_linking.md",
-    "docs/05_git_guide.md",
-    "docs/04_security.md",
-    "docs/CLAUDE.md",
-    "docs/CODEX.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
