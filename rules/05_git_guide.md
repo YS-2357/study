@@ -140,12 +140,12 @@ git commit -m "update: improve Lambda section"
 STUDY_PUSH_CONTENT_ACK=1 git push origin main
 ```
 
-## 7. Hooks
+## 8. Hooks
 
 | Location | Purpose |
 |----------|---------|
 | `.githooks/pre-push` | Main dispatcher |
 | `.githooks/pre-push-study-content` | Content acknowledgment |
 | `.githooks/git-credential-env.sh` | Credential helper |
-| `.claude/hooks/auto-push.sh` | Claude auto-push |
-| `.codex/hooks/pre-push` | Codex validation |
+| `.claude/hooks/auto-push.sh` | Claude auto-push — stages only `tool_input.file_path` per call |
+| `.codex/hooks/pre-push` | Codex validation (frontmatter, structure, footer, security) |
