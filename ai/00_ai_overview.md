@@ -51,7 +51,6 @@ For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore
 | MCP | Protocol for connecting tools/resources |
 | Hooks | Automatic side effects |
 | Profiles | Named runtime modes |
-| Strands | Framework where LLM picks tools autonomously |
 
 ---
 ↑ [Home](../home.md)
