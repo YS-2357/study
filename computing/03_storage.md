@@ -64,4 +64,4 @@ A PostgreSQL database on EC2 needs fast random reads: choose gp3 with provisione
 Storage type and performance directly affect application behavior. Choosing the wrong EBS volume type causes either wasted money (io2 for a dev server) or poor performance (sc1 for a database).
 
 ---
-← Previous: [Virtualization](02_virtualization.md) | [Overview](./00_overview.md) | Next: [GPU](04_gpu.md) →
+← Previous: [Virtualization](02_virtualization.md) | [Overview](./00_computing_overview.md) | Next: [GPU](04_gpu.md) →
