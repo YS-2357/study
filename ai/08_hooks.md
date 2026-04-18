@@ -24,7 +24,7 @@ A hook is attached to an event such as "before push" or "after a task finishes."
 
 ## Example
 
-In this repo, a `pre-push` hook can scan changed Markdown files, make sure related `README.md` and `00_overview.md` files were updated when notes move, and stop the push if it detects a secret. That follows the rule "fail loudly, succeed quietly" because success prints nothing, but failure explains exactly what must be fixed.
+In this repo, a `pre-push` hook can scan changed Markdown files, make sure related `README.md` and `00_{domain}_overview.md` files were updated when notes move, and stop the push if it detects a secret. That follows the rule "fail loudly, succeed quietly" because success prints nothing, but failure explains exactly what must be fixed.
 
 ## Why It Matters
 
