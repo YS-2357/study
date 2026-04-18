@@ -18,4 +18,3 @@ Developer tools and workflow notes. See [00_tooling_overview.md](00_tooling_over
 - `04_obsidian_vs_notion.md`: Obsidian vs Notion for notes, Git, collaboration, and AI workflows.
 - `05_obsidian_github_second_brain.md`: Obsidian + GitHub as a persistent AI second brain — PARA/Zettelkasten structure, Claude Code integration, open-source repos.
 - `06_vscode_remote_ssh_with_ec2.md`: Main overheads of using VS Code Remote - SSH with EC2, including latency, EC2 cost, and SSH/security operations.
-- `07_obsidian_tags.md`: Obsidian tag taxonomy used for graph view, search, and cross-domain navigation.
