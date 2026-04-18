@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_tooling_overview.md)
 
 # WSL Terminal and VS Code Workflow
 
@@ -153,4 +153,4 @@ If you can reliably answer "where am I?", "what files are here?", and "how do I 
 > **Tip:** Start every terminal session with `cd /home/ys2357/study && pwd` before running Git commands.
 
 ---
-[Overview](./00_overview.md) | Next: [Vim and Neovim](02_vim_and_neovim.md) →
+[Overview](./00_tooling_overview.md) | Next: [Vim and Neovim](02_vim_and_neovim.md) →
