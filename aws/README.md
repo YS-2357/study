@@ -27,7 +27,7 @@ AWS service notes organized into subdomains. See [00_aws_overview.md](00_aws_ove
 | `networking/` | ELB, CloudFront, API Gateway, Shield, WAF |
 | `identity/` | IAM, Security Group |
 | `analytics/` | Kinesis, EMR, Data Pipeline, SageMaker |
-| `ai/` | Bedrock family (+ nested `agentcore/` deep-dive) |
+| `ai/` | Bedrock family, Strands Agents SDK (+ nested `agentcore/` deep-dive) |
 | `ops/` | CloudWatch, SSM Parameter Store, Billing, Support Plans |
 | `devtools/` | CDK, boto3, Marketplace |
 
