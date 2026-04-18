@@ -71,4 +71,4 @@ An API has multiple endpoints: `GET /users` (list), `POST /users` (create), `GET
 Understanding endpoints clarifies how AWS services connect: the CLI and SDK call service endpoints, databases expose connection endpoints, and VPC endpoints keep traffic private. Misconfigured endpoints cause connectivity failures.
 
 ---
-← Previous: [Interfaces](07_interfaces.md) | [Overview](./00_overview.md) | Next: [Decomposition](09_decomposition.md) →
+← Previous: [Interfaces](07_interfaces.md) | [Overview](./00_computing_overview.md) | Next: [Decomposition](09_decomposition.md) →
