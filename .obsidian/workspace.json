@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/41_mangum.md",
+                "file": "rules/05_git_guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "41_mangum"
+              "title": "05_git_guide"
             }
           }
         ]
@@ -185,10 +185,12 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "raw/processed/README.md",
+    "raw/processed",
+    "aws/41_mangum.md",
     "rules/06_content_diagrams.md",
     "tooling/04_obsidian_vs_notion.md",
     "tooling/02_vim_and_neovim.md",
-    "aws/41_mangum.md",
     "tooling/sedo5AUC1",
     "tooling/sedXhV5sW",
     "tooling/sedY1rysu",
@@ -198,7 +200,6 @@
     "rules/sedKGKry8",
     "networking/sed9VpQWq",
     "networking/sedNuI0dT",
-    "networking/sed9ZIL9R",
     "aws/00_aws_overview.md",
     "aws/16_elastic_load_balancing.md",
     "aws/06_auto_scaling.md",
@@ -220,7 +221,6 @@
     "CLAUDE.md",
     "rules/glossary.md",
     "tooling/00_overview.md",
-    "docs/02_navigation.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
