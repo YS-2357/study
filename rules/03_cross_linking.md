@@ -26,7 +26,7 @@ On first mention of a concept with a dedicated note:
 ### 2.1. Example
 
 ```md
-The [Lambda](../aws/08_aws_lambda.md) function uses
+The [Lambda](../aws/compute/03_aws_lambda.md) function uses
 an IAM role. Lambda automatically handles scaling.
 ```
 
@@ -75,7 +75,7 @@ The [VPC](../glossary.md) contains multiple subnets.
 
 Or link to the full note if one exists:
 ```md
-The [VPC](../aws/04_amazon_vpc.md) contains multiple subnets.
+The [VPC](../aws/foundation/04_amazon_vpc.md) contains multiple subnets.
 ```
 
 ### 4.3. Glossary Note Column
