@@ -14,7 +14,7 @@ See [rules/AGENTS.md](rules/AGENTS.md) for agent instructions.
 | [rules/02_navigation.md](rules/02_navigation.md) | Navigation rules |
 | [rules/03_cross_linking.md](rules/03_cross_linking.md) | Cross-linking |
 | [rules/04_security.md](rules/04_security.md) | Security hooks |
-| [rules/glossary.md](rules/glossary.md) | Abbreviations |
+| [glossary.md](glossary.md) | Abbreviations |
 
 ## Subtree Overrides
 
