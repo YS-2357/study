@@ -126,8 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e4f21328eceae37b",
@@ -234,8 +233,9 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "aws/database/01_amazon_rds.md",
+    "aws/database/03_amazon_dynamodb.md",
     "aws/database/02_amazon_aurora.md",
+    "aws/database/01_amazon_rds.md",
     "aws/database/00_database_overview.md",
     "aws/database/04_amazon_elasticache.md",
     "aws/00_aws_overview.md",
@@ -261,7 +261,6 @@
     "aws/compute/00_compute_overview.md",
     "aws/devtools/03_aws_marketplace.md",
     "aws/devtools/02_boto3.md",
-    "aws/devtools/01_aws_cdk.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",

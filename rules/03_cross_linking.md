@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T12:24:18
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:55:00
+recent_editor: CODEX
 ---
 
 # Cross-Linking Rules
@@ -121,7 +121,16 @@ Update all references to the new path.
 
 Remove or update links to deleted notes.
 
-## 8. What Not To Do
+## 8. Validation Before Commit
+
+Before committing link changes:
+- Run an internal Markdown link check across all `.md` files
+- Include image links in the check
+- Ignore placeholder examples only inside rule docs
+- Scan for malformed relative paths such as `././`, stale renamed filenames, and over-deep `../../../` paths
+- Fix repeated same-target links in body text; navigation/footer links may repeat
+
+## 9. What Not To Do
 
 - No separate "References" section at end of note
 - No "See Also" section
