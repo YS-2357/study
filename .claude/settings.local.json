@@ -23,5 +23,9 @@
       "Bash(find \"C:\\\\Users\\\\user\\\\study\" -name \"*.md\" -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" ! -path \"*/.codex/*\" ! -path \"*/.obsidian/*\" ! -path \"*/node_modules/*\" -exec grep -l \"00_overview\\\\.md\" {} \\\\;)",
       "Bash(xargs -0 grep \"00_overview\\\\.md\")"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "sequential-thinking"
+  ],
+  "enableAllProjectMcpServers": true
 }
