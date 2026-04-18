@@ -7,7 +7,7 @@ updated_at: 2026-04-18T13:00:00
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_computing_overview.md)
 
 # Endpoints
 
