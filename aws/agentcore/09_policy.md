@@ -33,4 +33,4 @@ A finance agent may be allowed to read invoices but blocked from issuing refunds
 Prompt instructions are not enough for high-risk actions. Policy gives production agents deterministic boundaries that are easier to audit and reason about.
 
 ---
-← Previous: [AgentCore Evaluations](08_evaluations.md) | [Overview](./00_overview.md) | Next: [Amazon Bedrock AgentCore](../32_amazon_bedrock_agentcore.md) →
+← Previous: [AgentCore Evaluations](08_evaluations.md) | [Overview](./00_agentcore_overview.md) | Next: [Amazon Bedrock AgentCore](../32_amazon_bedrock_agentcore.md) →
