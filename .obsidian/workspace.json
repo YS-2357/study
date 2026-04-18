@@ -242,8 +242,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a88e41454934b7ef",
+  "active": "8c16b66ece157d75",
   "lastOpenFiles": [
+    "computing/10_assembly.md",
     "computing/00_computing_overview.md",
     "home.md",
     "ai/00_ai_overview.md",
@@ -274,7 +275,6 @@
     "aws/ai/11_strands_agents_sdk.md",
     "aws/devtools/00_devtools_overview.md",
     "aws/devtools/02_boto3.md",
-    "aws/database/00_database_overview.md",
     "aws/ai/sede6C7LQ",
     "aws/ai/agentcore/sedbNkKaz",
     "aws/ai/agentcore",
