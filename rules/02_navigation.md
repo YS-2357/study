@@ -69,12 +69,40 @@ Footer links up to parent overview:
 
 The root overview is named `home.md` (top of the hierarchy, no parent link).
 
-### 3.3. Nested Domain Example
+### 3.3. Subdomain Pattern
+
+A domain may contain subdomains (e.g., `aws/agentcore/`, `aws/compute/`). Navigation works three levels deep:
 
 ```
-aws/agentcore/00_agentcore_overview.md
-↑ [Amazon Bedrock AgentCore](../32_amazon_bedrock_agentcore.md)
+concept note (aws/compute/03_lambda.md)
+  ↑ links to
+subdomain overview (aws/compute/00_compute_overview.md)
+  ↑ links to
+parent overview (aws/00_aws_overview.md)
+  ↑ links to
+home.md (root)
 ```
+
+**Naming:** subdomain overview is `{parent}/{subdomain}/00_{subdomain}_overview.md` (not prefixed with parent name).
+
+**Numbering:** concept notes inside a subdomain are numbered per-subdomain (`01_*.md … NN_*.md`), not continuing from the parent.
+
+**Parent overview's role:** when a domain has subdomains, `00_{domain}_overview.md` lists subdomain links (and brief descriptions), not individual concept notes. Individual notes are listed in each subdomain's own overview.
+
+**Subdomain overview footer** links up to parent overview, not root:
+
+```md
+---
+↑ [AWS](../00_aws_overview.md)
+```
+
+### 3.4. When To Split A Domain Into Subdomains
+
+Split when **both** apply:
+- The domain has ≥15 notes
+- Notes fall into ≥2 distinct themes where intra-theme cross-links outnumber inter-theme ones
+
+Don't split just because the number is big — split only when structure helps navigation.
 
 ## 4. README Files
 
