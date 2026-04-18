@@ -95,4 +95,4 @@ This routine prevents the two most common Git mistakes: committing files you did
 > **Tip:** Never commit the real `.env` file. Keep only `.env.example` in Git.
 
 ---
-← Previous: [Tracking and Status](01_tracking_and_status.md) | [Overview](./00_overview.md)
+← Previous: [Tracking and Status](01_tracking_and_status.md) | [Overview](./00_git_overview.md)
