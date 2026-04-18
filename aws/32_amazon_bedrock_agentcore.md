@@ -83,7 +83,7 @@ AgentCore is composable — use any combination of these services:
 | [Evaluations](agentcore/08_evaluations.md) | Automated agent quality assessment |
 | [Policy](agentcore/09_policy.md) | Deterministic control over agent actions |
 
-Use [AgentCore services and capabilities](agentcore/00_overview.md) as the canonical split-out notes for these services and capabilities.
+Use [AgentCore services and capabilities](agentcore/00_agentcore_overview.md) as the canonical split-out notes for these services and capabilities.
 
 ## AgentCore + Strands: How They Work Together
 
