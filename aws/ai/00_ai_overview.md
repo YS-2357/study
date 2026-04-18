@@ -4,13 +4,13 @@ tags:
   - ai
   - ml
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-18T12:45:44
 recent_editor: CLAUDE
 ---
 
 # AWS AI Services — Overview
 
-Amazon Bedrock and related generative-AI services. AgentCore deep-dive lives in the nested [agentcore/](agentcore/00_agentcore_overview.md) subtree.
+Amazon Bedrock, the Strands Agents SDK, and related generative-AI services. AgentCore deep-dive lives in the nested [agentcore/](agentcore/00_agentcore_overview.md) subtree.
 
 ## Study Order
 
