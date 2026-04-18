@@ -185,6 +185,7 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "rules/06_content_diagrams.md",
     "tooling/04_obsidian_vs_notion.md",
     "tooling/02_vim_and_neovim.md",
     "aws/41_mangum.md",
@@ -220,7 +221,6 @@
     "rules/glossary.md",
     "tooling/00_overview.md",
     "docs/02_navigation.md",
-    "rules/README.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
