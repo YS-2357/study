@@ -25,7 +25,7 @@ On failure:
 - Stop and fix before proceeding
 
 After any file create/edit/rename/move/delete:
-1. Update relevant docs (00_overview.md, README.md, navigation)
+1. Update relevant docs (domain's `00_{domain}_overview.md` or root `home.md`, README.md, navigation)
 2. Verify Markdown structure and navigation rules
 3. Check for security issues
 4. Commit and push
