@@ -50,4 +50,4 @@ Foundation networking concepts needed to understand AWS services.
 - Interfaces, Endpoints → [Interfaces](../computing/07_interfaces.md), [Endpoints](../computing/08_endpoints.md)
 
 ---
-↑ [Root](../00_overview.md)
+↑ [Home](../home.md)
