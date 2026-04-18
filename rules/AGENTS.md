@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-17T00:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-18T12:05:28
+recent_editor: CODEX
 ---
 
 # Agent Rules
@@ -110,14 +110,25 @@ Structural documents that must reflect current file structure:
 - `README.md` - Folder index for each directory
 - `rules/02_navigation.md` - Domain layout table
 
-## 9. Conflict Resolution
+## 9. Raw Text Processing
+
+When processing files from `raw/`:
+
+- Read text files only unless the user explicitly asks for binary extraction.
+- Extract clear standalone study concepts; skip weak fragments and duplicates.
+- Search existing notes first and update the canonical note when one fits.
+- Web search before creating new notes and cite reliable official or primary sources inline.
+- Place notes in the best existing domain, or create a new domain only when no existing domain fits.
+- Move handled raw files into `raw/processed/` after useful content has been converted.
+
+## 10. Conflict Resolution
 
 - Check `recent_editor` before bulk updates
 - Never overwrite another agent's recent changes
 - Coordinate via commit messages
 - When in doubt, ask
 
-## 10. Frontmatter Requirements
+## 11. Frontmatter Requirements
 
 Every `.md` file must have:
 
@@ -133,7 +144,7 @@ recent_editor: CLAUDE
 
 **AI must update `updated_at` and `recent_editor` on every edit.**
 
-## 11. Rule Documents
+## 12. Rule Documents
 
 | File | Content |
 |------|---------|

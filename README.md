@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T12:05:28
+recent_editor: CODEX
 ---
 
 # study
@@ -14,7 +14,7 @@ Agent-specific automation and skills are separated on purpose: Codex-owned files
 When Codex works in this repo, `.claude/` is out of scope unless the user explicitly asks for Claude-specific changes.
 
 - [rules/](rules/README.md) — Rules for agents and humans.
-- [raw/](raw/README.md) — Raw source materials (images, documents, drafts).
+- [raw/](raw/README.md) — Raw text inbox for source material that agents convert into structured notes.
 - [.claude/](.claude/README.md) — Claude Code hooks: auto-push after every write/edit, session-end push, hook scripts.
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.

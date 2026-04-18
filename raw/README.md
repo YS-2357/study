@@ -1,29 +1,34 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-18T12:05:28
+updated_at: 2026-04-18T12:05:28
+recent_editor: CODEX
+---
+
 # raw
 
-Raw source materials for study notes. Files here are inputs for processing into structured notes.
+Raw text inbox for study-note source material. Put unsorted raw text here; AI agents decide what is worth turning into structured notes.
 
-## Structure
+## Files
 
-| Folder | Content |
-|--------|---------|
-| `images/` | Screenshots, diagrams, visual assets |
-| `documents/` | PDFs, DOCX, PPTX files |
-| `markdown/` | Raw markdown drafts before formatting |
-| `extracted/` | Text extracted from non-text sources |
+- `README.md`: This file.
+- `processed/`: Raw text files after useful content has been converted into notes.
+- `images/`: Legacy/optional image staging folder.
+- `documents/`: Legacy/optional document staging folder.
+- `markdown/`: Legacy/optional markdown staging folder.
+- `extracted/`: Legacy/optional extracted-text staging folder.
 
-## Usage
+## Workflow
 
-1. Place raw materials in appropriate subfolder
-2. Process/extract content as needed
-3. Create structured notes in domain folders
-4. Reference original source in note
+1. Add raw text files directly under `raw/`.
+2. AI agents read text files only.
+3. Agents extract clear standalone study concepts and skip weak fragments or duplicates.
+4. Agents search existing notes first and update a canonical note when one fits.
+5. Agents use web search before creating new notes and cite reliable official or primary sources inline.
+6. Agents create notes in the proper domain, creating a new domain only when no existing domain fits.
+7. Agents move handled raw files into `raw/processed/`.
 
-## Extraction Agent (Future)
+## Text Files Only
 
-Automated extraction from PPTX, DOCX, PDF planned for future implementation.
-
-Current workflow is manual:
-1. Open source document
-2. Extract relevant text/images
-3. Format as study note
-4. Place in appropriate domain folder
+Agents process readable text files such as `.txt`, `.md`, `.csv`, `.log`, and extensionless plain-text files. Binary files, images, PDFs, DOCX, PPTX, and other non-text files are ignored unless the user explicitly asks for extraction.

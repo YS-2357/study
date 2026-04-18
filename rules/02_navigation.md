@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T12:05:28
+recent_editor: CODEX
 ---
 
 # Navigation Rules
@@ -108,7 +108,7 @@ Files without numbers:
 | `networking/` | Protocols, OSI, DNS |
 | `tooling/` | Dev tools, editors |
 | `rules/` | Agent and human rules |
-| `raw/` | Raw source materials |
+| `raw/` | Raw text inbox and processed source files |
 
 ## 7. When To Update Navigation
 
