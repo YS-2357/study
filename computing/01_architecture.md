@@ -67,4 +67,4 @@ Choosing an AMI for a new Python web app: select 64-bit ARM (Graviton), Amazon L
 Architecture choice affects [EC2](../aws/05_amazon_ec2.md) instance cost, performance, and software compatibility. Graviton instances are ~20% cheaper for compatible workloads.
 
 ---
-[Overview](./00_overview.md) | Next: [Virtualization](02_virtualization.md) →
+[Overview](./00_computing_overview.md) | Next: [Virtualization](02_virtualization.md) →

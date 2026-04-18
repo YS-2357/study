@@ -154,7 +154,7 @@ require_related_docs() {
   [[ "$dir" == "." ]] && return 0
 
   readme="$dir/README.md"
-  overview="$dir/00_overview.md"
+  overview="$(ls "$dir"/*_overview.md 2>/dev/null | head -n1)"
 
   if [[ -f "$readme" || -n "${changed_paths[$readme]:-}" ]]; then
     if [[ -z "${changed_paths[$readme]:-}" ]]; then
@@ -162,7 +162,7 @@ require_related_docs() {
     fi
   fi
 
-  if [[ -f "$overview" || -n "${changed_paths[$overview]:-}" ]]; then
+  if [[ -n "$overview" && ( -f "$overview" || -n "${changed_paths[$overview]:-}" ) ]]; then
     if [[ -z "${changed_paths[$overview]:-}" ]]; then
       errors+=("$trigger: changed note inventory requires updating $overview.")
     fi
