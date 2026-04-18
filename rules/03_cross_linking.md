@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T18:55:00
-recent_editor: CODEX
+updated_at: 2026-04-19T01:35:59
+recent_editor: CLAUDE
 ---
 
 # Cross-Linking Rules
