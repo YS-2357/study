@@ -81,9 +81,29 @@ recent_editor: CLAUDE
 
 ### 3.2. Tags
 
-- Use any lowercase, hyphen-separated tags that fit the content
-- Tags are flexible and can be created as needed
-- Common examples: `aws`, `ai`, `networking`, `security`, `serverless`
+- Use lowercase, hyphen-separated tags from the taxonomy below
+- Assign all applicable tags — cross-domain notes carry multiple (e.g., `ai` + `aws`)
+- Add a new tag only if no existing tag fits; if added, update this taxonomy
+- Tags power Obsidian's graph view, tag pane, and cross-domain search
+
+#### Taxonomy
+
+| Tag | Covers | Example notes |
+|-----|--------|---------------|
+| `ai` | AI/ML, LLMs, agents, attention, KV cache | ai/ domain, Bedrock notes |
+| `aws` | AWS services in general | All aws/ notes |
+| `computing` | CPU, GPU, virtualization, caching, storage | computing/ domain |
+| `container` | ECR, Docker, Lambda container images | Fargate, ECR, Lambda containers |
+| `database` | RDS, DynamoDB, Aurora, ElastiCache | aws/ DB notes |
+| `git` | Git workflow, staging, tracking | git/ domain |
+| `infrastructure` | VPC, regions, AZs, subnets, CDK | VPC, CDK, Region notes |
+| `ml` | SageMaker, Bedrock, model training | Bedrock, SageMaker notes |
+| `monitoring` | CloudWatch, observability | CloudWatch note |
+| `networking` | Protocols, OSI, DNS, HTTP, proxies | networking/ domain |
+| `security` | IAM, Shield, WAF, auth, secrets | IAM, WAF, Shield notes |
+| `serverless` | Lambda, Fargate, API Gateway | Lambda, API GW, Mangum notes |
+| `storage` | S3, EFS, EBS | Storage notes |
+| `tooling` | Dev tools, editors, terminal setup | tooling/ domain, CDK, boto3 |
 
 ## 4. Lists
 
