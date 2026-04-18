@@ -16,4 +16,4 @@ Foundation Git concepts for version control.
 2. [Daily Git Workflow](02_daily_git_workflow.md) — Check changes, review diffs, commit, and push from WSL.
 
 ---
-↑ [Root](../00_overview.md)
+↑ [Home](../home.md)
