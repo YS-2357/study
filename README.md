@@ -1,29 +1,29 @@
 ---
 tags:
-  -
-created_at: 260417-141847
-updated_at: 260417-141847
+  - tooling
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
+
 # study
 
-Study materials organized by domain. [Start here →](00_overview.md)
+Study materials organized by domain. [Start here →](home.md)
 
 Agent-specific automation and skills are separated on purpose: Codex-owned files belong under `.codex/`, Claude-owned files belong under `.claude/`, and shared Git entrypoints belong under `.githooks/`.
 When Codex works in this repo, `.claude/` is out of scope unless the user explicitly asks for Claude-specific changes.
 
-- [rules/](rules/README.md) — Rules for agents and humans, glossary.
+- [rules/](rules/README.md) — Rules for agents and humans.
 - [raw/](raw/README.md) — Raw source materials (images, documents, drafts).
 - [.claude/](.claude/README.md) — Claude Code hooks: auto-push after every write/edit, session-end push, hook scripts.
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
-- [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_overview.md)
-- [aws/](aws/README.md) — AWS study materials grouped by level.
-  - [aws/](aws/README.md) — AWS service notes. [Start studying →](aws/00_overview.md)
-  - [aws/](aws/README.md) — AWS 201 deep-dives. [Start studying →](aws/00_overview.md)
-- [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_overview.md)
-- [git/](git/README.md) — Git concepts. [Start studying →](git/00_overview.md)
-- [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_overview.md)
-- [tooling/](tooling/README.md) — Developer tools and workflow notes. [Start studying →](tooling/00_overview.md)
+- [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_ai_overview.md)
+- [aws/](aws/README.md) — AWS service notes. [Start studying →](aws/00_aws_overview.md)
+- [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_computing_overview.md)
+- [git/](git/README.md) — Git concepts. [Start studying →](git/00_git_overview.md)
+- [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_networking_overview.md)
+- [tooling/](tooling/README.md) — Developer tools and workflow notes. [Start studying →](tooling/00_tooling_overview.md)
 
 ## Standards
 
@@ -48,10 +48,10 @@ Every note has a footer:
 
 ```
 ---
-← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
+← Previous: [Title](link) | [Overview](./00_{domain}_overview.md) | Next: [Title](link) →
 ```
 
-Every domain has a `00_overview.md` that serves as the study hub with links to all notes in study order.
+Every domain has a `00_{domain}_overview.md` that serves as the study hub with links to all notes in study order. The root-level `home.md` links to every domain's overview.
 
 ### Markdown formatting
 
@@ -83,7 +83,7 @@ Every domain has a `00_overview.md` that serves as the study hub with links to a
 ### README rules
 
 - READMEs list files and directories in the folder. One-line description per entry.
-- READMEs link to the domain's `00_overview.md` for study content.
+- READMEs link to the domain's `00_{domain}_overview.md` for study content.
 - READMEs do not contain study content, study order, or cross-references.
 
 ## Push Checks
