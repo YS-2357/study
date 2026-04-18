@@ -10,6 +10,10 @@ recent_editor: CODEX
 
 Study materials organized by domain. [Start here →](home.md)
 
+## Multi-PC Sync
+
+This repo is designed to sync seamlessly across machines. **Everything except `.env` (local secrets) is tracked and pushed** — notes, rules, hooks, agent configs, and Obsidian layout (`.obsidian/workspace.json`). Clone on another PC, drop in an `.env`, and continue exactly where you left off: same notes, same pane layout, same automation.
+
 Agent-specific automation and skills are separated on purpose: Codex-owned files belong under `.codex/`, Claude-owned files belong under `.claude/`, and shared Git entrypoints belong under `.githooks/`.
 When Codex works in this repo, `.claude/` is out of scope unless the user explicitly asks for Claude-specific changes.
 
