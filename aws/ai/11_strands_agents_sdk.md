@@ -216,4 +216,4 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Smaller models may struggle with multi-step reasoning
 
 ---
-[Overview](./00_aws_overview.md)
+← Previous: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) | [Overview](./00_ai_overview.md)
