@@ -73,7 +73,13 @@ is_special_markdown() {
   local path="$1"
   local name
   name="$(basename "$path")"
-  [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
+
+  # rules/ directory contains rule docs, not concept notes
+  case "$path" in
+    rules/*) return 0 ;;
+  esac
+
+  [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == "glossary.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
 }
 
 check_note_structure() {
