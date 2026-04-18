@@ -46,8 +46,35 @@ response = agent("What is the population of Tokyo divided by the area in km²?")
 User request → Model reasons → Tool call needed? → Execute tool → Feed result back → Repeat until done → Final response
 ```
 
+## Analogy
+
+Think of it like a contractor with a toolbox. You tell the contractor what the end result should be, not which wrench to use. The contractor inspects the situation and picks the right tool at each step.
+
 ## How It Works
+
 You define the agent's model, prompt, and tools in code. At runtime, the model decides whether to answer directly or call a tool, then continues iterating until it has enough information to produce a final response.
+
+The loop Strands runs is the **[ReAct](https://arxiv.org/abs/2210.03629) pattern** (Reason + Act — Yao et al., 2022):
+
+1. User sends a goal.
+2. LLM reasons: "What do I need to do next?"
+3. LLM selects a [tool](../../ai/04_tools.md) and calls it.
+4. Result is added to context.
+5. LLM checks: "Am I done? If not, what's next?" → repeat from step 2.
+6. LLM returns the final answer when satisfied.
+
+### Who Decides The Sequence?
+
+Different automation paradigms differ on **who controls tool/step ordering** — code, declaration, or the model:
+
+| Approach | Who decides sequence? | Example |
+|---|---|---|
+| Direct API call | Your code (hardcoded) | `response = requests.get(url)` |
+| LangChain chain | Your code (declared pipeline) | `chain = prompt \| llm \| parser` |
+| Strands Agent | The LLM at runtime | `agent("do this")` |
+| AutoGen / CrewAI | Multiple LLMs negotiating | multi-agent conversation |
+
+Strands' value is giving the LLM the decision, which is why a vague prompt + powerful tools produces unpredictable behavior (see Precautions). It also supports [MCP](../../ai/07_mcp.md) servers as tool sources.
 
 ## Example
 ```python
