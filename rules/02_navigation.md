@@ -129,8 +129,8 @@ Files without numbers:
 | Path | Content |
 |------|---------|
 | `ai/` | AI agents, LLM concepts |
-| `aws/` | AWS service notes (flat structure, 01-50) |
-| `aws/agentcore/` | Bedrock AgentCore deep-dive |
+| `aws/` | AWS services, grouped into subdomains by category |
+| `aws/{subdomain}/` | Category subdomain (e.g., `compute/`, `storage/`, `ai/`, `agentcore/`) |
 | `computing/` | CPU, GPU, virtualization |
 | `git/` | Git workflow |
 | `networking/` | Protocols, OSI, DNS |
