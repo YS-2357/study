@@ -5,8 +5,8 @@ tags:
   - networking
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_identity_overview.md)
@@ -26,7 +26,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 
 ## Console Options
 
-![Security Group - Create](./images/console/sg1.png)
+![Security Group - Create](../images/console/sg1.png)
 
 ### Security Group List View
 - View all security groups in current Region
@@ -35,7 +35,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 
 ### Create Security Group
 
-![Security Group - Create Form](./images/console/sg2.png)
+![Security Group - Create Form](../images/console/sg2.png)
 
 **Basic details:**
 1. **Security group name**
@@ -74,7 +74,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 - **Create security group** - Create the security group
 
 ### Security Group Rules
-**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for TCP/UDP/ICMP fundamentals and [Addressing](../../../networking/02_addressing.md) for port details.**
+**See [Networking Basics - Protocols](../../networking/01_protocols.md) for TCP/UDP/ICMP fundamentals and [Addressing](../../networking/02_addressing.md) for port details.**
 
 **Security Group rules control: WHO + WHERE + HOW**
 
@@ -160,7 +160,7 @@ Can reference other security groups in rules:
 
 ## NACL vs Security Group
 
-**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for protocol/traffic fundamentals and [OSI Model](../../../networking/03_osi_model.md) for layer understanding.**
+**See [Networking Basics - Protocols](../../networking/01_protocols.md) for protocol/traffic fundamentals and [OSI Model](../../networking/03_osi_model.md) for layer understanding.**
 
 **Why Security Groups are used 95%+ of the time:**
 

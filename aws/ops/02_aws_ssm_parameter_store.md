@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -13,7 +13,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-AWS Systems Manager Parameter Store is a managed key-value store for configuration values and secrets. It holds config like API keys, resource IDs, and environment-specific settings that your Lambda (or other services) reads at runtime.
+AWS Systems Manager Parameter Store is a managed key-value store for configuration values and secrets. It holds config like API keys, resource IDs, and environment-specific settings that your [Lambda](../compute/03_aws_lambda.md) (or other services) reads at runtime.
 
 ## How It Works
 
@@ -51,7 +51,7 @@ kb_id = get_param("/cs-ai/kb-id")
 
 `WithDecryption=True` is required for `SecureString` parameters. It's harmless for `String` parameters.
 
-### Defining parameters in CDK (correct approach)
+### Defining parameters in [CDK](../devtools/01_aws_cdk.md) (correct approach)
 
 ```python
 from aws_cdk import aws_ssm as ssm

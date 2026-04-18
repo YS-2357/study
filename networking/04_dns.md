@@ -2,8 +2,8 @@
 tags:
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -12,7 +12,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-DNS is a distributed system that translates human-readable domain names to IP addresses. Example: `example.com` → `93.184.216.34`.
+DNS is a distributed system that translates human-readable domain names to [IP addresses](02_addressing.md). Example: `example.com` → `93.184.216.34`.
 
 ## Analogy
 
@@ -22,7 +22,7 @@ Like a phone book for the internet — converts names to numbers so you don't ha
 
 ### Resolution Flow
 
-1. Browser checks its cache
+1. Browser checks its [cache](../computing/06_caching.md)
 2. If not cached, asks a DNS resolver (e.g., 8.8.8.8)
 3. Resolver queries the hierarchy:
    - **Root servers** → "Who handles `.com`?"

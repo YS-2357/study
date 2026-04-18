@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -58,7 +58,7 @@ You create a table with a primary key (partition key, optionally with a sort key
 
 ## Create Table - Console Flow
 
-![Create Table - Table Details](./images/console/dynamodb1.png)
+![Create Table - Table Details](../images/console/dynamodb1.png)
 
 ### Table details
 - "DynamoDB is a schemaless database that requires only a table name and a primary key when you create the table."
@@ -106,7 +106,7 @@ Query: "all orders for A001 between January and February" → works!
 - **Sort key** = what order items are in on that shelf (sorting within partition)
 - Good partition key = high cardinality (many unique values). Bad partition key (e.g., boolean) = hot partitions = throttling.
 
-![Create Table - Table Settings](./images/console/dynamodb2.png)
+![Create Table - Table Settings](../images/console/dynamodb2.png)
 
 ### Table settings
 - **Default settings** (selected by default) — Fastest way to create, most settings changeable after creation
@@ -128,7 +128,7 @@ Query: "all orders for A001 between January and February" → works!
 
 > Notice: **Local secondary indexes** is the only setting that is NOT editable after creation.
 
-![Create Table - Tags](./images/console/dynamodb3.png)
+![Create Table - Tags](../images/console/dynamodb3.png)
 
 ### Tags - optional
 - Up to 50 tags

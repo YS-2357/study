@@ -4,8 +4,8 @@ tags:
   - serverless
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -14,7 +14,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-Mangum is an ASGI adapter that lets FastAPI (and other ASGI frameworks) run inside AWS Lambda. Lambda speaks its own event format; FastAPI speaks ASGI. Mangum translates between them.
+Mangum is an ASGI adapter that lets FastAPI (and other ASGI frameworks) run inside [AWS Lambda](./03_aws_lambda.md). Lambda speaks its own event format; FastAPI speaks ASGI. Mangum translates between them.
 
 ## How It Works
 

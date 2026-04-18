@@ -4,8 +4,8 @@ tags:
   - computing
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -25,7 +25,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 ## Console Options - Launch Instance Flow
 
-![EC2 Launch - Step 1: Name and AMI](./images/console/ec2_1.png)
+![EC2 Launch - Step 1: Name and AMI](../images/console/ec2_1.png)
 
 ### Step 1: Name and tags
 
@@ -66,7 +66,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 **Tip:** Use Amazon Linux 2023 for most workloads (5 years support, optimized for AWS, free)
 
-![EC2 Launch - Step 2: Instance Type](./images/console/ec2_2.png)
+![EC2 Launch - Step 2: Instance Type](../images/console/ec2_2.png)
 
 ### Step 3: Instance type
 
@@ -101,7 +101,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 
 **Tip:** Start with t3.micro (free tier) or t3.small for testing, scale up based on actual usage
 
-![EC2 Launch - Step 3: Key Pair and Network](./images/console/ec2_3.png)
+![EC2 Launch - Step 3: Key Pair and Network](../images/console/ec2_3.png)
 
 ### Step 4: Key pair (login)
 
@@ -119,7 +119,7 @@ You launch an EC2 instance by selecting an AMI (operating system and software te
 ### Step 5: Network settings
 
 **Warning shown:** "We have detected that your account has no VPCs in this region. This will lead to an undesirable experience and you will not be able to launch instances."
-- **Action:** Create a VPC first (see [Amazon VPC](04_amazon_vpc.md))
+- **Action:** Create a VPC first (see [Amazon VPC](../foundation/04_amazon_vpc.md))
 
 **Network:**
 - Select VPC (dropdown)
@@ -156,7 +156,7 @@ Two options:
 
 **Tip:** NEVER use 0.0.0.0/0 for SSH in production. Use specific office IP or VPN IP only.
 
-![EC2 Launch - Step 4: Storage](./images/console/ec2_4.png)
+![EC2 Launch - Step 4: Storage](../images/console/ec2_4.png)
 
 ### Step 6: Configure storage
 
@@ -211,7 +211,7 @@ Shows configuration summary:
 
 ### Instance Types Overview
 
-![EC2 Instance Types](./images/console/ec2_instance_type.png)
+![EC2 Instance Types](../images/console/ec2_instance_type.png)
 
 **EC2 Console → Instance Types** shows 100+ instance types with specifications:
 - **Instance type** - Name (e.g., r5dn.8xlarge, r6g.medium)
@@ -235,7 +235,7 @@ Shows configuration summary:
 
 ### Spot Instances
 
-![EC2 Spot Requests](./images/console/ec2_spot_instance.png)
+![EC2 Spot Requests](../images/console/ec2_spot_instance.png)
 
 **EC2 Console → Spot Requests**
 
@@ -269,7 +269,7 @@ Shows configuration summary:
 
 ### Savings Plans
 
-![EC2 Savings Plans](./images/console/ec2_saving_plans.png)
+![EC2 Savings Plans](../images/console/ec2_saving_plans.png)
 
 **EC2 Console → Savings Plans**
 
@@ -299,7 +299,7 @@ Shows configuration summary:
 
 ### Reserved Instances
 
-![EC2 Reserved Instances](./images/console/ec2_reserved_instances.png)
+![EC2 Reserved Instances](../images/console/ec2_reserved_instances.png)
 
 **EC2 Console → Reserved Instances**
 
@@ -393,7 +393,7 @@ Shows configuration summary:
 
 ### AMI (Amazon Machine Image)
 
-![AMI Catalog](./images/console/ami_catalog.png)
+![AMI Catalog](../images/console/ami_catalog.png)
 
 **EC2 Console → Images → AMI Catalog**
 
@@ -433,7 +433,7 @@ Shows configuration summary:
 - **ENA enabled:** Yes
 - **Architecture options:** Radio buttons for 64-bit (x86) uefi-preferred or 64-bit (Arm) uefi
 
-**See [Computing Basics - Architecture](../../../computing/01_architecture.md) for explanation of 32-bit vs 64-bit, x86 vs ARM, boot modes, and virtualization types.**
+**See [Computing Basics - Architecture](../../computing/01_architecture.md) for explanation of 32-bit vs 64-bit, x86 vs ARM, boot modes, and virtualization types.**
 
 **Action buttons:**
 - **Create Template with AMI** - Create launch template
@@ -494,7 +494,7 @@ Shows configuration summary:
 - **VT** - Video transcoding (VT1)
 - **F** - FPGA for custom hardware acceleration (F1)
 
-**See [Computing Basics - Workload Types](../../../computing/05_workload_types.md) for detailed explanation of all instance families and use cases.**
+**See [Computing Basics - Workload Types](../../computing/05_workload_types.md) for detailed explanation of all instance families and use cases.**
 
 **Processor Suffixes:**
 - **g** - AWS Graviton (ARM) processors (e.g., m6g, c7g)
@@ -511,7 +511,7 @@ Shows configuration summary:
 **Size progression (smallest to largest):**
 - nano → micro → small → medium → large → xlarge → 2xlarge → 4xlarge → 8xlarge → 12xlarge → 16xlarge → 24xlarge → 32xlarge → 48xlarge → 56xlarge → 112xlarge
 
-**See [Computing Basics - GPU](../../../computing/04_gpu.md) for detailed GPU instance information.**
+**See [Computing Basics - GPU](../../computing/04_gpu.md) for detailed GPU instance information.**
 
 ### Burstable Performance (T3/T2)
 - Baseline CPU performance (e.g., 10% of 1 vCPU)

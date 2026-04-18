@@ -3,8 +3,8 @@ tags:
   - aws
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -152,7 +152,7 @@ CloudWatch monitors almost all AWS services, but some things need other tools:
 
 | Gap | What to use instead |
 |---|---|
-| Application-level tracing (which function called which) | **AWS X-Ray** or AgentCore Observability |
+| Application-level tracing (which function called which) | **AWS X-Ray** or [AgentCore Observability](../ai/agentcore/07_observability.md) |
 | Cost breakdown by service | **AWS Cost Explorer** / **Budgets** |
 | Security audit (who did what API call) | **CloudTrail** |
 | Resource inventory (what exists in my account) | **AWS Config** |

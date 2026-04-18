@@ -2,8 +2,8 @@
 tags:
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -22,7 +22,7 @@ Different workloads need different hardware ratios. AWS [EC2](../aws/compute/01_
 |----------|-----------|----------|----------|
 | **General Purpose** | 1:4 | T (burstable), M (balanced) | Web servers, app servers, small DBs |
 | **Compute Optimized** | 1:2 | C, Hpc | Batch processing, video encoding, gaming servers |
-| **Memory Optimized** | 1:8+ | R, X, Z | In-memory DBs, large caches, big data |
+| **Memory Optimized** | 1:8+ | R, X, Z | In-memory DBs, [large caches](06_caching.md), big data |
 | **Storage Optimized** | Varies | I (NVMe SSD), D (HDD), H (HDD) | NoSQL DBs, data warehouses, log processing |
 | **Accelerated** | Varies | P, G, Inf, Trn | ML training/inference, graphics, video |
 

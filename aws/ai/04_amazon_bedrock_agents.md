@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -14,7 +14,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-Amazon Bedrock Agents is a managed, low-code agent builder that orchestrates multi-step tasks by combining foundation models with action groups and [knowledge bases](35_amazon_bedrock_knowledge_bases.md) — configured through the console or API, no custom orchestration code required.
+Amazon Bedrock Agents is a managed, low-code agent builder that orchestrates multi-step tasks by combining foundation models with action groups and [knowledge bases](./03_amazon_bedrock_knowledge_bases.md) — configured through the console or API, no custom orchestration code required.
 
 ## How It Works
 
@@ -43,10 +43,10 @@ Response (with trace showing reasoning)
 | Component | What it does |
 |---|---|
 | **Instruction** | System prompt that defines the agent's role and behavior |
-| **Model** | The foundation model that reasons and decides (via [Bedrock](34_amazon_bedrock.md)) |
+| **Model** | The foundation model that reasons and decides (via [Bedrock](./01_amazon_bedrock.md)) |
 | **Action groups** | Functions the agent can call — backed by Lambda, API schemas, or return-of-control |
-| **Knowledge bases** | [RAG data sources](35_amazon_bedrock_knowledge_bases.md) the agent can query |
-| **[Guardrails](33_amazon_bedrock_guardrails.md)** | Input/output filtering attached to the agent |
+| **Knowledge bases** | [RAG data sources](./03_amazon_bedrock_knowledge_bases.md) the agent can query |
+| **[Guardrails](./02_amazon_bedrock_guardrails.md)** | Input/output filtering attached to the agent |
 
 ### Action Groups
 
@@ -69,7 +69,7 @@ Each action group has a description the model uses to decide when to invoke it. 
 5. Model may chain multiple actions before responding
 6. Final response returned to user
 
-The agent handles the [agentic loop](../../../ai/01_agent.md) automatically — you don't write the orchestration logic.
+The agent handles the [agentic loop](../../ai/01_agent.md) automatically — you don't write the orchestration logic.
 
 ### Agent Versioning and Aliases
 
@@ -92,9 +92,9 @@ Bedrock Agents supports supervisor-worker patterns:
 Building a support agent in the console:
 
 1. Create agent → set instruction: "You are a customer support assistant. Use the knowledge base to answer product questions. Use the create-ticket action when the customer needs escalation."
-2. Attach a [knowledge base](35_amazon_bedrock_knowledge_bases.md) with your support articles
+2. Attach a [knowledge base](./03_amazon_bedrock_knowledge_bases.md) with your support articles
 3. Create an action group `create-ticket` backed by a Lambda that writes to your ticketing system
-4. Attach a [guardrail](33_amazon_bedrock_guardrails.md) to filter PII and block off-topic requests
+4. Attach a [guardrail](./02_amazon_bedrock_guardrails.md) to filter PII and block off-topic requests
 5. Test in the console playground — the trace shows each reasoning step
 
 User: "My order #12345 hasn't arrived and it's been 2 weeks."
@@ -146,7 +146,7 @@ Bedrock Agents is the fastest path to a working agent on AWS — no orchestratio
 - For cross-session memory, integrate with [AgentCore Memory](./10_amazon_bedrock_agentcore.md) or your own storage
 
 ### 4. Cost Layers
-- Model inference tokens (per the [Bedrock](34_amazon_bedrock.md) model you choose)
+- Model inference tokens (per the [Bedrock](./01_amazon_bedrock.md) model you choose)
 - Lambda invocations for action groups
 - Knowledge Base retrieval and vector store costs
 - Guardrails assessment charges

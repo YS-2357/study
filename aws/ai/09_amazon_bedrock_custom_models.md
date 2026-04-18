@@ -5,8 +5,8 @@ tags:
   - ml
   - computing
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -79,7 +79,7 @@ Base models are generalists. Fine-tuning makes them specialists: consistent outp
 | Feasibility | Requires minimum training dataset size (typically 100+ examples for fine-tuning); model must support customization |
 | Disruption | Training jobs are offline; swapping a custom model for a base model requires a code change to `modelId` |
 | Pros & Cons | Higher accuracy and consistency for specific tasks; Provisioned Throughput is expensive at low volume |
-| Differences | Fine-tuning changes model weights; [Prompt Management](46_amazon_bedrock_prompt_management.md) and few-shot prompting keep weights frozen — try prompting approaches before committing to fine-tuning |
+| Differences | Fine-tuning changes model weights; [Prompt Management](./06_amazon_bedrock_prompt_management.md) and few-shot prompting keep weights frozen — try prompting approaches before committing to fine-tuning |
 
 ---
 ← Previous: [Amazon Bedrock Data Automation](./08_amazon_bedrock_data_automation.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) →

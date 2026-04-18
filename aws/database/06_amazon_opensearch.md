@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -75,7 +75,7 @@ retrieval.py
 
 ### Applying to a support-ticket RAG pipeline
 
-If a support-ticket draft assistant used OpenSearch directly instead of [Knowledge Bases](35_amazon_bedrock_knowledge_bases.md), the `generate_draft` Lambda would look like this:
+If a support-ticket draft assistant used OpenSearch directly instead of [Knowledge Bases](../ai/03_amazon_bedrock_knowledge_bases.md), the `generate_draft` Lambda would look like this:
 
 ```
 generate_draft Lambda
@@ -179,7 +179,7 @@ Returns the top-k most relevant Q&A chunks for the given category — combining 
 
 RAG quality is determined at two points: ingestion (what goes in) and retrieval (what comes back). OpenSearch controls retrieval. Hybrid search catches both paraphrased matches (vector) and exact-term matches (BM25) — neither alone is sufficient for a production CS system where inquiries mix natural language with specific order numbers or product codes.
 
-[Knowledge Bases](35_amazon_bedrock_knowledge_bases.md) is the managed alternative: lower control, lower operational burden. Choose OpenSearch when you need custom hybrid search, metadata pre-filtering, or full pipeline control.
+[Knowledge Bases](../ai/03_amazon_bedrock_knowledge_bases.md) is the managed alternative: lower control, lower operational burden. Choose OpenSearch when you need custom hybrid search, metadata pre-filtering, or full pipeline control.
 
 > **Tip:** Index quality = answer quality. If RAG answers are wrong or vague, check the ingest pipeline — chunking strategy and field mappings — before debugging the model call.
 

@@ -3,8 +3,8 @@ tags:
   - aws
   - networking
 created_at: 2026-03-18T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_analytics_overview.md)
@@ -36,7 +36,7 @@ Two main sub-services covered here:
 
 ## Create Data Stream - Console Flow
 
-![Create Data Stream - Configuration and Capacity](./images/console/kinesis_data_streams1.png)
+![Create Data Stream - Configuration and Capacity](../images/console/kinesis_data_streams1.png)
 
 ### Data stream configuration
 - **Data stream name** — free text
@@ -57,7 +57,7 @@ Two main sub-services covered here:
 
 - **Enable warm throughput** checkbox (new) — ensures stream always has desired capacity, requires On-demand Advantage mode
 
-![Create Data Stream - Record Size and Settings](./images/console/kinesis_data_streams2.png)
+![Create Data Stream - Record Size and Settings](../images/console/kinesis_data_streams2.png)
 
 ### Maximum record size
 - Default: 1024 KiB (Kibibytes)
@@ -77,7 +77,7 @@ All settings are editable after creation yes
 | Maximum record size | 1024 KiB |
 | Warm throughput | Not set |
 
-![Create Data Stream - Tags](./images/console/kinesis_data_streams3.png)
+![Create Data Stream - Tags](../images/console/kinesis_data_streams3.png)
 
 ### Tags - optional
 - Up to 50 tags
@@ -88,7 +88,7 @@ All settings are editable after creation yes
 
 ## Create Firehose Stream - Console Flow
 
-![Create Firehose Stream](./images/console/kinesis_data_firehose.png)
+![Create Firehose Stream](../images/console/kinesis_data_firehose.png)
 
 ### Choose source and destination
 - **Source** dropdown — choose a source (e.g., Direct PUT, Kinesis Data Stream)

@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_identity_overview.md)
@@ -38,7 +38,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 ## Create User Group - Console Flow
 
-![Create User Group - Step 1](./images/console/iam_user_group1.png)
+![Create User Group - Step 1](../images/console/iam_user_group1.png)
 
 ### Name the group
 **User group name:**
@@ -67,7 +67,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 ### Attach permissions policies - Optional (1119)
 
-![Create User Group - Attach Policies](./images/console/iam_user_group2.png)
+![Create User Group - Attach Policies](../images/console/iam_user_group2.png)
 
 - "You can attach up to 10 policies to this user group. All the users in this group will have permissions that are defined in the selected policies."
 - Search bar to find policies
@@ -83,7 +83,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 ## Create IAM Role - Console Flow (3 Steps)
 
-![Create IAM Role - Step 1](./images/console/iam_role1.png)
+![Create IAM Role - Step 1](../images/console/iam_role1.png)
 
 ### Step 1: Select trusted entity
 
@@ -120,11 +120,11 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 **Most common:** AWS service (for EC2, Lambda, etc.)
 
-![Create IAM Role - Step 2](./images/console/iam_role2.png)
+![Create IAM Role - Step 2](../images/console/iam_role2.png)
 
 ### Step 2: Add permissions
 
-![Create IAM Role - Step 2](./images/console/iam_role2.png)
+![Create IAM Role - Step 2](../images/console/iam_role2.png)
 
 **Key idea: Search and select policies that define what this role can do**
 
@@ -161,7 +161,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 **Set permissions boundary - optional** (Expandable section at bottom)
 
-![Create IAM Role - Step 3](./images/console/iam_role4.png)
+![Create IAM Role - Step 3](../images/console/iam_role4.png)
 
 ### Step 3: Name, review, and create
 
@@ -209,7 +209,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 ## Create IAM User - Console Flow (3 Steps)
 
-![Create IAM User - Step 1](./images/console/iam_user1.png)
+![Create IAM User - Step 1](../images/console/iam_user1.png)
 
 **Step 1: Specify user details**
 
@@ -240,7 +240,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 **Note:** Access keys for programmatic access or service-specific credentials (CodeCommit, Keyspaces) can be generated after creating the user.
 
-![Create IAM User - Step 2](./images/console/iam_user2.png)
+![Create IAM User - Step 2](../images/console/iam_user2.png)
 
 ### Step 2: Set permissions
 
@@ -263,7 +263,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 - Advanced feature to limit maximum permissions
 - Rarely used at 101 level
 
-![Create IAM User - Step 3](./images/console/iam_user3.png)
+![Create IAM User - Step 3](../images/console/iam_user3.png)
 
 ### Step 3: Review and create
 
@@ -296,7 +296,7 @@ Every AWS API call is authenticated (who are you?) and authorized (are you allow
 
 **Best practice:** Start with AWS managed policies, create custom only when necessary.
 
-![Create IAM Policy - Step 1](./images/console/iam_policy1.png)
+![Create IAM Policy - Step 1](../images/console/iam_policy1.png)
 
 ### Step 1: Specify permissions
 

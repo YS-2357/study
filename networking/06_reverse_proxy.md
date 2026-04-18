@@ -2,8 +2,8 @@
 tags:
   - networking
 created_at: 2026-04-14T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -43,7 +43,7 @@ The client only ever sees the proxy's address — backend IPs remain internal.
 |-----------|-------------|---------|
 | **Load balancing** | Distribute requests across backends | Round-robin across 3 app servers |
 | **TLS termination** | Decrypt HTTPS once at the proxy; backends use plain HTTP internally | Nginx handles TLS, forwards to `localhost:3000` |
-| **Caching** | Store responses and serve them without hitting backends | Cache static assets for 24 hours |
+| **[Caching](../computing/06_caching.md)** | Store responses and serve them without hitting backends | Cache static assets for 24 hours |
 | **Compression** | Gzip responses before sending to client | Reduce JSON payload size |
 | **Path routing** | Route `/api/*` to one service, `/static/*` to another | Microservices behind one domain |
 | **Rate limiting** | Reject or throttle excess requests | Max 100 req/s per IP |

@@ -2,8 +2,8 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -19,12 +19,12 @@ Cloud computing billing determines how AWS charges for resources. Whether you pa
 Not all AWS services stop billing when you stop using them. The billing model depends on whether the service is instance-based or usage-based.
 
 **Instance-based services (EC2, RDS):**
-- [EC2](05_amazon_ec2.md): Stopping an instance stops compute charges, but attached [EBS](20_amazon_ebs.md) storage and Elastic IP costs continue.
-- [RDS](10_amazon_rds.md): Stopping an instance still incurs storage and snapshot costs. The instance auto-restarts after 7 days.
+- [EC2](../compute/01_amazon_ec2.md): Stopping an instance stops compute charges, but attached [EBS](../storage/02_amazon_ebs.md) storage and Elastic IP costs continue.
+- [RDS](../database/01_amazon_rds.md): Stopping an instance still incurs storage and snapshot costs. The instance auto-restarts after 7 days.
 
 **Usage-based services (Lambda, S3):**
-- [Lambda](07_aws_lambda.md): No invocations = no charge at all. Billed per request + execution time (GB-seconds).
-- [S3](19_amazon_s3.md): Stored data incurs ongoing storage costs regardless of access.
+- [Lambda](../compute/03_aws_lambda.md): No invocations = no charge at all. Billed per request + execution time (GB-seconds).
+- [S3](../storage/01_amazon_s3.md): Stored data incurs ongoing storage costs regardless of access.
 
 ## Example
 

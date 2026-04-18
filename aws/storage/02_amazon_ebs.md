@@ -4,8 +4,8 @@ tags:
   - storage
   - computing
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -15,7 +15,7 @@ recent_editor: CLAUDE
 ## What It Is
 **EBS (Elastic Block Store)** is block-level storage that you attach to EC2 instances. Think of it as a virtual hard drive — it persists independently from the instance, so data survives instance stop/start. Each EBS volume exists in a single Availability Zone.
 
-**See [Computing Basics - Storage](../../../computing/03_storage.md) for block vs file vs object storage fundamentals.**
+**See [Computing Basics - Storage](../../computing/03_storage.md) for block vs file vs object storage fundamentals.**
 
 ## How It Works
 
@@ -30,7 +30,7 @@ You create an EBS volume in a specific AZ and attach it to an EC2 instance in th
 
 ### Volume settings
 
-![EBS - Create volume: Volume settings](./images/console/ebs1.png)
+![EBS - Create volume: Volume settings](../images/console/ebs1.png)
 
 **Page header:** "Create an Amazon EBS volume to attach to any EC2 instance in the same Availability Zone."
 
@@ -70,7 +70,7 @@ You create an EBS volume in a specific AZ and attach it to an EC2 instance in th
 
 ### Encryption, Tags, Snapshot summary
 
-![EBS - Create volume: Encryption, Tags, Snapshot summary](./images/console/ebs2.png)
+![EBS - Create volume: Encryption, Tags, Snapshot summary](../images/console/ebs2.png)
 
 **Encryption:**
 - Checkbox: "Encrypt this volume" (unchecked by default)
@@ -256,9 +256,9 @@ Switching from gp2 to gp3 is **non-disruptive** (EBS Elastic Volumes).
 
 ### Q: What storage is best for frequent modifications on ~4 TB of data?
 
-For frequent read/write/delete operations, **block storage (EBS)** is the best fit. [S3](19_amazon_s3.md) requires overwriting entire objects, making it unsuitable for frequent modifications.
+For frequent read/write/delete operations, **block storage (EBS)** is the best fit. [S3](./01_amazon_s3.md) requires overwriting entire objects, making it unsuitable for frequent modifications.
 
-| Criteria | S3 | EBS | [EFS](22_amazon_efs.md) |
+| Criteria | S3 | EBS | [EFS](./03_amazon_efs.md) |
 |----------|-----|-----|-----|
 | Frequent modification | no (full overwrite) | yes (block-level edits) | yes (file-level edits) |
 | 4 TB capacity | Unlimited | Max 64 TB | Auto-scales |

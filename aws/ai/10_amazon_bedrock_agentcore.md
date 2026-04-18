@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T17:57:40
-recent_editor: HUMAN
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -143,7 +143,7 @@ They are evolutionary layers, not competitors:
 - Both AgentCore Runtime and Lambda look like "serverless compute" at a high level, so an AI can flatten them into the same box if the architecture goal is written too vaguely.
 - The [Strands Agents SDK note](./11_strands_agents_sdk.md) is correct that Strands can deploy to multiple targets, including AgentCore Runtime and Lambda, so an AI may overgeneralize that "any target is interchangeable" even when the system was intentionally designed around AgentCore features.
 - The [AgentCore developer guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html) positions AgentCore as managed infrastructure for deploying and operating agents, not as a generic function host. Lambda can run agent code, but it does not automatically replace AgentCore Memory, Gateway, Policy, Identity, Observability, Evaluations, Code Interpreter, or Browser.
-- AI also gets confused because [Bedrock Agents](36_amazon_bedrock_agents.md) commonly uses Lambda-backed action groups, which makes "agent on AWS" and "Lambda" appear tightly coupled even though Bedrock Agents, Strands, and AgentCore are separate layers.
+- AI also gets confused because [Bedrock Agents](./04_amazon_bedrock_agents.md) commonly uses Lambda-backed action groups, which makes "agent on AWS" and "Lambda" appear tightly coupled even though Bedrock Agents, Strands, and AgentCore are separate layers.
 - If your requirement is "managed agent runtime with agent-native infrastructure," keep AgentCore as the primary runtime. Use Lambda only for supporting APIs, tool backends, or simple compute that does not need AgentCore services.
 
 ### 2. Cost Awareness

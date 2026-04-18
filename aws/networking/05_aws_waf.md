@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -58,11 +58,11 @@ You create a Web ACL containing ordered rules. Each incoming HTTP/HTTPS request 
 
 ### Step 1: Tell us about your app
 
-![WAF - Tell us about your app, App focus](./images/console/waf1.png)
+![WAF - Tell us about your app, App focus](../images/console/waf1.png)
 
 **App category** (required, multi-select dropdown):
 
-![WAF - App category dropdown options](./images/console/waf2.png)
+![WAF - App category dropdown options](../images/console/waf2.png)
 
 - Content & publishing systems
 - E-commerce & transaction platforms
@@ -84,7 +84,7 @@ AWS uses your selection to recommend the best protection rules. Select all that 
 
 ### Step 2: Select resources to protect
 
-![WAF - Select resources to protect](./images/console/waf3.png)
+![WAF - Select resources to protect](../images/console/waf3.png)
 
 - Search by resource name or type
 - "Add resources" button to browse regional or global resources
@@ -94,7 +94,7 @@ AWS uses your selection to recommend the best protection rules. Select all that 
 
 ### Step 3: Choose protections, Name, Customize
 
-![WAF - Choose protections, Name, Customize](./images/console/waf4.png)
+![WAF - Choose protections, Name, Customize](../images/console/waf4.png)
 
 **Choose initial protections** (expandable):
 - AWS WAF offers protection packages (bundles of WAF rules) based on security best practices
@@ -191,7 +191,7 @@ Internet → CloudFront → WAF (Web ACL) → ALB → EC2
 - Shield handles volume attacks (DDoS)
 - WAF handles content attacks (SQL injection, XSS, bots)
 - Use both for production web applications
-- See [17_aws_shield.md](./17_aws_shield.md) for Shield details
+- See [AWS Shield](./04_aws_shield.md) for Shield details
 
 ### 5. Log Everything
 - Enable WAF logging to S3, CloudWatch Logs, or Kinesis Data Firehose
@@ -219,7 +219,7 @@ Combined with Shield for volumetric protection, WAF provides defense-in-depth fo
 
 WAF and Route 53 together form a DDoS defense architecture:
 
-- **[AWS Shield](17_aws_shield.md) Standard**: Automatically applied to [CloudFront](21_amazon_cloudfront.md) and Route 53. Mitigates L3/L4 DDoS attacks in real time.
+- **[AWS Shield](./04_aws_shield.md) Standard**: Automatically applied to [CloudFront](./02_amazon_cloudfront.md) and Route 53. Mitigates L3/L4 DDoS attacks in real time.
 - **WAF**: Attached to CloudFront, ALB, or API Gateway for L7 (application layer) attack defense.
 - **Route 53**: Receives Shield Standard protection at the DNS level, mitigating DNS query flood attacks.
 
@@ -232,7 +232,7 @@ Route 53 does not defend on its own — **AWS Shield Standard protects Route 53*
 - When using CloudFront and Route 53, all packets pass through a fully inline DDoS mitigation system with no observable latency.
 - **Shield Advanced** (additional $3,000/month) adds more sophisticated protection and 24/7 Shield Response Team (SRT) support.
 
-See also: [AWS Shield](17_aws_shield.md) for more on DDoS protection tiers.
+For DDoS protection tiers, use AWS Shield.
 
 ## Official Documentation
 - [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)

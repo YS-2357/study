@@ -5,8 +5,8 @@ tags:
   - ml
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -21,7 +21,7 @@ Instead of hardcoding prompts in application code, you manage them as versioned 
 
 ## Analogy
 
-AWS SSM Parameter Store, but for prompts. Just as [SSM Parameter Store](14_aws_ssm_parameter_store.md) keeps configuration out of your code and lets you update it without a deploy, Prompt Management keeps prompt text out of your code and lets you iterate on wording, variables, and model settings independently.
+AWS SSM Parameter Store, but for prompts. Just as [SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md) keeps configuration out of your code and lets you update it without a deploy, Prompt Management keeps prompt text out of your code and lets you iterate on wording, variables, and model settings independently.
 
 ## How It Works
 
@@ -56,7 +56,7 @@ response = client.invoke_flow(
 )
 ```
 
-Prompts can be referenced by [Flows](45_amazon_bedrock_flows.md) nodes and [Agents](36_amazon_bedrock_agents.md) instruction fields, or invoked directly via the `bedrock-agent` API:
+Prompts can be referenced by [Flows](./05_amazon_bedrock_flows.md) nodes and [Agents](./04_amazon_bedrock_agents.md) instruction fields, or invoked directly via the `bedrock-agent` API:
 
 ```python
 client = boto3.client("bedrock-agent", region_name="us-east-1")

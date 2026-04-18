@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -49,7 +49,7 @@ Amazon RDS (Relational Database Service) is a **managed service platform for rel
 
 For most MSP clients, RDS is the right choice — they want the database to just work without a DBA managing infrastructure.
 
-> For Aurora-specific features (shared cluster storage, Serverless v2, Babelfish), see [11_amazon_aurora.md](./11_amazon_aurora.md)
+> For Aurora-specific features (shared cluster storage, Serverless v2, Babelfish), see [11_amazon_aurora.md](./02_amazon_aurora.md)
 
 ## How It Works
 
@@ -83,7 +83,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 
 > Note: Screenshots show Aurora PostgreSQL selected, but the console flow is shared for all engines. RDS-specific options noted below.
 
-![Create Database - Creation Method and Engine Options](./images/console/rds01.png)
+![Create Database - Creation Method and Engine Options](../images/console/rds01.png)
 
 ### Choose a database creation method
 - **Full configuration** (default) — You set all options: availability, security, backups, maintenance
@@ -102,7 +102,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 
 > Aurora options create an Aurora cluster. The other 6 are standard RDS instances.
 
-![Engine Version and Templates](./images/console/rds02.png)
+![Engine Version and Templates](../images/console/rds02.png)
 
 ### Engine version
 - Version filters:
@@ -115,7 +115,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 - **Production** — Defaults for high availability and performance
 - **Dev/Test** — Intended for development, lower defaults
 
-![Settings and Credentials](./images/console/rds03.png)
+![Settings and Credentials](../images/console/rds03.png)
 
 ### Settings
 - **DB cluster identifier** — Unique name across all DB clusters in the current Region
@@ -131,7 +131,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
     - Additional charges apply for Secrets Manager
   - **Self managed** — You create your own password or have RDS generate one
 
-![Encryption Key, Authentication, Storage Configuration](./images/console/rds04.png)
+![Encryption Key, Authentication, Storage Configuration](../images/console/rds04.png)
 
 ### Select the encryption key (when using Secrets Manager)
 - KMS (Key Management Service) key: `aws/secretsmanager` (default) or customer managed key
@@ -146,7 +146,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 
 > For standard RDS engines, storage is configured as EBS (Elastic Block Store) volumes with options for General Purpose SSD (gp3), Provisioned IOPS SSD (io1/io2), or Magnetic.
 
-![Instance Configuration and Availability](./images/console/rds05.png)
+![Instance Configuration and Availability](../images/console/rds05.png)
 
 ### Instance configuration
 **DB instance class (4 categories):**
@@ -164,7 +164,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 
 > For standard RDS: Multi-AZ creates a standby instance (synchronous replication, ~60-120 sec failover)
 
-![Connectivity](./images/console/rds06.png)
+![Connectivity](../images/console/rds06.png)
 
 ### Connectivity
 - **Compute resource:**
@@ -181,7 +181,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 
 - **DB subnet group** — Defines which subnets and IP ranges the DB cluster can use
 
-![Public Access, Security Group, RDS Proxy](./images/console/rds07.png)
+![Public Access, Security Group, RDS Proxy](../images/console/rds07.png)
 
 ### Public access
 - **Yes** — Assigns public IP, accessible from outside VPC (still needs SG rules)
@@ -198,7 +198,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
   - Auto-creates IAM role and Secrets Manager secret
   - Additional costs apply
 
-![Certificate Authority, Data API, Read Replica](./images/console/rds08.png)
+![Certificate Authority, Data API, Read Replica](../images/console/rds08.png)
 
 ### Certificate authority - optional
 - Default: `rds-ca-rsa2048-g1` (expires May 21, 2061)
@@ -213,7 +213,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 ### Additional configuration (expandable)
 - Database options, encryption, failover, backup, backtrack, maintenance, CloudWatch Logs, delete protection
 
-![Tags, Babelfish, Monitoring](./images/console/rds09.png)
+![Tags, Babelfish, Monitoring](../images/console/rds09.png)
 
 ### Tags - optional
 - Up to 50 tags, case-sensitive key-value pairs
@@ -226,7 +226,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 - **Database Insights - Advanced** — 15 months performance history, fleet-level monitoring, CloudWatch Application Signals integration
 - **Database Insights - Standard** — 7 days history (option to pay for up to 24 months)
 
-![Performance Insights, Encryption, Enhanced Monitoring](./images/console/rds10.png)
+![Performance Insights, Encryption, Enhanced Monitoring](../images/console/rds10.png)
 
 ### Performance Insights
 - **Enable Performance Insights** checkbox (enabled by default with Advanced)
@@ -242,7 +242,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 - **OS metrics granularity:** 60 seconds (default)
 - **Monitoring role for OS metrics:** default (auto-creates `rds-monitoring-role` IAM role)
 
-![Log Exports, DevOps Guru](./images/console/rds11.png)
+![Log Exports, DevOps Guru](../images/console/rds11.png)
 
 ### Log exports (to Amazon CloudWatch Logs)
 - iam-db-auth-error log
@@ -256,7 +256,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 - **Turn on DevOps Guru** checkbox — Auto-detects performance anomalies and provides recommendations
 - Cost: $0.0042 per resource per hour
 
-![Estimated Costs and Create](./images/console/rds12.png)
+![Estimated Costs and Create](../images/console/rds12.png)
 
 ### Additional configuration (expandable)
 - Summary: Database options, encryption turned on, failover, backup turned on, backtrack turned off, maintenance, CloudWatch Logs, delete protection turned on
@@ -373,7 +373,7 @@ When you create an RDS database, AWS provisions an EC2 instance, attaches EBS st
 ### 6. Plan Your Security Group Rules
 - RDS needs inbound rules for the database port (3306 for MySQL, 5432 for PostgreSQL, etc.)
 - Best practice: allow only from your application's security group, not from 0.0.0.0/0
-- See [14_security_group.md](./14_security_group.md) for SG details
+- See [14_security_group.md](../identity/02_security_group.md) for SG details
 
 ### 7. Monitor Costs — RDS Can Get Expensive
 - Instance cost + storage + I/O + backups + data transfer

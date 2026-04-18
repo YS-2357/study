@@ -3,8 +3,8 @@ tags:
   - aws
   - storage
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -16,7 +16,7 @@ recent_editor: CLAUDE
 
 **EFS is Linux only.** For Windows file shares, use **Amazon FSx for Windows File Server** (SMB protocol).
 
-**See [Amazon EBS](./20_amazon_ebs.md) for block storage comparison.**
+**See [Amazon EBS](./02_amazon_ebs.md) for block storage comparison.**
 
 ## How It Works
 
@@ -29,7 +29,7 @@ You create an EFS file system and EFS creates mount targets in each AZ you selec
 
 ## Create File System - Console Flow
 
-![EFS - Create file system](./images/console/efs.png)
+![EFS - Create file system](../images/console/efs.png)
 
 **Two creation paths:**
 - **Create file system** (orange button) — quick create with recommended defaults

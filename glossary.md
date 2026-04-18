@@ -15,8 +15,8 @@ tags:
   - storage
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Home](home.md)
@@ -49,7 +49,7 @@ Abbreviations and domain terms used across this repo, sorted alphabetically.
 | KMS  | Key Management Service              | AWS managed service for creating and controlling encryption keys.                                                                                | —                                                                    |
 | LLM  | Large Language Model                | A neural network trained on large text corpora to generate and understand natural language.                                                      | [note](ai/00_ai_overview.md)                                         |
 | LSP  | Language Server Protocol            | Protocol that lets editors (VS Code, Neovim, etc.) communicate with language analysis tools for autocomplete, go-to-definition, and diagnostics. | —                                                                    |
-| MCP  | Model Context Protocol              | Open protocol for connecting LLM agents to external tools and data sources via a standard interface.                                             | [note](ai/00_ai_overview.md)                                         |
+| MCP  | Model Context Protocol              | Open protocol for connecting LLM agents to external tools and data sources via a standard interface.                                             | [note](ai/07_mcp.md)                                                |
 | MSP  | Managed Service Provider            | A company that remotely manages a customer's IT infrastructure and services, often reselling cloud platforms like AWS.                           | —                                                                    |
 | NACL | Network Access Control List         | Stateless firewall rules applied at the subnet level in a VPC, evaluated in order.                                                               | —                                                                    |
 | NAT  | Network Address Translation         | Mechanism that maps private IP addresses to a public IP so instances without public IPs can reach the internet.                                  | —                                                                    |

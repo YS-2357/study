@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -20,7 +20,7 @@ Think of `AGENTS.md` as the local onboarding memo for a new engineer joining tha
 
 ## How It Works
 
-`AGENTS.md` is only one part of the instruction-loading path. In [Claude Code](https://docs.anthropic.com/en/docs/claude-code/memory), `CLAUDE.md` files are loaded automatically in a hierarchy, and files can also import additional instruction files with `@path`. In [Kiro](https://kiro.dev/docs/steering/), `AGENTS.md` is always included, but Kiro also supports its own steering files under `.kiro/steering/`.
+`AGENTS.md` is only one part of the [instruction-loading path](02_harness.md). In [Claude Code](https://docs.anthropic.com/en/docs/claude-code/memory), `CLAUDE.md` files are loaded automatically in a hierarchy, and files can also import additional instruction files with `@path`. In [Kiro](https://kiro.dev/docs/steering/), `AGENTS.md` is always included, but Kiro also supports its own steering files under `.kiro/steering/`.
 
 That creates an important practical limit: **if Codex and Kiro both read the same root `AGENTS.md`, that file is shared guidance, not a reliable place to separate agent roles.**
 

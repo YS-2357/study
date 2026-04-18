@@ -3,8 +3,8 @@ tags:
   - computing
   - ml
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -13,7 +13,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-A GPU (Graphics Processing Unit) is a processor designed for parallel processing of many simple tasks simultaneously. Originally for graphics, now widely used for AI/ML, scientific computing, and video processing.
+A GPU (Graphics Processing Unit) is a processor designed for parallel processing of many simple tasks simultaneously. Originally for graphics, now widely used for [AI/ML](../ai/00_ai_overview.md), scientific computing, and video processing.
 
 ## How It Works
 

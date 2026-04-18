@@ -5,8 +5,8 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -47,7 +47,7 @@ Knowledge Bases can ingest from:
 
 | Source | What it connects to |
 |---|---|
-| **[S3](../aws/19_amazon_s3.md)** | Documents in a bucket (PDF, TXT, HTML, CSV, MD, DOC, XLS) |
+| **[S3](../storage/01_amazon_s3.md)** | Documents in a bucket (PDF, TXT, HTML, CSV, MD, DOC, XLS) |
 | **Web crawler** | Crawl and index web pages |
 | **Confluence** | Atlassian Confluence pages |
 | **SharePoint** | Microsoft SharePoint documents |
@@ -142,7 +142,7 @@ Building a support KB from Zendesk article exports stored in S3:
 
 ## Why It Matters
 
-Without RAG, models can only use their training data — they hallucinate when asked about your specific content. Knowledge Bases provides managed RAG so your [agents](36_amazon_bedrock_agents.md) and applications give answers grounded in your actual documents, with citations pointing back to the source.
+Without RAG, models can only use their training data — they hallucinate when asked about your specific content. Knowledge Bases provides managed RAG so your [agents](./04_amazon_bedrock_agents.md) and applications give answers grounded in your actual documents, with citations pointing back to the source.
 
 ## Precautions
 

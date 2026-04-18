@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-09T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_tooling_overview.md)
@@ -24,7 +24,7 @@ The key difference is file-first versus workspace-first.
 
 ### Obsidian
 
-[Obsidian says](https://help.obsidian.md/data-storage) that notes live as plain-text Markdown files in a local vault on your file system. Because the notes are normal files, Obsidian also notes that they can be managed with Git and other sync services. Its [team sync documentation](https://help.obsidian.md/teams/sync) also highlights that plain-text `.md` storage makes it possible to use version control systems such as Git.
+[Obsidian says](https://help.obsidian.md/data-storage) that notes live as plain-text Markdown files in a local vault on your file system. Because the notes are normal files, Obsidian also notes that they can be managed with [Git](../git/00_git_overview.md) and other sync services. Its [team sync documentation](https://help.obsidian.md/teams/sync) also highlights that plain-text `.md` storage makes it possible to use version control systems such as Git.
 
 Main effects of that model:
 

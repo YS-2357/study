@@ -4,8 +4,8 @@ tags:
   - ml
   - computing
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_analytics_overview.md)
@@ -17,7 +17,7 @@ Amazon SageMaker AI is a fully managed platform for building, training, and depl
 
 **The problem it solves:**
 - ML workflows have many moving parts: data prep, training, tuning, deployment, monitoring
-- Doing this on raw EC2 means managing instances, frameworks, scaling, endpoints yourself
+- Doing this on raw [EC2](../compute/01_amazon_ec2.md) means managing instances, frameworks, scaling, endpoints yourself
 - SageMaker provides managed tooling for the entire ML lifecycle
 
 **ML workflow in SageMaker:**
@@ -32,13 +32,13 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 | Option | What it does | When to use |
 |---|---|---|
 | **SageMaker** | Full ML platform (build, train, deploy) | Custom models, full control over training/deployment |
-| **Bedrock** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
+| **[Bedrock](../ai/01_amazon_bedrock.md)** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
 | **EC2 + frameworks** | DIY ML on raw compute | Maximum control, existing pipelines, custom environments |
 | **Comprehend/Rekognition/etc.** | Pre-built AI services (no ML knowledge needed) | Specific tasks (NLP, image analysis) without building models |
 
 ## How It Works
 
-You prepare training data in S3, then launch a managed training job specifying the algorithm, instance type, and S3 paths for input data and output artifacts. SageMaker provisions the instances, runs the training code, saves the model artifact to S3, and terminates the instances. You then create an endpoint from the trained model artifact; SageMaker deploys the model on managed instances that serve real-time predictions via an HTTPS API.
+You prepare training data in [S3](../storage/01_amazon_s3.md), then launch a managed training job specifying the algorithm, instance type, and S3 paths for input data and output artifacts. SageMaker provisions the instances, runs the training code, saves the model artifact to S3, and terminates the instances. You then create an endpoint from the trained model artifact; SageMaker deploys the model on managed instances that serve real-time predictions via an HTTPS API.
 
 ## Console Access
 - Search "SageMaker" in AWS Console

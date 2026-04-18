@@ -3,8 +3,8 @@ tags:
   - aws
   - storage
 created_at: 2026-03-26T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -17,7 +17,7 @@ recent_editor: CLAUDE
 - **S3 is not a bucket** — S3 is the service, buckets are containers inside S3
 - **Global service, regional storage** — S3 console is global, but each bucket lives in a specific region
 
-**See [Amazon EBS](./20_amazon_ebs.md) and [Amazon EFS](./22_amazon_efs.md) for block/file storage comparison.**
+**See [Amazon EBS](./02_amazon_ebs.md) and [Amazon EFS](./03_amazon_efs.md) for block/file storage comparison.**
 
 ## How It Works
 
@@ -32,7 +32,7 @@ You create a bucket in a specific Region and upload objects (files) to it using 
 
 ### General configuration
 
-![S3 - Create bucket: General configuration](./images/console/s3-1.png)
+![S3 - Create bucket: General configuration](../images/console/s3-1.png)
 
 **AWS Region:**
 - Shown: Asia Pacific (Seoul) ap-northeast-2
@@ -52,7 +52,7 @@ You create a bucket in a specific Region and upload objects (files) to it using 
 
 ### Copy settings & Object Ownership
 
-![S3 - Create bucket: Object Ownership](./images/console/s3-2.png)
+![S3 - Create bucket: Object Ownership](../images/console/s3-2.png)
 
 **Copy settings from existing bucket** (optional):
 - Clone settings from another bucket (format: `s3://bucket/prefix`)
@@ -68,7 +68,7 @@ Best practice: keep ACLs disabled, use IAM/bucket policies for access control. A
 
 ### Block Public Access
 
-![S3 - Block Public Access settings](./images/console/s3-3.png)
+![S3 - Block Public Access settings](../images/console/s3-3.png)
 
 **Block all public access** — yes enabled by default (all 4 sub-settings checked):
 
@@ -115,7 +115,7 @@ All (any)   → Setting 2              → Setting 4
 
 ### Bucket Versioning & Tags
 
-![S3 - Bucket Versioning, Tags](./images/console/s3-4.png)
+![S3 - Bucket Versioning, Tags](../images/console/s3-4.png)
 
 **Bucket Versioning:**
 - **Disable** (default) — overwriting a file replaces it permanently
@@ -130,7 +130,7 @@ All (any)   → Setting 2              → Setting 4
 
 ### Default Encryption & Advanced Settings
 
-![S3 - Default encryption, Object Lock](./images/console/s3-5.png)
+![S3 - Default encryption, Object Lock](../images/console/s3-5.png)
 
 **Default encryption** (automatically applied to new objects):
 
@@ -312,7 +312,7 @@ Understanding storage classes, lifecycle policies, and access controls is essent
 
 ### Q: What is the difference between object, block, and file storage?
 
-| Attribute | Object (S3) | Block ([EBS](20_amazon_ebs.md)) | File ([EFS](22_amazon_efs.md)) |
+| Attribute | Object (S3) | Block ([EBS](./02_amazon_ebs.md)) | File ([EFS](./03_amazon_efs.md)) |
 |-----------|-------------|-------------|------------|
 | Structure | Flat, key-value with metadata | Fixed-size blocks, requires filesystem format | Hierarchical directory/file (NFS) |
 | Access | HTTP/HTTPS API (REST) | Mounted to EC2 (device level) | Mounted by multiple EC2s (NFS v4) |
@@ -364,7 +364,7 @@ The policy itself is free, but **transition requests incur per-request charges**
 
 ## Static Frontend Hosting with CDK
 
-S3 paired with [Amazon CloudFront](21_amazon_cloudfront.md) is the standard pattern for hosting static frontends (React, Vue, Next.js static export). S3 stores the built files; CloudFront serves them globally.
+S3 paired with [Amazon CloudFront](../networking/02_amazon_cloudfront.md) is the standard pattern for hosting static frontends (React, Vue, Next.js static export). S3 stores the built files; CloudFront serves them globally.
 
 ### CDK setup
 

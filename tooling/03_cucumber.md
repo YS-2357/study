@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-09T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_tooling_overview.md)
@@ -39,7 +39,7 @@ You can apply the same idea outside automated testing by writing task or feature
 
 That is also useful for [large language model (LLM)](../ai/01_agent.md)-assisted work. An LLM benefits from the same clarity humans do: explicit behavior, constraints, and edge cases give it a more precise target than a vague prompt. In practice, a Cucumber-style note can work as a structured prompt, an acceptance checklist, and a review artifact at the same time.
 
-For note-taking tools, a file-first app is usually a better fit than a workspace-first app when you want behavior notes to live in Git and be easy for AI tools to read. See [Obsidian vs Notion](04_obsidian_vs_notion.md) for the detailed comparison.
+For note-taking tools, a file-first app is usually a better fit than a workspace-first app when you want behavior notes to live in [Git](../git/00_git_overview.md) and be easy for AI tools to read. See [Obsidian vs Notion](04_obsidian_vs_notion.md) for the detailed comparison.
 
 ## Example
 

@@ -3,8 +3,8 @@ tags:
   - computing
   - storage
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -13,7 +13,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-Storage in computing comes in three types: block (raw disk), file (shared network filesystem), and object (files via API). Performance is measured by IOPS, throughput, and latency.
+Storage in computing comes in three types: block (raw disk), file (shared network filesystem), and object (files via [API](07_interfaces.md)). Performance is measured by IOPS, throughput, and latency.
 
 ## How It Works
 

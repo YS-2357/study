@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -84,10 +84,10 @@ Bedrock is both a model access layer and a platform. Other Bedrock services buil
 
 | Service | What it adds |
 |---|---|
-| [Knowledge Bases](35_amazon_bedrock_knowledge_bases.md) | RAG — connect models to your data |
-| [Agents](36_amazon_bedrock_agents.md) | Managed agent builder with action groups |
-| [AgentCore](32_amazon_bedrock_agentcore.md) | Production infrastructure for any agent framework |
-| [Guardrails](33_amazon_bedrock_guardrails.md) | Input/output filtering and PII protection |
+| [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md) | RAG — connect models to your data |
+| [Agents](./04_amazon_bedrock_agents.md) | Managed agent builder with action groups |
+| [AgentCore](./10_amazon_bedrock_agentcore.md) | Production infrastructure for any agent framework |
+| [Guardrails](./02_amazon_bedrock_guardrails.md) | Input/output filtering and PII protection |
 
 ## Example
 
@@ -121,7 +121,7 @@ response = client.converse(
 
 ## Why It Matters
 
-Bedrock is the foundation layer for all AWS generative AI services. Every other Bedrock service — [Knowledge Bases](35_amazon_bedrock_knowledge_bases.md), [Agents](36_amazon_bedrock_agents.md), [AgentCore](32_amazon_bedrock_agentcore.md), [Guardrails](33_amazon_bedrock_guardrails.md) — depends on Bedrock for model access. Understanding Bedrock's model landscape and inference modes is prerequisite to using any of them effectively.
+Bedrock is the foundation layer for all AWS generative AI services. Every other Bedrock service — [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md), [Agents](./04_amazon_bedrock_agents.md), [AgentCore](./10_amazon_bedrock_agentcore.md), [Guardrails](./02_amazon_bedrock_guardrails.md) — depends on Bedrock for model access. Understanding Bedrock's model landscape and inference modes is prerequisite to using any of them effectively.
 
 ## Pricing
 

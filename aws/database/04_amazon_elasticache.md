@@ -4,8 +4,8 @@ tags:
   - database
   - computing
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -72,7 +72,7 @@ Your application checks the cache before querying the database (cache-aside patt
 
 ## Create Cache - Console Flow
 
-![Create Cache - Configuration](./images/console/elasticache1.png)
+![Create Cache - Configuration](../images/console/elasticache1.png)
 
 ### Configuration
 
@@ -94,7 +94,7 @@ Your application checks the cache before querying the database (cache-aside patt
 - **New cache** — Create a new empty cache
 - **Restore from backup** — Restore data from a .rdb file into a new cache
 
-![Create Cache - Settings](./images/console/elasticache2.png)
+![Create Cache - Settings](../images/console/elasticache2.png)
 
 ### Settings
 - **Name** — Up to 40 characters, no spaces

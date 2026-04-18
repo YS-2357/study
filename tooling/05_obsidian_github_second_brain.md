@@ -4,8 +4,8 @@ tags:
   - git
   - ai
 created_at: 2026-04-12T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_tooling_overview.md)
@@ -27,7 +27,7 @@ A notebook you carry everywhere, except every page is a plain text file, every e
 ```
 You write a note in Obsidian (plain .md file on disk)
     ↓
-Git commits and pushes to GitHub (version history, accessible anywhere)
+[Git commits and pushes](../git/02_daily_git_workflow.md) to GitHub (version history, accessible anywhere)
     ↓
 AI tool (Claude, Cursor, Copilot) reads the .md files directly
     ↓

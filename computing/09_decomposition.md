@@ -2,8 +2,8 @@
 tags:
   - computing
 created_at: 2026-04-10T00:00:00
-updated_at: 2026-04-18T11:46:13
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -30,7 +30,7 @@ Every layer of a web application has its own natural unit boundary.
 |------|---------------|
 | Component | Renders one piece of the UI |
 | Event handler | Responds to one user action |
-| API client call | Sends one HTTP request |
+| API client call | Sends one [HTTP request](../networking/05_http.md) |
 | State update | Reflects one change in the UI |
 
 ### Backend
@@ -50,7 +50,7 @@ Every layer of a web application has its own natural unit boundary.
 | Compute unit | Runs one function or service (Lambda, container) |
 | IAM policy statement | Grants one permission on one resource |
 | Security group rule | Allows one type of traffic on one port |
-| DNS record | Resolves one name to one address |
+| [DNS record](../networking/04_dns.md) | Resolves one name to one address |
 | Network path | Connects one source to one destination |
 
 ### Database

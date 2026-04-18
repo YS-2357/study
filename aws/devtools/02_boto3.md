@@ -3,8 +3,8 @@ tags:
   - aws
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_devtools_overview.md)
@@ -13,7 +13,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-boto3 is the official [AWS](./00_aws_overview.md) SDK for Python. It lets Python code call any AWS service API — creating S3 buckets, reading DynamoDB items, invoking Bedrock models — without manually signing HTTP requests.
+boto3 is the official [AWS](../00_aws_overview.md) SDK for Python. It lets Python code call any AWS service API — creating [S3 buckets](../storage/01_amazon_s3.md), reading [DynamoDB items](../database/03_amazon_dynamodb.md), invoking Bedrock models — without manually signing HTTP requests.
 
 ## Name
 
@@ -33,7 +33,7 @@ boto3 exposes two interfaces:
 1. Explicit `aws_access_key_id` / `aws_secret_access_key` arguments
 2. Environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`)
 3. `~/.aws/credentials` file
-4. IAM role attached to the compute resource (Lambda, EC2, ECS task)
+4. [IAM role](../identity/01_amazon_iam.md) attached to the compute resource (Lambda, EC2, ECS task)
 
 On AWS compute (Lambda, EC2), boto3 picks up the attached IAM role automatically — no credentials to manage in code.
 
@@ -43,10 +43,10 @@ On AWS compute (Lambda, EC2), boto3 picks up the attached IAM role automatically
 |--------|---------|
 | `"s3"` | Amazon S3 |
 | `"dynamodb"` | Amazon DynamoDB |
-| `"bedrock-runtime"` | [Amazon Bedrock](34_amazon_bedrock.md) inference |
+| `"bedrock-runtime"` | [Amazon Bedrock](../ai/01_amazon_bedrock.md) inference |
 | `"bedrock-agent-runtime"` | Bedrock Agents / Knowledge Bases / Flows |
-| `"cloudwatch"` | [Amazon CloudWatch](08_amazon_cloudwatch.md) |
-| `"ssm"` | [AWS SSM Parameter Store](14_aws_ssm_parameter_store.md) |
+| `"cloudwatch"` | [Amazon CloudWatch](../ops/01_amazon_cloudwatch.md) |
+| `"ssm"` | [AWS SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md) |
 
 ## Example
 

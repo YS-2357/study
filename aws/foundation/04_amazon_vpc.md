@@ -5,8 +5,8 @@ tags:
   - networking
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_foundation_overview.md)
@@ -38,7 +38,7 @@ You define a VPC with a CIDR block, then carve it into subnets across AZs. An In
 
 ## Console Options
 
-![Create VPC - Step 1](./images/console/vpc1.png)
+![Create VPC - Step 1](../images/console/vpc1.png)
 
 ### VPC List View
 - View all VPCs in current Region
@@ -62,7 +62,7 @@ You define a VPC with a CIDR block, then carve it into subnets across AZs. An In
    - **IPv6 CIDR owned by me** - Bring your own IPv6 (BYOIP - rare, for organizations that own IPv6 addresses)
 4. **Tenancy** - Determines whether instances run on shared or dedicated hardware:
 
-![Create VPC - Tenancy and Tags](./images/console/vpc2.png)
+![Create VPC - Tenancy and Tags](../images/console/vpc2.png)
 
    - **Default (Shared Tenancy)** - Instances run on shared physical servers with other AWS customers (much cheaper, most common)
    - **Dedicated (Dedicated Tenancy)** - Instances run on physical servers dedicated only to your account (significantly more expensive ~2x, for compliance/licensing)
@@ -187,7 +187,7 @@ AWS service for automated IP address allocation.
 - Local routes (VPC CIDR) exist in all route tables automatically
 
 ### DNS Settings
-**See [Networking Basics - DNS](../../../networking/04_dns.md) for complete DNS explanation.**
+**See [Networking Basics - DNS](../../networking/04_dns.md) for complete DNS explanation.**
 
 **DNS (Domain Name System)** translates domain names ↔ IP addresses.
 

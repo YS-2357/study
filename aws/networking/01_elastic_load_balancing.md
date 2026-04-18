@@ -4,8 +4,8 @@ tags:
   - networking
   - infrastructure
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -15,7 +15,7 @@ recent_editor: CLAUDE
 ## What It Is
 Elastic Load Balancing (ELB) automatically distributes incoming traffic across multiple targets (EC2 instances, containers, IP addresses, Lambda functions). It ensures high availability by spreading load and detecting unhealthy targets.
 
-**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for TCP/UDP/HTTP/HTTPS fundamentals.**
+**See [Networking Basics - Protocols](../../networking/01_protocols.md) for TCP/UDP/HTTP/HTTPS fundamentals.**
 
 ## How It Works
 
@@ -28,11 +28,11 @@ You create a load balancer and attach it to subnets in multiple AZs. Listeners d
 
 ## Compare and Select Load Balancer Type
 
-![Compare and select load balancer type](./images/console/elb1.png)
+![Compare and select load balancer type](../images/console/elb1.png)
 
 When you click "Create load balancer", you see a comparison page with all types side by side.
 
-![Load balancer types - ALB, NLB, GWLB](./images/console/elb2.png)
+![Load balancer types - ALB, NLB, GWLB](../images/console/elb2.png)
 
 ### 4 Types of Load Balancers
 
@@ -43,7 +43,7 @@ When you click "Create load balancer", you see a comparison page with all types 
 | Gateway Load Balancer | GWLB | Layer 3 (Network) | GENEVE | Third-party security appliances (firewalls, IDS/IPS) |
 | Classic Load Balancer | CLB | Layer 4/7 | TCP, HTTP, HTTPS | **Previous generation** - don't use for new projects |
 
-![Classic Load Balancer - previous generation](./images/console/elb3.png)
+![Classic Load Balancer - previous generation](../images/console/elb3.png)
 
 **Classic Load Balancer** is collapsed at the bottom as "previous generation". AWS recommends migrating to ALB or NLB.
 
@@ -52,7 +52,7 @@ When you click "Create load balancer", you see a comparison page with all types 
 
 ### Basic configuration
 
-![ALB - Basic configuration](./images/console/alb1.png)
+![ALB - Basic configuration](../images/console/alb1.png)
 
 **Load balancer name:**
 - Must be unique within your AWS account
@@ -71,7 +71,7 @@ When you click "Create load balancer", you see a comparison page with all types 
 
 ### Network mapping
 
-![ALB - Network mapping, Security groups, Listeners](./images/console/alb2.png)
+![ALB - Network mapping, Security groups, Listeners](../images/console/alb2.png)
 
 **VPC:**
 - Select the VPC where the load balancer will exist and scale
@@ -93,7 +93,7 @@ When you click "Create load balancer", you see a comparison page with all types 
 
 ### Listeners and routing
 
-![ALB - Listeners and routing](./images/console/alb3.png)
+![ALB - Listeners and routing](../images/console/alb3.png)
 
 A listener checks for connection requests using the port and protocol you configure.
 
@@ -106,7 +106,7 @@ A listener checks for connection requests using the port and protocol you config
 2. **Redirect to URL** - Redirect traffic to another URL
 3. **Return fixed response** - Return a custom HTTP response
 
-![ALB - Target group stickiness, Listener tags, Add listener](./images/console/alb4.png)
+![ALB - Target group stickiness, Listener tags, Add listener](../images/console/alb4.png)
 
 **Target group stickiness** (optional):
 - Binds a user's session to a specific target group
@@ -121,8 +121,8 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Optimize with service integrations - optional
 
-![ALB - Service integrations (CloudFront, WAF, Global Accelerator)](./images/console/alb5.png)
-![ALB - AWS Global Accelerator](./images/console/alb6.png)
+![ALB - Service integrations (CloudFront, WAF, Global Accelerator)](../images/console/alb5.png)
+![ALB - AWS Global Accelerator](../images/console/alb6.png)
 
 **Amazon CloudFront + AWS WAF (Web Application Firewall)** - *new*
 - Optimizes: Performance, Availability, Security
@@ -144,7 +144,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Creation workflow and status
 
-![ALB - Review and create](./images/console/alb7.png)
+![ALB - Review and create](../images/console/alb7.png)
 
 - **Server-side tasks and status** - After submitting, all tasks and statuses become available for monitoring
 - **Cancel** / **Create load balancer**
@@ -154,7 +154,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Basic configuration
 
-![NLB - Basic configuration](./images/console/nlb1.png)
+![NLB - Basic configuration](../images/console/nlb1.png)
 
 **Load balancer name:**
 - Same rules as ALB (unique, max 32 chars, can't change after creation)
@@ -170,7 +170,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Network mapping
 
-![NLB - Network mapping](./images/console/nlb2.png)
+![NLB - Network mapping](../images/console/nlb2.png)
 
 **VPC:**
 - Same as ALB - select VPC, targets must be hosted there
@@ -182,7 +182,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Security groups
 
-![NLB - Security groups, Listeners and routing](./images/console/nlb3.png)
+![NLB - Security groups, Listeners and routing](../images/console/nlb3.png)
 
 **Security groups - *recommended*:**
 - **Note:** Can only be enabled at creation by including at least one security group
@@ -199,7 +199,7 @@ A listener checks for connection requests using the port and protocol you config
 **Forward to target group:**
 - Select target group, set weight (0-999)
 
-![NLB - Target group stickiness, Listener tags, Add listener](./images/console/nlb4.png)
+![NLB - Target group stickiness, Listener tags, Add listener](../images/console/nlb4.png)
 
 **Target group stickiness** - Same as ALB
 
@@ -209,7 +209,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Load balancer tags - optional
 
-![NLB - Tags, Service integrations, Review](./images/console/nlb5.png)
+![NLB - Tags, Service integrations, Review](../images/console/nlb5.png)
 
 - Key is required, Value is optional
 - Example: Key = production-webserver, Key = webserver, Value = production
@@ -223,7 +223,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Review and create
 
-![NLB - Creation workflow](./images/console/nlb6.png)
+![NLB - Creation workflow](../images/console/nlb6.png)
 
 - Review configurations, make changes if needed
 - **Cancel** / **Create load balancer**
@@ -233,7 +233,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Basic configuration
 
-![GWLB - Basic configuration](./images/console/gwlb1.png)
+![GWLB - Basic configuration](../images/console/gwlb1.png)
 
 **Description from console:** "When you create a Gateway Load Balancer, you can deploy, scale, and manage third-party virtual appliances that support GENEVE (Generic Network Virtualization Encapsulation) (RFC 8926) such as firewalls and other security systems in the cloud. Gateway Load Balancers use Gateway Load Balancer endpoints to securely exchange traffic across VPC boundaries. Traffic to and from a GWLB endpoint is configured using route tables."
 
@@ -247,7 +247,7 @@ A listener checks for connection requests using the port and protocol you config
 
 ### Network mapping
 
-![GWLB - Network mapping, IP listener routing](./images/console/gwlb2.png)
+![GWLB - Network mapping, IP listener routing](../images/console/gwlb2.png)
 
 **VPC:**
 - Same as ALB/NLB
@@ -269,11 +269,11 @@ Unlike ALB/NLB which use protocol-based listeners, GWLB uses IP listener routing
 
 ### Load balancer tags - optional
 
-![GWLB - Tags, Review, Summary](./images/console/gwlb3.png)
+![GWLB - Tags, Review, Summary](../images/console/gwlb3.png)
 
 ### Review
 
-![GWLB - Creation workflow](./images/console/gwlb4.png)
+![GWLB - Creation workflow](../images/console/gwlb4.png)
 
 **Summary shows 4 sections:**
 - Basic configuration (Name, IP address type)
@@ -517,7 +517,7 @@ ALB and NLB are regional services, so they cannot handle global traffic distribu
 | Service | Layer | Purpose | Key Feature |
 |---------|-------|---------|-------------|
 | **Route 53** | DNS (L7) | Geographic/latency-based routing | DNS-based, subject to TTL propagation delay |
-| **[CloudFront](21_amazon_cloudfront.md)** | CDN (L7) | Static/dynamic content acceleration | Edge caching, origin protection |
+| **[CloudFront](./02_amazon_cloudfront.md)** | CDN (L7) | Static/dynamic content acceleration | Edge caching, origin protection |
 | **Global Accelerator** | L3/L4 | TCP/UDP global acceleration | 2 fixed Anycast IPs, instant failover (no DNS propagation) |
 
 **Recommended architectures:**

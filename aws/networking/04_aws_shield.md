@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -134,7 +134,7 @@ Layer 4      TCP flags, ports           SYN flood              Standard + Advanc
 Layer 3      IP addresses, packets      ICMP flood             Standard + Advanced
 ```
 
-- See [OSI model doc](../../../networking/03_osi_model.md) for layer details
+- See [OSI model doc](../../networking/03_osi_model.md) for layer details
 
 ### Shield + WAF + CloudFront (Common Architecture)
 ```

@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -76,7 +76,7 @@ Picking the wrong model for a task wastes money (too expensive) or degrades qual
 | Feasibility | Supports cross-model comparison in a single job; human evaluation requires setting up an AWS Managed workforce or private team |
 | Disruption | Evaluation jobs are offline — no impact on production workloads |
 | Pros & Cons | Saves manual testing time; automatic metrics only measure what your reference dataset covers |
-| Differences | Differs from [Guardrails](33_amazon_bedrock_guardrails.md) contextual grounding check — that is runtime filtering; this is offline benchmarking |
+| Differences | Differs from [Guardrails](./02_amazon_bedrock_guardrails.md) contextual grounding check — that is runtime filtering; this is offline benchmarking |
 
 ---
 ← Previous: [Amazon Bedrock Prompt Management](./06_amazon_bedrock_prompt_management.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Data Automation](./08_amazon_bedrock_data_automation.md) →

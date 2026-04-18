@@ -3,8 +3,8 @@ tags:
   - aws
   - networking
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -176,7 +176,7 @@ Yes. CloudFront handles both static and dynamic content.
 
 - **Cacheable dynamic content**: Configure cache keys using query strings, cookies, and headers to cache dynamic responses
 - **Non-cacheable dynamic content (API responses, etc.)**: Even without caching, CloudFront provides **network acceleration** through the AWS backbone network, reducing latency to the origin
-- **TTL 0**: No caching, but connection optimization and security benefits ([Shield](17_aws_shield.md)/[WAF](18_aws_waf.md)) are retained
+- **TTL 0**: No caching, but connection optimization and security benefits ([Shield](./04_aws_shield.md)/[WAF](./05_aws_waf.md)) are retained
 
 ### Q: How does CloudFront reflect origin content changes?
 

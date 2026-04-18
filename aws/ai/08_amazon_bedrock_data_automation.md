@@ -4,8 +4,8 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -52,7 +52,7 @@ Async processing job
 Structured JSON output in S3
 ```
 
-BDA processes asynchronously: `InvokeDataAutomationAsync` reads input from an Amazon Simple Storage Service ([Amazon S3](../aws/19_amazon_s3.md)) URI and stores output in the S3 bucket or prefix that you specify in `outputConfiguration` ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_InvokeDataAutomationAsync.html)). You then call `GetDataAutomationStatus`; when the status is `Success`, the response points to the S3 location where the output can be retrieved ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_GetDataAutomationStatus.html)).
+BDA processes asynchronously: `InvokeDataAutomationAsync` reads input from an Amazon Simple Storage Service ([Amazon S3](../storage/01_amazon_s3.md)) URI and stores output in the S3 bucket or prefix that you specify in `outputConfiguration` ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_InvokeDataAutomationAsync.html)). You then call `GetDataAutomationStatus`; when the status is `Success`, the response points to the S3 location where the output can be retrieved ([AWS API Reference](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation-runtime_GetDataAutomationStatus.html)).
 
 ### How S3 connects
 
@@ -64,7 +64,7 @@ S3 is the handoff layer between your files and BDA:
 | **Output bucket or prefix** | JSON output, extracted fields, metadata, and modality-specific results | Downstream jobs can read the structured output from S3 without calling BDA again                                                                                                                                                                     |
 | **IAM permissions**         | Read access to input objects and write access to the output prefix     | Amazon Bedrock S3 access commonly requires `s3:GetObject`, `s3:ListBucket`, and `s3:PutObject`, plus AWS KMS permissions if the bucket uses a KMS key ([AWS User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/s3-bucket-access.html)) |
 
-The common pattern is: upload raw files to an input prefix, invoke BDA with that input S3 URI and an output S3 URI, wait for the invocation to finish, then let [AWS Lambda](09_aws_lambda.md), Glue, Athena, or an application read the JSON results from S3.
+The common pattern is: upload raw files to an input prefix, invoke BDA with that input S3 URI and an output S3 URI, wait for the invocation to finish, then let [AWS Lambda](../compute/03_aws_lambda.md), Glue, Athena, or an application read the JSON results from S3.
 
 ## Example
 
@@ -102,7 +102,7 @@ Processing documents at scale with custom extraction code is fragile — every n
 | Feasibility | Handles multi-page PDFs, tables, handwriting, and mixed layouts; video/audio add transcription and scene extraction |
 | Disruption | Async-only — not suitable for real-time extraction needs |
 | Pros & Cons | No ML training required; accuracy depends on blueprint quality and document consistency |
-| Differences | Unlike [Knowledge Bases](35_amazon_bedrock_knowledge_bases.md) which chunks and indexes for retrieval, BDA extracts specific structured fields from each document |
+| Differences | Unlike [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md) which chunks and indexes for retrieval, BDA extracts specific structured fields from each document |
 
 ---
 ← Previous: [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) →

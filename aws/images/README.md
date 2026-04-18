@@ -13,5 +13,5 @@ Screenshot assets for AWS service notes.
 Reference images from AWS notes using relative paths:
 
 ```md
-![Description](./images/console/filename.png)
+![Description](./console/filename.png)
 ```

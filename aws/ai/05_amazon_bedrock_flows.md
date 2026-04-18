@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -14,9 +14,9 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-Amazon Bedrock Flows is a visual workflow builder that lets you chain prompts, [knowledge bases](35_amazon_bedrock_knowledge_bases.md), [agents](36_amazon_bedrock_agents.md), and Lambda functions into a multi-step pipeline — without writing orchestration code.
+Amazon Bedrock Flows is a visual workflow builder that lets you chain prompts, [knowledge bases](./03_amazon_bedrock_knowledge_bases.md), [agents](./04_amazon_bedrock_agents.md), and Lambda functions into a multi-step pipeline — without writing orchestration code.
 
-Where [Bedrock Agents](36_amazon_bedrock_agents.md) lets an LLM decide its own next step at runtime, Flows defines the sequence upfront as a fixed graph. The path is deterministic; the model fills in the outputs at each node.
+Where [Bedrock Agents](./04_amazon_bedrock_agents.md) lets an LLM decide its own next step at runtime, Flows defines the sequence upfront as a fixed graph. The path is deterministic; the model fills in the outputs at each node.
 
 ## Analogy
 
@@ -31,8 +31,8 @@ A flow is a directed acyclic graph (DAG) of nodes:
 | **Input** | Entry point — receives the initial payload |
 | **Output** | Exit point — returns the final result |
 | **Prompt** | Calls a foundation model with a prompt template |
-| **Knowledge base** | Queries a [Bedrock Knowledge Base](35_amazon_bedrock_knowledge_bases.md) |
-| **Agent** | Invokes a [Bedrock Agent](36_amazon_bedrock_agents.md) |
+| **Knowledge base** | Queries a [Bedrock Knowledge Base](./03_amazon_bedrock_knowledge_bases.md) |
+| **Agent** | Invokes a [Bedrock Agent](./04_amazon_bedrock_agents.md) |
 | **Lambda** | Calls an AWS Lambda function for custom logic |
 | **Condition** | Routes to different branches based on a rule |
 | **Iterator** | Loops over a list, running downstream nodes once per item |
@@ -82,14 +82,14 @@ for event in response["responseStream"]:
 
 ## Why It Matters
 
-Flows is the right tool when the steps are known in advance and must always execute in the same order. For tasks where the sequence should adapt to context at runtime, [Bedrock Agents](36_amazon_bedrock_agents.md) is more appropriate. Use Flows for pipelines; use Agents for open-ended tasks.
+Flows is the right tool when the steps are known in advance and must always execute in the same order. For tasks where the sequence should adapt to context at runtime, [Bedrock Agents](./04_amazon_bedrock_agents.md) is more appropriate. Use Flows for pipelines; use Agents for open-ended tasks.
 
 | Perspective | Detail |
 |---|---|
 | Feasibility | Supports branching, looping, Lambda, agents, and knowledge bases in one graph |
 | Disruption | Version + alias pattern enables zero-downtime updates |
 | Pros & Cons | Predictable and auditable; less flexible than code-based orchestration |
-| Differences | Flows = fixed graph; [Agents](36_amazon_bedrock_agents.md) = LLM decides the path at runtime |
+| Differences | Flows = fixed graph; [Agents](./04_amazon_bedrock_agents.md) = LLM decides the path at runtime |
 
 ---
 ← Previous: [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Prompt Management](./06_amazon_bedrock_prompt_management.md) →

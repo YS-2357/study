@@ -4,8 +4,8 @@ tags:
   - serverless
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
-recent_editor: CLAUDE
+updated_at: 2026-04-18T18:37:25
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -39,7 +39,7 @@ Lambda can be invoked in three ways:
 
 ## Console Options - Create Function
 
-![Lambda Create Function - Step 1](./images/console/lambda1.png)
+![Lambda Create Function - Step 1](../images/console/lambda1.png)
 
 ### Creation Options
 
@@ -90,7 +90,7 @@ Lambda can be invoked in three ways:
 - Radio buttons: arm64 or x86_64 (selected)
 - Choose the instruction set architecture you want for your function code
 
-**See [Computing Basics - Architecture](../../../computing/01_architecture.md) for x86 vs ARM explanation.**
+**See [Computing Basics - Architecture](../../computing/01_architecture.md) for x86 vs ARM explanation.**
 
 **Architecture choice:**
 - **x86_64** - Standard, widest compatibility
@@ -100,7 +100,7 @@ Lambda can be invoked in three ways:
 
 ### Permissions
 
-![Lambda Execution Role](./images/console/lambda2.png)
+![Lambda Execution Role](../images/console/lambda2.png)
 
 **Execution role:**
 "By default, Lambda will create an execution role with permissions to upload logs to Amazon CloudWatch Logs. You can customize this default role later when adding triggers."
@@ -169,7 +169,7 @@ Lambda 함수 실행
 
 ## Function Detail Page (After Creation)
 
-![Lambda Function Detail Page](./images/console/lambda-function.png)
+![Lambda Function Detail Page](../images/console/lambda-function.png)
 
 After creating a function, you see the function detail page. This is where you manage triggers, destinations, code, and configuration.
 
@@ -588,9 +588,9 @@ ENVIRONMENT=production
 - **Cost-effective** - For sporadic workloads (<30% utilization)
 
 **Cross-reference:**
-- See [IAM Roles](15_amazon_iam.md) for execution role configuration
-- See [API Gateway](../service/) for building APIs with Lambda (when created)
-- See [EventBridge](../service/) for scheduled Lambda functions (when created)
+- See [IAM Roles](../identity/01_amazon_iam.md) for execution role configuration
+- See [API Gateway](../networking/03_amazon_api_gateway.md) for building APIs with Lambda (when created)
+- See EventBridge for scheduled Lambda functions (when created)
 
 ## Example
 
@@ -653,7 +653,7 @@ Alternative serverless options for heavier workloads:
 | Service | Characteristics | Best For |
 |---------|----------------|----------|
 | Lambda | Event-driven, max 15 min | APIs, event processing, lightweight batch |
-| [Fargate](26_aws_fargate.md) (ECS/EKS) | Container-based serverless | Long-running, microservices, complex apps |
+| [Fargate](./04_aws_fargate.md) (ECS/EKS) | Container-based serverless | Long-running, microservices, complex apps |
 | App Runner | Auto-deploy from container/source | Web apps, API services |
 | Step Functions | Workflow orchestration | Complex business logic, long workflows |
 
