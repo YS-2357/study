@@ -123,7 +123,7 @@ Claude auto-push generates one commit per Write/Edit, so single-file is the norm
 
 **Why per-file staging:** when several agents edit simultaneously, a blanket `git add -A` would fold in another agent's in-progress files, causing cross-agent commits and race conditions on push. Per-file staging keeps each agent's commits scoped to its own work.
 
-## 6. Example Workflow
+## 7. Example Workflow
 
 ```bash
 # Load environment
