@@ -42,6 +42,17 @@ Links between domains are encouraged when they help the reader:
 | `computing/` | `aws/database/` | Cache note linking to ElastiCache |
 | `aws/compute/` | `aws/ai/agentcore/` | Lambda note linking to AgentCore |
 
+### 3.0. Cross-Cloud Equivalents
+
+A service note in `aws/`, `gcp/`, or `azure/` that has a direct counterpart in another cloud should link the equivalent on first mention. Example, in `aws/compute/01_amazon_ec2.md`:
+
+> EC2 is AWS's virtual machine service — equivalent to [Compute Engine](../../gcp/compute/01_compute_engine.md) on GCP and [Virtual Machines](../../azure/compute/01_virtual_machines.md) on Azure.
+
+Rules:
+- Link **only when the equivalent note actually exists.** Don't create stub notes just to satisfy links.
+- Apply to **new notes only.** Don't retrofit existing notes in bulk — add the link the next time you're editing that note for another reason.
+- Skip when there's no clean 1:1 mapping (e.g., managed services that differ substantially in scope).
+
 ### 3.1. Relative Path Rules
 
 | Target is in… | Path prefix |
