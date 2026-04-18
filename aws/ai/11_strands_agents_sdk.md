@@ -285,4 +285,4 @@ Strands isn't the only code-first agent framework. Quick map of the landscape (p
 - Smaller models may struggle with multi-step reasoning
 
 ---
-← Previous: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) | [Overview](./00_ai_overview.md)
+← Previous: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) | [Overview](./00_ai_overview.md) | Next: [Bedrock Integration Patterns](./12_amazon_bedrock_integration_patterns.md) →
