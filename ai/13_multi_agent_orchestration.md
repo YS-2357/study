@@ -6,7 +6,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Multi-Agent Orchestration
 
@@ -148,4 +148,4 @@ Review gates catch **structural bugs** — ownership violations, rule violations
 > **Tip:** If something works at runtime but violates a rule, only the review gate catches it. Design your review criteria around rules, not just behavior.
 
 ---
-← Previous: [Prompt Caching](12_prompt_caching.md) | [Overview](./00_overview.md) | Next: [Subagent Design](14_subagent_design.md) →
+← Previous: [Prompt Caching](12_prompt_caching.md) | [Overview](./00_ai_overview.md) | Next: [Subagent Design](14_subagent_design.md) →
