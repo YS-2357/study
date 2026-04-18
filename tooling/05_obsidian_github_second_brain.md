@@ -55,7 +55,7 @@ Because files are plain Markdown, no export or conversion is needed — any tool
 | `02-Areas/` | Ongoing responsibilities |
 | `03-Resources/` | Reference material — study notes, domain knowledge |
 | `04-Archive/` | Completed content |
-| `MOC/` | Maps of Content — index notes linking related notes (like `00_overview.md`) |
+| `MOC/` | Maps of Content — index notes linking related notes (like `home.md` or `00_{domain}_overview.md`) |
 | `Templates/` | Note templates |
 
 **PARA** (Projects, Areas, Resources, Archive) is action-oriented — organizes by what you are doing. **Zettelkasten** is idea-oriented — organizes by atomic concepts linked to each other. Most practical vaults combine both: PARA folders for project context, Zettelkasten-style linking for knowledge.
