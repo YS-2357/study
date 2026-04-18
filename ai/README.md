@@ -1,16 +1,17 @@
 ---
 tags:
-  -
-created_at: 260417-141847
-updated_at: 260417-141847
+  - ai
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
 
 # ai
 
-AI agent and LLM concepts. See [00_overview.md](00_overview.md) for study order.
+AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for study order.
 
 - `README.md`: This file.
-- `00_overview.md`: Study hub and navigation.
+- `00_ai_overview.md`: Study hub and navigation.
 - `01_agent.md`: What an agent is.
 - `02_harness.md`: The runtime environment around the agent.
 - `03_agents_md.md`: Repo-level instruction files.
