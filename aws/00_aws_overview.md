@@ -21,7 +21,7 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 | [Networking](networking/00_networking_overview.md)    | ELB, CloudFront, API Gateway, Shield, WAF                |
 | [Identity & Access](identity/00_identity_overview.md) | IAM, Security Groups                                     |
 | [Analytics](analytics/00_analytics_overview.md)       | Kinesis, EMR, Data Pipeline, SageMaker                   |
-| [AI](ai/00_ai_overview.md)                            | Bedrock family, AgentCore (nested)                       |
+| [AI](ai/00_ai_overview.md)                            | Bedrock family, AgentCore (nested), Strands Agents SDK   |
 | [Operations](ops/00_ops_overview.md)                  | CloudWatch, SSM, Billing, Support                        |
 | [Developer Tools](devtools/00_devtools_overview.md)   | CDK, boto3, Marketplace                                  |
 
