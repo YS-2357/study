@@ -211,4 +211,4 @@ When agents are divided well:
 > **Tip:** If you can describe what an agent does without using "and", the scope is right. "Implements the backend" is one role. "Implements the backend and reviews it" is two — split them.
 
 ---
-← Previous: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) | [Overview](./00_ai_overview.md) | Next: [Strands Agents SDK](15_strands_agents_sdk.md) →
+← Previous: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) | [Overview](./00_ai_overview.md)
