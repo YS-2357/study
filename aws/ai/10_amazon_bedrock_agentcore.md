@@ -181,4 +181,4 @@ They are evolutionary layers, not competitors:
 - [AWS Prescriptive Guidance: AgentCore](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/amazon-bedrock-agentcore.html)
 
 ---
-← Previous: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) | [Overview](./00_ai_overview.md) | Next: [Overview](./00_ai_overview.md) →
+← Previous: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) | [Overview](./00_ai_overview.md)

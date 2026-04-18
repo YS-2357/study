@@ -413,4 +413,4 @@ distribution = cf.Distribution(self, "FrontendDist",
 - [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 
 ---
-← Previous: [Amazon ECR (Elastic Container Registry)](./04_amazon_ecr.md) | [Overview](./00_storage_overview.md) | Next: [Amazon EBS](./02_amazon_ebs.md) →
+[Overview](./00_storage_overview.md) | Next: [Amazon EBS](./02_amazon_ebs.md) →

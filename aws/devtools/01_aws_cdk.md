@@ -306,7 +306,7 @@ api_service = patterns.ApplicationLoadBalancedFargateService(self, "ApiService",
 | `image` | `from_asset("./backend")` | Builds Docker image from your backend folder. Also supports ECR images. |
 | `container_port` | `8000` | FastAPI default port. Must match your Uvicorn config. |
 | `environment` | `{"KB_ID": ...}` | Env vars passed to container. Use for config, not secrets. |
-| `cpu` | `256` | 0.25 vCPU — smallest Fargate size. See [Fargate CPU/memory combos](../aws/26_aws_fargate.md). |
+| `cpu` | `256` | 0.25 vCPU — smallest Fargate size. See [Fargate CPU/memory combos](../compute/04_aws_fargate.md). |
 | `memory_limit_mib` | `512` | 512 MB — minimum for 256 CPU. Cheapest option. |
 | `desired_count` | `1` | One task for POC. Increase for HA. |
 

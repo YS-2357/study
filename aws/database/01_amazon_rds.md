@@ -414,4 +414,4 @@ Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits i
 - [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
 
 ---
-← Previous: [Amazon OpenSearch](./06_amazon_opensearch.md) | [Overview](./00_database_overview.md) | Next: [Amazon Aurora](./02_amazon_aurora.md) →
+[Overview](./00_database_overview.md) | Next: [Amazon Aurora](./02_amazon_aurora.md) →

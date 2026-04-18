@@ -184,4 +184,4 @@ RAG quality is determined at two points: ingestion (what goes in) and retrieval 
 > **Tip:** Index quality = answer quality. If RAG answers are wrong or vague, check the ingest pipeline — chunking strategy and field mappings — before debugging the model call.
 
 ---
-← Previous: [Amazon Redshift](./05_amazon_redshift.md) | [Overview](./00_database_overview.md) | Next: [Amazon RDS (Relational Database Service)](./01_amazon_rds.md) →
+← Previous: [Amazon Redshift](./05_amazon_redshift.md) | [Overview](./00_database_overview.md)

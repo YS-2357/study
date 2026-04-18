@@ -113,4 +113,4 @@ ECR is why Lambda container images stay within your account and don't rely on ex
 > **Tip:** ECR images are pulled on Lambda cold start. Large images (1–2 GB) increase cold start time. Keep your Docker layers ordered from least-changed (base image, system deps) to most-changed (your code) to maximize layer caching.
 
 ---
-← Previous: [Amazon EFS](./03_amazon_efs.md) | [Overview](./00_storage_overview.md) | Next: [Amazon S3](./01_amazon_s3.md) →
+← Previous: [Amazon EFS](./03_amazon_efs.md) | [Overview](./00_storage_overview.md)

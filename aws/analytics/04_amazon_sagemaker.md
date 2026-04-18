@@ -116,4 +116,4 @@ let teams focus on model quality instead of cluster management.
 - [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
 
 ---
-← Previous: [AWS Data Pipeline](./03_aws_data_pipeline.md) | [Overview](./00_analytics_overview.md) |
+← Previous: [AWS Data Pipeline](./03_aws_data_pipeline.md) | [Overview](./00_analytics_overview.md)

@@ -34,4 +34,4 @@ A company with a proprietary AI document-processing solution packages it as a Sa
 Marketplace provides a global distribution channel with built-in AWS billing integration, reducing the friction of selling and buying cloud software. For buyers, it simplifies procurement and consolidates costs into a single AWS invoice.
 
 ---
-← Previous: [boto3](./02_boto3.md) | [Overview](./00_devtools_overview.md) →
+← Previous: [boto3](./02_boto3.md) | [Overview](./00_devtools_overview.md)

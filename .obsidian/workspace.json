@@ -11,10 +11,14 @@
             "id": "a88e41454934b7ef",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "aws/identity/00_identity_overview.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "00_identity_overview"
             }
           }
         ]
@@ -179,8 +183,12 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "8c16b66ece157d75",
+  "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/00_aws_overview.md",
+    "aws/foundation/00_foundation_overview.md",
+    "aws/31_strands_agents_sdk.md",
+    "aws/33_amazon_bedrock_guardrails.md",
     "aws/devtools/00_devtools_overview.md",
     "aws/ops/00_ops_overview.md",
     "aws/ai/00_ai_overview.md",
@@ -190,7 +198,6 @@
     "aws/database/00_database_overview.md",
     "aws/storage/00_storage_overview.md",
     "aws/compute/00_compute_overview.md",
-    "aws/foundation/00_foundation_overview.md",
     "aws/devtools/03_aws_marketplace.md",
     "aws/devtools/02_boto3.md",
     "aws/devtools/01_aws_cdk.md",
@@ -204,9 +211,6 @@
     "aws/ai/agentcore/00_agentcore_overview.md",
     "aws/ai/agentcore/08_evaluations.md",
     "aws/ai/agentcore/07_observability.md",
-    "aws/ai/agentcore/06_browser.md",
-    "aws/ai/agentcore/05_code_interpreter.md",
-    "aws/ai/agentcore/02_memory.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",

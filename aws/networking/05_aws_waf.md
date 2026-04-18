@@ -239,4 +239,4 @@ See also: [AWS Shield](17_aws_shield.md) for more on DDoS protection tiers.
 - [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
 
 ---
-← Previous: [AWS Shield](./04_aws_shield.md) | [Overview](./00_networking_overview.md) →
+← Previous: [AWS Shield](./04_aws_shield.md) | [Overview](./00_networking_overview.md)
