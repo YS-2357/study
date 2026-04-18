@@ -15,3 +15,4 @@ Rules for AI agents working in this repository.
 | `03_cross_linking.md` | Cross-linking rules |
 | `04_security.md` | Security rules |
 | `05_git_guide.md` | Git workflow |
+| `06_content_diagrams.md` | ASCII diagrams of repo architecture, hierarchy, flows |
