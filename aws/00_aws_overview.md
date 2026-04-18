@@ -108,4 +108,4 @@ AWS service notes organized by category. Foundational concepts (01-30) and advan
 - Computing concepts - [Computing](../computing/00_computing_overview.md)
 
 ---
-↑ [Root](../00_overview.md)
+↑ [Home](../home.md)
