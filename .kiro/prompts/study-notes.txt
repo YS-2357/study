@@ -15,14 +15,14 @@ Every note file uses this heading order:
 
 Every note has a footer:
 ---
-← Previous: [Title](link) | [Overview](00_overview.md) | Next: [Title](link) →
+← Previous: [Title](link) | [Overview](./00_{domain}_overview.md) | Next: [Title](link) →
 
-Every domain has a 00_overview.md that serves as the study hub with links to all notes in study order.
+Every domain has a `00_{domain}_overview.md` that serves as the study hub with links to all notes in study order (e.g., `ai/00_ai_overview.md`, `aws/00_aws_overview.md`). The root-level `home.md` links to each domain's overview.
 
 ## Rules
 
 - Keep README.md files as folder indexes only. No study content, study order, or concept explanations in a README.
-- Keep each domain's 00_overview.md as the study hub for that domain.
+- Keep each domain's `00_{domain}_overview.md` as the study hub for that domain.
 - Explain a concept once in the note where it belongs. Other notes link to it instead of re-explaining.
 - Link inline where a concept is mentioned, not in a separate cross-references section.
 - Keep notes concise. Prefer small, realistic examples over abstract placeholders.
@@ -34,7 +34,7 @@ Every domain has a 00_overview.md that serves as the study hub with links to all
 
 ## Before Finishing
 
-- If you add or rename a note, update the relevant 00_overview.md.
+- If you add or rename a note, update the relevant `00_{domain}_overview.md`.
 - If a folder's contents change materially, update that folder's README.md.
 - If you edit a note, preserve the required structure.
 - If you edit a note, preserve or repair the navigation footer.
