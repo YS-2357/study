@@ -100,7 +100,7 @@ AWS service notes organized by category. Foundational concepts (01-30) and advan
 
 ## Subtrees
 
-- [AgentCore](agentcore/00_overview.md) - Deep-dive into Bedrock AgentCore components.
+- [AgentCore](agentcore/00_agentcore_overview.md) - Deep-dive into Bedrock AgentCore components.
 
 ## Cross-references
 
