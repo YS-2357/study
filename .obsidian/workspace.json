@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/ai/11_strands_agents_sdk.md",
+                "file": "aws/ai/10_amazon_bedrock_agentcore.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11_strands_agents_sdk"
+              "title": "10_amazon_bedrock_agentcore"
             }
           }
         ]
@@ -185,9 +185,9 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/ai/11_strands_agents_sdk.md",
     "ai/00_ai_overview.md",
     "aws/00_aws_overview.md",
-    "aws/ai/11_strands_agents_sdk.md",
     "ai/15_strands_agents_sdk.md",
     "ai/04_tools.md",
     "home.md",
