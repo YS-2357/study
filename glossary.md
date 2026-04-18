@@ -19,7 +19,6 @@ updated_at: 2026-04-18T13:00:00
 recent_editor: CLAUDE
 ---
 ↑ [Home](home.md)
----
 # Glossary
 
 Abbreviations and domain terms used across this repo, sorted alphabetically.
