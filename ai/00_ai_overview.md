@@ -56,5 +56,5 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 | Strands | Framework where LLM picks tools autonomously |
 
 ---
-↑ [Root](../00_overview.md)
+↑ [Home](../home.md)
 
