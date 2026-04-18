@@ -180,6 +180,32 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 - Custom evaluators supported
 - User simulation for automated testing
 
+## Similar Libraries
+
+Strands isn't the only code-first agent framework. Quick map of the landscape (placeholder — each library deserves its own note later):
+
+| Library | Vendor | Positioning | How it differs from Strands |
+|---------|--------|-------------|-----------------------------|
+| **LangChain** | community | Broadest LLM toolkit (chains, agents, RAG, integrations) | Much larger surface; Strands is smaller and focused on agent loop |
+| **LangGraph** | LangChain Inc. | Graph-based orchestration on top of LangChain | You draw the graph explicitly; Strands lets the LLM decide the path |
+| **CrewAI** | community | Role-based multi-agent teams (researcher → writer → reviewer) | Higher-level abstraction around roles and tasks; Strands is primitive |
+| **AutoGen** | Microsoft | Conversational multi-agent orchestration | Agents talk to each other in rounds; Strands loops on a single agent's tool calls |
+| **OpenAI Agents SDK** | OpenAI | Handoffs + tools, successor to Swarm | Closest peer in spirit — declare model + tools, run loop; OpenAI-first |
+| **Google ADK** | Google | Agent Development Kit | Google's direct equivalent, Gemini-first; similar model-driven design |
+| **Pydantic AI** | Pydantic | Type-safe agents built on Pydantic models | Emphasizes typed I/O and validation; Strands is more loosely typed |
+| **Smolagents** | Hugging Face | Minimal code-executing agent framework | Tiny surface, focus on agents that write and run Python; niche |
+| **DSPy** | Stanford | Prompts as programs you optimize | Radically different paradigm: compile prompts, don't hand-write them |
+| **LlamaIndex** | community | RAG-first, agents added later | Strongest for data ingestion/indexing; Strands is agent-first |
+| **Semantic Kernel** | Microsoft | SK for .NET and Python | Enterprise integration focus; Strands is agent-loop focused |
+| **Agno** (ex-Phidata) | community | Batteries-included agents + memory + RAG | Opinionated stack; Strands is minimal |
+
+**How to pick:**
+- Want a managed AWS deployment target + multi-framework support? → **Strands** (deploys cleanly to AgentCore)
+- Want explicit control over state-machine transitions? → **LangGraph**
+- Want role-based team abstraction? → **CrewAI**
+- Want rigorous type safety? → **Pydantic AI**
+- Want to optimize prompts mechanically? → **DSPy**
+
 ## Precautions
 
 ### MAIN PRECAUTION: The LLM Decides — You Must Constrain It
