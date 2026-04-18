@@ -6,7 +6,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_ai_overview.md)
 
 # Tools
 
@@ -39,4 +39,4 @@ Most day-to-day work relies on shell tools, file search, Git-aware commands, and
 The agent's quality depends not only on reasoning but also on what tools are available and how well it uses them.
 
 ---
-← Previous: [AGENTS.md](03_agents_md.md) | [Overview](./00_overview.md) | Next: [Skills](05_skills.md) →
+← Previous: [AGENTS.md](03_agents_md.md) | [Overview](./00_ai_overview.md) | Next: [Skills](05_skills.md) →
