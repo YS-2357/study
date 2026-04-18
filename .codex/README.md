@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-18T11:51:15
+updated_at: 2026-04-18T11:51:15
+recent_editor: CODEX
+---
+
 # .codex
 
 Codex-specific repo automation and local helper files.
@@ -5,6 +13,17 @@ Codex-specific repo automation and local helper files.
 - `README.md`: This file.
 - `AGENTS.md`: Codex-local scope rules.
 - `hooks/`: Codex-owned hook implementations invoked by Git hook entrypoints.
+
+## Workflow
+
+Codex follows the root repository rules through explicit actions, not automatic Claude-style write hooks:
+
+- Inspect the relevant rules before Markdown note work.
+- Make surgical edits and update Markdown frontmatter with `recent_editor: CODEX`.
+- Run verification before Git writes.
+- Stage, commit, and push with simple single-purpose Git commands.
+
+`.codex/hooks/pre-push` is the Codex enforcement point for push-time validation.
 
 ## Permissions
 

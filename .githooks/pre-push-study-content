@@ -5,7 +5,7 @@ zero_sha="0000000000000000000000000000000000000000"
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
-refs_input="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
+refs_input="${STUDY_GIT_PUSH_REFS_FILE:-}"
 declare -A study_paths=()
 
 is_study_content() {
@@ -28,6 +28,7 @@ is_study_content() {
   [[ "$path" == *.md ]]
 }
 
+process_refs() {
 while read -r local_ref local_sha remote_ref remote_sha; do
   [[ -z "${local_sha:-}" ]] && continue
 
@@ -60,7 +61,14 @@ while read -r local_ref local_sha remote_ref remote_sha; do
         ;;
     esac
   done <<< "$diff_output"
-done < "$refs_input"
+done
+}
+
+if [[ -n "$refs_input" ]]; then
+  process_refs < "$refs_input"
+else
+  process_refs
+fi
 
 if (( ${#study_paths[@]} == 0 )); then
   exit 0

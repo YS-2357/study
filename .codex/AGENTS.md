@@ -1,9 +1,40 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-18T11:51:15
+updated_at: 2026-04-18T11:51:15
+recent_editor: CODEX
+---
+
 # Codex Scope
 
 These instructions apply to the `.codex/` subtree.
 
 - Codex keeps its repo-local automation in `.codex/`.
 - Shared Git hook entrypoints still live under `.githooks/`.
+- Codex does not use Claude-style repo-local auto-push hooks unless the Codex harness explicitly supports them.
+- Keep `.claude/` out of scope unless the user explicitly asks for Claude-specific changes.
+
+## Repository Rules
+
+Before creating or editing Markdown study content, Codex must read the applicable rules:
+
+- Root `AGENTS.md`
+- `rules/AGENTS.md`
+- Relevant rule files under `rules/`
+- Any subtree override, such as `aws/AGENTS.md`
+
+For Markdown note edits, use the `karpathy-guidelines` skill when available. Keep the scope concrete before editing: name the files, preserve existing style, and avoid nearby cleanup that the user did not request.
+
+## Markdown Edits
+
+On every Markdown edit Codex makes:
+
+- Set `updated_at` to the current local timestamp.
+- Set `recent_editor: CODEX`.
+- Preserve valid frontmatter, heading order, and navigation footers.
+- Update related README, overview, and navigation files when adding, moving, renaming, or deleting notes.
+- Do not touch `.claude/` files as part of routine Codex compliance work.
 
 ## Permission Requests
 

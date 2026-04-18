@@ -4,7 +4,7 @@ set -euo pipefail
 zero_sha="0000000000000000000000000000000000000000"
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-refs_input="${STUDY_GIT_PUSH_REFS_FILE:-/dev/stdin}"
+refs_input="${STUDY_GIT_PUSH_REFS_FILE:-}"
 
 declare -A changed_paths=()
 declare -A changed_statuses=()
@@ -19,6 +19,7 @@ record_change() {
   changed_statuses["$path"]="$status"
 }
 
+process_refs() {
 while read -r local_ref local_sha remote_ref remote_sha; do
   [[ -z "${local_sha:-}" ]] && continue
 
@@ -56,7 +57,14 @@ while read -r local_ref local_sha remote_ref remote_sha; do
         ;;
     esac
   done <<< "$diff_output"
-done < "$refs_input"
+done
+}
+
+if [[ -n "$refs_input" ]]; then
+  process_refs < "$refs_input"
+else
+  process_refs
+fi
 
 if [[ "${STUDY_ALLOW_MULTI_COMMIT_PUSH:-}" != "1" ]]; then
   for commit_info in "${outgoing_commit_counts[@]}"; do
@@ -80,6 +88,51 @@ is_special_markdown() {
   esac
 
   [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == "glossary.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
+}
+
+check_frontmatter() {
+  local file="$1"
+  local first_line second_delim tags_line created_line updated_line editor_line editor_value
+
+  [[ -f "$file" ]] || return 0
+
+  first_line="$(sed -n '1p' "$file")"
+  if [[ "$first_line" != "---" ]]; then
+    errors+=("$file: missing YAML frontmatter.")
+    return
+  fi
+
+  second_delim="$(sed -n '2,80{/^---$/=}' "$file" | head -n1 || true)"
+  if [[ -z "$second_delim" ]]; then
+    errors+=("$file: frontmatter is not closed.")
+    return
+  fi
+
+  tags_line="$(sed -n "2,${second_delim}p" "$file" | grep -n '^tags:$' | head -n1 || true)"
+  created_line="$(sed -n "2,${second_delim}p" "$file" | grep -nE '^created_at: [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$' | head -n1 || true)"
+  updated_line="$(sed -n "2,${second_delim}p" "$file" | grep -nE '^updated_at: [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$' | head -n1 || true)"
+  editor_line="$(sed -n "2,${second_delim}p" "$file" | grep -nE '^recent_editor: (CLAUDE|CODEX|KIRO|HUMAN)$' | head -n1 || true)"
+
+  if [[ -z "$tags_line" ]]; then
+    errors+=("$file: frontmatter missing tags field.")
+  fi
+
+  if [[ -z "$created_line" ]]; then
+    errors+=("$file: frontmatter missing created_at in YYYY-MM-DDTHH:MM:SS format.")
+  fi
+
+  if [[ -z "$updated_line" ]]; then
+    errors+=("$file: frontmatter missing updated_at in YYYY-MM-DDTHH:MM:SS format.")
+  fi
+
+  if [[ -z "$editor_line" ]]; then
+    errors+=("$file: frontmatter missing recent_editor or has invalid editor value.")
+  fi
+
+  editor_value="$(sed -n "2,${second_delim}p" "$file" | sed -nE 's/^recent_editor: (.*)$/\1/p' | head -n1 || true)"
+  if [[ -n "$editor_value" && ! "$editor_value" =~ ^(CLAUDE|CODEX|KIRO|HUMAN)$ ]]; then
+    errors+=("$file: recent_editor must be CLAUDE, CODEX, KIRO, or HUMAN.")
+  fi
 }
 
 check_note_structure() {
@@ -181,6 +234,8 @@ for path in "${!changed_paths[@]}"; do
   fi
 
   if [[ "$path" == *.md && -f "$path" ]]; then
+    check_frontmatter "$path"
+
     if is_special_markdown "$path"; then
       if [[ "$(basename "$path")" == "README.md" ]]; then
         check_readme_rules "$path"
