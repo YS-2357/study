@@ -27,5 +27,11 @@
   "enabledMcpjsonServers": [
     "sequential-thinking"
   ],
-  "enableAllProjectMcpServers": true
+  "enableAllProjectMcpServers": true,
+  "statusLine": {
+    "type": "command",
+    "command": "python C:/Users/user/.claude/statusline.py",
+    "padding": 2,
+    "refreshInterval": 10
+  }
 }
