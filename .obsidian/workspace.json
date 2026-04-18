@@ -233,6 +233,7 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/ai/12_amazon_bedrock_integration_patterns.md.ts-tmp",
     "aws/ai/12_amazon_bedrock_integration_patterns.md",
     "home.md",
     "glossary.md",
@@ -260,7 +261,6 @@
     "aws/foundation/00_foundation_overview.md",
     "aws/31_strands_agents_sdk.md",
     "aws/33_amazon_bedrock_guardrails.md",
-    "aws/ops/00_ops_overview.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",
