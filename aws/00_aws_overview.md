@@ -104,8 +104,8 @@ AWS service notes organized by category. Foundational concepts (01-30) and advan
 
 ## Cross-references
 
-- Networking concepts - [Networking](../networking/00_overview.md)
-- Computing concepts - [Computing](../computing/00_overview.md)
+- Networking concepts - [Networking](../networking/00_networking_overview.md)
+- Computing concepts - [Computing](../computing/00_computing_overview.md)
 
 ---
 ↑ [Root](../00_overview.md)
