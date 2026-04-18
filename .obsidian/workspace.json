@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/16_elastic_load_balancing.md",
+                "file": "aws/41_mangum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16_elastic_load_balancing"
+              "title": "41_mangum"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/00_aws_overview.md",
+    "aws/16_elastic_load_balancing.md",
     "aws/06_auto_scaling.md",
     "glossary.md",
     "tooling/06_vscode_remote_ssh_with_ec2.md",
@@ -197,7 +199,6 @@
     "aws/sedvAAyag",
     "aws/sede1VVfA",
     "home.md",
-    "aws/00_aws_overview.md",
     "00_overview.md",
     "tooling/00_tooling_overview.md",
     "networking/00_networking_overview.md",
@@ -220,7 +221,6 @@
     "rules/KIRO.md",
     "rules/CLAUDE.md",
     "rules/03_cross_linking.md",
-    "rules/CODEX.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
