@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "glossary.md",
+                "file": "gcp/00_gcp_overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "glossary"
+              "title": "00_gcp_overview"
             },
             "group": "34687243372a2d3b"
           }
@@ -36,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "glossary.md",
+                "file": "gcp/00_gcp_overview.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "glossary 그래프"
+              "title": "00_gcp_overview 그래프"
             },
             "group": "34687243372a2d3b"
           }
@@ -244,11 +244,15 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "home.md.tmp.3244.1776530112789",
+    "azure/00_azure_overview.md",
+    "aws/00_aws_overview.md",
     "gcp/00_gcp_overview.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "glossary.md",
+    "home.md.tmp.3244.1776530112789",
     "computing/10_assembly.md",
     "home.md.tmp.3244.1776530101770",
-    "azure/00_azure_overview.md",
     "azure",
     "gcp",
     "computing/00_computing_overview.md",
@@ -270,16 +274,11 @@
     "무제 3.base",
     "무제 2.base",
     "무제 1.base",
-    "glossary.md",
     "aws/ai/12_amazon_bedrock_integration_patterns.md.ts-tmp",
     "aws/ai/12_amazon_bedrock_integration_patterns.md",
-    "CLAUDE.md",
-    "AGENTS.md",
     "aws/ai/01_amazon_bedrock.md",
     "aws/ai/00_ai_overview.md",
-    "aws/00_aws_overview.md",
     "aws/ai/sede6C7LQ",
-    "aws/ai/agentcore/sedbNkKaz",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
