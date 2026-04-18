@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/ai/10_amazon_bedrock_agentcore.md",
+                "file": "aws/database/02_amazon_aurora.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "10_amazon_bedrock_agentcore"
+              "title": "02_amazon_aurora"
             }
           }
         ]
@@ -185,9 +195,11 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/database/00_database_overview.md",
+    "aws/00_aws_overview.md",
+    "aws/ai/10_amazon_bedrock_agentcore.md",
     "aws/ai/11_strands_agents_sdk.md",
     "ai/00_ai_overview.md",
-    "aws/00_aws_overview.md",
     "ai/15_strands_agents_sdk.md",
     "ai/04_tools.md",
     "home.md",
@@ -203,7 +215,6 @@
     "aws/ai/00_ai_overview.md",
     "aws/analytics/00_analytics_overview.md",
     "aws/networking/00_networking_overview.md",
-    "aws/database/00_database_overview.md",
     "aws/storage/00_storage_overview.md",
     "aws/compute/00_compute_overview.md",
     "aws/devtools/03_aws_marketplace.md",
@@ -212,7 +223,6 @@
     "aws/ops/04_aws_support_plans.md",
     "aws/ops/03_cloud_computing_billing.md",
     "aws/ops/02_aws_ssm_parameter_store.md",
-    "aws/ops/01_amazon_cloudwatch.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",
