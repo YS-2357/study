@@ -77,4 +77,4 @@ Caching appears at every level of AWS architecture: [CloudFront](../aws/21_amazo
 For LLM-specific caching, see [KV Cache](../ai/11_kv_cache.md) and [Prompt Caching](../ai/12_prompt_caching.md).
 
 ---
-← Previous: [Workload Types](05_workload_types.md) | [Overview](./00_overview.md) | Next: [Interfaces](07_interfaces.md) →
+← Previous: [Workload Types](05_workload_types.md) | [Overview](./00_computing_overview.md) | Next: [Interfaces](07_interfaces.md) →
