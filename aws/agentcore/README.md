@@ -1,16 +1,18 @@
 ---
 tags:
-  -
-created_at: 260417-141847
-updated_at: 260417-141847
+  - ai
+  - aws
+created_at: 2026-04-17T14:18:47
+updated_at: 2026-04-18T13:00:00
+recent_editor: CLAUDE
 ---
 
 # agentcore
 
-Amazon Bedrock AgentCore service and capability notes. See [00_overview.md](00_overview.md) for study order.
+Amazon Bedrock AgentCore service and capability notes. See [00_agentcore_overview.md](00_agentcore_overview.md) for study order.
 
 - `README.md`: This file.
-- `00_overview.md`: Study hub and navigation.
+- `00_agentcore_overview.md`: Study hub and navigation.
 - `01_runtime.md`: AgentCore Runtime.
 - `02_memory.md`: AgentCore Memory.
 - `03_gateway.md`: AgentCore Gateway.
