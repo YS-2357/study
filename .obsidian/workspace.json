@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aws/06_auto_scaling.md",
+                "file": "aws/16_elastic_load_balancing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_auto_scaling"
+              "title": "16_elastic_load_balancing"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/06_auto_scaling.md",
     "glossary.md",
     "tooling/06_vscode_remote_ssh_with_ec2.md",
     "tooling/07_obsidian_tags.md",
@@ -220,7 +221,6 @@
     "rules/CLAUDE.md",
     "rules/03_cross_linking.md",
     "rules/CODEX.md",
-    "rules/02_navigation.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
