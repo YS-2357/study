@@ -65,4 +65,4 @@ Abbreviations and domain terms used across this repo, sorted alphabetically.
 | WSL  | Windows Subsystem for Linux         | Windows feature that runs a Linux environment natively without a VM.                                                                             | [note](tooling/01_wsl_terminal_and_vscode.md)                     |
 
 ---
-↑ [Root](00_overview.md)
+↑ [Home](home.md)
