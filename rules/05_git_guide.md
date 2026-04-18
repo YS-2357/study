@@ -11,6 +11,8 @@ recent_editor: CLAUDE
 
 Git workflow and push commands for this repository.
 
+The repo is designed for **multi-PC sync**: everything except `.env` (local secrets) is tracked and pushed, so you can clone on another machine, drop in `.env`, and continue exactly where you left off. That's why auto-push fires on every edit and why `.obsidian/workspace.json`, agent configs, and hooks are all committed.
+
 ## 1. Environment Setup
 
 Required variables in `.env`:
