@@ -12,7 +12,12 @@
       "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nRestore AWS console images and fix all note compliance\n\n- Restore 91 PNG files from git history to aws/images/console/\n- Update 103 image references in 16 AWS notes to use new path\n- Add frontmatter \\(timestamps, recent_editor\\) to all concept notes\n- Add navigation headers with explicit relative path ./00_overview.md\n- Fix navigation footers across all domains\n- Remove empty aws/201 directory\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nrefactor: consolidate docs/ from 11 files to 4\n\n- Merge 01-05 rule files into AGENTS.md\n- Remove CODEX.md and KIRO.md \\(platform notes now in AGENTS.md\\)\n- Simplify docs/CLAUDE.md to automation-only\n- Simplify root CLAUDE.md to just link to docs/AGENTS.md\n- Update docs/README.md to reflect new structure\n\nReduces duplication of structural information.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nrevert: restore separate docs/ rule files\n\nUser explicitly requested separate files to keep each file small.\nReverting consolidation.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nfix: add frontmatter to docs rule files\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git -C \"C:/Users/user/study\" commit -m \"$\\(cat <<''EOF''\nfix: add frontmatter to docs rule files\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(find /c/Users/user/study/aws -type f -name \"*.md\" -exec grep -n \"\\\\[.*\\\\]\\(\" {} +)",
+      "Bash(awk '{print $NF}')",
+      "Read(//tmp/**)",
+      "Bash(bash /tmp/check_links.sh)",
+      "Bash(python3 *)"
     ]
   }
 }
