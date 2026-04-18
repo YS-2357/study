@@ -107,4 +107,4 @@ The split signal is: **one unit = one reason to change**. If fixing a search bug
 Well-decomposed units are easier to test, replace, and reason about because each one owns a narrow responsibility. This reduces the blast radius of change and makes the system easier to evolve without accidental coupling.
 
 ---
-← Previous: [Endpoints](08_endpoints.md) | [Overview](./00_computing_overview.md)
+← Previous: [Endpoints](08_endpoints.md) | [Overview](./00_computing_overview.md) | Next: [Assembly](10_assembly.md) →
