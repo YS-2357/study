@@ -6,6 +6,7 @@
       {
         "id": "0c8b4fb6425a3037",
         "type": "tabs",
+        "dimension": 64.75644699140402,
         "children": [
           {
             "id": "a88e41454934b7ef",
@@ -14,22 +15,59 @@
               "type": "markdown",
               "state": {
                 "file": "aws/database/02_amazon_aurora.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "mode": "preview",
+                "source": true,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "02_amazon_aurora"
-            }
+            },
+            "group": "34687243372a2d3b"
+          }
+        ]
+      },
+      {
+        "id": "8ff62fdbd74ce18f",
+        "type": "tabs",
+        "dimension": 35.24355300859599,
+        "children": [
+          {
+            "id": "99c246eb0f8838bf",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "aws/database/02_amazon_aurora.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "02_amazon_aurora 그래프"
+            },
+            "group": "34687243372a2d3b"
           }
         ]
       }
@@ -88,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e4f21328eceae37b",
@@ -195,7 +234,10 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/database/01_amazon_rds.md",
+    "aws/database/02_amazon_aurora.md",
     "aws/database/00_database_overview.md",
+    "aws/database/04_amazon_elasticache.md",
     "aws/00_aws_overview.md",
     "aws/ai/10_amazon_bedrock_agentcore.md",
     "aws/ai/11_strands_agents_sdk.md",
@@ -220,9 +262,6 @@
     "aws/devtools/03_aws_marketplace.md",
     "aws/devtools/02_boto3.md",
     "aws/devtools/01_aws_cdk.md",
-    "aws/ops/04_aws_support_plans.md",
-    "aws/ops/03_cloud_computing_billing.md",
-    "aws/ops/02_aws_ssm_parameter_store.md",
     "aws/ai/agentcore",
     "aws/devtools",
     "aws/ops",
