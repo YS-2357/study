@@ -77,22 +77,38 @@ Different automation paradigms differ on **who controls tool/step ordering** —
 Strands' value is giving the LLM the decision, which is why a vague prompt + powerful tools produces unpredictable behavior (see Precautions). It also supports [MCP](../../ai/07_mcp.md) servers as tool sources.
 
 ## Example
+
+A support agent that handles an inbound ticket — no if/else in your code, the LLM picks the order:
+
 ```python
-from strands import Agent
-from strands.models.bedrock import BedrockModel
-from strands_tools import calculator
+from strands import Agent, tool
 
-agent = Agent(
-    model=BedrockModel(model_id="anthropic.claude-sonnet-4-20250514-v1:0"),
-    system_prompt="You are a careful math tutor.",
-    tools=[calculator]
-)
+@tool
+def get_ticket(ticket_id: str) -> dict:
+    """Retrieve a support ticket by ID."""
+    ...
 
-agent("What is 144 divided by 12?")
+@tool
+def search_knowledge_base(query: str) -> list[str]:
+    """Search the support knowledge base."""
+    ...
+
+@tool
+def reply_to_ticket(ticket_id: str, message: str) -> None:
+    """Send a reply to the customer."""
+    ...
+
+agent = Agent(tools=[get_ticket, search_knowledge_base, reply_to_ticket])
+agent("Resolve ticket #5678 and reply to the customer.")
 ```
 
+The agent fetches the ticket, searches for a solution, and sends a reply. If the knowledge base returns nothing useful, the LLM can try a different strategy or ask for clarification rather than failing silently.
+
 ## Why It Matters
+
 Strands gives you full code-level control over agent behavior without forcing you into a console-first builder. That makes it the right layer for custom orchestration, while deployment choices such as [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) or Lambda remain separate infrastructure decisions.
+
+**The tradeoff is predictability.** A hardcoded pipeline always follows the same steps; a model-driven loop may take a different path each run. Use Strands when **flexibility matters more than determinism** — automation that has to adapt to novel inputs instead of breaking on the first case the original author didn't anticipate. For strictly deterministic flows, a plain LangChain chain, Step Functions, or hand-written code is a better fit.
 
 ## Where It Fits in the AWS Agent Stack
 
