@@ -73,7 +73,7 @@ vault/
   01-Projects/       ← active work
 ```
 
-This repo (`study/`) follows this pattern: `CLAUDE.md` defines rules, `00_overview.md` files serve as MOCs, and all notes are plain Markdown.
+This repo (`study/`) follows this pattern: `CLAUDE.md` defines rules, `home.md` is the root MOC with `00_{domain}_overview.md` files as per-domain MOCs, and all notes are plain Markdown.
 
 ### Notable open-source implementations
 
