@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-19T01:35:59
-recent_editor: CLAUDE
+updated_at: 2026-04-19T01:37:43
+recent_editor: CODEX
 ---
 
 # Cross-Linking Rules
@@ -103,6 +103,14 @@ First use: full name (abbreviation), then abbreviation only
 Cloud Development Kit (CDK) lets you define infrastructure.
 CDK supports Python and TypeScript.
 ```
+
+### 5.1. Glossary Capture Rule
+
+Add an abbreviation to [glossary.md](../glossary.md) when it appears in tracked notes, or when it appears in chat and is likely to recur in future notes.
+
+Do not add common casual abbreviations such as `e.g.`, `etc.`, or one-off chat shorthand unless they become study terms.
+
+When adding a new abbreviation to a note, use `Full Name (ABBR)` on first use and make sure `glossary.md` has an entry.
 
 ## 6. When Editing Notes
 
