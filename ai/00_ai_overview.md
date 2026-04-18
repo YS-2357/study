@@ -36,9 +36,7 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 13. [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
 14. [Subagent Design](14_subagent_design.md) — When to spawn, when to divide, and how to match harness permissions to role.
 
-### Frameworks
-15. [Strands Agents SDK](15_strands_agents_sdk.md) — AWS open-source Python framework where the LLM selects tools autonomously at runtime.
-
+For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore), see [aws/ai/](../aws/ai/00_ai_overview.md).
 
 ## Quick Mental Model
 
