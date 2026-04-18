@@ -18,4 +18,4 @@ See [rules/AGENTS.md](rules/AGENTS.md) for agent instructions.
 
 ## Subtree Overrides
 
-- `aws/CLAUDE.md` - AWS-specific four-viewpoint framework
+- `aws/AGENTS.md` - AWS-specific four-viewpoint framework
