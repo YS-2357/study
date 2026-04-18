@@ -14,6 +14,10 @@ recent_editor: CLAUDE
 
 Assembly is a low-level language where each instruction maps almost 1:1 to a single CPU machine instruction, written with human-readable mnemonics (`mov`, `add`, `jmp`) instead of raw binary.
 
+## Analogy
+
+Assembly is **phonetic spelling for the CPU**. Machine code is what the processor actually "speaks" — raw bytes like `48 c7 c0 01 00 00 00`. Assembly writes that same utterance as `mov rax, 1` — pronounceable letters instead of opaque hex. Every assembly line is one "sound" the CPU will make, and the assembler is the pronunciation guide that converts between the two forms.
+
 ## How It Works
 
 ### The Translation Chain
