@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "tooling/06_vscode_remote_ssh_with_ec2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "06_vscode_remote_ssh_with_ec2"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "tooling/07_obsidian_tags.md",
+    "README.md",
     "aws/sedaiSAgN",
     "aws/sed1qyKwa",
     "aws/sediMeRIT",
@@ -192,7 +194,6 @@
     "aws/sedvAAyag",
     "aws/sede1VVfA",
     "home.md",
-    "README.md",
     "aws/00_aws_overview.md",
     "00_overview.md",
     "tooling/00_tooling_overview.md",
@@ -206,7 +207,6 @@
     "tmpclaude-7d41-cwd",
     "tmpclaude-7cba-cwd",
     "tmpclaude-4275-cwd",
-    "tmpclaude-a4f7-cwd",
     "aws/201/00_overview.md",
     "AGENTS.md",
     "CLAUDE.md",

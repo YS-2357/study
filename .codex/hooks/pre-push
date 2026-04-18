@@ -103,7 +103,7 @@ check_note_structure() {
 
   footer_rule="$(grep -n '^---$' "$file" | tail -n1 | cut -d: -f1 || true)"
   nav_rule="$(tail -n1 "$file")"
-  if [[ -z "$footer_rule" || "$nav_rule" != *"| [Overview]("*"_overview.md) |"* ]]; then
+  if [[ -z "$footer_rule" ]] || ! printf '%s' "$nav_rule" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
     errors+=("$file: note footer is missing or malformed.")
   fi
 }
