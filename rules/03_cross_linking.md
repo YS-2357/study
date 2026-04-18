@@ -39,8 +39,25 @@ Links between domains are encouraged when they help the reader:
 | From | To | Example |
 |------|----|---------|
 | `ai/` | `computing/` | Agent note linking to API interface |
-| `computing/` | `aws/` | Cache note linking to ElastiCache |
-| `aws/` | `aws/agentcore/` | Bedrock note linking to AgentCore subtree |
+| `computing/` | `aws/database/` | Cache note linking to ElastiCache |
+| `aws/compute/` | `aws/ai/agentcore/` | Lambda note linking to AgentCore |
+
+### 3.1. Relative Path Rules
+
+| Target is in… | Path prefix |
+|---------------|-------------|
+| Same folder | `./` (or bare filename) |
+| Sibling subdomain (same parent) | `../{subdomain}/` |
+| Different top-level domain | `../../{domain}/` or `../{domain}/` from a top-level note |
+| Root `home.md` or `glossary.md` | depth-appropriate `../…/` |
+
+Examples:
+```md
+Same folder:      [Auto Scaling](./02_auto_scaling.md)
+Sibling subdir:   [S3](../storage/01_amazon_s3.md)
+Across domains:   [OSI Model](../../networking/03_osi_model.md)
+Root glossary:    [VPC](../../glossary.md)
+```
 
 ## 4. Glossary Links
 
