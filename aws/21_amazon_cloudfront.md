@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon CloudFront
 
@@ -253,4 +253,4 @@ CfnOutput(self, "FrontendUrl",
 - [CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/)
 
 ---
-← Previous: [Elastic Load Balancing](16_elastic_load_balancing.md) | [Overview](./00_overview.md) | Next: [Amazon EC2](05_amazon_ec2.md) →
+← Previous: [Elastic Load Balancing](16_elastic_load_balancing.md) | [Overview](./00_aws_overview.md) | Next: [Amazon EC2](05_amazon_ec2.md) →

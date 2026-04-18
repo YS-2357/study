@@ -9,7 +9,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Security Group
 
@@ -329,4 +329,4 @@ For inbound traffic, **NACL is evaluated first, then Security Group**.
 - [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
 
 ---
-← Previous: [Amazon VPC](04_amazon_vpc.md) | [Overview](./00_overview.md) | Next: [Elastic Load Balancing](16_elastic_load_balancing.md) →
+← Previous: [Amazon VPC](04_amazon_vpc.md) | [Overview](./00_aws_overview.md) | Next: [Elastic Load Balancing](16_elastic_load_balancing.md) →

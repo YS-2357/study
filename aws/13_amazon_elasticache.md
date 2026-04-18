@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon ElastiCache
 
@@ -215,4 +215,4 @@ ElastiCache handles the operational burden of running Redis or Memcached — rep
 - [Amazon ElastiCache FAQs](https://aws.amazon.com/elasticache/faqs/)
 
 ---
-← Previous: [Amazon DynamoDB](12_amazon_dynamodb.md) | [Overview](./00_overview.md) | Next: [Amazon EMR](08_amazon_emr.md) →
+← Previous: [Amazon DynamoDB](12_amazon_dynamodb.md) | [Overview](./00_aws_overview.md) | Next: [Amazon EMR](08_amazon_emr.md) →

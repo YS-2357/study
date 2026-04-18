@@ -6,7 +6,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # AWS Support Plans
 
@@ -34,4 +34,4 @@ A production e-commerce site goes down due to an RDS failover issue. With a Busi
 Choosing the right support tier is a cost-vs-risk decision. Production workloads typically need Business or higher for the 1-hour critical response SLA. The Basic plan is only suitable for experimentation and non-critical workloads.
 
 ---
-← Previous: [AWS Marketplace](29_aws_marketplace.md) | [Overview](./00_overview.md)
+← Previous: [AWS Marketplace](29_aws_marketplace.md) | [Overview](./00_aws_overview.md)

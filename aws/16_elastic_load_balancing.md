@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Elastic Load Balancing (ELB)
 
@@ -533,4 +533,4 @@ ALB itself does not provide country-optimized routing. Use Route 53 geolocation 
 - [GWLB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/)
 
 ---
-← Previous: [Security Group](14_security_group.md) | [Overview](./00_overview.md) | Next: [Amazon CloudFront](21_amazon_cloudfront.md) →
+← Previous: [Security Group](14_security_group.md) | [Overview](./00_aws_overview.md) | Next: [Amazon CloudFront](21_amazon_cloudfront.md) →

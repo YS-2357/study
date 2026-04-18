@@ -9,7 +9,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon VPC
 
@@ -422,4 +422,4 @@ A well-planned VPC with proper CIDR allocation, subnet layout, and routing preve
 - [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 
 ---
-← Previous: [Points of Presence](27_pop.md) | [Overview](./00_overview.md) | Next: [Security Group](14_security_group.md) →
+← Previous: [Points of Presence](27_pop.md) | [Overview](./00_aws_overview.md) | Next: [Security Group](14_security_group.md) →

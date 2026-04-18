@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Subnet
 
@@ -175,4 +175,4 @@ Proper public/private separation keeps databases and internal services off the i
 - [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
 
 ---
-← Previous: [Availability Zone](02_availability_zone.md) | [Overview](./00_overview.md) | Next: [Points of Presence](27_pop.md) →
+← Previous: [Availability Zone](02_availability_zone.md) | [Overview](./00_aws_overview.md) | Next: [Points of Presence](27_pop.md) →

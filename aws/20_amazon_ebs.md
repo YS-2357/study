@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon EBS
 
@@ -273,4 +273,4 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 - [EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
 
 ---
-← Previous: [Amazon S3](19_amazon_s3.md) | [Overview](./00_overview.md) | Next: [Amazon EFS](22_amazon_efs.md) →
+← Previous: [Amazon S3](19_amazon_s3.md) | [Overview](./00_aws_overview.md) | Next: [Amazon EFS](22_amazon_efs.md) →

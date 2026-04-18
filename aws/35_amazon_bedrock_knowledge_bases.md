@@ -9,7 +9,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Bedrock Knowledge Bases
 
@@ -172,4 +172,4 @@ Without RAG, models can only use their training data — they hallucinate when a
 - Default top-k is 5 — tune based on your document density and model context window
 
 ---
-← Previous: [Amazon Bedrock](34_amazon_bedrock.md) | [Overview](./00_overview.md) | Next: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) →
+← Previous: [Amazon Bedrock](34_amazon_bedrock.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) →

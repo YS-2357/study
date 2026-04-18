@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # AWS Data Pipeline
 
@@ -102,4 +102,4 @@ While newer services like Glue and Step Functions are preferred for new projects
 - [AWS Data Pipeline Developer Guide](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)
 
 ---
-← Previous: [Amazon SageMaker](24_amazon_sagemaker.md) | [Overview](./00_overview.md) | Next: [Amazon IAM](15_amazon_iam.md) →
+← Previous: [Amazon SageMaker](24_amazon_sagemaker.md) | [Overview](./00_aws_overview.md) | Next: [Amazon IAM](15_amazon_iam.md) →

@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # AWS Fargate
 
@@ -140,4 +140,4 @@ You define CPU, memory, and your container image — Fargate handles provisionin
 - [AWS Fargate FAQs](https://aws.amazon.com/fargate/faqs/)
 
 ---
-← Previous: [AWS Lambda](07_aws_lambda.md) | [Overview](./00_overview.md) | Next: [Amazon S3](19_amazon_s3.md) →
+← Previous: [AWS Lambda](07_aws_lambda.md) | [Overview](./00_aws_overview.md) | Next: [Amazon S3](19_amazon_s3.md) →

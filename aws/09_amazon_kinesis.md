@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Kinesis
 
@@ -183,4 +183,4 @@ fraud detection, and IoT telemetry where waiting for batch processing is too slo
 - [Amazon Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
 
 ---
-← Previous: [Amazon EMR](08_amazon_emr.md) | [Overview](./00_overview.md) | Next: [Amazon Redshift](23_amazon_redshift.md) →
+← Previous: [Amazon EMR](08_amazon_emr.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Redshift](23_amazon_redshift.md) →

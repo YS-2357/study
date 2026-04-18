@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Availability Zone
 
@@ -110,4 +110,4 @@ Spreading resources across at least two AZs is the foundation of high availabili
 - [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
 ---
-← Previous: [Region](01_region.md) | [Overview](./00_overview.md) | Next: [Subnet](03_subnet.md) →
+← Previous: [Region](01_region.md) | [Overview](./00_aws_overview.md) | Next: [Subnet](03_subnet.md) →

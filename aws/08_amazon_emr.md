@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon EMR (Elastic MapReduce)
 
@@ -157,4 +157,4 @@ Spinning clusters up on demand and shutting them down after keeps costs proporti
 - [Amazon EMR FAQs](https://aws.amazon.com/emr/faqs/)
 
 ---
-← Previous: [Amazon ElastiCache](13_amazon_elasticache.md) | [Overview](./00_overview.md) | Next: [Amazon Kinesis](09_amazon_kinesis.md) →
+← Previous: [Amazon ElastiCache](13_amazon_elasticache.md) | [Overview](./00_aws_overview.md) | Next: [Amazon Kinesis](09_amazon_kinesis.md) →

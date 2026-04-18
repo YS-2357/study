@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Redshift
 
@@ -116,4 +116,4 @@ It fills the gap between transactional databases (RDS/Aurora) and raw data lakes
 - [Amazon Redshift FAQs](https://aws.amazon.com/redshift/faqs/)
 
 ---
-← Previous: [Amazon Kinesis](09_amazon_kinesis.md) | [Overview](./00_overview.md) | Next: [Amazon SageMaker](24_amazon_sagemaker.md) →
+← Previous: [Amazon Kinesis](09_amazon_kinesis.md) | [Overview](./00_aws_overview.md) | Next: [Amazon SageMaker](24_amazon_sagemaker.md) →

@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Points of Presence (PoP)
 
@@ -117,4 +117,4 @@ Understanding PoPs explains why edge services reduce latency — content is serv
 - [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
 
 ---
-← Previous: [Subnet](03_subnet.md) | [Overview](./00_overview.md) | Next: [Amazon VPC](04_amazon_vpc.md) →
+← Previous: [Subnet](03_subnet.md) | [Overview](./00_aws_overview.md) | Next: [Amazon VPC](04_amazon_vpc.md) →

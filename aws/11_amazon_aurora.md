@@ -7,7 +7,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Aurora
 
@@ -371,4 +371,4 @@ For simultaneous multi-writer needs, Aurora is not currently an option.
 - [Amazon Aurora FAQs](https://aws.amazon.com/rds/aurora/faqs/)
 
 ---
-← Previous: [Amazon RDS](10_amazon_rds.md) | [Overview](./00_overview.md) | Next: [Amazon DynamoDB](12_amazon_dynamodb.md) →
+← Previous: [Amazon RDS](10_amazon_rds.md) | [Overview](./00_aws_overview.md) | Next: [Amazon DynamoDB](12_amazon_dynamodb.md) →
