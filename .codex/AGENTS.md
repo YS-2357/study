@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-18T11:51:15
-updated_at: 2026-04-18T11:51:15
+updated_at: 2026-04-18T19:41:34
 recent_editor: CODEX
 ---
 
@@ -11,6 +11,7 @@ recent_editor: CODEX
 These instructions apply to the `.codex/` subtree.
 
 - Codex keeps its repo-local automation in `.codex/`.
+- Codex keeps repo-local MCP server dependencies in `.codex/mcp/`.
 - Shared Git hook entrypoints still live under `.githooks/`.
 - Codex does not use Claude-style repo-local auto-push hooks unless the Codex harness explicitly supports them.
 - Keep `.claude/` out of scope unless the user explicitly asks for Claude-specific changes.
@@ -55,6 +56,8 @@ Codex should not request broad persistent approval for destructive or overly gen
 
 Non-mutating inspection such as `rg`, `Get-Content`, `git status`, `git diff`, and `git log` normally does not need elevated permission.
 
+Claude permissions in `.claude/settings.local.json` do not apply to Codex. Codex approval reuse depends on the exact command shape sent to the harness.
+
 ## Git And GitHub CLI Command Style
 
 To make Codex auto-approval rules match reliably, run Git and GitHub CLI commands as simple, single-purpose commands:
@@ -67,5 +70,7 @@ To make Codex auto-approval rules match reliably, run Git and GitHub CLI command
 6. Run read-only GitHub CLI checks such as `gh auth status`, `gh pr view`, `gh pr list`, `gh issue view`, or `gh issue list` as standalone commands.
 
 Do not wrap these commands in PowerShell scripts, environment-variable setup blocks, command chains, pipes, heredocs, or command substitutions unless the task specifically requires that shape. Complex wrappers are less likely to match saved approval prefixes and will usually prompt again.
+
+Prefer plain `git push origin main` after configuring the repo-local credential helper. Use token-wrapped push commands only when plain push cannot authenticate.
 
 Run Git commands that write repository metadata with escalated permissions immediately instead of first trying them in the sandbox. This applies to `git add`, `git commit`, `git push`, `git pull`, and `git restore`; otherwise Windows may fail on `.git/index.lock` before Codex retries with approval. Use a broad bounded `prefix_rule` such as `["git", "commit", "-m"]`, not a full commit-message-specific prefix.

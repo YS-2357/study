@@ -10,3 +10,6 @@
 # Local-only practice data
 **/data/
 **/premise/
+
+# Repo-local Codex MCP dependencies
+.codex/mcp/node_modules/
