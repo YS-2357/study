@@ -4,11 +4,11 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-17T14:42:55
+updated_at: 2026-04-18T13:00:00
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_agentcore_overview.md)
 
 # AgentCore Memory
 

@@ -103,7 +103,7 @@ Scan for these patterns:
 
 Adding/deleting/renaming notes requires updating:
 - `README.md` for the folder
-- `00_overview.md` for the domain
+- `00_{domain}_overview.md` for the domain (or `home.md` at root)
 
 ## 5. Environment Variables
 
