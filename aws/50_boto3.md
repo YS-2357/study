@@ -13,7 +13,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-boto3 is the official [AWS](../aws/00_overview.md) SDK for Python. It lets Python code call any AWS service API — creating S3 buckets, reading DynamoDB items, invoking Bedrock models — without manually signing HTTP requests.
+boto3 is the official [AWS](./00_aws_overview.md) SDK for Python. It lets Python code call any AWS service API — creating S3 buckets, reading DynamoDB items, invoking Bedrock models — without manually signing HTTP requests.
 
 ## Name
 
