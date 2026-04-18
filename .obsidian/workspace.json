@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rules/KIRO.md",
+                "file": "aws/33_amazon_bedrock_guardrails.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KIRO"
+              "title": "33_amazon_bedrock_guardrails"
             }
           }
         ]
@@ -185,9 +185,16 @@
   },
   "active": "a88e41454934b7ef",
   "lastOpenFiles": [
+    "aws/30_aws_support_plans.md",
+    "aws/47_amazon_bedrock_model_evaluation.md",
+    "aws/43_aws_ssm_parameter_store.md",
+    "aws/CLAUDE.md",
+    "aws/AGENTS.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "rules/KIRO.md",
     "rules/CODEX.md",
     "rules/CLAUDE.md",
-    "rules/KIRO.md",
     "rules/01_note_structure.md",
     "rules/AGENTS.md",
     "rules/05_git_guide.md",
@@ -214,13 +221,6 @@
     "tooling/07_obsidian_tags.md",
     "README.md",
     "home.md",
-    "00_overview.md",
-    "tooling/00_tooling_overview.md",
-    "networking/00_networking_overview.md",
-    "git/00_git_overview.md",
-    "computing/00_computing_overview.md",
-    "aws/agentcore/00_agentcore_overview.md",
-    "ai/00_ai_overview.md",
     "aws/images/console/waf4.png",
     "aws/images/console/waf3.png",
     "aws/images/console/waf2.png",
