@@ -21,7 +21,7 @@ Every concept note must have these sections in order:
 (1-2 sentence definition - REQUIRED)
 
 ## 2. Analogy
-(Optional - only if it genuinely helps understanding)
+(One concrete mental model - REQUIRED)
 
 ## 3. How It Works
 (Mechanics, steps, procedures)
@@ -36,7 +36,7 @@ Every concept note must have these sections in order:
 ### 1.1. Section Rules
 
 - `What It Is` - Required, 1-2 sentence definition
-- `Analogy` - Optional, include only if genuinely helpful
+- `Analogy` - Required, 1-3 sentences mapping the concept to something familiar. If no clean analogy fits, write one sentence stating why and move on — don't force a misleading one.
 - `Example` - Required, concrete and small
 - `Why It Matters` - Required
 
