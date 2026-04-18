@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computing/01_architecture.md",
+                "file": "computing/10_assembly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_architecture"
+              "title": "10_assembly"
             },
             "group": "34687243372a2d3b"
           }
@@ -36,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "computing/01_architecture.md",
+                "file": "computing/10_assembly.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "01_architecture 그래프"
+              "title": "10_assembly 그래프"
             },
             "group": "34687243372a2d3b"
           }
@@ -242,10 +242,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8c16b66ece157d75",
+  "active": "a88e41454934b7ef",
   "lastOpenFiles": [
-    "computing/10_assembly.md",
     "computing/00_computing_overview.md",
+    "computing/10_assembly.md",
+    "computing/01_architecture.md",
     "home.md",
     "ai/00_ai_overview.md",
     "ai/12_prompt_caching.md",
@@ -258,7 +259,6 @@
     "computing/09_decomposition.md",
     "computing/08_endpoints.md",
     "computing/03_storage.md",
-    "computing/01_architecture.md",
     "computing/07_interfaces.md",
     "무제.base",
     "무제 3.base",
