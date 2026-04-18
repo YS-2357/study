@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Bedrock Flows
 
@@ -92,4 +92,4 @@ Flows is the right tool when the steps are known in advance and must always exec
 | Differences | Flows = fixed graph; [Agents](36_amazon_bedrock_agents.md) = LLM decides the path at runtime |
 
 ---
-← Previous: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) | [Overview](./00_overview.md) | Next: [Bedrock Prompt Management](46_amazon_bedrock_prompt_management.md) →
+← Previous: [Amazon Bedrock Agents](36_amazon_bedrock_agents.md) | [Overview](./00_aws_overview.md) | Next: [Bedrock Prompt Management](46_amazon_bedrock_prompt_management.md) →

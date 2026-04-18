@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Bedrock Model Evaluation
 
@@ -79,4 +79,4 @@ Picking the wrong model for a task wastes money (too expensive) or degrades qual
 | Differences | Differs from [Guardrails](33_amazon_bedrock_guardrails.md) contextual grounding check — that is runtime filtering; this is offline benchmarking |
 
 ---
-← Previous: [Bedrock Prompt Management](46_amazon_bedrock_prompt_management.md) | [Overview](./00_overview.md) | Next: [Bedrock Data Automation](48_amazon_bedrock_data_automation.md) →
+← Previous: [Bedrock Prompt Management](46_amazon_bedrock_prompt_management.md) | [Overview](./00_aws_overview.md) | Next: [Bedrock Data Automation](48_amazon_bedrock_data_automation.md) →

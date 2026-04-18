@@ -9,7 +9,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Bedrock Prompt Management
 
@@ -85,4 +85,4 @@ Prompt quality directly affects application behavior. Without versioning, a prom
 | Differences | Unlike a config file, prompts here are paired with model settings — the "what to say" and "how the model should respond" travel together |
 
 ---
-← Previous: [Bedrock Flows](45_amazon_bedrock_flows.md) | [Overview](./00_overview.md) | Next: [Bedrock Model Evaluation](47_amazon_bedrock_model_evaluation.md) →
+← Previous: [Bedrock Flows](45_amazon_bedrock_flows.md) | [Overview](./00_aws_overview.md) | Next: [Bedrock Model Evaluation](47_amazon_bedrock_model_evaluation.md) →

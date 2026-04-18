@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon Bedrock Data Automation
 
@@ -105,4 +105,4 @@ Processing documents at scale with custom extraction code is fragile — every n
 | Differences | Unlike [Knowledge Bases](35_amazon_bedrock_knowledge_bases.md) which chunks and indexes for retrieval, BDA extracts specific structured fields from each document |
 
 ---
-← Previous: [Bedrock Model Evaluation](47_amazon_bedrock_model_evaluation.md) | [Overview](./00_overview.md) | Next: [Bedrock Custom Models](49_amazon_bedrock_custom_models.md) →
+← Previous: [Bedrock Model Evaluation](47_amazon_bedrock_model_evaluation.md) | [Overview](./00_aws_overview.md) | Next: [Bedrock Custom Models](49_amazon_bedrock_custom_models.md) →

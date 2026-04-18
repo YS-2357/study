@@ -8,7 +8,7 @@ updated_at: 2026-04-17T14:18:47
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_overview.md)
+↑ [Overview](./00_aws_overview.md)
 
 # Amazon API Gateway
 
@@ -107,4 +107,4 @@ Lambda has no public URL by default. API Gateway gives it one. It also decouples
 > **Tip:** The API Gateway URL is the only thing the frontend needs to know. All routing, auth, and throttling stays in the gateway layer, not in Lambda code.
 
 ---
-← Previous: [boto3](25_boto3.md) | [Overview](./00_overview.md) | Next: [Lambda Container Images](40_lambda_container_images.md) →
+← Previous: [boto3](25_boto3.md) | [Overview](./00_aws_overview.md) | Next: [Lambda Container Images](40_lambda_container_images.md) →
