@@ -72,7 +72,7 @@ After editing a Markdown note in VS Code:
 cd /home/ys2357/study
 git status
 git diff
-git add git/02_daily_git_workflow.md git/00_overview.md git/README.md
+git add git/02_daily_git_workflow.md git/00_git_overview.md git/README.md
 git diff --staged -- git/README.md
 git commit -m "Add daily Git workflow note"
 git log --oneline -n 5
