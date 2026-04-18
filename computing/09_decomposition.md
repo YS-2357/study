@@ -2,8 +2,8 @@
 tags:
   - computing
 created_at: 2026-04-10T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T01:01:08
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_computing_overview.md)
