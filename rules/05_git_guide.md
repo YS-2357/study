@@ -99,9 +99,29 @@ Types:
 
 ### 5.2. Auto-Commit Messages
 
-Claude auto-push generates:
-- `auto: update <file>` - Single file
-- `auto: update <file> and N more` - Multiple files
+Claude auto-push generates one commit per Write/Edit, so single-file is the norm:
+- `auto: update <file>` — normal PostToolUse commit (one tool call, one file)
+- `auto: update <file> and N more` — only on Stop-event cleanup when several files were left unstaged
+
+## 6. Auto-Push Staging Behavior
+
+`.claude/hooks/auto-push.sh` reads the PostToolUse JSON from stdin and stages only the file the agent just touched, instead of `git add -A`:
+
+```
+┌─ PostToolUse (Write|Edit) ─────────────────┐
+│  stdin JSON → jq .tool_input.file_path     │
+│  git add -A -- "$file_path"                │
+│  → one commit, one file                    │
+└────────────────────────────────────────────┘
+
+┌─ Stop (session end) ───────────────────────┐
+│  no file_path in stdin                     │
+│  git add -A       (sweep any leftovers)    │
+│  → may produce "and N more"                │
+└────────────────────────────────────────────┘
+```
+
+**Why per-file staging:** when several agents edit simultaneously, a blanket `git add -A` would fold in another agent's in-progress files, causing cross-agent commits and race conditions on push. Per-file staging keeps each agent's commits scoped to its own work.
 
 ## 6. Example Workflow
 
