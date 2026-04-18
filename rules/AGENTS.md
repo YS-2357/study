@@ -99,13 +99,14 @@ On failure:
 
 Whenever files are added, moved, renamed, or deleted:
 
-- Update `00_overview.md` in the affected domain
+- Update `00_{domain}_overview.md` in the affected domain (or `home.md` at root)
 - Update `README.md` in the affected folder
 - Update `rules/02_navigation.md` if domain structure changes
 - Update navigation footers in affected notes
 
 Structural documents that must reflect current file structure:
-- `00_overview.md` - Study hub for each domain
+- `home.md` - Root study hub
+- `00_{domain}_overview.md` - Study hub for each domain
 - `README.md` - Folder index for each directory
 - `rules/02_navigation.md` - Domain layout table
 
