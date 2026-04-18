@@ -27,6 +27,9 @@ Fundamental computing concepts for understanding cloud services.
 8. [Endpoints](08_endpoints.md) — API, AWS service, database, VPC endpoints; related to [VPC](../aws/foundation/04_amazon_vpc.md) and [HTTP](../networking/05_http.md).
 9. [Decomposition](09_decomposition.md) — Dividing a system into smallest units across frontend, backend, infra, and database layers.
 
+### Low-Level Code
+10. [Assembly](10_assembly.md) — Human-readable CPU instructions; the layer between compiled code and machine bytes.
+
 See also [Tooling](../tooling/00_tooling_overview.md) for developer workflow and editor notes.
 
 ---
