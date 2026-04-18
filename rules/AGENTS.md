@@ -154,4 +154,5 @@ recent_editor: CLAUDE
 | [04_security.md](04_security.md) | Security hooks and delivery |
 | [05_git_guide.md](05_git_guide.md) | Git workflow and push commands |
 | [06_content_diagrams.md](06_content_diagrams.md) | ASCII diagrams of architecture, hierarchy, flows |
+| [07_scalability.md](07_scalability.md) | Split thresholds, sed-friendly renames, subdomain rules |
 | [glossary.md](../glossary.md) | Abbreviations and terms |
