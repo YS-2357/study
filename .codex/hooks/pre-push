@@ -115,7 +115,7 @@ check_readme_rules() {
     errors+=("$file: README must stay an index, not a study note.")
   fi
 
-  if tail -n1 "$file" | grep -Fq '| [Overview](00_overview.md) |'; then
+  if tail -n1 "$file" | grep -Eq '\| \[Overview\]\(.*_overview\.md\) \|'; then
     errors+=("$file: README must not contain a navigation footer.")
   fi
 }
