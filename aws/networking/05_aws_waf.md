@@ -219,7 +219,7 @@ Combined with Shield for volumetric protection, WAF provides defense-in-depth fo
 
 WAF and Route 53 together form a DDoS defense architecture:
 
-- **[AWS Shield](./04_aws_shield.md) Standard**: Automatically applied to [CloudFront](./02_amazon_cloudfront.md) and Route 53. Mitigates L3/L4 DDoS attacks in real time.
+- **AWS Shield Standard**: Automatically applied to [CloudFront](./02_amazon_cloudfront.md) and Route 53. Mitigates L3/L4 DDoS attacks in real time.
 - **WAF**: Attached to CloudFront, ALB, or API Gateway for L7 (application layer) attack defense.
 - **Route 53**: Receives Shield Standard protection at the DNS level, mitigating DNS query flood attacks.
 
