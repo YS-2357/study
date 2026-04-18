@@ -45,6 +45,8 @@ A daily Git workflow is the repeatable command sequence you use to check what ch
 
 Use [WSL Terminal and VS Code Workflow](../tooling/01_wsl_terminal_and_vscode.md) to open the repo with `code .`, edit files in VS Code, then return to WSL and run the Git commands above. The terminal commands and the VS Code file tree are acting on the same repo folder.
 
+Note: the example below references `git/00_overview.md` historically, but the current filename is `git/00_git_overview.md`.
+
 ### Push with `GITHUB_TOKEN` from `.env`
 
 If `git push` cannot authenticate, this repo keeps a token-based push pattern in `.env.example`.
