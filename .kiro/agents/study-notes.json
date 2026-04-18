@@ -12,7 +12,8 @@
   },
   "resources": [
     "file://README.md",
-    "file://**/00_overview.md"
+    "file://home.md",
+    "file://**/00_*_overview.md"
   ],
   "welcomeMessage": "Ready to work on study notes. What would you like to add or edit?"
 }
