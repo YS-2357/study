@@ -12,7 +12,7 @@ recent_editor: CLAUDE
 
 # Amazon Bedrock Integration Patterns
 
-## 1. What It Is
+## What It Is
 
 The Bedrock family is designed to compose — each per-service note explains one piece in isolation, but real systems stack several. This note shows the common stacks: which services you reach for together, and why.
 
