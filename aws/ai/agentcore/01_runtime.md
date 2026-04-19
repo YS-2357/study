@@ -5,11 +5,11 @@ tags:
   - ml
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T10:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-19T19:06:00
+recent_editor: CODEX
 source:
-  - agentcore_intro_korean_2026-04
-  - agentcore_runtime_소개_2026-04
+  - agentcore_intro_korean_2026_04
+  - agentcore_runtime_intro_2026_04
 ---
 
 ↑ [Overview](./00_agentcore_overview.md)
@@ -18,6 +18,9 @@ source:
 
 ## What It Is
 AgentCore Runtime is the Amazon Bedrock AgentCore service for hosting and invoking agent code as production infrastructure. AWS describes AgentCore Runtime as a way to securely deploy and scale dynamic AI agents and tools using supported frameworks and protocols in the [AgentCore Runtime guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html).
+
+## Analogy
+AgentCore Runtime is like a managed execution booth for each agent session: you bring the agent code, and AWS provides the isolated room, endpoint, scaling, and logs around it.
 
 ## How It Works
 You package the agent, deploy it to Runtime, and invoke it through the generated runtime endpoint. Runtime handles the agent execution environment while the agent code still owns the reasoning loop, model calls, and tool decisions.
@@ -122,7 +125,7 @@ def processor(payload, ctx):
 - **Idle timeout**: default 15 min, range 5 min – 8 hours
 - **Max session lifetime**: 8 hours
 - **Manual termination**: `stop_runtime_session()` API
-- **Cost**: Stateful idle MicroVM incurs cost; tuning timeout saves 30–50%
+- **Cost**: Stateful idle MicroVM incurs cost; tune idle timeout to match the conversation pattern.
 
 For permanent state across sessions → use [AgentCore Memory](02_memory.md).
 
