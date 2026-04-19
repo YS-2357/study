@@ -3,7 +3,7 @@ tags:
   - tooling
   - git
 created_at: 2026-04-03T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -153,4 +153,7 @@ If you can reliably answer "where am I?", "what files are here?", and "how do I 
 > **Tip:** Start every terminal session with `cd /home/ys2357/study && pwd` before running Git commands.
 
 ---
-[Overview](./00_tooling_overview.md) | Next: [Vim and Neovim](02_vim_and_neovim.md) →
+↑ [Overview](./00_tooling_overview.md)
+
+**Related:** [Vim and Neovim](02_vim_and_neovim.md), [Git workflow](../git/02_daily_git_workflow.md)
+**Tags:** #tooling #git

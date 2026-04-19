@@ -4,8 +4,8 @@ tags:
   - git
   - ai
 created_at: 2026-04-12T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_tooling_overview.md)
@@ -102,4 +102,7 @@ LLM context windows reset. Cloud-based AI memory is vendor-locked. A Git-backed 
 > **Tip:** Start with `CLAUDE.md` in the vault root and one overview file per domain (e.g., `00_{domain}_overview.md`). Let structure grow from the notes, not the other way around.
 
 ---
-← Previous: [Obsidian vs Notion](04_obsidian_vs_notion.md) | [Overview](./00_tooling_overview.md) | Next: [VS Code Remote SSH with EC2](06_vscode_remote_ssh_with_ec2.md) →
+↑ [Overview](./00_tooling_overview.md)
+
+**Related:** [Obsidian vs Notion](04_obsidian_vs_notion.md), [VS Code Remote SSH with EC2](06_vscode_remote_ssh_with_ec2.md), [Git commits and pushes](../git/02_daily_git_workflow.md)
+**Tags:** #tooling #git #ai

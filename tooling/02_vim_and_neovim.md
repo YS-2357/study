@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-04T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -99,4 +99,7 @@ If you move your workflow into WSL, Vim or Neovim can become your in-terminal ed
 > **Tip:** Do not begin by building a large Neovim configuration. First confirm that basic modal editing actually improves your WSL workflow for this repo.
 
 ---
-← Previous: [WSL Terminal and VS Code Workflow](01_wsl_terminal_and_vscode.md) | [Overview](./00_tooling_overview.md) | Next: [Cucumber](03_cucumber.md) →
+↑ [Overview](./00_tooling_overview.md)
+
+**Related:** [WSL Terminal and VS Code Workflow](01_wsl_terminal_and_vscode.md), [Cucumber](03_cucumber.md)
+**Tags:** #tooling

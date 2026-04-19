@@ -4,7 +4,7 @@ tags:
   - aws
   - computing
 created_at: 2026-04-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -86,4 +86,7 @@ If you organize the tradeoff clearly, you can decide whether VS Code over SSH is
 > **Tip:** If you use EC2 only as a remote dev box, put the instance in the closest practical region to you, stop it when idle, keep the security group tight, and treat latency as the first thing to optimize.
 
 ---
-← Previous: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) | [Overview](./00_tooling_overview.md)
+↑ [Overview](./00_tooling_overview.md)
+
+**Related:** [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md)
+**Tags:** #tooling #aws #computing

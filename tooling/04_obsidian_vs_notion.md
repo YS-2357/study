@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-09T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_tooling_overview.md)
@@ -72,4 +72,7 @@ For a "Cucumber philosophy" workflow where you write behavior notes for humans a
 > **Tip:** If you work mostly alone, start with Obsidian plus Git. If later you need shared status tracking and comments, add Notion for team workflow rather than forcing it to be your file store.
 
 ---
-← Previous: [Cucumber](03_cucumber.md) | [Overview](./00_tooling_overview.md) | Next: [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md) →
+↑ [Overview](./00_tooling_overview.md)
+
+**Related:** [Cucumber](03_cucumber.md), [Obsidian + GitHub as a Second Brain](05_obsidian_github_second_brain.md)
+**Tags:** #tooling
