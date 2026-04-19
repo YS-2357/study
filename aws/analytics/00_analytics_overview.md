@@ -4,7 +4,7 @@ tags:
   - ml
   - monitoring
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -12,12 +12,12 @@ recent_editor: CLAUDE
 
 Streaming ingestion, big-data processing, orchestration, and managed ML.
 
-## Study Order
+## Concepts
 
-1. [Amazon Kinesis](01_amazon_kinesis.md) — Real-time data streaming.
-2. [Amazon EMR](02_amazon_emr.md) — Managed big data processing.
-3. [AWS Data Pipeline](03_aws_data_pipeline.md) — Legacy ETL orchestration.
-4. [Amazon SageMaker](04_amazon_sagemaker.md) — ML platform.
+- [Amazon Kinesis](01_amazon_kinesis.md) — Real-time data streaming.
+- [Amazon EMR](02_amazon_emr.md) — Managed big data processing.
+- [AWS Data Pipeline](03_aws_data_pipeline.md) — Legacy ETL orchestration.
+- [Amazon SageMaker](04_amazon_sagemaker.md) — ML platform.
 
 ---
 ↑ [AWS](../00_aws_overview.md)

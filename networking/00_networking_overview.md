@@ -2,7 +2,7 @@
 tags:
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -10,19 +10,19 @@ recent_editor: CLAUDE
 
 Foundation networking concepts needed to understand AWS services.
 
-## Study Order
+## Concepts
 
 ### Core Concepts
-1. [Protocols](01_protocols.md) — TCP, UDP, ICMP, HTTP, HTTPS, TLS, SSH, RDP.
-2. [Addressing](02_addressing.md) — Ports, IP addresses, CIDR, MAC addresses, traffic direction.
+- [Protocols](01_protocols.md) — TCP, UDP, ICMP, HTTP, HTTPS, TLS, SSH, RDP.
+- [Addressing](02_addressing.md) — Ports, IP addresses, CIDR, MAC addresses, traffic direction.
 
 ### Application Layer
-3. [HTTP](05_http.md) — Methods, status codes, REST API patterns.
-4. [DNS](04_dns.md) — Resolution flow, record types, Route 53 behavior.
-5. [Reverse Proxy](06_reverse_proxy.md) — Load balancing, TLS termination, path routing, Nginx/ALB/CloudFront.
+- [HTTP](05_http.md) — Methods, status codes, REST API patterns.
+- [DNS](04_dns.md) — Resolution flow, record types, Route 53 behavior.
+- [Reverse Proxy](06_reverse_proxy.md) — Load balancing, TLS termination, path routing, Nginx/ALB/CloudFront.
 
 ### Reference Model
-6. [OSI Model](03_osi_model.md) — 7-layer model, encapsulation, AWS layer mapping.
+- [OSI Model](03_osi_model.md) — 7-layer model, encapsulation, AWS layer mapping.
 
 ## Quick Reference
 

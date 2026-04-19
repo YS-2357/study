@@ -4,7 +4,7 @@ tags:
   - storage
   - container
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -12,12 +12,12 @@ recent_editor: CLAUDE
 
 Block, file, object, and container-image storage services.
 
-## Study Order
+## Concepts
 
-1. [Amazon S3](01_amazon_s3.md) — Object storage.
-2. [Amazon EBS](02_amazon_ebs.md) — Block storage for EC2.
-3. [Amazon EFS](03_amazon_efs.md) — Shared file storage.
-4. [Amazon ECR](04_amazon_ecr.md) — Container image registry.
+- [Amazon S3](01_amazon_s3.md) — Object storage.
+- [Amazon EBS](02_amazon_ebs.md) — Block storage for EC2.
+- [Amazon EFS](03_amazon_efs.md) — Shared file storage.
+- [Amazon ECR](04_amazon_ecr.md) — Container image registry.
 
 ---
 ↑ [AWS](../00_aws_overview.md)

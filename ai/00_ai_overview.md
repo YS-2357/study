@@ -2,7 +2,7 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-18T17:45:45
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -10,31 +10,31 @@ recent_editor: CLAUDE
 
 Foundation concepts for understanding how coding agents (like Codex) work.
 
-## Study Order
+## Concepts
 
 ### Core Runtime
-1. [Agent](01_agent.md) — The decision-maker and executor.
-2. [Harness](02_harness.md) — The controlled environment around the agent.
-3. [AGENTS.md](03_agents_md.md) — Repo-level instructions for the agent.
+- [Agent](01_agent.md) — The decision-maker and executor.
+- [Harness](02_harness.md) — The controlled environment around the agent.
+- [AGENTS.md](03_agents_md.md) — Repo-level instructions for the agent.
 
 ### Working Components
-4. [Tools](04_tools.md) — Capabilities the agent can call; see [Interfaces](../computing/07_interfaces.md) for API and protocol context.
-5. [Skills](05_skills.md) — Reusable instruction bundles for specialized tasks.
-6. [Plugins](06_plugins.md) — Platform capability packs (GitHub, Gmail, etc.).
+- [Tools](04_tools.md) — Capabilities the agent can call; see [Interfaces](../computing/07_interfaces.md) for API and protocol context.
+- [Skills](05_skills.md) — Reusable instruction bundles for specialized tasks.
+- [Plugins](06_plugins.md) — Platform capability packs (GitHub, Gmail, etc.).
 
 ### Protocol and Automation
-7. [MCP](07_mcp.md) — The protocol layer behind external tool integrations; see [Interfaces](../computing/07_interfaces.md).
-8. [Profiles](09_profiles.md) — Named runtime modes (safe, balanced, permissive).
-9. [Hooks](08_hooks.md) — Event-triggered automation.
+- [MCP](07_mcp.md) — The protocol layer behind external tool integrations; see [Interfaces](../computing/07_interfaces.md).
+- [Profiles](09_profiles.md) — Named runtime modes (safe, balanced, permissive).
+- [Hooks](08_hooks.md) — Event-triggered automation.
 
 ### LLM Internals
-10. [Attention (Q, K, V)](10_attention.md) — How tokens decide which other tokens matter; see [Caching](../computing/06_caching.md) for the general caching concept.
-11. [KV Cache](11_kv_cache.md) — Avoiding redundant computation during generation; see [Caching](../computing/06_caching.md).
-12. [Prompt Caching](12_prompt_caching.md) — Reusing computation across API calls.
+- [Attention (Q, K, V)](10_attention.md) — How tokens decide which other tokens matter; see [Caching](../computing/06_caching.md) for the general caching concept.
+- [KV Cache](11_kv_cache.md) — Avoiding redundant computation during generation; see [Caching](../computing/06_caching.md).
+- [Prompt Caching](12_prompt_caching.md) — Reusing computation across API calls.
 
 ### Multi-Agent Systems
-13. [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
-14. [Subagent Design](14_subagent_design.md) — When to spawn, when to divide, and how to match harness permissions to role.
+- [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
+- [Subagent Design](14_subagent_design.md) — When to spawn, when to divide, and how to match harness permissions to role.
 
 For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore), see [aws/ai/](../aws/ai/00_ai_overview.md).
 

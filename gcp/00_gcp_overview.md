@@ -2,7 +2,7 @@
 tags:
   - gcp
 created_at: 2026-04-19T01:34:33
-updated_at: 2026-04-19T01:34:33
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 

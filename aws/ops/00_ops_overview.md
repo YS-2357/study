@@ -3,7 +3,7 @@ tags:
   - aws
   - monitoring
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -11,12 +11,12 @@ recent_editor: CLAUDE
 
 Monitoring, configuration storage, billing behavior, and support.
 
-## Study Order
+## Concepts
 
-1. [Amazon CloudWatch](01_amazon_cloudwatch.md) — Monitoring and observability.
-2. [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md) — Secure configuration storage.
-3. [Cloud Computing Billing](03_cloud_computing_billing.md) — Billing behavior when services are off.
-4. [AWS Support Plans](04_aws_support_plans.md) — Support tiers and response times.
+- [Amazon CloudWatch](01_amazon_cloudwatch.md) — Monitoring and observability.
+- [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md) — Secure configuration storage.
+- [Cloud Computing Billing](03_cloud_computing_billing.md) — Billing behavior when services are off.
+- [AWS Support Plans](04_aws_support_plans.md) — Support tiers and response times.
 
 ---
 ↑ [AWS](../00_aws_overview.md)
