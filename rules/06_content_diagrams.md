@@ -141,7 +141,10 @@ Single concept-note file, top to bottom:
 │ ## Why It Matters                              │ ← required
 │                                                │
 │ ---                                            │ ← footer divider
-│ ← Prev: [X](x.md) | [Overview] | Next: [Y] → │ ← lateral nav
+│ ↑ [Overview](./00_aws_overview.md)             │ ← up-nav (restated)
+│                                                │
+│ **Related:** [X](x.md), [Y](y.md)              │ ← associative links
+│ **Tags:** #aws #serverless                     │ ← mirror of frontmatter
 └────────────────────────────────────────────────┘
 ```
 
