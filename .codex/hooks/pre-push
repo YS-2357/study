@@ -137,7 +137,7 @@ check_frontmatter() {
 
 check_note_structure() {
   local file="$1"
-  local what analogy how example why footer_rule nav_rule
+  local what analogy how example why footer_rule footer_block
 
   what="$(grep -n '^## What It Is$' "$file" | cut -d: -f1 | head -n1 || true)"
   analogy="$(grep -n '^## Analogy$' "$file" | cut -d: -f1 | head -n1 || true)"
@@ -145,28 +145,35 @@ check_note_structure() {
   example="$(grep -n '^## Example$' "$file" | cut -d: -f1 | head -n1 || true)"
   why="$(grep -n '^## Why It Matters$' "$file" | cut -d: -f1 | head -n1 || true)"
 
-  if [[ -z "$what" || -z "$how" || -z "$example" || -z "$why" ]]; then
-    errors+=("$file: missing one or more required note sections (What It Is, How It Works, Example, Why It Matters).")
+  if [[ -z "$what" || -z "$analogy" || -z "$how" || -z "$example" || -z "$why" ]]; then
+    errors+=("$file: missing one or more required note sections (What It Is, Analogy, How It Works, Example, Why It Matters).")
     return
   fi
 
-  if [[ -n "$analogy" ]]; then
-    if ! (( what < analogy && analogy < how && how < example && example < why )); then
-      errors+=("$file: note headings are out of order.")
-    fi
-  else
-    if ! (( what < how && how < example && example < why )); then
-      errors+=("$file: note headings are out of order.")
-    fi
+  if ! (( what < analogy && analogy < how && how < example && example < why )); then
+    errors+=("$file: note headings are out of order.")
   fi
 
-  # Footer shape: after the last `---` divider, the block must contain
-  # an `[Overview](..._overview.md)` link somewhere (new format has the link
-  # near the top of the block, with Related/Tags below it; old format had
-  # everything on the last line).
+  # Footer shape: after the last `---` divider, concept notes must use
+  # the associative footer: Overview, Related, and Tags.
   footer_rule="$(grep -n '^---$' "$file" | tail -n1 | cut -d: -f1 || true)"
-  if [[ -z "$footer_rule" ]] || ! tail -n +"$footer_rule" "$file" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
+  if [[ -z "$footer_rule" ]]; then
     errors+=("$file: note footer is missing or malformed.")
+    return
+  fi
+
+  footer_block="$(tail -n +"$footer_rule" "$file")"
+  if ! grep -qE '\[Overview\]\([^)]*_overview\.md\)' <<< "$footer_block"; then
+    errors+=("$file: note footer is missing an Overview link.")
+  fi
+  if ! grep -qE '^\*\*Related:\*\*' <<< "$footer_block"; then
+    errors+=("$file: note footer is missing a Related line.")
+  fi
+  if ! grep -qE '^\*\*Tags:\*\*[[:space:]]+#[A-Za-z0-9_-]+' <<< "$footer_block"; then
+    errors+=("$file: note footer is missing a Tags line with at least one #tag.")
+  fi
+  if grep -qE '(Previous:|Next:)' <<< "$footer_block"; then
+    errors+=("$file: note footer uses legacy prev/next navigation.")
   fi
 }
 
