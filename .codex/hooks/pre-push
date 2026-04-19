@@ -87,7 +87,7 @@ is_special_markdown() {
     rules/*) return 0 ;;
   esac
 
-  [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == "glossary.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
+  [[ "$name" == "README.md" || "$name" == "home.md" || "$name" == "glossary.md" || "$name" == "log.md" || "$name" == *"_overview.md" || "$name" == "AGENTS.md" || "$name" == "CLAUDE.md" ]]
 }
 
 check_frontmatter() {
