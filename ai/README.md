@@ -8,7 +8,7 @@ recent_editor: CLAUDE
 
 # ai
 
-AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for study order.
+AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for the concept hub.
 
 - `README.md`: This file.
 - `00_ai_overview.md`: Study hub and navigation.
