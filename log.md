@@ -40,3 +40,17 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Repo sync: `raw/` is now gitignored (sources local-only); only `raw/README.md` tracked.
 - Migration: 98 concept notes and 19 overviews rewritten in this session.
 - Pre-push: updated `.codex/hooks/pre-push` footer check to accept the new multi-line footer shape.
+
+## [2026-04-19T09:11:51] lint | post-migration review
+- Agents reviewed `rules/`, concept notes, and overviews against the new navigation model.
+- Fixed: stale "study order" wording in `rules/01_note_structure.md`, `rules/06_content_diagrams.md`, `ai/README.md`, `git/README.md`.
+- Fixed: L4 navigation diagram in `rules/06_content_diagrams.md` still showed old prev/next footer.
+- Fixed: `rules/01_note_structure.md` §1 required-sections block and §2 heading table were ambiguous on numeric prefixes — clarified that `## Section` is verbatim, no `## 1. Section`.
+- Fixed: `How It Works` missing from §1.1 Section Rules enumeration.
+- Fixed: added `How It Works` section to `ai/09_profiles.md` (was missing).
+- Fixed: `aws/ai/12_amazon_bedrock_integration_patterns.md` renumbered H2/H3 to bare section names (was the only note literal-following the old `## 1.` style).
+- Fixed: legacy `YYMMDD-HHMMSS` timestamps in `computing/00_computing_overview.md`, `git/00_git_overview.md`, `.claude/README.md`, `.githooks/README.md`.
+- Fixed: empty `tags:` and missing `recent_editor:` in `.claude/README.md`, `.githooks/README.md`.
+- Fixed: hardcoded GitHub username `YS-2357` in token-based push snippets replaced with `$GITHUB_USERNAME` in `.claude/README.md`, `.codex/README.md`, `git/02_daily_git_workflow.md`.
+- Fixed: duplicate Fargate link in `aws/compute/03_aws_lambda.md` Related list; added `.claude/dedup_related.py` for future passes.
+- Verified: no other concept-note footers carry duplicate targets.
