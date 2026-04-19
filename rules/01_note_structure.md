@@ -115,7 +115,7 @@ recent_editor: CLAUDE
 | Type | Use |
 |------|-----|
 | `-` bullets | Unordered facts, properties, options |
-| `1.` numbers | Ordered steps, priority, study order |
+| `1.` numbers | Ordered steps or priority within a section |
 
 Indent nested items with 2 spaces.
 
