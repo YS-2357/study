@@ -4,11 +4,11 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T10:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-19T19:06:00
+recent_editor: CODEX
 source:
-  - agentcore_intro_korean_2026-04
-  - agentcore_gateway_소개_2026-04
+  - agentcore_intro_korean_2026_04
+  - agentcore_gateway_intro_2026_04
 ---
 
 ↑ [Overview](./00_agentcore_overview.md)
@@ -17,6 +17,9 @@ source:
 
 ## What It Is
 AgentCore Gateway is the Amazon Bedrock AgentCore service for turning existing systems into agent-accessible tools. AWS describes Gateway as a way to connect agents to tools through APIs, Lambda functions, and Model Context Protocol (MCP) servers in the [AgentCore developer guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html).
+
+## Analogy
+AgentCore Gateway is like a controlled service desk for tools: agents ask through one desk, and the desk translates requests, checks credentials, and routes them to the right backend.
 
 ## How It Works
 Gateway sits between the agent and the target system. It exposes selected capabilities as tools, then lets the agent discover and call those tools through the Gateway endpoint instead of directly wiring every backend into the agent.
@@ -109,9 +112,9 @@ credential_provider = {
 | Tools | Strategy | Why |
 |---|---|---|
 | < 100 | **Full List** | Entire list fits in LLM context |
-| 100+ | **Semantic Search** | 3x latency improvement, 90% context reduction |
+| 100+ | **Semantic Search** | Reduces prompt context and lookup latency for large tool catalogs |
 
-Semantic Search auto-creates a vector store and uses the `x-amz-bedrock-agentcore-search` tool. Accuracy is equivalent to Full List.
+Semantic Search uses the `x-amz-bedrock-agentcore-search` tool to retrieve relevant tools from a large catalog instead of sending the full list to the model.
 
 ## Workload Decision Matrix
 
@@ -134,7 +137,7 @@ Semantic Search auto-creates a vector store and uses the `x-amz-bedrock-agentcor
 - Combine Gateway with [AgentCore Policy](09_policy.md) so tool calls can be checked before execution.
 - Combine Gateway with [AgentCore Identity](04_identity.md) so tools are called with managed credentials instead of hard-coded secrets.
 - Enable CloudWatch + X-Ray tracing on the Gateway endpoint in production.
-- For 100+ tools, Semantic Search is mandatory — 3x latency gain with equivalent accuracy.
+- For 100+ tools, prefer Semantic Search so the agent does not carry the full tool catalog in every prompt.
 
 ## Example
 A team can expose an internal ticket API and a Lambda refund function through Gateway, then let the agent call only those approved tools.
