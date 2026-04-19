@@ -80,7 +80,7 @@ The Strands agent is the *logic*; AgentCore is the *infrastructure*. Around the 
 
 When to pick: custom reasoning loops, full code control, cross-session state, agents that outlive a single request.
 
-### 3.3. Pattern C — Document Ingestion (Brief)
+### Pattern C — Document Ingestion (Brief)
 
 Data Automation extracts structured fields from PDFs and images; the output feeds Knowledge Bases for retrieval by either orchestration path above. Use when source material isn't already clean text.
 
