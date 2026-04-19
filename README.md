@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-19T09:46:47
+recent_editor: CODEX
 ---
 
 # study
@@ -45,7 +45,7 @@ Every note file uses this heading order:
 ```
 # Title
 ## What It Is       ← 1-2 sentence definition (required)
-## Analogy          ← only if it genuinely helps (optional)
+## Analogy          ← one useful mental model, or a sentence saying none fits (required)
 ## How It Works     ← mechanics, steps, diagrams (if applicable)
 ## Example          ← one concrete, small example (required)
 ## Why It Matters   ← practical relevance (required)
