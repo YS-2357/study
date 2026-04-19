@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:45:44
-updated_at: 2026-04-18T21:03:49
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 # Scalability Rules
