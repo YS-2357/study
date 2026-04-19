@@ -150,4 +150,7 @@ recent_editor: CLAUDE
 | [05_git_guide.md](05_git_guide.md) | Git workflow and push commands |
 | [06_content_diagrams.md](06_content_diagrams.md) | ASCII diagrams of architecture, hierarchy, flows |
 | [07_scalability.md](07_scalability.md) | Split thresholds, sed-friendly renames, subdomain rules |
-| [glossary.md](../glossary.md) | Abbreviations and terms |
+| [09_ingest.md](09_ingest.md) | Ingest pipeline: triggers, inputs, update-vs-create, source tracking |
+| [10_lint.md](10_lint.md) | Wiki health check: broken links, orphans, missing cross-refs, stale claims |
+| [../log.md](../log.md) | Append-only chronological log of ingests/queries/lints |
+| [../glossary.md](../glossary.md) | Abbreviations and terms |
