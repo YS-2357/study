@@ -2,7 +2,7 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -39,4 +39,7 @@ Most day-to-day work relies on shell tools, file search, Git-aware commands, and
 The agent's quality depends not only on reasoning but also on what tools are available and how well it uses them.
 
 ---
-← Previous: [AGENTS.md](03_agents_md.md) | [Overview](./00_ai_overview.md) | Next: [Skills](05_skills.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [AGENTS.md](03_agents_md.md), [Skills](05_skills.md), [agent](01_agent.md), [harness](02_harness.md), [MCP](07_mcp.md)
+**Tags:** #ai

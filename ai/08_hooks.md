@@ -2,7 +2,7 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -31,4 +31,7 @@ In this repo, a `pre-push` hook can scan changed Markdown files, make sure relat
 Compared with [tools](04_tools.md), [skills](05_skills.md), and [AGENTS.md](03_agents_md.md), hooks are lower priority for learning, but they are useful when you want the environment to enforce routine checks consistently instead of relying on memory.
 
 ---
-← Previous: [MCP](07_mcp.md) | [Overview](./00_ai_overview.md) | Next: [Profiles](09_profiles.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [MCP](07_mcp.md), [Profiles](09_profiles.md), [tools](04_tools.md), [skills](05_skills.md), [AGENTS.md](03_agents_md.md)
+**Tags:** #ai

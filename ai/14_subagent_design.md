@@ -3,7 +3,7 @@ tags:
   - ai
   - tooling
 created_at: 2026-04-10T00:00:00
-updated_at: 2026-04-18T17:45:45
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -211,4 +211,7 @@ When agents are divided well:
 > **Tip:** If you can describe what an agent does without using "and", the scope is right. "Implements the backend" is one role. "Implements the backend and reviews it" is two — split them.
 
 ---
-← Previous: [Multi-Agent Orchestration](13_multi_agent_orchestration.md) | [Overview](./00_ai_overview.md)
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Multi-Agent Orchestration](13_multi_agent_orchestration.md), [agent](01_agent.md), [harness](02_harness.md), [decomposition](../computing/09_decomposition.md), [tool](04_tools.md), [skill](05_skills.md), [plugin](06_plugins.md), [MCP](07_mcp.md), [hook](08_hooks.md), [profile](09_profiles.md)
+**Tags:** #ai #tooling

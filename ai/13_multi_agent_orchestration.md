@@ -2,7 +2,7 @@
 tags:
   - ai
 created_at: 2026-04-06T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -148,4 +148,7 @@ Review gates catch **structural bugs** — ownership violations, rule violations
 > **Tip:** If something works at runtime but violates a rule, only the review gate catches it. Design your review criteria around rules, not just behavior.
 
 ---
-← Previous: [Prompt Caching](12_prompt_caching.md) | [Overview](./00_ai_overview.md) | Next: [Subagent Design](14_subagent_design.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Prompt Caching](12_prompt_caching.md), [Subagent Design](14_subagent_design.md), [agents](01_agent.md)
+**Tags:** #ai
