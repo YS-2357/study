@@ -1,8 +1,10 @@
 ---
 tags:
-  -
-created_at: 260417-145128
-updated_at: 260417-145128
+  - tooling
+  - git
+created_at: 2026-04-17T14:51:28
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 # .githooks
