@@ -2,7 +2,7 @@
 tags:
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -106,4 +106,7 @@ A web browser loading a page uses multiple protocols:
 Protocols determine which ports to open in [Security Groups](../aws/identity/02_security_group.md), which [load balancer](../aws/networking/01_elastic_load_balancing.md) type to use (NLB for TCP/UDP, ALB for HTTP), and how to troubleshoot connectivity issues.
 
 ---
-[Overview](./00_networking_overview.md) | Next: [Addressing](02_addressing.md) →
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [Addressing](02_addressing.md), [HTTP](05_http.md), [EC2](../aws/compute/01_amazon_ec2.md), [Security Groups](../aws/identity/02_security_group.md), [load balancer](../aws/networking/01_elastic_load_balancing.md)
+**Tags:** #networking

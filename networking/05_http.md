@@ -2,7 +2,7 @@
 tags:
   - networking
 created_at: 2026-03-24T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -87,4 +87,7 @@ A browser loading `https://example.com/users/1`:
 HTTP is the foundation of [ALB](../aws/networking/01_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../aws/compute/03_aws_lambda.md) design, and [CloudFront](../aws/networking/02_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
 
 ---
-← Previous: [DNS](04_dns.md) | [Overview](./00_networking_overview.md) | Next: [Reverse Proxy](06_reverse_proxy.md) →
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [DNS](04_dns.md), [Reverse Proxy](06_reverse_proxy.md), [Protocols](01_protocols.md), [Interfaces](../computing/07_interfaces.md), [ALB](../aws/networking/01_elastic_load_balancing.md), [API Gateway](../aws/compute/03_aws_lambda.md), [CloudFront](../aws/networking/02_amazon_cloudfront.md)
+**Tags:** #networking

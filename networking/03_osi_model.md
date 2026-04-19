@@ -2,7 +2,7 @@
 tags:
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -83,4 +83,7 @@ You can't access a website. Ping works (Layer 3 OK), but connecting to port 443 
 The OSI model explains why different AWS services operate at different layers: why ALB can route by URL path but NLB cannot, why Security Groups can't filter HTTP headers, and how to systematically debug network issues layer by layer.
 
 ---
-← Previous: [Addressing](02_addressing.md) | [Overview](./00_networking_overview.md) | Next: [DNS](04_dns.md) →
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [Addressing](02_addressing.md), [DNS](04_dns.md), [Security Groups](../aws/identity/02_security_group.md), [NLB](../aws/networking/01_elastic_load_balancing.md)
+**Tags:** #networking
