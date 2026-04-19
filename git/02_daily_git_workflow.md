@@ -2,7 +2,7 @@
 tags:
   - git
 created_at: 2026-04-03T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -95,4 +95,7 @@ This routine prevents the two most common Git mistakes: committing files you did
 > **Tip:** Never commit the real `.env` file. Keep only `.env.example` in Git.
 
 ---
-← Previous: [Tracking and Status](01_tracking_and_status.md) | [Overview](./00_git_overview.md)
+↑ [Overview](./00_git_overview.md)
+
+**Related:** [Tracking and Status](01_tracking_and_status.md), [WSL Terminal and VS Code Workflow](../tooling/01_wsl_terminal_and_vscode.md)
+**Tags:** #git

@@ -2,7 +2,7 @@
 tags:
   - git
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -62,4 +62,7 @@ Many Git mistakes come from misunderstanding the difference between "file exists
 > **Tip:** Git is the version control system. GitHub is a hosting platform built around Git. Tracked, untracked, staged, and committed are Git concepts, not GitHub concepts.
 
 ---
-[Overview](./00_git_overview.md) | Next: [Daily Git Workflow](02_daily_git_workflow.md) →
+↑ [Overview](./00_git_overview.md)
+
+**Related:** [Daily Git Workflow](02_daily_git_workflow.md)
+**Tags:** #git
