@@ -44,9 +44,9 @@ Bedrock forces an early fork between managed and custom orchestration:
 
 The other services (Guardrails, KB, Data Automation, Prompt Management) attach to either path.
 
-## 3. Example
+## Example
 
-### 3.1. Pattern A — Managed Support Agent
+### Pattern A — Managed Support Agent
 
 Console-driven customer support bot, zero infrastructure code.
 
