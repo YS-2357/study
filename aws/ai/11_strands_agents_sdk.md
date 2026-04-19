@@ -306,6 +306,14 @@ Strands isn't the only code-first agent framework. Quick map of the landscape (p
 - Claude Sonnet/Opus and GPT-4 class models work best for complex multi-tool agents
 - Smaller models may struggle with multi-step reasoning
 
+### 6. Production Checklist
+- Store all secrets and API keys in **AWS Secrets Manager** — never hardcode
+- Enable **OpenTelemetry tracing** via `aws-opentelemetry-distro>=0.10.0`
+- Set up **CI/CD pipeline** for automated agent deployment
+- Define **access control** — who/what can invoke the agent endpoint
+- Write **unit tests** for individual tools and **E2E tests** for full agent flows
+- Set `max_iterations` to prevent runaway loops in production
+
 ---
 ↑ [Overview](./00_ai_overview.md)
 
