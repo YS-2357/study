@@ -14,6 +14,9 @@ See [rules/AGENTS.md](rules/AGENTS.md) for agent instructions.
 | [rules/02_navigation.md](rules/02_navigation.md) | Navigation rules |
 | [rules/03_cross_linking.md](rules/03_cross_linking.md) | Cross-linking |
 | [rules/04_security.md](rules/04_security.md) | Security hooks |
+| [rules/09_ingest.md](rules/09_ingest.md) | Ingest pipeline |
+| [rules/10_lint.md](rules/10_lint.md) | Wiki health check |
+| [log.md](log.md) | Chronological ingest/lint log |
 | [glossary.md](glossary.md) | Abbreviations |
 
 ## Subtree Overrides
