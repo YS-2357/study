@@ -12,24 +12,24 @@ Rules for formatting study notes in this repository.
 
 ## 1. Required Sections
 
-Every concept note must have these sections in order:
+Every concept note has these sections in order. Use the headings verbatim — no numeric prefixes, no renaming:
 
 ```md
 # Title
 
-## 1. What It Is
+## What It Is
 (1-2 sentence definition - REQUIRED)
 
-## 2. Analogy
+## Analogy
 (One concrete mental model - REQUIRED)
 
-## 3. How It Works
-(Mechanics, steps, procedures)
+## How It Works
+(Mechanics, steps, procedures - REQUIRED)
 
-## 4. Example
+## Example
 (One concrete, small example - REQUIRED)
 
-## 5. Why It Matters
+## Why It Matters
 (Practical relevance - REQUIRED)
 ```
 
