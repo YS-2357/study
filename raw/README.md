@@ -2,33 +2,35 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:05:28
-updated_at: 2026-04-18T12:05:28
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 # raw
 
-Raw text inbox for study-note source material. Put unsorted raw text here; AI agents decide what is worth turning into structured notes.
+Raw source inbox for the ingest pipeline. **This folder is gitignored** — sources live here locally and are never pushed. Only this README is tracked.
 
-## Files
+## Purpose
 
-- `README.md`: This file.
-- `processed/`: Raw text files after useful content has been converted into notes.
-- `images/`: Legacy/optional image staging folder.
-- `documents/`: Legacy/optional document staging folder.
-- `markdown/`: Legacy/optional markdown staging folder.
-- `extracted/`: Legacy/optional extracted-text staging folder.
+Drop source material here that you want turned into structured study notes. The LLM does not watch this folder; it processes a file only when you ask.
 
-## Workflow
+## Usage
 
-1. Add raw text files directly under `raw/`.
-2. AI agents read text files only.
-3. Agents extract clear standalone study concepts and skip weak fragments or duplicates.
-4. Agents search existing notes first and update a canonical note when one fits.
-5. Agents use web search before creating new notes and cite reliable official or primary sources inline.
-6. Agents create notes in the proper domain, creating a new domain only when no existing domain fits.
-7. Agents move handled raw files into `raw/processed/`.
+1. Save the source file somewhere under `raw/`. Any name is fine.
+2. Run `/ingest <source-slug>` (or ask conversationally: "ingest X").
+3. The LLM follows the pipeline in [../rules/09_ingest.md](../rules/09_ingest.md): reads the source, discusses takeaways, updates or creates notes, adds a `source:` frontmatter entry on every touched note, moves the source to `raw/processed/`, and appends a line to [../log.md](../log.md).
+4. After ingest, the source file lives in `raw/processed/` as a local audit trail (still gitignored).
 
-## Text Files Only
+## Supported Input Types
 
-Agents process readable text files such as `.txt`, `.md`, `.csv`, `.log`, and extensionless plain-text files. Binary files, images, PDFs, DOCX, PPTX, and other non-text files are ignored unless the user explicitly asks for extraction.
+| Type | Notes |
+|------|-------|
+| `.md`, `.txt`, `.csv`, `.log` | Read directly |
+| `.pdf` | Use `pages` parameter for PDFs >10 pages |
+| Images (`.png`, `.jpg`) | Claude reads directly |
+| URLs | Put the URL in a `.txt` file, or paste in chat |
+| `.docx`, `.pptx`, audio | Convert to plain text first |
+
+## Why Gitignored
+
+Sources are often heavy (PDFs, images, transcripts), copyrighted, or personal. Syncing them across PCs is usually unwanted. The `source:` frontmatter field on each note carries the reference — the file itself may or may not exist on any given PC.
