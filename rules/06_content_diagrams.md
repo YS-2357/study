@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:00:15
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-19T09:46:47
+recent_editor: CODEX
 ---
 
 # Content Diagrams
@@ -133,7 +133,7 @@ Single concept-note file, top to bottom:
 │ ## What It Is                                  │ ← required
 │ 1-2 sentence definition.                       │
 │                                                │
-│ ## Analogy                                     │ ← optional
+│ ## Analogy                                     │ ← required
 │                                                │
 │ ## How It Works                                │ ← required
 │                                                │
