@@ -177,7 +177,10 @@ check_readme_rules() {
     errors+=("$file: README must stay an index, not a study note.")
   fi
 
-  if tail -n1 "$file" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
+  # READMEs should not have a nav footer. Check the tail for an Overview link;
+  # looking at the last ~5 lines catches both old (single-line) and new
+  # (multi-line) footer shapes.
+  if tail -n5 "$file" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
     errors+=("$file: README must not contain a navigation footer.")
   fi
 }
