@@ -35,7 +35,7 @@ Every non-trivial Bedrock system picks one service per concern:
 
 Model and orchestration are always present. The rest are opt-in layers — add only when the concern is real.
 
-### 2.2. Two Orchestration Paths
+### Two Orchestration Paths
 
 Bedrock forces an early fork between managed and custom orchestration:
 
