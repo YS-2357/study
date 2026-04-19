@@ -53,14 +53,17 @@ Every note file uses this heading order:
 
 ### Navigation
 
-Every note has a footer:
+Navigation is associative. Every concept note has a footer like:
 
 ```
 ---
-← Previous: [Title](link) | [Overview](./00_{domain}_overview.md) | Next: [Title](link) →
+↑ [Overview](./00_{domain}_overview.md)
+
+**Related:** [Title A](./a.md), [Title B](../other/b.md)
+**Tags:** #tag1 #tag2
 ```
 
-Every domain has a `00_{domain}_overview.md` that serves as the study hub with links to all notes in study order. The root-level `home.md` links to every domain's overview.
+Every domain has a `00_{domain}_overview.md` hub that groups notes by theme. The root-level `home.md` links to every domain's overview. Readers jump by concept via inline links, the footer `Related` list, shared tags, and Obsidian's graph view — not a prev/next sequence.
 
 ### Markdown formatting
 
