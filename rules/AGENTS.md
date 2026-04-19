@@ -110,16 +110,11 @@ Structural documents that must reflect current file structure:
 - `README.md` - Folder index for each directory
 - `rules/02_navigation.md` - Domain layout table
 
-## 9. Raw Text Processing
+## 9. Ingesting Raw Sources
 
-When processing files from `raw/`:
+Raw source material lives in `raw/` (gitignored — local-only). Ingest runs **only on user request** via `/ingest <source>` or a conversational equivalent.
 
-- Read text files only unless the user explicitly asks for binary extraction.
-- Extract clear standalone study concepts; skip weak fragments and duplicates.
-- Search existing notes first and update the canonical note when one fits.
-- Web search before creating new notes and cite reliable official or primary sources inline.
-- Place notes in the best existing domain, or create a new domain only when no existing domain fits.
-- Move handled raw files into `raw/processed/` after useful content has been converted.
+Full pipeline — trigger, input types, update-vs-create, `source:` frontmatter, movement to `raw/processed/`, `log.md` append — is defined in [09_ingest.md](09_ingest.md).
 
 ## 10. Conflict Resolution
 
