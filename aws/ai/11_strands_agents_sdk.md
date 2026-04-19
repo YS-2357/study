@@ -206,8 +206,28 @@ Event-based system for intercepting agent behavior:
 - `AfterToolCallEvent` — inspect results after execution
 - Enables human-in-the-loop approval flows (agent pauses, waits for approval, then continues)
 
+### Structured Output
+Get typed Pydantic objects back instead of raw text:
+```python
+from pydantic import BaseModel
+
+class PersonInfo(BaseModel):
+    name: str
+    age: int
+    occupation: str
+
+result = agent.structured_output(PersonInfo, "Extract info from: John is a 30-year-old engineer.")
+# result.name == "John", result.age == 30, result.occupation == "engineer"
+```
+`agent.structured_output(ModelClass, prompt)` — forces the response to conform to the Pydantic model schema.
+
 ### Memory and State
 - **Conversation management** — built-in `SlidingWindowConversationManager` for context window control
+  ```python
+  from strands.agent.conversation_manager import SlidingWindowConversationManager
+  manager = SlidingWindowConversationManager(window_size=20, should_truncate_results=True)
+  agent = Agent(conversation_manager=manager)
+  ```
 - **Session memory** — persist across sessions using AgentCore Memory or custom storage
 - **Shared state** — `invocation_state` for passing context across multi-agent patterns without exposing it to the LLM
 - Agents are stateless by default — add memory explicitly when needed
