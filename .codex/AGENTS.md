@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-18T11:51:15
-updated_at: 2026-04-18T19:41:34
+updated_at: 2026-04-19T09:46:47
 recent_editor: CODEX
 ---
 
@@ -34,7 +34,7 @@ On every Markdown edit Codex makes:
 - Set `updated_at` to the current local timestamp.
 - Set `recent_editor: CODEX`.
 - Preserve valid frontmatter, heading order, and navigation footers.
-- Update related README, overview, and navigation files when adding, moving, renaming, or deleting notes.
+- Update related README files, overview files, `Related` lists, and inbound links when adding, moving, renaming, or deleting notes.
 - Do not touch `.claude/` files as part of routine Codex compliance work.
 
 ## Permission Requests
