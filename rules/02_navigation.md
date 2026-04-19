@@ -39,22 +39,21 @@ tags:
 
 ```md
 ---
-← Previous: [Title](link) | [Overview](./00_{domain}_overview.md) | Next: [Title](link) →
+↑ [Overview](./00_{domain}_overview.md)
+
+**Related:** [Title A](./a.md), [Title B](../other/b.md)
+**Tags:** #tag1 #tag2
 ```
 
-### 2.3. Footer Variations
+- **`↑ Overview`** — same target as the header, restated at the bottom so long notes don't need scrolling to go up.
+- **`Related`** — explicit list of notes this one connects to conceptually. Derived from inline cross-references + anything conceptually adjacent. Links here may duplicate inline links; that's expected.
+- **`Tags`** — mirror the frontmatter `tags` list as `#hash` inline tags so Obsidian's tag pane and graph view pick them up from the rendered view as well as YAML.
 
-First note in sequence:
-```md
----
-[Overview](./00_{domain}_overview.md) | Next: [Title](link) →
-```
+A note with zero related links is valid but flagged by [10_lint.md §2.2](10_lint.md) — consider whether an inbound link from another note is missing.
 
-Last note in sequence:
-```md
----
-← Previous: [Title](link) | [Overview](./00_{domain}_overview.md)
-```
+### 2.3. No Prev/Next
+
+The legacy `← Previous | ... | Next →` footer has been removed. Ordered study is no longer the primary mode; readers jump by concept, not by index.
 
 ## 3. Overview Navigation
 
