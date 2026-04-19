@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T17:45:45
-recent_editor: CLAUDE
+updated_at: 2026-04-20T08:29:39
+recent_editor: CODEX
 ---
 
 # ai
@@ -26,5 +26,6 @@ AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for the co
 - `12_prompt_caching.md`: Prompt caching across API calls.
 - `13_multi_agent_orchestration.md`: Multi-agent orchestration and review loops.
 - `14_subagent_design.md`: When to spawn, when to divide, and harness-per-role design.
+- `15_langchain_langgraph.md`: LangChain, LangGraph, middleware, MCP adapters, and agent harnesses.
 
 AWS-specific frameworks (Strands Agents SDK, Bedrock family, AgentCore) live in [aws/ai/](../aws/ai/).

@@ -86,3 +86,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-19T19:06:00] lint | post-ingest review fixes
 - Fixed: missing AgentCore `Analogy` sections, non-ASCII source slugs, log chronology, unsupported exact claims, and Strands draft wording.
 - Deferred: unrelated local `.claude/settings.local.json` and `.obsidian/workspace.json` changes.
+
+## [2026-04-20T08:29:39] ingest | langchain_langgraph_2026_meaning
+- Touched: ai/15_langchain_langgraph.md (new), ai/00_ai_overview.md, ai/README.md
+- Decision: create a general AI framework note for LangChain/LangGraph rather than editing AWS-specific agent framework notes.

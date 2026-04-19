@@ -9,7 +9,10 @@
       "Bash(grep *)",
       "Read(//tmp/**)",
       "Bash(python3 *)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(python -m json.tool)"
     ]
   },
   "enableAllProjectMcpServers": true,

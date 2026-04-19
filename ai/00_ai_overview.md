@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-20T08:29:39
+recent_editor: CODEX
 ---
 
 # AI Agents — Overview
@@ -36,6 +36,8 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 - [Multi-Agent Orchestration](13_multi_agent_orchestration.md) — Role separation, review loops, and why a single agent can't catch its own mistakes.
 - [Subagent Design](14_subagent_design.md) — When to spawn, when to divide, and how to match harness permissions to role.
 
+- [LangChain / LangGraph](15_langchain_langgraph.md) - Agent frameworks from workflow chains to state graphs and harnesses.
+
 For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore), see [aws/ai/](../aws/ai/00_ai_overview.md).
 
 ## Quick Mental Model
@@ -54,4 +56,3 @@ For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore
 
 ---
 ↑ [Home](../home.md)
-
