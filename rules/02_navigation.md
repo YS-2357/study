@@ -116,16 +116,17 @@ READMEs do not have navigation footers. They are folder indexes only.
 | File | Purpose |
 |------|---------|
 | `home.md` (root only) | Top-level study hub |
-| `00_{domain}_overview.md` | Study hub for a domain |
-| `01_filename.md` | First concept note |
-| `02_filename.md` | Second concept note |
-| ... | Continue in study order |
+| `00_{domain}_overview.md` | Hub for a domain |
+| `NN_filename.md` | Concept note (the `NN_` prefix is a stable identifier, not a study-order rank) |
+
+The `NN_` prefix exists to keep filenames collision-free and sort-stable in file listings. It does **not** imply a study sequence — readers browse associatively via links, tags, and the Obsidian graph view. Numbers may skip or reorder without narrative consequence.
 
 Files without numbers:
 - `README.md` - Folder index
 - `AGENTS.md` - Agent rules
 - `CLAUDE.md` - Claude-specific rules
 - `glossary.md` - Root-level glossary
+- `log.md` - Root-level chronological log
 
 ## 6. Domain Layout
 
