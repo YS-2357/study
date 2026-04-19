@@ -8,7 +8,7 @@ recent_editor: CLAUDE
 
 # git
 
-Git concepts. See [00_git_overview.md](00_git_overview.md) for study order.
+Git concepts. See [00_git_overview.md](00_git_overview.md) for the concept hub.
 
 - `README.md`: This file.
 - `00_git_overview.md`: Study hub and navigation.
