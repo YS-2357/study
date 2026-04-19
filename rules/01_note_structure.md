@@ -51,8 +51,8 @@ Extra `##` sections allowed between required sections when content warrants:
 | Level | Use |
 |-------|-----|
 | `#` | Note title only (one per file) |
-| `##` | Major sections (numbered: 1., 2., 3.) |
-| `###` | Subsections (numbered: 1.1., 1.2.) |
+| `##` | Major sections. Use the section names verbatim (`## What It Is`, not `## 1. What It Is`) |
+| `###` | Subsections inside a major section |
 | `####` | Never use - split the note instead |
 
 ## 3. Frontmatter
