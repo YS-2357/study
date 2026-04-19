@@ -99,7 +99,7 @@ The hardest design decision is orchestration path, not individual services. Once
 
 Each layer is optional. Adding them all at once is the common mistake — start with model + orchestration, prove the loop, then bolt on the rest.
 
-## 5. Precautions
+## Precautions
 
 ### MAIN PRECAUTION: Bedrock Agents ≠ AgentCore
 
