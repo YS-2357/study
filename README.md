@@ -82,6 +82,7 @@ Every domain has a `00_{domain}_overview.md` hub that groups notes by theme. The
 | Table | `\| col \|` | Comparisons, option sets, structured data |
 | Callout | `> **Tip:**` | Practical guidance — the only callout format |
 | Divider | `---` | Before the navigation footer only |
+| Inline tag | `#tag` | Footer `Tags:` line — mirrors frontmatter `tags` |
 
 ### Content rules
 
