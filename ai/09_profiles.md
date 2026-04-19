@@ -18,6 +18,10 @@ A profile is a named runtime configuration for the agent environment. It may cha
 
 Profiles are like operating modes on a machine: safer inspection mode, normal working mode, or more permissive experimental mode. The machine is the same, but the operating rules change.
 
+## How It Works
+
+At session start the agent loads a profile definition (usually a YAML or TOML block in the harness config) and applies its overrides on top of the baseline runtime. Switching profiles does not change the agent's code, tools, or model weights — only the enforcement policies around them: which actions auto-approve, whether the sandbox is read-only, whether network access is allowed, which model is called, and how much reasoning budget is granted. A profile can be named (`default`, `readonly`, `yolo`) and selected at launch via a flag or config entry.
+
 ## Example
 
 A safer profile might keep the filesystem read-only, disable web access, and require more approvals. A normal working profile allows writing in the workspace, normal web lookups, and asks only for higher-risk approvals.
