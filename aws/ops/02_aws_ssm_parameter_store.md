@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -100,4 +100,7 @@ Config that changes per environment (KB IDs, table names, API endpoints) must no
 > **Tip:** If a resource is not in the CDK stack, `cdk destroy` doesn't know it exists. IaC boundary = destroy boundary. No exceptions.
 
 ---
-← Previous: [Amazon CloudWatch](01_amazon_cloudwatch.md) | [Overview](./00_ops_overview.md) | Next: [Cloud Computing Billing](03_cloud_computing_billing.md) →
+↑ [Overview](./00_ops_overview.md)
+
+**Related:** [Amazon CloudWatch](01_amazon_cloudwatch.md), [Cloud Computing Billing](03_cloud_computing_billing.md), [Lambda](../compute/03_aws_lambda.md), [CDK](../devtools/01_aws_cdk.md)
+**Tags:** #aws #security

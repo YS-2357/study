@@ -3,8 +3,8 @@ tags:
   - aws
   - storage
 created_at: 2026-03-26T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -413,4 +413,7 @@ distribution = cf.Distribution(self, "FrontendDist",
 - [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 
 ---
-[Overview](./00_storage_overview.md) | Next: [Amazon EBS](./02_amazon_ebs.md) →
+↑ [Overview](./00_storage_overview.md)
+
+**Related:** [Amazon EBS](./02_amazon_ebs.md), [Amazon EFS](./03_amazon_efs.md), [Amazon CloudFront](../networking/02_amazon_cloudfront.md)
+**Tags:** #aws #storage

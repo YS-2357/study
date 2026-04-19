@@ -3,8 +3,8 @@ tags:
   - aws
   - storage
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -156,4 +156,7 @@ It is the go-to solution for shared content, CMS uploads, and any workload where
 - [EFS Performance](https://docs.aws.amazon.com/efs/latest/ug/performance.html)
 
 ---
-← Previous: [Amazon EBS](./02_amazon_ebs.md) | [Overview](./00_storage_overview.md) | Next: [Amazon ECR (Elastic Container Registry)](./04_amazon_ecr.md) →
+↑ [Overview](./00_storage_overview.md)
+
+**Related:** [Amazon EBS](./02_amazon_ebs.md), [Amazon ECR (Elastic Container Registry)](./04_amazon_ecr.md)
+**Tags:** #aws #storage

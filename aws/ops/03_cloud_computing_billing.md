@@ -2,8 +2,8 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -51,4 +51,7 @@ It depends on the service type under the AWS Shared Responsibility Model:
 - **Unmanaged (EC2)**: Customer manages guest OS updates, security patches, and application software.
 
 ---
-← Previous: [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md) | [Overview](./00_ops_overview.md) | Next: [AWS Support Plans](04_aws_support_plans.md) →
+↑ [Overview](./00_ops_overview.md)
+
+**Related:** [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md), [AWS Support Plans](04_aws_support_plans.md), [EC2](../compute/01_amazon_ec2.md), [EBS](../storage/02_amazon_ebs.md), [RDS](../database/01_amazon_rds.md), [Lambda](../compute/03_aws_lambda.md), [S3](../storage/01_amazon_s3.md)
+**Tags:** #aws

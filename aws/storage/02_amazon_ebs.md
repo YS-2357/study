@@ -4,8 +4,8 @@ tags:
   - storage
   - computing
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -273,4 +273,7 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 - [EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
 
 ---
-← Previous: [Amazon S3](./01_amazon_s3.md) | [Overview](./00_storage_overview.md) | Next: [Amazon EFS](./03_amazon_efs.md) →
+↑ [Overview](./00_storage_overview.md)
+
+**Related:** [Amazon S3](./01_amazon_s3.md), [Amazon EFS](./03_amazon_efs.md), [Computing Basics - Storage](../../computing/03_storage.md)
+**Tags:** #aws #storage #computing

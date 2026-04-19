@@ -3,8 +3,8 @@ tags:
   - aws
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -184,4 +184,7 @@ Without CloudWatch, you're blind. When the agent returns a bad draft or times ou
 - It feeds into CloudWatch — they complement each other, not replace
 
 ---
-[Overview](./00_ops_overview.md) | Next: [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md) →
+↑ [Overview](./00_ops_overview.md)
+
+**Related:** [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md), [AgentCore Observability](../ai/agentcore/07_observability.md)
+**Tags:** #aws #monitoring
