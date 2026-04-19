@@ -37,6 +37,7 @@ Every concept note has these sections in order. Use the headings verbatim — no
 
 - `What It Is` - Required, 1-2 sentence definition
 - `Analogy` - Required, 1-3 sentences mapping the concept to something familiar. If no clean analogy fits, write one sentence stating why and move on — don't force a misleading one.
+- `How It Works` - Required, mechanics / steps / procedures. For notes where there's nothing mechanical to explain, write one sentence stating that and move on.
 - `Example` - Required, concrete and small
 - `Why It Matters` - Required
 
