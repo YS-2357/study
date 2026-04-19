@@ -16,7 +16,9 @@ The repo is designed so adding notes, subdomains, or renames lands without manua
 
 ## 2. Numbering Resets Per Subdomain
 
-Every subdomain numbers its concept notes `01_*.md … NN_*.md` independently. Foundation has its own `01_`, compute has its own `01_`, and so on. Consequence: adding a new subdomain never forces renumbering of siblings.
+Every subdomain numbers its concept notes `01_*.md … NN_*.md` independently. Foundation has its own `01_`, compute has its own `01_`, and so on. The `NN_` prefix is a **stable identifier** — it keeps filenames unique and sort-stable; it does not imply a reading order (navigation is associative, see [02_navigation.md §1](02_navigation.md)).
+
+Consequence: adding a new subdomain never forces renumbering of siblings, and skipping numbers is fine.
 
 See [rules/02_navigation.md §3.3](02_navigation.md) for the subdomain pattern and [§5](02_navigation.md) for file numbering.
 
