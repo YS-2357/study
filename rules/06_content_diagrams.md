@@ -71,7 +71,8 @@ Each layer is built on the one below. Read bottom-up.
 ╰─────────────────────────────────────────────────────╯
 ╭─── L4  NAVIGATION ──────────────────────────────────╮
 │   header:  ↑ [Overview](./00_{domain}_overview.md)  │
-│   footer:  ← Prev | [Overview] | Next →             │
+│   footer:  ↑ Overview + **Related:** + **Tags:**    │
+│            (associative; no prev/next)              │
 ╰─────────────────────────────────────────────────────╯
 ╭─── L3  BODY ────────────────────────────────────────╮
 │   # Title                                           │
