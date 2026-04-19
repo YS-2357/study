@@ -3,8 +3,8 @@ tags:
   - computing
   - storage
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -64,4 +64,7 @@ A PostgreSQL database on EC2 needs fast random reads: choose gp3 with provisione
 Storage type and performance directly affect application behavior. Choosing the wrong EBS volume type causes either wasted money (io2 for a dev server) or poor performance (sc1 for a database).
 
 ---
-← Previous: [Virtualization](02_virtualization.md) | [Overview](./00_computing_overview.md) | Next: [GPU](04_gpu.md) →
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [Virtualization](02_virtualization.md), [GPU](04_gpu.md), [API](07_interfaces.md), [EBS](../aws/storage/02_amazon_ebs.md), [EFS](../aws/storage/03_amazon_efs.md), [S3](../aws/storage/01_amazon_s3.md)
+**Tags:** #computing #storage

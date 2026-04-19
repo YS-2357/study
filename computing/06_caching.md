@@ -2,7 +2,7 @@
 tags:
   - computing
 created_at: 2026-03-23T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -77,4 +77,7 @@ Caching appears at every level of AWS architecture: [CloudFront](../aws/networki
 For LLM-specific caching, see [KV Cache](../ai/11_kv_cache.md) and [Prompt Caching](../ai/12_prompt_caching.md).
 
 ---
-← Previous: [Workload Types](05_workload_types.md) | [Overview](./00_computing_overview.md) | Next: [Interfaces](07_interfaces.md) →
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [Workload Types](05_workload_types.md), [Interfaces](07_interfaces.md), [ElastiCache](../aws/database/04_amazon_elasticache.md), [CloudFront](../aws/networking/02_amazon_cloudfront.md), [DynamoDB DAX](../aws/database/03_amazon_dynamodb.md), [KV Cache](../ai/11_kv_cache.md), [Prompt Caching](../ai/12_prompt_caching.md)
+**Tags:** #computing

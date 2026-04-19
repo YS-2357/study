@@ -3,7 +3,7 @@ tags:
   - computing
   - networking
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -65,4 +65,7 @@ Another example: you SSH into a Linux server and run `vim config.yaml`. The term
 Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the system. Understanding this distinction clarifies AWS documentation and terminal workflows: the terminal can host multiple interfaces at once, such as a shell for running commands and an editor for changing files.
 
 ---
-← Previous: [Caching](06_caching.md) | [Overview](./00_computing_overview.md) | Next: [Endpoints](08_endpoints.md) →
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [Caching](06_caching.md), [Endpoints](08_endpoints.md), [HTTP](../networking/05_http.md), [EC2](../aws/compute/01_amazon_ec2.md), [security groups](../aws/identity/02_security_group.md), [Vim and Neovim](../tooling/02_vim_and_neovim.md)
+**Tags:** #computing #networking

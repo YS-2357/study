@@ -2,7 +2,7 @@
 tags:
   - computing
 created_at: 2026-04-19T00:59:49
-updated_at: 2026-04-19T01:25:58
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -120,4 +120,7 @@ The assembler still resolves labels, relocations, and encoding choices. Two synt
 `gcc -O0` and `gcc -O3` produce very different assembly. When inspecting compiler output, match the optimization level you ship.
 
 ---
-← Previous: [Decomposition](09_decomposition.md) | [Overview](./00_computing_overview.md)
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [Decomposition](09_decomposition.md), [CPU architecture](./01_architecture.md), [GPU](./04_gpu.md), [EC2](../aws/compute/01_amazon_ec2.md)
+**Tags:** #computing

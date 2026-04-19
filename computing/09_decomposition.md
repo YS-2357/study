@@ -2,7 +2,7 @@
 tags:
   - computing
 created_at: 2026-04-10T00:00:00
-updated_at: 2026-04-19T01:01:08
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -107,4 +107,7 @@ The split signal is: **one unit = one reason to change**. If fixing a search bug
 Well-decomposed units are easier to test, replace, and reason about because each one owns a narrow responsibility. This reduces the blast radius of change and makes the system easier to evolve without accidental coupling.
 
 ---
-← Previous: [Endpoints](08_endpoints.md) | [Overview](./00_computing_overview.md) | Next: [Assembly](10_assembly.md) →
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [Endpoints](08_endpoints.md), [Assembly](10_assembly.md), [HTTP request](../networking/05_http.md), [DNS record](../networking/04_dns.md)
+**Tags:** #computing

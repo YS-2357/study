@@ -2,8 +2,8 @@
 tags:
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -55,4 +55,7 @@ A Redis cache holding 50 GB of data with low CPU usage: choose R family (memory 
 Choosing the wrong instance family wastes money or causes performance problems. A memory-heavy workload on a compute-optimized instance will run out of RAM. A CPU-heavy workload on a memory-optimized instance pays for unused RAM.
 
 ---
-← Previous: [GPU](04_gpu.md) | [Overview](./00_computing_overview.md) | Next: [Caching](06_caching.md) →
+↑ [Overview](./00_computing_overview.md)
+
+**Related:** [GPU](04_gpu.md), [Caching](06_caching.md), [EC2](../aws/compute/01_amazon_ec2.md), [Architecture](01_architecture.md)
+**Tags:** #computing
