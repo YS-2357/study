@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-19T15:16:34
+updated_at: 2026-04-19T19:06:00
 recent_editor: CODEX
 ---
 
@@ -58,3 +58,31 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-19T15:16:34] maintenance | log.md validation
 - Fixed: `.codex/hooks/pre-push` now treats root `log.md` as special Markdown, not a concept note.
 - Reason: `log.md` is an append-only operational timeline and should keep frontmatter/security checks without requiring concept-note sections or footer.
+
+## [2026-04-19T15:56:25] ingest | agentcore_runtime_intro_2026_04
+- Touched: aws/ai/agentcore/01_runtime.md (update)
+- Added: MicroVM isolation, deploy pipeline (Docker to ECR to CodeBuild ARM64), HTTP Agent vs MCP Server protocol choice, stateless_http=True requirement, streaming SSE pattern, 100MB large payload, session lifecycle tuning, Stateless vs Stateful, workload decision matrix.
+
+## [2026-04-19T16:16:10] ingest | agentcore_memory_intro_2026_04
+- Touched: aws/ai/agentcore/02_memory.md (update)
+- Added: Short-term vs Long-term distinction, 4 strategies (UserPreference/Semantic/Episodic/Custom), core API flow, extract_memories() async caveat, MemoryClient vs MemoryManager, Strands/LangGraph/LlamaIndex integration patterns, Multi-Agent Shared Memory with namespace isolation.
+
+## [2026-04-19T16:16:39] ingest | agentcore_gateway_intro_2026_04
+- Touched: aws/ai/agentcore/03_gateway.md (update)
+- Added: 6 Gateway roles, 3 deployment steps, 3 Target types (Lambda/OpenAPI/Smithy), inbound auth comparison, outbound credential_provider structures (IAM/API Key/OAuth), Semantic Search strategy, workload decision matrix, production rules.
+
+## [2026-04-19T16:16:40] ingest | agentcore_intro_korean_2026_04
+- Touched: aws/ai/agentcore/01_runtime.md, aws/ai/agentcore/02_memory.md, aws/ai/agentcore/03_gateway.md (source slug added to all three)
+- Decision: General intro PDF; specific service content absorbed into respective service notes above.
+
+## [2026-04-19T17:22:51] ingest | strands_jhrhee_2026_04
+- Touched: aws/ai/11_strands_agents_sdk.md (update)
+- Added: structured_output() Pydantic API, SlidingWindowConversationManager constructor params (window_size, should_truncate_results), production checklist (Secrets Manager, OTEL, CI/CD, access control, unit+E2E tests).
+
+## [2026-04-19T18:39:20] query | repo orientation
+- Read: README.md, rules/*.md, aws/AGENTS.md, glossary.md.
+- Decision: follow associative navigation, concept-note structure, source-aware ingest, on-demand lint, and one-file delivery rules.
+
+## [2026-04-19T19:06:00] lint | post-ingest review fixes
+- Fixed: missing AgentCore `Analogy` sections, non-ASCII source slugs, log chronology, unsupported exact claims, and Strands draft wording.
+- Deferred: unrelated local `.claude/settings.local.json` and `.obsidian/workspace.json` changes.
