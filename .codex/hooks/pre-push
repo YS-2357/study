@@ -160,9 +160,12 @@ check_note_structure() {
     fi
   fi
 
+  # Footer shape: after the last `---` divider, the block must contain
+  # an `[Overview](..._overview.md)` link somewhere (new format has the link
+  # near the top of the block, with Related/Tags below it; old format had
+  # everything on the last line).
   footer_rule="$(grep -n '^---$' "$file" | tail -n1 | cut -d: -f1 || true)"
-  nav_rule="$(tail -n1 "$file")"
-  if [[ -z "$footer_rule" ]] || ! printf '%s' "$nav_rule" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
+  if [[ -z "$footer_rule" ]] || ! tail -n +"$footer_rule" "$file" | grep -qE '\[Overview\]\([^)]*_overview\.md\)'; then
     errors+=("$file: note footer is missing or malformed.")
   fi
 }
