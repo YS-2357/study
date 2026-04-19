@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:46:47
+updated_at: 2026-04-20T08:46:00
 recent_editor: CODEX
 ---
 
@@ -12,9 +12,9 @@ Study materials organized by domain. [Start here →](home.md)
 
 ## Multi-PC Sync
 
-This repo is designed to sync seamlessly across machines. **Notes, rules, hooks, agent configs, and Obsidian layout (`.obsidian/workspace.json`) are tracked and pushed.** Clone on another PC, drop in an `.env`, and continue exactly where you left off: same notes, same pane layout, same automation.
+This repo is designed to sync seamlessly across machines. **Notes, rules, hooks, and agent configs are tracked and pushed.** Clone on another PC, drop in an `.env`, and continue exactly where you left off with the same notes and automation.
 
-Two things stay local-only:
+These things stay local-only:
 
 - `.env` — secrets (tokens, credentials).
 - `raw/` — source material for ingest (articles, PDFs, transcripts). Sources are often too heavy to sync and may be personal; they're tracked conceptually via the `source:` frontmatter field on the notes they produced, not as files. See [rules/09_ingest.md](rules/09_ingest.md).

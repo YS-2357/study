@@ -1,6 +1,9 @@
 # Local environment configuration
 .env
 
+# Local Obsidian UI state
+.obsidian/workspace.json
+
 # Local-only presentation practice materials
 **/ppt/
 
