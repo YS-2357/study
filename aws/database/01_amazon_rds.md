@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -414,4 +414,7 @@ Multi-AZ Cluster places 1 Primary + 2 Readable Standbys across 3 AZs. Benefits i
 - [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
 
 ---
-[Overview](./00_database_overview.md) | Next: [Amazon Aurora](./02_amazon_aurora.md) →
+↑ [Overview](./00_database_overview.md)
+
+**Related:** [Amazon Aurora](./02_amazon_aurora.md), [14_security_group.md](../identity/02_security_group.md)
+**Tags:** #aws #database

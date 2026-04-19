@@ -4,7 +4,7 @@ tags:
   - infrastructure
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -356,4 +356,7 @@ Tags.of(self).add("Environment", "dev")
 - OpenSearch Serverless has a minimum cost even at 1 OCU — destroy when not in use
 
 ---
-[Overview](./00_devtools_overview.md) | Next: [boto3](./02_boto3.md) →
+↑ [Overview](./00_devtools_overview.md)
+
+**Related:** [boto3](./02_boto3.md), [Fargate CPU/memory combos](../compute/04_aws_fargate.md)
+**Tags:** #aws #infrastructure #tooling

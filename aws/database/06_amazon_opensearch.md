@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -184,4 +184,7 @@ RAG quality is determined at two points: ingestion (what goes in) and retrieval 
 > **Tip:** Index quality = answer quality. If RAG answers are wrong or vague, check the ingest pipeline — chunking strategy and field mappings — before debugging the model call.
 
 ---
-← Previous: [Amazon Redshift](./05_amazon_redshift.md) | [Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
+
+**Related:** [Amazon Redshift](./05_amazon_redshift.md), [Knowledge Bases](../ai/03_amazon_bedrock_knowledge_bases.md)
+**Tags:** #aws #database

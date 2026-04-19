@@ -2,7 +2,7 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -34,4 +34,7 @@ A company with a proprietary AI document-processing solution packages it as a Sa
 Marketplace provides a global distribution channel with built-in AWS billing integration, reducing the friction of selling and buying cloud software. For buyers, it simplifies procurement and consolidates costs into a single AWS invoice.
 
 ---
-← Previous: [boto3](./02_boto3.md) | [Overview](./00_devtools_overview.md)
+↑ [Overview](./00_devtools_overview.md)
+
+**Related:** [boto3](./02_boto3.md)
+**Tags:** #aws

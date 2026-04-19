@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -371,4 +371,7 @@ For simultaneous multi-writer needs, Aurora is not currently an option.
 - [Amazon Aurora FAQs](https://aws.amazon.com/rds/aurora/faqs/)
 
 ---
-← Previous: [Amazon RDS (Relational Database Service)](./01_amazon_rds.md) | [Overview](./00_database_overview.md) | Next: [Amazon DynamoDB](./03_amazon_dynamodb.md) →
+↑ [Overview](./00_database_overview.md)
+
+**Related:** [Amazon RDS (Relational Database Service)](./01_amazon_rds.md), [Amazon DynamoDB](./03_amazon_dynamodb.md)
+**Tags:** #aws #database

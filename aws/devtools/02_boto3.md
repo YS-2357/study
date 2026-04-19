@@ -3,8 +3,8 @@ tags:
   - aws
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_devtools_overview.md)
@@ -81,4 +81,7 @@ Every Python-based service in this repo that touches AWS uses boto3 — Bedrock 
 | Differences | boto3 is Python-only; other languages use separate SDKs (`aws-sdk-js`, `aws-sdk-go`, etc.) — all wrap the same underlying REST APIs |
 
 ---
-← Previous: [AWS CDK (Cloud Development Kit)](./01_aws_cdk.md) | [Overview](./00_devtools_overview.md) | Next: [AWS Marketplace](./03_aws_marketplace.md) →
+↑ [Overview](./00_devtools_overview.md)
+
+**Related:** [AWS CDK (Cloud Development Kit)](./01_aws_cdk.md), [AWS Marketplace](./03_aws_marketplace.md), [S3 buckets](../storage/01_amazon_s3.md), [DynamoDB items](../database/03_amazon_dynamodb.md), [IAM role](../identity/01_amazon_iam.md), [Amazon Bedrock](../ai/01_amazon_bedrock.md), [Amazon CloudWatch](../ops/01_amazon_cloudwatch.md), [AWS SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md)
+**Tags:** #aws #tooling
