@@ -1,7 +1,7 @@
 ---
 tags:
   - git
-created_at: 260402-000000
+created_at: 2026-04-02T00:00:00
 updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
