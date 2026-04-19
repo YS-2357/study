@@ -21,13 +21,16 @@
       "Bash(find C:\\\\Users\\\\user\\\\study *)",
       "Bash(find \"C:\\\\Users\\\\user\\\\study\" -name \"*.md\" -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" ! -path \"*/.codex/*\" ! -path \"*/.obsidian/*\" ! -path \"*/node_modules/*\" -exec grep -H \"00_overview\\\\.md\" {} \\\\;)",
       "Bash(find \"C:\\\\Users\\\\user\\\\study\" -name \"*.md\" -type f ! -path \"*/.git/*\" ! -path \"*/.claude/*\" ! -path \"*/.codex/*\" ! -path \"*/.obsidian/*\" ! -path \"*/node_modules/*\" -exec grep -l \"00_overview\\\\.md\" {} \\\\;)",
-      "Bash(xargs -0 grep \"00_overview\\\\.md\")"
+      "Bash(xargs -0 grep \"00_overview\\\\.md\")",
+      "Skill(update-config)",
+      "Bash(mv \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\AgentCore Intro-Korean.pdf\" \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\processed\\\\\" && mv \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\Strands Agents - jhrhee.pdf\" \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\processed\\\\\")",
+      "Bash(mv \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\AgentCore_Gateway_소개.pdf\" \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\processed\\\\\" && mv \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\AgentCore_Memory_소개.pdf\" \"C:\\\\Users\\\\USER\\\\내 드라이브\\\\Study\\\\study\\\\raw\\\\processed\\\\\")"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "sequential-thinking"
   ],
-  "enableAllProjectMcpServers": true,
   "statusLine": {
     "type": "command",
     "command": "python C:/Users/user/.claude/statusline.py",
