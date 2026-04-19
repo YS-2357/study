@@ -62,7 +62,7 @@ The Bedrock Agents note has a worked trace: the agent queries the knowledge base
 
 When to pick: fast setup, standard FAQ + ticket flow, no custom reasoning loop.
 
-### 3.2. Pattern B — Production Custom Agent
+### Pattern B — Production Custom Agent
 
 Code-owned agent running under production infrastructure.
 
