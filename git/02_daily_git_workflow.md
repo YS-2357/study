@@ -50,7 +50,7 @@ Use [WSL Terminal and VS Code Workflow](../tooling/01_wsl_terminal_and_vscode.md
 If `git push` cannot authenticate, this repo keeps a token-based push pattern in `.env.example`.
 
 ```bash
-set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" push origin main
+set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf '%s:%s' "$GITHUB_USERNAME" "$GITHUB_TOKEN" | base64 -w0)" push origin main
 ```
 
 What that means:
