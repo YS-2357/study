@@ -78,8 +78,11 @@ recent_editor: CLAUDE
 | `created_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | Set once on creation. Not auto-corrected |
 | `updated_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | AI must update on every edit. Auto-corrected by PostToolUse hook |
 | `recent_editor` | `CLAUDE`, `CODEX`, `KIRO`, `HUMAN` | AI must set on every edit |
+| `source` | list of slugs | Optional. Ingested source pointers — see [09_ingest.md §4](09_ingest.md) |
 
 **KST enforcement:** All timestamps use Korean time (UTC+9). Get the current stamp with plain `date +"%Y-%m-%dT%H:%M:%S"` — **do not** use `TZ=Asia/Seoul date`, which silently returns UTC on Git Bash for Windows. The `updated_at` field is auto-corrected after every Write/Edit by `.claude/hooks/normalize-timestamp.sh`, so minor drift from real time is fixed automatically; `created_at` is not corrected and must be set correctly at creation time.
+
+**Source tracking:** When a note absorbs content from a raw source, append a short filename-safe slug to the `source:` list. The slug points to a file that may or may not exist in `raw/processed/` on any given PC — the slug itself is the authoritative pointer, not the file. See [09_ingest.md](09_ingest.md).
 
 ### 3.2. Tags
 
