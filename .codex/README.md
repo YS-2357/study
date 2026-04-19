@@ -46,7 +46,7 @@ Safe recurring approvals for this repository:
 - Token-based push:
 
 ```bash
-set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'YS-2357:%s' "$GITHUB_TOKEN" | base64 -w0)" push origin main
+set -a && source .env && set +a && git -c credential.helper= -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf '%s:%s' "$GITHUB_USERNAME" "$GITHUB_TOKEN" | base64 -w0)" push origin main
 ```
 
 Prefer plain `git push origin main` when the repo-local credential helper is configured. Use token-wrapped push commands only as a fallback when plain push cannot authenticate.
