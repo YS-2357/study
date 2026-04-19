@@ -4,11 +4,11 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T10:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-19T19:06:00
+recent_editor: CODEX
 source:
-  - agentcore_intro_korean_2026-04
-  - agentcore_memory_소개_2026-04
+  - agentcore_intro_korean_2026_04
+  - agentcore_memory_intro_2026_04
 ---
 
 ↑ [Overview](./00_agentcore_overview.md)
@@ -17,6 +17,9 @@ source:
 
 ## What It Is
 AgentCore Memory is the Amazon Bedrock AgentCore capability for storing agent context across interactions. The [AgentCore developer guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html) lists Memory as a service that helps agents maintain useful context beyond a single request.
+
+## Analogy
+AgentCore Memory is like a notebook beside the agent: short-term pages keep the current conversation in view, while long-term pages preserve reusable facts for later sessions.
 
 ## How It Works
 An agent writes useful information from a session into Memory and retrieves relevant context in later sessions. This keeps the agent code from needing to build a custom database, retrieval layer, and retention strategy before it can remember user preferences or prior work.
@@ -89,7 +92,7 @@ strategies=[
 ]
 ```
 
-Semantic strategy default retention: **365 days**.
+Set retention deliberately for long-term strategies instead of assuming raw session history is permanent.
 
 ## Core API Flow
 
@@ -135,7 +138,7 @@ def post_model_hook(state):
     return state
 ```
 
-### LlamaIndex (365-day long-term retention focus)
+### LlamaIndex (long-term retention focus)
 ```python
 from agentcore_memory import AgentCoreMemory
 
