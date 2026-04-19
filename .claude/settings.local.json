@@ -12,9 +12,7 @@
       "Skill(update-config)",
       "Bash(where python *)",
       "Bash(where python3 *)",
-<<<<<<< HEAD
-      "Bash(python -m json.tool)"
-=======
+      "Bash(python -m json.tool)",
       "Bash(python \"C:/Users/USER/.claude/statusline.py\")",
       "Bash(where python.exe)",
       "Bash(py --version)",
@@ -23,7 +21,6 @@
       "Bash(py *)",
       "Bash(command -v python)",
       "Bash(command -v python3)"
->>>>>>> dbdfdae (auto: update .claude/settings.local.json and 1 more)
     ]
   },
   "enableAllProjectMcpServers": true,
