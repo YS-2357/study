@@ -3,15 +3,15 @@ tags:
   - git
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-18T12:13:28
-recent_editor: CLAUDE
+updated_at: 2026-04-20T08:46:00
+recent_editor: CODEX
 ---
 
 # Git Guide
 
 Git workflow and push commands for this repository.
 
-The repo is designed for **multi-PC sync**: everything except `.env` (local secrets) is tracked and pushed, so you can clone on another machine, drop in `.env`, and continue exactly where you left off. That's why auto-push fires on every edit and why `.obsidian/workspace.json`, agent configs, and hooks are all committed.
+The repo is designed for **multi-PC sync**: notes, rules, hooks, and agent configs are tracked and pushed, so you can clone on another machine, drop in `.env`, and continue with the same study content and automation. Local secrets and volatile UI state stay out of Git, including `.env`, `raw/`, and `.obsidian/workspace.json`.
 
 ## 1. Environment Setup
 

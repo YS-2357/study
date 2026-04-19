@@ -18,6 +18,7 @@ These things stay local-only:
 
 - `.env` — secrets (tokens, credentials).
 - `raw/` — source material for ingest (articles, PDFs, transcripts). Sources are often too heavy to sync and may be personal; they're tracked conceptually via the `source:` frontmatter field on the notes they produced, not as files. See [rules/09_ingest.md](rules/09_ingest.md).
+- `.obsidian/workspace.json` - per-PC Obsidian pane layout and recent-file state.
 
 Agent-specific automation and skills are separated on purpose: Codex-owned files belong under `.codex/`, Claude-owned files belong under `.claude/`, and shared Git entrypoints belong under `.githooks/`.
 When Codex works in this repo, `.claude/` is out of scope unless the user explicitly asks for Claude-specific changes.
