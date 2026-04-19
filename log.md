@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-19T15:16:34
+recent_editor: CODEX
 ---
 
 # Log
@@ -54,3 +54,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Fixed: hardcoded GitHub username `YS-2357` in token-based push snippets replaced with `$GITHUB_USERNAME` in `.claude/README.md`, `.codex/README.md`, `git/02_daily_git_workflow.md`.
 - Fixed: duplicate Fargate link in `aws/compute/03_aws_lambda.md` Related list; added `.claude/dedup_related.py` for future passes.
 - Verified: no other concept-note footers carry duplicate targets.
+
+## [2026-04-19T15:16:34] maintenance | log.md validation
+- Fixed: `.codex/hooks/pre-push` now treats root `log.md` as special Markdown, not a concept note.
+- Reason: `log.md` is an append-only operational timeline and should keep frontmatter/security checks without requiring concept-note sections or footer.
