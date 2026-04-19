@@ -61,7 +61,7 @@ What that means:
 | `source .env` | Load `GITHUB_TOKEN` from the local `.env` file |
 | `set +a` | Stop auto-exporting variables |
 | `git -c credential.helper=` | Ignore any broken local Git credential helper for this one command |
-| `http.https://github.com/.extraheader=...` | Attach an Authorization header built from `YS-2357` and `$GITHUB_TOKEN` |
+| `http.https://github.com/.extraheader=...` | Attach an Authorization header built from `$GITHUB_USERNAME` and `$GITHUB_TOKEN` |
 | `push origin main` | Push local `main` to the `origin` remote |
 
 ## Example
