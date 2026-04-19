@@ -4,10 +4,10 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T10:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-19T19:06:00
+recent_editor: CODEX
 source:
-  - strands_jhrhee_2026-04
+  - strands_jhrhee_2026_04
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -247,7 +247,7 @@ Separate evaluation framework (`strands-evals`) for testing agents:
 
 ## Similar Libraries
 
-Strands isn't the only code-first agent framework. Quick map of the landscape (placeholder — each library deserves its own note later):
+Strands isn't the only code-first agent framework. Quick map of the landscape:
 
 | Library | Vendor | Positioning | How it differs from Strands |
 |---------|--------|-------------|-----------------------------|
