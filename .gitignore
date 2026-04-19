@@ -13,3 +13,10 @@
 
 # Repo-local Codex MCP dependencies
 .codex/mcp/node_modules/
+
+# Raw source inbox: sources are local-only (too heavy for multi-PC sync).
+# Only raw/README.md is tracked so the folder purpose is documented on fresh clones.
+# Sources are linked from notes via the `source:` frontmatter field; the file itself
+# may or may not exist on any given PC.
+raw/*
+!raw/README.md
