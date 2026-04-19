@@ -146,7 +146,7 @@ Files without numbers:
 
 ## 7. When To Update Navigation
 
-1. Adding a new note - update previous note's "Next" link
-2. Removing a note - repair broken links
-3. Renaming a note - update all references
-4. Reordering notes - update all affected footers
+1. **Adding a new note** — add an entry in the domain overview; add it to the `Related` list of any existing note whose topic connects; add at least one inbound link from somewhere so the new note isn't an orphan.
+2. **Removing a note** — remove it from every `Related` list that referenced it; repair any inline cross-links; remove the overview entry.
+3. **Renaming a note** — update all relative-path references (see [07_scalability.md §8](07_scalability.md) for the sed pattern).
+4. **Editing a note's scope** — revisit its `Related` list; add notes that became relevant, remove notes that no longer apply.
