@@ -96,6 +96,6 @@ Watch for these and reorganize when ≥2 apply:
 - A domain's `00_{domain}_overview.md` has three or more section headings grouping notes (`### Compute`, `### Storage`, etc.) — the groups are begging to be subdomains.
 - Cross-references between specific note clusters within a domain outnumber references to the rest of the domain.
 - `find` or tab-completion in the directory is slow or painful to scan.
-- Multiple notes' prev/next chains feel arbitrary because the domain contains unrelated themes in the same sequence.
+- Cross-links within the domain cluster into disconnected subgraphs — Obsidian's graph view shows isolated islands sharing no bridges.
 
 When you reorganize, **update the rules** if you discover a pattern that should become a convention. Rules evolve alongside the repo.
