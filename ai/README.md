@@ -11,7 +11,7 @@ recent_editor: CLAUDE
 AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for the concept hub.
 
 - `README.md`: This file.
-- `00_ai_overview.md`: Study hub and navigation.
+- `00_ai_overview.md`: Concept hub and navigation.
 - `01_agent.md`: What an agent is.
 - `02_harness.md`: The runtime environment around the agent.
 - `03_agents_md.md`: Repo-level instruction files.
