@@ -5,8 +5,8 @@ tags:
   - networking
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_foundation_overview.md)
@@ -422,4 +422,7 @@ A well-planned VPC with proper CIDR allocation, subnet layout, and routing preve
 - [What is Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 
 ---
-← Previous: [Points of Presence (PoP)](03_pop.md) | [Overview](./00_foundation_overview.md) | Next: [Subnet](05_subnet.md) →
+↑ [Overview](./00_foundation_overview.md)
+
+**Related:** [Points of Presence (PoP)](03_pop.md), [Subnet](05_subnet.md), [Networking Basics - DNS](../../networking/04_dns.md)
+**Tags:** #aws #infrastructure #networking #security

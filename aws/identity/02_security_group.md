@@ -5,8 +5,8 @@ tags:
   - networking
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_identity_overview.md)
@@ -329,4 +329,7 @@ For inbound traffic, **NACL is evaluated first, then Security Group**.
 - [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
 
 ---
-← Previous: [Amazon IAM](01_amazon_iam.md) | [Overview](./00_identity_overview.md)
+↑ [Overview](./00_identity_overview.md)
+
+**Related:** [Amazon IAM](01_amazon_iam.md), [Networking Basics - Protocols](../../networking/01_protocols.md), [Addressing](../../networking/02_addressing.md), [OSI Model](../../networking/03_osi_model.md)
+**Tags:** #aws #security #networking #infrastructure

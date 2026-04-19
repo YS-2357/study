@@ -4,7 +4,7 @@ tags:
   - serverless
   - networking
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -107,4 +107,7 @@ Lambda has no public URL by default. API Gateway gives it one. It also decouples
 > **Tip:** The API Gateway URL is the only thing the frontend needs to know. All routing, auth, and throttling stays in the gateway layer, not in Lambda code.
 
 ---
-← Previous: [Amazon CloudFront](./02_amazon_cloudfront.md) | [Overview](./00_networking_overview.md) | Next: [AWS Shield](./04_aws_shield.md) →
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [Amazon CloudFront](./02_amazon_cloudfront.md), [AWS Shield](./04_aws_shield.md)
+**Tags:** #aws #serverless #networking

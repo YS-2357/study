@@ -3,7 +3,7 @@ tags:
   - aws
   - infrastructure
 created_at: 2026-04-05T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -117,4 +117,7 @@ Understanding PoPs explains why edge services reduce latency — content is serv
 - [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
 
 ---
-← Previous: [Availability Zone](02_availability_zone.md) | [Overview](./00_foundation_overview.md) | Next: [Amazon VPC](04_amazon_vpc.md) →
+↑ [Overview](./00_foundation_overview.md)
+
+**Related:** [Availability Zone](02_availability_zone.md), [Amazon VPC](04_amazon_vpc.md)
+**Tags:** #aws #infrastructure

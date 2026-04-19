@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -205,4 +205,7 @@ while Shield Advanced adds real-time visibility, SRT support, and cost protectio
 - [AWS Shield FAQs](https://aws.amazon.com/shield/faqs/)
 
 ---
-← Previous: [Amazon API Gateway](./03_amazon_api_gateway.md) | [Overview](./00_networking_overview.md) | Next: [AWS WAF (Web Application Firewall)](./05_aws_waf.md) →
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [Amazon API Gateway](./03_amazon_api_gateway.md), [AWS WAF (Web Application Firewall)](./05_aws_waf.md), [OSI model doc](../../networking/03_osi_model.md)
+**Tags:** #aws #security

@@ -4,8 +4,8 @@ tags:
   - infrastructure
   - networking
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_foundation_overview.md)
@@ -175,4 +175,7 @@ Proper public/private separation keeps databases and internal services off the i
 - [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
 
 ---
-← Previous: [Amazon VPC](04_amazon_vpc.md) | [Overview](./00_foundation_overview.md)
+↑ [Overview](./00_foundation_overview.md)
+
+**Related:** [Amazon VPC](04_amazon_vpc.md), [Networking Basics - Protocols](../../networking/01_protocols.md)
+**Tags:** #aws #infrastructure #networking

@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_identity_overview.md)
@@ -574,4 +574,7 @@ Longer sessions reduce re-authentication frequency but increase security risk if
 - [What is IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
 ---
-[Overview](./00_identity_overview.md) | Next: [Security Group](02_security_group.md) →
+↑ [Overview](./00_identity_overview.md)
+
+**Related:** [Security Group](02_security_group.md)
+**Tags:** #aws #security

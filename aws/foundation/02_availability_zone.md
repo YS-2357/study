@@ -3,7 +3,7 @@ tags:
   - aws
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -110,4 +110,7 @@ Spreading resources across at least two AZs is the foundation of high availabili
 - [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
 ---
-← Previous: [Region](01_region.md) | [Overview](./00_foundation_overview.md) | Next: [Points of Presence (PoP)](03_pop.md) →
+↑ [Overview](./00_foundation_overview.md)
+
+**Related:** [Region](01_region.md), [Points of Presence (PoP)](03_pop.md)
+**Tags:** #aws #infrastructure

@@ -3,8 +3,8 @@ tags:
   - aws
   - security
 created_at: 2026-03-20T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -239,4 +239,7 @@ For DDoS protection tiers, use AWS Shield.
 - [AWS WAF FAQs](https://aws.amazon.com/waf/faqs/)
 
 ---
-← Previous: [AWS Shield](./04_aws_shield.md) | [Overview](./00_networking_overview.md)
+↑ [Overview](./00_networking_overview.md)
+
+**Related:** [AWS Shield](./04_aws_shield.md), [CloudFront](./02_amazon_cloudfront.md)
+**Tags:** #aws #security
