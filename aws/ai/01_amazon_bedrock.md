@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -161,4 +161,7 @@ Tokens ≈ billing units. ~1 token ≈ 0.75 English words, ~1 token ≈ 0.5 Kore
 - Cross-Region inference helps with throughput but adds complexity
 
 ---
-[Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Guardrails](./02_amazon_bedrock_guardrails.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Guardrails](./02_amazon_bedrock_guardrails.md), [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md), [Agents](./04_amazon_bedrock_agents.md), [AgentCore](./10_amazon_bedrock_agentcore.md)
+**Tags:** #ai #aws #ml

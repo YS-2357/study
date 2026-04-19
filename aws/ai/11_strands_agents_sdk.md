@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T20:20:05
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -285,4 +285,7 @@ Strands isn't the only code-first agent framework. Quick map of the landscape (p
 - Smaller models may struggle with multi-step reasoning
 
 ---
-← Previous: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) | [Overview](./00_ai_overview.md) | Next: [Bedrock Integration Patterns](./12_amazon_bedrock_integration_patterns.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md), [Bedrock Integration Patterns](./12_amazon_bedrock_integration_patterns.md), [tool](../../ai/04_tools.md), [MCP](../../ai/07_mcp.md)
+**Tags:** #ai #aws #ml

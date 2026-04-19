@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -181,4 +181,7 @@ They are evolutionary layers, not competitors:
 - [AWS Prescriptive Guidance: AgentCore](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/amazon-bedrock-agentcore.html)
 
 ---
-← Previous: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) | [Overview](./00_ai_overview.md) | Next: [Strands Agents SDK](./11_strands_agents_sdk.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md), [Strands Agents SDK](./11_strands_agents_sdk.md), [Runtime](agentcore/01_runtime.md), [Memory](agentcore/02_memory.md), [Gateway](agentcore/03_gateway.md), [Identity](agentcore/04_identity.md), [Code Interpreter](agentcore/05_code_interpreter.md), [Browser](agentcore/06_browser.md), [Observability](agentcore/07_observability.md), [Evaluations](agentcore/08_evaluations.md), [Policy](agentcore/09_policy.md), [Bedrock Agents](./04_amazon_bedrock_agents.md)
+**Tags:** #ai #aws #ml

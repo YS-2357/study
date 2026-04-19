@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-18T20:19:44
-updated_at: 2026-04-18T20:27:49
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -122,4 +122,7 @@ Guardrails evaluate a Bedrock model call — they don't wrap an agent globally. 
 AgentCore Memory charges for storage and retrieval. Reserve it for context the agent genuinely needs to reason about across sessions; don't use it as a generic database.
 
 ---
-← Previous: [Strands Agents SDK](./11_strands_agents_sdk.md) | [Overview](./00_ai_overview.md)
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Strands Agents SDK](./11_strands_agents_sdk.md), [Bedrock](./01_amazon_bedrock.md), [Guardrails](./02_amazon_bedrock_guardrails.md), [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md), [Bedrock Agents](./04_amazon_bedrock_agents.md), [AgentCore](./10_amazon_bedrock_agentcore.md), [Data Automation](./08_amazon_bedrock_data_automation.md), [Prompt Management](./06_amazon_bedrock_prompt_management.md), [Memory](./agentcore/02_memory.md), [Gateway](./agentcore/03_gateway.md), [Observability](./agentcore/07_observability.md)
+**Tags:** #ai #aws #ml

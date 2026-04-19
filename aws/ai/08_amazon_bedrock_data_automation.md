@@ -4,8 +4,8 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -105,4 +105,7 @@ Processing documents at scale with custom extraction code is fragile — every n
 | Differences | Unlike [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md) which chunks and indexes for retrieval, BDA extracts specific structured fields from each document |
 
 ---
-← Previous: [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md), [Amazon Bedrock Custom Models](./09_amazon_bedrock_custom_models.md), [Amazon S3](../storage/01_amazon_s3.md), [AWS Lambda](../compute/03_aws_lambda.md), [Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md)
+**Tags:** #aws #ml #storage

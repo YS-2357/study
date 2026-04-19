@@ -5,8 +5,8 @@ tags:
   - ml
   - computing
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -82,4 +82,7 @@ Base models are generalists. Fine-tuning makes them specialists: consistent outp
 | Differences | Fine-tuning changes model weights; [Prompt Management](./06_amazon_bedrock_prompt_management.md) and few-shot prompting keep weights frozen — try prompting approaches before committing to fine-tuning |
 
 ---
-← Previous: [Amazon Bedrock Data Automation](./08_amazon_bedrock_data_automation.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Data Automation](./08_amazon_bedrock_data_automation.md), [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md), [Prompt Management](./06_amazon_bedrock_prompt_management.md)
+**Tags:** #ai #aws #ml #computing

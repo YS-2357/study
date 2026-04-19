@@ -5,8 +5,8 @@ tags:
   - ml
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -85,4 +85,7 @@ Prompt quality directly affects application behavior. Without versioning, a prom
 | Differences | Unlike a config file, prompts here are paired with model settings — the "what to say" and "how the model should respond" travel together |
 
 ---
-← Previous: [Amazon Bedrock Flows](./05_amazon_bedrock_flows.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Flows](./05_amazon_bedrock_flows.md), [Amazon Bedrock Model Evaluation](./07_amazon_bedrock_model_evaluation.md), [SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md), [Agents](./04_amazon_bedrock_agents.md)
+**Tags:** #ai #aws #ml #tooling

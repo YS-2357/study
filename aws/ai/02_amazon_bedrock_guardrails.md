@@ -5,7 +5,7 @@ tags:
   - ml
   - security
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -122,4 +122,7 @@ A customer support chatbot attaches a guardrail with medium-strength content fil
 Guardrails let you enforce consistent safety and compliance rules across every Bedrock model without modifying your application code. A single guardrail version can be reused across models and updated centrally when policies change.
 
 ---
-← Previous: [Amazon Bedrock](./01_amazon_bedrock.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock](./01_amazon_bedrock.md), [Amazon Bedrock Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md)
+**Tags:** #ai #aws #ml #security

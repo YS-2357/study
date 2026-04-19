@@ -5,8 +5,8 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -172,4 +172,7 @@ Without RAG, models can only use their training data — they hallucinate when a
 - Default top-k is 5 — tune based on your document density and model context window
 
 ---
-← Previous: [Amazon Bedrock Guardrails](./02_amazon_bedrock_guardrails.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Guardrails](./02_amazon_bedrock_guardrails.md), [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md), [S3](../storage/01_amazon_s3.md)
+**Tags:** #ai #aws #ml #storage

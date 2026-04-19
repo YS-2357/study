@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -92,4 +92,7 @@ Flows is the right tool when the steps are known in advance and must always exec
 | Differences | Flows = fixed graph; [Agents](./04_amazon_bedrock_agents.md) = LLM decides the path at runtime |
 
 ---
-← Previous: [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Prompt Management](./06_amazon_bedrock_prompt_management.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Agents](./04_amazon_bedrock_agents.md), [Amazon Bedrock Prompt Management](./06_amazon_bedrock_prompt_management.md), [knowledge bases](./03_amazon_bedrock_knowledge_bases.md)
+**Tags:** #ai #aws #ml

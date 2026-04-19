@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -153,4 +153,7 @@ Bedrock Agents is the fastest path to a working agent on AWS — no orchestratio
 - Multi-step agents multiply all of these per reasoning step
 
 ---
-← Previous: [Amazon Bedrock Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md) | [Overview](./00_ai_overview.md) | Next: [Amazon Bedrock Flows](./05_amazon_bedrock_flows.md) →
+↑ [Overview](./00_ai_overview.md)
+
+**Related:** [Amazon Bedrock Knowledge Bases](./03_amazon_bedrock_knowledge_bases.md), [Amazon Bedrock Flows](./05_amazon_bedrock_flows.md), [Bedrock](./01_amazon_bedrock.md), [Guardrails](./02_amazon_bedrock_guardrails.md), [agentic loop](../../ai/01_agent.md), [Strands Agents SDK](./11_strands_agents_sdk.md), [AgentCore](./10_amazon_bedrock_agentcore.md)
+**Tags:** #ai #aws #ml
