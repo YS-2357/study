@@ -16,9 +16,9 @@ recent_editor: CLAUDE
 
 The Bedrock family is designed to compose — each per-service note explains one piece in isolation, but real systems stack several. This note shows the common stacks: which services you reach for together, and why.
 
-## 2. How It Works
+## How It Works
 
-### 2.1. Composition Axes
+### Composition Axes
 
 Every non-trivial Bedrock system picks one service per concern:
 
