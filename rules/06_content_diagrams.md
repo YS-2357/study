@@ -155,12 +155,13 @@ What a reader can do from any concept note:
 ```
                you are on a concept note
                          │
-        ┌────────────────┼─────────────────┐
-        │                │                 │
-        ▼                ▼                 ▼
-    ↑ Overview     ← Prev note       Next note →
-        │                │                 │
-        ▼                └── lateral in same domain ──┘
+        ┌────────────────┼──────────────────┬──────────────┐
+        │                │                  │              │
+        ▼                ▼                  ▼              ▼
+    ↑ Overview    inline link in prose   Related list   #tag pane
+        │                │                  │              │
+        │                └── jump by concept, not order ───┘
+        ▼
   00_{domain}_
    overview.md
         │
