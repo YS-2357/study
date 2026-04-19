@@ -84,7 +84,7 @@ When to pick: custom reasoning loops, full code control, cross-session state, ag
 
 Data Automation extracts structured fields from PDFs and images; the output feeds Knowledge Bases for retrieval by either orchestration path above. Use when source material isn't already clean text.
 
-## 4. Why It Matters
+## Why It Matters
 
 The hardest design decision is orchestration path, not individual services. Once managed vs. custom is chosen, the rest is layering:
 
