@@ -663,5 +663,5 @@ Alternative serverless options for heavier workloads:
 ---
 ↑ [Overview](./00_compute_overview.md)
 
-**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../networking/03_amazon_api_gateway.md), [Fargate](./04_aws_fargate.md)
+**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../networking/03_amazon_api_gateway.md)
 **Tags:** #aws #serverless #computing
