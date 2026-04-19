@@ -33,7 +33,7 @@ study/
 ├── ai/                             ← concept domain
 │   ├── 00_ai_overview.md           ← domain study hub
 │   ├── README.md                   ← folder index
-│   └── 01_*.md … 15_*.md           ← concept notes (study order)
+│   └── 01_*.md … 15_*.md           ← concept notes (NN_ is an identifier, not a rank)
 │
 ├── aws/                            ← flat concept domain
 │   ├── 00_aws_overview.md
