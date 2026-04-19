@@ -3,7 +3,7 @@ tags:
   - aws
   - database
 created_at: 2026-04-05T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -102,4 +102,7 @@ While newer services like Glue and Step Functions are preferred for new projects
 - [AWS Data Pipeline Developer Guide](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html)
 
 ---
-← Previous: [Amazon EMR (Elastic MapReduce)](./02_amazon_emr.md) | [Overview](./00_analytics_overview.md) | Next: [Amazon SageMaker AI](./04_amazon_sagemaker.md) →
+↑ [Overview](./00_analytics_overview.md)
+
+**Related:** [Amazon EMR (Elastic MapReduce)](./02_amazon_emr.md), [Amazon SageMaker AI](./04_amazon_sagemaker.md)
+**Tags:** #aws #database

@@ -3,7 +3,7 @@ tags:
   - aws
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -157,4 +157,7 @@ Spinning clusters up on demand and shutting them down after keeps costs proporti
 - [Amazon EMR FAQs](https://aws.amazon.com/emr/faqs/)
 
 ---
-← Previous: [Amazon Kinesis](./01_amazon_kinesis.md) | [Overview](./00_analytics_overview.md) | Next: [AWS Data Pipeline](./03_aws_data_pipeline.md) →
+↑ [Overview](./00_analytics_overview.md)
+
+**Related:** [Amazon Kinesis](./01_amazon_kinesis.md), [AWS Data Pipeline](./03_aws_data_pipeline.md)
+**Tags:** #aws #computing

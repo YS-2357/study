@@ -4,7 +4,7 @@ tags:
   - container
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -93,4 +93,7 @@ The packaging decision is a runtime constraint, not a preference. When your depe
 > **Tip:** Use `DockerImageFunction` in CDK from the start if your stack includes ML or agent frameworks. Switching from zip to container image mid-project means rewriting the Lambda construct.
 
 ---
-← Previous: [AWS Fargate](04_aws_fargate.md) | [Overview](./00_compute_overview.md) | Next: [Mangum](06_mangum.md) →
+↑ [Overview](./00_compute_overview.md)
+
+**Related:** [AWS Fargate](04_aws_fargate.md), [Mangum](06_mangum.md)
+**Tags:** #aws #container #serverless

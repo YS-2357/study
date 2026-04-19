@@ -4,8 +4,8 @@ tags:
   - serverless
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -94,4 +94,7 @@ Without Mangum, you would rewrite your entire FastAPI app as raw Lambda handlers
 > **Tip:** The `handler` name in `main.py` must match the CMD in the Dockerfile exactly. `CMD ["main.handler"]` means: file `main.py`, object `handler`.
 
 ---
-← Previous: [Lambda Container Images](05_lambda_container_images.md) | [Overview](./00_compute_overview.md)
+↑ [Overview](./00_compute_overview.md)
+
+**Related:** [Lambda Container Images](05_lambda_container_images.md), [AWS Lambda](./03_aws_lambda.md)
+**Tags:** #aws #serverless #tooling

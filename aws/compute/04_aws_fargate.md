@@ -4,7 +4,7 @@ tags:
   - container
   - serverless
 created_at: 2026-04-05T00:00:00
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -140,4 +140,7 @@ You define CPU, memory, and your container image — Fargate handles provisionin
 - [AWS Fargate FAQs](https://aws.amazon.com/fargate/faqs/)
 
 ---
-← Previous: [AWS Lambda](03_aws_lambda.md) | [Overview](./00_compute_overview.md) | Next: [Lambda Container Images](05_lambda_container_images.md) →
+↑ [Overview](./00_compute_overview.md)
+
+**Related:** [AWS Lambda](03_aws_lambda.md), [Lambda Container Images](05_lambda_container_images.md)
+**Tags:** #aws #container #serverless

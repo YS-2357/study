@@ -4,8 +4,8 @@ tags:
   - serverless
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-18T18:37:25
-recent_editor: CODEX
+updated_at: 2026-04-19T09:11:51
+recent_editor: CLAUDE
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -661,4 +661,7 @@ Alternative serverless options for heavier workloads:
 - [What is AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 
 ---
-← Previous: [Auto Scaling](02_auto_scaling.md) | [Overview](./00_compute_overview.md) | Next: [AWS Fargate](04_aws_fargate.md) →
+↑ [Overview](./00_compute_overview.md)
+
+**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../networking/03_amazon_api_gateway.md), [Fargate](./04_aws_fargate.md)
+**Tags:** #aws #serverless #computing
