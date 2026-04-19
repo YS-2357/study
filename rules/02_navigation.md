@@ -12,9 +12,13 @@ Rules for navigation headers and footers in study notes.
 
 ## 1. Navigation Hierarchy
 
-Every file participates in a two-level navigation hierarchy:
-- **Up**: Link to parent overview
-- **Lateral**: Links to previous/next notes in sequence
+Navigation is **associative, not linear**. Notes form a graph connected by inline links, shared tags, and explicit Related lists — not a prev/next sequence. Every concept note points:
+
+- **Up**: to its domain overview (and from overview up to `home.md`).
+- **Outward**: to related notes via inline links in prose and an explicit `Related` list in the footer.
+- **By tag**: Obsidian's tag pane groups notes that share frontmatter tags.
+
+Readers navigate by following their current line of thought, not a preset study order.
 
 ## 2. Concept Note Navigation
 
