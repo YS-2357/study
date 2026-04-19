@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -32,4 +32,7 @@ A support agent can remember that a user prefers concise answers and usually ask
 Agents are often stateless by default. Memory gives a production agent continuity without forcing every team to design its own persistence model.
 
 ---
-← Previous: [AgentCore Runtime](01_runtime.md) | [Overview](./00_agentcore_overview.md) | Next: [AgentCore Gateway](03_gateway.md) →
+↑ [Overview](./00_agentcore_overview.md)
+
+**Related:** [AgentCore Runtime](01_runtime.md), [AgentCore Gateway](03_gateway.md), [AgentCore Evaluations](08_evaluations.md)
+**Tags:** #ai #aws #ml

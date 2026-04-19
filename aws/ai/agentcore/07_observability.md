@@ -5,7 +5,7 @@ tags:
   - ml
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -33,4 +33,7 @@ When a multi-step agent returns a wrong answer, Observability can help inspect w
 Agent failures are often workflow failures, not just code exceptions. Observability gives teams the evidence needed to improve prompts, tools, policies, and runtime behavior.
 
 ---
-← Previous: [AgentCore Browser](06_browser.md) | [Overview](./00_agentcore_overview.md) | Next: [AgentCore Evaluations](08_evaluations.md) →
+↑ [Overview](./00_agentcore_overview.md)
+
+**Related:** [AgentCore Browser](06_browser.md), [AgentCore Evaluations](08_evaluations.md)
+**Tags:** #ai #aws #ml #monitoring

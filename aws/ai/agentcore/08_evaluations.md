@@ -5,7 +5,7 @@ tags:
   - ml
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T11:46:13
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -33,4 +33,7 @@ A release candidate agent can be evaluated on task success, answer helpfulness, 
 Production agents need measurement, not just manual spot checks. Evaluations turn quality into something teams can track over time.
 
 ---
-← Previous: [AgentCore Observability](07_observability.md) | [Overview](./00_agentcore_overview.md) | Next: [AgentCore Policy](09_policy.md) →
+↑ [Overview](./00_agentcore_overview.md)
+
+**Related:** [AgentCore Observability](07_observability.md), [AgentCore Policy](09_policy.md)
+**Tags:** #ai #aws #ml #monitoring

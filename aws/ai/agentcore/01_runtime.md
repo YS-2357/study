@@ -5,7 +5,7 @@ tags:
   - ml
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -33,4 +33,7 @@ An agent built with [Strands Agents SDK](../11_strands_agents_sdk.md) can run lo
 Runtime is the compute anchor for AgentCore. Without it, Memory, Gateway, Identity, Observability, Evaluations, Code Interpreter, Browser, and Policy are supporting capabilities around agent execution rather than a complete production agent platform.
 
 ---
-← Previous: [AgentCore Services Overview](./00_agentcore_overview.md) | [Overview](./00_agentcore_overview.md) | Next: [AgentCore Memory](02_memory.md) →
+↑ [Overview](./00_agentcore_overview.md)
+
+**Related:** [AgentCore Services Overview](./00_agentcore_overview.md), [AgentCore Memory](02_memory.md), [AgentCore Observability](07_observability.md), [AgentCore Identity](04_identity.md), [AgentCore Gateway](03_gateway.md), [AgentCore Policy](09_policy.md), [Strands Agents SDK](../11_strands_agents_sdk.md)
+**Tags:** #ai #aws #ml #serverless

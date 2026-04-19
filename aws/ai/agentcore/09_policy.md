@@ -5,7 +5,7 @@ tags:
   - ml
   - security
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-18T12:30:09
+updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
@@ -33,4 +33,7 @@ A finance agent may be allowed to read invoices but blocked from issuing refunds
 Prompt instructions are not enough for high-risk actions. Policy gives production agents deterministic boundaries that are easier to audit and reason about.
 
 ---
-← Previous: [AgentCore Evaluations](08_evaluations.md) | [Overview](./00_agentcore_overview.md) | Next: [Amazon Bedrock AgentCore](../10_amazon_bedrock_agentcore.md) →
+↑ [Overview](./00_agentcore_overview.md)
+
+**Related:** [AgentCore Evaluations](08_evaluations.md), [Amazon Bedrock AgentCore](../10_amazon_bedrock_agentcore.md), [AgentCore Gateway](03_gateway.md)
+**Tags:** #ai #aws #ml #security
