@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-01T00:00:00
-updated_at: 2026-04-20T13:50:42
-recent_editor: CLAUDE
+updated_at: 2026-04-20T13:58:52
+recent_editor: CODEX
 ---
 
 # AI — Overview
@@ -49,7 +49,7 @@ For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore
 | [Codex](codex/00_codex_overview.md) | OpenAI's AI coding agent |
 | [Gemini](gemini/00_gemini_overview.md) | Google's AI model family |
 | [Perplexity](perplexity/00_perplexity_overview.md) | AI-powered search |
-| [Copilot](copilot/00_copilot_overview.md) | GitHub Copilot — IDE coding assistant |
+| [Copilot](copilot/00_copilot_overview.md) | Microsoft Copilot - AI assistant product family |
 | [Kiro](kiro/00_kiro_overview.md) | AWS Kiro — AI coding agent (tool-usage angle) |
 
 ---
