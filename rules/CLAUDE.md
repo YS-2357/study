@@ -27,7 +27,7 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 
 Hook scripts in `.claude/hooks/`.
 
-## 3. Git Commands
+## 4. Git Commands
 
 Run git as individual calls:
 
