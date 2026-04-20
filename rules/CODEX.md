@@ -14,7 +14,11 @@ I am **Codex**, OpenAI's agent.
 
 All rules are in [AGENTS.md](AGENTS.md). This file contains only platform-specific notes.
 
-## 2. Automation Location
+## 2. Session Start
+
+Run `git pull origin main` before any read or write operation (multi-PC sync repo).
+
+## 3. Automation Location
 
 - Codex keeps repo-local automation in `.codex/`
 - Shared Git hook entrypoints in `.githooks/`
