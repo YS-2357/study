@@ -23,7 +23,7 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 - Codex keeps repo-local automation in `.codex/`
 - Shared Git hook entrypoints in `.githooks/`
 
-## 3. Permission Style
+## 4. Permission Style
 
 Request persistent approval only for bounded Git actions:
 
