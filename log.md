@@ -10,6 +10,11 @@ recent_editor: CODEX
 
 Append-only chronological record of ingest, query, and lint operations.
 
+## [2026-04-20T13:59:45] ingest | anthropic-mythos (web research)
+- Source: anthropic.com official pages, research papers, credible news
+- Created: ai/claude/01_anthropic.md, 02_claude_models.md, 03_constitutional_ai.md, 04_rsp.md, 05_interpretability.md, 06_claude_character.md
+- Updated: ai/claude/00_claude_overview.md (hub rewrite), ai/00_ai_overview.md (Claude row)
+
 ## Format
 
 ```
