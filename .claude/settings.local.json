@@ -20,7 +20,9 @@
       "Bash(/c/Users/USER/AppData/Local/Microsoft/WindowsApps/python.exe --version)",
       "Bash(py *)",
       "Bash(command -v python)",
-      "Bash(command -v python3)"
+      "Bash(command -v python3)",
+      "Bash(ls .kiro/)",
+      "Bash(ls .codex/)"
     ]
   },
   "enableAllProjectMcpServers": true,
