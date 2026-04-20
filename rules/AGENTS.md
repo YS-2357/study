@@ -98,7 +98,7 @@ git pull origin main
 - Push after each file change
 - Never batch unrelated changes
 
-## 7. Link Maintenance
+## 8. Link Maintenance
 
 - Check for broken links after renaming/moving
 - Update all references when paths change
