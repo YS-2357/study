@@ -28,12 +28,25 @@ Foundation networking concepts needed to understand AWS services.
 
 | Port | Service |
 |------|---------|
+| 21 | FTP |
 | 22 | SSH |
+| 25 | SMTP |
+| 53 | DNS |
 | 80 | HTTP |
+| 110 | POP3 |
+| 143 | IMAP |
 | 443 | HTTPS |
+| 3000 | React dev |
 | 3306 | MySQL |
 | 3389 | RDP |
+| 5000 | Flask |
+| 5173 | Vite |
 | 5432 | PostgreSQL |
+| 6379 | Redis |
+| 8000 | FastAPI / Django |
+| 8080 | Alt HTTP |
+| 8501 | Streamlit |
+| 27017 | MongoDB |
 
 | Protocol | Reliable | Speed | Use Case |
 |----------|----------|-------|----------|
