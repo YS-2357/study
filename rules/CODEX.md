@@ -33,7 +33,7 @@ Request persistent approval only for bounded Git actions:
 
 Run Git commands as simple, single-purpose commands. Avoid wrappers.
 
-## 4. Write Commands
+## 5. Write Commands
 
 Run Git write commands with escalated permissions immediately:
 - `git add`, `git commit`, `git push`, `git pull`
