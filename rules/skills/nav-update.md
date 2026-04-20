@@ -6,7 +6,7 @@ Sync structural documents after adding, moving, renaming, or deleting notes.
 
 Run the structural-document update flow defined in [rules/AGENTS.md §9](../AGENTS.md) and [rules/02_navigation.md §7](../02_navigation.md).
 
-Trigger: any file was added, moved, renamed, or deleted. The argument should describe what changed (e.g., "added aws/compute/05_ecs.md").
+Trigger: any file was added, moved, renamed, or deleted. The argument should describe what changed (e.g., "added cloud/aws/compute/05_ecs.md").
 
 Steps:
 

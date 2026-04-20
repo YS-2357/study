@@ -134,7 +134,7 @@ Layer 4      TCP flags, ports           SYN flood              Standard + Advanc
 Layer 3      IP addresses, packets      ICMP flood             Standard + Advanced
 ```
 
-- See [OSI model doc](../../networking/03_osi_model.md) for layer details
+- See [OSI model doc](../../../networking/03_osi_model.md) for layer details
 
 ### Shield + WAF + CloudFront (Common Architecture)
 ```
@@ -207,5 +207,5 @@ while Shield Advanced adds real-time visibility, SRT support, and cost protectio
 ---
 ↑ [Overview](./00_networking_overview.md)
 
-**Related:** [Amazon API Gateway](./03_amazon_api_gateway.md), [AWS WAF (Web Application Firewall)](./05_aws_waf.md), [OSI model doc](../../networking/03_osi_model.md)
+**Related:** [Amazon API Gateway](./03_amazon_api_gateway.md), [AWS WAF (Web Application Firewall)](./05_aws_waf.md), [OSI model doc](../../../networking/03_osi_model.md)
 **Tags:** #aws #security

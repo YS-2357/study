@@ -35,7 +35,7 @@ study/
 │   ├── README.md                   ← folder index
 │   └── 01_*.md … 15_*.md           ← concept notes (NN_ is an identifier, not a rank)
 │
-├── aws/                            ← flat concept domain
+├── cloud/aws/                            ← flat concept domain
 │   ├── 00_aws_overview.md
 │   ├── README.md · CLAUDE.md · AGENTS.md
 │   ├── 01_*.md … 50_*.md
@@ -94,7 +94,7 @@ Each layer is built on the one below. Read bottom-up.
                           │
          ┌────────┬───────┼───────┬───────────┐
          ▼        ▼       ▼       ▼           ▼
-        ai/     aws/  computing/  git/   networking/  … tooling/
+        ai/     cloud/aws/  computing/  git/   networking/  … tooling/
          │       │       │        │          │
          ▼       ▼       ▼        ▼          ▼
      00_ai_  00_aws_  00_comp_ 00_git_   00_net_
@@ -103,7 +103,7 @@ Each layer is built on the one below. Read bottom-up.
      01…15   01…50    01…09    01…02    01…06
                 │
                 ▼
-          aws/agentcore/
+          cloud/aws/agentcore/
                 │
                 ▼
        00_agentcore_overview
@@ -182,7 +182,7 @@ What a reader can do from any concept note:
 Canonical note explains once. Related notes link in.
 
 ```
-  ai/11_kv_cache.md                 aws/database/04_amazon_elasticache.md
+  ai/11_kv_cache.md                 cloud/aws/database/04_amazon_elasticache.md
   ┌──────────────────┐              ┌──────────────────┐
   │ KV Cache         │              │ ElastiCache      │
   │ (canonical note) │              │                  │

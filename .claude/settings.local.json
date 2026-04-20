@@ -24,7 +24,22 @@
       "Bash(ls .kiro/)",
       "Bash(ls .codex/)",
       "Bash(python *)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./computing/|../../computing/|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./networking/|../../networking/|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./glossary\\\\.md|../../glossary.md|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./home\\\\.md|../../home.md|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./rules/|../../rules/|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./log\\\\.md|../../log.md|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./ai/|../../ai/|g')",
+      "Bash(sed -i 's|\\(aws/|\\(cloud/aws/|g' home.md)",
+      "Bash(sed -i 's|\\(azure/|\\(cloud/azure/|g' home.md)",
+      "Bash(sed -i 's|\\(gcp/|\\(cloud/gcp/|g' home.md)",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./aws/|../cloud/aws/|g')",
+      "Bash(sed -i 's|\\\\[AWS\\\\]\\(aws/|[AWS]\\(cloud/aws/|g; s|git mv aws/|git mv cloud/aws/|g; s|'\\\\''s|aws/|cloud/aws/|g' rules/07_scalability.md)",
+      "Bash(sed -i 's|aws/compute/|cloud/aws/compute/|g' rules/10_lint.md)",
+      "Bash(sed -i 's|`aws/AGENTS\\\\.md`|`cloud/aws/AGENTS.md`|g' rules/CLAUDE.md)",
+      "Bash(sed -i 's|added aws/compute/|added cloud/aws/compute/|g' rules/skills/nav-update.md)"
     ]
   },
   "enableAllProjectMcpServers": true,

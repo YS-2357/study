@@ -84,10 +84,10 @@ A browser loading `https://example.com/users/1`:
 
 ## Why It Matters
 
-HTTP is the foundation of [ALB](../aws/networking/01_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../aws/compute/03_aws_lambda.md) design, and [CloudFront](../aws/networking/02_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
+HTTP is the foundation of [ALB](../cloud/aws/networking/01_elastic_load_balancing.md) routing (path-based, host-based), [API Gateway](../cloud/aws/compute/03_aws_lambda.md) design, and [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md) caching. Understanding status codes is essential for debugging production issues.
 
 ---
 ↑ [Overview](./00_networking_overview.md)
 
-**Related:** [DNS](04_dns.md), [Reverse Proxy](06_reverse_proxy.md), [Protocols](01_protocols.md), [Interfaces](../computing/07_interfaces.md), [ALB](../aws/networking/01_elastic_load_balancing.md), [API Gateway](../aws/compute/03_aws_lambda.md), [CloudFront](../aws/networking/02_amazon_cloudfront.md)
+**Related:** [DNS](04_dns.md), [Reverse Proxy](06_reverse_proxy.md), [Protocols](01_protocols.md), [Interfaces](../computing/07_interfaces.md), [ALB](../cloud/aws/networking/01_elastic_load_balancing.md), [API Gateway](../cloud/aws/compute/03_aws_lambda.md), [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md)
 **Tags:** #networking

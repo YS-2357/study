@@ -41,4 +41,4 @@ Never chain `cd && git` commands.
 
 ## 5. Subtree Overrides
 
-- `aws/AGENTS.md` - AWS-specific viewpoint framework
+- `cloud/aws/AGENTS.md` - AWS-specific viewpoint framework

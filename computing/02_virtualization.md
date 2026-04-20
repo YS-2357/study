@@ -55,7 +55,7 @@ AWS uses Type 1: Nitro (modern, KVM-based) for instances with number ≥5 (m5, c
 **Use VMs** when you need different OSes, strong isolation, or legacy apps.
 **Use containers** when you need microservices, fast scaling, or consistent dev/prod environments.
 
-AWS services: [EC2](../aws/compute/01_amazon_ec2.md) (VMs), ECS/EKS (container orchestration), [Fargate](../aws/compute/04_aws_fargate.md) (serverless containers), [Lambda](../aws/compute/03_aws_lambda.md) (serverless functions).
+AWS services: [EC2](../cloud/aws/compute/01_amazon_ec2.md) (VMs), ECS/EKS (container orchestration), [Fargate](../cloud/aws/compute/04_aws_fargate.md) (serverless containers), [Lambda](../cloud/aws/compute/03_aws_lambda.md) (serverless functions).
 
 ### AWS Nitro System
 
@@ -63,7 +63,7 @@ AWS's custom hypervisor + hardware. Offloads networking, storage, and security t
 
 ## Example
 
-You launch an m6g.large [EC2](../aws/compute/01_amazon_ec2.md) instance. AWS allocates a VM on a physical server running the Nitro hypervisor. Your VM gets dedicated CPU and memory (AWS does not overcommit). Networking and [EBS](../aws/storage/02_amazon_ebs.md) storage are handled by Nitro Cards, so your VM's CPU is fully available for your workload.
+You launch an m6g.large [EC2](../cloud/aws/compute/01_amazon_ec2.md) instance. AWS allocates a VM on a physical server running the Nitro hypervisor. Your VM gets dedicated CPU and memory (AWS does not overcommit). Networking and [EBS](../cloud/aws/storage/02_amazon_ebs.md) storage are handled by Nitro Cards, so your VM's CPU is fully available for your workload.
 
 ## Why It Matters
 
@@ -72,5 +72,5 @@ Understanding virtualization explains why EC2 instances have specific CPU/memory
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Architecture](01_architecture.md), [Storage](03_storage.md), [EC2](../aws/compute/01_amazon_ec2.md), [Fargate](../aws/compute/04_aws_fargate.md), [Lambda](../aws/compute/03_aws_lambda.md), [EBS](../aws/storage/02_amazon_ebs.md)
+**Related:** [Architecture](01_architecture.md), [Storage](03_storage.md), [EC2](../cloud/aws/compute/01_amazon_ec2.md), [Fargate](../cloud/aws/compute/04_aws_fargate.md), [Lambda](../cloud/aws/compute/03_aws_lambda.md), [EBS](../cloud/aws/storage/02_amazon_ebs.md)
 **Tags:** #computing #container

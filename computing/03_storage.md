@@ -21,9 +21,9 @@ Storage in computing comes in three types: block (raw disk), file (shared networ
 
 | Type | What it is | Access | AWS Service |
 |------|-----------|--------|-------------|
-| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../aws/storage/02_amazon_ebs.md) |
-| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../aws/storage/03_amazon_efs.md) |
-| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../aws/storage/01_amazon_s3.md) |
+| **Block** | Raw storage blocks, OS formats with filesystem | Attached to one instance | [EBS](../cloud/aws/storage/02_amazon_ebs.md) |
+| **File** | Network filesystem, multiple servers access simultaneously | NFS/SMB protocol | [EFS](../cloud/aws/storage/03_amazon_efs.md) |
+| **Object** | Files stored as objects with metadata, accessed via API | HTTP/API | [S3](../cloud/aws/storage/01_amazon_s3.md) |
 
 ### Performance Metrics
 
@@ -66,5 +66,5 @@ Storage type and performance directly affect application behavior. Choosing the 
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Virtualization](02_virtualization.md), [GPU](04_gpu.md), [API](07_interfaces.md), [EBS](../aws/storage/02_amazon_ebs.md), [EFS](../aws/storage/03_amazon_efs.md), [S3](../aws/storage/01_amazon_s3.md)
+**Related:** [Virtualization](02_virtualization.md), [GPU](04_gpu.md), [API](07_interfaces.md), [EBS](../cloud/aws/storage/02_amazon_ebs.md), [EFS](../cloud/aws/storage/03_amazon_efs.md), [S3](../cloud/aws/storage/01_amazon_s3.md)
 **Tags:** #computing #storage

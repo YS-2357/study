@@ -15,7 +15,7 @@ recent_editor: CLAUDE
 ## What It Is
 Elastic Load Balancing (ELB) automatically distributes incoming traffic across multiple targets (EC2 instances, containers, IP addresses, Lambda functions). It ensures high availability by spreading load and detecting unhealthy targets.
 
-**See [Networking Basics - Protocols](../../networking/01_protocols.md) for TCP/UDP/HTTP/HTTPS fundamentals.**
+**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for TCP/UDP/HTTP/HTTPS fundamentals.**
 
 ## How It Works
 
@@ -535,5 +535,5 @@ ALB itself does not provide country-optimized routing. Use Route 53 geolocation 
 ---
 ↑ [Overview](./00_networking_overview.md)
 
-**Related:** [Amazon CloudFront](./02_amazon_cloudfront.md), [Networking Basics - Protocols](../../networking/01_protocols.md)
+**Related:** [Amazon CloudFront](./02_amazon_cloudfront.md), [Networking Basics - Protocols](../../../networking/01_protocols.md)
 **Tags:** #aws #networking #infrastructure

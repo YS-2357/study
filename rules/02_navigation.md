@@ -59,7 +59,7 @@ The legacy `← Previous | ... | Next →` footer has been removed. Ordered stud
 
 ### 3.1. Domain Overview
 
-Each domain has its own uniquely-named overview file: `00_{domain}_overview.md` (e.g., `ai/00_ai_overview.md`, `aws/00_aws_overview.md`).
+Each domain has its own uniquely-named overview file: `00_{domain}_overview.md` (e.g., `ai/00_ai_overview.md`, `cloud/aws/00_aws_overview.md`).
 
 Footer links up to parent overview:
 
@@ -74,14 +74,14 @@ The root overview is named `home.md` (top of the hierarchy, no parent link).
 
 ### 3.3. Subdomain Pattern
 
-A domain may contain subdomains (e.g., `aws/agentcore/`, `aws/compute/`). Navigation works three levels deep:
+A domain may contain subdomains (e.g., `cloud/aws/agentcore/`, `cloud/aws/compute/`). Navigation works three levels deep:
 
 ```
-concept note (aws/compute/03_lambda.md)
+concept note (cloud/aws/compute/03_lambda.md)
   ↑ links to
-subdomain overview (aws/compute/00_compute_overview.md)
+subdomain overview (cloud/aws/compute/00_compute_overview.md)
   ↑ links to
-parent overview (aws/00_aws_overview.md)
+parent overview (cloud/aws/00_aws_overview.md)
   ↑ links to
 home.md (root)
 ```
@@ -133,8 +133,8 @@ Files without numbers:
 | Path | Content |
 |------|---------|
 | `ai/` | AI agents, LLM concepts |
-| `aws/` | AWS services, grouped into subdomains by category |
-| `aws/{subdomain}/` | Category subdomain (e.g., `compute/`, `storage/`, `ai/`, `agentcore/`) |
+| `cloud/aws/` | AWS services, grouped into subdomains by category |
+| `cloud/aws/{subdomain}/` | Category subdomain (e.g., `compute/`, `storage/`, `ai/`, `agentcore/`) |
 | `azure/` | Microsoft Azure services. Subdomains grow organically — create one only when the first note in it is written |
 | `computing/` | CPU, GPU, virtualization |
 | `gcp/` | Google Cloud services. Subdomains grow organically — create one only when the first note in it is written |
@@ -149,8 +149,8 @@ Files without numbers:
 The same source or product may have notes under multiple domains when each note serves a different study lens. Folder placement follows reader intent, not a single global canonical location.
 
 Examples:
-- Amazon Kiro may fit under `aws/` as an AWS product note and under `ai/` as an AI agent workflow or harness note.
-- A cloud AI service may live under `aws/ai/` while a general concept note about the same pattern lives under `ai/`.
+- Amazon Kiro may fit under `cloud/aws/` as an AWS product note and under `ai/` as an AI agent workflow or harness note.
+- A cloud AI service may live under `cloud/aws/ai/` while a general concept note about the same pattern lives under `ai/`.
 
 Rules:
 - Make the domain lens explicit in each note.

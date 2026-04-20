@@ -44,9 +44,9 @@ API styles (see [HTTP](../networking/05_http.md) for REST details):
 
 ### ENI (Elastic Network Interface)
 
-A virtual network card in AWS. Each [EC2](../aws/compute/01_amazon_ec2.md) instance has at least one ENI.
+A virtual network card in AWS. Each [EC2](../cloud/aws/compute/01_amazon_ec2.md) instance has at least one ENI.
 
-An ENI has: private IP, optional public IP, MAC address, [security groups](../aws/identity/02_security_group.md), and source/destination check flag.
+An ENI has: private IP, optional public IP, MAC address, [security groups](../cloud/aws/identity/02_security_group.md), and source/destination check flag.
 
 An instance can have multiple ENIs for separating management and data traffic or multi-homed setups across subnets.
 
@@ -67,5 +67,5 @@ Interface = how you interact. [Endpoint](08_endpoints.md) = where you reach the 
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Caching](06_caching.md), [Endpoints](08_endpoints.md), [HTTP](../networking/05_http.md), [EC2](../aws/compute/01_amazon_ec2.md), [security groups](../aws/identity/02_security_group.md), [Vim and Neovim](../tooling/02_vim_and_neovim.md)
+**Related:** [Caching](06_caching.md), [Endpoints](08_endpoints.md), [HTTP](../networking/05_http.md), [EC2](../cloud/aws/compute/01_amazon_ec2.md), [security groups](../cloud/aws/identity/02_security_group.md), [Vim and Neovim](../tooling/02_vim_and_neovim.md)
 **Tags:** #computing #networking

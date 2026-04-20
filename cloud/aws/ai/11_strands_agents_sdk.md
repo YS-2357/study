@@ -60,7 +60,7 @@ The loop Strands runs is the **[ReAct](https://arxiv.org/abs/2210.03629) pattern
 
 1. User sends a goal.
 2. LLM reasons: "What do I need to do next?"
-3. LLM selects a [tool](../../ai/04_tools.md) and calls it.
+3. LLM selects a [tool](../../../ai/04_tools.md) and calls it.
 4. Result is added to context.
 5. LLM checks: "Am I done? If not, what's next?" → repeat from step 2.
 6. LLM returns the final answer when satisfied.
@@ -76,7 +76,7 @@ Different automation paradigms differ on **who controls tool/step ordering** —
 | Strands Agent | The LLM at runtime | `agent("do this")` |
 | AutoGen / CrewAI | Multiple LLMs negotiating | multi-agent conversation |
 
-Strands' value is giving the LLM the decision, which is why a vague prompt + powerful tools produces unpredictable behavior (see Precautions). It also supports [MCP](../../ai/07_mcp.md) servers as tool sources.
+Strands' value is giving the LLM the decision, which is why a vague prompt + powerful tools produces unpredictable behavior (see Precautions). It also supports [MCP](../../../ai/07_mcp.md) servers as tool sources.
 
 ## Example
 
@@ -317,5 +317,5 @@ Strands isn't the only code-first agent framework. Quick map of the landscape:
 ---
 ↑ [Overview](./00_ai_overview.md)
 
-**Related:** [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md), [Bedrock Integration Patterns](./12_amazon_bedrock_integration_patterns.md), [tool](../../ai/04_tools.md), [MCP](../../ai/07_mcp.md)
+**Related:** [Amazon Bedrock AgentCore](./10_amazon_bedrock_agentcore.md), [Bedrock Integration Patterns](./12_amazon_bedrock_integration_patterns.md), [tool](../../../ai/04_tools.md), [MCP](../../../ai/07_mcp.md)
 **Tags:** #ai #aws #ml

@@ -97,10 +97,10 @@ recent_editor: CLAUDE
 | Tag | Covers | Example notes |
 |-----|--------|---------------|
 | `ai` | AI/ML, LLMs, agents, attention, KV cache | ai/ domain, Bedrock notes |
-| `aws` | AWS services in general | All aws/ notes |
+| `aws` | AWS services in general | All cloud/aws/ notes |
 | `computing` | CPU, GPU, virtualization, caching, storage | computing/ domain |
 | `container` | ECR, Docker, Lambda container images | Fargate, ECR, Lambda containers |
-| `database` | RDS, DynamoDB, Aurora, ElastiCache | aws/ DB notes |
+| `database` | RDS, DynamoDB, Aurora, ElastiCache | cloud/aws/ DB notes |
 | `git` | Git workflow, staging, tracking | git/ domain |
 | `infrastructure` | VPC, regions, AZs, subnets, CDK | VPC, CDK, Region notes |
 | `ml` | SageMaker, Bedrock, model training | Bedrock, SageMaker notes |

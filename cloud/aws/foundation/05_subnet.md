@@ -61,7 +61,7 @@ A subnet is defined by a CIDR block within its parent VPC and is locked to one A
 ## Key Concepts
 
 ### CIDR (Classless Inter-Domain Routing)
-**See [Networking Basics - Addressing](../../networking/02_addressing.md#cidr-classless-inter-domain-routing) for detailed explanation.**
+**See [Networking Basics - Addressing](../../../networking/02_addressing.md#cidr-classless-inter-domain-routing) for detailed explanation.**
 
 ### Public vs Private Subnet
 **No "public" or "private" flag on subnet itself.**
@@ -70,7 +70,7 @@ A subnet is defined by a CIDR block within its parent VPC and is locked to one A
 - **Private subnet** = No direct route to Internet Gateway
 
 ### Auto-Assign Public IP
-**See [Networking Basics - Addressing](../../networking/02_addressing.md#ip-addressing) for IPv4/IPv6 fundamentals.**
+**See [Networking Basics - Addressing](../../../networking/02_addressing.md#ip-addressing) for IPv4/IPv6 fundamentals.**
 
 Controls whether EC2 instances automatically get public IPv4 addresses.
 
@@ -83,7 +83,7 @@ Controls whether EC2 instances automatically get public IPv4 addresses.
 - Route table with route: 0.0.0.0/0 → IGW
 
 ### IPv4 vs IPv6
-**See [Networking Basics - Addressing](../../networking/02_addressing.md#ip-addressing) for detailed explanation.**
+**See [Networking Basics - Addressing](../../../networking/02_addressing.md#ip-addressing) for detailed explanation.**
 
 - Auto-assign settings are **independent** for IPv4 and IPv6
 - IPv6 must be enabled on VPC first
@@ -94,7 +94,7 @@ Controls whether EC2 instances automatically get public IPv4 addresses.
 - EIP doesn't require auto-assign setting enabled
 
 ### NACL vs Security Group
-**See [Networking Basics - Protocols](../../networking/01_protocols.md) for protocol/port fundamentals.**
+**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for protocol/port fundamentals.**
 
 Both are firewalls but work differently:
 
@@ -177,5 +177,5 @@ Proper public/private separation keeps databases and internal services off the i
 ---
 ↑ [Overview](./00_foundation_overview.md)
 
-**Related:** [Amazon VPC](04_amazon_vpc.md), [Networking Basics - Protocols](../../networking/01_protocols.md)
+**Related:** [Amazon VPC](04_amazon_vpc.md), [Networking Basics - Protocols](../../../networking/01_protocols.md)
 **Tags:** #aws #infrastructure #networking

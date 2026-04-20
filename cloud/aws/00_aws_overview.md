@@ -27,8 +27,8 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 
 ## Cross-references
 
-- Networking fundamentals — [Networking](../networking/00_networking_overview.md)
-- Computing concepts — [Computing](../computing/00_computing_overview.md)
+- Networking fundamentals — [Networking](../../networking/00_networking_overview.md)
+- Computing concepts — [Computing](../../computing/00_computing_overview.md)
 
 ---
-↑ [Home](../home.md)
+↑ [Home](../../home.md)

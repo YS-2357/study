@@ -43,7 +43,7 @@ On AWS compute (Lambda, EC2), boto3 picks up the attached IAM role automatically
 |--------|---------|
 | `"s3"` | Amazon S3 |
 | `"dynamodb"` | Amazon DynamoDB |
-| `"bedrock-runtime"` | [Amazon Bedrock](../ai/01_amazon_bedrock.md) inference |
+| `"bedrock-runtime"` | [Amazon Bedrock](../../ai/01_amazon_bedrock.md) inference |
 | `"bedrock-agent-runtime"` | Bedrock Agents / Knowledge Bases / Flows |
 | `"cloudwatch"` | [Amazon CloudWatch](../ops/01_amazon_cloudwatch.md) |
 | `"ssm"` | [AWS SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md) |
@@ -83,5 +83,5 @@ Every Python-based service in this repo that touches AWS uses boto3 — Bedrock 
 ---
 ↑ [Overview](./00_devtools_overview.md)
 
-**Related:** [AWS CDK (Cloud Development Kit)](./01_aws_cdk.md), [AWS Marketplace](./03_aws_marketplace.md), [S3 buckets](../storage/01_amazon_s3.md), [DynamoDB items](../database/03_amazon_dynamodb.md), [IAM role](../identity/01_amazon_iam.md), [Amazon Bedrock](../ai/01_amazon_bedrock.md), [Amazon CloudWatch](../ops/01_amazon_cloudwatch.md), [AWS SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md)
+**Related:** [AWS CDK (Cloud Development Kit)](./01_aws_cdk.md), [AWS Marketplace](./03_aws_marketplace.md), [S3 buckets](../storage/01_amazon_s3.md), [DynamoDB items](../database/03_amazon_dynamodb.md), [IAM role](../identity/01_amazon_iam.md), [Amazon Bedrock](../../ai/01_amazon_bedrock.md), [Amazon CloudWatch](../ops/01_amazon_cloudwatch.md), [AWS SSM Parameter Store](../ops/02_aws_ssm_parameter_store.md)
 **Tags:** #aws #tooling

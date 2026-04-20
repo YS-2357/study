@@ -44,11 +44,11 @@ Aurora: mydb.cluster-abc123.us-east-1.rds.amazonaws.com:3306      (writer)
         mydb.cluster-ro-abc123.us-east-1.rds.amazonaws.com:3306   (reader)
 ```
 
-[Aurora](../aws/database/02_amazon_aurora.md) separates writer and reader endpoints. The reader endpoint load-balances across replicas.
+[Aurora](../cloud/aws/database/02_amazon_aurora.md) separates writer and reader endpoints. The reader endpoint load-balances across replicas.
 
 ### VPC Endpoints
 
-A VPC endpoint gives your [VPC](../aws/foundation/04_amazon_vpc.md) a private path to an AWS service — traffic stays within the AWS network.
+A VPC endpoint gives your [VPC](../cloud/aws/foundation/04_amazon_vpc.md) a private path to an AWS service — traffic stays within the AWS network.
 
 | Type | How it works | Services |
 |------|-------------|----------|
@@ -73,5 +73,5 @@ Understanding endpoints clarifies how AWS services connect: the CLI and SDK call
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Interfaces](07_interfaces.md), [Decomposition](09_decomposition.md), [Aurora](../aws/database/02_amazon_aurora.md), [VPC](../aws/foundation/04_amazon_vpc.md)
+**Related:** [Interfaces](07_interfaces.md), [Decomposition](09_decomposition.md), [Aurora](../cloud/aws/database/02_amazon_aurora.md), [VPC](../cloud/aws/foundation/04_amazon_vpc.md)
 **Tags:** #computing #networking

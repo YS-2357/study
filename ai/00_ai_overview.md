@@ -38,7 +38,7 @@ Foundation concepts for understanding how coding agents (like Codex) work.
 
 - [LangChain / LangGraph](15_langchain_langgraph.md) - Agent frameworks from workflow chains to state graphs and harnesses.
 
-For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore), see [aws/ai/](../aws/ai/00_ai_overview.md).
+For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore), see [aws/ai/](../cloud/aws/ai/00_ai_overview.md).
 
 ## Quick Mental Model
 

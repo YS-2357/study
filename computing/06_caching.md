@@ -43,9 +43,9 @@ Knowing when cached data is outdated — the hardest problem in caching.
 |-------|--------------|-------|---------|
 | CPU | Instructions, data | ~ns | L1/L2/L3 cache |
 | Application | Computed results | ~μs | In-memory variables |
-| In-memory store | Frequently queried data | ~ms | [ElastiCache](../aws/database/04_amazon_elasticache.md) (Redis, Memcached) |
+| In-memory store | Frequently queried data | ~ms | [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md) (Redis, Memcached) |
 | Database | Query results, buffer pool | ~ms | MySQL buffer pool |
-| CDN | Static files, API responses | ~ms | [CloudFront](../aws/networking/02_amazon_cloudfront.md) edge locations |
+| CDN | Static files, API responses | ~ms | [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md) edge locations |
 | DNS | Domain → IP mappings | ~ms | Browser cache, resolver cache |
 | Browser | Pages, images, scripts | ~ms | HTTP Cache-Control headers |
 
@@ -68,16 +68,16 @@ Knowing when cached data is outdated — the hardest problem in caching.
 
 ## Example
 
-A web app queries a database for user profiles. Without caching, every page load hits the DB (~10ms). With [ElastiCache](../aws/database/04_amazon_elasticache.md) (Redis) in front, the first request is slow (cache miss), but subsequent requests return in ~1ms (cache hit). With a 90% hit ratio, 9 out of 10 requests skip the database entirely.
+A web app queries a database for user profiles. Without caching, every page load hits the DB (~10ms). With [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md) (Redis) in front, the first request is slow (cache miss), but subsequent requests return in ~1ms (cache hit). With a 90% hit ratio, 9 out of 10 requests skip the database entirely.
 
 ## Why It Matters
 
-Caching appears at every level of AWS architecture: [CloudFront](../aws/networking/02_amazon_cloudfront.md) at the edge, [ElastiCache](../aws/database/04_amazon_elasticache.md) in front of databases, [DynamoDB DAX](../aws/database/03_amazon_dynamodb.md) for DynamoDB. Understanding cache patterns helps you choose the right strategy and avoid stale data bugs.
+Caching appears at every level of AWS architecture: [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md) at the edge, [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md) in front of databases, [DynamoDB DAX](../cloud/aws/database/03_amazon_dynamodb.md) for DynamoDB. Understanding cache patterns helps you choose the right strategy and avoid stale data bugs.
 
 For LLM-specific caching, see [KV Cache](../ai/11_kv_cache.md) and [Prompt Caching](../ai/12_prompt_caching.md).
 
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Workload Types](05_workload_types.md), [Interfaces](07_interfaces.md), [ElastiCache](../aws/database/04_amazon_elasticache.md), [CloudFront](../aws/networking/02_amazon_cloudfront.md), [DynamoDB DAX](../aws/database/03_amazon_dynamodb.md), [KV Cache](../ai/11_kv_cache.md), [Prompt Caching](../ai/12_prompt_caching.md)
+**Related:** [Workload Types](05_workload_types.md), [Interfaces](07_interfaces.md), [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md), [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md), [DynamoDB DAX](../cloud/aws/database/03_amazon_dynamodb.md), [KV Cache](../ai/11_kv_cache.md), [Prompt Caching](../ai/12_prompt_caching.md)
 **Tags:** #computing

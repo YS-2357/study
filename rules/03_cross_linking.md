@@ -21,7 +21,7 @@ Rules for linking between notes and to the glossary.
 
 Notes with overlapping content may exist under different domains when each note answers a different reader question. The overlap must be intentional, not accidental copy-paste.
 
-Example: Amazon Kiro can have an AWS-facing note under `aws/` and an AI-agent-facing note under `ai/`.
+Example: Amazon Kiro can have an AWS-facing note under `cloud/aws/` and an AI-agent-facing note under `ai/`.
 
 Rules:
 - State the domain lens clearly in each sibling note.
@@ -38,7 +38,7 @@ On first mention of a concept with a dedicated note:
 ### 2.1. Example
 
 ```md
-The [Lambda](../aws/compute/03_aws_lambda.md) function uses
+The [Lambda](../cloud/cloud/aws/compute/03_aws_lambda.md) function uses
 an IAM role. Lambda automatically handles scaling.
 ```
 
@@ -51,12 +51,12 @@ Links between domains are encouraged when they help the reader:
 | From | To | Example |
 |------|----|---------|
 | `ai/` | `computing/` | Agent note linking to API interface |
-| `computing/` | `aws/database/` | Cache note linking to ElastiCache |
-| `aws/compute/` | `aws/ai/agentcore/` | Lambda note linking to AgentCore |
+| `computing/` | `cloud/aws/database/` | Cache note linking to ElastiCache |
+| `cloud/aws/compute/` | `cloud/aws/ai/agentcore/` | Lambda note linking to AgentCore |
 
 ### 3.0. Cross-Cloud Equivalents
 
-A service note in `aws/`, `gcp/`, or `azure/` that has a direct counterpart in another cloud should link the equivalent on first mention. Example, in `aws/compute/01_amazon_ec2.md`:
+A service note in `cloud/aws/`, `gcp/`, or `azure/` that has a direct counterpart in another cloud should link the equivalent on first mention. Example, in `cloud/aws/compute/01_amazon_ec2.md`:
 
 > EC2 is AWS's virtual machine service — equivalent to [Compute Engine](../../gcp/compute/01_compute_engine.md) on GCP and [Virtual Machines](../../azure/compute/01_virtual_machines.md) on Azure.
 
@@ -98,7 +98,7 @@ The [VPC](../glossary.md) contains multiple subnets.
 
 Or link to the full note if one exists:
 ```md
-The [VPC](../aws/foundation/04_amazon_vpc.md) contains multiple subnets.
+The [VPC](../cloud/cloud/aws/foundation/04_amazon_vpc.md) contains multiple subnets.
 ```
 
 ### 4.3. Glossary Note Column

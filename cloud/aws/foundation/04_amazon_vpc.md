@@ -187,7 +187,7 @@ AWS service for automated IP address allocation.
 - Local routes (VPC CIDR) exist in all route tables automatically
 
 ### DNS Settings
-**See [Networking Basics - DNS](../../networking/04_dns.md) for complete DNS explanation.**
+**See [Networking Basics - DNS](../../../networking/04_dns.md) for complete DNS explanation.**
 
 **DNS (Domain Name System)** translates domain names ↔ IP addresses.
 
@@ -424,5 +424,5 @@ A well-planned VPC with proper CIDR allocation, subnet layout, and routing preve
 ---
 ↑ [Overview](./00_foundation_overview.md)
 
-**Related:** [Points of Presence (PoP)](03_pop.md), [Subnet](05_subnet.md), [Networking Basics - DNS](../../networking/04_dns.md)
+**Related:** [Points of Presence (PoP)](03_pop.md), [Subnet](05_subnet.md), [Networking Basics - DNS](../../../networking/04_dns.md)
 **Tags:** #aws #infrastructure #networking #security

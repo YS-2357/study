@@ -22,7 +22,7 @@ Client → Reverse Proxy → Backend Server A
 
 Contrast with a **forward proxy**: a forward proxy acts on behalf of the *client* (e.g., to anonymize or filter outbound traffic). A reverse proxy acts on behalf of the *server*.
 
-For HTTP fundamentals used by reverse proxies, see [HTTP](05_http.md). For load balancing as a specific reverse proxy use case, see [ELB](../aws/networking/01_elastic_load_balancing.md).
+For HTTP fundamentals used by reverse proxies, see [HTTP](05_http.md). For load balancing as a specific reverse proxy use case, see [ELB](../cloud/aws/networking/01_elastic_load_balancing.md).
 
 ## Analogy
 
@@ -94,10 +94,10 @@ The client calls `https://api.example.com/users/1`. Nginx terminates TLS, matche
 
 ## Why It Matters
 
-Almost every production web system uses a reverse proxy. On AWS, [ALB](../aws/networking/01_elastic_load_balancing.md) is a managed reverse proxy for EC2 and containers; [CloudFront](../aws/networking/02_amazon_cloudfront.md) is a reverse proxy at the CDN edge; [API Gateway](../aws/compute/03_aws_lambda.md) is a reverse proxy for Lambda. Understanding what a reverse proxy does explains *why* these services exist and which one to pick.
+Almost every production web system uses a reverse proxy. On AWS, [ALB](../cloud/aws/networking/01_elastic_load_balancing.md) is a managed reverse proxy for EC2 and containers; [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md) is a reverse proxy at the CDN edge; [API Gateway](../cloud/aws/compute/03_aws_lambda.md) is a reverse proxy for Lambda. Understanding what a reverse proxy does explains *why* these services exist and which one to pick.
 
 ---
 ↑ [Overview](./00_networking_overview.md)
 
-**Related:** [HTTP](05_http.md), [ELB](../aws/networking/01_elastic_load_balancing.md), [Caching](../computing/06_caching.md), [CloudFront](../aws/networking/02_amazon_cloudfront.md), [API Gateway](../aws/compute/03_aws_lambda.md)
+**Related:** [HTTP](05_http.md), [ELB](../cloud/aws/networking/01_elastic_load_balancing.md), [Caching](../computing/06_caching.md), [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md), [API Gateway](../cloud/aws/compute/03_aws_lambda.md)
 **Tags:** #networking

@@ -15,7 +15,7 @@ recent_editor: CLAUDE
 ## What It Is
 **EBS (Elastic Block Store)** is block-level storage that you attach to EC2 instances. Think of it as a virtual hard drive — it persists independently from the instance, so data survives instance stop/start. Each EBS volume exists in a single Availability Zone.
 
-**See [Computing Basics - Storage](../../computing/03_storage.md) for block vs file vs object storage fundamentals.**
+**See [Computing Basics - Storage](../../../computing/03_storage.md) for block vs file vs object storage fundamentals.**
 
 ## How It Works
 
@@ -275,5 +275,5 @@ For frequent read/write/delete operations, **block storage (EBS)** is the best f
 ---
 ↑ [Overview](./00_storage_overview.md)
 
-**Related:** [Amazon S3](./01_amazon_s3.md), [Amazon EFS](./03_amazon_efs.md), [Computing Basics - Storage](../../computing/03_storage.md)
+**Related:** [Amazon S3](./01_amazon_s3.md), [Amazon EFS](./03_amazon_efs.md), [Computing Basics - Storage](../../../computing/03_storage.md)
 **Tags:** #aws #storage #computing

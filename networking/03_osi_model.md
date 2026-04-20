@@ -60,11 +60,11 @@ TCP/IP is what's actually used in practice. OSI is the educational model for und
 
 ### AWS Layer Mapping
 
-**[Security Groups](../aws/identity/02_security_group.md)** — Layer 3–4 only. Filter by IP addresses and TCP/UDP ports. Cannot filter by URL or HTTP headers.
+**[Security Groups](../cloud/aws/identity/02_security_group.md)** — Layer 3–4 only. Filter by IP addresses and TCP/UDP ports. Cannot filter by URL or HTTP headers.
 
 **Load Balancers:**
-- [NLB](../aws/networking/01_elastic_load_balancing.md) — Layer 4. Routes by IP and port. Very fast. Can't see HTTP headers.
-- [ALB](../aws/networking/01_elastic_load_balancing.md) — Layer 7. Routes by URL path, headers, host. Can terminate TLS.
+- [NLB](../cloud/aws/networking/01_elastic_load_balancing.md) — Layer 4. Routes by IP and port. Very fast. Can't see HTTP headers.
+- [ALB](../cloud/aws/networking/01_elastic_load_balancing.md) — Layer 7. Routes by URL path, headers, host. Can terminate TLS.
 
 ### Troubleshooting by Layer
 
@@ -85,5 +85,5 @@ The OSI model explains why different AWS services operate at different layers: w
 ---
 ↑ [Overview](./00_networking_overview.md)
 
-**Related:** [Addressing](02_addressing.md), [DNS](04_dns.md), [Security Groups](../aws/identity/02_security_group.md), [NLB](../aws/networking/01_elastic_load_balancing.md)
+**Related:** [Addressing](02_addressing.md), [DNS](04_dns.md), [Security Groups](../cloud/aws/identity/02_security_group.md), [NLB](../cloud/aws/networking/01_elastic_load_balancing.md)
 **Tags:** #networking

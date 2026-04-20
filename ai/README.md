@@ -28,4 +28,4 @@ AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for the co
 - `14_subagent_design.md`: When to spawn, when to divide, and harness-per-role design.
 - `15_langchain_langgraph.md`: LangChain, LangGraph, middleware, MCP adapters, and agent harnesses.
 
-AWS-specific frameworks (Strands Agents SDK, Bedrock family, AgentCore) live in [aws/ai/](../aws/ai/).
+AWS-specific frameworks (Strands Agents SDK, Bedrock family, AgentCore) live in [aws/ai/](../cloud/aws/ai/).

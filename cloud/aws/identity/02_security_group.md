@@ -74,7 +74,7 @@ A security group is attached to an ENI (Elastic Network Interface) on each resou
 - **Create security group** - Create the security group
 
 ### Security Group Rules
-**See [Networking Basics - Protocols](../../networking/01_protocols.md) for TCP/UDP/ICMP fundamentals and [Addressing](../../networking/02_addressing.md) for port details.**
+**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for TCP/UDP/ICMP fundamentals and [Addressing](../../../networking/02_addressing.md) for port details.**
 
 **Security Group rules control: WHO + WHERE + HOW**
 
@@ -160,7 +160,7 @@ Can reference other security groups in rules:
 
 ## NACL vs Security Group
 
-**See [Networking Basics - Protocols](../../networking/01_protocols.md) for protocol/traffic fundamentals and [OSI Model](../../networking/03_osi_model.md) for layer understanding.**
+**See [Networking Basics - Protocols](../../../networking/01_protocols.md) for protocol/traffic fundamentals and [OSI Model](../../../networking/03_osi_model.md) for layer understanding.**
 
 **Why Security Groups are used 95%+ of the time:**
 
@@ -331,5 +331,5 @@ For inbound traffic, **NACL is evaluated first, then Security Group**.
 ---
 ↑ [Overview](./00_identity_overview.md)
 
-**Related:** [Amazon IAM](01_amazon_iam.md), [Networking Basics - Protocols](../../networking/01_protocols.md), [Addressing](../../networking/02_addressing.md), [OSI Model](../../networking/03_osi_model.md)
+**Related:** [Amazon IAM](01_amazon_iam.md), [Networking Basics - Protocols](../../../networking/01_protocols.md), [Addressing](../../../networking/02_addressing.md), [OSI Model](../../../networking/03_osi_model.md)
 **Tags:** #aws #security #networking #infrastructure

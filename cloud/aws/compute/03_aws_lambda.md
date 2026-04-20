@@ -90,7 +90,7 @@ Lambda can be invoked in three ways:
 - Radio buttons: arm64 or x86_64 (selected)
 - Choose the instruction set architecture you want for your function code
 
-**See [Computing Basics - Architecture](../../computing/01_architecture.md) for x86 vs ARM explanation.**
+**See [Computing Basics - Architecture](../../../computing/01_architecture.md) for x86 vs ARM explanation.**
 
 **Architecture choice:**
 - **x86_64** - Standard, widest compatibility
@@ -589,7 +589,7 @@ ENVIRONMENT=production
 
 **Cross-reference:**
 - See [IAM Roles](../identity/01_amazon_iam.md) for execution role configuration
-- See [API Gateway](../networking/03_amazon_api_gateway.md) for building APIs with Lambda (when created)
+- See [API Gateway](../../networking/03_amazon_api_gateway.md) for building APIs with Lambda (when created)
 - See EventBridge for scheduled Lambda functions (when created)
 
 ## Example
@@ -663,5 +663,5 @@ Alternative serverless options for heavier workloads:
 ---
 ↑ [Overview](./00_compute_overview.md)
 
-**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../networking/03_amazon_api_gateway.md)
+**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../../networking/03_amazon_api_gateway.md)
 **Tags:** #aws #serverless #computing

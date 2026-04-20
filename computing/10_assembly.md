@@ -99,7 +99,7 @@ Day-to-day application work almost never requires writing assembly, but reading 
 - **Reverse engineering and CTFs** — binaries ship as machine code. Assembly is the only view.
 - **Low-level systems work** — kernels, bootloaders, codecs, crypto primitives, and [GPU](./04_gpu.md) kernels sometimes hand-write hot paths in assembly or intrinsics for guarantees the compiler can't provide.
 
-For AWS work, assembly matters indirectly: switching an [EC2](../aws/compute/01_amazon_ec2.md) fleet from x86 to Graviton means every binary must be rebuilt for ARM64, because the machine code under the source is architecture-specific.
+For AWS work, assembly matters indirectly: switching an [EC2](../cloud/aws/compute/01_amazon_ec2.md) fleet from x86 to Graviton means every binary must be rebuilt for ARM64, because the machine code under the source is architecture-specific.
 
 ## Precautions
 
@@ -122,5 +122,5 @@ The assembler still resolves labels, relocations, and encoding choices. Two synt
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Decomposition](09_decomposition.md), [CPU architecture](./01_architecture.md), [GPU](./04_gpu.md), [EC2](../aws/compute/01_amazon_ec2.md)
+**Related:** [Decomposition](09_decomposition.md), [CPU architecture](./01_architecture.md), [GPU](./04_gpu.md), [EC2](../cloud/aws/compute/01_amazon_ec2.md)
 **Tags:** #computing

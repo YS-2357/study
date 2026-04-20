@@ -433,7 +433,7 @@ Shows configuration summary:
 - **ENA enabled:** Yes
 - **Architecture options:** Radio buttons for 64-bit (x86) uefi-preferred or 64-bit (Arm) uefi
 
-**See [Computing Basics - Architecture](../../computing/01_architecture.md) for explanation of 32-bit vs 64-bit, x86 vs ARM, boot modes, and virtualization types.**
+**See [Computing Basics - Architecture](../../../computing/01_architecture.md) for explanation of 32-bit vs 64-bit, x86 vs ARM, boot modes, and virtualization types.**
 
 **Action buttons:**
 - **Create Template with AMI** - Create launch template
@@ -494,7 +494,7 @@ Shows configuration summary:
 - **VT** - Video transcoding (VT1)
 - **F** - FPGA for custom hardware acceleration (F1)
 
-**See [Computing Basics - Workload Types](../../computing/05_workload_types.md) for detailed explanation of all instance families and use cases.**
+**See [Computing Basics - Workload Types](../../../computing/05_workload_types.md) for detailed explanation of all instance families and use cases.**
 
 **Processor Suffixes:**
 - **g** - AWS Graviton (ARM) processors (e.g., m6g, c7g)
@@ -511,7 +511,7 @@ Shows configuration summary:
 **Size progression (smallest to largest):**
 - nano → micro → small → medium → large → xlarge → 2xlarge → 4xlarge → 8xlarge → 12xlarge → 16xlarge → 24xlarge → 32xlarge → 48xlarge → 56xlarge → 112xlarge
 
-**See [Computing Basics - GPU](../../computing/04_gpu.md) for detailed GPU instance information.**
+**See [Computing Basics - GPU](../../../computing/04_gpu.md) for detailed GPU instance information.**
 
 ### Burstable Performance (T3/T2)
 - Baseline CPU performance (e.g., 10% of 1 vCPU)
@@ -772,5 +772,5 @@ AWS recommends Savings Plans for new commitments, though RI has not been officia
 ---
 ↑ [Overview](./00_compute_overview.md)
 
-**Related:** [Auto Scaling](02_auto_scaling.md), [Amazon VPC](../foundation/04_amazon_vpc.md), [Computing Basics - Architecture](../../computing/01_architecture.md), [Computing Basics - Workload Types](../../computing/05_workload_types.md), [Computing Basics - GPU](../../computing/04_gpu.md)
+**Related:** [Auto Scaling](02_auto_scaling.md), [Amazon VPC](../foundation/04_amazon_vpc.md), [Computing Basics - Architecture](../../../computing/01_architecture.md), [Computing Basics - Workload Types](../../../computing/05_workload_types.md), [Computing Basics - GPU](../../../computing/04_gpu.md)
 **Tags:** #aws #computing #infrastructure

@@ -92,14 +92,14 @@ Example:
 lint report (2026-04-19T09:11:51)
 
 broken links (2):
-  aws/compute/03_lambda.md:42  → ../storage/99_missing.md
+  cloud/aws/compute/03_lambda.md:42  → ../storage/99_missing.md
   ai/07_agent.md:18            → ../../networking/99_missing.md
 
 orphan notes (1):
   computing/05_turing.md
 
 missing cross-refs (3):
-  aws/compute/04_fargate.md:88  "ECS" → aws/compute/02_ecs.md
+  cloud/aws/compute/04_fargate.md:88  "ECS" → cloud/aws/compute/02_ecs.md
   ...
 ```
 
