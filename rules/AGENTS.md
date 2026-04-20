@@ -105,7 +105,7 @@ git pull origin main
 - Glossary links for abbreviations on first use
 - Cross-domain links encouraged when helpful
 
-## 8. Structural Document Updates
+## 9. Structural Document Updates
 
 Whenever files are added, moved, renamed, or deleted:
 
