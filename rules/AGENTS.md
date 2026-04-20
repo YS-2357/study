@@ -149,7 +149,7 @@ recent_editor: CLAUDE
 
 **AI must update `updated_at` and `recent_editor` on every edit.**
 
-## 12. Rule Documents
+## 13. Rule Documents
 
 | File | Content |
 |------|---------|
