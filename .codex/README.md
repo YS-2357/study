@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-18T11:51:15
-updated_at: 2026-04-18T19:41:34
+updated_at: 2026-04-20T13:16:59
 recent_editor: CODEX
 ---
 
@@ -14,6 +14,7 @@ Codex-specific repo automation and local helper files.
 - `AGENTS.md`: Codex-local scope rules.
 - `hooks/`: Codex-owned hook implementations invoked by Git hook entrypoints.
 - `mcp/`: Codex-owned repo-local MCP server dependencies and docs.
+- `skills/`: Codex-native skills generated from canonical repo workflows in `rules/skills/`.
 
 ## Workflow
 
@@ -27,6 +28,17 @@ Codex follows the root repository rules through explicit actions, not automatic 
 `.codex/hooks/pre-push` is the Codex enforcement point for push-time validation.
 
 `.codex/mcp/` stores repo-local MCP dependencies. The root `.mcp.json` is the client entrypoint and should point at local packages under `.codex/mcp/` when possible.
+
+## Skills
+
+Codex-native skill wrappers live under `.codex/skills/`:
+
+- `ingest`: Process raw sources into wiki notes.
+- `lint`: Run wiki health checks and report findings before fixes.
+- `nav-update`: Sync overviews, README indexes, links, and logs after structural note changes.
+- `split`: Split oversized or mixed-theme notes after confirming the boundary.
+
+The canonical workflow definitions remain in `rules/skills/`. Do not copy or edit `.claude/commands` for Codex skills.
 
 ## Permissions
 
