@@ -45,7 +45,7 @@ For AWS-specific agent frameworks (Strands Agents SDK, Bedrock Agents, AgentCore
 
 | Product | Focus |
 |---------|-------|
-| [Claude](claude/00_claude_overview.md) | Anthropic's AI assistant — models, API, Claude Code |
+| [Claude](claude/00_claude_overview.md) | Anthropic's AI assistant — models, safety research, character |
 | [Codex](codex/00_codex_overview.md) | OpenAI's AI coding agent |
 | [Gemini](gemini/00_gemini_overview.md) | Google's AI model family |
 | [Perplexity](perplexity/00_perplexity_overview.md) | AI-powered search |
