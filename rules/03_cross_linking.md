@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-19T01:37:43
+updated_at: 2026-04-20T13:41:55
 recent_editor: CODEX
 ---
 
@@ -12,10 +12,22 @@ Rules for linking between notes and to the glossary.
 
 ## 1. Core Principles
 
-1. Explain a concept once in its canonical note
-2. Link from other notes instead of duplicating
+1. Explain a concept once in its canonical note by default
+2. Link from other notes instead of duplicating unless a domain-specific sibling note is justified
 3. Link inline where concept is mentioned
 4. No separate "References" or "See Also" sections
+
+### 1.1. Domain-Specific Sibling Notes
+
+Notes with overlapping content may exist under different domains when each note answers a different reader question. The overlap must be intentional, not accidental copy-paste.
+
+Example: Amazon Kiro can have an AWS-facing note under `aws/` and an AI-agent-facing note under `ai/`.
+
+Rules:
+- State the domain lens clearly in each sibling note.
+- Repeat only the minimum shared facts needed for the local explanation.
+- Cross-link sibling notes on first mention so readers can jump between lenses.
+- Prefer one canonical note plus links when the second domain would add no distinct perspective.
 
 ## 2. First Mention Rule
 

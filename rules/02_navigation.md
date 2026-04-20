@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-20T13:41:55
+recent_editor: CODEX
 ---
 
 # Navigation Rules
@@ -143,6 +143,19 @@ Files without numbers:
 | `tooling/` | Dev tools, editors |
 | `rules/` | Agent and human rules |
 | `raw/` | Raw text inbox and processed source files |
+
+### 6.1. Cross-Domain Sibling Notes
+
+The same source or product may have notes under multiple domains when each note serves a different study lens. Folder placement follows reader intent, not a single global canonical location.
+
+Examples:
+- Amazon Kiro may fit under `aws/` as an AWS product note and under `ai/` as an AI agent workflow or harness note.
+- A cloud AI service may live under `aws/ai/` while a general concept note about the same pattern lives under `ai/`.
+
+Rules:
+- Make the domain lens explicit in each note.
+- Cross-link sibling notes on first mention.
+- Do not create duplicate notes just to mirror every domain; use this only when both placements help study navigation.
 
 ## 7. When To Update Navigation
 
