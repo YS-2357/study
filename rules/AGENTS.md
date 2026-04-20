@@ -126,7 +126,7 @@ Raw source material lives in `raw/` (gitignored — local-only). Ingest runs **o
 
 Full pipeline — trigger, input types, update-vs-create, `source:` frontmatter, movement to `raw/processed/`, `log.md` append — is defined in [09_ingest.md](09_ingest.md).
 
-## 10. Conflict Resolution
+## 11. Conflict Resolution
 
 - Check `recent_editor` before bulk updates
 - Never overwrite another agent's recent changes
