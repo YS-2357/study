@@ -139,14 +139,33 @@ They are evolutionary layers, not competitors:
 - Strands = most flexible code framework
 - AgentCore = production infrastructure for any framework
 
-### 2. Why AI Often Replaces AgentCore with Lambda
-- Both AgentCore Runtime and Lambda look like "serverless compute" at a high level, so an AI can flatten them into the same box if the architecture goal is written too vaguely.
-- The [Strands Agents SDK note](./11_strands_agents_sdk.md) is correct that Strands can deploy to multiple targets, including AgentCore Runtime and Lambda, so an AI may overgeneralize that "any target is interchangeable" even when the system was intentionally designed around AgentCore features.
-- The [AgentCore developer guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html) positions AgentCore as managed infrastructure for deploying and operating agents, not as a generic function host. Lambda can run agent code, but it does not automatically replace AgentCore Memory, Gateway, Policy, Identity, Observability, Evaluations, Code Interpreter, or Browser.
-- AI also gets confused because [Bedrock Agents](./04_amazon_bedrock_agents.md) commonly uses Lambda-backed action groups, which makes "agent on AWS" and "Lambda" appear tightly coupled even though Bedrock Agents, Strands, and AgentCore are separate layers.
-- If your requirement is "managed agent runtime with agent-native infrastructure," keep AgentCore as the primary runtime. Use Lambda only for supporting APIs, tool backends, or simple compute that does not need AgentCore services.
+### 2. EC2 vs Lambda vs AgentCore — Why They Aren't Interchangeable
 
-### 2. Cost Awareness
+All three can host an agent. Only AgentCore bundles the services an agent typically needs. EC2 and Lambda give you compute only — anything agent-specific, you build yourself.
+
+|  | EC2 | Lambda | AgentCore |
+|---|---|---|---|
+| **Type** | Virtual machine | Function | Managed agent platform |
+| **Max single session** | Unlimited | 15 min | 8 h |
+| **State between calls** | You build it | None (stateless) | Memory service |
+| **Scaling** | Manual / ASG | Automatic | Automatic |
+| **Billing** | Instance-hour | Per invocation + duration | Compute-second |
+| **Cold starts** | None (always on) | Yes | Minimal |
+| **Agent-native services** | None | None | Memory, Gateway, Identity, Policy, Observability, Evaluations, Code Interpreter, Browser |
+| **Best fit** | Steady 24/7, GPU, custom networking | Short tool backends, bursty / event-driven | Production agents needing memory + governance |
+
+**Why AI flattens these together:**
+- AgentCore Runtime and Lambda both look like "serverless compute"; EC2 looks like "just give the agent a VM." Written vaguely, an architecture goal lets an AI treat any of the three as interchangeable compute.
+- The [Strands Agents SDK note](./11_strands_agents_sdk.md) correctly lists AgentCore / Lambda / Fargate / EC2 / EKS / App Runner as deployment targets — so an AI may overgeneralize that "any target works" even when the system was intentionally designed around AgentCore features.
+- [Bedrock Agents](./04_amazon_bedrock_agents.md) commonly uses Lambda-backed action groups, which makes "agent on AWS" and "Lambda" look tightly coupled even though Bedrock Agents, Strands, and AgentCore are separate layers.
+- The [AgentCore developer guide](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html) positions AgentCore as managed infrastructure for deploying and operating agents, not as a generic function host. Neither Lambda nor EC2 automatically replaces AgentCore Memory, Gateway, Policy, Identity, Observability, Evaluations, Code Interpreter, or Browser.
+
+**Rule of thumb:**
+- Agent needs memory, long sessions, managed tool access, or monitoring → **AgentCore** as the primary runtime.
+- A short tool the agent calls (e.g., "create ticket", "query DB") → **Lambda** as an action backend.
+- Full control, steady 24/7 workload, GPU, or custom networking → **EC2**.
+
+### 3. Cost Awareness
 - Runtime charges per compute-second
 - Memory charges per storage and retrieval
 - Gateway charges per request
@@ -154,18 +173,18 @@ They are evolutionary layers, not competitors:
 - Monitor with Observability dashboards
 - Consumption-based pricing, no upfront commitments or minimum fees
 
-### 3. Region Availability
+### 4. Region Availability
 - Check the [AWS Regional Services List](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/) for current availability
 - Start development in `us-east-1` or `us-west-2` for broadest availability
 
-### 4. Security
+### 5. Security
 - Use Identity instead of embedding credentials in agent code
 - Gateway + Policy provides centralized access control — don't let agents call arbitrary endpoints
 - Session isolation in Runtime prevents cross-tenant data leaks
 - Enable audit logging via Observability
 - Supports VPC connectivity and AWS PrivateLink
 
-### 5. Start Simple
+### 6. Start Simple
 - Don't enable all 9 services at once
 - Start with Runtime + Observability
 - Add Memory when you need cross-session context
