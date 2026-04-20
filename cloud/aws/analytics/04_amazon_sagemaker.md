@@ -32,7 +32,7 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 | Option | What it does | When to use |
 |---|---|---|
 | **SageMaker** | Full ML platform (build, train, deploy) | Custom models, full control over training/deployment |
-| **[Bedrock](../../ai/01_amazon_bedrock.md)** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
+| **[Bedrock](../../ai/concepts/01_amazon_bedrock.md)** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
 | **EC2 + frameworks** | DIY ML on raw compute | Maximum control, existing pipelines, custom environments |
 | **Comprehend/Rekognition/etc.** | Pre-built AI services (no ML knowledge needed) | Specific tasks (NLP, image analysis) without building models |
 
@@ -118,5 +118,5 @@ let teams focus on model quality instead of cluster management.
 ---
 ↑ [Overview](./00_analytics_overview.md)
 
-**Related:** [AWS Data Pipeline](./03_aws_data_pipeline.md), [EC2](../compute/01_amazon_ec2.md), [Bedrock](../../ai/01_amazon_bedrock.md), [S3](../storage/01_amazon_s3.md)
+**Related:** [AWS Data Pipeline](./03_aws_data_pipeline.md), [EC2](../compute/01_amazon_ec2.md), [Bedrock](../../ai/concepts/01_amazon_bedrock.md), [S3](../storage/01_amazon_s3.md)
 **Tags:** #aws #ml #computing

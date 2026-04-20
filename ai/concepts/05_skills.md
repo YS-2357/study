@@ -6,7 +6,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # Skills
 
@@ -36,7 +36,7 @@ Most people use built-in skills for specialized workflows and no skill at all fo
 Skills are important but not the main thing you interact with every minute. Don't over-focus on them as a beginner.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Tools](04_tools.md), [Plugins](06_plugins.md), [agent](01_agent.md), [AGENTS.md](03_agents_md.md)
 **Tags:** #ai

@@ -39,7 +39,10 @@
       "Bash(sed -i 's|\\\\[AWS\\\\]\\(aws/|[AWS]\\(cloud/aws/|g; s|git mv aws/|git mv cloud/aws/|g; s|'\\\\''s|aws/|cloud/aws/|g' rules/07_scalability.md)",
       "Bash(sed -i 's|aws/compute/|cloud/aws/compute/|g' rules/10_lint.md)",
       "Bash(sed -i 's|`aws/AGENTS\\\\.md`|`cloud/aws/AGENTS.md`|g' rules/CLAUDE.md)",
-      "Bash(sed -i 's|added aws/compute/|added cloud/aws/compute/|g' rules/skills/nav-update.md)"
+      "Bash(sed -i 's|added aws/compute/|added cloud/aws/compute/|g' rules/skills/nav-update.md)",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./cloud/aws/|../../cloud/aws/|g')",
+      "Bash(xargs -0 sed -i 's|\\\\./00_ai_overview\\\\.md|../00_ai_overview.md|g')",
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./ai/\\\\\\([0-9]\\\\\\)|../ai/concepts/\\\\1|g')"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -7,7 +7,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # KV Cache
 
@@ -49,7 +49,7 @@ A model generating a 500-token response to a 1000-token prompt: during prefill, 
 KV cache trades memory for speed. For long contexts, the cache can become very large (each layer stores K and V for every token). This is why context window limits exist and why longer contexts are more expensive. [Prompt caching](12_prompt_caching.md) extends this idea across API calls — saving the KV cache from prefill so the next request with the same prefix can skip it.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Attention](10_attention.md), [Prompt Caching](12_prompt_caching.md)
 **Tags:** #ai #computing

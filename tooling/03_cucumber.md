@@ -37,7 +37,7 @@ Main effects of this approach:
 
 You can apply the same idea outside automated testing by writing task or feature notes in a behavior-first format before implementation. For example, instead of writing "build password reset," write the expected behavior first with short `Given`, `When`, and `Then` statements, then use that note as the source of truth for both coding and review.
 
-That is also useful for [large language model (LLM)](../ai/01_agent.md)-assisted work. An LLM benefits from the same clarity humans do: explicit behavior, constraints, and edge cases give it a more precise target than a vague prompt. In practice, a Cucumber-style note can work as a structured prompt, an acceptance checklist, and a review artifact at the same time.
+That is also useful for [large language model (LLM)](../ai/concepts/01_agent.md)-assisted work. An LLM benefits from the same clarity humans do: explicit behavior, constraints, and edge cases give it a more precise target than a vague prompt. In practice, a Cucumber-style note can work as a structured prompt, an acceptance checklist, and a review artifact at the same time.
 
 For note-taking tools, a file-first app is usually a better fit than a workspace-first app when you want behavior notes to live in [Git](../git/00_git_overview.md) and be easy for AI tools to read. See [Obsidian vs Notion](04_obsidian_vs_notion.md) for the detailed comparison.
 
@@ -70,5 +70,5 @@ That same structure can improve AI-assisted development. If the note says exactl
 ---
 ↑ [Overview](./00_tooling_overview.md)
 
-**Related:** [Vim and Neovim](02_vim_and_neovim.md), [Obsidian vs Notion](04_obsidian_vs_notion.md), [large language model (LLM)](../ai/01_agent.md)
+**Related:** [Vim and Neovim](02_vim_and_neovim.md), [Obsidian vs Notion](04_obsidian_vs_notion.md), [large language model (LLM)](../ai/concepts/01_agent.md)
 **Tags:** #tooling

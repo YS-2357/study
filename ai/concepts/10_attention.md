@@ -6,7 +6,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # Attention Mechanism (Q, K, V)
 
@@ -60,7 +60,7 @@ Understanding Q, K, V helps you understand:
 - Why multi-head attention exists (different heads learn different relationship types: syntax, semantics, proximity)
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Profiles](09_profiles.md), [KV Cache](11_kv_cache.md)
 **Tags:** #ai

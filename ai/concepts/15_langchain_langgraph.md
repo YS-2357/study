@@ -9,7 +9,7 @@ source:
   - langchain_langgraph_2026_meaning
 ---
 
-↑[Overview](./00_ai_overview.md)
+↑[Overview](../00_ai_overview.md)
 
 # LangChain / LangGraph
 
@@ -150,7 +150,7 @@ The practical question for 2026 is not "Should I use LangChain?" The better ques
 The trend is from chains to agent harnesses: less focus on one linear LLM call, more focus on controlled loops with state, tools, memory, approval, and context management.
 
 ---
-↑[Overview](./00_ai_overview.md)
+↑[Overview](../00_ai_overview.md)
 
 **Related:** [Agent](./01_agent.md), [Harness](./02_harness.md), [Tools](./04_tools.md), [Skills](./05_skills.md), [MCP](./07_mcp.md), [Subagent Design](./14_subagent_design.md)
 **Tags:** #ai #agents

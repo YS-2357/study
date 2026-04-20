@@ -7,7 +7,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # Harness
 
@@ -76,7 +76,7 @@ Many beginner questions are really harness questions: "Why could the agent read 
 The instruction-reading chain adds another class of harness question: "Why did the agent ignore its own rules?" The answer is almost always that the rule was written in a file outside the harness's read path — not that the agent or the rule was wrong.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Agent](01_agent.md), [AGENTS.md](03_agents_md.md), [tools](04_tools.md), [profiles](09_profiles.md), [MCP](07_mcp.md)
 **Tags:** #ai #tooling

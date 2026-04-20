@@ -74,10 +74,10 @@ A web app queries a database for user profiles. Without caching, every page load
 
 Caching appears at every level of AWS architecture: [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md) at the edge, [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md) in front of databases, [DynamoDB DAX](../cloud/aws/database/03_amazon_dynamodb.md) for DynamoDB. Understanding cache patterns helps you choose the right strategy and avoid stale data bugs.
 
-For LLM-specific caching, see [KV Cache](../ai/11_kv_cache.md) and [Prompt Caching](../ai/12_prompt_caching.md).
+For LLM-specific caching, see [KV Cache](../ai/concepts/11_kv_cache.md) and [Prompt Caching](../ai/concepts/12_prompt_caching.md).
 
 ---
 ↑ [Overview](./00_computing_overview.md)
 
-**Related:** [Workload Types](05_workload_types.md), [Interfaces](07_interfaces.md), [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md), [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md), [DynamoDB DAX](../cloud/aws/database/03_amazon_dynamodb.md), [KV Cache](../ai/11_kv_cache.md), [Prompt Caching](../ai/12_prompt_caching.md)
+**Related:** [Workload Types](05_workload_types.md), [Interfaces](07_interfaces.md), [ElastiCache](../cloud/aws/database/04_amazon_elasticache.md), [CloudFront](../cloud/aws/networking/02_amazon_cloudfront.md), [DynamoDB DAX](../cloud/aws/database/03_amazon_dynamodb.md), [KV Cache](../ai/concepts/11_kv_cache.md), [Prompt Caching](../ai/concepts/12_prompt_caching.md)
 **Tags:** #computing

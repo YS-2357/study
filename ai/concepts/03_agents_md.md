@@ -6,7 +6,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # AGENTS.md
 
@@ -51,7 +51,7 @@ Without `AGENTS.md`, the agent must infer repo conventions every time. With it, 
 It also prevents a common mistake: trying to split agent identity inside one shared file. If multiple harnesses load the same `AGENTS.md`, they all see the same instructions. Real separation comes from separate load paths, not from "if you are agent A, do X" text inside a single shared memo.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Harness](02_harness.md), [Tools](04_tools.md), [agent](01_agent.md)
 **Tags:** #ai

@@ -6,7 +6,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # Agent
 
@@ -45,7 +45,7 @@ The agent is the decision-maker. The [harness](02_harness.md) is the environment
 If you confuse the agent with its environment, docs become hard to read. The clean split: agent = decision-maker, harness = execution environment, tools = capabilities, instructions = behavior shaping.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Harness](02_harness.md), [tools](04_tools.md), [AGENTS.md](03_agents_md.md)
 **Tags:** #ai

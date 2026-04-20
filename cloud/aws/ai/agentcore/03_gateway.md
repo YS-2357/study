@@ -148,5 +148,5 @@ Gateway makes tool access explicit and central. That is easier to govern than gi
 ---
 ↑ [Overview](./00_agentcore_overview.md)
 
-**Related:** [AgentCore Memory](02_memory.md), [AgentCore Identity](04_identity.md), [AgentCore Policy](09_policy.md), [AgentCore Runtime](01_runtime.md), [MCP](../../../../ai/07_mcp.md)
+**Related:** [AgentCore Memory](02_memory.md), [AgentCore Identity](04_identity.md), [AgentCore Policy](09_policy.md), [AgentCore Runtime](01_runtime.md), [MCP](../../../../ai/concepts/07_mcp.md)
 **Tags:** #ai #aws #ml

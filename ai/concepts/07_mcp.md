@@ -7,7 +7,7 @@ updated_at: 2026-04-19T09:11:51
 recent_editor: CLAUDE
 ---
 
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 # MCP
 
@@ -36,7 +36,7 @@ An MCP server may expose tools the agent can call, resources the agent can read,
 MCP explains why one agent environment can access GitHub, browser controls, or docs while another cannot. That is usually a connection and [harness](02_harness.md) question, not a core agent intelligence question.
 
 ---
-↑ [Overview](./00_ai_overview.md)
+↑ [Overview](../00_ai_overview.md)
 
 **Related:** [Plugins](06_plugins.md), [Hooks](08_hooks.md), [tools](04_tools.md), [harness](02_harness.md)
 **Tags:** #ai #networking
