@@ -103,3 +103,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-20T14:33:31] query | perplexity developer deep dive
 - Touched: ai/perplexity/00_perplexity_overview.md, log.md
 - Added: Sonar API, official SDKs, OpenAI-compatible client usage, LangChain support, and developer use cases.
+
+## [2026-04-20T14:47:19] query | perplexity korean search caveat
+- Touched: ai/perplexity/00_perplexity_overview.md, log.md
+- Added: Korean-language search caveat; use Perplexity for source discovery and cross-check Korean-local topics with NAVER, Google, and official Korean sources.

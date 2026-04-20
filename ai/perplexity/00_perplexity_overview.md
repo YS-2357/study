@@ -3,7 +3,7 @@ tags:
   - ai
   - perplexity
 created_at: 2026-04-20T13:50:42
-updated_at: 2026-04-20T14:33:31
+updated_at: 2026-04-20T14:47:19
 recent_editor: CODEX
 source:
   - docs.perplexity.ai
@@ -58,6 +58,14 @@ Use Perplexity when the program needs external, current, or citation-backed know
 - **OpenAI-style migration** - reuse existing Chat Completions-shaped code with a different endpoint.
 
 Do not use Perplexity as the default for every generation task. If the task does not need web grounding, citations, or current information, a normal chat model may be simpler and cheaper.
+
+## Korean Search Caveat
+
+Perplexity can help with Korean-language research, especially when the query benefits from citations or English/Korean mixed sources. But there is no clear public benchmark proving Perplexity is best for Korean-local search.
+
+For Korean-local topics, cross-check with NAVER, Google, and official Korean sources. Be especially careful with restaurants, shopping, local policy, community sentiment, and Naver Blog/Cafe-heavy topics.
+
+Use Perplexity as a fast source-discovery tool, not as the final authority.
 
 ## Official Sources
 
