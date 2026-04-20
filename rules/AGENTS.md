@@ -120,7 +120,7 @@ Structural documents that must reflect current file structure:
 - `README.md` - Folder index for each directory
 - `rules/02_navigation.md` - Domain layout table
 
-## 9. Ingesting Raw Sources
+## 10. Ingesting Raw Sources
 
 Raw source material lives in `raw/` (gitignored — local-only). Ingest runs **only on user request** via `/ingest <source>` or a conversational equivalent.
 
