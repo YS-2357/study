@@ -39,6 +39,6 @@ git -C "C:\Users\user\study" push origin main
 
 Never chain `cd && git` commands.
 
-## 4. Subtree Overrides
+## 5. Subtree Overrides
 
 - `aws/AGENTS.md` - AWS-specific viewpoint framework
