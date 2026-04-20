@@ -18,7 +18,13 @@ All rules are in [AGENTS.md](AGENTS.md). This file contains only platform-specif
 
 Run `git pull origin main` before any read or write operation (multi-PC sync repo).
 
-## 3. Automation Location
+## 3. Skills
+
+Canonical skill definitions are in `rules/skills/`. On first use of a skill, read `rules/skills/<skill>.md` and implement it in your platform's native skill/command format. Do not copy `.claude/commands/` files.
+
+Skills to implement: `ingest`, `lint`, `nav-update`, `split`.
+
+## 4. Automation Location
 
 - Codex keeps repo-local automation in `.codex/`
 - Shared Git hook entrypoints in `.githooks/`
