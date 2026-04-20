@@ -133,7 +133,7 @@ Full pipeline — trigger, input types, update-vs-create, `source:` frontmatter,
 - Coordinate via commit messages
 - When in doubt, ask
 
-## 11. Frontmatter Requirements
+## 12. Frontmatter Requirements
 
 Every `.md` file must have:
 
