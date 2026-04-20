@@ -22,7 +22,9 @@
       "Bash(command -v python)",
       "Bash(command -v python3)",
       "Bash(ls .kiro/)",
-      "Bash(ls .codex/)"
+      "Bash(ls .codex/)",
+      "Bash(python *)",
+      "Bash(powershell *)"
     ]
   },
   "enableAllProjectMcpServers": true,
