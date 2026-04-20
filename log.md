@@ -99,3 +99,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-20T14:15:06] nav-update | organize ai overview by current path structure
 - Touched: ai/00_ai_overview.md, ai/concepts/00_concepts_overview.md, ai/README.md, log.md
 - Decision: parent AI overview now lists immediate subdomains; concept note links moved into the concepts overview.
+
+## [2026-04-20T14:33:31] query | perplexity developer deep dive
+- Touched: ai/perplexity/00_perplexity_overview.md, log.md
+- Added: Sonar API, official SDKs, OpenAI-compatible client usage, LangChain support, and developer use cases.
