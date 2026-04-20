@@ -42,7 +42,10 @@
       "Bash(sed -i 's|added aws/compute/|added cloud/aws/compute/|g' rules/skills/nav-update.md)",
       "Bash(xargs -0 sed -i 's|\\\\.\\\\./cloud/aws/|../../cloud/aws/|g')",
       "Bash(xargs -0 sed -i 's|\\\\./00_ai_overview\\\\.md|../00_ai_overview.md|g')",
-      "Bash(xargs -0 sed -i 's|\\\\.\\\\./ai/\\\\\\([0-9]\\\\\\)|../ai/concepts/\\\\1|g')"
+      "Bash(xargs -0 sed -i 's|\\\\.\\\\./ai/\\\\\\([0-9]\\\\\\)|../ai/concepts/\\\\1|g')",
+      "WebSearch",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:docs.anthropic.com)"
     ]
   },
   "enableAllProjectMcpServers": true,
