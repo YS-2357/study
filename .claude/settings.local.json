@@ -45,7 +45,8 @@
       "Bash(xargs -0 sed -i 's|\\\\.\\\\./ai/\\\\\\([0-9]\\\\\\)|../ai/concepts/\\\\1|g')",
       "WebSearch",
       "WebFetch(domain:www.anthropic.com)",
-      "WebFetch(domain:docs.anthropic.com)"
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:www.darioamodei.com)"
     ]
   },
   "enableAllProjectMcpServers": true,
