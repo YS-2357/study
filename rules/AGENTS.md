@@ -81,7 +81,17 @@ On failure:
 - No placeholder or speculative content
 - Verify facts before committing
 
-## 6. Atomic Commits
+## 6. Session Start
+
+**Always `git pull` before any read or write operation.**
+
+This repo is synced across multiple PCs. Stale local state causes merge conflicts.
+
+```bash
+git pull origin main
+```
+
+## 7. Atomic Commits
 
 - One logical change per commit
 - Descriptive commit messages
