@@ -24,8 +24,8 @@ A port is a virtual endpoint for network connections, numbered 0–65535. IP add
 
 | Range | Name | Examples |
 |-------|------|----------|
-| 0–1023 | Well-known | 22 (SSH), 80 (HTTP), 443 (HTTPS), 3306 (MySQL), 3389 (RDP), 5432 (PostgreSQL) |
-| 1024–49151 | Registered | 3000 (Node.js dev), 8080 (alt HTTP) |
+| 0–1023 | Well-known | 21 (FTP), 22 (SSH), 25 (SMTP), 53 (DNS), 80 (HTTP), 110 (POP3), 143 (IMAP), 443 (HTTPS) |
+| 1024–49151 | Registered | 3000 (React dev), 3306 (MySQL), 3389 (RDP), 5000 (Flask), 5173 (Vite), 5432 (PostgreSQL), 6379 (Redis), 8000 (FastAPI/Django), 8080 (alt HTTP), 8501 (Streamlit), 27017 (MongoDB) |
 | 49152–65535 | Ephemeral | Temporary client ports, auto-assigned by OS |
 
 When your browser connects to a web server: `YourIP:54321 ↔ ServerIP:443`. The browser uses a random ephemeral port; the server listens on a well-known port.
