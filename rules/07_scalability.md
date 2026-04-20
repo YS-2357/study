@@ -26,7 +26,7 @@ See [rules/02_navigation.md §3.3](02_navigation.md) for the subdomain pattern a
 
 | Level | Direction | Example |
 |-------|-----------|---------|
-| `home.md` (root) | points **down** to domain overviews | `[AWS](aws/00_aws_overview.md)` |
+| `home.md` (root) | points **down** to domain overviews | `[AWS](cloud/aws/00_aws_overview.md)` |
 | `00_{domain}_overview.md` | points **down** to subdomain overviews or concept notes | `[Compute](compute/00_compute_overview.md)` or `[EC2](01_amazon_ec2.md)` |
 | `00_{subdomain}_overview.md` | points **down** to concept notes, **up** to parent overview in footer | `↑ [AWS](../00_aws_overview.md)` |
 | Concept note | points **up** to subdomain overview (header + footer), **outward** to Related notes via inline links and the footer list | `↑ [Overview](./00_compute_overview.md)` |
