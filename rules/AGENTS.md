@@ -164,3 +164,22 @@ recent_editor: CLAUDE
 | [10_lint.md](10_lint.md) | Wiki health check: broken links, orphans, missing cross-refs, stale claims |
 | [../log.md](../log.md) | Append-only chronological log of ingests/queries/lints |
 | [../glossary.md](../glossary.md) | Abbreviations and terms |
+
+## 14. Skills
+
+Canonical skill definitions live in `rules/skills/`. Each agent implements these in their platform's native skill directory:
+
+| Skill | Description |
+|-------|-------------|
+| [ingest](skills/ingest.md) | Ingest a raw source file into the wiki |
+| [lint](skills/lint.md) | Run the wiki health check |
+| [nav-update](skills/nav-update.md) | Sync structural documents after file changes |
+| [split](skills/split.md) | Split an oversized or mixed-theme note |
+
+Each agent implements these in their own native format — do not copy another agent's files:
+
+- **Claude** → `.claude/commands/`
+- **Kiro** → `.kiro/skills/`
+- **Codex** → platform's native skill/command directory
+
+On first use of a skill that has no local implementation, read `rules/skills/<skill>.md` and create your own platform-native version.
