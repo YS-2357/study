@@ -18,11 +18,17 @@ All rules are in [AGENTS.md](AGENTS.md). This file contains only platform-specif
 
 Run `git pull origin main` before any read or write operation (multi-PC sync repo).
 
-## 3. Status
+## 3. Skills
+
+Canonical skill definitions are in `rules/skills/`. On first use of a skill that doesn't exist in `.kiro/skills/`, read `rules/skills/<skill>.md` and create a Kiro-native implementation in `.kiro/skills/<skill>.md`. Do not copy `.claude/commands/` files.
+
+Skills to implement: `ingest`, `lint`, `nav-update`, `split`.
+
+## 4. Status
 
 Kiro-specific automation will be added when integration is configured.
 
-## 4. Automation Location
+## 5. Automation Location
 
 When configured:
 - Entrypoints in `.githooks/`
