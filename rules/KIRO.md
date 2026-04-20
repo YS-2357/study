@@ -22,7 +22,7 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 
 Kiro-specific automation will be added when integration is configured.
 
-## 3. Automation Location
+## 4. Automation Location
 
 When configured:
 - Entrypoints in `.githooks/`
