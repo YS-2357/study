@@ -38,7 +38,11 @@ All AI agents have these permissions:
 - Push back when simpler approaches exist
 - Ask clarification before proceeding when confused
 
-### 3.2. Simplicity First
+### 3.2. Same Topic, Different Domain Focus
+
+A concept can have notes in multiple domains — this is intentional. Each note focuses on the angle relevant to its domain. Example: Kiro in `cloud/aws/` covers infrastructure setup; `ai/kiro/` covers it as a coding tool. No deduplication, merging, or "see only" redirects required. When deciding where to put a note, choose the focus angle that fits the domain.
+
+### 3.3. Simplicity First
 
 - Deliver only requested features
 - No speculative additions or abstractions
