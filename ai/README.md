@@ -2,30 +2,22 @@
 tags:
   - ai
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-20T08:29:39
+updated_at: 2026-04-20T14:15:06
 recent_editor: CODEX
 ---
 
 # ai
 
-AI agent and LLM concepts. See [00_ai_overview.md](00_ai_overview.md) for the concept hub.
+AI concepts, model families, assistant products, and agent tools. See [00_ai_overview.md](00_ai_overview.md) for the domain hub.
 
 - `README.md`: This file.
-- `00_ai_overview.md`: Concept hub and navigation.
-- `01_agent.md`: What an agent is.
-- `02_harness.md`: The runtime environment around the agent.
-- `03_agents_md.md`: Repo-level instruction files.
-- `04_tools.md`: Capabilities the agent can call.
-- `05_skills.md`: Reusable instruction bundles.
-- `06_plugins.md`: Platform capability packs.
-- `07_mcp.md`: Model Context Protocol.
-- `08_hooks.md`: Event-triggered automation.
-- `09_profiles.md`: Named runtime configurations.
-- `10_attention.md`: Attention mechanism (Q, K, V).
-- `11_kv_cache.md`: KV cache optimization.
-- `12_prompt_caching.md`: Prompt caching across API calls.
-- `13_multi_agent_orchestration.md`: Multi-agent orchestration and review loops.
-- `14_subagent_design.md`: When to spawn, when to divide, and harness-per-role design.
-- `15_langchain_langgraph.md`: LangChain, LangGraph, middleware, MCP adapters, and agent harnesses.
+- `00_ai_overview.md`: AI domain hub and navigation.
+- `concepts/`: Core LLM, agent, harness, and automation concept notes.
+- `claude/`: Anthropic and Claude notes.
+- `codex/`: OpenAI Codex notes.
+- `copilot/`: Microsoft Copilot notes.
+- `gemini/`: Google Gemini notes.
+- `kiro/`: AWS Kiro notes from the AI coding-agent angle.
+- `perplexity/`: Perplexity notes.
 
-AWS-specific frameworks (Strands Agents SDK, Bedrock family, AgentCore) live in [aws/ai/](../cloud/aws/ai/).
+AWS-specific frameworks such as Strands Agents SDK, Bedrock family, and AgentCore live in [cloud/aws/ai/](../cloud/aws/ai/).

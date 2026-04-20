@@ -95,3 +95,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-20T08:29:39] ingest | langchain_langgraph_2026_meaning
 - Touched: ai/15_langchain_langgraph.md (new), ai/00_ai_overview.md, ai/README.md
 - Decision: create a general AI framework note for LangChain/LangGraph rather than editing AWS-specific agent framework notes.
+
+## [2026-04-20T14:15:06] nav-update | organize ai overview by current path structure
+- Touched: ai/00_ai_overview.md, ai/concepts/00_concepts_overview.md, ai/README.md, log.md
+- Decision: parent AI overview now lists immediate subdomains; concept note links moved into the concepts overview.
