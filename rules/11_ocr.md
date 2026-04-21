@@ -62,13 +62,33 @@ The tracked script must stay generic:
 ```
 
 If a source needs session grouping, place a local JSON map under `raw/` and pass it with `--sessions`.
+To write one file per session, use `--split-by-session` and `--output-dir`:
+
+```powershell
+.venv\Scripts\python.exe scripts\ocr_images_to_markdown.py `
+  "raw\<image-folder>" `
+  --sessions "raw\<sessions>.json" `
+  --output-dir "raw\<ocr-output-folder>" `
+  --title "<OCR title>" `
+  --lang "kor+eng" `
+  --tessdata-dir ".ocr-cache\tessdata" `
+  --preserve-layout `
+  --include-low-confidence `
+  --split-by-session
+```
 
 Example shape:
 
 ```json
 {
   "sessions": [
-    {"group": "Keynote", "title": "Opening", "start": "10:00", "end": "10:15"}
+    {
+      "group": "Keynote",
+      "title": "Opening",
+      "start": "10:00",
+      "end": "10:15",
+      "file": "01-keynote-opening.md"
+    }
   ]
 }
 ```
@@ -87,6 +107,8 @@ Recommended flow:
 4. Use `--psm 11` for sparse slide photos; try `--psm 6` for clean document-like screenshots.
 5. Process only useful time windows. Skip stage, audience, hallway, and distant screen photos when OCR quality is poor.
 6. If Tesseract output is still unreadable on clear slide photos, try different preprocessing/page segmentation settings or evaluate another OCR engine before running the full folder.
+
+When the goal is raw text extraction rather than summary, prefer `--preserve-layout --include-low-confidence` and keep every image in the session file. This preserves more text at the cost of noisy OCR.
 
 ## 6. Relationship To Ingest
 

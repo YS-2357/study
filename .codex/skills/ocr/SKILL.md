@@ -19,6 +19,7 @@ While working:
 - Use `scripts/ocr_images_to_markdown.py` as the generic tracked script.
 - Run a 3-5 image sample before processing a large folder.
 - Prefer `--start-time`, `--end-time`, `--limit`, `--skip-empty`, and `--skip-low-confidence` for controllable OCR batches.
+- Prefer `--preserve-layout --include-low-confidence --split-by-session` when the user asks for all visible text split into session Markdown files.
 - Put source-specific session maps, temporary scripts, caches, and OCR output under `raw/`.
 - Do not commit raw images or raw OCR output.
 - Do not hardcode a single event's schedule or speakers into tracked scripts.

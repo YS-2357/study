@@ -25,6 +25,7 @@ class Session:
     title: str
     start: time
     end: time
+    file_name: str | None = None
 
 
 @dataclass(frozen=True)
@@ -32,6 +33,7 @@ class OcrResult:
     image: Path
     captured_at: datetime | None
     text: str
+    layout_text: str
     confidence: float
     status: str
 
@@ -88,6 +90,58 @@ def normalize_text(text: str) -> str:
     return "\n".join(lines)
 
 
+def layout_text_from_data(data: dict[str, list], include_low_confidence: bool) -> str:
+    lines: dict[tuple[int, int, int], dict[str, object]] = {}
+    item_count = len(data.get("text", []))
+    for index in range(item_count):
+        word = data["text"][index].strip()
+        if not word:
+            continue
+        try:
+            confidence = float(data["conf"][index])
+        except ValueError:
+            confidence = -1.0
+        if confidence < 0:
+            continue
+        if not include_low_confidence and confidence < 35:
+            continue
+
+        key = (
+            int(data["block_num"][index]),
+            int(data["par_num"][index]),
+            int(data["line_num"][index]),
+        )
+        entry = lines.setdefault(
+            key,
+            {
+                "top": int(data["top"][index]),
+                "left": int(data["left"][index]),
+                "words": [],
+            },
+        )
+        entry["top"] = min(int(entry["top"]), int(data["top"][index]))
+        entry["left"] = min(int(entry["left"]), int(data["left"][index]))
+        entry["words"].append((int(data["left"][index]), word))
+
+    ordered_lines = sorted(
+        lines.values(),
+        key=lambda entry: (int(entry["top"]), int(entry["left"])),
+    )
+    output_lines: list[str] = []
+    previous_top: int | None = None
+    for entry in ordered_lines:
+        top = int(entry["top"])
+        if previous_top is not None and top - previous_top > 45 and output_lines:
+            output_lines.append("")
+        words = [word for _, word in sorted(entry["words"], key=lambda item: item[0])]
+        line = normalize_text(" ".join(words))
+        if line:
+            output_lines.append(line)
+        previous_top = top
+
+    return "\n".join(output_lines)
+
+
 def ocr_image(
     path: Path,
     lang: str,
@@ -96,6 +150,7 @@ def ocr_image(
     tessdata_dir: Path | None,
     max_dimension: int,
     psm: int,
+    include_low_confidence: bool,
 ) -> OcrResult:
     image = preprocess_image(path, max_dimension)
     config = f"--oem 3 --psm {psm}"
@@ -123,6 +178,7 @@ def ocr_image(
         words.append(word)
 
     text = normalize_text(" ".join(words))
+    layout_text = layout_text_from_data(data, include_low_confidence)
     average_confidence = sum(confidences) / len(confidences) if confidences else 0.0
     if len(text) < min_chars:
         status = "empty"
@@ -131,7 +187,7 @@ def ocr_image(
     else:
         status = "usable"
 
-    return OcrResult(path, parse_capture_time(path), text, average_confidence, status)
+    return OcrResult(path, parse_capture_time(path), text, layout_text, average_confidence, status)
 
 
 def load_sessions(path: Path | None) -> list[Session]:
@@ -146,6 +202,7 @@ def load_sessions(path: Path | None) -> list[Session]:
             title=item["title"],
             start=parse_clock(item["start"]),
             end=parse_clock(item["end"]),
+            file_name=item.get("file"),
         )
         for item in sessions
     ]
@@ -171,25 +228,47 @@ def markdown_block(result: OcrResult, skip_empty: bool, skip_low_confidence: boo
     return "\n".join(f"> {line}" for line in result.text.splitlines())
 
 
+def fenced_layout_block(result: OcrResult) -> str:
+    text = result.layout_text or result.text
+    if not text:
+        return "_No meaningful OCR text._"
+    return f"```text\n{text}\n```"
+
+
+def image_lines(
+    result: OcrResult,
+    skip_empty: bool,
+    skip_low_confidence: bool,
+    preserve_layout: bool,
+    heading_level: int,
+) -> list[str]:
+    heading = "#" * heading_level
+    captured = result.captured_at.strftime("%H:%M:%S") if result.captured_at else "unknown"
+    body = (
+        fenced_layout_block(result)
+        if preserve_layout
+        else markdown_block(result, skip_empty, skip_low_confidence)
+    )
+    return [
+        f"{heading} {result.image.name} ({captured})",
+        f"- Status: `{result.status}`",
+        f"- Confidence: `{result.confidence:.1f}`",
+        "",
+        body,
+        "",
+    ]
+
+
 def write_flat_markdown(
     lines: list[str],
     results: list[OcrResult],
     skip_empty: bool,
     skip_low_confidence: bool,
+    preserve_layout: bool,
 ) -> None:
     lines.extend(["## Images", ""])
     for result in results:
-        captured = result.captured_at.strftime("%H:%M:%S") if result.captured_at else "unknown"
-        lines.extend(
-            [
-                f"### {result.image.name} ({captured})",
-                f"- Status: `{result.status}`",
-                f"- Confidence: `{result.confidence:.1f}`",
-                "",
-                markdown_block(result, skip_empty, skip_low_confidence),
-                "",
-            ]
-        )
+        lines.extend(image_lines(result, skip_empty, skip_low_confidence, preserve_layout, 3))
 
 
 def write_session_markdown(
@@ -198,6 +277,7 @@ def write_session_markdown(
     sessions: list[Session],
     skip_empty: bool,
     skip_low_confidence: bool,
+    preserve_layout: bool,
 ) -> None:
     grouped: dict[Session | None, list[OcrResult]] = {session: [] for session in sessions}
     grouped[None] = []
@@ -220,33 +300,13 @@ def write_session_markdown(
             ]
         )
         for result in session_results:
-            captured = result.captured_at.strftime("%H:%M:%S") if result.captured_at else "unknown"
-            lines.extend(
-                [
-                    f"##### {result.image.name} ({captured})",
-                    f"- Status: `{result.status}`",
-                    f"- Confidence: `{result.confidence:.1f}`",
-                    "",
-                    markdown_block(result, skip_empty, skip_low_confidence),
-                    "",
-                ]
-            )
+            lines.extend(image_lines(result, skip_empty, skip_low_confidence, preserve_layout, 5))
 
     unassigned = grouped.get(None, [])
     if unassigned:
         lines.extend(["## Unassigned / Transition", ""])
         for result in unassigned:
-            captured = result.captured_at.strftime("%H:%M:%S") if result.captured_at else "unknown"
-            lines.extend(
-                [
-                    f"### {result.image.name} ({captured})",
-                    f"- Status: `{result.status}`",
-                    f"- Confidence: `{result.confidence:.1f}`",
-                    "",
-                    markdown_block(result, skip_empty, skip_low_confidence),
-                    "",
-                ]
-            )
+            lines.extend(image_lines(result, skip_empty, skip_low_confidence, preserve_layout, 3))
 
 
 def write_markdown(
@@ -258,6 +318,7 @@ def write_markdown(
     title: str,
     skip_empty: bool,
     skip_low_confidence: bool,
+    preserve_layout: bool,
 ) -> None:
     lines = [
         f"# {title}",
@@ -270,9 +331,9 @@ def write_markdown(
     ]
 
     if sessions:
-        write_session_markdown(lines, results, sessions, skip_empty, skip_low_confidence)
+        write_session_markdown(lines, results, sessions, skip_empty, skip_low_confidence, preserve_layout)
     else:
-        write_flat_markdown(lines, results, skip_empty, skip_low_confidence)
+        write_flat_markdown(lines, results, skip_empty, skip_low_confidence, preserve_layout)
 
     counts = {
         status: sum(1 for result in results if result.status == status)
@@ -291,6 +352,70 @@ def write_markdown(
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def slugify(value: str, fallback: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or fallback
+
+
+def session_filename(index: int, session: Session) -> str:
+    if session.file_name:
+        return session.file_name
+    base = slugify(f"{session.group}-{session.title}", f"session-{index:02d}")
+    return f"{index:02d}-{base}.md"
+
+
+def write_split_by_session(
+    output_dir: Path,
+    image_dir: Path,
+    results: list[OcrResult],
+    sessions: list[Session],
+    lang: str,
+    title: str,
+    skip_empty: bool,
+    skip_low_confidence: bool,
+    preserve_layout: bool,
+) -> None:
+    if not sessions:
+        raise SystemExit("--split-by-session requires --sessions")
+
+    grouped: dict[Session | None, list[OcrResult]] = {session: [] for session in sessions}
+    grouped[None] = []
+    for result in results:
+        grouped[session_for(result, sessions)].append(result)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for index, session in enumerate(sessions, start=1):
+        session_results = grouped.get(session, [])
+        if not session_results:
+            continue
+        output_path = output_dir / session_filename(index, session)
+        write_markdown(
+            output_path,
+            image_dir,
+            session_results,
+            [session],
+            lang,
+            f"{title} - {session.title}",
+            skip_empty,
+            skip_low_confidence,
+            preserve_layout,
+        )
+
+    unassigned = grouped.get(None, [])
+    if unassigned:
+        write_markdown(
+            output_dir / "99-unassigned.md",
+            image_dir,
+            unassigned,
+            [],
+            lang,
+            f"{title} - Unassigned",
+            skip_empty,
+            skip_low_confidence,
+            preserve_layout,
+        )
 
 
 def filter_images(
@@ -319,7 +444,8 @@ def filter_images(
 def main() -> int:
     parser = argparse.ArgumentParser(description="OCR JPG/PNG images into Markdown.")
     parser.add_argument("image_dir", type=Path)
-    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--sessions", type=Path, help="Optional raw-local JSON session mapping.")
     parser.add_argument("--title", default="OCR Output")
     parser.add_argument("--lang", default="kor+eng")
@@ -333,7 +459,14 @@ def main() -> int:
     parser.add_argument("--min-confidence", type=float, default=35.0)
     parser.add_argument("--skip-empty", action="store_true", help="Omit body text for empty / low-signal images.")
     parser.add_argument("--skip-low-confidence", action="store_true", help="Omit body text for low-confidence OCR results.")
+    parser.add_argument("--include-low-confidence", action="store_true", help="Include low-confidence words in layout-preserving output.")
+    parser.add_argument("--preserve-layout", action="store_true", help="Reconstruct OCR by block/paragraph/line instead of one text stream.")
+    parser.add_argument("--split-by-session", action="store_true", help="Write one Markdown file per configured session.")
     args = parser.parse_args()
+    if args.split_by_session and args.output_dir is None:
+        raise SystemExit("--split-by-session requires --output-dir")
+    if not args.split_by_session and args.output is None:
+        raise SystemExit("--output is required unless --split-by-session is used")
 
     tesseract = find_tesseract()
     if not tesseract:
@@ -360,25 +493,43 @@ def main() -> int:
             args.tessdata_dir,
             args.max_dimension,
             args.psm,
+            args.include_low_confidence,
         )
         for path in images
     ]
-    write_markdown(
-        args.output,
-        args.image_dir,
-        results,
-        sessions,
-        args.lang,
-        args.title,
-        args.skip_empty,
-        args.skip_low_confidence,
-    )
+    if args.split_by_session:
+        write_split_by_session(
+            args.output_dir,
+            args.image_dir,
+            results,
+            sessions,
+            args.lang,
+            args.title,
+            args.skip_empty,
+            args.skip_low_confidence,
+            args.preserve_layout,
+        )
+    else:
+        write_markdown(
+            args.output,
+            args.image_dir,
+            results,
+            sessions,
+            args.lang,
+            args.title,
+            args.skip_empty,
+            args.skip_low_confidence,
+            args.preserve_layout,
+        )
 
     usable = sum(1 for result in results if result.status == "usable")
     low = sum(1 for result in results if result.status == "low_confidence")
     empty = sum(1 for result in results if result.status == "empty")
     print(f"Processed {len(results)} images: usable={usable}, low_confidence={low}, empty={empty}")
-    print(f"Wrote {args.output}")
+    if args.split_by_session:
+        print(f"Wrote session files under {args.output_dir}")
+    else:
+        print(f"Wrote {args.output}")
     return 0
 
 
