@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T00:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-21T00:00:00
+recent_editor: CODEX
 ---
 
 # Codex
@@ -22,7 +22,7 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 
 Canonical skill definitions are in `rules/skills/`. On first use of a skill, read `rules/skills/<skill>.md` and implement it in your platform's native skill/command format. Do not copy `.claude/commands/` files.
 
-Skills to implement: `ingest`, `lint`, `nav-update`, `split`.
+Skills to implement: `ingest`, `lint`, `nav-update`, `ocr`, `split`.
 
 ## 4. Automation Location
 
@@ -45,3 +45,7 @@ Run Git write commands with escalated permissions immediately:
 - `git add`, `git commit`, `git push`, `git pull`
 
 Windows may fail on `.git/index.lock` if sandbox tried first.
+
+## 6. OCR
+
+For raw image OCR, use [11_ocr.md](11_ocr.md) and the Codex skill in `.codex/skills/ocr/`. Keep event-specific session maps, temporary scripts, and OCR outputs under `raw/`.

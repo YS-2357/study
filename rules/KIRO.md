@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T00:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-21T00:00:00
+recent_editor: CODEX
 ---
 
 # Kiro
@@ -22,7 +22,7 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 
 Canonical skill definitions are in `rules/skills/`. On first use of a skill that doesn't exist in `.kiro/skills/`, read `rules/skills/<skill>.md` and create a Kiro-native implementation in `.kiro/skills/<skill>.md`. Do not copy `.claude/commands/` files.
 
-Skills to implement: `ingest`, `lint`, `nav-update`, `split`.
+Skills to implement: `ingest`, `lint`, `nav-update`, `ocr`, `split`.
 
 ## 4. Status
 
@@ -33,3 +33,7 @@ Kiro-specific automation will be added when integration is configured.
 When configured:
 - Entrypoints in `.githooks/`
 - Kiro-specific logic in `.kiro/hooks/`
+
+## 6. OCR
+
+For raw image OCR, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in `.kiro/skills/ocr.md` if needed. Keep event-specific session maps, temporary scripts, and OCR outputs under `raw/`.

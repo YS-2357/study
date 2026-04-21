@@ -1,5 +1,9 @@
 # Local environment configuration
 .env
+.venv/
+.ocr-cache/
+*.ocr.tmp
+__pycache__/
 
 # Local Obsidian UI state
 .obsidian/workspace.json

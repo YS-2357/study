@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:05:28
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-21T00:00:00
+recent_editor: CODEX
 ---
 
 # raw
@@ -27,7 +27,7 @@ Drop source material here that you want turned into structured study notes. The 
 |------|-------|
 | `.md`, `.txt`, `.csv`, `.log` | Read directly |
 | `.pdf` | Use `pages` parameter for PDFs >10 pages |
-| Images (`.png`, `.jpg`) | Claude reads directly |
+| Images (`.png`, `.jpg`) | Read directly for a few images; for batch OCR, follow [../rules/11_ocr.md](../rules/11_ocr.md) |
 | URLs | Put the URL in a `.txt` file, or paste in chat |
 | `.docx`, `.pptx`, audio | Convert to plain text first |
 

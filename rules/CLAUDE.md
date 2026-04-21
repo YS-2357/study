@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T00:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-21T00:00:00
+recent_editor: CODEX
 ---
 
 # Claude Code
@@ -42,3 +42,7 @@ Never chain `cd && git` commands.
 ## 5. Subtree Overrides
 
 - `cloud/aws/AGENTS.md` - AWS-specific viewpoint framework
+
+## 6. OCR
+
+For raw image OCR, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in Claude's native command format if needed. Keep event-specific session maps, temporary scripts, and OCR outputs under `raw/`.
