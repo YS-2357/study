@@ -1,31 +1,29 @@
 ---
 name: ocr
-description: Extract text from local raw image folders into local raw Markdown drafts. Use when Codex needs to OCR screenshots, slide photos, scanned pages, or image batches under raw/ before later ingest, while keeping event-specific scripts/configs and outputs local-only.
+description: Manually extract readable text from local raw image folders into raw Markdown drafts. Use when Codex needs to inspect screenshots, slide photos, scanned pages, or image batches under raw/ before later ingest, while keeping outputs local-only.
 ---
 
 # OCR
 
 Use the canonical workflow in `rules/skills/ocr.md` and the full procedure in `rules/11_ocr.md`.
 
-Before running OCR:
+Before extracting text:
 
 - Run `git pull --ff-only origin main`.
 - Locate the raw image folder under `raw/`.
-- Confirm `uv`, `.venv`, Python packages from `requirements.txt`, and Tesseract are available.
-- Confirm needed Tesseract languages with `tesseract --list-langs`.
+- Confirm the user-selected scope, such as a session, time window, or small image batch.
+- Prefer direct visual reading with `view_image`; do not default to engine OCR.
 
 While working:
 
-- Use `scripts/ocr_images_to_markdown.py` as the generic tracked script.
-- Run a 3-5 image sample before processing a large folder.
-- Prefer `--start-time`, `--end-time`, `--limit`, `--skip-empty`, and `--skip-low-confidence` for controllable OCR batches.
-- Prefer `--preserve-layout --include-low-confidence --split-by-session` when the user asks for all visible text split into session Markdown files.
-- Put source-specific session maps, temporary scripts, caches, and OCR output under `raw/`.
-- Do not commit raw images or raw OCR output.
-- Do not hardcode a single event's schedule or speakers into tracked scripts.
+- Process images in small batches, usually 3-5 images.
+- Extract slide titles, prominent text, key bullets, and numbers that are visibly reliable.
+- Mark uncertain text as `[판독 불가]` or omit it rather than inventing missing words.
+- Put manual extraction drafts under `raw/`.
+- Do not commit raw images or raw extraction output.
 
-After OCR:
+After extraction:
 
-- Report the raw OCR Markdown path and basic quality counts.
-- Discard one-time helpers under `raw/` when they are no longer needed.
-- Use the ingest skill only after the user asks to convert OCR output into study notes.
+- Report the raw Markdown path, processed image range, and any low-quality images.
+- Continue with the next batch only when requested or when the user has already approved that batch plan.
+- Use the ingest skill only after the user asks to convert extracted text into study notes.

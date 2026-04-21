@@ -27,7 +27,7 @@ Drop source material here that you want turned into structured study notes. The 
 |------|-------|
 | `.md`, `.txt`, `.csv`, `.log` | Read directly |
 | `.pdf` | Use `pages` parameter for PDFs >10 pages |
-| Images (`.png`, `.jpg`) | Read directly for a few images; for batch OCR, follow [../rules/11_ocr.md](../rules/11_ocr.md) |
+| Images (`.png`, `.jpg`) | Read directly; for multi-image text extraction, follow [../rules/11_ocr.md](../rules/11_ocr.md) and work in small batches |
 | URLs | Put the URL in a `.txt` file, or paste in chat |
 | `.docx`, `.pptx`, audio | Convert to plain text first |
 

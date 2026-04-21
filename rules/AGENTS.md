@@ -166,7 +166,7 @@ recent_editor: CLAUDE
 | [07_scalability.md](07_scalability.md) | Split thresholds, sed-friendly renames, subdomain rules |
 | [09_ingest.md](09_ingest.md) | Ingest pipeline: triggers, inputs, update-vs-create, source tracking |
 | [10_lint.md](10_lint.md) | Wiki health check: broken links, orphans, missing cross-refs, stale claims |
-| [11_ocr.md](11_ocr.md) | OCR workflow for raw local images |
+| [11_ocr.md](11_ocr.md) | Image text extraction workflow for raw local images |
 | [../log.md](../log.md) | Append-only chronological log of ingests/queries/lints |
 | [../glossary.md](../glossary.md) | Abbreviations and terms |
 
@@ -179,7 +179,7 @@ Canonical skill definitions live in `rules/skills/`. Each agent implements these
 | [ingest](skills/ingest.md) | Ingest a raw source file into the wiki |
 | [lint](skills/lint.md) | Run the wiki health check |
 | [nav-update](skills/nav-update.md) | Sync structural documents after file changes |
-| [ocr](skills/ocr.md) | Extract text from raw local images into raw Markdown drafts |
+| [ocr](skills/ocr.md) | Manually extract readable text from raw local images into raw Markdown drafts |
 | [split](skills/split.md) | Split an oversized or mixed-theme note |
 
 Each agent implements these in their own native format — do not copy another agent's files:

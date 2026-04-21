@@ -45,4 +45,4 @@ Never chain `cd && git` commands.
 
 ## 6. OCR
 
-For raw image OCR, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in Claude's native command format if needed. Keep event-specific session maps, temporary scripts, and OCR outputs under `raw/`.
+For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in Claude's native command format if needed. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.

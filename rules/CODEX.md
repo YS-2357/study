@@ -48,4 +48,4 @@ Windows may fail on `.git/index.lock` if sandbox tried first.
 
 ## 6. OCR
 
-For raw image OCR, use [11_ocr.md](11_ocr.md) and the Codex skill in `.codex/skills/ocr/`. Keep event-specific session maps, temporary scripts, and OCR outputs under `raw/`.
+For raw image text extraction, use [11_ocr.md](11_ocr.md) and the Codex skill in `.codex/skills/ocr/`. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.
