@@ -46,7 +46,8 @@
       "WebSearch",
       "WebFetch(domain:www.anthropic.com)",
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:www.darioamodei.com)"
+      "WebFetch(domain:www.darioamodei.com)",
+      "Bash(^2026042[0-9]_12\" | sort)"
     ]
   },
   "enableAllProjectMcpServers": true,
