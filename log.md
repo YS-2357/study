@@ -108,16 +108,14 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Touched: ai/perplexity/00_perplexity_overview.md, log.md
 - Added: Korean-language search caveat; use Perplexity for source discovery and cross-check Korean-local topics with NAVER, Google, and official Korean sources.
 
-<<<<<<< HEAD
-## [2026-04-22T09:57:48] ingest | aws-partner-summit-seoul-2026
-- Source: raw/AWS Partner Summit Seoul 2026/ (10 OCR extract .md files + 1 notetaking .md)
-- Created: cloud/aws/ai/13_llm_evaluation.md, cloud/aws/ai/14_physical_ai.md, cloud/aws/ai/15_agentic_modernization.md, cloud/aws/database/07_amazon_neptune.md, cloud/aws/devtools/04_sap_aws.md, cloud/aws/01_aws_partner_summit_seoul_2026.md
-- Updated: cloud/aws/ai/agentcore/08_evaluations.md (3-level monitoring, silent failure, Judge Gate), cloud/aws/analytics/04_amazon_sagemaker.md (SageMaker Catalog section), cloud/aws/00_aws_overview.md (new notes + Events section)
-- Moved: raw/AWS Partner Summit Seoul 2026/ → raw/processed/AWS Partner Summit Seoul 2026/
-=======
 ## [2026-04-21T00:00:00] session | cowork — RAG note + compute obstacles
 - Created: ai/concepts/16_rag.md (new) — RAG concept note covering what it is, analogy, two-phase pipeline, example, why it matters.
 - Updated: ai/concepts/00_concepts_overview.md — added "Knowledge & Memory" section with RAG entry.
 - Updated: cloud/aws/ai/12_amazon_bedrock_integration_patterns.md — added Precaution #4 covering EC2/Lambda/AgentCore compute choice obstacles.
 - Decision: RAG is prerequisite knowledge for agent work; compute obstacles added to integration patterns as a decision-time reference.
->>>>>>> 2057997 (auto: update .claude/settings.local.json and 5 more)
+
+## [2026-04-22T09:57:48] ingest | aws-partner-summit-seoul-2026
+- Source: raw/AWS Partner Summit Seoul 2026/ (10 OCR extract .md files + 1 notetaking .md)
+- Created: cloud/aws/ai/13_llm_evaluation.md, cloud/aws/ai/14_physical_ai.md, cloud/aws/ai/15_agentic_modernization.md, cloud/aws/database/07_amazon_neptune.md, cloud/aws/devtools/04_sap_aws.md, cloud/aws/01_aws_partner_summit_seoul_2026.md
+- Updated: cloud/aws/ai/agentcore/08_evaluations.md (3-level monitoring, silent failure, Judge Gate), cloud/aws/analytics/04_amazon_sagemaker.md (SageMaker Catalog section), cloud/aws/00_aws_overview.md (new notes + Events section)
+- Moved: raw/AWS Partner Summit Seoul 2026/ → raw/processed/AWS Partner Summit Seoul 2026/
