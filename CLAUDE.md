@@ -169,6 +169,6 @@ git -C "C:\Users\user\study" commit -m "message"
 git -C "C:\Users\user\study" push origin main
 ```
 
-## 15. Subtree Overrides
+## 16. Subtree Overrides
 
 - `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
