@@ -149,7 +149,7 @@ Sections §1–§11 must be **identical** across all agent files:
 - Codex keeps repo-local automation in `.codex/`
 - Shared Git hook entrypoints in `.githooks/`
 
-## 14. Permission Style
+## 15. Permission Style
 
 Request persistent approval only for bounded Git actions:
 
