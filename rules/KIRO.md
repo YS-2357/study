@@ -150,7 +150,7 @@ When configured:
 - Entrypoints in `.githooks/`
 - Kiro-specific logic in `.kiro/hooks/`
 
-## 14. Status
+## 15. Status
 
 Kiro-specific automation will be added when integration is configured.
 
