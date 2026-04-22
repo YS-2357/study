@@ -143,7 +143,14 @@ Canonical skill definitions in `rules/skills/`. Claude implements them in `.clau
 
 On first use of a skill with no local implementation, read `rules/skills/<skill>.md` and create `.claude/commands/<skill>.md`.
 
-## 13. Automation Hooks
+## 13. Rule Sync
+
+Sections §1–§11 must be **identical** across all agent files:
+`AGENTS.md` (root), `CLAUDE.md` (root), `rules/AGENTS.md`, `rules/CLAUDE.md`, `rules/CODEX.md`, `rules/KIRO.md`
+
+**When any shared rule changes, update all six files.** §12+ are agent-specific and may differ.
+
+## 14. Automation Hooks
 
 | Hook | Trigger | Action |
 |------|---------|--------|
