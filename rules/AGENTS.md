@@ -148,6 +148,19 @@ Each agent implements these in their own native format — do not copy another a
 
 On first use of a skill with no local implementation, read `rules/skills/<skill>.md` and create your platform-native version.
 
+## 13. Rule Sync
+
+Sections §1–§11 must be **identical** across all agent files:
+
+- `AGENTS.md` (root)
+- `CLAUDE.md` (root)
+- `rules/AGENTS.md`
+- `rules/CLAUDE.md`
+- `rules/CODEX.md`
+- `rules/KIRO.md`
+
+**When any shared rule changes, update all six files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
+
 ## Rule Documents
 
 | File | Content |
