@@ -113,6 +113,61 @@ After training, they deploy the model to a real-time endpoint and test predictio
 SageMaker removes the infrastructure complexity from machine learning — managed notebooks, training jobs, and endpoints
 let teams focus on model quality instead of cluster management.
 
+## SageMaker Catalog
+
+Unified metadata hub for all data and AI assets in SageMaker.
+
+### Data Architecture Evolution
+
+| Era | Architecture | Characteristics |
+|-----|-------------|-----------------|
+| 2000s | Data Warehouse | Structured, SQL |
+| 2010s | Data Lake | Unstructured, low cost |
+| 2020s | Lakehouse | Integrated, transactional |
+| 2025+ | AI-Ready Platform | Metadata, governance, agents |
+
+**Gartner 2025:** 60% of organizations will fail to realize value from AI by 2027 due to absent data preparation — the data layer is the iceberg below the visible AI/ML surface.
+
+### Catalog Asset Types
+
+4 types: **Data**, **Models**, **Gen AI**, **BI Dashboards** — unified in a single metadata hub integrating S3, Glue, Redshift, Athena, and SageMaker datasets.
+
+### Metadata 6 Elements
+
+1. Table descriptions
+2. Column meaning
+3. Quality reliability
+4. Data lineage
+5. Access controls
+6. PII tags
+
+### AI Auto-Metadata
+
+- **Asset level:** Summary, Tags, Business Terms, Column Descriptions
+- **Column level:** Glossary Terms, Custom Forms, Data Sensitivity
+
+### SageMaker Data Agent
+
+Natural language → analyses and ML development, without writing SQL/Python manually.
+
+- Auto-plans multi-step analysis from a natural language prompt
+- Generates SQL and Python code
+- Multi-step reasoning across datasets
+- Integrated with SageMaker notebook and query editor
+
+**Example workflow:** QuickSight alerts on LINE-03 yield below baseline → IPQC/QC analysis via natural language prompt in notebook → Data Agent generates and executes the analysis automatically.
+
+### Key Catalog Terminology
+
+| Term | Meaning |
+|------|---------|
+| Metadata | Descriptive information about data assets |
+| Data Assets | Datasets, models, dashboards, GenAI apps |
+| Producers/Consumers | Teams that publish vs. subscribe to assets |
+| Federation | Connecting external catalogs into one view |
+| Business Glossary | Shared vocabulary for domain terms |
+| Data Lineage | How data flows and transforms across systems |
+
 ## Official Documentation
 - [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
 - [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
