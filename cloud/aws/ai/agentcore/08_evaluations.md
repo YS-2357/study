@@ -7,6 +7,8 @@ tags:
 created_at: 2026-04-17T14:18:47
 updated_at: 2026-04-22T00:00:00
 recent_editor: CLAUDE
+source:
+  - aws-partner-summit-seoul-2026
 ---
 
 ↑ [Overview](./00_agentcore_overview.md)
