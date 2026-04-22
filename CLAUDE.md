@@ -159,7 +159,7 @@ Sections §1–§11 must be **identical** across all agent files:
 
 Hook scripts in `.claude/hooks/`.
 
-## 14. Git Commands
+## 15. Git Commands
 
 Run git as individual calls (never chain `cd && git`):
 
