@@ -48,7 +48,8 @@
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:www.darioamodei.com)",
       "Bash(^2026042[0-9]_12\" | sort)",
-      "Bash(sed 's/.*\\\\.//')"
+      "Bash(sed 's/.*\\\\.//')",
+      "Bash(awk -F'|' '{print $2}')"
     ]
   },
   "enableAllProjectMcpServers": true,
