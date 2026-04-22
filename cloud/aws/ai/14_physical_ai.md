@@ -106,5 +106,5 @@ AWS Cloud:
 ---
 ↑ [Overview](./00_ai_overview.md)
 
-**Related:** [AgentCore](agentcore/00_agentcore_overview.md), [Strands Agents SDK](strands_agents_sdk.md), [SageMaker](../analytics/04_amazon_sagemaker.md)
+**Related:** [AgentCore](agentcore/00_agentcore_overview.md), [Strands Agents SDK](11_strands_agents_sdk.md), [SageMaker](../analytics/04_amazon_sagemaker.md)
 **Tags:** #aws #ai #robotics
