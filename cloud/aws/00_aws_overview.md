@@ -27,6 +27,12 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 | [Operations](ops/00_ops_overview.md)                  | CloudWatch, SSM, Billing, Support                        |
 | [Developer Tools](devtools/00_devtools_overview.md)   | CDK, boto3, Marketplace, SAP+AWS                         |
 
+## Events
+
+| Event | Date | Note |
+|-------|------|------|
+| AWS Partner Summit Seoul 2026 | 2026-04-21 | [aws_partner_summit_seoul_2026.md](aws_partner_summit_seoul_2026.md) |
+
 ## Cross-references
 
 - Networking fundamentals — [Networking](../../networking/00_networking_overview.md)
