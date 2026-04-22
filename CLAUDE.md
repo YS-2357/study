@@ -19,36 +19,3 @@
 | [rules/11_ocr.md](rules/11_ocr.md) | OCR workflow |
 | [log.md](log.md) | Chronological ingest/lint log |
 | [glossary.md](glossary.md) | Abbreviations |
-
----
-
-## Session Start
-
-Always `git pull` before any read or write operation:
-
-```bash
-git -C "C:\Users\user\study" pull origin main
-```
-
-## Automation Hooks
-
-| Hook | Trigger | Action |
-|------|---------|--------|
-| `PostToolUse` on `Write\|Edit` | File write/edit | Stage, commit, push |
-| `Stop` | Session end | Final push (async) |
-
-Hook scripts in `.claude/hooks/`.
-
-## Git Commands
-
-Run git as individual calls (never chain `cd && git`):
-
-```bash
-git -C "C:\Users\user\study" add file.md
-git -C "C:\Users\user\study" commit -m "message"
-git -C "C:\Users\user\study" push origin main
-```
-
-## Subtree Overrides
-
-- `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
