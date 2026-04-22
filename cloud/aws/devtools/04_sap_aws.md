@@ -84,5 +84,5 @@ Key services accessible from SAP:
 ---
 ↑ [Overview](./00_devtools_overview.md)
 
-**Related:** [Strands Agents SDK](../ai/strands_agents_sdk.md), [AgentCore Gateway](../ai/agentcore/03_gateway.md), [Bedrock](../ai/concepts/01_amazon_bedrock.md)
+**Related:** [Strands Agents SDK](../ai/11_strands_agents_sdk.md), [AgentCore Gateway](../ai/agentcore/03_gateway.md), [Bedrock](../ai/01_amazon_bedrock.md)
 **Tags:** #aws #devtools #sap
