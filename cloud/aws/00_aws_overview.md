@@ -19,14 +19,13 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 | [Foundation](foundation/00_foundation_overview.md)    | Region, AZ, PoP, VPC, Subnet                             |
 | [Compute](compute/00_compute_overview.md)             | EC2, Auto Scaling, Lambda, Fargate                       |
 | [Storage](storage/00_storage_overview.md)             | S3, EBS, EFS, ECR                                        |
-| [Database](database/00_database_overview.md)          | RDS, Aurora, DynamoDB, ElastiCache, Redshift, OpenSearch |
+| [Database](database/00_database_overview.md)          | RDS, Aurora, DynamoDB, ElastiCache, Redshift, OpenSearch, Neptune |
 | [Networking](networking/00_networking_overview.md)    | ELB, CloudFront, API Gateway, Shield, WAF                |
 | [Identity & Access](identity/00_identity_overview.md) | IAM, Security Groups                                     |
 | [Analytics](analytics/00_analytics_overview.md)       | Kinesis, EMR, Data Pipeline, SageMaker, SageMaker Catalog |
 | [AI](aws/ai/00_ai_overview.md)                            | Bedrock family, AgentCore (nested), Strands Agents SDK, LLM Evaluation, Physical AI, Agentic Modernization |
 | [Operations](ops/00_ops_overview.md)                  | CloudWatch, SSM, Billing, Support                        |
 | [Developer Tools](devtools/00_devtools_overview.md)   | CDK, boto3, Marketplace, SAP+AWS                         |
-| [Database](database/00_database_overview.md)          | RDS, Aurora, DynamoDB, ElastiCache, Redshift, OpenSearch, Neptune |
 
 ## Cross-references
 
