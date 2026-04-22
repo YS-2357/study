@@ -2,23 +2,136 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-21T00:00:00
-recent_editor: CODEX
+updated_at: 2026-04-22T09:57:48
+recent_editor: CLAUDE
 ---
 
 # Claude Code
 
 I am **Claude Code**, Anthropic's CLI agent.
 
-## 1. Rules
+## 1. Permissions
 
-All rules are in [AGENTS.md](AGENTS.md). This file contains only platform-specific notes.
+- **Read**: All files in repo
+- **Write**: All `.md` files
+- **Web Search**: Required before creating new notes
+- **Git/GH**: Full access (commit, push, pull, gh)
 
-## 2. Session Start
+## 2. Core Principles
 
-Run `git pull origin main` before any read or write operation (multi-PC sync repo).
+### 2.1 Think Before Editing
+- State assumptions explicitly, never guess
+- Present multiple interpretations when ambiguous
+- Push back when simpler approaches exist
+- Ask clarification before proceeding when confused
 
-## 3. Automation Hooks
+### 2.2 Same Topic, Different Domain Focus
+A concept can have notes in multiple domains — this is intentional. Each note focuses on the angle relevant to its domain. No deduplication, merging, or "see only" redirects required.
+
+### 2.3 Simplicity First
+- Deliver only requested features
+- No speculative additions or abstractions
+- No single-use abstractions
+- No error handling for impossible scenarios
+
+### 2.4 Surgical Changes
+- Don't improve adjacent code, comments, or formatting
+- Don't refactor functioning code
+- Preserve existing style conventions
+- Remove only code YOUR changes orphaned
+- Every changed line traces to user request
+
+### 2.5 Goal-Driven Execution
+- Define verifiable success criteria
+- Transform vague requests: "Fix bug" → "Reproduce via test, make it pass"
+- Multi-step tasks need verification checkpoints
+
+## 3. Delivery Rule
+
+**"Success should be quiet, failure must be loud"**
+
+- On success: silent completion, commit and push without fanfare
+- On failure: explicit error message with context, stop and fix before proceeding
+
+## 4. Research Before Writing
+
+- Web search required before creating new notes
+- Cite official sources inline
+- No placeholder or speculative content
+- Verify facts before committing
+
+## 5. Session Start
+
+**Always `git pull` before any read or write operation.**
+
+```bash
+git -C "C:\Users\user\study" pull origin main
+```
+
+## 6. Atomic Commits
+
+- One logical change per commit
+- Descriptive commit messages
+- Push after each file change
+- Never batch unrelated changes
+
+## 7. Link Maintenance
+
+- Check for broken links after renaming/moving
+- Update all references when paths change
+- Glossary links for abbreviations on first use
+- Cross-domain links encouraged when helpful
+
+## 8. Structural Document Updates
+
+Whenever files are added, moved, renamed, or deleted, update:
+- `home.md` — root study hub
+- `00_{domain}_overview.md` — domain study hub
+- `README.md` — folder index
+- `rules/02_navigation.md` — if domain structure changes
+
+## 9. Ingesting Raw Sources
+
+Raw source material lives in `raw/` (gitignored). Ingest runs **only on user request** via `/ingest <source>` or a conversational equivalent. Full pipeline in [09_ingest.md](09_ingest.md).
+
+## 10. Conflict Resolution
+
+- Check `recent_editor` before bulk updates
+- Never overwrite another agent's recent changes
+- Coordinate via commit messages
+- When in doubt, ask
+
+## 11. Frontmatter Requirements
+
+Every `.md` file must have:
+
+```yaml
+---
+tags:
+  - domain-tag
+created_at: YYYY-MM-DDTHH:MM:SS
+updated_at: YYYY-MM-DDTHH:MM:SS
+recent_editor: CLAUDE
+---
+```
+
+**Update `updated_at` and `recent_editor: CLAUDE` on every edit, no exceptions.**
+
+## 12. Skills
+
+Canonical skill definitions in `rules/skills/`. Claude implements them in `.claude/commands/`.
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| ingest | `/ingest` | Ingest a raw source file into the wiki |
+| lint | `/lint` | Run the wiki health check |
+| nav-update | `/nav-update` | Sync structural documents after file changes |
+| ocr | `/ocr` | Extract text from raw local images |
+| split | `/split` | Split an oversized or mixed-theme note |
+
+On first use of a skill with no local implementation, read `rules/skills/<skill>.md` and create `.claude/commands/<skill>.md`.
+
+## 13. Automation Hooks
 
 | Hook | Trigger | Action |
 |------|---------|--------|
@@ -27,9 +140,9 @@ Run `git pull origin main` before any read or write operation (multi-PC sync rep
 
 Hook scripts in `.claude/hooks/`.
 
-## 4. Git Commands
+## 14. Git Commands
 
-Run git as individual calls:
+Run git as individual calls (never chain `cd && git`):
 
 ```bash
 git -C "C:\Users\user\study" add file.md
@@ -37,12 +150,10 @@ git -C "C:\Users\user\study" commit -m "message"
 git -C "C:\Users\user\study" push origin main
 ```
 
-Never chain `cd && git` commands.
+## 15. Subtree Overrides
 
-## 5. Subtree Overrides
+- `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
 
-- `cloud/aws/AGENTS.md` - AWS-specific viewpoint framework
+## 16. OCR
 
-## 6. OCR
-
-For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in Claude's native command format if needed. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.
+For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in `.claude/commands/ocr.md` if needed. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.
