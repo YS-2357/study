@@ -108,5 +108,5 @@ Stack: Bedrock, Q Developer, Lambda, EKS.
 ---
 ↑ [Overview](./00_ai_overview.md)
 
-**Related:** [AgentCore](agentcore/00_agentcore_overview.md), [Neptune (Ontology)](../database/neptune.md), [LLM Evaluation](llm_evaluation.md)
+**Related:** [AgentCore](agentcore/00_agentcore_overview.md), [Neptune (Ontology)](../database/07_amazon_neptune.md), [LLM Evaluation](13_llm_evaluation.md)
 **Tags:** #aws #ai #devops
