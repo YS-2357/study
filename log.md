@@ -108,7 +108,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Touched: ai/perplexity/00_perplexity_overview.md, log.md
 - Added: Korean-language search caveat; use Perplexity for source discovery and cross-check Korean-local topics with NAVER, Google, and official Korean sources.
 
-## [2026-04-22T00:00:00] ingest | aws-partner-summit-seoul-2026
+## [2026-04-22T09:57:48] ingest | aws-partner-summit-seoul-2026
 - Source: raw/AWS Partner Summit Seoul 2026/ (10 OCR extract .md files + 1 notetaking .md)
 - Created: cloud/aws/ai/13_llm_evaluation.md, cloud/aws/ai/14_physical_ai.md, cloud/aws/ai/15_agentic_modernization.md, cloud/aws/database/07_amazon_neptune.md, cloud/aws/devtools/04_sap_aws.md, cloud/aws/01_aws_partner_summit_seoul_2026.md
 - Updated: cloud/aws/ai/agentcore/08_evaluations.md (3-level monitoring, silent failure, Judge Gate), cloud/aws/analytics/04_amazon_sagemaker.md (SageMaker Catalog section), cloud/aws/00_aws_overview.md (new notes + Events section)
