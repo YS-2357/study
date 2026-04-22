@@ -52,11 +52,11 @@ source:
 | Keynote | 라울 (Rahul Pathak) | Year of Agents, data strategy | — |
 | Keynote | 크리스 (Chris Casey) | APJ market, Convergence 3 pillars | — |
 | Keynote | 방희란 (Heeran Bang) | Korea partner growth, MSP evolution | — |
-| Track 2 AM | 이창익 | LLM evaluation & model migration | [LLM Evaluation](ai/llm_evaluation.md) |
-| Track 2 PM | 정영준 | Agentic AI application modernization | [Agentic Modernization](ai/agentic_modernization.md) |
-| Track 2 PM | 이승재 | SAP data innovation with AWS | [SAP + AWS](devtools/sap_aws.md) |
-| Track 1 PM | 박준용 | Neptune Text2Query, ontology | [Neptune](database/neptune.md) |
-| Track 1 PM | 우지환 | Physical AI era | [Physical AI](ai/physical_ai.md) |
+| Track 2 AM | 이창익 | LLM evaluation & model migration | [LLM Evaluation](ai/13_llm_evaluation.md) |
+| Track 2 PM | 정영준 | Agentic AI application modernization | [Agentic Modernization](ai/15_agentic_modernization.md) |
+| Track 2 PM | 이승재 | SAP data innovation with AWS | [SAP + AWS](devtools/04_sap_aws.md) |
+| Track 1 PM | 박준용 | Neptune Text2Query, ontology | [Neptune](database/07_amazon_neptune.md) |
+| Track 1 PM | 우지환 | Physical AI era | [Physical AI](ai/14_physical_ai.md) |
 | Track 1 PM | 강성희 | AI navigator, metadata & catalogs | [SageMaker](analytics/04_amazon_sagemaker.md) |
 
 ## Partner Cases
