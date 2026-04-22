@@ -154,6 +154,6 @@ When configured:
 
 Kiro-specific automation will be added when integration is configured.
 
-## 15. OCR
+## 16. OCR
 
 For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in `.kiro/skills/ocr.md` if needed. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.
