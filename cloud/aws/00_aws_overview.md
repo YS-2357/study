@@ -2,7 +2,7 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-19T09:11:51
+updated_at: 2026-04-22T00:00:00
 recent_editor: CLAUDE
 ---
 
