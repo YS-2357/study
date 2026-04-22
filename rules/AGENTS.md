@@ -123,11 +123,11 @@ tags:
   - domain-tag
 created_at: YYYY-MM-DDTHH:MM:SS
 updated_at: YYYY-MM-DDTHH:MM:SS
-recent_editor: CLAUDE
+recent_editor: <AGENT>
 ---
 ```
 
-**Update `updated_at` and `recent_editor` on every edit, no exceptions.**
+**Update `updated_at` and `recent_editor` to your agent name on every edit, no exceptions.**
 
 ## 12. Skills
 
