@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-18T20:19:44
-updated_at: 2026-04-19T09:11:51
+updated_at: 2026-04-21T00:00:00
 recent_editor: CLAUDE
 ---
 
@@ -120,6 +120,18 @@ Guardrails evaluate a Bedrock model call — they don't wrap an agent globally. 
 ### 3. Memory Is Not A Free Key-Value Store
 
 AgentCore Memory charges for storage and retrieval. Reserve it for context the agent genuinely needs to reason about across sessions; don't use it as a generic database.
+
+### 4. Compute Choice Obstacles
+
+Each compute option has a different failure mode for agent workloads:
+
+| Compute | Main Obstacle |
+|---|---|
+| **EC2** | You own everything — scaling, restarts, patching, networking. No native session or memory support. High ops burden. Only justified for custom runtimes or GPU workloads. |
+| **Lambda** | 15-minute timeout and cold starts break multi-turn agent sessions. Stateless by design — persistent memory across turns requires external storage. Streaming agentic responses is awkward. |
+| **AgentCore** | Service is new — observability tooling is thinner, pricing is less predictable than Lambda, and region availability is limited. Custom frameworks need extra wiring. |
+
+None of the three natively solve RAG, cross-session memory, multi-agent coordination, or evaluation — those are bolt-on layers regardless of compute choice.
 
 ---
 ↑ [Overview](./00_ai_overview.md)

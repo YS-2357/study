@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-20T14:15:06
-updated_at: 2026-04-20T14:15:06
-recent_editor: CODEX
+updated_at: 2026-04-21T00:00:00
+recent_editor: CLAUDE
 ---
 
 # AI Concepts - Overview
@@ -33,6 +33,10 @@ Core LLM and agent concepts.
 - [Attention (Q, K, V)](10_attention.md) - How tokens decide which other tokens matter.
 - [KV Cache](11_kv_cache.md) - Avoiding redundant computation during generation.
 - [Prompt Caching](12_prompt_caching.md) - Reusing computation across API calls.
+
+## Knowledge & Memory
+
+- [RAG](16_rag.md) - Grounding LLM responses in external documents fetched at query time.
 
 ## Multi-Agent Systems
 

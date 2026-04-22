@@ -52,7 +52,8 @@
       "Bash(awk -F'|' '{print $2}')",
       "Bash(claude doctor *)",
       "Bash(npm list *)",
-      "Bash(npm view *)"
+      "Bash(npm view *)",
+      "Bash(tasklist //FI \"IMAGENAME eq git.exe\")"
     ]
   },
   "enableAllProjectMcpServers": true,
