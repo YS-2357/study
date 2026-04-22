@@ -167,6 +167,6 @@ git -C "C:\Users\user\study" push origin main
 
 - `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
 
-## 16. OCR
+## 17. OCR
 
 For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in `.claude/commands/ocr.md` if needed. Prefer direct visual reading in small batches, and keep extraction outputs under `raw/`.
