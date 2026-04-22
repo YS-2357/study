@@ -7,6 +7,7 @@ __pycache__/
 
 # Local Obsidian UI state
 .obsidian/workspace.json
+.obsidian/graph.json
 
 # Local-only presentation practice materials
 **/ppt/
