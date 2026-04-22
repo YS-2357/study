@@ -133,16 +133,16 @@ On first use of a skill, read `rules/skills/<skill>.md` and create a Kiro-native
 
 ## 13. Rule Sync
 
-Sections §1–§11 must be **identical** across all agent files:
+Sections §1–§11 must be **identical** across all four rules/ files:
 
-- `AGENTS.md` (root)
-- `CLAUDE.md` (root)
 - `rules/AGENTS.md`
 - `rules/CLAUDE.md`
 - `rules/CODEX.md`
 - `rules/KIRO.md`
 
-**When any shared rule changes, update all six files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
+Root-level `AGENTS.md` and `CLAUDE.md` are pointer files — they route agents to the rules/ files and must not duplicate §1–§11.
+
+**When any shared rule changes, update all four rules/ files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
 
 ## 14. Automation Location
 
