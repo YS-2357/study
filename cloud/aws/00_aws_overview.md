@@ -31,7 +31,7 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 
 | Event | Date | Note |
 |-------|------|------|
-| AWS Partner Summit Seoul 2026 | 2026-04-21 | [aws_partner_summit_seoul_2026.md](aws_partner_summit_seoul_2026.md) |
+| AWS Partner Summit Seoul 2026 | 2026-04-21 | [01_aws_partner_summit_seoul_2026.md](01_aws_partner_summit_seoul_2026.md) |
 
 ## Cross-references
 
