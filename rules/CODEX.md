@@ -131,7 +131,20 @@ Canonical skill definitions in `rules/skills/`. Codex implements them in `.codex
 
 On first use of a skill, read `rules/skills/<skill>.md` and create a Codex-native implementation. Do not copy `.claude/commands/` files.
 
-## 13. Automation Location
+## 13. Rule Sync
+
+Sections §1–§11 must be **identical** across all agent files:
+
+- `AGENTS.md` (root)
+- `CLAUDE.md` (root)
+- `rules/AGENTS.md`
+- `rules/CLAUDE.md`
+- `rules/CODEX.md`
+- `rules/KIRO.md`
+
+**When any shared rule changes, update all six files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
+
+## 14. Automation Location
 
 - Codex keeps repo-local automation in `.codex/`
 - Shared Git hook entrypoints in `.githooks/`
