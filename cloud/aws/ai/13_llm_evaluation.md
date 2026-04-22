@@ -100,5 +100,5 @@ Prevents regressions from reaching production without manual review.
 ---
 ↑ [Overview](./00_ai_overview.md)
 
-**Related:** [AgentCore Evaluations](agentcore/08_evaluations.md), [Amazon Bedrock](concepts/01_amazon_bedrock.md)
+**Related:** [AgentCore Evaluations](agentcore/08_evaluations.md), [Amazon Bedrock](01_amazon_bedrock.md)
 **Tags:** #aws #ai #ml
