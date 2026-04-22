@@ -53,7 +53,8 @@
       "Bash(claude doctor *)",
       "Bash(npm list *)",
       "Bash(npm view *)",
-      "Bash(tasklist //FI \"IMAGENAME eq git.exe\")"
+      "Bash(tasklist //FI \"IMAGENAME eq git.exe\")",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
     ]
   },
   "enableAllProjectMcpServers": true,
