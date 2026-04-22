@@ -5,7 +5,7 @@ tags:
   - ml
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-22T00:00:00
+updated_at: 2026-04-22T09:57:48
 recent_editor: CLAUDE
 source:
   - aws-partner-summit-seoul-2026
