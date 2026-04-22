@@ -146,6 +146,19 @@ Each agent implements these in their own native format — do not copy another a
 - **Kiro** → `.kiro/skills/`
 - **Codex** → `.codex/skills/`
 
+## 13. Rule Sync
+
+Sections §1–§11 must be **identical** across all agent files:
+
+- `AGENTS.md` (root)
+- `CLAUDE.md` (root)
+- `rules/AGENTS.md`
+- `rules/CLAUDE.md`
+- `rules/CODEX.md`
+- `rules/KIRO.md`
+
+**When any shared rule changes, update all six files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
+
 ## Subtree Overrides
 
 - `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
