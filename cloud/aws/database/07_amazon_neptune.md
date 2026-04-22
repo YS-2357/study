@@ -83,5 +83,5 @@ Agentic AI risks amplifying errors at scale when operating on ambiguous data. A 
 ---
 ↑ [Overview](./00_database_overview.md)
 
-**Related:** [SageMaker](../analytics/04_amazon_sagemaker.md), [Bedrock Knowledge Bases](../ai/concepts/01_amazon_bedrock.md)
+**Related:** [SageMaker](../analytics/04_amazon_sagemaker.md), [Bedrock](../ai/01_amazon_bedrock.md)
 **Tags:** #aws #database #graph
