@@ -4,7 +4,7 @@ tags:
   - claude
   - models
 created_at: 2026-04-20T13:59:45
-updated_at: 2026-04-20T13:59:45
+updated_at: 2026-04-23T14:26:50
 recent_editor: CLAUDE
 source: anthropic.com
 ---
@@ -22,6 +22,18 @@ Claude is Anthropic's AI assistant model family. Models are organized in three t
 `claude-[tier]-[major]-[minor]` — e.g., `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`.
 
 Models with the same snapshot date are identical across all platforms.
+
+### Tier Name Etymology
+
+Anthropic chose literary and musical art forms — introduced with the Claude 3 family (March 2024, [announcement](https://www.anthropic.com/news/claude-3-family)):
+
+| Name | Origin | Why it fits |
+|------|--------|-------------|
+| **Haiku** | Japanese poem — 17 syllables (5-7-5), the briefest structured form | Smallest, fastest, lowest cost |
+| **Sonnet** | 14-line poem (Petrarch, Shakespeare) — structured and complete | Balanced speed and intelligence |
+| **Opus** | Latin for "work"; classical music's term for a major composition (e.g., Beethoven Op. 125) | Most capable, most substantial |
+
+The progression Haiku → Sonnet → Opus mirrors poetic complexity — from the most compressed form to the most ambitious work.
 
 ## Current Models (as of Apr 2026)
 

@@ -3,7 +3,7 @@ tags:
   - ai
   - rag
 created_at: 2026-04-21T00:00:00
-updated_at: 2026-04-21T00:00:00
+updated_at: 2026-04-23T14:11:56
 recent_editor: CLAUDE
 ---
 
@@ -40,5 +40,5 @@ RAG solves two core LLM weaknesses: stale knowledge (training cutoff) and halluc
 ---
 ↑ [AI Concepts Overview](./00_concepts_overview.md)
 
-**Related:** [Agent](./01_agent.md), [Tools](./04_tools.md), [Multi-Agent Orchestration](./13_multi_agent_orchestration.md)
+**Related:** [Embedding Models](./17_embedding_models.md), [Agent](./01_agent.md), [Tools](./04_tools.md), [Multi-Agent Orchestration](./13_multi_agent_orchestration.md)
 **Tags:** #ai #rag

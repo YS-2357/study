@@ -2,7 +2,7 @@
 tags:
   - ai
 created_at: 2026-04-20T14:15:06
-updated_at: 2026-04-21T00:00:00
+updated_at: 2026-04-23T14:11:56
 recent_editor: CLAUDE
 ---
 
@@ -36,6 +36,7 @@ Core LLM and agent concepts.
 
 ## Knowledge & Memory
 
+- [Embedding Models](17_embedding_models.md) - Mapping text to dense vectors; the retrieval layer beneath RAG.
 - [RAG](16_rag.md) - Grounding LLM responses in external documents fetched at query time.
 
 ## Multi-Agent Systems

@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-20T08:46:00
-recent_editor: CODEX
+updated_at: 2026-04-23T14:39:11
+recent_editor: CLAUDE
 ---
 
 # study
@@ -29,10 +29,11 @@ When Codex works in this repo, `.claude/` is out of scope unless the user explic
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_ai_overview.md)
-- [aws/](aws/README.md) — AWS service notes. [Start studying →](aws/00_aws_overview.md)
+- [cloud/aws/](cloud/aws/README.md) — AWS service notes. [Start studying →](cloud/aws/00_aws_overview.md)
 - [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_computing_overview.md)
 - [git/](git/README.md) — Git concepts. [Start studying →](git/00_git_overview.md)
 - [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_networking_overview.md)
+- [software/](software/README.md) — Frontend, backend, database concepts. [Start studying →](software/00_software_overview.md)
 - [tooling/](tooling/README.md) — Developer tools and workflow notes. [Start studying →](tooling/00_tooling_overview.md)
 
 ## Standards

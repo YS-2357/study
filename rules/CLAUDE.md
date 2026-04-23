@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-22T10:30:00
+updated_at: 2026-04-23T14:21:23
 recent_editor: CLAUDE
 ---
 
@@ -59,6 +59,23 @@ A concept can have notes in multiple domains — this is intentional. Each note 
 - Cite official sources inline
 - No placeholder or speculative content
 - Verify facts before committing
+
+### 4.1 Citation Quality Standards
+
+When citing research papers or academic claims, use sources that meet at least one condition below.
+
+**Tier 1 — Top venue (no citation count required)**
+Published at: NeurIPS, ICML, ICLR, ACL, EMNLP, CVPR, JMLR, Nature, Science
+
+**Tier 2 — arXiv preprint**
+Accepted if 50+ citations **or** authored at a major lab (Google, Meta, Anthropic, OpenAI, DeepMind, NVIDIA, Microsoft Research, MIT, Stanford, CMU, Oxford, Cambridge)
+
+**Exception — papers < 1 year old**
+Citation count waived; Tier 1 venue or major lab affiliation still required
+
+**Always**
+- Link the original paper (arXiv URL or DOI) — not a blog post or summary site
+- Do not use Medium articles, YouTube, or unofficial summaries as primary citations
 
 ## 5. Session Start
 

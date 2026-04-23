@@ -4,7 +4,7 @@ tags:
   - ai
   - ml
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-19T09:11:51
+updated_at: 2026-04-23T09:51:00
 recent_editor: CLAUDE
 ---
 
@@ -26,6 +26,9 @@ Amazon Bedrock, the Strands Agents SDK, and related generative-AI services. Agen
 - [Amazon Bedrock AgentCore](10_amazon_bedrock_agentcore.md) — Managed agent runtime (summary; see [agentcore/](agentcore/00_agentcore_overview.md) for deep-dive).
 - [Strands Agents SDK](11_strands_agents_sdk.md) — Open-source framework for building agents that deploy to AWS (AgentCore, Lambda, or self-hosted).
 - [Bedrock Integration Patterns](12_amazon_bedrock_integration_patterns.md) — How the Bedrock services compose end-to-end.
+- [LLM Evaluation](13_llm_evaluation.md) — Systematic methodology for measuring and comparing LLM quality.
+- [Physical AI](14_physical_ai.md) — AI systems that perceive, reason about, and act in the physical world.
+- [Agentic Modernization](15_agentic_modernization.md) — Using AWS agentic tools to modernize legacy applications.
 
 ## Subtree
 
