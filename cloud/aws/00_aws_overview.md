@@ -2,7 +2,7 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-22T09:57:48
+updated_at: 2026-04-23T00:00:00
 recent_editor: CLAUDE
 source:
   - aws-partner-summit-seoul-2026
