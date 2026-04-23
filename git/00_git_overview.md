@@ -14,6 +14,7 @@ Foundation Git concepts for version control.
 
 - [Tracking and Status](01_tracking_and_status.md) — Tracked vs untracked, staging, status letters.
 - [Daily Git Workflow](02_daily_git_workflow.md) — Check changes, review diffs, commit, and push from WSL.
+- [Remote Workflow](03_remote_workflow.md) — Push, pull, and pull requests explained.
 
 ---
 ↑ [Home](../home.md)
