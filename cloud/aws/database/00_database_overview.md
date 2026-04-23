@@ -3,7 +3,7 @@ tags:
   - aws
   - database
 created_at: 2026-04-18T12:30:09
-updated_at: 2026-04-23T00:00:00
+updated_at: 2026-04-23T09:51:00
 recent_editor: CLAUDE
 ---
 
