@@ -2,8 +2,8 @@
 tags:
   - ai
   - embeddings
-created_at: 2026-04-23T09:51:00
-updated_at: 2026-04-23T09:51:00
+created_at: 2026-04-23T14:11:56
+updated_at: 2026-04-23T14:11:56
 recent_editor: CLAUDE
 ---
 
