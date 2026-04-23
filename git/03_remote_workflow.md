@@ -78,6 +78,18 @@ The flow:
 
 The name "pull request" comes from the maintainer's perspective: you are *requesting* that they *pull* your branch into theirs. The direction is always feature → main because main is the stable branch — nobody pushes to it directly. The PR is a review gate that keeps main clean. ([GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request), [Atlassian](https://www.atlassian.com/git/tutorials/making-a-pull-request))
 
+**In other words: main is pulling from feature.**
+
+The name breaks down as: **pull** (main pulls from feature) + **request** (you're asking, not doing it yourself). You think of yourself as "sending" code — but the naming is from the receiver's point of view.
+
+```
+feature  ──────────────────────►
+                                │
+          PR = "main, pull me!" │
+                                ▼
+main     ──────────────────────── + feature changes
+```
+
 ## Example
 
 Solo project (no review needed):
