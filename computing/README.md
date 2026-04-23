@@ -21,3 +21,4 @@ General computing concepts. See [00_computing_overview.md](00_computing_overview
 - `07_interfaces.md`: API, CLI, GUI, ENI, programming interfaces.
 - `08_endpoints.md`: API, AWS service, database, VPC endpoints.
 - `09_decomposition.md`: Smallest units across frontend, backend, infra, and database layers.
+- `10_assembly.md`: Low-level assembly language — mnemonics, architecture-specific instruction sets, reading compiler output.
