@@ -13,7 +13,11 @@ UI layer concepts — how browsers render pages and how frameworks structure the
 
 ## Concepts
 
-*(Notes to be added)*
+- [Browser Rendering](01_browser_rendering.md) — DOM, CSSOM, layout, paint, composite pipeline.
+- [JavaScript Core](02_javascript_core.md) — Event loop, async/await, promises.
+- [React](03_react.md) — Component model, state, props, virtual DOM.
+- [TypeScript](04_typescript.md) — Static type system, interfaces, generics.
+- [Build Tools](05_build_tools.md) — Vite, Webpack, bundling, transpiling.
 
 ---
 ↑ [Software](../00_software_overview.md)
