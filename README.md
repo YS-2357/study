@@ -29,7 +29,7 @@ When Codex works in this repo, `.claude/` is out of scope unless the user explic
 - [.codex/](.codex/README.md) — Codex-specific repo automation and helper files.
 - [.githooks/](.githooks/README.md) — Local Git hooks that enforce repo checks before push.
 - [ai/](ai/README.md) — AI agent and LLM concepts. [Start studying →](ai/00_ai_overview.md)
-- [aws/](aws/README.md) — AWS service notes. [Start studying →](aws/00_aws_overview.md)
+- [cloud/aws/](cloud/aws/README.md) — AWS service notes. [Start studying →](cloud/aws/00_aws_overview.md)
 - [computing/](computing/README.md) — General computing concepts. [Start studying →](computing/00_computing_overview.md)
 - [git/](git/README.md) — Git concepts. [Start studying →](git/00_git_overview.md)
 - [networking/](networking/README.md) — Networking fundamentals. [Start studying →](networking/00_networking_overview.md)
