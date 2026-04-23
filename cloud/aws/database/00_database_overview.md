@@ -19,6 +19,7 @@ Relational, NoSQL, in-memory cache, analytical, and search databases.
 - [Amazon ElastiCache](04_amazon_elasticache.md) — In-memory caching.
 - [Amazon Redshift](05_amazon_redshift.md) — Data warehouse.
 - [Amazon OpenSearch](06_amazon_opensearch.md) — Search and analytics engine.
+- [Amazon Neptune](07_amazon_neptune.md) — Managed graph database for knowledge graphs and GraphRAG.
 
 ---
 ↑ [AWS](../00_aws_overview.md)
