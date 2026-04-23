@@ -36,6 +36,7 @@ Core LLM and agent concepts.
 
 ## Knowledge & Memory
 
+- [Embedding Models](17_embedding_models.md) - Mapping text to dense vectors; the retrieval layer beneath RAG.
 - [RAG](16_rag.md) - Grounding LLM responses in external documents fetched at query time.
 
 ## Multi-Agent Systems
