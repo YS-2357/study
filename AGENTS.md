@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-23T23:41:19
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
+---
+
 # Agent Rules — Study Repository
 
 All agents must read their platform-specific rule file **before any action**.

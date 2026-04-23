@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 # Log
@@ -119,3 +119,8 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Created: cloud/aws/ai/13_llm_evaluation.md, cloud/aws/ai/14_physical_ai.md, cloud/aws/ai/15_agentic_modernization.md, cloud/aws/database/07_amazon_neptune.md, cloud/aws/devtools/04_sap_aws.md, cloud/aws/01_aws_partner_summit_seoul_2026.md
 - Updated: cloud/aws/ai/agentcore/08_evaluations.md (3-level monitoring, silent failure, Judge Gate), cloud/aws/analytics/04_amazon_sagemaker.md (SageMaker Catalog section), cloud/aws/00_aws_overview.md (new notes + Events section)
 - Moved: raw/AWS Partner Summit Seoul 2026/ → raw/processed/AWS Partner Summit Seoul 2026/
+
+## [2026-04-23T23:41:19] lint | non-.claude rule violations
+- Fixed: broken content links, footer labels, high-confidence first-mention cross-links, AWS viewpoint tables, and non-.claude frontmatter gaps.
+- Deferred: .claude/ findings are outside Codex ownership; missing source: attribution remains deferred where the real source is unknown.
+- Updated: README.md and rules guidance examples so template links are not reported as actionable broken links.

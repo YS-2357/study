@@ -18,8 +18,8 @@ tags:
   - storage
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Home](home.md)
@@ -82,7 +82,7 @@ Abbreviations and domain terms used across this repo, sorted alphabetically.
 | KST      | Korean Standard Time                         | Time zone used for this repo's frontmatter timestamps; equivalent to UTC+9.                                              | —                                                             |
 | LLM      | Large Language Model                         | A neural network trained on large text corpora to generate and understand natural language.                              | [note](ai/00_ai_overview.md)                                  |
 | LSP      | Language Server Protocol                     | Protocol that lets editors communicate with language analysis tools for autocomplete, go-to-definition, and diagnostics. | —                                                             |
-| MCP      | Model Context Protocol                       | Open protocol for connecting LLM agents to external tools and data sources via a standard interface.                     | [note](ai/07_mcp.md)                                          |
+| MCP      | Model Context Protocol                       | Open protocol for connecting LLM agents to external tools and data sources via a standard interface.                     | [note](ai/concepts/07_mcp.md)                                          |
 | ML       | Machine Learning                             | AI technique where models learn patterns from data instead of being programmed only with explicit rules.                 | [note](ai/00_ai_overview.md)                                  |
 | MLOps    | Machine Learning Operations                  | Practice of automating and operationalizing ML workflows — training, evaluation, deployment, monitoring.                 | —                                                             |
 | MSP      | Managed Service Provider                     | A company that remotely manages a customer's IT infrastructure and services, often reselling cloud platforms like AWS.   | —                                                             |

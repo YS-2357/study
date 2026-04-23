@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # ACID
 
@@ -57,7 +57,7 @@ Without atomicity: Alice's $100 is debited but the credit to Bob crashes mid-tra
 ACID is why relational databases are trusted for financial, medical, and legal data. NoSQL databases often sacrifice some ACID properties for speed and scale — understanding ACID explains exactly what you're giving up.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [SQL](./01_sql.md), [NoSQL](./04_nosql.md), [CAP Theorem](./05_cap_theorem.md)
 **Tags:** #software #database

@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # Indexing
 
@@ -67,7 +67,7 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'alice@example.com';
 Indexes are the single most impactful database performance lever. Adding the right index can turn a seconds-long query into milliseconds. Adding too many can cripple write performance. The skill is knowing which queries need indexes and which don't.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [SQL](./01_sql.md), [Connection Pooling](./06_connection_pooling.md)
 **Tags:** #software #database

@@ -4,8 +4,8 @@ tags:
   - computing
   - infrastructure
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -17,7 +17,7 @@ recent_editor: CLAUDE
 
 ## How It Works
 
-You launch an EC2 instance by selecting an AMI (operating system and software template), an instance type (CPU and memory), a VPC subnet, a security group, and a key pair for SSH access. The instance boots from an EBS root volume. You can attach additional EBS volumes, assign IAM roles, and run a user-data script on first boot to install software automatically.
+You launch an EC2 instance by selecting an AMI (operating system and software template), an instance type (CPU and memory), a [VPC](../foundation/04_amazon_vpc.md) subnet, a security group, and a key pair for SSH access. The instance boots from an EBS root volume. You can attach additional EBS volumes, assign IAM roles, and run a user-data script on first boot to install software automatically.
 
 ## Console Access
 **EC2 Console → Instances**

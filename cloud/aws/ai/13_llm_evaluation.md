@@ -4,8 +4,8 @@ tags:
   - ai
   - ml
 created_at: 2026-04-22T00:00:00
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -88,6 +88,15 @@ Prevents regressions from reaching production without manual review.
 | Agent offline | `agent-eval` |
 | Agent operations | [AgentCore Evaluations](agentcore/08_evaluations.md) |
 | CI/CD gates | AgentCore Evaluations (on-demand) |
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Bedrock and AgentCore evaluation tooling when model quality, migration, or agent behavior needs repeatable scoring instead of manual spot checks. |
+| Disruption | Evaluation can start offline against golden datasets, then become a CI/CD gate before it blocks production rollout. |
+| Pros & Cons | It makes quality regressions measurable, but judge-based evaluation adds cost and still needs human calibration for high-risk decisions. |
+| Differences | LLM-as-Judge is fast screening; LLM-as-Jury is better for migration decisions where single-model bias is a concern. |
 
 ## Day 1 Roadmap
 

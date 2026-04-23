@@ -3,8 +3,8 @@ tags:
   - aws
   - event
 created_at: 2026-04-22T00:00:00
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -69,4 +69,5 @@ source:
 ---
 ↑ [Overview](./00_aws_overview.md)
 
+**Related:** [AWS Overview](./00_aws_overview.md)
 **Tags:** #aws #event

@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T13:41:55
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 ---
 
@@ -38,7 +38,7 @@ On first mention of a concept with a dedicated note:
 ### 2.1. Example
 
 ```md
-The [Lambda](../cloud/cloud/aws/compute/03_aws_lambda.md) function uses
+The [Lambda](../cloud/aws/compute/03_aws_lambda.md) function uses
 an IAM role. Lambda automatically handles scaling.
 ```
 
@@ -58,7 +58,7 @@ Links between domains are encouraged when they help the reader:
 
 A service note in `cloud/aws/`, `gcp/`, or `azure/` that has a direct counterpart in another cloud should link the equivalent on first mention. Example, in `cloud/aws/compute/01_amazon_ec2.md`:
 
-> EC2 is AWS's virtual machine service — equivalent to [Compute Engine](../../gcp/compute/01_compute_engine.md) on GCP and [Virtual Machines](../../azure/compute/01_virtual_machines.md) on Azure.
+> EC2 is AWS's virtual machine service — equivalent to Compute Engine on GCP and Virtual Machines on Azure once those counterpart notes exist.
 
 Rules:
 - Link **only when the equivalent note actually exists.** Don't create stub notes just to satisfy links.
@@ -76,10 +76,10 @@ Rules:
 
 Examples:
 ```md
-Same folder:      [Auto Scaling](./02_auto_scaling.md)
-Sibling subdir:   [S3](../storage/01_amazon_s3.md)
-Across domains:   [OSI Model](../../networking/03_osi_model.md)
-Root glossary:    [VPC](../../glossary.md)
+Same folder:      Auto Scaling -> ./02_auto_scaling.md
+Sibling subdir:   S3 -> ../storage/01_amazon_s3.md
+Across domains:   OSI Model -> ../../networking/03_osi_model.md
+Root glossary:    VPC -> ../../glossary.md
 ```
 
 ## 4. Glossary Links
@@ -98,7 +98,7 @@ The [VPC](../glossary.md) contains multiple subnets.
 
 Or link to the full note if one exists:
 ```md
-The [VPC](../cloud/cloud/aws/foundation/04_amazon_vpc.md) contains multiple subnets.
+The [VPC](../cloud/aws/foundation/04_amazon_vpc.md) contains multiple subnets.
 ```
 
 ### 4.3. Glossary Note Column

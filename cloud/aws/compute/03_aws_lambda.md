@@ -4,8 +4,8 @@ tags:
   - serverless
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -19,7 +19,7 @@ recent_editor: CLAUDE
 
 ## How It Works
 
-An event (S3 upload, API Gateway request, EventBridge schedule, etc.) triggers the Lambda function. AWS provisions a secure execution environment, runs your handler function with the event payload, and returns the result. You pay only for the duration and memory consumed. Environments are reused for subsequent invocations (warm start) unless idle, which causes a cold start on the next invocation.
+An event ([S3](../storage/01_amazon_s3.md) upload, [API Gateway](../networking/03_amazon_api_gateway.md) request, EventBridge schedule, etc.) triggers the Lambda function. AWS provisions a secure execution environment, runs your handler function with the event payload, and returns the result. You pay only for the duration and memory consumed. Environments are reused for subsequent invocations (warm start) unless idle, which causes a cold start on the next invocation.
 
 ### Invocation Styles
 
@@ -589,7 +589,7 @@ ENVIRONMENT=production
 
 **Cross-reference:**
 - See [IAM Roles](../identity/01_amazon_iam.md) for execution role configuration
-- See [API Gateway](../../networking/03_amazon_api_gateway.md) for building APIs with Lambda (when created)
+- See [API Gateway](../networking/03_amazon_api_gateway.md) for building APIs with Lambda (when created)
 - See EventBridge for scheduled Lambda functions (when created)
 
 ## Example
@@ -663,5 +663,5 @@ Alternative serverless options for heavier workloads:
 ---
 ↑ [Overview](./00_compute_overview.md)
 
-**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../../networking/03_amazon_api_gateway.md)
+**Related:** [Auto Scaling](02_auto_scaling.md), [AWS Fargate](04_aws_fargate.md), [Computing Basics - Architecture](../../../computing/01_architecture.md), [IAM Roles](../identity/01_amazon_iam.md), [API Gateway](../networking/03_amazon_api_gateway.md)
 **Tags:** #aws #serverless #computing

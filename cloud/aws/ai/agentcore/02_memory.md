@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T19:06:00
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 source:
   - agentcore_intro_korean_2026_04
@@ -165,6 +165,15 @@ namespace: coordinator     namespace: flights     namespace: hotels
 ```
 
 Agents can read across namespaces when needed. Define namespace naming conventions before building.
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Memory when an agent needs session continuity or cross-session personalization beyond the current prompt context. |
+| Disruption | Memory can be added incrementally, but long-term strategies require retention and namespace decisions before production use. |
+| Pros & Cons | It avoids a custom memory store, but remembered context can increase cost, latency, and regression risk if extraction is too broad. |
+| Differences | Short-term memory keeps recent session turns; long-term memory extracts reusable facts for future sessions. |
 
 ## Key Points
 

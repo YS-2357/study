@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # Connection Pooling
 
@@ -60,7 +60,7 @@ PostgreSQL default max connections: 100. PgBouncer lets thousands of app connect
 Connection limits are a common production failure: app deploys at scale → DB connection limit hit → all queries fail. Connection pooling is the standard solution and is nearly always configured in production.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [SQL](./01_sql.md), [Indexing](./03_indexing.md)
 **Tags:** #software #database

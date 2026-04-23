@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # SQL
 
@@ -78,7 +78,7 @@ LIMIT 5;
 SQL is used by virtually every system that stores structured data. PostgreSQL, MySQL, SQLite, and cloud databases (Amazon RDS, Aurora) all speak SQL. It's one of the most durable skills in software engineering.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [ACID](./02_acid.md), [Indexing](./03_indexing.md), [ORM](./07_orm.md)
 **Tags:** #software #database

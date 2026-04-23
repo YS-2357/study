@@ -2,8 +2,8 @@
 tags:
   - gcp
 created_at: 2026-04-19T01:34:33
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 # Google Cloud (GCP) — Overview
@@ -23,4 +23,4 @@ _No subdomains yet. Add rows as they're created._
 - Azure equivalents — [Azure](../azure/00_azure_overview.md)
 
 ---
-↑ [Home](../home.md)
+↑ [Home](../../home.md)

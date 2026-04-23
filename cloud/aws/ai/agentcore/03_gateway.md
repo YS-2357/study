@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T19:06:00
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 source:
   - agentcore_intro_korean_2026_04
@@ -129,6 +129,15 @@ Semantic Search uses the `x-amz-bedrock-agentcore-search` tool to retrieve relev
 | Partner ecosystem tool provider | Lambda | OAuth | IAM Role | Search |
 
 **One Gateway can hold multiple Target types simultaneously (Composer role).**
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Gateway when existing APIs, Lambda functions, or Smithy-modeled services need to become controlled agent tools. |
+| Disruption | Gateway can wrap existing APIs with little code change for OpenAPI or Smithy targets, while Lambda targets require explicit function implementation. |
+| Pros & Cons | It centralizes tool exposure and credentials, but still requires careful target scoping and authentication design. |
+| Differences | Gateway exposes tools to agents; Identity manages who the agent acts as, and Policy controls whether tool calls should be allowed. |
 
 ## Key Points
 

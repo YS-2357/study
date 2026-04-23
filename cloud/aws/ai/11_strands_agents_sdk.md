@@ -4,7 +4,7 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T19:06:00
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 source:
   - strands_jhrhee_2026_04
@@ -270,6 +270,15 @@ Strands isn't the only code-first agent framework. Quick map of the landscape:
 - Want role-based team abstraction? → **CrewAI**
 - Want rigorous type safety? → **Pydantic AI**
 - Want to optimize prompts mechanically? → **DSPy**
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Strands when you want code-first agent logic that can run locally or deploy onto AWS infrastructure such as AgentCore Runtime. |
+| Disruption | Adopting Strands changes application code, not the hosting layer by itself; deployment disruption depends on where the agent is later run. |
+| Pros & Cons | It gives flexible model-driven tool use with little framework ceremony, but the model decides the sequence so prompts, tools, and guardrails must be constrained. |
+| Differences | Strands is an SDK for agent behavior; AgentCore is production infrastructure, and Bedrock Agents is a managed console-first builder. |
 
 ## Precautions
 

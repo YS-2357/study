@@ -3,11 +3,11 @@ tags:
   - software
   - frontend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 # Build Tools
 
@@ -59,7 +59,7 @@ const n=(a,b)=>a+b;
 You never interact with the browser directly — the build tool is the bridge between what you write and what ships. Knowing what Vite or Webpack does explains why builds take time, why filenames have hashes, and why `import` works in the browser despite it being a Node.js concept.
 
 ---
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 **Related:** [JavaScript Core](./02_javascript_core.md), [TypeScript](./04_typescript.md), [React](./03_react.md)
 **Tags:** #software #frontend

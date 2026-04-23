@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-18T20:19:44
-updated_at: 2026-04-21T00:00:00
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -14,7 +14,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-The Bedrock family is designed to compose — each per-service note explains one piece in isolation, but real systems stack several. This note shows the common stacks: which services you reach for together, and why.
+The [Bedrock](./01_amazon_bedrock.md) family is designed to compose — each per-service note explains one piece in isolation, but real systems stack several. This note shows the common stacks: which services you reach for together, and why.
 
 ## How It Works
 
@@ -131,7 +131,7 @@ Each compute option has a different failure mode for agent workloads:
 | **Lambda** | 15-minute timeout and cold starts break multi-turn agent sessions. Stateless by design — persistent memory across turns requires external storage. Streaming agentic responses is awkward. |
 | **AgentCore** | Service is new — observability tooling is thinner, pricing is less predictable than Lambda, and region availability is limited. Custom frameworks need extra wiring. |
 
-None of the three natively solve RAG, cross-session memory, multi-agent coordination, or evaluation — those are bolt-on layers regardless of compute choice.
+None of the three natively solve [RAG](../../../ai/concepts/16_rag.md), cross-session memory, multi-agent coordination, or evaluation — those are bolt-on layers regardless of compute choice.
 
 ---
 ↑ [Overview](./00_ai_overview.md)

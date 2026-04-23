@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # Authentication
 
@@ -66,7 +66,7 @@ Decoded payload:
 Every web app needs auth. JWT is the default for stateless APIs and mobile apps. OAuth is required whenever you integrate third-party identity providers.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [REST API](./01_rest_api.md), [Middleware](./03_middleware.md)
 **Tags:** #software #backend

@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-23T23:41:19
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
+---
+
 # ocr
 
 Manually extract readable text from raw local images into a raw Markdown draft.

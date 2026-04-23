@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-23T23:41:19
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
+---
+
 # rules
 
 Rules for AI agents working in this repository.

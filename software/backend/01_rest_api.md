@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # REST API
 
@@ -68,7 +68,7 @@ Response 201:
 REST is the default API style for web services. Understanding it lets you consume any third-party API and design backend services that frontend and mobile clients can use predictably.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [Authentication](./02_authentication.md), [Middleware](./03_middleware.md), [Rate Limiting](./06_rate_limiting.md)
 **Tags:** #software #backend

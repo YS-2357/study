@@ -5,7 +5,7 @@ tags:
   - ml
   - serverless
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T19:06:00
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 source:
   - agentcore_intro_korean_2026_04
@@ -140,6 +140,15 @@ For permanent state across sessions → use [AgentCore Memory](02_memory.md).
 | Real-time report generation | HTTP | IAM | Streaming | Stateful | Large |
 | One-shot image/Excel analysis | HTTP | IAM | Sync | Stateless | Large |
 | Multi-agent orchestration | MCP+HTTP | IAM | Streaming | Stateful | Standard |
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Runtime when an agent needs managed hosting, invocation endpoints, isolation, and scaling rather than a local process. |
+| Disruption | Runtime deployment packages the agent into a managed endpoint; session behavior and protocol choice should be decided before moving production traffic. |
+| Pros & Cons | It gives agent-oriented hosting and isolation, but framework code still owns reasoning, model calls, and tool behavior. |
+| Differences | Lambda is generic short-lived compute; Runtime is designed around long-running agent sessions, protocols, and AgentCore services. |
 
 ## Key Points
 

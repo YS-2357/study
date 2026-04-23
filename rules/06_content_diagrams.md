@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:00:15
-updated_at: 2026-04-19T09:46:47
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 ---
 
@@ -126,7 +126,7 @@ Single concept-note file, top to bottom:
 │ recent_editor: CLAUDE                          │
 │ ---                                            │ ← frontmatter close
 │                                                │
-│ ↑ [Overview](./00_aws_overview.md)             │ ← up-nav header
+│ ↑ [Overview] -> ./00_aws_overview.md             │ ← up-nav header
 │                                                │
 │ # Title                                        │ ← H1, exactly once
 │                                                │
@@ -142,9 +142,9 @@ Single concept-note file, top to bottom:
 │ ## Why It Matters                              │ ← required
 │                                                │
 │ ---                                            │ ← footer divider
-│ ↑ [Overview](./00_aws_overview.md)             │ ← up-nav (restated)
+│ ↑ [Overview] -> ./00_aws_overview.md             │ ← up-nav (restated)
 │                                                │
-│ **Related:** [X](x.md), [Y](y.md)              │ ← associative links
+│ **Related:** X -> x.md, Y -> y.md              │ ← associative links
 │ **Tags:** #aws #serverless                     │ ← mirror of frontmatter
 └────────────────────────────────────────────────┘
 ```

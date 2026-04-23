@@ -4,8 +4,8 @@ tags:
   - claude
   - models
 created_at: 2026-04-20T13:59:45
-updated_at: 2026-04-23T14:26:50
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source: anthropic.com
 ---
 
@@ -55,7 +55,7 @@ All current models support:
 
 ## Platform Availability
 
-All models available on: Claude API, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry.
+All models available on: Claude API, [Amazon Bedrock](../../cloud/aws/ai/01_amazon_bedrock.md), Google Cloud Vertex AI, Microsoft Foundry.
 
 ## Tier Roles
 

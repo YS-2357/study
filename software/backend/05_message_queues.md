@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # Message Queues
 
@@ -60,7 +60,7 @@ Without a queue: the API waits for transcoding to finish (minutes), request time
 Message queues enable async processing, smooth out traffic spikes, and decouple services so a slow consumer doesn't block the producer. Essential for any background task: email sending, video processing, AI inference jobs.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [Microservices](./04_microservices.md), [Rate Limiting](./06_rate_limiting.md)
 **Tags:** #software #backend

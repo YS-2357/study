@@ -5,8 +5,8 @@ tags:
   - ml
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -27,6 +27,15 @@ Evaluations scores sessions, traces, or spans against quality criteria. A team c
 - Run evaluations before deployment and continue sampling production sessions after deployment.
 - Use real traces from [AgentCore Observability](07_observability.md) when possible so tests reflect actual workflows.
 - Treat evaluation results as release evidence, not as a substitute for deterministic controls such as [AgentCore Policy](09_policy.md).
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Evaluations when agent releases need measured task success, answer quality, tool accuracy, or safety checks. |
+| Disruption | It can run on demand before deployment or sample production traces online without replacing the agent runtime. |
+| Pros & Cons | It catches silent quality failures that infrastructure metrics miss, but scoring thresholds and rubrics need ongoing calibration. |
+| Differences | Observability records what happened; Evaluations judge whether the behavior was good enough. |
 
 ## Example
 A release candidate agent can be evaluated on task success, answer helpfulness, and tool-use accuracy before it is promoted to production.

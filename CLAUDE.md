@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-23T23:41:19
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
+---
+
 # Claude Code — Study Repository
 
 **Read [rules/CLAUDE.md](rules/CLAUDE.md) for the full rule set before any action.**

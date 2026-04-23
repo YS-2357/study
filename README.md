@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-23T14:39:11
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 # study
@@ -61,7 +61,7 @@ Navigation is associative. Every concept note has a footer like:
 ---
 ↑ [Overview](./00_{domain}_overview.md)
 
-**Related:** [Title A](./a.md), [Title B](../other/b.md)
+**Related:** Title A -> ./a.md, Title B -> ../other/b.md
 **Tags:** #tag1 #tag2
 ```
 

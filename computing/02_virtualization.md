@@ -3,8 +3,8 @@ tags:
   - computing
   - container
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_computing_overview.md)
@@ -67,7 +67,7 @@ You launch an m6g.large [EC2](../cloud/aws/compute/01_amazon_ec2.md) instance. A
 
 ## Why It Matters
 
-Understanding virtualization explains why EC2 instances have specific CPU/memory allocations, why instance store data is lost when you stop an instance (the VM is deallocated), and why Nitro-based instances perform better than older Xen-based ones.
+Understanding virtualization explains why [EC2](../cloud/aws/compute/01_amazon_ec2.md) instances have specific CPU/memory allocations, why instance store data is lost when you stop an instance (the VM is deallocated), and why Nitro-based instances perform better than older Xen-based ones.
 
 ---
 ↑ [Overview](./00_computing_overview.md)

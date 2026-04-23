@@ -3,8 +3,8 @@ tags:
   - aws
   - monitoring
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ops_overview.md)
@@ -152,7 +152,7 @@ CloudWatch monitors almost all AWS services, but some things need other tools:
 
 | Gap | What to use instead |
 |---|---|
-| Application-level tracing (which function called which) | **AWS X-Ray** or [AgentCore Observability](../../ai/agentcore/07_observability.md) |
+| Application-level tracing (which function called which) | **AWS X-Ray** or [AgentCore Observability](../ai/agentcore/07_observability.md) |
 | Cost breakdown by service | **AWS Cost Explorer** / **Budgets** |
 | Security audit (who did what API call) | **CloudTrail** |
 | Resource inventory (what exists in my account) | **AWS Config** |
@@ -186,5 +186,5 @@ Without CloudWatch, you're blind. When the agent returns a bad draft or times ou
 ---
 ↑ [Overview](./00_ops_overview.md)
 
-**Related:** [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md), [AgentCore Observability](../../ai/agentcore/07_observability.md)
+**Related:** [AWS SSM Parameter Store](02_aws_ssm_parameter_store.md), [AgentCore Observability](../ai/agentcore/07_observability.md)
 **Tags:** #aws #monitoring

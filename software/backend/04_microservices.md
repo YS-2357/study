@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # Microservices vs Monolith
 
@@ -59,7 +59,7 @@ Netflix started as a monolith and migrated to 700+ microservices as teams and sc
 The default advice is **start with a monolith, extract microservices when you have a clear reason**. Premature microservices add enormous operational complexity without benefit.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [Message Queues](./05_message_queues.md), [REST API](./01_rest_api.md)
 **Tags:** #software #backend

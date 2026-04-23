@@ -4,8 +4,8 @@ tags:
   - ml
   - computing
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -34,7 +34,7 @@ Prepare data → Build/train model → Tune hyperparameters → Deploy endpoint 
 | Option | What it does | When to use |
 |---|---|---|
 | **SageMaker** | Full ML platform (build, train, deploy) | Custom models, full control over training/deployment |
-| **[Bedrock](../../ai/concepts/01_amazon_bedrock.md)** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
+| **[Bedrock](../ai/01_amazon_bedrock.md)** | Managed foundation models (API access) | Use pre-built LLMs without training, GenAI apps |
 | **EC2 + frameworks** | DIY ML on raw compute | Maximum control, existing pipelines, custom environments |
 | **Comprehend/Rekognition/etc.** | Pre-built AI services (no ML knowledge needed) | Specific tasks (NLP, image analysis) without building models |
 
@@ -168,6 +168,15 @@ Natural language → analyses and ML development, without writing SQL/Python man
 | Business Glossary | Shared vocabulary for domain terms |
 | Data Lineage | How data flows and transforms across systems |
 
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use SageMaker when you need managed training, tuning, deployment, or data/AI asset governance instead of raw EC2-based ML infrastructure. |
+| Disruption | Training jobs are separate from serving endpoints; endpoint changes should be rolled out through new model versions or endpoint variants to avoid interrupting production inference. |
+| Pros & Cons | It reduces ML infrastructure work, but real-time endpoints and notebooks can create steady costs if left running. |
+| Differences | Bedrock is for consuming foundation models by API; SageMaker is for building, training, hosting, and governing custom ML workflows. |
+
 ## Official Documentation
 - [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
 - [Amazon SageMaker FAQs](https://aws.amazon.com/sagemaker/faqs/)
@@ -175,5 +184,5 @@ Natural language → analyses and ML development, without writing SQL/Python man
 ---
 ↑ [Overview](./00_analytics_overview.md)
 
-**Related:** [AWS Data Pipeline](./03_aws_data_pipeline.md), [EC2](../compute/01_amazon_ec2.md), [Bedrock](../../ai/concepts/01_amazon_bedrock.md), [S3](../storage/01_amazon_s3.md)
+**Related:** [AWS Data Pipeline](./03_aws_data_pipeline.md), [EC2](../compute/01_amazon_ec2.md), [Bedrock](../ai/01_amazon_bedrock.md), [S3](../storage/01_amazon_s3.md)
 **Tags:** #aws #ml #computing

@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T13:41:55
+updated_at: 2026-04-23T23:41:19
 recent_editor: CODEX
 ---
 
@@ -41,7 +41,7 @@ tags:
 ---
 ↑ [Overview](./00_{domain}_overview.md)
 
-**Related:** [Title A](./a.md), [Title B](../other/b.md)
+**Related:** Title A -> ./a.md, Title B -> ../other/b.md
 **Tags:** #tag1 #tag2
 ```
 
@@ -96,7 +96,7 @@ home.md (root)
 
 ```md
 ---
-↑ [AWS](../00_aws_overview.md)
+↑ [AWS] -> ../00_aws_overview.md
 ```
 
 ### 3.4. When To Split A Domain Into Subdomains

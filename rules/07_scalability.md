@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-18T12:45:44
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 # Scalability Rules
@@ -26,10 +26,10 @@ See [rules/02_navigation.md §3.3](02_navigation.md) for the subdomain pattern a
 
 | Level | Direction | Example |
 |-------|-----------|---------|
-| `home.md` (root) | points **down** to domain overviews | `[AWS](cloud/aws/00_aws_overview.md)` |
-| `00_{domain}_overview.md` | points **down** to subdomain overviews or concept notes | `[Compute](compute/00_compute_overview.md)` or `[EC2](01_amazon_ec2.md)` |
-| `00_{subdomain}_overview.md` | points **down** to concept notes, **up** to parent overview in footer | `↑ [AWS](../00_aws_overview.md)` |
-| Concept note | points **up** to subdomain overview (header + footer), **outward** to Related notes via inline links and the footer list | `↑ [Overview](./00_compute_overview.md)` |
+| `home.md` (root) | points **down** to domain overviews | `[AWS](../cloud/aws/00_aws_overview.md)` |
+| `00_{domain}_overview.md` | points **down** to subdomain overviews or concept notes | `[Compute](../cloud/aws/compute/00_compute_overview.md)` or `[EC2](../cloud/aws/compute/01_amazon_ec2.md)` |
+| `00_{subdomain}_overview.md` | points **down** to concept notes, **up** to parent overview in footer | `↑ [AWS] -> ../00_aws_overview.md` |
+| Concept note | points **up** to subdomain overview (header + footer), **outward** to Related notes via inline links and the footer list | `↑ [Overview] -> ./00_compute_overview.md` |
 
 Consequence: adding a new concept = touch exactly the parent overview + README. Nothing upstream changes.
 

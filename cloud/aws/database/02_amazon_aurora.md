@@ -3,8 +3,8 @@ tags:
   - aws
   - database
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_database_overview.md)
@@ -12,9 +12,9 @@ recent_editor: CLAUDE
 # Amazon Aurora
 
 ## What It Is
-Amazon Aurora is AWS's cloud-native relational database engine, compatible with MySQL and PostgreSQL. It runs on the same RDS platform but uses a completely different storage architecture — shared cluster storage that auto-replicates across 3 AZs (Availability Zones).
+Amazon Aurora is AWS's cloud-native relational database engine, compatible with MySQL and PostgreSQL. It runs on the same [RDS](./01_amazon_rds.md) platform but uses a completely different storage architecture — shared cluster storage that auto-replicates across 3 AZs (Availability Zones).
 
-Aurora is NOT standard MySQL/PostgreSQL — it's AWS's re-engineered version. Same SQL compatibility, different engine underneath.
+Aurora is NOT standard MySQL/PostgreSQL — it's AWS's re-engineered version. Same [SQL](../../../software/database/01_sql.md) compatibility, different engine underneath.
 
 **"Fully managed" — what AWS means:**
 - AWS official docs call Aurora "a fully managed relational database engine" ([source](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html))

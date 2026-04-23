@@ -4,8 +4,8 @@ tags:
   - database
   - graph
 created_at: 2026-04-22T00:00:00
-updated_at: 2026-04-22T09:57:48
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -72,6 +72,15 @@ GraphRAG as **Semantic Sidecar**: KG provides context/constraints; vector index 
 - Digital Twin (physical-digital relationship mapping)
 - Data Fabric (cross-silo entity linking via URI)
 - Impact analysis (dependency traversal)
+
+## AWS Viewpoints
+
+| Perspective | Detail |
+|-------------|--------|
+| Feasibility | Use Neptune when relationships, ontology, or multi-hop graph traversal matter more than simple vector similarity. |
+| Disruption | Introducing Neptune usually requires graph modeling and data loading work before applications can query it reliably. |
+| Pros & Cons | It improves explainability and relationship reasoning, but setup cost and domain modeling effort are higher than a basic vector store. |
+| Differences | Vector RAG retrieves semantically similar chunks; Neptune supports graph relationships, constraints, and structured traversal for GraphRAG patterns. |
 
 ## Why Ontology for Agentic AI
 

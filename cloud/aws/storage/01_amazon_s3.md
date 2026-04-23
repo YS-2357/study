@@ -3,8 +3,8 @@ tags:
   - aws
   - storage
 created_at: 2026-03-26T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_storage_overview.md)
@@ -364,7 +364,7 @@ The policy itself is free, but **transition requests incur per-request charges**
 
 ## Static Frontend Hosting with CDK
 
-S3 paired with [Amazon CloudFront](../../networking/02_amazon_cloudfront.md) is the standard pattern for hosting static frontends (React, Vue, Next.js static export). S3 stores the built files; CloudFront serves them globally.
+S3 paired with [Amazon CloudFront](../networking/02_amazon_cloudfront.md) is the standard pattern for hosting static frontends (React, Vue, Next.js static export). S3 stores the built files; CloudFront serves them globally.
 
 ### CDK setup
 
@@ -415,5 +415,5 @@ distribution = cf.Distribution(self, "FrontendDist",
 ---
 ↑ [Overview](./00_storage_overview.md)
 
-**Related:** [Amazon EBS](./02_amazon_ebs.md), [Amazon EFS](./03_amazon_efs.md), [Amazon CloudFront](../../networking/02_amazon_cloudfront.md)
+**Related:** [Amazon EBS](./02_amazon_ebs.md), [Amazon EFS](./03_amazon_efs.md), [Amazon CloudFront](../networking/02_amazon_cloudfront.md)
 **Tags:** #aws #storage

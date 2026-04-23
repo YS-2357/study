@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 # Lint
@@ -29,7 +29,7 @@ Find any relative-path link whose target file does not exist.
 grep -rEho '\[[^]]+\]\([^)]+\.md[^)]*\)' --include='*.md' .
 ```
 
-Resolve each link relative to the file it appears in. Report misses.
+Resolve each link relative to the file it appears in. Report misses. Do not report links inside template or example snippets when the target contains placeholders or wildcards such as {domain}, NN_x, x.md, y.md, or 00_*_overview.md.
 
 ### 2.2. Orphan Notes
 
@@ -68,7 +68,7 @@ Every concept note must end with:
 ---
 ↑ [Overview](./00_{domain}_overview.md)
 
-**Related:** [A](./a.md), [B](../other/b.md)
+**Related:** A -> ./a.md, B -> ../other/b.md
 **Tags:** #tag1 #tag2
 ```
 

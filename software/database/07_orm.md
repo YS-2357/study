@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # ORM
 
@@ -84,7 +84,7 @@ Both return the same result; the ORM version is more readable but obscures what 
 ORMs speed up development and prevent SQL injection (queries are parameterized automatically). The risk: developers who don't know SQL can't diagnose the slow queries the ORM generates. Know SQL first, then use an ORM.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [SQL](./01_sql.md), [Indexing](./03_indexing.md), [Connection Pooling](./06_connection_pooling.md)
 **Tags:** #software #database

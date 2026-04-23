@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # Rate Limiting
 
@@ -57,7 +57,7 @@ Real example: OpenAI API limits by tokens-per-minute and requests-per-minute per
 Without rate limiting, a single misbehaving client can exhaust server resources and degrade service for everyone. It's a required primitive for any public-facing API.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [REST API](./01_rest_api.md), [Middleware](./03_middleware.md)
 **Tags:** #software #backend

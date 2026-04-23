@@ -4,8 +4,8 @@ tags:
   - computing
   - infrastructure
 created_at: 2026-03-16T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_compute_overview.md)
@@ -163,7 +163,7 @@ ASG is commonly paired with a load balancer to distribute traffic across instanc
 | GWLB | L3 (GENEVE) | Security appliance inspection before traffic reaches ASG |
 | CLB | L4/L7 | **Previous generation** — don't use for new projects |
 
-> For full console flow, screenshots, pricing, and detailed comparison, see [Elastic Load Balancing](../../networking/01_elastic_load_balancing.md).
+> For full console flow, screenshots, pricing, and detailed comparison, see [Elastic Load Balancing](../networking/01_elastic_load_balancing.md).
 
 
 ## Key Concepts
@@ -303,5 +303,5 @@ Yes. In the Launch Template's network interface settings, use the `AssociatePubl
 ---
 ↑ [Overview](./00_compute_overview.md)
 
-**Related:** [Amazon EC2](01_amazon_ec2.md), [AWS Lambda](03_aws_lambda.md), [Elastic Load Balancing](../../networking/01_elastic_load_balancing.md)
+**Related:** [Amazon EC2](01_amazon_ec2.md), [AWS Lambda](03_aws_lambda.md), [Elastic Load Balancing](../networking/01_elastic_load_balancing.md)
 **Tags:** #aws #computing #infrastructure

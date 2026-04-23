@@ -3,11 +3,11 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # CAP Theorem
 
@@ -55,7 +55,7 @@ Two database nodes, network partition between them. A user writes "Alice's balan
 CAP explains every NoSQL database's design decision. When you see "eventual consistency" (Cassandra, DynamoDB), that's AP. When you see "strong consistency" modes that can reject requests, that's CP. Choosing a database means choosing which guarantee to give up.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [ACID](./02_acid.md), [NoSQL](./04_nosql.md)
 **Tags:** #software #database

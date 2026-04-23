@@ -3,17 +3,17 @@ tags:
   - software
   - database
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 # NoSQL
 
 ## What It Is
 
-Databases that don't use the relational (table + SQL) model. "NoSQL" means "not only SQL" — they trade some ACID guarantees for flexibility in data shape, horizontal scalability, or specialized access patterns.
+Databases that don't use the relational (table + SQL) model. "NoSQL" means "not only SQL" — they trade some [ACID](./02_acid.md) guarantees for flexibility in data shape, horizontal scalability, or specialized access patterns.
 
 ## Analogy
 
@@ -61,7 +61,7 @@ User profile with varying fields (some users have GitHub, some have Twitter, som
 NoSQL databases power caching (Redis), mobile backends (Firestore), social graphs (Neo4j), and IoT time-series (Cassandra). Choosing the right type for the data shape is more important than choosing a specific product. AWS DynamoDB (key-value/document) and Amazon Neptune (graph) are the AWS equivalents.
 
 ---
-↑ [Database Overview](./00_database_overview.md)
+↑ [Overview](./00_database_overview.md)
 
 **Related:** [ACID](./02_acid.md), [CAP Theorem](./05_cap_theorem.md), [AWS Database](../../cloud/aws/database/00_database_overview.md)
 **Tags:** #software #database

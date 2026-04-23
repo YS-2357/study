@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -24,7 +24,7 @@ A food court with multiple restaurant stalls. Anthropic, Meta, Amazon, Mistral e
 
 ### Two Clients
 
-Bedrock has two separate boto3 clients — like how RDS has a management client to *create* databases and a database driver to *query* them.
+Bedrock has two separate [boto3](../devtools/02_boto3.md) clients — like how RDS has a management client to *create* databases and a database driver to *query* them.
 
 | Client | What it does | When you use it |
 |---|---|---|

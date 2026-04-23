@@ -5,8 +5,8 @@ tags:
   - ml
   - storage
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -15,7 +15,7 @@ recent_editor: CLAUDE
 
 ## What It Is
 
-Amazon Bedrock Knowledge Bases is a managed RAG (Retrieval-Augmented Generation) service that connects foundation models to your data sources so responses are grounded in your actual content instead of relying solely on the model's training data.
+Amazon Bedrock Knowledge Bases is a managed [RAG](../../../ai/concepts/16_rag.md) (Retrieval-Augmented Generation) service that connects foundation models to your data sources so responses are grounded in your actual content instead of relying solely on the model's training data.
 
 ## Analogy
 

@@ -3,11 +3,11 @@ tags:
   - software
   - frontend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 # Browser Rendering
 
@@ -55,7 +55,7 @@ Replace with `transform: translateX(100px)` — now only composite runs. Same vi
 Understanding the pipeline tells you why some CSS animations are smooth (composite-only) and others cause jank (trigger layout). The rule: animate `transform` and `opacity`, never `width` or `top`.
 
 ---
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 **Related:** [JavaScript Core](./02_javascript_core.md), [Build Tools](./05_build_tools.md)
 **Tags:** #software #frontend

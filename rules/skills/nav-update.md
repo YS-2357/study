@@ -1,3 +1,11 @@
+---
+tags:
+  - tooling
+created_at: 2026-04-23T23:41:19
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
+---
+
 # nav-update
 
 Sync structural documents after adding, moving, renaming, or deleting notes.

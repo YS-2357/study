@@ -3,11 +3,11 @@ tags:
   - software
   - frontend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 # JavaScript Core
 
@@ -63,7 +63,7 @@ Even with `0ms` delay, `3` logs last — the callback waits for the call stack t
 Misunderstanding the event loop causes bugs like "why is my data undefined?" (reading before the async call finishes). async/await makes the execution order explicit and the code readable.
 
 ---
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 **Related:** [Browser Rendering](./01_browser_rendering.md), [React](./03_react.md)
 **Tags:** #software #frontend

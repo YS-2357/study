@@ -3,8 +3,8 @@ tags:
   - aws
   - computing
 created_at: 2026-03-13T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_analytics_overview.md)
@@ -43,7 +43,7 @@ EMR is primarily a **batch processing** service.
 
 ## How It Works
 
-You create an EMR cluster, selecting a framework (Spark, Hive, etc.), node types, and instance sizes. EMR provisions EC2 instances organized into a primary node (coordinates work), core nodes (store data and run tasks), and optional task nodes (run tasks only). Jobs read input data from S3, distribute work across nodes in parallel, and write results back to S3. Clusters can be terminated after the job completes to avoid idle costs.
+You create an EMR cluster, selecting a framework (Spark, Hive, etc.), node types, and instance sizes. EMR provisions [EC2](../compute/01_amazon_ec2.md) instances organized into a primary node (coordinates work), core nodes (store data and run tasks), and optional task nodes (run tasks only). Jobs read input data from S3, distribute work across nodes in parallel, and write results back to S3. Clusters can be terminated after the job completes to avoid idle costs.
 
 ## Console Access
 - Search "EMR" in AWS Console

@@ -4,8 +4,8 @@ tags:
   - serverless
   - networking
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_networking_overview.md)
@@ -31,7 +31,7 @@ Browser → API Gateway → Lambda → response → API Gateway → Browser
 | **HTTP API** | Simple REST-style routing to Lambda or HTTP backends. Cheaper, lower latency. |
 | **REST API** | Full feature set — request/response transformation, API keys, usage plans, WAF. |
 
-HTTP API is sufficient for most Lambda backends. Use REST API only when you need request transformation or API key management.
+HTTP API is sufficient for most Lambda backends. Use [REST API](../../../software/backend/01_rest_api.md) only when you need request transformation or API key management.
 
 ### Route structure
 

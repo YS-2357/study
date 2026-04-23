@@ -4,8 +4,8 @@ tags:
   - aws
   - ml
 created_at: 2026-04-17T14:18:47
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
 ↑ [Overview](./00_ai_overview.md)
@@ -55,7 +55,7 @@ agentcore invoke --runtime MyAgent "Summarize today's incidents"
 ```
 
 ## Why It Matters
-AgentCore is the layer that turns custom agent code into production infrastructure. That is why replacing it with Lambda changes the architecture: Lambda is generic compute, while AgentCore is managed agent operations with agent-native services around the runtime.
+AgentCore is the layer that turns custom agent code into production infrastructure. That is why replacing it with [Lambda](../compute/03_aws_lambda.md) changes the architecture: Lambda is generic compute, while AgentCore is managed agent operations with agent-native services around the runtime.
 
 ### Where AgentCore Fits
 
@@ -141,7 +141,7 @@ They are evolutionary layers, not competitors:
 
 ### 2. EC2 vs Lambda vs AgentCore — Why They Aren't Interchangeable
 
-All three can host an agent. Only AgentCore bundles the services an agent typically needs. EC2 and Lambda give you compute only — anything agent-specific, you build yourself.
+All three can host an agent. Only AgentCore bundles the services an agent typically needs. [EC2](../compute/01_amazon_ec2.md) and Lambda give you compute only — anything agent-specific, you build yourself.
 
 |  | EC2 | Lambda | AgentCore |
 |---|---|---|---|

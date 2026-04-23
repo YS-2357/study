@@ -3,11 +3,11 @@ tags:
   - software
   - frontend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 # TypeScript
 
@@ -74,7 +74,7 @@ console.log(user.email.toLowerCase())  // ✗ Error: user.email is possibly unde
 TypeScript eliminates an entire class of runtime bugs in large codebases. It's now the default for React, Node.js, and most modern frontend projects — understanding it is a prerequisite for reading most open-source JavaScript.
 
 ---
-↑ [Frontend Overview](./00_frontend_overview.md)
+↑ [Overview](./00_frontend_overview.md)
 
 **Related:** [JavaScript Core](./02_javascript_core.md), [React](./03_react.md)
 **Tags:** #software #frontend

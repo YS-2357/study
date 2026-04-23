@@ -3,11 +3,11 @@ tags:
   - software
   - backend
 created_at: 2026-04-23T15:20:41
-updated_at: 2026-04-23T15:20:41
-recent_editor: CLAUDE
+updated_at: 2026-04-23T23:41:19
+recent_editor: CODEX
 ---
 
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 # Middleware
 
@@ -66,7 +66,7 @@ Without auth middleware, every route handler must check auth itself. With middle
 Middleware keeps cross-cutting concerns (auth, logging, rate limiting) out of business logic. It's the primary pattern for adding behavior to APIs without duplicating code.
 
 ---
-↑ [Backend Overview](./00_backend_overview.md)
+↑ [Overview](./00_backend_overview.md)
 
 **Related:** [REST API](./01_rest_api.md), [Authentication](./02_authentication.md), [Rate Limiting](./06_rate_limiting.md)
 **Tags:** #software #backend
