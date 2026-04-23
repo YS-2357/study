@@ -18,4 +18,5 @@ All study domains in this repo. Each domain has its own `00_{domain}_overview.md
 - [Git](git/00_git_overview.md) — Git workflow, tracking, staging
 - [Glossary](glossary.md) — Abbreviations and domain terms used across the repo
 - [Networking](networking/00_networking_overview.md) — Protocols, OSI, DNS, HTTP, reverse proxy
+- [Software](software/00_software_overview.md) — Frontend, backend, database concepts
 - [Tooling](tooling/00_tooling_overview.md) — Dev tools, editors, terminal, note apps
