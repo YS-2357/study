@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # Claude-owned pre-push: multiple-choice content quiz for manual user pushes.
 # One attempt only — wrong answer cancels the push immediately, no retries.
-# Skipped automatically when CLAUDE_AUTO_PUSH=1 (Claude Code auto-push).
-
-[[ "${CLAUDE_AUTO_PUSH:-}" == "1" ]] && exit 0
 
 # Skip if no interactive terminal — non-interactive callers (Codex dry-run, CI, pipes) pass through
 { true < /dev/tty; } 2>/dev/null || exit 0

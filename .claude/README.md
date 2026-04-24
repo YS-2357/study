@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T14:51:28
-updated_at: 2026-04-19T09:11:51
+updated_at: 2026-04-24T00:24:20
 recent_editor: CLAUDE
 ---
 
@@ -10,7 +10,7 @@ recent_editor: CLAUDE
 
 Claude Code automation for this repository.
 
-- `settings.json`: hook configuration for PostToolUse auto-push on Write/Edit and Stop session-end push.
+- `settings.json`: hook configuration for edit-time metadata normalization on Write/Edit/MultiEdit.
 - `settings.local.json`: personal permission overrides. This file is local and should not be committed unless explicitly requested.
 - `hooks/`: Claude-owned hook scripts invoked by `settings.json`.
 

@@ -1,7 +1,7 @@
 #!/bin/bash
-# PostToolUse: auto-correct updated_at in note frontmatter to current KST.
+# PostToolUse: normalize updated_at and recent_editor in note frontmatter to current KST.
 # Reads Claude Code hook JSON from stdin, extracts the touched file, rewrites
-# only the updated_at line inside the first frontmatter block. Silent on success.
+# only those two fields inside the first frontmatter block. Silent on success.
 # 실패는 요란하게, 성공은 조용하게
 
 REPO=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
@@ -22,16 +22,17 @@ fi
 
 [[ -z "$FILE" || ! -f "$FILE" || "$FILE" != *.md ]] && exit 0
 
-# Skip files without an updated_at line in the top frontmatter block.
-head -30 "$FILE" | grep -q '^updated_at:' || exit 0
+# Skip files without a top frontmatter block.
+head -5 "$FILE" | grep -q '^---' || exit 0
 
-NOW=$(date +%Y-%m-%dT%H:%M:%S)
+NOW=$(TZ=Asia/Seoul date +%Y-%m-%dT%H:%M:%S)
 TMP="${FILE}.ts-tmp"
 
 awk -v now="$NOW" '
     NR==1 && /^---[[:space:]]*$/ { in_fm=1; print; next }
     in_fm && /^---[[:space:]]*$/ { in_fm=0; print; next }
-    in_fm && !done && /^updated_at:[[:space:]]/ { print "updated_at: " now; done=1; next }
+    in_fm && !done_ts && /^updated_at:[[:space:]]/ { print "updated_at: " now; done_ts=1; next }
+    in_fm && !done_re && /^recent_editor:[[:space:]]/ { print "recent_editor: CLAUDE"; done_re=1; next }
     { print }
 ' "$FILE" > "$TMP"
 
