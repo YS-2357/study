@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-24T13:14:59
+updated_at: 2026-04-24T14:00:29
 recent_editor: CODEX
 ---
 
@@ -148,3 +148,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-24T13:14:59] ingest | kiro_commands_guide
 - Touched: `ai/kiro/03_kiro_cli.md`, local raw source archive, and `log.md`.
 - Decision: expanded the Kiro CLI note with command families, shell-first workflow control, and representative command usage without copying the full raw reference.
+
+## [2026-04-24T14:00:29] query | modern rag terminology
+- Touched: `ai/concepts/16_rag.md`, `glossary.md`, and `log.md`.
+- Decision: expanded the RAG concept note to cover current production retrieval vocabulary, advanced variants, and the default modern RAG process.
