@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-24T09:38:47
+updated_at: 2026-04-24T13:14:59
 recent_editor: CODEX
 ---
 
@@ -144,3 +144,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-24T09:38:47] rules | promote karpathy guidelines
 - Touched: shared rules, canonical skills, local Codex/Claude skill wrappers, and `log.md`.
 - Decision: moved Karpathy Guidelines into `rules/` as the canonical source of truth and kept agent-local copies as thin wrappers.
+
+## [2026-04-24T13:14:59] ingest | kiro_commands_guide
+- Touched: `ai/kiro/03_kiro_cli.md`, local raw source archive, and `log.md`.
+- Decision: expanded the Kiro CLI note with command families, shell-first workflow control, and representative command usage without copying the full raw reference.
