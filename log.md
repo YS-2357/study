@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-24T14:00:29
+updated_at: 2026-04-24T16:30:47
 recent_editor: CODEX
 ---
 
@@ -152,3 +152,7 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-24T14:00:29] query | modern rag terminology
 - Touched: `ai/concepts/16_rag.md`, `glossary.md`, and `log.md`.
 - Decision: expanded the RAG concept note to cover current production retrieval vocabulary, advanced variants, and the default modern RAG process.
+
+## [2026-04-24T16:30:47] rules | root agent entrypoint behavior guidance
+- Touched: `AGENTS.md`, `CLAUDE.md`, `rules/AGENTS.md`, and `log.md`.
+- Decision: promoted explicit Karpathy-style behavior guidance into the root agent entrypoints and aligned the shared rules wording so root files are treated as quick-entry summaries rather than pointer-only files.
