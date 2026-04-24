@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-24T08:47:57
+updated_at: 2026-04-24T09:38:47
 recent_editor: CODEX
 ---
 
@@ -29,11 +29,13 @@ All agents follow the shared rules in this file.
 
 ## 2. Core Principles
 
-### 2.1 Think Before Editing
+### 2.1 Think Before Acting
 - State assumptions explicitly and do not guess
 - Present multiple interpretations when ambiguity matters
 - Push back when a simpler approach is better
 - Ask for clarification when ambiguity cannot be resolved from the repo or system
+
+These shared editing principles are the repository's Karpathy Guidelines. See [08_karpathy_guidelines.md](08_karpathy_guidelines.md) for the canonical wording.
 
 ### 2.2 Same Topic, Different Domain Focus
 A concept can have notes in multiple domains. Each note should focus on the angle relevant to its domain. Do not deduplicate or convert those into redirects.
@@ -153,6 +155,7 @@ Canonical skill definitions live in `rules/skills/`. Each agent implements them 
 
 | Skill | Description |
 |-------|-------------|
+| karpathy-guidelines | Apply the repo's scoped editing posture before note changes |
 | ingest | Ingest a raw source file into the wiki |
 | lint | Run the wiki health check |
 | nav-update | Sync structural documents after file changes |
@@ -185,6 +188,7 @@ Root-level `AGENTS.md` and `CLAUDE.md` are pointer files and should not duplicat
 | [05_git_guide.md](05_git_guide.md) | Git workflow and push commands |
 | [06_content_diagrams.md](06_content_diagrams.md) | ASCII diagrams of architecture, hierarchy, flows |
 | [07_scalability.md](07_scalability.md) | Split thresholds, sed-friendly renames, subdomain rules |
+| [08_karpathy_guidelines.md](08_karpathy_guidelines.md) | Canonical scoped editing posture |
 | [09_ingest.md](09_ingest.md) | Ingest pipeline |
 | [10_lint.md](10_lint.md) | Wiki health check |
 | [11_ocr.md](11_ocr.md) | OCR workflow |

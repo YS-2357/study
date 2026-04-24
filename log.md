@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-23T23:41:19
+updated_at: 2026-04-24T09:38:47
 recent_editor: CODEX
 ---
 
@@ -136,3 +136,11 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 ## [2026-04-24T08:47:57] fix | kst timestamps and practical agent rules
 - Touched: active Kiro ingest timestamps, shared rule files, supporting workflow docs, and Codex pre-push validation.
 - Decision: use real Seoul local timestamps for edits, sync before mutation rather than before every read, report success explicitly, and push only when the task calls for remote delivery.
+
+## [2026-04-24T09:32:38] raw-archive | megathon support files
+- Touched: local raw archive for `260423 Megathon 2차 교육` and `log.md`.
+- Decision: archived the remaining agenda, IAM/login, and setup files to `raw/processed/` as reviewed support material without adding new note sources.
+
+## [2026-04-24T09:38:47] rules | promote karpathy guidelines
+- Touched: shared rules, canonical skills, local Codex/Claude skill wrappers, and `log.md`.
+- Decision: moved Karpathy Guidelines into `rules/` as the canonical source of truth and kept agent-local copies as thin wrappers.
