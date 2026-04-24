@@ -2,25 +2,13 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Write|Edit",
+        "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/auto-push.sh",
-            "timeout": 45,
-            "statusMessage": "Pushing to GitHub..."
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/auto-push.sh",
-            "timeout": 45,
-            "async": true
+            "command": "bash .claude/hooks/normalize-timestamp.sh",
+            "timeout": 10,
+            "statusMessage": "Normalizing frontmatter..."
           }
         ]
       }
