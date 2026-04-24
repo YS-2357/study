@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-19T09:11:51
-recent_editor: CLAUDE
+updated_at: 2026-04-24T08:47:57
+recent_editor: CODEX
 ---
 
 # Note Structure
@@ -12,49 +12,44 @@ Rules for formatting study notes in this repository.
 
 ## 1. Required Sections
 
-Every concept note has these sections in order. Use the headings verbatim — no numeric prefixes, no renaming:
+Every concept note has these sections in order:
 
 ```md
 # Title
 
 ## What It Is
-(1-2 sentence definition - REQUIRED)
 
 ## Analogy
-(One concrete mental model - REQUIRED)
 
 ## How It Works
-(Mechanics, steps, procedures - REQUIRED)
 
 ## Example
-(One concrete, small example - REQUIRED)
 
 ## Why It Matters
-(Practical relevance - REQUIRED)
 ```
 
 ### 1.1. Section Rules
 
-- `What It Is` - Required, 1-2 sentence definition
-- `Analogy` - Required, 1-3 sentences mapping the concept to something familiar. If no clean analogy fits, write one sentence stating why and move on — don't force a misleading one.
-- `How It Works` - Required, mechanics / steps / procedures. For notes where there's nothing mechanical to explain, write one sentence stating that and move on.
-- `Example` - Required, concrete and small
-- `Why It Matters` - Required
+- `What It Is` - required, 1-2 sentence definition
+- `Analogy` - required, 1-3 sentences; if no clean analogy fits, say so briefly
+- `How It Works` - required; describe mechanics, steps, or procedures
+- `Example` - required, concrete and small
+- `Why It Matters` - required
 
 ### 1.2. Additional Sections
 
-Extra `##` sections allowed between required sections when content warrants:
-- `## Name` - Etymology or naming context
-- `## Prerequisites` - Complex setup requirements
+Extra `##` sections are allowed when content warrants them, such as:
+- `## Name`
+- `## Prerequisites`
 
 ## 2. Heading Levels
 
 | Level | Use |
 |-------|-----|
-| `#` | Note title only (one per file) |
-| `##` | Major sections. Use the section names verbatim (`## What It Is`, not `## 1. What It Is`) |
+| `#` | Note title only |
+| `##` | Major sections |
 | `###` | Subsections inside a major section |
-| `####` | Never use - split the note instead |
+| `####` | Never use; split the note instead |
 
 ## 3. Frontmatter
 
@@ -75,48 +70,28 @@ recent_editor: CLAUDE
 
 | Field | Format | Rule |
 |-------|--------|------|
-| `tags` | lowercase, hyphen-separated | Required, min 1 tag |
-| `created_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | Set once on creation. Not auto-corrected |
-| `updated_at` | `YYYY-MM-DDTHH:MM:SS` (KST, UTC+9) | AI must update on every edit. Auto-corrected by PostToolUse hook |
-| `recent_editor` | `CLAUDE`, `CODEX`, `KIRO`, `HUMAN` | AI must set on every edit |
-| `source` | list of slugs | Optional. Ingested source pointers — see [09_ingest.md §4](09_ingest.md) |
+| `tags` | lowercase, hyphen-separated | Required, minimum 1 tag |
+| `created_at` | `YYYY-MM-DDTHH:MM:SS` | Set once on creation |
+| `updated_at` | `YYYY-MM-DDTHH:MM:SS` | Update on every edit |
+| `recent_editor` | `CLAUDE`, `CODEX`, `KIRO`, `HUMAN` | Update on every edit |
+| `source` | list of slugs | Optional |
 
-**KST enforcement:** All timestamps use Korean time (UTC+9). Get the current stamp with plain `date +"%Y-%m-%dT%H:%M:%S"` — **do not** use `TZ=Asia/Seoul date`, which silently returns UTC on Git Bash for Windows. The `updated_at` field is auto-corrected after every Write/Edit by `.claude/hooks/normalize-timestamp.sh`, so minor drift from real time is fixed automatically; `created_at` is not corrected and must be set correctly at creation time.
+**KST enforcement:** All timestamps use Korean time (UTC+9 / Asia-Seoul). Use the machine's real local Seoul timestamp when setting `created_at` or `updated_at`; do not invent `T00:00:00` placeholders.
 
-**Source tracking:** When a note absorbs content from a raw source, append a short filename-safe slug to the `source:` list. The slug points to a file that may or may not exist in `raw/processed/` on any given PC — the slug itself is the authoritative pointer, not the file. See [09_ingest.md](09_ingest.md).
+**Source tracking:** When a note absorbs content from a raw source, append a short filename-safe slug to the `source:` list. The slug is the authoritative pointer even if the raw file itself is only present on one machine.
 
 ### 3.2. Tags
 
-- Use lowercase, hyphen-separated tags from the taxonomy below
-- Assign all applicable tags — cross-domain notes carry multiple (e.g., `ai` + `aws`)
-- Add a new tag only if no existing tag fits; if added, update this taxonomy
-- Tags power Obsidian's graph view, tag pane, and cross-domain search
-
-#### Taxonomy
-
-| Tag | Covers | Example notes |
-|-----|--------|---------------|
-| `ai` | AI/ML, LLMs, agents, attention, KV cache | ai/ domain, Bedrock notes |
-| `aws` | AWS services in general | All cloud/aws/ notes |
-| `computing` | CPU, GPU, virtualization, caching, storage | computing/ domain |
-| `container` | ECR, Docker, Lambda container images | Fargate, ECR, Lambda containers |
-| `database` | RDS, DynamoDB, Aurora, ElastiCache | cloud/aws/ DB notes |
-| `git` | Git workflow, staging, tracking | git/ domain |
-| `infrastructure` | VPC, regions, AZs, subnets, CDK | VPC, CDK, Region notes |
-| `ml` | SageMaker, Bedrock, model training | Bedrock, SageMaker notes |
-| `monitoring` | CloudWatch, observability | CloudWatch note |
-| `networking` | Protocols, OSI, DNS, HTTP, proxies | networking/ domain |
-| `security` | IAM, Shield, WAF, auth, secrets | IAM, WAF, Shield notes |
-| `serverless` | Lambda, Fargate, API Gateway | Lambda, API GW, Mangum notes |
-| `storage` | S3, EFS, EBS | Storage notes |
-| `tooling` | Dev tools, editors, terminal setup | tooling/ domain, CDK, boto3 |
+- Use lowercase, hyphen-separated tags from the repo taxonomy
+- Assign all applicable tags
+- Add a new tag only when no existing tag fits
 
 ## 4. Lists
 
 | Type | Use |
 |------|-----|
 | `-` bullets | Unordered facts, properties, options |
-| `1.` numbers | Ordered steps or priority within a section |
+| `1.` numbers | Ordered steps or priority |
 
 Indent nested items with 2 spaces.
 
@@ -130,12 +105,12 @@ Indent nested items with 2 spaces.
 
 ## 6. Tables
 
-- Use for comparisons, option sets, structured data
-- Every table needs header row and separator row
+- Use tables for comparisons, option sets, and structured data
+- Every table needs a header row and separator row
 
 ## 7. What Not To Use
 
-- No `---` horizontal rules except before navigation footer
-- No `> Note:`, `> Warning:` - only `> **Tip:**`
+- No `---` horizontal rules except before the navigation footer
+- No `> Note:` or `> Warning:`; use only `> **Tip:**`
 - No raw HTML
-- No emoji unless user requests it
+- No emoji unless the user requests it

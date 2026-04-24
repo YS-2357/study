@@ -3,7 +3,7 @@ tags:
   - git
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-20T08:46:00
+updated_at: 2026-04-24T08:47:57
 recent_editor: CODEX
 ---
 
@@ -11,7 +11,7 @@ recent_editor: CODEX
 
 Git workflow and push commands for this repository.
 
-The repo is designed for **multi-PC sync**: notes, rules, hooks, and agent configs are tracked and pushed, so you can clone on another machine, drop in `.env`, and continue with the same study content and automation. Local secrets and volatile UI state stay out of Git, including `.env`, `raw/`, and `.obsidian/workspace.json`.
+The repo is designed for multi-PC sync: notes, rules, hooks, and agent configs are tracked and pushed, while local secrets and volatile UI state stay out of Git, including `.env`, `raw/`, and `.obsidian/workspace.json`.
 
 ## 1. Environment Setup
 
@@ -24,9 +24,9 @@ Required variables in `.env`:
 | `GIT_USER_NAME` | Commit author name |
 | `GIT_USER_EMAIL` | Commit author email |
 
-Example `.env`:
+Example:
 
-```
+```text
 GITHUB_TOKEN=github_pat_...
 GITHUB_USERNAME=your-username
 GIT_USER_NAME=Your Name
@@ -45,7 +45,7 @@ git push origin main
 
 ### 2.2. Direct Token Authentication
 
-For scripts or when credential helper is unavailable:
+For scripts or when the credential helper is unavailable:
 
 ```bash
 set -a && source .env && set +a && git -c credential.helper= \
@@ -69,11 +69,11 @@ STUDY_PUSH_CONTENT_ACK=1 git push origin main
 | `GITHUB_USERNAME` | GitHub account name |
 | `STUDY_PUSH_CONTENT_ACK=1` | Skip content acknowledgment prompt |
 | `CLAUDE_AUTO_PUSH=1` | Set by Claude auto-push hooks |
-| `STUDY_ALLOW_MULTI_COMMIT_PUSH=1` | Allow multiple commits in one push |
+| `STUDY_ALLOW_MULTI_COMMIT_PUSH=1` | Compatibility override for hooks that still check multi-commit pushes |
 
 ## 4. Git Identity Setup
 
-If git identity is missing:
+If Git identity is missing:
 
 ```bash
 set -a && source .env && set +a
@@ -85,7 +85,7 @@ git config --local user.email "$GIT_USER_EMAIL"
 
 ### 5.1. Message Format
 
-```
+```text
 <type>: <description>
 
 <optional body>
@@ -97,57 +97,35 @@ Types:
 - `fix` - Bug fix or correction
 - `refactor` - Restructuring without changing behavior
 - `docs` - Documentation only
-- `auto` - Automated commits from hooks
 
-### 5.2. Auto-Commit Messages
-
-Claude auto-push generates one commit per Write/Edit, so single-file is the norm:
-- `auto: update <file>` — normal PostToolUse commit (one tool call, one file)
-- `auto: update <file> and N more` — only on Stop-event cleanup when several files were left unstaged
-
-## 6. Auto-Push Staging Behavior
-
-`.claude/hooks/auto-push.sh` reads the PostToolUse JSON from stdin and stages only the file the agent just touched, instead of `git add -A`:
-
-```
-┌─ PostToolUse (Write|Edit) ─────────────────┐
-│  stdin JSON → jq .tool_input.file_path     │
-│  git add -A -- "$file_path"                │
-│  → one commit, one file                    │
-└────────────────────────────────────────────┘
-
-┌─ Stop (session end) ───────────────────────┐
-│  no file_path in stdin                     │
-│  git add -A       (sweep any leftovers)    │
-│  → may produce "and N more"                │
-└────────────────────────────────────────────┘
-```
-
-**Why per-file staging:** when several agents edit simultaneously, a blanket `git add -A` would fold in another agent's in-progress files, causing cross-agent commits and race conditions on push. Per-file staging keeps each agent's commits scoped to its own work.
-
-## 7. Example Workflow
+## 6. Example Workflow
 
 ```bash
-# Load environment
-set -a && source .env && set +a
+# Inspect current state
+git status --short
+git diff
 
-# Make changes
-# ... edit files ...
-
-# Stage and commit
+# Stage and commit the intended task
 git add file.md
 git commit -m "update: improve Lambda section"
 
-# Push with acknowledgment
+# Push only when the task calls for remote delivery
 STUDY_PUSH_CONTENT_ACK=1 git push origin main
 ```
 
-## 8. Hooks
+Typical workflow:
+
+1. Inspect the current state with `git status` and `git diff`.
+2. Pull before mutation when the branch may be stale or the task depends on current remote content.
+3. Stage only the intended paths.
+4. Create one or more commits that represent one coherent task.
+5. Push only when the user asks for it or the task explicitly includes remote delivery.
+
+## 7. Hooks
 
 | Location | Purpose |
 |----------|---------|
 | `.githooks/pre-push` | Main dispatcher |
 | `.githooks/pre-push-study-content` | Content acknowledgment |
 | `.githooks/git-credential-env.sh` | Credential helper |
-| `.claude/hooks/auto-push.sh` | Claude auto-push — stages only `tool_input.file_path` per call |
 | `.codex/hooks/pre-push` | Codex validation (frontmatter, structure, footer, security) |

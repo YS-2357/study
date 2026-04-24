@@ -124,3 +124,15 @@ grep "^## \[.*ingest" log.md | wc -l  # total ingests
 - Fixed: broken content links, footer labels, high-confidence first-mention cross-links, AWS viewpoint tables, and non-.claude frontmatter gaps.
 - Deferred: .claude/ findings are outside Codex ownership; missing source: attribution remains deferred where the real source is unknown.
 - Updated: README.md and rules guidance examples so template links are not reported as actionable broken links.
+
+## [2026-04-24T08:47:57] ingest | kiro_first_call_deck_korean
+- Touched: ai/kiro/00_kiro_overview.md, ai/kiro/01_spec_driven_development.md (new), ai/kiro/02_hooks_and_context.md (new), ai/kiro/03_kiro_cli.md (new)
+- Decision: ingest the deck into Kiro-specific workflow notes, keep generic MCP and hook explanations in ai/concepts, and skip IAM setup and workshop logistics.
+
+## [2026-04-24T08:47:57] nav-update | wire kiro child notes from overview
+- Touched: ai/kiro/00_kiro_overview.md, log.md
+- Decision: the Kiro overview now acts as the subdomain hub and provides inbound links for the new child notes.
+
+## [2026-04-24T08:47:57] fix | kst timestamps and practical agent rules
+- Touched: active Kiro ingest timestamps, shared rule files, supporting workflow docs, and Codex pre-push validation.
+- Decision: use real Seoul local timestamps for edits, sync before mutation rather than before every read, report success explicitly, and push only when the task calls for remote delivery.

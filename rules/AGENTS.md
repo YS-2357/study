@@ -2,8 +2,8 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-23T14:21:23
-recent_editor: CLAUDE
+updated_at: 2026-04-24T08:47:57
+recent_editor: CODEX
 ---
 
 # Agent Rules
@@ -18,9 +18,7 @@ Unified rules for all AI agents (Claude, Codex, Kiro) working in this repository
 | [CODEX.md](CODEX.md) | OpenAI Codex | Platform-specific notes |
 | [KIRO.md](KIRO.md) | AWS Kiro | Platform-specific notes |
 
-**All agents follow the rules in this file.**
-
----
+All agents follow the shared rules in this file.
 
 ## 1. Permissions
 
@@ -32,103 +30,103 @@ Unified rules for all AI agents (Claude, Codex, Kiro) working in this repository
 ## 2. Core Principles
 
 ### 2.1 Think Before Editing
-- State assumptions explicitly, never guess
-- Present multiple interpretations when ambiguous
-- Push back when simpler approaches exist
-- Ask clarification before proceeding when confused
+- State assumptions explicitly and do not guess
+- Present multiple interpretations when ambiguity matters
+- Push back when a simpler approach is better
+- Ask for clarification when ambiguity cannot be resolved from the repo or system
 
 ### 2.2 Same Topic, Different Domain Focus
-A concept can have notes in multiple domains — this is intentional. Each note focuses on the angle relevant to its domain. No deduplication, merging, or "see only" redirects required.
+A concept can have notes in multiple domains. Each note should focus on the angle relevant to its domain. Do not deduplicate or convert those into redirects.
 
 ### 2.3 Simplicity First
-- Deliver only requested features
+- Deliver only the requested change
 - No speculative additions or abstractions
 - No single-use abstractions
-- No error handling for impossible scenarios
+- No defensive logic for impossible scenarios
 
 ### 2.4 Surgical Changes
-- Don't improve adjacent code, comments, or formatting
-- Don't refactor functioning code
+- Do not improve adjacent content without a reason tied to the request
+- Do not refactor functioning content without need
 - Preserve existing style conventions
-- Remove only code YOUR changes orphaned
-- Every changed line traces to user request
+- Remove only content your change makes obsolete
+- Every changed line should trace back to the task
 
 ### 2.5 Goal-Driven Execution
 - Define verifiable success criteria
-- Transform vague requests: "Fix bug" → "Reproduce via test, make it pass"
-- Multi-step tasks need verification checkpoints
+- Turn vague requests into concrete checks when possible
+- Use verification checkpoints for multi-step tasks
 
 ## 3. Delivery Rule
 
-**"Success should be quiet, failure must be loud"**
+**"Success should be explicit, failure must be loud"**
 
-- On success: silent completion, commit and push without fanfare
-- On failure: explicit error message with context, stop and fix before proceeding
+- On success: give a short explicit summary of what changed and what was verified
+- On failure: give an explicit error message with context, then stop and fix before proceeding
 
 ## 4. Research Before Writing
 
-- Web search required before creating new notes
+- Web search is required before creating new notes
 - Cite official sources inline
 - No placeholder or speculative content
 - Verify facts before committing
 
-### 4.1 Citation Quality Standards
+### 4.1. Citation Quality Standards
 
 When citing research papers or academic claims, use sources that meet at least one condition below.
 
-**Tier 1 — Top venue (no citation count required)**
+**Tier 1 - Top venue (no citation count required)**
 Published at: NeurIPS, ICML, ICLR, ACL, EMNLP, CVPR, JMLR, Nature, Science
 
-**Tier 2 — arXiv preprint**
-Accepted if 50+ citations **or** authored at a major lab (Google, Meta, Anthropic, OpenAI, DeepMind, NVIDIA, Microsoft Research, MIT, Stanford, CMU, Oxford, Cambridge)
+**Tier 2 - arXiv preprint**
+Accepted if 50+ citations or authored at a major lab (Google, Meta, Anthropic, OpenAI, DeepMind, NVIDIA, Microsoft Research, MIT, Stanford, CMU, Oxford, Cambridge)
 
-**Exception — papers < 1 year old**
-Citation count waived; Tier 1 venue or major lab affiliation still required
+**Exception - papers under 1 year old**
+Citation count waived; Tier 1 venue or major-lab affiliation still required
 
-**Always**
-- Link the original paper (arXiv URL or DOI) — not a blog post or summary site
-- Do not use Medium articles, YouTube, or unofficial summaries as primary citations
+Always link the original paper (arXiv URL or DOI), not an unofficial summary.
 
 ## 5. Session Start
 
-**Always `git pull` before any read or write operation.**
+**Sync before mutation when the task needs current remote state.**
 
 ```bash
-git pull origin main
+git pull --ff-only origin main
 ```
+
+Reading and local inspection do not require a pull first. Pull before editing when the branch may be stale, before commit/push work, or when the task depends on the latest remote content.
 
 ## 6. Atomic Commits
 
-- One logical change per commit
+- One logical change per commit or commit set
 - Descriptive commit messages
-- Push after each file change
-- Never batch unrelated changes
+- Push when the user requests remote delivery or when the task explicitly includes it
+- Never batch unrelated changes into one commit
 
 ## 7. Link Maintenance
 
-- Check for broken links after renaming/moving
+- Check for broken links after renaming or moving
 - Update all references when paths change
-- Glossary links for abbreviations on first use
-- Cross-domain links encouraged when helpful
+- Link glossary items on first use when needed
+- Cross-domain links are encouraged when helpful
 
 ## 8. Structural Document Updates
 
 Whenever files are added, moved, renamed, or deleted, update:
-- `home.md` — root study hub
-- `00_{domain}_overview.md` — domain study hub
-- `README.md` — folder index
-- `rules/02_navigation.md` — if domain structure changes
+- `home.md`
+- `00_{domain}_overview.md`
+- `README.md`
+- `rules/02_navigation.md` if domain structure changes
 
 ## 9. Ingesting Raw Sources
 
-Raw source material lives in `raw/` (gitignored). Ingest runs **only on user request** via `/ingest <source>` or a conversational equivalent. Full pipeline in [09_ingest.md](09_ingest.md).
+Raw source material lives in `raw/` and is gitignored. Ingest runs only on user request via `/ingest <source>` or a conversational equivalent. Full flow: [09_ingest.md](09_ingest.md).
 
 ## 10. Conflict Resolution
 
 - Check `recent_editor` before bulk updates
-- Never overwrite another agent's recent changes
-- Coordinate via commit messages
-- When in doubt, ask
+- Do not overwrite another agent's recent changes casually
+- Coordinate through commit messages or explicit notes
+- Ask when conflict risk is unclear
 
 ## 11. Frontmatter Requirements
 
@@ -144,11 +142,14 @@ recent_editor: <AGENT>
 ---
 ```
 
-**Update `updated_at` and `recent_editor` to your agent name on every edit, no exceptions.**
+- All timestamps use Korean time (UTC+9 / Asia-Seoul)
+- `created_at` is set once on creation
+- `updated_at` must be refreshed on every edit
+- `recent_editor` must be set to the editing agent
 
 ## 12. Skills
 
-Canonical skill definitions in `rules/skills/`. Each agent implements them in their own platform directory.
+Canonical skill definitions live in `rules/skills/`. Each agent implements them in its own platform directory.
 
 | Skill | Description |
 |-------|-------------|
@@ -158,25 +159,20 @@ Canonical skill definitions in `rules/skills/`. Each agent implements them in th
 | ocr | Extract text from raw local images |
 | split | Split an oversized or mixed-theme note |
 
-Each agent implements these in their own native format — do not copy another agent's files:
-- **Claude** → `.claude/commands/`
-- **Kiro** → `.kiro/skills/`
-- **Codex** → `.codex/skills/`
-
-On first use of a skill with no local implementation, read `rules/skills/<skill>.md` and create your platform-native version.
+Each agent implements these in its own native format:
+- **Claude** -> `.claude/commands/`
+- **Kiro** -> `.kiro/skills/`
+- **Codex** -> `.codex/skills/`
 
 ## 13. Rule Sync
 
-Sections §1–§11 must be **identical** across all four rules/ files:
-
+Sections 1-11 must stay identical across:
 - `rules/AGENTS.md`
 - `rules/CLAUDE.md`
 - `rules/CODEX.md`
 - `rules/KIRO.md`
 
-Root-level `AGENTS.md` and `CLAUDE.md` are pointer files — they route agents to the rules/ files and must not duplicate §1–§11.
-
-**When any shared rule changes, update all four rules/ files.** §12+ are agent-specific and may differ (git commands, skill directories, platform hooks).
+Root-level `AGENTS.md` and `CLAUDE.md` are pointer files and should not duplicate the shared sections.
 
 ## Rule Documents
 
