@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-23T23:41:19
-updated_at: 2026-04-24T16:30:47
+updated_at: 2026-04-26T08:37:43
 recent_editor: CODEX
 ---
 
@@ -57,11 +57,11 @@ All agents must read their platform-specific rule file **before any action**.
 | Codex | [rules/CODEX.md](rules/CODEX.md) |
 | Kiro | [rules/KIRO.md](rules/KIRO.md) |
 
-Shared rules (§1–§11) live in [rules/AGENTS.md](rules/AGENTS.md).  
-Agent-specific rules (§12+) live in each agent's own file.
+Shared rules (sections 1-11) live in [rules/AGENTS.md](rules/AGENTS.md).  
+Agent-specific rules (section 12 onward) live in each agent's own file.
 
 ---
 
 ## Subtree Overrides
 
-- `cloud/aws/AGENTS.md` — AWS-specific viewpoint framework
+- `cloud/aws/AGENTS.md` - AWS-specific viewpoint framework

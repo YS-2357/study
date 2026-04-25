@@ -2,19 +2,19 @@
 tags:
   - tooling
 created_at: 2026-04-19T09:11:51
-updated_at: 2026-04-23T23:41:19
+updated_at: 2026-04-26T08:37:43
 recent_editor: CODEX
 ---
 
 # Lint
 
-Health check over the wiki. Runs on demand — not automatic.
+Health check over the wiki. Runs on demand, not automatic.
 
 ## 1. Trigger
 
 Run **only when the user asks**:
 
-- `/lint` — slash command in `.claude/commands/lint.md`
+- `/lint` - slash command in `.claude/commands/lint.md`
 - Conversational: "lint the repo", "check for issues"
 
 ## 2. Checks
@@ -29,11 +29,11 @@ Find any relative-path link whose target file does not exist.
 grep -rEho '\[[^]]+\]\([^)]+\.md[^)]*\)' --include='*.md' .
 ```
 
-Resolve each link relative to the file it appears in. Report misses. Do not report links inside template or example snippets when the target contains placeholders or wildcards such as {domain}, NN_x, x.md, y.md, or 00_*_overview.md.
+Resolve each link relative to the file it appears in. Report misses. Do not report links inside template or example snippets when the target contains placeholders or wildcards such as `{domain}`, `NN_x`, `x.md`, `y.md`, or `00_*_overview.md`.
 
 ### 2.2. Orphan Notes
 
-Concept notes (`NN_*.md`) with zero inbound links from any other `.md` in the repo. These break the associative navigation model — add at least one inbound link from a related note or the domain overview.
+Concept notes (`NN_*.md`) with zero inbound links from any other `.md` in the repo. These break the associative navigation model; add at least one inbound link from a related note or the domain overview.
 
 ### 2.3. Missing Cross-References
 
@@ -42,7 +42,7 @@ A concept is "missing a cross-ref" when:
 - Another note mentions the concept by name in prose, **and**
 - That mention is not a markdown link.
 
-For the first-mention rule, see [03_cross_linking.md §2](03_cross_linking.md). Only the first mention per file needs a link.
+For the first-mention rule, see [03_cross_linking.md](03_cross_linking.md). Only the first mention per file needs a link.
 
 ### 2.4. Stale Claims
 
@@ -54,7 +54,7 @@ The check uses `log.md` as the timeline of record. Report; do not auto-rewrite.
 
 ### 2.5. Contradictions
 
-Contradictions are surfaced during ingest (§3.1 of [09_ingest.md](09_ingest.md)). Lint re-scans any note whose frontmatter has a `contradiction:` flag and reports pairs of claims that still disagree.
+Contradictions are surfaced during ingest ([09_ingest.md](09_ingest.md)). Lint re-scans any note whose frontmatter has a `contradiction:` flag and reports pairs of claims that still disagree.
 
 ### 2.6. Missing `source:`
 
@@ -64,15 +64,17 @@ Concept notes without any `source:` frontmatter entry. Expected for notes that p
 
 Every concept note must end with:
 
-```
+```md
 ---
-↑ [Overview](./00_{domain}_overview.md)
+[Overview](./00_{domain}_overview.md)
 
 **Related:** A -> ./a.md, B -> ../other/b.md
 **Tags:** #tag1 #tag2
 ```
 
-Flag any note with the old `← Previous | [Overview] | Next →` format or a missing footer.
+The `00_{domain}_overview.md` target above is a placeholder example. Replace `{domain}` with the actual folder name.
+
+Flag any note with the old `Previous | [Overview] | Next` format or a missing footer.
 
 ### 2.8. Frontmatter Validity
 
@@ -88,18 +90,18 @@ Print a short report grouped by check, with file paths and line numbers. Do not 
 
 Example:
 
-```
+```text
 lint report (2026-04-19T09:11:51)
 
 broken links (2):
-  cloud/aws/compute/03_lambda.md:42  → ../storage/99_missing.md
-  ai/07_agent.md:18            → ../../networking/99_missing.md
+  cloud/aws/compute/03_lambda.md:42  -> ../storage/99_missing.md
+  ai/07_agent.md:18                  -> ../../networking/99_missing.md
 
 orphan notes (1):
   computing/05_turing.md
 
 missing cross-refs (3):
-  cloud/aws/compute/04_fargate.md:88  "ECS" → cloud/aws/compute/02_ecs.md
+  cloud/aws/compute/04_fargate.md:88  "ECS" -> cloud/aws/compute/02_ecs.md
   ...
 ```
 
@@ -111,7 +113,7 @@ After the report:
 2. Fix approved items one at a time.
 3. Append a `lint` entry to `log.md`:
 
-   ```
+   ```md
    ## [2026-04-19T09:11:51] lint | 5 broken links, 1 orphan
    - Fixed: 5 broken links
    - Deferred: 1 orphan (computing/05_turing.md)

@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-23T23:41:19
+updated_at: 2026-04-26T08:37:43
 recent_editor: CODEX
 ---
 
@@ -58,21 +58,21 @@ Links between domains are encouraged when they help the reader:
 
 A service note in `cloud/aws/`, `gcp/`, or `azure/` that has a direct counterpart in another cloud should link the equivalent on first mention. Example, in `cloud/aws/compute/01_amazon_ec2.md`:
 
-> EC2 is AWS's virtual machine service — equivalent to Compute Engine on GCP and Virtual Machines on Azure once those counterpart notes exist.
+> EC2 is AWS's virtual machine service, equivalent to Compute Engine on GCP and Virtual Machines on Azure once those counterpart notes exist.
 
 Rules:
 - Link **only when the equivalent note actually exists.** Don't create stub notes just to satisfy links.
-- Apply to **new notes only.** Don't retrofit existing notes in bulk — add the link the next time you're editing that note for another reason.
+- Apply to **new notes only.** Don't retrofit existing notes in bulk; add the link the next time you're editing that note for another reason.
 - Skip when there's no clean 1:1 mapping (e.g., managed services that differ substantially in scope).
 
 ### 3.1. Relative Path Rules
 
-| Target is in… | Path prefix |
-|---------------|-------------|
+| Target is in | Path prefix |
+|--------------|-------------|
 | Same folder | `./` (or bare filename) |
 | Sibling subdomain (same parent) | `../{subdomain}/` |
 | Different top-level domain | `../../{domain}/` or `../{domain}/` from a top-level note |
-| Root `home.md` or `glossary.md` | depth-appropriate `../…/` |
+| Root `home.md` or `glossary.md` | depth-appropriate `../` chains |
 
 Examples:
 ```md

@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-24T16:30:47
+updated_at: 2026-04-26T08:37:43
 recent_editor: CODEX
 ---
 
@@ -175,7 +175,7 @@ Sections 1-11 must stay identical across:
 - `rules/CODEX.md`
 - `rules/KIRO.md`
 
-Root-level `AGENTS.md` and `CLAUDE.md` are quick-entry summaries. They may carry concise behavioral guidance, but `rules/*.md` remain the full source of truth.
+Root-level [AGENTS.md](../AGENTS.md) and [CLAUDE.md](../CLAUDE.md) are quick-entry summaries. They may carry concise behavioral guidance, but `rules/*.md` remain the full source of truth.
 
 ## Rule Documents
 

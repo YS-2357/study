@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-23T23:41:19
-updated_at: 2026-04-24T16:30:47
+updated_at: 2026-04-26T08:37:43
 recent_editor: CODEX
 ---
 
@@ -57,7 +57,8 @@ Define success criteria. Loop until verified.
 
 | Document | Content |
 |----------|---------|
-| [rules/AGENTS.md](rules/AGENTS.md) | Shared rules §1–§11 |
+| [AGENTS.md](AGENTS.md) | Root quick-entry summary for all agents |
+| [rules/AGENTS.md](rules/AGENTS.md) | Shared rules sections 1-11 |
 | [rules/CLAUDE.md](rules/CLAUDE.md) | Claude Code full rules |
 | [rules/01_note_structure.md](rules/01_note_structure.md) | Note format |
 | [rules/02_navigation.md](rules/02_navigation.md) | Navigation rules |
