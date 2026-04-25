@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-26T08:37:43
+updated_at: 2026-04-26T08:53:27
 recent_editor: CODEX
 ---
 
@@ -159,7 +159,6 @@ Canonical skill definitions live in `rules/skills/`. Each agent implements them 
 | ingest | Ingest a raw source file into the wiki |
 | lint | Run the wiki health check |
 | nav-update | Sync structural documents after file changes |
-| ocr | Extract text from raw local images |
 | split | Split an oversized or mixed-theme note |
 
 Each agent implements these in its own native format:
@@ -179,18 +178,17 @@ Root-level [AGENTS.md](../AGENTS.md) and [CLAUDE.md](../CLAUDE.md) are quick-ent
 
 ## Rule Documents
 
-| File | Content |
-|------|---------|
-| [01_note_structure.md](01_note_structure.md) | Note format, headings, frontmatter |
-| [02_navigation.md](02_navigation.md) | Navigation header and footer |
-| [03_cross_linking.md](03_cross_linking.md) | Cross-linking and terminology |
-| [04_security.md](04_security.md) | Security hooks and delivery |
-| [05_git_guide.md](05_git_guide.md) | Git workflow and push commands |
-| [06_content_diagrams.md](06_content_diagrams.md) | ASCII diagrams of architecture, hierarchy, flows |
-| [07_scalability.md](07_scalability.md) | Split thresholds, sed-friendly renames, subdomain rules |
-| [08_karpathy_guidelines.md](08_karpathy_guidelines.md) | Canonical scoped editing posture |
-| [09_ingest.md](09_ingest.md) | Ingest pipeline |
-| [10_lint.md](10_lint.md) | Wiki health check |
-| [11_ocr.md](11_ocr.md) | OCR workflow |
-| [../log.md](../log.md) | Append-only chronological log |
-| [../glossary.md](../glossary.md) | Abbreviations and terms |
+| File                                                   | Content                                                 |
+| ------------------------------------------------------ | ------------------------------------------------------- |
+| [01_note_structure.md](01_note_structure.md)           | Note format, headings, frontmatter                      |
+| [02_navigation.md](02_navigation.md)                   | Navigation header and footer                            |
+| [03_cross_linking.md](03_cross_linking.md)             | Cross-linking and terminology                           |
+| [04_security.md](04_security.md)                       | Security hooks and delivery                             |
+| [05_git_guide.md](05_git_guide.md)                     | Git workflow and push commands                          |
+| [06_content_diagrams.md](06_content_diagrams.md)       | ASCII diagrams of architecture, hierarchy, flows        |
+| [07_scalability.md](07_scalability.md)                 | Split thresholds, sed-friendly renames, subdomain rules |
+| [08_karpathy_guidelines.md](08_karpathy_guidelines.md) | Canonical scoped editing posture                        |
+| [09_ingest.md](09_ingest.md)                           | Ingest pipeline                                         |
+| [10_lint.md](10_lint.md)                               | Wiki health check                                       |
+| [../log.md](../log.md)                                 | Append-only chronological log                           |
+| [../glossary.md](../glossary.md)                       | Abbreviations and terms                                 |

@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-24T09:38:47
+updated_at: 2026-04-26T08:53:27
 recent_editor: CODEX
 ---
 
@@ -149,7 +149,6 @@ Canonical skill definitions live in `rules/skills/`. Codex implements them in `.
 | ingest | Ingest a raw source file into the wiki |
 | lint | Run the wiki health check |
 | nav-update | Sync structural documents after file changes |
-| ocr | Extract text from raw local images |
 | split | Split an oversized or mixed-theme note |
 
 ## 13. Rule Sync
@@ -172,7 +171,3 @@ Request persistent approval only for bounded Git actions.
 ## 16. Write Commands
 
 Run Git write commands with escalated permissions when the harness requires it.
-
-## 17. OCR
-
-For raw image text extraction, use [11_ocr.md](11_ocr.md) and the Codex skill in `.codex/skills/ocr/`.

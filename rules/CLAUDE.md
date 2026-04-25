@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-17T00:00:00
-updated_at: 2026-04-24T09:38:47
+updated_at: 2026-04-26T08:53:27
 recent_editor: CODEX
 ---
 
@@ -149,7 +149,6 @@ Canonical skill definitions live in `rules/skills/`. Claude implements them in `
 | ingest | `/ingest` | Ingest a raw source file into the wiki |
 | lint | `/lint` | Run the wiki health check |
 | nav-update | `/nav-update` | Sync structural documents after file changes |
-| ocr | `/ocr` | Extract text from raw local images |
 | split | `/split` | Split an oversized or mixed-theme note |
 
 ## 13. Rule Sync
@@ -171,7 +170,3 @@ Run Git as individual calls rather than chained shell wrappers.
 ## 16. Subtree Overrides
 
 - `cloud/aws/AGENTS.md` - AWS-specific viewpoint framework
-
-## 17. OCR
-
-For raw image text extraction, use [11_ocr.md](11_ocr.md) and implement the shared [ocr](skills/ocr.md) procedure in `.claude/commands/ocr.md` if needed.

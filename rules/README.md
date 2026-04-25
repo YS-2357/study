@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-23T23:41:19
-updated_at: 2026-04-26T08:37:43
+updated_at: 2026-04-26T08:53:27
 recent_editor: CODEX
 ---
 
@@ -30,4 +30,3 @@ Quick-entry summaries: [../AGENTS.md](../AGENTS.md), [../CLAUDE.md](../CLAUDE.md
 | [08_karpathy_guidelines.md](08_karpathy_guidelines.md) | Canonical editing posture for scoped note work |
 | [09_ingest.md](09_ingest.md) | Ingest pipeline: turn raw sources into notes, track via `source:` frontmatter |
 | [10_lint.md](10_lint.md) | Wiki health check: broken links, orphans, stale claims, contradictions |
-| [11_ocr.md](11_ocr.md) | OCR workflow |

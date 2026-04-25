@@ -2,7 +2,7 @@
 tags:
   - tooling
 created_at: 2026-04-23T23:41:19
-updated_at: 2026-04-26T08:37:43
+updated_at: 2026-04-26T08:53:27
 recent_editor: CODEX
 ---
 
@@ -66,6 +66,5 @@ Define success criteria. Loop until verified.
 | [rules/04_security.md](rules/04_security.md) | Security hooks |
 | [rules/09_ingest.md](rules/09_ingest.md) | Ingest pipeline |
 | [rules/10_lint.md](rules/10_lint.md) | Wiki health check |
-| [rules/11_ocr.md](rules/11_ocr.md) | OCR workflow |
 | [log.md](log.md) | Chronological ingest/lint log |
 | [glossary.md](glossary.md) | Abbreviations |
