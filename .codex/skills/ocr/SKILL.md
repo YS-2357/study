@@ -5,8 +5,6 @@ description: Manually extract readable text from local raw image folders into ra
 
 # OCR
 
-Use the canonical workflow in `rules/skills/ocr.md` and the full procedure in `rules/11_ocr.md`.
-
 Before extracting text:
 
 - Run `git pull --ff-only origin main`.
