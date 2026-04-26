@@ -2,8 +2,8 @@
 tags:
   - aws
 created_at: 2026-03-31T00:00:00
-updated_at: 2026-04-23T09:51:00
-recent_editor: CLAUDE
+updated_at: 2026-04-26T17:40:00
+recent_editor: CODEX
 source:
   - aws-partner-summit-seoul-2026
 ---
@@ -35,8 +35,8 @@ AWS service notes grouped by category. Start with foundation, then pick whicheve
 
 ## Cross-references
 
-- Networking fundamentals — [Networking](../../networking/00_networking_overview.md)
-- Computing concepts — [Computing](../../computing/00_computing_overview.md)
+- Networking fundamentals ??[Networking](../../networking/00_networking_overview.md)
+- Computing concepts ??[Computing](../../computing/00_computing_overview.md)
 
 ---
-↑ [Home](../../home.md)
+[Cloud](../00_cloud_overview.md)
