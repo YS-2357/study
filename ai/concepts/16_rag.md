@@ -3,7 +3,7 @@ tags:
   - ai
   - rag
 created_at: 2026-04-21T00:00:00
-updated_at: 2026-04-24T14:00:29
+updated_at: 2026-04-27T09:30:54
 recent_editor: CODEX
 ---
 
@@ -38,6 +38,7 @@ Modern RAG systems usually add more retrieval control around that baseline:
 - **Keyword / sparse search** matches exact terms and identifiers.
 - **Semantic / dense search** matches by meaning using embeddings.
 - **Hybrid search** combines both. OpenAI's retrieval docs expose semantic search and also support tuning hybrid search weights between embedding matches and sparse keyword matches. [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval)
+- **RRF (Reciprocal Rank Fusion)** merges multiple ranked result lists, such as BM25 results and embedding results, by rewarding documents that appear high in either list.
 - **Metadata filtering** narrows the candidate set by attributes such as date, product, tenant, or document type. [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval)
 - **Query rewriting** rewrites a user question into a retrieval-friendly form before search. [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval)
 - **Reranking** takes a larger candidate set from first-pass retrieval and reorders it with a stronger ranking model. Pinecone describes this as a standard two-stage quality improvement for RAG pipelines. [Pinecone Rerank Results](https://docs.pinecone.io/guides/search/rerank-results)

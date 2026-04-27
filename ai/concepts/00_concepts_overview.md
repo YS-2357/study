@@ -2,8 +2,8 @@
 tags:
   - ai
 created_at: 2026-04-20T14:15:06
-updated_at: 2026-04-23T14:11:56
-recent_editor: CLAUDE
+updated_at: 2026-04-27T08:33:02
+recent_editor: CODEX
 ---
 
 # AI Concepts - Overview
@@ -36,8 +36,13 @@ Core LLM and agent concepts.
 
 ## Knowledge & Memory
 
+- [Text Vectorization](18_text_vectorization.md) - Turning text into numeric features, including TF-IDF.
 - [Embedding Models](17_embedding_models.md) - Mapping text to dense vectors; the retrieval layer beneath RAG.
 - [RAG](16_rag.md) - Grounding LLM responses in external documents fetched at query time.
+
+## Classical ML
+
+- [Clustering](19_clustering.md) - Grouping unlabeled data, including k-means.
 
 ## Multi-Agent Systems
 
